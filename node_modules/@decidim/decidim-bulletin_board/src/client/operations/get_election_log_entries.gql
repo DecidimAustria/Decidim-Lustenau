@@ -1,0 +1,14 @@
+query GetElectionLogEntries(
+  $electionUniqueId: String!
+  $after: String
+  $types: [String!]
+) {
+  election(uniqueId: $electionUniqueId) {
+    logEntries(after: $after, types: $types) {
+      id
+      messageId
+      signedData
+      chainedHash
+    }
+  }
+}
