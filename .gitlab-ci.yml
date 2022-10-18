@@ -1,0 +1,65 @@
+stages:
+  #- test
+  - deploy
+
+variables:
+  APP_NAME: emvi
+  STAGE_APP_NAME: emvi-staging
+
+#test:
+#  stage: test
+#  image: ruby:2.7.5
+#  services:
+#    - postgres:11-alpine
+#  cache:
+#    key: ${CI_COMMIT_REF_SLUG}
+#    paths:
+#      - vendor
+#      - node_modules
+#  variables:
+#    POSTGRES_DB: testdb
+#    POSTGRES_USER: postgres
+#    POSTGRES_PASSWORD: testooSh0fie
+#    DATABASE_URL: postgres://postgres:testooSh0fie@postgres:5432/testdb
+#    RAILS_ENV: test
+#  before_script:
+#    - curl -sL https://deb.nodesource.com/setup_16.x  | bash -
+#    - apt-get update
+#    - apt-get install -y nodejs apt-utils libssl-dev cmake
+#    - gem install bundler -v 2.2.9
+#    #- bundle install --path .bundle
+#    - bundle install -j $(nproc) --path vendor
+#    #- bundle install -j $(nproc) --path vendor/ruby  # Install dependencies into vendor/ruby
+#    - npm install -g yarn
+#  script:
+#    #- cp .env.ci .env
+#    #- cp config/database.ci.yml config/database.yml
+#    - bundle exec rails db:create db:schema:load || true
+#    #- bundle exec rails db:migrate
+#    - yarn install --check-files
+#    - bundle exec rails assets:precompile
+#    # - bundle exec rails test
+#    #- bundle exec pronto run -c=origin/master --exit-code
+
+deploy_live:
+  image: ilyasemenov/gitlab-ci-git-push
+  stage: deploy
+  environment:
+    name: production
+    url: https://emvi.mitgestalten.jetzt/
+  only:
+    - live
+  script:
+    - git-push ssh://dokku@decidim-emvi.spreademotions.com:22/$APP_NAME
+
+deploy_staging:
+  image: ilyasemenov/gitlab-ci-git-push
+  stage: deploy
+  environment:
+    name: staging
+    url: http://emvi-staging.decidim-austria.org/
+  only:
+    - staging
+  script:
+    - git-push ssh://dokku@dokku1.decidim-austria.org:22/$STAGE_APP_NAME
+
