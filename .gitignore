@@ -26,6 +26,8 @@
 /storage/*
 !/storage/.keep
 
+/node_modules
+
 /public/assets
 .byebug_history
 
@@ -34,3 +36,5 @@
 
 # Ignore public uploads
 public/uploads
+
+.DS_Store
