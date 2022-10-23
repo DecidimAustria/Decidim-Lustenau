@@ -36,5 +36,6 @@
 
 # Ignore public uploads
 public/uploads
+public/decidim-packs
 
 .DS_Store
