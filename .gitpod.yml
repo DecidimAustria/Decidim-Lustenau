@@ -10,9 +10,9 @@ tasks:
     before: rvm --default use "ruby-3.0.4"
     init: bundle install && yarn install && redis-server --daemonize yes && bin/rails db:create && bin/rails db:migrate && bin/rails db:seed
     command: ./connect_local_db.sh
-  - name: webpacker
-    before: rvm --default use "ruby-3.0.4"
-    command: bin/webpack-dev-server
+  #- name: webpacker
+  #  before: rvm --default use "ruby-3.0.4"
+  #  command: bin/webpack-dev-server
 vscode:
   extensions:
     - dbaeumer.vscode-eslint
