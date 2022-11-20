@@ -332,6 +332,8 @@ Decidim.configure do |config|
   # end
   #
   # config.machine_translation_service = "MyTranslationService"
+  config.machine_translation_service = "DeeplTranslator"
+  config.machine_translation_delay = 0.seconds
 
   # Defines the name of the cookie used to check if the user allows Decidim to
   # set cookies.
