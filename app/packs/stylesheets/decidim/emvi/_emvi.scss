@@ -1,0 +1,20 @@
+/* 
+Created: 23.11.2022
+Modified: 23.11.2022
+Author: Piero Chiussi | info@webchroma.de
+*/
+
+$primary-color:#00ff;
+
+.title-bar, .navbar{
+    background:none;
+}
+.language-menu li{
+    border:1px $primary-color solid;
+    border-radius: 50%;
+    a, a:hover{
+        color: $primary-color;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+} 
