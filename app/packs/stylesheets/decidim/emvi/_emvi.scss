@@ -1,20 +1,78 @@
 /* 
 Created: 23.11.2022
-Modified: 23.11.2022
+Modified: 24.11.2022
 Author: Piero Chiussi | info@webchroma.de
 */
-
-$primary-color:#00ff;
 
 .title-bar, .navbar{
     background:none;
 }
+.title-bar{
+    padding:2rem 0;
+}
+
+.topbar > div {
+    flex:1 0 auto;
+}
+
 .language-menu li{
-    border:1px $primary-color solid;
-    border-radius: 50%;
-    a, a:hover{
-        color: $primary-color;
+    a,a:hover{ 
+        border:1px var(--emvi-primary) solid;
+        border-radius: 50%;
+        width:40px;
+        height:40px;
+        text-align: center;
+        line-height:40px;
+        color: var(--emvi-primary);
         text-transform: uppercase;
         font-weight: 500;
+        padding:unset;
+        background-color: transparent;
+        transition: all .2s ease-out;
     }
-} 
+    a:hover, a.choosen-language{
+        text-decoration: none;
+        color:white;
+        background-color: var(--emvi-primary);
+        transition: all .2s ease-in;
+    }
+}
+
+.navbar{
+    border-top: 1px solid var(--emvi-primary);
+    border-bottom:  1px solid var(--emvi-primary);
+}
+
+@media print, screen and (min-width: 40em){
+    .main-nav ul{
+        display:unset;
+    }
+    .main-nav ul > li{
+        text-align: left;
+        text-align: start;
+    }
+}
+
+.main-nav__link{
+    padding:1.5rem;
+}
+
+.main-nav__link a{
+    color:var(--emvi-body-font);
+    display:unset;
+    padding:unset;
+}
+.main-nav__link--active a, .main-nav__link a{
+    box-shadow:unset;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.main-nav__link--active a{
+    color:var(--emvi-primary);
+}
+
+.main-nav__link a:hover{
+    color:var(--emvi-primary);
+    text-decoration: none;
+    box-shadow:unset;
+}

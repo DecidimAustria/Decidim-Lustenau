@@ -1,21 +1,24 @@
 <% if available_locales.length > 1 %>
   <div class="language-choose">
-    <ul class="language-menu menu" role="menubar">
-        <li role="presentation">
-        <%= link_to "#language-chooser-menu", id: "language-chooser-control", "aria-controls": "language-chooser-menu", "aria-haspopup": "menu", role: "menuitem" do %>
-          <span aria-hidden="true"><%= locale %></span>
+    <ul class="language-menu menu">
+        <li>
+        <%= link_to "#", class: "choosen-language" do %>
+          <span class="show-for-sr">
+            <span lang="<%= locale %>"><%= I18n.with_locale(locale) { t("layouts.decidim.language_chooser.choose_language") } %></span>
+          </span>
+          <%= locale %>
         <% end %>
         </li>
         <% (available_locales - [I18n.locale.to_s]).each do |locale| %>
-            <li role="presentation">
-                <span aria-hidden="true"><%= link_to locale, decidim.locale_path(locale: locale), method: :post, role: "menuitem", lang: locale %></span>
+            <li>
+                <%= link_to decidim.locale_path(locale: locale), method: :post, lang: locale do %>
+                  <span class="show-for-sr">
+                    <span lang="<%= locale %>"><%= I18n.with_locale(locale) { t("layouts.decidim.language_chooser.choose_language") } %></span>
+                  </span>
+                  <%= locale %>
+                <%end%>
             </li>
         <% end %>
     </ul>
-    <span class="show-for-sr">
-        <% available_locales.each do |locale| %>
-          <span lang="<%= locale %>"><%= I18n.with_locale(locale) { t("layouts.decidim.language_chooser.choose_language") } %></span>
-        <% end %>
-    </span>
   </div>
 <% end %>
