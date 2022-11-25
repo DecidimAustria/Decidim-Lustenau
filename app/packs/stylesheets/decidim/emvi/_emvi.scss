@@ -4,15 +4,45 @@ Modified: 24.11.2022
 Author: Piero Chiussi | info@webchroma.de
 */
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $body-font-family;
+  font-weight: 600;
+}
+
 .title-bar, .navbar{
-    background:none;
+    background-color:var(--emvi-background-hsl);
 }
 .title-bar{
     padding:2rem 0;
 }
 
-.topbar > div {
+.topbar > div.logo-wrapper{
+    flex:0 0 auto;
+}
+
+.topbar .language-choose {
     flex:1 0 auto;
+    justify-content: center;
+}
+
+.topbar__user{
+    margin-left:unset;
+}
+
+.topbar__user__login{
+    height: 40px;
+    line-height:unset;
+}
+
+.sign-in-icon .icon{
+    height:40px;
+    width:40px;
+    fill:var(--emvi-primary);
 }
 
 .language-menu li{
@@ -28,13 +58,12 @@ Author: Piero Chiussi | info@webchroma.de
         font-weight: 500;
         padding:unset;
         background-color: transparent;
-        transition: all .2s ease-out;
+        transition: background-color 0.25s ease-out, color 0.25s ease-out;
     }
     a:hover, a.choosen-language{
         text-decoration: none;
         color:white;
         background-color: var(--emvi-primary);
-        transition: all .2s ease-in;
     }
 }
 
@@ -65,7 +94,7 @@ Author: Piero Chiussi | info@webchroma.de
 .main-nav__link--active a, .main-nav__link a{
     box-shadow:unset;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 .main-nav__link--active a{
     color:var(--emvi-primary);
@@ -75,4 +104,76 @@ Author: Piero Chiussi | info@webchroma.de
     color:var(--emvi-primary);
     text-decoration: none;
     box-shadow:unset;
+}
+
+.main-footer, .mini-footer{
+    background-color: var(--emvi-background-hsl);
+    color:var(--emvi-body-font);
+}
+
+.main-footer{
+    border-top:1px solid var(--emvi-secondary);
+}
+
+.mini-footer .row:first-child {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mini-footer .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-footer a, .mini-footer a{
+    color:var(--emvi-secondary);
+}
+
+.main-footer a:hover, .mini-footer a:not(.icona):hover{
+    color:var(--emvi-secondary);
+    transition: 0.2s ease-in;
+    filter: brightness(60%);
+    text-decoration: none;
+}
+
+.footer-social .icon{
+    color:var(--emvi-secondary);
+}
+
+.small_logo img{height:1.5rem;margin:0 5px 0 5px;}
+
+.home-section:nth-of-type(2n + 1){
+    background-color: var(--emvi-background-hsl);
+    border-top:1px solid var(--emvi-primary);
+}
+
+.text-highlight.heading1{
+    font-family: "et-book", serif;
+    font-weight: unset;
+}
+
+a, a:hover, .card__link, .card__text a{
+    color:var(--emvi-primary);
+}
+
+.tooltip{
+    a, a:hover, .card__link, .card__text a{
+        color:var(--emvi-secondary);
+    }
+    a:hover{
+        transition: 0.2s ease-in;
+        filter: brightness(60%);
+        text-decoration: none;
+    }
+}
+
+.card__link:hover, .card__text a:hover, .author-data .author__name:hover{
+    color:var(--emvi-secondary);
+    transition: 0.2s ease-in;
+    text-decoration: none;
+}
+
+a .card__title:hover {
+    text-decoration: none;
 }

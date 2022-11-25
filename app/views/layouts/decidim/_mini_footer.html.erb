@@ -2,32 +2,29 @@
     <div class="row">
         <a rel="decidim noopener"
             href="https://gemeinnuetzig.at/"
-            target="_blank">
+            target="_blank"
+            class="icona">
             <%= image_pack_tag("media/images/IGO_Logo.png", alt: "IGO: Interessenvertretung Gemeinnütziger Organisationen", class: "mitgestalten_logo") %>
         </a>
         <a rel="decidim noopener"
             href="https://partizipationsbuero.at/"
-            target="_blank">
+            target="_blank"
+            class="icona">
             <%= image_pack_tag("media/images/mitgestalten-logo.png", alt: "Mitgestalten Partezipationsbüro", class: "mitgestalten_logo") %>
         </a>
     </div>
-  <div class="row">
-    <div class="medium-7 large-8 column">
-      <a rel="license noopener" class="cc-badge"
+    <div class="row">
+        <a rel="decidim noopener" class="small_logo icona"
+           href="https://decidim.org/"
+           target="_blank">
+        <%= image_pack_tag("media/images/decidim-logo-mobile.svg", alt: t("layouts.decidim.footer.decidim_logo")) %>
+      </a>
+      <a rel="license noopener" class="cc-badge small_logo icona"
          href="http://creativecommons.org/licenses/by-sa/4.0/"
          target="_blank">
-        <%= image_pack_tag("media/images/cc-badge.png", alt: t("layouts.decidim.footer.cc_by_license")) %>
+         <span class="show-for-sr"><%=t("layouts.decidim.footer.cc_by_license")%></span>
+        <%= image_pack_tag("media/images/cc-by-sa.svg", alt: "" ) %>
       </a>
       <%= t("layouts.decidim.footer.made_with_open_source").html_safe %>
     </div>
-    <div class="medium-3 large-2 column">
-      <div class="decidim-logo">
-        <a rel="decidim noopener"
-           href="https://decidim.org/"
-           target="_blank">
-          <%= image_pack_tag("media/images/decidim-logo.svg", alt: t("layouts.decidim.footer.decidim_logo")) %>
-        </a>
-      </div>
-    </div>
-  </div>
 </div>
