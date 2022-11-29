@@ -14,6 +14,10 @@ h6, .h6 {
   font-weight: 600;
 }
 
+.logo-wrapper span{
+    color:var(--emvi-primary);
+}
+
 .title-bar, .navbar{
     background-color:var(--emvi-background-hsl);
 }
@@ -154,26 +158,42 @@ h6, .h6 {
 }
 
 a, a:hover, .card__link, .card__text a{
-    color:var(--emvi-primary);
+    color:var(--emvi-body-font);
+    text-decoration: none;
 }
-
 .tooltip{
     a, a:hover, .card__link, .card__text a{
-        color:var(--emvi-secondary);
+        color:var(--emvi-primary);
     }
     a:hover{
         transition: 0.2s ease-in;
         filter: brightness(60%);
         text-decoration: none;
     }
+    a.author__nickname{
+        color:var(--emvi-body-font);
+    }
 }
-
 .card__link:hover, .card__text a:hover, .author-data .author__name:hover{
     color:var(--emvi-secondary);
     transition: 0.2s ease-in;
     text-decoration: none;
 }
 
+.author__verified, .author__badge svg {
+    color:var(--emvi-secondary);
+}
+
+a .card__title{
+    color:var(--emvi-primary);
+}
 a .card__title:hover {
     text-decoration: none;
+    color:var(--emvi-secondary);
+    transition: 0.2s ease-in;
+    text-decoration: none;
+}
+
+.card--process__small:hover{
+    color:inherit;
 }
