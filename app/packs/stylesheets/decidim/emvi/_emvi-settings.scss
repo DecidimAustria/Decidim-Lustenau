@@ -1,0 +1,22 @@
+/* 
+Created: 23.11.2022
+Modified: 23.11.2022
+Author: Piero Chiussi | info@webchroma.de
+*/
+$body-font-family: "NOTO Sans", Helvetica, Roboto, Arial, sans-serif;
+$body-font-color: #333;
+
+:root{
+    --emvi-body-font: #333333;
+    --emvi-body-font-hsl:hsl(0, 0%, 20%);
+    --emvi-body-font-rgb:rgb(51, 51, 51);
+    --emvi-primary:#eb9243;
+    --emvi-primary-rgb:rgb(235, 146, 67);
+    --emvi-primary-hsl:hsl(28, 81%, 59%);
+    --emvi-secondary:#467d67;
+    --emvi-secondary-rgb:rgb(70, 125, 103);
+    --emvi-secondary-hsl:hsl(28, 81%, 59%);
+    --emvi-background:#fafafa;
+    --emvi-background-hsl:hsl(0, 0%, 98%);
+    --emvi-background-rgb:rgb(250, 250, 250);
+}
