@@ -17,12 +17,17 @@ h6, .h6 {
 .logo-wrapper span{
     color:var(--emvi-primary);
 }
-
+.title-bar{
+    padding:2rem 0;
+    background: transparent;
+    color: var(--emvi-body-font);
+}
 .title-bar, .navbar{
     background-color:var(--emvi-background-hsl);
 }
-.title-bar{
-    padding:2rem 0;
+.title-bar a:focus, .title-bar .button:focus, .title-bar .meeting-polls__button:focus {
+    outline-color: var(--emvi-secondary);
+    filter: brightness(60%);
 }
 
 .topbar > div.logo-wrapper{
@@ -41,6 +46,59 @@ h6, .h6 {
 .topbar__user__login{
     height: 40px;
     line-height:unset;
+}
+
+.topbar__notifications .icon, .topbar__conversations .icon {
+    fill: var(--emvi-primary);
+}
+
+.topbar__dropmenu > ul > li > a {
+    color: var(--emvi-body-font);
+}
+
+.topbar__dropmenu > ul > li > a:hover {
+    color:var(--emvi-secondary);
+    transition: 0.2s ease-in;
+    text-decoration: none;
+}
+
+.topbar__dropmenu .is-dropdown-submenu {
+    background-color: var(--emvi-background-hsl);
+    border: 1px solid #fafafa;
+    box-shadow: 0 3px 5px rgb(0 0 0 / 30%);
+}
+
+.is-dropdown-submenu {
+    background: var(--emvi-background-hsl);
+}
+
+.topbar__dropmenu .is-dropdown-submenu li:hover, .topbar__dropmenu .is-dropdown-submenu li:focus {
+    text-decoration: none;
+}
+
+.topbar__dropmenu .is-dropdown-submenu li:not(:last-child) {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.topbar__dropmenu .is-dropdown-submenu li a {
+    padding: 0.5rem;
+    color: var(--emvi-secondary);
+}
+
+.topbar__dropmenu .is-dropdown-submenu li a:hover, .topbar__dropmenu .is-dropdown-submenu li a:focus {
+    color:var(--emvi-secondary);
+    transition: 0.2s ease-in;
+    text-decoration: none;
+}
+
+.topbar__admin__link a{
+    color: var(--emvi-body-font);
+}
+
+.topbar__admin__link a:hover {
+    background: rgba(255, 255, 255, 0.02);
+    color:var(--emvi-secondary);
+    transition: 0.2s ease-in;
 }
 
 .sign-in-icon .icon{
