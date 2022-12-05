@@ -1,0 +1,24 @@
+<% if available_locales.length > 1 %>
+  <div class="language-choose">
+    <ul class="language-menu menu">
+        <li>
+        <%= link_to "#", class: "choosen-language" do %>
+          <span class="show-for-sr">
+            <span lang="<%= locale %>"><%= I18n.with_locale(locale) { t("layouts.decidim.language_chooser.choose_language") } %></span>
+          </span>
+          <%= locale %>
+        <% end %>
+        </li>
+        <% (available_locales - [I18n.locale.to_s]).each do |locale| %>
+            <li>
+                <%= link_to decidim.locale_path(locale: locale), method: :post, lang: locale do %>
+                  <span class="show-for-sr">
+                    <span lang="<%= locale %>"><%= I18n.with_locale(locale) { t("layouts.decidim.language_chooser.choose_language") } %></span>
+                  </span>
+                  <%= locale %>
+                <%end%>
+            </li>
+        <% end %>
+    </ul>
+  </div>
+<% end %>

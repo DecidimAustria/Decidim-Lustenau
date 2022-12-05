@@ -1,0 +1,48 @@
+/* 
+Created: 23.11.2022
+Modified: 23.11.2022
+Author: Piero Chiussi | info@webchroma.de
+
+EMVI COLORS
+--emvi-primary:#eb9243;
+--emvi-primary-rgb:rgb(235, 146, 67);
+--emvi-primary-hsl:hsl(28, 81%, 59%);
+--emvi-secondary:#467d67;
+--emvi-secondary-rgb:rgb(70, 125, 103);
+--emvi-secondary-hsl:hsl(28, 81%, 59%);
+
+DECIDIM COLOR VARIABLES
+--alert: #ec5840;
+--alert-rgb: 236,88,64;
+--theme: #ef604d;
+--theme-rgb: 239,96,77;
+--primary: #eb9243;
+--primary-rgb: 235,146,67;
+--success: #57d685;
+--success-rgb: 87,214,133;
+--warning: #ffae00;
+--warning-rgb: 255,174,0;
+--highlight: #be6400;
+--highlight-rgb: 190,100,0;
+--secondary: #467d67;
+--secondary-rgb: 70,125,103;
+--highlight-alternative: #ff5731;
+--highlight-alternative-rgb: 255,87,49;
+*/
+$body-font-family: "NOTO Sans", Helvetica, Roboto, Arial, sans-serif;
+$body-font-color: #333;
+
+:root{
+    --emvi-body-font: #333333;
+    --emvi-body-font-hsl:hsl(0, 0%, 20%);
+    --emvi-body-font-rgb:rgb(51, 51, 51);
+    --emvi-primary:var(--primary);
+    --emvi-primary-rgb:var(--primary-rgb);
+    --emvi-primary-hsl:hsl(28, 81%, 59%);
+    --emvi-secondary:var(--secondary);
+    --emvi-secondary-rgb:var(--secondary-rgb);
+    --emvi-secondary-hsl:hsl(28, 81%, 59%);
+    --emvi-background:#fafafa;
+    --emvi-background-hsl:hsl(0, 0%, 98%);
+    --emvi-background-rgb:rgb(250, 250, 250);
+}
