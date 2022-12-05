@@ -5,6 +5,7 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 gem "decidim", "0.27.0"
+gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
 # gem "decidim-conferences", "0.27.0"
 # gem "decidim-consultations", "0.27.0"
 # gem "decidim-elections", "0.27.0"
