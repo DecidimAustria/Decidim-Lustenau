@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/DecidimAustria/decidim-module-alternative_landing
-  revision: be468d82e6ac58edef00d085ddc3d100f075b6dc
+  revision: 28052c5f25133bebcf9e6a400f76d9e5d9d9a289
   branch: update-to-decidim-0.27
   specs:
     decidim-alternative_landing (0.2.1)
