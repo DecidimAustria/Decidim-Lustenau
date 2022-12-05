@@ -20,6 +20,9 @@ gem "puma", ">= 5.0.0"
 
 gem "faker", "~> 2.14"
 
+gem "sentry-ruby"
+gem "sentry-rails"
+
 gem 'sidekiq', '<7'
 gem "wicked_pdf", "~> 2.1"
 
