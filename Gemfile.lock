@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/DecidimAustria/decidim-module-alternative_landing
-  revision: 5fa5a7b7dc917b8f8fcc660827ac43033e19eea2
+  revision: 462b7a13b6d0a0fe7232492593ab797b6ccda7bd
   branch: update-to-decidim-0.27
   specs:
     decidim-alternative_landing (0.2.1)
@@ -766,7 +766,7 @@ GEM
     thor (1.2.1)
     thread_safe (0.3.6)
     tilt (2.0.11)
-    timeout (0.3.0)
+    timeout (0.3.1)
     tomlrb (2.0.3)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
