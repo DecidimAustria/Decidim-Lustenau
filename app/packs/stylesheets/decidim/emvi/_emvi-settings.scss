@@ -28,19 +28,46 @@ DECIDIM COLOR VARIABLES
 --secondary-rgb: 70,125,103;
 --highlight-alternative: #ff5731;
 --highlight-alternative-rgb: 255,87,49;
+
+DECIDIM CARDS
+$card-bg: $white !default;
+$card-secondary-bg: $light-gray-dark;
+$card-border: $border;
+$card-border-radius: $global-radius;
+$card-border-top-width: 8px !default;
+$card-shadow: 0 2px 7px rgba(black, .1);
+$card-id: $medium-gray;
+
+$card-padding-small: 1rem;
+$card-padding: 1.5rem;
+$card-margin-bottom: map-get($grid-column-gutter, medium);
+
+$card-footer-bg: $light-gray-dark;
+
+$card-proposal: var(--proposals);
+$card-action: var(--actions);
+$card-debate: var(--debates);
+$card-meeting: var(--meetings);
+$card-spaces: var(--meetings);
+
+$datetime-bg: var(--primary);
 */
 $body-font-family: "NOTO Sans", Helvetica, Roboto, Arial, sans-serif;
-$body-font-color: #333;
-
+$body-font-color: #333333;
 :root{
-    --emvi-body-font: #333333;
+    --emvi-body-font: $body-font-color;
     --emvi-body-font-hsl:hsl(0, 0%, 20%);
     --emvi-body-font-rgb:rgb(51, 51, 51);
+    --emvi-nav-highlight-grey:#616161;
+    --emvi-nav-highlight-grey-rgb:rgb(97,97,97);
+    --emvi-nav-highlight-grey-hsl:hsl(0, 0%, 38%);
     --emvi-primary:var(--primary);
-    --emvi-primary-rgb:var(--primary-rgb);
+    --emvi-primary-rgb:rgb(var(--primary-rgb));
     --emvi-primary-hsl:hsl(28, 81%, 59%);
+    --emvi-primary-rgb-dark : darken(var(--emvi-primary-rgb),25%);
     --emvi-secondary:var(--secondary);
-    --emvi-secondary-rgb:var(--secondary-rgb);
+    --emvi-secondary-rgb:rgb(var(--secondary-rgb));
+    --emvi-secondary-rgb-dark : darken(var(--emvi-secondary-rgb),25%);
     --emvi-secondary-hsl:hsl(28, 81%, 59%);
     --emvi-background:#fafafa;
     --emvi-background-hsl:hsl(0, 0%, 98%);
