@@ -9,7 +9,6 @@ if respond_to?(:current_component) && current_component && can_be_managed?(curre
   )
 end
 %>
-
 <div class="off-canvas-wrapper">
   <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
     <div class="off-canvas position-right hide-for-large" data-position="right"
@@ -75,14 +74,14 @@ end
                     </ul>
                     </nav>
                 <% else %>
-
-                    <div class="topbar__user show-for-medium" data-set="nav-login-holder">
-                      <div class="topbar__user__login js-append">
-                          <%= link_to decidim.new_user_session_path, class: "sign-in-icon" do %>
-                              <svg aria-label="<%=t("layouts.decidim.header.sign_in")%>" role="img" class="icon--account-login icon"><title><%=t("layouts.decidim.header.sign_in")%></title><use href="/decidim-packs/media/images/icons-c4fd0f43651700b0c768.svg#icon-account-login"></use></svg>
-                          <% end %>
-                      </div>
+                  <div class="topbar__user show-for-medium" data-set="nav-login-holder">
+                    <div class="topbar__user__login js-append">
+                      <% if current_organization.sign_up_enabled? %>
+                        <%= link_to t("layouts.decidim.header.sign_up"), decidim.new_user_registration_path, class: "sign-up-link" %>
+                      <% end %>
+                      <%= link_to t("layouts.decidim.header.sign_in"), decidim.new_user_session_path, class: "sign-in-link" %>
                     </div>
+                  </div>
                 <% end %>
                 <%= render partial: "layouts/decidim/admin_links" %>
 
@@ -95,8 +94,9 @@ end
           </div>
           <div class="show-for-medium" data-set="nav-holder">
             <div class="navbar js-append">
-              <div class="row column">
+              <div class="row column menubar">
                 <%= main_menu.render %>
+                <%= render partial: "layouts/decidim/topbar_search" %>
               </div>
             </div>
           </div>
