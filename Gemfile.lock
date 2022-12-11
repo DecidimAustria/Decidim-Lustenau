@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/DecidimAustria/decidim-module-alternative_landing
-  revision: e5de287306c58229a65d40316ac2ebd58e6e857c
+  revision: 55975947fcc8ee7ac8a145c5830144d4826106bf
   branch: update-to-decidim-0.27
   specs:
     decidim-alternative_landing (0.2.1)
@@ -661,7 +661,7 @@ GEM
     rspec-html-matchers (0.9.4)
       nokogiri (~> 1)
       rspec (>= 3.0.0.a, < 4)
-    rspec-mocks (3.12.0)
+    rspec-mocks (3.12.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-rails (4.1.2)
