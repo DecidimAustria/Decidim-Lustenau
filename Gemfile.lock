@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: https://github.com/DecidimAustria/decidim-module-decidim_awesome
-  revision: 6beaddae2b3d15a35417571c6cc07c87547147d2
+  revision: 63d7d6bdf738481b659cc25b378e9a2b54abe8a7
   branch: update-to-decidim-0.27
   specs:
     decidim-decidim_awesome (0.8.3)
@@ -867,6 +867,7 @@ DEPENDENCIES
   net-pop (~> 0.1.1)
   net-smtp (~> 0.3.1)
   puma (>= 5.0.0)
+  rectify (~> 0.13.0)
   sentry-rails
   sentry-ruby
   sidekiq (< 7)
