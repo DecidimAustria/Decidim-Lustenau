@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: https://github.com/DecidimAustria/decidim-module-decidim_awesome
-  revision: b9b0d7a19a1fa8822fe042f490cf504ec72a9ea3
+  revision: fa1664647daf956ef11bd251f478cb274cca6118
   branch: update-to-decidim-0.27
   specs:
     decidim-decidim_awesome (0.8.3)
