@@ -28,6 +28,8 @@ gem 'sidekiq', '<7'
 gem 'virtus', '~> 1.0.5'
 gem "wicked_pdf", "~> 2.1"
 
+gem "rectify", "~> 0.13.0"
+
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
