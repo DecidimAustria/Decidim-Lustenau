@@ -8,16 +8,6 @@ GIT
       decidim-core (= 0.27.0)
       redcarpet (~> 3.4)
 
-GIT
-  remote: https://github.com/DecidimAustria/decidim-module-decidim_awesome
-  revision: 47742538ec310748ef6d7805a9b221c7d4a477a2
-  branch: update-to-decidim-0.27
-  specs:
-    decidim-decidim_awesome (0.8.3)
-      decidim-admin (>= 0.25.0, < 0.28)
-      decidim-core (>= 0.25.0, < 0.28)
-      sassc (~> 2.3)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -717,8 +707,6 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    sassc (2.4.0)
-      ffi (~> 1.9)
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -848,7 +836,6 @@ DEPENDENCIES
   byebug (~> 11.0)
   decidim (= 0.27.0)
   decidim-alternative_landing!
-  decidim-decidim_awesome!
   decidim-dev (= 0.27.0)
   deepl-rb
   faker (~> 2.14)
