@@ -25,6 +25,7 @@ gem "sentry-ruby"
 gem "sentry-rails"
 
 gem 'sidekiq', '<7'
+gem 'virtus', '~> 1.0.5'
 gem "wicked_pdf", "~> 2.1"
 
 group :development, :test do
@@ -42,7 +43,7 @@ group :development do
   gem "listen", "~> 3.1"
   gem "solargraph"
   gem "spring", "~> 2.0"
-  gem "spring-watcher-listen", "~> 2.0"
+  gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console", "~> 4.2"
 end
 
