@@ -10,12 +10,13 @@ GIT
 
 GIT
   remote: https://github.com/DecidimAustria/decidim-module-decidim_awesome
-  revision: e784698b21a406a0baa41e5b0061e9763a719bb6
+  revision: 997c3ea920ddcc2a92db87fe39a6cb46fb304654
   branch: update-to-decidim-0.27
   specs:
     decidim-decidim_awesome (0.8.3)
       decidim-admin (>= 0.25.0, < 0.28)
       decidim-core (>= 0.25.0, < 0.28)
+      rectify (~> 0.13.0)
       sassc (~> 2.3)
 
 GEM
@@ -369,6 +370,7 @@ GEM
     doorkeeper-i18n (4.0.1)
     dumb_delegator (1.0.0)
     e2mmap (0.1.0)
+    equalizer (0.0.11)
     erb_lint (0.0.37)
       activesupport
       better_html (~> 1.0.7)
@@ -645,6 +647,12 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rectify (0.13.0)
+      activemodel (>= 4.1.0)
+      activerecord (>= 4.1.0)
+      activesupport (>= 4.1.0)
+      virtus (~> 1.0.5)
+      wisper (>= 1.6.1)
     redcarpet (3.5.1)
     redis (4.8.0)
     regexp_parser (2.6.1)
@@ -793,10 +801,11 @@ GEM
       activemodel (>= 3.2)
       mail (~> 2.5)
     version_gem (1.1.1)
-    virtus (2.0.0)
+    virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
     w3c_rspec_validators (0.3.0)
       rails
       rspec
@@ -863,7 +872,8 @@ DEPENDENCIES
   sidekiq (< 7)
   solargraph
   spring (~> 2.0)
-  spring-watcher-listen (~> 2.0)
+  spring-watcher-listen (~> 2.0.0)
+  virtus (~> 1.0.5)
   web-console (~> 4.2)
   wicked_pdf (~> 2.1)
 
