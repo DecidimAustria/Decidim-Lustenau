@@ -20,7 +20,8 @@
     "jquery-ui": "^1.13.2",
     "jsrender": "^1.0.12",
     "leaflet.featuregroup.subgroup": "^1.0.2",
-    "select2": "^4.1.0-rc.0"
+    "select2": "^4.1.0-rc.0",
+    "postcss-scss": "^4.0.2"
   },
   "version": "0.1.0",
   "devDependencies": {
