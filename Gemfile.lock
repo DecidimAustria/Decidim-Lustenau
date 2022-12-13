@@ -1,12 +1,23 @@
 GIT
   remote: https://github.com/DecidimAustria/decidim-module-alternative_landing
-  revision: 55975947fcc8ee7ac8a145c5830144d4826106bf
+  revision: b56ec42bed3ba26aef83b7a903cefac34d8cfaa0
   branch: update-to-decidim-0.27
   specs:
     decidim-alternative_landing (0.2.1)
       decidim-admin (= 0.27.0)
       decidim-core (= 0.27.0)
       redcarpet (~> 3.4)
+
+GIT
+  remote: https://github.com/DecidimAustria/decidim-module-decidim_awesome
+  revision: 63d7d6bdf738481b659cc25b378e9a2b54abe8a7
+  branch: update-to-decidim-0.27
+  specs:
+    decidim-decidim_awesome (0.8.3)
+      decidim-admin (>= 0.25.0, < 0.28)
+      decidim-core (>= 0.25.0, < 0.28)
+      rectify (~> 0.13.0)
+      sassc (~> 2.3)
 
 GEM
   remote: https://rubygems.org/
@@ -359,6 +370,7 @@ GEM
     doorkeeper-i18n (4.0.1)
     dumb_delegator (1.0.0)
     e2mmap (0.1.0)
+    equalizer (0.0.11)
     erb_lint (0.0.37)
       activesupport
       better_html (~> 1.0.7)
@@ -371,7 +383,7 @@ GEM
       temple
     erubi (1.11.0)
     escape_utils (1.3.0)
-    excon (0.94.0)
+    excon (0.95.0)
     execjs (2.8.1)
     extended-markdown-filter (0.7.0)
       html-pipeline (~> 2.9)
@@ -635,6 +647,12 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    rectify (0.13.0)
+      activemodel (>= 4.1.0)
+      activerecord (>= 4.1.0)
+      activesupport (>= 4.1.0)
+      virtus (~> 1.0.5)
+      wisper (>= 1.6.1)
     redcarpet (3.5.1)
     redis (4.8.0)
     regexp_parser (2.6.1)
@@ -707,6 +725,8 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -781,10 +801,11 @@ GEM
       activemodel (>= 3.2)
       mail (~> 2.5)
     version_gem (1.1.1)
-    virtus (2.0.0)
+    virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
     w3c_rspec_validators (0.3.0)
       rails
       rspec
@@ -836,6 +857,7 @@ DEPENDENCIES
   byebug (~> 11.0)
   decidim (= 0.27.0)
   decidim-alternative_landing!
+  decidim-decidim_awesome!
   decidim-dev (= 0.27.0)
   deepl-rb
   faker (~> 2.14)
@@ -845,12 +867,14 @@ DEPENDENCIES
   net-pop (~> 0.1.1)
   net-smtp (~> 0.3.1)
   puma (>= 5.0.0)
+  rectify (~> 0.13.0)
   sentry-rails
   sentry-ruby
   sidekiq (< 7)
   solargraph
   spring (~> 2.0)
-  spring-watcher-listen (~> 2.0)
+  spring-watcher-listen (~> 2.0.0)
+  virtus (~> 1.0.5)
   web-console (~> 4.2)
   wicked_pdf (~> 2.1)
 
