@@ -13,7 +13,9 @@ gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-m
 # gem "decidim-initiatives", "0.27.0"
 # gem "decidim-templates", "0.27.0"
 
-gem "deepl-rb", require: "deepl"
+gem "aws-sdk-translate", '~> 1'
+
+#gem "deepl-rb", require: "deepl"
 
 gem "bootsnap", "~> 1.3"
 
