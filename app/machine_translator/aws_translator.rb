@@ -12,7 +12,7 @@ class AwsTranslator
   end
 
   def translate
-    translation = aws_translate.
+    translation = aws_translate
 
     Decidim::MachineTranslationSaveJob.perform_later(
       resource,
