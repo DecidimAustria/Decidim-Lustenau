@@ -34,6 +34,13 @@ h6, .h6 {
     flex:0 0 auto;
 }
 
+@media print, screen and (min-width: 50em)
+{
+    .logo-wrapper img {
+        max-height: 90px;
+    }
+}
+
 .topbar .language-choose {
     flex:1 0 auto;
     justify-content: center;
@@ -275,25 +282,22 @@ h6, .h6 {
     justify-content: center;
     line-height: 1.5rem;
     padding: 2rem 0;
-}
-
-.mini-footer .row:first-child {
-    justify-content:space-around;
-    img{
-        height: 80px;
-        width: auto;
+    &:first-child {
+        justify-content:space-around;
+        img{
+            height: 80px;
+            width: auto;
+        }
     }
 }
 
 .main-footer a, .mini-footer a, .footer-social .icon{
     color:var(--emvi-secondary-rgb);
-}
-
-.main-footer a:hover, .mini-footer a:hover, .footer-social .icon:hover{
-    color:var(--emvi-secondary-rgb-dark);
-    fill:var(--emvi-secondary-rgb-dark);
-    transition: 0.2s ease-in;
-    text-decoration: none;
+    &:hover{
+        color:var(--emvi-secondary-rgb-dark);
+        transition: 0.2s ease-in;
+        text-decoration: none;
+    }
 }
 
 a.small_logo{
@@ -302,10 +306,8 @@ a.small_logo{
         height:1.5rem;
         width:auto;
         color:var(--emvi-secondary-rgb);
-        fill:var(--emvi-secondary-rgb);
         margin:0 0.5rem;
         &:hover{
-            fill:var(--emvi-secondary-rgb-dark);
             color:var(--emvi-secondary-rgb-dark);
             transition: 0.2s ease-in;
         }
@@ -353,23 +355,25 @@ a, a:hover, .card__link, .card__text a{
     background: none;
     border: 1px solid var(--emvi-primary-rgb);
     position: relative;
-    /*
-    &:after{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: calc(100% + 1px);
-        height: calc(100% + 1px);
-        border: 1px solid var(--emvi-secondary-rgb);
-        opacity: 0.7;
-        transform: rotate(1deg);
-    }
-    */
+}
+
+.card_data{
+    justify-items: space-around;
+}
+
+.card-data__item{
+    border-right: unset;
+    margin-right: 0;
+    border-top: unset;
+    margin-top: 0;
 }
 
 .card__footer, .card__top {
     background: none;
+}
+
+.card__footer {
+    border-top: unset;
 }
 
 a .card__title{
@@ -387,6 +391,10 @@ a .card__title:hover {
     color:inherit;
 }
 
+.card--list__icon{
+    fill:var(--emvi-secondary-rgb);
+}
+
 .process-nav__link:hover{
     color:var(--emvi-secondary-rgb);
     transition: 0.2s ease-in;
@@ -401,8 +409,4 @@ a .card__title:hover {
     color:var(--emvi-secondary-rgb-dark);
     transition: 0.2s ease-in;
     text-decoration: none;
-}
-
-.card--list__icon{
-    fill:var(--emvi-secondary-rgb);
 }

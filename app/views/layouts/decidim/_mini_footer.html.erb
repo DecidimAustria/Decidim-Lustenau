@@ -12,12 +12,11 @@
             class="icona">
             <%= image_pack_tag("media/images/logo_EMVI_large.png", alt: "EMVI: Empowering Migrant Voices", class: "mitgestalten_logo") %>
         </a>
-        <a rel="decidim noopener"
-            href="https://partizipationsbuero.at/"
-            target="_blank"
-            class="icona">
-            <%= image_pack_tag("media/images/mitgestalten-logo.png", alt: "Mitgestalten Partezipationsbüro", class: "mitgestalten_logo") %>
-        </a>
+        <% if current_organization.official_img_footer.attached? %>
+            <%= link_to current_organization.official_url, class: "icona" do %>
+                <%= image_tag current_organization.attached_uploader(:official_img_footer).path, alt: current_organization.name, class: "mitgestalten_logo" %>
+            <% end %>
+        <% end %>
     </div>
     <div class="row">
         <a rel="decidim noopener" class="small_logo icona"
