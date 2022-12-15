@@ -18,7 +18,7 @@ class AwsTranslator
       resource,
       field_name,
       target_locale,
-      translation.text
+      translation.translated_text
     )
   end
 
