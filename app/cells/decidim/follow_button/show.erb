@@ -45,10 +45,12 @@
         <span aria-hidden="true"><%= followers_count %></span>
         <span class="show-for-sr"><%= t("decidim.followers.followers_count", count: followers_count) %></span>
       </span>
+      <%= if local_assigns[:showtxt] %>
       <span class="text-wrap">
         <%= t("follows.create.button", scope: "decidim") %>
         <%= render_screen_reader_title_for(model) %>
       </span>
+      <% end %>
     <% end %>
   <% end %>
 </div>
