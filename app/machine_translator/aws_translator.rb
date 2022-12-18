@@ -12,6 +12,8 @@ class AwsTranslator
   end
 
   def translate
+    return if @text.blank?
+
     translation = aws_translate
 
     Decidim::MachineTranslationSaveJob.perform_later(
