@@ -3,15 +3,16 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
+DECIDIM_VERSION = "0.27.0"
 
-gem "decidim", "0.27.0"
+gem "decidim", DECIDIM_VERSION
 gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
 gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27'
-# gem "decidim-conferences", "0.27.0"
-# gem "decidim-consultations", "0.27.0"
-# gem "decidim-elections", "0.27.0"
-# gem "decidim-initiatives", "0.27.0"
-# gem "decidim-templates", "0.27.0"
+# gem "decidim-conferences", DECIDIM_VERSION
+gem "decidim-consultations", DECIDIM_VERSION
+# gem "decidim-elections", DECIDIM_VERSION
+# gem "decidim-initiatives", DECIDIM_VERSION
+# gem "decidim-templates", DECIDIM_VERSION
 
 gem "aws-sdk-translate", '~> 1'
 
@@ -39,7 +40,7 @@ group :development, :test do
   gem "net-imap", "~> 0.2.3"
   gem "net-pop", "~> 0.1.1"
   gem "net-smtp", "~> 0.3.1"
-  gem "decidim-dev", "0.27.0"
+  gem "decidim-dev", DECIDIM_VERSION
 end
 
 group :development do

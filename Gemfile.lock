@@ -232,6 +232,10 @@ GEM
     decidim-comments (0.27.0)
       decidim-core (= 0.27.0)
       redcarpet (~> 3.5, >= 3.5.1)
+    decidim-consultations (0.27.0)
+      decidim-admin (= 0.27.0)
+      decidim-comments (= 0.27.0)
+      decidim-core (= 0.27.0)
     decidim-core (0.27.0)
       active_link_to (~> 1.0)
       acts_as_list (~> 0.9)
@@ -870,6 +874,7 @@ DEPENDENCIES
   byebug (~> 11.0)
   decidim (= 0.27.0)
   decidim-alternative_landing!
+  decidim-consultations (= 0.27.0)
   decidim-decidim_awesome!
   decidim-dev (= 0.27.0)
   faker (~> 2.14)
