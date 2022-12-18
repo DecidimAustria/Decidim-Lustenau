@@ -136,6 +136,17 @@ extra_admin_link(
 
 <%= attachments_for @proposal %>
 
+<%if params['imageback'].present?%>
+  cipapa
+  <style>
+  .process-header__main{
+      background-image:url('<%= asset_pack_path imageback %>') !important;
+  }
+  </style>
+<% else %>
+CICICOCA
+<% end %>
+
 <%= comments_for @proposal %>
 
 <%= cell("decidim/flag_modal", @proposal) %>

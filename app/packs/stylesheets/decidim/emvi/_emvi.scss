@@ -429,3 +429,13 @@ ul.card-data{
     transition: 0.2s ease-in;
     text-decoration: none;
 }
+
+.proposals .process-header__inner {
+    min-height: 250px;
+}
+
+@media print, screen and (min-width: 50em){
+    .proposals .process-header__inner {
+        height: 500px;
+    }
+}
