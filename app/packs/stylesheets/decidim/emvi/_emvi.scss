@@ -395,6 +395,25 @@ a .card__title:hover {
     fill:var(--emvi-secondary-rgb);
 }
 
+ul.card-data{
+    li.card-data__item{
+        font-size: 80%;
+        svg{
+            height: 1.2rem;
+            width: 1.2rem;
+            margin-right: 0.25rem;
+        }
+        .icon-wrap{
+            span {
+                vertical-align: text-top;
+            }
+        }
+        .has-tip{
+            vertical-align: text-top;
+        }
+    }
+}  
+
 .process-nav__link:hover{
     color:var(--emvi-secondary-rgb);
     transition: 0.2s ease-in;
