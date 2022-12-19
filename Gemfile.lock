@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/DecidimAustria/decidim-module-alternative_landing
-  revision: b56ec42bed3ba26aef83b7a903cefac34d8cfaa0
+  revision: b0564dffc85e44a0bf09a15cdecf702b12a6233e
   branch: update-to-decidim-0.27
   specs:
     decidim-alternative_landing (0.2.1)
@@ -90,13 +90,13 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.676.0)
+    aws-partitions (1.679.0)
     aws-sdk-core (3.168.4)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-translate (1.48.0)
+    aws-sdk-translate (1.49.0)
       aws-sdk-core (~> 3, >= 3.165.0)
       aws-sigv4 (~> 1.1)
     aws-sigv4 (1.5.2)
@@ -409,7 +409,7 @@ GEM
       railties (>= 3.0.0)
     faker (2.23.0)
       i18n (>= 1.8.11, < 2)
-    faraday (2.7.1)
+    faraday (2.7.2)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
@@ -615,7 +615,7 @@ GEM
       rack (>= 1.0, < 3)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
-    rack-protection (3.0.4)
+    rack-protection (3.0.5)
       rack
     rack-proxy (0.7.4)
       rack
@@ -689,7 +689,7 @@ GEM
       rspec-rails (>= 3.0.0, < 6.1.0)
     rspec-core (3.12.0)
       rspec-support (~> 3.12.0)
-    rspec-expectations (3.12.0)
+    rspec-expectations (3.12.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-html-matchers (0.9.4)
@@ -773,7 +773,7 @@ GEM
       version_gem (~> 1.1, >= 1.1.1)
     social-share-button (1.2.4)
       coffee-rails
-    solargraph (0.47.2)
+    solargraph (0.48.0)
       backport (~> 1.2)
       benchmark
       bundler (>= 1.17.2)
