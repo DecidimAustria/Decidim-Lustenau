@@ -22,6 +22,29 @@ extra_admin_link(
   { name: t(".answer"), icon: "comment-square" }
 )
 %>
+
+<style>
+.process-header{
+    background-image: unset;
+}
+
+.process-header__inner{
+    min-height: 250px;
+}
+
+.process-header__main{
+    max-width:75rem;
+    margin: auto auto;
+    padding:auto;
+}
+
+@media print, screen and (min-width: 50em){
+    .process-header__inner{
+        height: 500px;
+    }
+}
+</style>
+
 <%= render partial: "voting_rules" %>
 <% if component_settings.participatory_texts_enabled? %>
   <div class="row column">
@@ -136,15 +159,15 @@ extra_admin_link(
 
 <%= attachments_for @proposal %>
 
-<%if params['imageback'].present?%>
-  cipapa
+<%if @image_background %>
+  IMG BACKGROUND
   <style>
   .process-header__main{
-      background-image:url('<%= asset_pack_path imageback %>') !important;
+      background-image:url('<%= asset_pack_path @image_background %>');
   }
   </style>
 <% else %>
-CICICOCA
+  NO IMG BACKGROUND
 <% end %>
 
 <%= comments_for @proposal %>

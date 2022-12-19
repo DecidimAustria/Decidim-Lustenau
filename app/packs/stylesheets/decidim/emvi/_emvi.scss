@@ -15,6 +15,10 @@ h6, .h6 {
   color:var(--emvi-nav-highlight-grey-rgb);
 }
 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+    font-weight: 600;
+}
+
 .logo-wrapper span{
     color:var(--emvi-primary-rgb);
 }
@@ -428,14 +432,4 @@ ul.card-data{
     color:var(--emvi-secondary-rgb-dark);
     transition: 0.2s ease-in;
     text-decoration: none;
-}
-
-.proposals .process-header__inner {
-    min-height: 250px;
-}
-
-@media print, screen and (min-width: 50em){
-    .proposals .process-header__inner {
-        height: 500px;
-    }
 }

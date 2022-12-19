@@ -10,8 +10,8 @@
             <% end %>
           </div>
         <%
-        if params['imageback'].blank?
-          imageback = photo.big_url;
+        unless @image_background
+          @image_background = photo.big_url;
         end
         %>
         <% end %>
