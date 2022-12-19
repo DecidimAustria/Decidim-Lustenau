@@ -1,3 +1,5 @@
-<%= icon("comment-square", class: "icon--big", aria_label: "#{t("decidim.comments.comments_count")}:", role: "img") %>
-<%= " " %>
-<%= comments_count %>
+<span class="icon-wrap">
+    <%= icon("comment-square", class: "icon--small", aria_label: "#{t("decidim.comments.comments_count")}:", role: "img") %>
+    <span aria-hidden="true"><%= comments_count %></span>
+    <span class="show-for-sr"><%= t("decidim.comments.comments_count", count: comments_count) %></span>
+</span>
