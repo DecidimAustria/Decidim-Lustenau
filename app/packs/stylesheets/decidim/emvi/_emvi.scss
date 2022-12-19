@@ -15,6 +15,11 @@ h6, .h6 {
   color:var(--emvi-nav-highlight-grey-rgb);
 }
 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+    font-weight: 600;
+    color:var(--emvi-nav-highlight-grey-rgb);
+}
+
 .logo-wrapper span{
     color:var(--emvi-primary-rgb);
 }
@@ -395,6 +400,25 @@ a .card__title:hover {
     fill:var(--emvi-secondary-rgb);
 }
 
+ul.card-data{
+    li.card-data__item{
+        font-size: 80%;
+        svg{
+            height: 1.2rem;
+            width: 1.2rem;
+            margin-right: 0.25rem;
+        }
+        .icon-wrap{
+            span {
+                vertical-align: text-top;
+            }
+        }
+        .has-tip{
+            vertical-align: text-top;
+        }
+    }
+}  
+
 .process-nav__link:hover{
     color:var(--emvi-secondary-rgb);
     transition: 0.2s ease-in;
@@ -409,4 +433,14 @@ a .card__title:hover {
     color:var(--emvi-secondary-rgb-dark);
     transition: 0.2s ease-in;
     text-decoration: none;
+}
+
+.proposals .process-header__inner {
+    min-height: 250px;
+}
+
+@media print, screen and (min-width: 50em){
+    .proposals .process-header__inner {
+        height: 500px;
+    }
 }
