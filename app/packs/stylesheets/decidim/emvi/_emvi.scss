@@ -256,6 +256,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 .navbar{
     border-top: 1px solid var(--emvi-primary-rgb);
     border-bottom:  1px solid var(--emvi-primary-rgb);
+    @include breakpoint(medium){
+        .column{
+            padding:0;
+        }
+    }
 }
 
 @media print, screen and (min-width: 40em){
