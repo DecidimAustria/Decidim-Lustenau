@@ -63,6 +63,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
       width:auto;
       max-width:100%;
       overflow:hidden;
+      .language-menu{
+        display:flex;
+        flex-wrap: nowrap;
+      }
     }
     .main-nav__link:first-child {
         padding-left: 1.5rem;
@@ -70,13 +74,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
   }
   
   .topbar > div.language-choose {
-      align-self:flex-end;
       flex:1 0 auto;
       justify-content: center;
-      .language-menu{
-        display:flex;
-        flex-wrap: nowrap;
-      }
   }
   
   @media print, screen and (min-width: 50em)
@@ -421,6 +420,18 @@ a, a:hover, .card__link, .card__text a{
     justify-items: space-around;
 }
 
+.card__icondata ul{
+    border-top:unset;
+}
+
+.card-data__item{
+    border-right: unset;
+    margin-right: 0;
+    border-top: unset;
+    margin-top: 0;
+    font-size: 80%;
+}
+
 .card__status{
     padding:0 0.5rem;
     .card-data__item{
@@ -428,11 +439,6 @@ a, a:hover, .card__link, .card__text a{
         justify-content: center;
         justify-items: center;
         justify-self: center;
-        border-right: unset;
-        margin-right: 0;
-        border-top: unset;
-        margin-top: 0;
-        font-size: 80%;
         svg{
             height: 1.2rem;
             width: 1.2rem;
