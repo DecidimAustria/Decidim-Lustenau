@@ -19,6 +19,12 @@
     background-image: unset;
 }
 
+<% if post.photo.present? %>
+.process-header__main{
+  background-image:url('<%= post.photo.url %>');
+}
+<% end %>
+
 .process-header__inner{
     min-height: 250px;
 }

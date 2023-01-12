@@ -417,7 +417,17 @@ ul.card-data{
             vertical-align: text-top;
         }
     }
-}  
+}
+
+.card--post{
+    display:flex;
+    padding:0 0.8rem;
+    .card__image__container{
+        flex-basis:100%;
+        display:flex;
+        align-items:center;
+    }
+}
 
 .process-nav__link:hover{
     color:var(--emvi-secondary-rgb);
