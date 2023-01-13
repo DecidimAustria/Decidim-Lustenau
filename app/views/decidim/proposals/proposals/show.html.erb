@@ -35,6 +35,9 @@ extra_admin_link(
     margin: auto auto;
     -webkit-clip-path: unset;
     clip-path: unset;
+    <% if @proposal.photo.present? %>
+      background-image:url('<%= @proposal.photo.url %>');
+    <% end %>
 }
 
 @media print, screen and (min-width: 50em){
@@ -159,13 +162,3 @@ extra_admin_link(
 <%= comments_for @proposal %>
 
 <%= cell("decidim/flag_modal", @proposal) %>
-
-<% if @proposal.photo.present? %>
-    <style>
-    .process-header__main{
-      background-image:url('<%= @proposal.photo.url %>');
-    }
-    </style>
-<% end %>
-
-

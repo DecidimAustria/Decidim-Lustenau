@@ -520,11 +520,18 @@ ul.card-data{
 
 .card--post{
     display:flex;
-    padding:0 0.8rem;
+    padding: 1rem 0.8rem;
     .card__image__container{
-        flex-basis:100%;
+        width: 33%;
+        padding: 0 0.5rem;
         display:flex;
         align-items:center;
+    }
+    .card__image{
+        object-fit: unset;
+    }
+    .card__content{
+        flex:auto;
     }
 }
 

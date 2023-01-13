@@ -19,12 +19,6 @@
     background-image: unset;
 }
 
-<% if post.photo.present? %>
-.process-header__main{
-  background-image:url('<%= post.photo.url %>');
-}
-<% end %>
-
 .process-header__inner{
     min-height: 250px;
 }
@@ -35,6 +29,9 @@
     padding:auto;
     -webkit-clip-path: unset;
     clip-path: unset;
+    <% if post.photo.present? %>
+      background-image:url('<%= post.photo.url %>');
+    <% end %>
 }
 
 @media print, screen and (min-width: 50em){
