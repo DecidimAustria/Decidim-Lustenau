@@ -159,3 +159,13 @@ extra_admin_link(
 <%= comments_for @proposal %>
 
 <%= cell("decidim/flag_modal", @proposal) %>
+
+<% if @proposal.photo.present? %>
+    <style>
+    .process-header__main{
+      background-image:url('<%= @proposal.photo.url %>');
+    }
+    </style>
+<% end %>
+
+

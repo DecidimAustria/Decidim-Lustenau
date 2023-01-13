@@ -497,7 +497,36 @@ a .card__title:hover {
 
 .card--list__icon{
     fill:var(--emvi-secondary-rgb);
-}  
+}
+
+ul.card-data{
+    li.card-data__item{
+        font-size: 80%;
+        svg{
+            height: 1.2rem;
+            width: 1.2rem;
+            margin-right: 0.25rem;
+        }
+        .icon-wrap{
+            span {
+                vertical-align: text-top;
+            }
+        }
+        .has-tip{
+            vertical-align: text-top;
+        }
+    }
+}
+
+.card--post{
+    display:flex;
+    padding:0 0.8rem;
+    .card__image__container{
+        flex-basis:100%;
+        display:flex;
+        align-items:center;
+    }
+}
 
 .process-nav__link:hover{
     color:var(--emvi-secondary-rgb);
