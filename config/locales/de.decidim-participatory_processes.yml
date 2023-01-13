@@ -433,7 +433,7 @@ de:
             participate: Sich beteiligen
             participate_in: Am Prozess %{resource_name} teilnehmen
             processes_button_title: Link zur Prozess-Seite die alle Prozesse anzeigt
-            see_all_processes: Alle Beteiligungsprozesses anzeigen
+            see_all_processes: Alle Beteiligungsprozesse anzeigen
       participatory_process_steps:
         index:
           back_to_process: Zurück zur Prozessseite
