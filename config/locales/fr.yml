@@ -1763,7 +1763,7 @@ fr:
         data_consent_settings: Paramètres des cookies
         decidim_logo: Decidim.org (ouverture dans une nouvelle fenêtre)
         download_open_data: Télécharger les fichiers Open Data
-        made_with_open_source: Site réalisé grâce au <a target="_blank" href="https://github.com/decidim/decidim">logiciel libre Decidim</a>.
+        made_with_open_source: Site réalisé grâce au <a target="_blank" href="https://github.com/decidim/decidim"> logiciel libre Decidim</a> by <a target="_blank" href="https://partizipationsbuero.at"> mitgestalten Partizipationsbüro</a> .
       header:
         close_menu: Fermer le menu
         main_menu: Menu principal
