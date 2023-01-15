@@ -27,11 +27,18 @@
     max-width:75rem;
     margin: auto auto;
     padding:auto;
+    -webkit-clip-path: unset;
+    clip-path: unset;
+    <% if post.photo.present? %>
+      background-image:url('<%= post.photo.url %>');
+    <% end %>
 }
 
 @media print, screen and (min-width: 50em){
     .process-header__inner{
         height: 500px;
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem;
     }
 }
 </style>
