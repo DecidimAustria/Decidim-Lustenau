@@ -529,6 +529,7 @@ ul.card-data{
     }
     .card__image{
         object-fit: unset;
+        max-height:unset;
     }
     .card__content{
         width: 66%;
@@ -572,4 +573,15 @@ ul.card-data{
     &.primary, &.secondary{
         background-color:transparent;
     }
+}
+
+.stack-vertical .stack .stack-item{
+    padding:0;
+    .stack-link{
+        text-align:center;
+    }
+}
+
+.stack-horizontal .stack-item{
+    border:none;
 }
