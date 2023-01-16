@@ -517,4 +517,4 @@ de:
         step: Schritt %{current} von %{total}
         view_steps: Schritte anzeigen
       process_navigation:
-        process_menu_item: Der Prozess
+        process_menu_item: Übersicht
