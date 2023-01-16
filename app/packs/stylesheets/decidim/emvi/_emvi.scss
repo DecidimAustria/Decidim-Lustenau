@@ -577,11 +577,14 @@ ul.card-data{
 
 .stack-vertical .stack .stack-item{
     padding:0;
+    .stack-body{
+        padding:0.5rem;
+    }
     .stack-link{
         text-align:center;
     }
 }
 
 .stack-horizontal .stack-item{
-    border:none;
+    border-color:var(--emvi-secondary-rgb);
 }
