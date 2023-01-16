@@ -9,6 +9,7 @@
     </style>
     <div class="process-header__container row collapse column">
       <div class="columns mediumlarge-8 process-header__info">
+        <% if controller.controller_name != "posts" %>
         <div>
           <h1 class="text-highlight heading2">
             <%= translated_attribute(current_participatory_space.title) %>
@@ -24,9 +25,14 @@
             <%= translated_attribute(current_participatory_space.subtitle) %>
           </p>
         </div>
+         <% end %>
       </div>
-      <%= render partial: "layouts/decidim/process_header_steps", locals: { participatory_process: current_participatory_space } %>
+      <% if controller.controller_name != "posts" %>
+        <%= render partial: "layouts/decidim/process_header_steps", locals: { participatory_process: current_participatory_space } %>
+      <% end %>
     </div>
   </div>
+  <% if controller.controller_name != "posts" %>
   <%= render partial: "layouts/decidim/process_navigation", locals: { participatory_space: current_participatory_space } %>
+  <% end %>
 </div>

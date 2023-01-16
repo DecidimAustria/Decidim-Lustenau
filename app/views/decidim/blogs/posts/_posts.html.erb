@@ -1,11 +1,11 @@
 <div class="row small-12">
   <% paginate_posts.each do |post| %>
     <div class="card card--post">
-      <% if post.photo.present? %>
-      <div class="card__image__container">
+    <div class="card__image__container">
+      <% if post.photo.present? %>  
         <%= image_tag post.photo.thumbnail_url, class: "card__image" %>
-      </div>
       <% end %>
+      </div>
       <div class="card__content">
         <div class="card__header">
           <%= link_to post, class: "card__link" do %>
