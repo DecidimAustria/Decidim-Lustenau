@@ -42,7 +42,7 @@ class AwsTranslator
       scope.set_context(
         'translation',
         {
-          text: @text,
+          text: translation.translated_text,
           source_locale: source_locale,
           target_locale: target_locale,
           field_name: field_name,
