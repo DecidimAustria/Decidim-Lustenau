@@ -522,7 +522,7 @@ ul.card-data{
     display:flex;
     padding: 1rem 0.8rem;
     .card__image__container{
-        width: 33%;
+        width: 34%;
         padding: 0 0.5rem;
         display:flex;
         align-items:center;
@@ -531,7 +531,10 @@ ul.card-data{
         object-fit: unset;
     }
     .card__content{
-        flex:auto;
+        width: 66%;
+        .button__posts{
+            margin:0.4rem 0;
+        }
     }
 }
 
@@ -563,4 +566,10 @@ ul.card-data{
 }
 .m-r-5{
     margin-right:0.4rem;
+}
+
+.callout{
+    &.primary, &.secondary{
+        background-color:transparent;
+    }
 }
