@@ -1,3 +1,15 @@
+<style>
+  .process-header__inner{
+      min-height: 250px;
+  }
+  .process-header__main{
+      -webkit-clip-path: unset;
+      clip-path: unset;
+  }
+  .process-header__main::after{
+    background-color: transparent;
+  }
+</style>
 <div class="row small-12">
   <% paginate_posts.each do |post| %>
     <div class="card card--post">

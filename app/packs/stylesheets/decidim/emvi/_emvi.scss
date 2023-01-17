@@ -577,10 +577,16 @@ ul.card-data{
 
 .stack-vertical .stack .stack-item{
     padding:0;
+    flex: 1 1 0px;
+    .stack-image{
+        flex: 0 0 auto;
+    }
     .stack-body{
-        padding:0.5rem;
+        flex: 1 0 auto;
+        padding:1rem;
     }
     .stack-link{
+        flex: 0 0 auto;
         text-align:center;
     }
 }
