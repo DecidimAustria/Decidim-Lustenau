@@ -1,4 +1,4 @@
-<section class="alternative-landing stack-horizontal wrapper-home">
+<section class="alternative-landing stack-horizontal wrapper-home home-section">
   <div class="row">
     <h1 class="section-heading">
       <%= decidim_sanitize translated_title %>
@@ -6,7 +6,7 @@
   </div>
   <div class="row">
     <% 1.upto(3) do |item_number| %>
-      <div class="stack-item">
+      <div class="stack-item card">
         <div class="stack-image">
           <%= image_tag image(item_number) %>
         </div>
@@ -15,7 +15,7 @@
             <%= decidim_sanitize translated_body(item_number) %>
           </div>
           <div class="stack-link">
-            <%= translated_link(item_number, classes: "button button--sc secondary expanded") %>
+            <%= translated_link(item_number, classes: "button button--sc") %>
           </div>
         </div>
       </div>

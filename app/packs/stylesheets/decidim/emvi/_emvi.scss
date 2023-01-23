@@ -552,16 +552,20 @@ ul.card-data{
     display:flex;
     padding: 1rem 0.8rem;
     .card__image__container{
-        width: 33%;
+        width: 34%;
         padding: 0 0.5rem;
         display:flex;
         align-items:center;
     }
     .card__image{
         object-fit: unset;
+        max-height:unset;
     }
     .card__content{
-        flex:auto;
+        width: 66%;
+        .button__posts{
+            margin:0.4rem 0;
+        }
     }
 }
 
@@ -592,4 +596,30 @@ ul.card-data{
 }
 .m-r-5{
     margin-right:0.4rem;
+}
+
+.callout{
+    &.primary, &.secondary{
+        background-color:transparent;
+    }
+}
+
+.stack-vertical .stack .stack-item{
+    padding:0;
+    flex: 1 1 0px;
+    .stack-image{
+        flex: 0 0 auto;
+    }
+    .stack-body{
+        flex: 1 0 auto;
+        padding:1rem;
+    }
+    .stack-link{
+        flex: 0 0 auto;
+        text-align:center;
+    }
+}
+
+.stack-horizontal .stack-item{
+    border: 1px solid var(--emvi-primary-rgb);
 }
