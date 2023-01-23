@@ -222,7 +222,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
             background: var(--emvi-background-hsl);
           }
         }
-      }
+    }
+    @include breakpoint(medium){
+        max-width: 150px;
+    }  
+    @include breakpoint(large){
+        max-width: 220px;
+    }  
 }
 
 .sign-in-icon .icon{
@@ -256,7 +262,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 .navbar{
     border-top: 1px solid var(--emvi-primary-rgb);
     border-bottom:  1px solid var(--emvi-primary-rgb);
-    @include breakpoint(medium){
+    @include breakpoint(xlarge){
         .column{
             padding:0;
         }
@@ -274,11 +280,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 }
 
 .main-nav__link{
-    padding:1.5rem;
-    @include breakpoint(medium){
-        &:first-child{
-            padding-left: 0;
-        }
+    padding:1rem;
+    @include breakpoint(large){
+        padding:1.5rem;
+    }
+    &:first-child{
+        padding-left: 0;
     }
     a{
         color:var(--emvi-nav-highlight-grey-rgb);
@@ -313,43 +320,66 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        flex-wrap: wrap;
         .column{
             float:none;
-            flex:0 0 auto;
+            flex:1 1 auto;
             width:auto;
-
-            &:first-child{
-                flex:1 0 auto;
-                padding-left: 0;
-            }
-            &:last-child{
-                padding-right: 0;
+            margin:auto;
+            @include breakpoint(xlarge){
+                &:first-child{
+                    padding-left: 0;
+                }
+                &:last-child{
+                    padding-right: 0;
+                }
             }
         }
     }
-}
-@media print, screen and (min-width: 64em){
-    .main__footer__nav {
-        text-align: left;
+    .main__footer__nav{
+        text-align: center;
+        @include breakpoint(large){
+            text-align: left;
+            .footer-nav li{
+                &:first-child{
+                    padding-left: 0;
+                }
+            }
+        }
     }
-}
+    .main__footer__social{
+        text-align: center;
+        @include breakpoint(large){
+            text-align: right;
+        }
 
-.footer-nav li:first-child {
-    padding-left: 0;
+    }
 }
 
 .mini-footer .row {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     line-height: 1.5rem;
     padding: 2rem 0;
+    flex-direction: column;
+    a.small_logo{
+        margin:0.5rem 0;
+    }
+    @include breakpoint(smallmedium){
+        flex-direction: row;
+        a.small_logo{
+            margin:0;
+        }
+    }
     &:first-child {
-        justify-content:space-around;
         img{
-            height: 80px;
+            max-height: 80px;
             width: auto;
+        }
+        @include breakpoint(smallmedium){
+            justify-content: space-between;
         }
     }
 }
@@ -558,7 +588,6 @@ ul.card-data{
 @media print, screen and (min-width: 50em){
     .proposals .process-header__inner {
         height: 500px;
-        
     }
 }
 .m-r-5{
