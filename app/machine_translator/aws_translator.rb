@@ -26,9 +26,9 @@ class AwsTranslator
     translation = aws_translate
 
     Decidim::MachineTranslationSaveJob.perform_later(
-      resource,
-      field_name,
-      target_locale,
+      @resource,
+      @field_name,
+      @target_locale,
       translation.translated_text
     )
   end
