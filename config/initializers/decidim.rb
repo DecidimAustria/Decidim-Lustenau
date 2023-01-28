@@ -12,9 +12,10 @@ Decidim.configure do |config|
   # When an organization is created through the System area, system admins will
   # be able to choose the available languages for that organization. That list
   # of languages will be equal or a subset of the list in this file.
-  config.available_locales = Rails.application.secrets.decidim[:available_locales].presence || [:en]
+  #config.available_locales = Rails.application.secrets.decidim[:available_locales].presence || [:en]
   # Or block set it up manually and prevent ENV manipulation:
   # config.available_locales = %w(en ca es)
+  config.available_locales = ["ca", "cs", "de", "en", "es", "eu", "fi", "fr", "it", "ja", "nl", "pl", "pt", "ro", "el", "sl"]
 
   # Sets the default locale for new organizations. When creating a new
   # organization from the System area, system admins will be able to overwrite
