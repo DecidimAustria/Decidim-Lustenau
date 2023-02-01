@@ -9,7 +9,7 @@ module ApplicationHelper
     # max_length - a number to limit the length of the body
     #
     # Returns the post's body truncated.
-    def post_description_with_read_more(post,  max_length = 100)
+    def post_description_with_read_more(post,  max_length = 600)
         link = post_path(post)
         body = translated_attribute(post.body)
         tail = "... <br/> #{link_to(t("read_more", scope: "decidim.blogs"), link, class: "button__posts button small hollow")}".html_safe
