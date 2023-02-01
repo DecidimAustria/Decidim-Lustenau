@@ -30,7 +30,7 @@
             <%= cell "decidim/author", post_presenter.author, from: post, has_actions: true %>
           </div>
         </div>
-        <%= decidim_sanitize_editor post_description(post) %>
+        <%= decidim_sanitize_editor post_description_with_read_more(post) %>
       </div>
     </div>
   <% end %>
