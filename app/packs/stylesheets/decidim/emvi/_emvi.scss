@@ -42,7 +42,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 .topbar {
     display: flex;
     position:relative;
-    padding:1rem 0.5rem 3.5rem 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 3.5rem; 
     div.logo-wrapper{
         justify-self: flex-start;
     }
@@ -50,7 +51,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
         justify-self: flex-end;
     }
     @include breakpoint(medium){
-        padding:0;
+        padding-top: 0;
+        padding-bottom: 0; 
+    }
+    @include breakpoint(large){
+        padding-left:0;
+        padding-right:0;
     }
 }
   
@@ -166,19 +172,35 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
     text-decoration: none;
 }
 
-.topbar__admin__link a{
-    color: var(--emvi-nav-highlight-grey-rgb);
-    &:hover {
-        background: rgba(255, 255, 255, 0.02);
-        color:var(--emvi-secondary-rgb);
-        transition: 0.2s ease-in;
+.topbar__admin__link{
+    margin-right:0.9375rem;
+    a{
+        color: var(--emvi-nav-highlight-grey-rgb);
+        &:hover {
+            background: rgba(255, 255, 255, 0.02);
+            color:var(--emvi-secondary-rgb);
+            transition: 0.2s ease-in;
+        }
     }
+    @include breakpoint(medium){
+        margin-right:0;
+    }
+} 
+
+.topbar__user__logged{
+    margin-right:0.5rem;
 }
 
 .menubar{
     display:flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    @include breakpoint(large){
+        flex-direction: row;
+        padding-bottom: 0;
+    }
     nav{
         flex:2 0 auto;
     }
@@ -237,31 +259,36 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
     fill:var(--emvi-primary-rgb);
 }
 
-.language-menu li{
-    a,a:hover{ 
-        border:1px var(--emvi-primary-rgb) solid;
-        border-radius: 50%;
-        width:40px;
-        height:40px;
-        text-align: center;
-        line-height:40px;
-        color: var(--emvi-primary-rgb);
-        text-transform: uppercase;
-        font-weight: 500;
-        padding:unset;
-        background-color: transparent;
-        transition: background-color 0.25s ease-out, color 0.25s ease-out;
-    }
-    a:hover, a.choosen-language{
-        text-decoration: none;
-        color:white;
-        background-color: var(--emvi-primary-rgb);
+.language-menu{
+    display:flex;
+    overflow: hidden;
+    li{
+        margin:0 0.2rem;
+        a,a:hover{ 
+            border:1px var(--emvi-primary-rgb) solid;
+            border-radius: 50%;
+            width:40px;
+            height:40px;
+            text-align: center;
+            line-height:40px;
+            color: var(--emvi-primary-rgb);
+            text-transform: uppercase;
+            font-weight: 500;
+            padding:unset;
+            background-color: transparent;
+            transition: background-color 0.25s ease-out, color 0.25s ease-out;
+        }
+        a:hover, a.choosen-language{
+            text-decoration: none;
+            color:white;
+            background-color: var(--emvi-primary-rgb);
+        }
     }
 }
 
 .navbar{
     border-top: 1px solid var(--emvi-primary-rgb);
-    border-bottom:  1px solid var(--emvi-primary-rgb);
+    border-bottom: 1px solid var(--emvi-primary-rgb);
     @include breakpoint(xlarge){
         .column{
             padding:0;
@@ -291,7 +318,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
         color:var(--emvi-nav-highlight-grey-rgb);
         display:unset;
         padding:unset;
-        &:hover{
+        &:hover, &:focus{
             color:var(--emvi-primary-rgb);
             text-decoration: none;
             box-shadow:unset;
@@ -307,6 +334,27 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 }
 .main-nav__link--active a{
     color:var(--emvi-primary-rgb);
+}
+
+.usermenu-off-canvas-holder{
+    padding: 0.2rem 0.625rem;
+    border-bottom: 1px solid var(--emvi-primary-rgb);
+    .usermenu-off-canvas{
+        border:0;
+        a{
+            color:var(--emvi-nav-highlight-grey-rgb);
+            padding:1rem;
+            &:hover, &:focus{
+                color:var(--emvi-primary-rgb);
+                text-decoration: none;
+                box-shadow:unset;
+                transition: 0.2s ease-in;
+            }
+        }
+    }
+}
+.is-dropdown-submenu{
+    border:0;
 }
 
 .main-footer, .mini-footer{
@@ -552,7 +600,7 @@ ul.card-data{
     display:flex;
     padding: 1rem 0.8rem;
     .card__image__container{
-        width: 34%;
+        flex: 0 0 34%;
         padding: 0 0.5rem;
         display:flex;
         align-items:center;
@@ -562,7 +610,7 @@ ul.card-data{
         max-height:unset;
     }
     .card__content{
-        width: 66%;
+        flex: 1 1 66%;
         .button__posts{
             margin:0.4rem 0;
         }
@@ -604,11 +652,19 @@ ul.card-data{
     }
 }
 
+.alternative-landing.cover-full, .alternative-landing.cover-half, .alternative-landing.tiles, .alternative-landing.stack-horizontal, .alternative-landing.stack-vertical {
+    padding: 4rem 1rem;
+}
+
 .stack-vertical .stack .stack-item{
     padding:0;
     flex: 1 1 0px;
     .stack-image{
         flex: 0 0 auto;
+        padding:1rem;
+        @include breakpoint(smallmedium){
+            padding:0;
+        }
     }
     .stack-body{
         flex: 1 0 auto;
@@ -617,6 +673,9 @@ ul.card-data{
     .stack-link{
         flex: 0 0 auto;
         text-align:center;
+    }
+    @include breakpoint(smallmedium){
+        padding:0;
     }
 }
 
