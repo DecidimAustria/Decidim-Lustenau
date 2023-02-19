@@ -9,7 +9,8 @@ DECIDIM_VERSION = "0.27.0"
 gem "decidim", git: "https://github.com/DecidimAustria/decidim", branch: 'emvi-0.27'
 gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
 #gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27'
-gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27', :ref => '63d7d6bdf73'
+#gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27', :ref => '63d7d6bdf73'
+gem "decidim-decidim_awesome", git: "https://github.com/decidim-ice/decidim-module-decidim_awesome.git", branch: 'main'
 # gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-consultations", git: "https://github.com/DecidimAustria/decidim", branch: 'emvi-0.27'
 # gem "decidim-elections", DECIDIM_VERSION
