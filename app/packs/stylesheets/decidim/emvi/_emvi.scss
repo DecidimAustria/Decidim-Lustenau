@@ -367,6 +367,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
     a.small_logo{
         margin:0.5rem 0;
     }
+    .external-link-container{
+        padding-left: 0.3rem;
+        padding-inline-start: 0.3rem;
+        padding-right: 0.3rem;
+        padding-inline-end: 0.3rem;
+    }
     @include breakpoint(smallmedium){
         flex-direction: row;
         a.small_logo{
@@ -564,7 +570,8 @@ ul.card-data{
     .card__content{
         width: 66%;
         .button__posts{
-            margin:0.4rem 0;
+            margin:1rem 0 0 0;
+            float:right;
         }
     }
 }
