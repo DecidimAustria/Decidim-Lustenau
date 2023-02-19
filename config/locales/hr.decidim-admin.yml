@@ -1,0 +1,1107 @@
+---
+hr:
+  activemodel:
+    attributes:
+      area:
+        area_type: Vrsta područja
+        name: Naziv
+        organization: Organizacija
+      area_type:
+        name: Naziv
+        organization: Organizacija
+        plural: Naziv na drugim jezicima
+      attachment:
+        attachment_collection_id: Mapa
+        description: Opis
+        file: Datoteka
+        title: Naziv privitka ili slike
+      attachment_collection:
+        description: Opis
+        name: Naziv
+      category:
+        description: Opis
+        name: Naziv
+        parent_id: Nadređeni element
+      component:
+        name: Naziv
+        published_at: Objavljeno
+        weight: Redoslijed
+      id: Identifikacijska oznaka
+      import:
+        user_group_id: Stvorite uvoze kao
+      newsletter:
+        body: Tekst
+        subject: Predmet
+      organization:
+        address: Ime glavnog računala za SMTP
+        admin_terms_of_use_body: Tijelo za administratorske uvjete korištenja
+        alert_color: Upozorenje
+        available_authorizations: Dostupna ovlaštenja
+        badges_enabled: Omogući značke
+        comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu vrijednost)
+        cta_button_path: Put gumba Poziv na akciju (CTA)
+        cta_button_text: Tekst gumba Poziv na akciju (CTA)
+        customize_welcome_notification: Prilagodite poruku dobrodošlice
+        default_locale: Zadani jezik
+        description: Opis
+        enable_omnipresent_banner: Prikaži sveprisutan natpis
+        enable_participatory_space_filters: Omogući participativne prostorne filtere
+        facebook_handler: Rukovatelj (handler) za Facebook
+        favicon: Ikona
+        force_authentication: Prisilna provjera autentičnosti
+        force_users_to_authenticate_before_access_organization: Prisilite korisnike na autentifikaciju prije pristupa organizaciji
+        from: S adrese e-pošte
+        github_handler: Rukovatelj (handler) za GitHub
+        header_snippets: Isječci zaglavlja
+        highlight_alternative_color: Isticanje, alternativno
+        highlight_color: Isticanje
+        highlighted_content_banner_action_subtitle: Podnaslov gumba Akcija
+        highlighted_content_banner_action_title: Naslov gumba Akcija
+        highlighted_content_banner_action_url: URL gumba Akcija
+        highlighted_content_banner_enabled: Prikaži natpis o istaknutom sadržaju
+        highlighted_content_banner_image: Slika
+        highlighted_content_banner_short_description: Kratak opis
+        highlighted_content_banner_title: Naslov
+        host: Domaćin
+        instagram_handler: Rukovatelj (handler) za Instagram
+        logo: Logotip
+        machine_translation_display_priority: Prednost prikaza za strojno prevođenje
+        machine_translation_display_priority_original: Prvo izvorni tekst
+        machine_translation_display_priority_translation: Prvo prevedeni tekst
+        name: Naziv
+        official_img_footer: Podnožje službenog logotipa
+        official_img_header: Zaglavlje službenog logotipa
+        official_url: Službeni URL organizacije
+        omnipresent_banner_short_description: Kratak opis
+        omnipresent_banner_title: Naslov
+        omnipresent_banner_url: URL
+        organization_admin_email: E-pošta administratora organizacije
+        organization_admin_name: Ime administratora organizacije
+        organization_locales: Lokacije organizacije
+        password: Lozinka
+        primary_color: Primarno
+        reference_prefix: Prefiks oznake
+        rich_text_editor_in_public_views: Omogući uređivač obogaćenog teksta za sudionike
+        secondary_color: Sekundarno
+        secondary_hosts: Sekundarni domaćini
+        send_welcome_notification: Pošalji poruku dobrodošlice
+        show_statistics: Prikaži statističke podatke
+        success_color: Uspjeh
+        time_zone: Vremenska zona
+        tos_version: Verzija uvjeta pružanja usluge
+        twitter_handler: Rukovatelj (handler) za Twitter
+        user_groups_enabled: Omogući skupine
+        user_name: Korisničko ime
+        users_registration_mode: Način registracije korisnika
+        warning_color: Upozorenje
+        welcome_notification_body: Tekst poruke dobrodošlice
+        welcome_notification_subject: Predmet poruke dobrodošlice
+        youtube_handler: Rukovatelj (handler) za YouTube
+      scope:
+        code: Kôd
+        name: Naziv
+        organization: Organizacija
+        parent_id: Nadređeni element
+        scope_type: Vrsta teme
+        scope_type_id: Vrsta teme
+      scope_type:
+        name: Naziv
+        organization: Organizacija
+        plural: Naziv na drugim jezicima
+      settings:
+        scope_id: Opseg
+      static_page:
+        allow_public_access: Dopusti pristup bez autentifikacije
+        changed_notably: Došlo je do primjetnih promjena.
+        content: Sadržaj
+        organization: Organizacija
+        show_in_footer: Prikaži u podnožju
+        slug: URL slug
+        title: Naslov
+        weight: Redoslijed
+      static_page_topic:
+        description: Opis
+        show_in_footer: Prikaži u podnožju
+        title: Naslov
+        weight: Redoslijed
+      user_group_csv_verification:
+        file: Datoteka
+    errors:
+      models:
+        newsletter:
+          attributes:
+            base:
+              at_least_one_space: Odaberite barem jedno mjesto za sudjelovanje
+        organization:
+          attributes:
+            official_img_footer:
+              allowed_file_content_types: Datoteka slike nije valjana
+            official_img_header:
+              allowed_file_content_types: Datoteka slike nije valjana
+        participatory_space_private_user_csv_import:
+          attributes:
+            file:
+              malformed: Neispravno oblikovana datoteka za uvoz, pažljivo pročitajte upute i provjerite je li datoteka kodirana UTF-8.
+        user_group_csv_verification:
+          attributes:
+            file:
+              malformed: Neispravno oblikovana datoteka za uvoz, pažljivo pročitajte upute i provjerite je li datoteka kodirana UTF-8.
+      new_import:
+        attributes:
+          file:
+            invalid_file: Navedena je nevažeća datoteka, provjerite je li datoteka ispravno formatirana
+            invalid_mime_type: Nevažeća mime vrsta
+  activerecord:
+    attributes:
+      decidim/static_page:
+        content: Sadržaj
+        slug: URL slug
+        title: Naslov
+      doorkeeper/application:
+        authorize_url: Autoriziraj URL
+        client_id: Identifikacijska oznaka klijenta
+        client_secret: Tajni ključ klijenta
+        organization_name: Ime organizacije
+        organization_url: URL organizacije
+        redirect_uri: URI za preusmjeravanje
+        site: Internetske stranice
+  decidim:
+    admin:
+      actions:
+        add: Dodaj
+        attachment:
+          new: Novi prilog
+        attachment_collection:
+          new: Nova zbirka priloga
+        browse: Pregledaj
+        category:
+          new: Nova kategorija
+        export: Izvoz
+        export-selection: Odabir izvoza
+        import: Uvoz
+        manage: Upravljaj
+        new: Novi %{name}
+        newsletter:
+          new: Novi bilten
+        participatory_space_private_user:
+          new: Novi privatni korisnik participativnog prostora
+        per_page: Po stranici
+        permissions: Dopuštenja
+        reject: Odbij
+        share: Dijeli
+        user:
+          new: Novi admin
+        verify: Potvrdi
+      admin_terms_of_use:
+        accept:
+          error: Došlo je do pogreške pri prihvaćanju administratorskih uvjeta korištenja.
+          success: Izvrsno! Prihvatili ste administratorske uvjete korištenja.
+        actions:
+          accept: Slažem se s ovim administratorskim uvjetima
+          are_you_sure: Želite li zaista odbiti administratorske uvjete?
+          refuse: Odbij administratorske uvjete
+          title: Slažem se s uvjetima korištenja
+        required_review:
+          alert: 'Obvezno: pregledajte naše administratorske uvjete korištenja'
+          callout: Odvojite trenutak i pregledajte Administratorske uvjete korištenja. Ako ih ne pregledate, nećete moći administrirati platformu.
+          cta: Pregledajte ih sada.
+        title: Administratorski uvjeti korištenja
+      area_types:
+        create:
+          error: Došlo je do problema pri stvaranju nove vrste područja.
+          success: Vrsta područja uspješno je stvorena.
+        destroy:
+          success: Vrsta područja uspješno je uništena
+        edit:
+          title: Uređivanje vrste područja
+          update: Ažuriraj
+        new:
+          create: Stvori vrstu područja
+          title: Nova vrsta područja
+        update:
+          error: Došlo je do problema pri ažuriranju vrste područja.
+          success: Vrsta područja uspješno je ažurirana
+      areas:
+        create:
+          error: Došlo je do problema pri stvaranju novog područja.
+          success: Područje je uspješno stvoreno.
+        destroy:
+          has_spaces: Područje ima ovisne prostore koje ne smije imati da bi se izbrisalo.
+          success: Područje je uspješno uništeno
+        edit:
+          title: Uređivanje područja
+          update: Ažuriraj
+        new:
+          create: Stvori područje
+          title: Novo područje
+        no_areas: Nema područja
+        update:
+          error: Došlo je do problema pri ažuriranju ovog područja.
+          success: Područje je uspješno ažurirano
+      attachment_collections:
+        create:
+          error: Došlo je do problema pri stvaranju nove mape.
+          success: Mapa je uspješno stvorena.
+        destroy:
+          success: Mapa je uspješno uništena.
+        edit:
+          title: Uređivanje mape
+          update: Ažuriraj
+        index:
+          attachment_collection_used: Mapa ne može ukloniti jer je u upotrebi.
+          attachment_collections_title: Mape privitka
+        new:
+          create: Stvori
+          title: Nova mapa
+        update:
+          error: Došlo je do problema pri ažuriranju mape.
+          success: Mapa je uspješno ažurirana.
+      attachments:
+        create:
+          error: Došlo je do problema pri stvaranju novog privitka.
+          success: Privitak je uspješno stvoren.
+        destroy:
+          success: Privitak je uspješno uništen.
+        edit:
+          title: Uređivanje privitka
+          update: Ažuriraj
+        index:
+          attachments_title: Privitci
+        new:
+          create: Stvori privitak
+          title: Novi privitak
+        update:
+          error: Došlo je do problema pri ažuriranju privitka.
+          success: Privitak je uspješno ažuriran.
+      attachments_privacy_warning:
+        message: Budite oprezni kada radite s prilozima u privatnom prostoru. Svaki sudionik može podijeliti ovaj dokument s drugima.
+      autocomplete:
+        no_results: Nije pronađen nijedan rezultat
+        search_prompt: Unesite najmanje tri znaka za pretraživanje
+      block_user:
+        new:
+          action: Blokirajte račun i pošaljite obrazloženje
+          description: Blokiranje korisnika učinit će njegov račun neupotrebljivim. U obrazloženju možete navesti bilo kakve smjernice o načinima na koje biste razmotrili deblokiranje korisnika.
+          justification: Opravdanje
+          title: Blokiraj korisnika %{name}
+      categories:
+        create:
+          error: Došlo je do problema pri stvaranju kategorije.
+          success: Kategorija je uspješno stvorena.
+        destroy:
+          error: Došlo je do problema pri brisanju kategorije. Prvo izbrišite bilo koju potkategoriju, pripazite da nijedan drugi subjekt ne pripada kategoriji i pokušajte ponovno.
+          success: Kategorija je uspješno izbrisana.
+        edit:
+          title: Uređivanje kategorije
+          update: Ažuriraj
+        index:
+          categories_title: Kategorije
+          category_used: Ova se kategorija ne može ukloniti jer je u upotrebi.
+        new:
+          create: Stvori kategoriju
+          title: Nova kategorija
+        update:
+          error: Došlo je do problema pri ažuriranju kategorije.
+          success: Kategorija je uspješno ažurirana.
+      component_permissions:
+        update:
+          error: Došlo je do problema pri ažuriranju dopuštenja komponente.
+          success: Dopuštenja su uspješno ažurirana.
+      components:
+        create:
+          error: Došlo je do problema pri stvaranju komponente.
+          success: Komponenta je uspješno stvorena.
+        destroy:
+          error: Došlo je do problema pri uništenju komponente.
+          success: Komponenta je uspješno izbrisana.
+        edit:
+          title: Uređivanje komponente
+          update: Ažuriraj
+        form:
+          default_step_settings: Zadane postavke koraka
+          global_settings: Opće postavke
+          step_settings: Postavke koraka
+        index:
+          add: Dodaj komponentu
+          headers:
+            actions: Radnje
+            name: Naziv komponente
+            scope: Opseg komponente
+            type: Vrsta komponente
+        new:
+          add: Dodaj komponentu
+          title: 'Dodaj komponentu: %{name}'
+        publish:
+          success: Komponenta je uspješno objavljena.
+        title: Komponente
+        unpublish:
+          success: Objava komponente uspješno je povučena.
+        update:
+          error: Došlo je do problema pri ažuriranju komponente.
+          success: Komponenta je uspješno ažurirana.
+      conflicts:
+        attempts: Pokušaji
+        'false': Ne
+        managed_user_name: Upravljani korisnik
+        solved: Riješeno
+        title: Sukobi verifikacije
+        transfer:
+          email: E-mail
+          error: Došlo je do problema pri prijenosu trenutnog sudionika na upravljanog sudionika.
+          name: Ime
+          reason: Razlog
+          success: Trenutni prijenos je uspješno dovršen.
+          title: Prijenos
+        'true': Da
+        user_name: Korisnik
+      dashboard:
+        show:
+          view_more_logs: Prikaži više evidencija
+          welcome: Dobrodošli na administratorsku ploču platforme Decidim.
+      domain_whitelist:
+        form:
+          domain_too_short: Domena je prekratka
+        update:
+          error: Ažuriranje popisa dopuštenih domena nije uspjelo
+          success: Popis dopuštenih domena uspješno je ažuriran
+      exports:
+        export_as: "%{name} kao %{export_format}"
+        formats:
+          CSV: CSV
+          Excel: Excel
+          FormPDF: PDF
+          JSON: JSON
+        notice: Vaš je izvoz u tijeku. Kad se dovrši, primit ćete poruku e-pošte.
+      filters:
+        category_id_eq:
+          label: Kategorija
+        filter_label: Filtriraj
+        invitation_accepted_at_present:
+          label: Poziv je prihvaćen
+          values:
+            'false': Ne
+            'true': Da
+        last_sign_in_at_present:
+          label: Ikad prijavljen
+          values:
+            'false': Ne
+            'true': Da
+        moderated_users:
+          reports_reason_eq:
+            label: Prijavite razlog
+            values:
+              does_not_belong: Ne pripada
+              offensive: Uvredljiv
+              spam: Spam
+        moderations:
+          reportable_type_string_eq:
+            label: Tip
+        officialized_at_null:
+          label: Status
+          values:
+            'false': Službeno potvrđeno
+            'true': Nije službeno potvrđeno
+        participatory_space_private_users:
+          user_invitation_accepted_at_not_null:
+            label: Pozivnica prihvaćena
+            values:
+              'false': Nije prihvaćeno
+              'true': Prihvaćeno
+          user_invitation_sent_at_not_null:
+            label: Pozivnica je poslana
+            values:
+              'false': Nije poslano
+              'true': Poslano
+        private_space_eq:
+          label: Privatno
+          values:
+            'false': Javno
+            'true': Privatno
+        published_at_null:
+          label: Objavljeno
+          values:
+            'false': Objavljeno
+            'true': Povučena objava
+        scope_id_eq:
+          label: Tema
+        search_label: Pretraži
+        search_placeholder:
+          name_or_nickname_or_email_cont: Pretraži %{collection} po e-pošti, imenu ili nadimku.
+          report_count_eq: Izvješće o broju eq
+          reported_id_string_or_reported_content_cont: Pretražite %{collection} prema ID-u ili sadržaju koji se može prijaviti.
+          title_cont: Pretraži %{collection} po naslovu.
+          user_name_or_user_email_cont: Traži %{collection} po imenu ili e-pošti.
+          user_name_or_user_nickname_or_user_email_cont: Traži %{collection} po e-pošti, imenu ili nadimku.
+        state_eq:
+          label: Status
+          values:
+            all: svi
+            pending: U tijeku
+            rejected: Odbijen
+            verified: Provjereno
+      forms:
+        file_help:
+          import:
+            explanation: 'Uputstvo za datoteku:'
+            message_1: Podržane su CSV, JSON i Excel (.xlsx) datoteke
+            message_2: Za CSV datoteke, razdjelnik između stupaca mora biti točka-zarez (";")
+      help_sections:
+        error: Došlo je do problema pri ažuriranju odjeljaka za pomoć
+        form:
+          save: Spremi
+        success: Odjeljci za pomoć uspješno su ažurirani
+      impersonatable_users:
+        index:
+          filter:
+            all: Sve
+            managed: Upravljano
+            not_managed: Neupravljano
+          filter_by: Filtriraj po
+          impersonate: Personificiraj
+          impersonate_new_managed_user: Upravljaj novim sudionikom
+          managed: Upravlja se
+          name: Naziv
+          needs_authorization_warning: Za ovu organizaciju morate imate omogućenu barem jednu autorizaciju.
+          not_managed: Neupravljano
+          promote: Promakni
+          search: Pretraži
+          status: Status
+          view_logs: Prikaži evidencije
+      impersonations:
+        close_session:
+          error: Došlo je do problema pri zatvaranju trenutačne sesije upravljanja sudionicima.
+          success: Trenutačna sesija personificiranja uspješno je završena.
+        create:
+          error: Došlo je do problema pri upravljanju sudionikom.
+          success: Upravljani sudionik uspješno je stvoren.
+        form:
+          authorization_method: Metoda autorizacije
+          name: Naziv
+          reason: Razlog
+        new:
+          impersonate: Personificiraj
+          impersonate_existing_managed_user: Upravljaj sudionikom "%{name}"
+          impersonate_existing_user: Upravljaj sudionikom "%{name}"
+          impersonate_new_managed_user: Upravljaj novim sudionikom
+      imports:
+        and: i
+        data_errors:
+          duplicate_headers:
+            detail: Provjerite sadrži li datoteka potrebne stupce ili zaglavlja samo jednom.
+            message:
+              one: Duplicirani stupac %{columns}.
+              other: Dvostruki stupci %{columns}.
+          invalid_indexes:
+            lines:
+              detail: Provjerite jesu li ovi redovi ispravno formatirani i sadrže li važeće zapise.
+              message:
+                one: Pronađena pogreška u datoteci za uvoz u retku %{indexes}.
+                other: Pronađene pogreške u datoteci za uvoz u recima %{indexes}.
+            records:
+              detail: Provjerite jesu li ovi zapisi ispravno formatirani i sadrže li važeće zapise.
+              message:
+                one: Pronađena pogreška u datoteci za uvoz za zapise s brojevima naloga %{indexes}.
+                other: Pronađene su pogreške u datoteci za uvoz za zapise s brojevima naloga %{indexes}.
+          missing_headers:
+            detail: Provjerite sadrži li datoteka potrebne stupce.
+            message:
+              one: Nedostaje stupac %{columns}.
+              other: Nedostaju stupci %{columns}.
+        error: Došlo je do problema tijekom uvoza
+        example_error: Nije moguće izraditi primjer za navedeni tip
+        new:
+          accepted_mime_types:
+            csv: CSV
+            json: JSON
+            xlsx: Excel (.xlsx)
+          actions:
+            back: leđa
+          download_example: Primjer preuzimanja
+          download_example_format: Primjer kao %{name}
+          file_legend: Dodajte datoteku za uvoz koja će se analizirati.
+          import: Uvoz
+        notice: "%{count} %{resource_name} uspješno uvezen"
+      logs:
+        logs_list:
+          no_logs_yet: Još nema evidencija
+      managed_users:
+        promotion:
+          error: Došlo je do problema pri promicanju upravljanog sudionika.
+          success: Upravljani sudionik uspješno je promaknut.
+        promotions:
+          new:
+            explanation: Upravljani sudionici mogu biti promaknuti u standardne sudionike. To znači da će biti pozvani da se prijave i nećete moći ponovno upravljati njima. Pozvani sudionik primit će poruku e-pošte kako bi prihvatio vaš poziv.
+            new_managed_user_promotion: Promicanje novih upravljanih sudionika
+            promote: Promakni
+      menu:
+        admin_log: Evidencija aktivnosti administratora
+        admins: Administratori
+        appearance: Izgled
+        area_types: Vrste područja
+        areas: Područja
+        configuration: Konfiguracija
+        dashboard: Nadzorna ploča
+        external_domain_whitelist: Dopuštene vanjske domene
+        help_sections: Odjeljci za pomoć
+        homepage: Početna stranica
+        impersonations: Personificiranja
+        moderation: Globalne moderacije
+        newsletters: Bilteni
+        participants: Sudionici
+        reported_users: Prijavljeni korisnici
+        scope_types: Vrste teme
+        scopes: Teme
+        settings: Postavke
+        static_pages: Stranice
+        user_groups: Skupine
+        users: Sudionici
+      metrics:
+        metrics:
+          see_more_metrics: Pogledajte dodatne parametre
+      models:
+        area:
+          fields:
+            area_type: Vrsta područja
+            name: Naziv
+        area_type:
+          fields:
+            name: Naziv
+            plural: Naziv na drugim jezicima
+        attachment:
+          fields:
+            collection: Mapa
+            content_type: Vrsta
+            file_size: Veličina
+            title: Naslov
+          name: Privitak
+        attachment_collection:
+          name: Mapa
+        category:
+          name: Kategorija
+        impersonation_log:
+          fields:
+            admin: Administrator
+            ended_at: Završilo
+            expired_at: Isteklo
+            reason: Razlog
+            started_at: Počelo
+            user: Sudionik
+        newsletter:
+          fields:
+            created_at: Stvoreno
+            progress: Napredak
+            sent_at: Poslano
+            sent_to: Primatelj
+            subject: Predmet
+          name: Bilten
+        participatory_space_private_user:
+          name: Privatni sudionik u participativnom prostoru
+        scope:
+          fields:
+            name: Naziv
+            scope_type: Vrsta teme
+        scope_type:
+          fields:
+            name: Naziv
+            plural: Naziv na drugim jezicima
+        share_token:
+          fields:
+            created_at: Stvoreno
+            expires_at: Istječe
+            last_used_at: 'Zadnji put upotrijebljeno:'
+            times_used: 'Upotrijebljeno puta:'
+            token: Znak
+            user: Autor
+        static_page:
+          fields:
+            created_at: Stvoreno
+            title: Naslov
+        user:
+          fields:
+            created_at: Datum stvaranja
+            email: Adresa e-pošte
+            last_sign_in_at: Datum posljednje prijave
+            name: Naziv
+            role: Uloga
+            roles:
+              admin: Administrator
+              user_manager: Upravitelj sudionika
+          name: Sudionik
+        user_group:
+          fields:
+            actions: Radnje
+            created_at: Stvoreno
+            document_number: Broj isprave
+            name: Naziv
+            phone: Telefon
+            state: Status
+            users_count: Broj sudionika
+      moderated_users:
+        index:
+          actions:
+            block: Blokirati korisnika
+            title: Radnje
+            unblock: Odblokiraj korisnika
+            unreport: Poništi prijavu
+          name: Ime
+          nickname: Nadimak
+          reason: Razlog
+          reports: Izvještaji se računaju
+          title: Popis prijavljenih korisnika
+        report:
+          reasons:
+            does_not_belong: Ne pripada
+            offensive: Uvredljiv
+            spam: Spam
+        tabs:
+          blocked: Blokiran
+          unblocked: Nije blokirano
+      moderations:
+        index:
+          title: Moderiranja
+        report:
+          reasons:
+            does_not_belong: Ne pripada
+            offensive: Uvredljivo
+            spam: Neželjena poruka
+        reports:
+          index:
+            author: Autor(i)
+            callout_html: Sadržaj se pojavljuje na ploči za moderiranje kada ga je signalizirao korisnik (može biti bilo tko s registriranim računom) klikom na zastavicu %{icon} pored stavke.
+            content_original_language: Izvorni jezik sadržaja
+            participatory_space: Prostor za sudjelovanje
+            reported_content: Prijavljeni sadržaj
+            see_current: Vidi trenutni
+            see_original: Vidi original
+            title: Izvješća o moderiranju
+          show:
+            report_details: Pojedinosti razloga
+            report_language: Jezik izvješća
+            report_reason: Razlog
+            title: Pojedinosti izvješća
+      newsletter_templates:
+        index:
+          preview_template: Pretpregled
+          title: Predlošci biltena
+          use_template: Upotrijebi ovaj predložak
+        show:
+          preview: 'Pregled predloška: %{template_name}'
+          use_template: Upotrijebi ovaj predložak
+      newsletters:
+        create:
+          error: Došlo je do problema pri stvaranju biltena.
+          success: Bilten je uspješno stvoren. Pregledajte ga prije slanja.
+        deliver:
+          error: Došlo je do problema pri slanju biltena.
+          success: Bilten je uspješno poslan.
+        destroy:
+          error_already_sent: 'Bilten se ne može uništiti: već je poslan.'
+          success: Bilten je uspješno uništen.
+        edit:
+          save_and_preview: Spremi i pokreni pretpregled
+          title: Uređivanje biltena
+        index:
+          all: sve
+          all_users: Svi korisnici
+          and: i
+          confirm_delete: Želite li zaista izbrisati bilten?
+          followers: pratitelji
+          has_been_sent_to: 'Poslano je na sljedeću adresu:'
+          no_scopes: Nema tema
+          not_sent: Nije poslano
+          participants: sudionici
+          segmented_to: 'Segmentirano na %{subject}:'
+          subscribed_count: 'Pretplaćeni:'
+          title: Bilteni
+        new:
+          save: Spremi
+          title: Novi bilten
+        select_recipients_to_deliver:
+          all_spaces: Sve
+          all_users_help: Šalje bilten svim potvrđenim korisnicima.
+          confirm_deliver: Želite li zaista poslati bilten? Radnju nije moguće poništiti.
+          deliver: Pošalji bilten
+          followers_help: Šalje bilten svim potvrđenim korisnicima koji prate odabrane participativne prostore na popisu.
+          none: Nijedna
+          participants_help: Šalje bilten svim potvrđenim korisnicima koji su sudjelovali u nekom od odabranih participativnih prostora na popisu.
+          recipients_count: 'Broj korisnika kojima će bilten biti poslan: <strong id=''recipients_count''>%{count}</strong>.'
+          scopes_help: Šalje bilten korisnicima koji su aktivirali neku od odabranih tema u postavkama „Moji interesi” njihova računa.
+          select_scopes: Filtriraj za korisnike koji su aktivirali neku od odabranih tema u postavkama Moji interesi njihova računa.
+          select_spaces: Odaberite prostore za segmentiranje biltena
+          select_users: Odaberite korisnike kojima želite poslati bilten
+          send_to_all_users: Pošalji svim korisnicima
+          send_to_followers: Pošalji pratiteljima
+          send_to_participants: Pošalji sudionicima
+          title: Odaberite primatelje za slanje
+          warning: "<strong>Pozor:</strong> Ovaj bilten šalje se samo korisnicima koji su aktivirali <em>Želim primati biltene</em> u svojim postavkama obavijesti."
+        send:
+          no_recipients: Nema primatelja za ovaj odabir
+        show:
+          preview: Pretpregled
+          select_recipients_to_deliver: Odaberite primatelje za slanje
+          subject: Predmet
+        update:
+          error: Došlo je do problema pri ažuriranju biltena.
+          success: Bilten je uspješno ažuriran. Pregledajte ga prije slanja.
+      officializations:
+        block:
+          error: Došlo je do pogreške prilikom blokiranja sudionika
+          success: Sudionik je uspješno blokiran
+        create:
+          success: Sudionik je uspješno službeno potvrđen
+        destroy:
+          success: Sudioniku je uspješno povučena službena potvrda
+        index:
+          actions: Radnje
+          badge: Značka
+          block: Blokirati korisnika
+          created_at: Stvoreno
+          name: Naziv
+          nickname: Nadimak
+          not_officialized: Nije službeno potvrđen
+          officialize: Službeno potvrdi
+          officialized: Službeno potvrđen
+          reofficialize: Ponovno službeno potvrdi
+          reports: Izvještaji
+          show_email: Prikaži adresu e-pošte
+          status: Status
+          unblock: Odblokiraj korisnika
+          unofficialize: Povuci službenu potvrdu
+        new:
+          badge: Značka službene potvrde
+          officialize: Službeno potvrdi
+          title: Službeno potvrdi sudionika "%{name}"
+        show_email_modal:
+          close_modal: Zatvori modalni prozor
+          description: Ako morate izravno stupiti u kontakt sa sudionikom, možete kliknuti na gumb Prikaži kako biste vidjeli adresu e-pošte. Ova će se radnja zabilježiti.
+          email_address: Adresa e-pošte
+          full_name: Ime i prezime
+          hidden: skriveno
+          show: Prikaži
+          title: Prikaži adresu e-pošte sudionika
+        unblock:
+          error: Došlo je do pogreške prilikom deblokiranja sudionika
+          success: Sudionik je uspješno deblokiran
+      organization:
+        edit:
+          title: Uređivanje profila organizacije
+          update: Ažuriraj
+        form:
+          facebook: Facebook
+          github: GitHub
+          instagram: Instagram
+          rich_text_editor_in_public_views_help: U nekim područjima teksta sudionici će moći unijeti neke HTML oznake s pomoću uređivača obogaćenog teksta.
+          social_handlers: Društvene mreže
+          twitter: Twitter
+          url: URL
+          youtube: YouTube
+        update:
+          error: Došlo je do problema pri ažuriranju organizacije.
+          success: Profil organizacije uspješno je ažuriran.
+      organization_appearance:
+        edit:
+          update: Ažuriraj
+        form:
+          colors:
+            colors_title: Boje profila organizacije
+            colors_warning_html: Upozorenje! Promjena ovih boja može prekinuti kontraste pristupačnosti. Kontrast po svom izboru možete provjeriti s <a href="%{link}">WebAIM Contrast Checkerom</a> ili drugim sličnim alatima.
+            header_snippets_help: Upotrijebite ovo polje kako biste dodali elemente u zaglavlje HTML-a. Najčešća je upotreba integriranje usluga trećih strana za koje su potrebni dodatni JavaScript ili CSS. Možete ga upotrijebiti i za dodavanje dodatnih metaoznaka u HTML. Imajte na umu da će ovo biti dostupno samo na javnim stranicama, a ne u administratorskom odjeljku.
+          cta_button_path_help: 'Možete promijeniti kamo vodi gumb Poziv na akciju (CTA) na početnoj stranici. Upotrijebite djelomične putove, a ne potpune URL-ove. Dopušteni su slova, brojke, crtice i kose crte, prvi znak mora biti slovo. Gumb Poziv na akciju (CTA) prikazan je na početnoj stranici između teksta dobrodošlice i opisa. Primjer: %{url}'
+          cta_button_text_help: Možete promijeniti tekst gumba Poziv na akciju (CTA) na početnoj stranici za svaki jezik dostupan u vašem profilu organizacije. Ako nije postavljeno, primjenjuje se zadana vrijednost. Gumb Poziv na akciju (CTA) prikazan je na početnoj stranici između teksta dobrodošlice i opisa.
+          homepage_appearance_title: Uređivanje izgleda početne stranice
+          homepage_highlighted_content_banner_title: Istaknut natpis sadržaja
+          images:
+            layout_appearance_title: Uređivanje izgleda rasporeda
+            preview: Pretpregled
+          omnipresent_banner_appearance_title: Uređivanje sveprisutnog natpisa
+      organization_external_domain_whitelist:
+        edit:
+          update: Ažuriraj
+        external_domain:
+          down: dolje
+          external_domain: Vanjska domena
+          remove: Ukloniti
+          up: Gore
+        form:
+          add: Dodaj na popis dopuštenih
+          title: Popis dopuštenih vanjskih domena
+      organization_homepage:
+        edit:
+          active_content_blocks: Blokovi aktivnog sadržaja
+          inactive_content_blocks: Blokovi neaktivnog sadržaja
+      organization_homepage_content_blocks:
+        edit:
+          update: Ažuriraj
+      participatory_space_private_users:
+        create:
+          error: Došlo je do problema pri dodavanju privatnog sudionika za ovaj participativni prostor.
+          success: Pristup privatnog sudionika participativnom prostoru uspješno je stvoren.
+        destroy:
+          error: Došlo je do problema pri brisanju privatnog sudionika za ovaj participativni prostor.
+          success: Pristup privatnog sudionika participativnom prostoru uspješno je uništen.
+        index:
+          import_via_csv: Uvezi putem CSV-a
+          title: Privatni sudionik u participativnom prostoru
+        new:
+          create: Stvori
+          title: Novi privatni sudionik u participativnom prostoru.
+      participatory_space_private_users_csv_imports:
+        create:
+          invalid: Došlo je do problema pri čitanju datoteke CSV.
+          success: Datoteka CSV uspješno je učitana, sudionicima šaljemo poruku e-pošte s pozivnicom. Ovo bi moglo potrajati.
+        new:
+          destroy:
+            button: Izbrišite sve privatne sudionike
+            confirm: Jeste li sigurni da želite izbrisati sve privatne sudionike? Ova se radnja ne može poništiti, nećete ih moći oporaviti.
+            empty: Nemate privatnih sudionika.
+            explanation: Imate %{count} privatnih sudionika.
+            title: Izbrišite privatne sudionike
+          explanation: Učitajte svoju datoteku CSV. Datoteka mora sadržavati dva stupca, adresu e-pošte u prvom stupcu datoteke i ime korisnikâ koje želite dodati u participativni prostor u posljednjem stupcu datoteke (adresa e-pošte, ime), bez zaglavlja.
+          title: Učitajte svoju datoteku CSV
+          upload: Učitaj
+      reminders:
+        create:
+          error: Došlo je do problema pri izradi podsjetnika.
+          success:
+            one: "%{count} korisnik će biti podsjetnik."
+            other: "%{count} korisnika će se podsjetiti."
+        new:
+          submit: Poslati
+      resource_permissions:
+        edit:
+          submit: Pošalji
+          title: Uređivanje dopuštenja
+        update:
+          success: Dopuštenja su uspješno ažurirana.
+      resources:
+        index:
+          headers:
+            scope: Opseg
+      scope_types:
+        create:
+          error: Došlo je do problema pri stvaranju nove vrste teme.
+          success: Vrsta teme uspješno je stvorena.
+        destroy:
+          success: Vrsta teme uspješno je uništena
+        edit:
+          title: Uređivanje vrste teme
+          update: Ažuriraj
+        new:
+          create: Stvori vrstu teme
+          title: Nova tema
+        update:
+          error: Došlo je do problema pri ažuriranju vrste teme.
+          success: Vrsta teme uspješno je ažurirana
+      scopes:
+        create:
+          error: Pojavio se problem pri stvaranju nove teme.
+          success: Tema je uspješno stvorena.
+        destroy:
+          success: Tema je uspješno uništena
+        edit:
+          title: Uređivanje teme
+          update: Ažuriraj
+        new:
+          create: Stvori temu
+          title: Nova tema
+        no_scopes: Nema nijedne teme na ovoj razini.
+        update:
+          error: Došlo je do problema pri ažuriranju teme.
+          success: Tema je uspješno ažurirana
+      share_tokens:
+        actions:
+          confirm_destroy: Želite li zaista izbrisati token?
+          destroy: Izbriši
+          share: Dijeli
+        destroy:
+          error: Došlo je do problema pri uništenju tokena.
+          success: Token je uspješno uništen.
+        share_tokens:
+          empty: Nema aktivnih tokena
+          help: Ovi se tokeni upotrebljavaju za javno dijeljenje ovog neobjavljenog izvora s bilo kojim korisnikom. Bit će skriveni kada se objavi izvor. Kliknite na ikonu za dijeljenje tokena kako biste pristupili URL-u koji se može podijeliti.
+          title: Dijeli tokene
+      shared:
+        gallery:
+          add_images: Dodaj slike
+          delete_image: Izbriši sliku
+          edit_images: Uređivanje slika
+          gallery_legend: Dodaj galeriju slika (neobvezno)
+      static_page_topics:
+        create:
+          error: Došlo je do problema pri stvaranju nove teme.
+          success: Tema je uspješno stvorena.
+        destroy:
+          success: Tema je uspješno uništena
+        edit:
+          title: Uređivanje teme
+          update: Ažuriraj temu
+        new:
+          create: Stvori temu
+          title: Nova tema
+        update:
+          error: Došlo je do problema pri ažuriranju teme.
+          success: Tema je uspješno ažurirana
+      static_pages:
+        actions:
+          view: Prikaži javnu stranicu
+        create:
+          error: Došlo je do problema pri stvaranju nove stranice.
+          success: Stranica je uspješno stvorena.
+        destroy:
+          success: Stranica je uspješno uništena
+        edit:
+          changed_notably_help: Ako se označi, sudionici će biti obaviješteni da bi trebali prihvatiti nove uvjete.
+          title: Uređivanje stranice
+          update: Ažuriraj
+        form:
+          none: Nijedna
+          slug_help: 'Upotrijebite djelomične putove, a ne potpune URL-ove. Dopušteni su slova, brojke, crtice i kose crte, prvi znak mora biti slovo. Primjer: %{url}'
+        index:
+          last_notable_change: Posljednja primjetna promjena
+        new:
+          create: Stvori stranicu
+          title: Nova stranica
+        topic:
+          destroy: Ukloni temu
+          edit: Uređivanje teme
+          empty: Nema stranice pod ovom temom
+          without_topic: Stranice bez teme
+        update:
+          error: Došlo je do problema pri ažuriranju stranice.
+          success: Stranica je uspješno ažurirana
+      titles:
+        admin_log: Evidencija administratora
+        area_types: Vrste područja
+        areas: Područja
+        authorization_workflows: Metode provjere
+        dashboard: Nadzorna ploča
+        impersonatable_users: Sudionici kojima se može upravljati
+        impersonations: Upravljanje sudionicima
+        metrics: Parametri
+        panel: Administrator
+        participants: Sudionici
+        scope_types: Vrste teme
+        scopes: Teme
+        static_pages: Stranice
+        statistics: Aktivnost
+        user_groups: Skupine
+        users: Sudionici
+      user_group:
+        csv_verify:
+          invalid: Došlo je do problema pri čitanju datoteke CSV.
+          success: Datoteka CSV uspješno je učitana, provjeravamo skupine koje ispunjavaju kriterije. Ovo bi moglo potrajati.
+        reject:
+          invalid: Došlo je do problema pri odbijanju skupine.
+          success: Skupina je uspješno odbijena
+        verify:
+          invalid: Došlo je do problema pri provjeri skupine.
+          success: Skupina je uspješno potvrđena
+      user_groups:
+        index:
+          filter:
+            all: Sve
+            pending: U tijeku
+            rejected: Odbijeno
+            verified: Potvrđeno
+          filter_by: Filtriraj po
+          search: Pretraži
+          state:
+            pending: U tijeku
+            rejected: Odbijeno
+            verified: Potvrđeno
+          verify_via_csv: Potvrdi putem CSV-a
+      user_groups_csv_verifications:
+        new:
+          explanation: Učitajte svoju datoteku CSV. Datoteka mora sadržavati službene adrese e-pošte skupina u vašem profilu organizacije u prvom stupcu datoteke, bez zaglavlja. Potvrdit će se samo one skupine koje su potvrdile svoju adresu e-pošte i koje imaju adresu e-pošte u datoteci CSV.
+          title: Učitajte svoju datoteku CSV
+          upload: Učitaj
+      users:
+        create:
+          error: Došlo je do problema pri pozivanju administratora.
+          success: Sudionik je uspješno pozvan.
+        destroy:
+          error: Došlo je do problema pri brisanju administratora.
+          success: Sudionik više nije administrator.
+        form:
+          email: Adresa e-pošte
+          name: Naziv
+          role: Uloga
+        new:
+          create: Pozovi
+          title: Pozovi sudionika kao administratora
+      users_statistics:
+        users_count:
+          admins: Administratori
+          last_day: Jučer
+          last_month: Prošli mjesec
+          last_week: Prošli tjedan
+          no_users_count_statistics_yet: Još nema statističkih podataka o broju korisnika
+          participants: Sudionici
+      view_public_page: Prikaži javnu stranicu
+    forms:
+      errors:
+        impersonate_user:
+          reason: Morate navesti razlog za upravljanje neupravljanim sudionikom
+    metrics:
+      blocked_users:
+        object: blokiranih korisnika
+        title: Blokirani korisnici
+      reported_users:
+        object: prijavljeni korisnici
+        title: Prijavljeni korisnici
+      user_reports:
+        object: izvješća korisnika
+        title: Izvješća korisnika
+    moderations:
+      actions:
+        expand: Proširiti
+        hidden: Skriveno
+        hide: Sakrij
+        not_hidden: Nije skriveno
+        title: Radnje
+        unhide: Otkrij
+        unreport: Povuci prijavu
+      admin:
+        reportable:
+          hide:
+            invalid: Došlo je do problema pri skrivanju izvora.
+            success: Izvor je uspješno skriven.
+          unhide:
+            invalid: Došlo je do problema pri otkrivanju izvora.
+            success: Izvor je uspješno otkriven.
+          unreport:
+            invalid: Došlo je do problema pri povlačenju prijave izvora.
+            success: Prijava izvora je uspješno povučena.
+      models:
+        moderation:
+          fields:
+            created_at: Datum stvaranja
+            deleted_resource: Izbrisan resurs
+            hidden_at: Skriveno
+            participatory_space: Prostor za sudjelovanje
+            report_count: Broj
+            reportable: Prijavljivo
+            reportable_id: iskaznica
+            reportable_type: Tip
+            reported_content_url: URL prijavljenog sadržaja
+            reports: Prijave
+            visit_url: Posjeti URL
+        report:
+          fields:
+            details: Pojedinosti razloga
+            locale: Jezik
+            reason: Razlog
+  errors:
+    messages:
+      invalid_json: JSON nije valjan
+  layouts:
+    decidim:
+      admin:
+        global_moderations:
+          title: Globalne moderacije
+        newsletters:
+          title: Bilteni
+        settings:
+          title: Postavke
+        users:
+          title: Sudionici
