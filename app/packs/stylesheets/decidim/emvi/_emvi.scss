@@ -73,9 +73,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
       max-width:100%;
       overflow:hidden;
     }
-    .main-nav__link:first-child {
-        padding-left: 1.5rem;
-    }
   }
   
   .topbar > div.language-choose {
@@ -193,16 +190,15 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 
 .menubar{
     display:flex;
-    align-items: center;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: space-between;
     padding-bottom: 1rem;
     @include breakpoint(large){
         flex-direction: row;
         padding-bottom: 0;
     }
     nav{
-        flex:2 0 auto;
+        flex:1 0 auto;
     }
     div{
         flex:0 0 auto;
@@ -310,9 +306,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
     padding:1rem;
     @include breakpoint(large){
         padding:1.5rem;
-    }
-    &:first-child{
-        padding-left: 0;
     }
     a{
         color:var(--emvi-nav-highlight-grey-rgb);
