@@ -965,7 +965,7 @@ sl:
       notify:
         body_1: Obdelava osebnih podatkov in njihovo varstvo postajata vse bolj pomembna za vse nas. Z novo Splošno uredbo o varstvu podatkov z dne 25. maja 2018 imajo posamezniki boljši nadzor nad svojimi osebnimi podatki. Zato potrebujemo vašo potrditev, da lahko še naprej pošiljamo ustrezne informacije o dejavnostih %{organization_name}.
         body_2: 'Kako lahko daste svoje soglasje? Samo kliknite naslednji gumb:'
-        body_3: S tem soglasjem boste lahko še naprej prejemali informacije o storitvah platforme. Če pa nam ne boste posredovali svoje potrditve, vam ne bomo več pošiljali svoj‏ih sporočil. Če potrdite, da želite ostati obveščeni, boste še vedno imeli možnost, da to kadar koli prekličete.
+        body_3: S tem soglasjem boste lahko še naprej prejemali informacije o storitvah platforme. Če pa nam ne boste posredovali svoje potrditve, vam ne bomo več pošiljali svojih sporočil. Če potrdite, da želite ostati obveščeni, boste še vedno imeli možnost, da to kadar koli prekličete.
         button: Da, želim še naprej prejemati ustrezne informacije.
         greetings: Pozdravljeni,<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
         hello: Pozdravljeni,
@@ -1025,7 +1025,7 @@ sl:
           conferences_count: Konference
           debates_count: Razprave
           endorsements_count: Odobravanje
-          headline: Kaj se dogaja na Konferenci o prihodnosti Evrope?
+          headline: Kaj se dogaja?
           meetings_count: Dogodki
           orders_count: Glasovi
           pages_count: Strani
@@ -1386,7 +1386,7 @@ sl:
       failure: Zaradi "%{reason}" ni bilo mogoče izvesti vaše avtentifikacije iz %{kind}.
       success: Uspešna avtentifikacija iz %{kind}.
       user:
-        disabled: Na platformi se ni več mogoče registrirati. Zbiranje prispevkov h Konferenci o prihodnosti Evrope se je končalo 9. maja 2022.
+        disabled: Na platformi se ni več mogoče registrirati.
     passwords:
       edit:
         change_my_password: Spremeni moje geslo

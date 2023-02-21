@@ -105,7 +105,7 @@ hr:
           scope_id_eq:
             label: Opseg
           with_any_origin:
-            label: Podrijetlo
+            label: Poreklo
             values:
               official: Službeno
               participants: sudionik
@@ -436,7 +436,7 @@ hr:
         export_calendar: Izvezi kalendar
       close_meeting_reminder_mailer:
         close_meeting_reminder:
-          body: 'hvala na sudjelovanju na konferenciji o budućnosti Europe organizacijom događanja <a href=''%{meeting_path}''>''%{meeting_title}''</a>. Nadamo se da je događanje bilo uspješno, a rasprava produktivna. Na stranici posvećenoj događanju dodajte izvješće o događanju i kliknite na „Zatvori događanje”. <br><br>Tako će drugi imati pregled ideja koje su ondje predstavljene. Te se ideje kasnije mogu uzeti u obzir u analizi, što omogućuje odgovarajuće povratne informacije i poduzimanje daljnjih koraka. <br><br>Izvješće bi trebalo sadržavati informacije o vrsti događanja (npr. radionica s aktivnim sudjelovanjem, otvoreni prostor, world café), broj sudionika i demografske podatke o sudionicima (npr. dob, rod), glavne predmete rasprave i glavne ideje, argumente koji su doveli do njih te opće ozračje i očekivane daljnje korake. <br><br>Pri ispunjavanju izvješća o događanju navedite broj sudionika u posebnom polju. Potičemo vas i da povežete ideje koje su se pojavile tijekom događanja s idejama koje su već objavljene na platformi. <br><br>To je važno za analizu. Za više informacija proučite naš „Vodič za organizaciju događanja”: <a href=''https://futureu.europa.eu/pages/our-guides?locale=hr''>https://futureu.europa.eu/pages/our-guides</a>. <br><br><b>Imajte na umu da nakon završetka konferencije o budućnosti Europe 9. svibnja više neće biti moguće objavljivati izvješća o događanjima.</b> <br><br>Hvala što sudjelujete! Imate li pitanja, slobodno nam se obratite.'
+          body: 'Zahvaljujemo na sudjelovanju u procesu organizacije događaja <a href=''%{meeting_path}''>''%{meeting_title}''</a>. Nadamo se da je događanje bilo uspješno, a rasprava produktivna. Na stranici posvećenoj događanju dodajte izvješće o događanju i kliknite na „Zatvori događanje”. <br><br>Tako će drugi imati pregled ideja koje su ondje predstavljene. Te se ideje kasnije mogu uzeti u obzir u analizi, što omogućuje odgovarajuće povratne informacije i poduzimanje daljnjih koraka. <br><br>Izvješće bi trebalo sadržavati informacije o vrsti događanja (npr. radionica s aktivnim sudjelovanjem, otvoreni prostor, world café), broj sudionika i demografske podatke o sudionicima (npr. dob, rod), glavne predmete rasprave i glavne ideje, argumente koji su doveli do njih te opće ozračje i očekivane daljnje korake. <br><br> Potičemo vas i da povežete ideje koje su se pojavile tijekom događanja s idejama koje su već objavljene na platformi. <br><br>To je važno za analizu. <br><br>Hvala što sudjelujete! Imate li pitanja, slobodno nam se obratite.'
           greetings: S poštovanjem<br/>Moderatorski tim<br/>
           hello: Poštovani/Poštovana %{username},
           subject: Sada možete zatvoriti svoj sastanak izvješćem na platformi %{organization_name}
@@ -487,7 +487,7 @@ hr:
         not_allowed: Ne možete pregledavati ovaj sastanak
       meeting_closes:
         edit:
-          back: leđa
+          back: Povratak
       meetings:
         calendar_modal:
           add_to_calendar: Dodaj u kalendar

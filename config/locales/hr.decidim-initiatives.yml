@@ -17,7 +17,7 @@ hr:
           offline: Osobno
           online: Na liniji
         state: Status
-        title: Titula
+        title: Naslov
       initiatives_committee_member:
         user: član Odbora
       initiatives_settings:
@@ -38,7 +38,7 @@ hr:
         only_global_scope_enabled: Dopusti samo stvaranje inicijativa globalnog opsega
         promoting_committee_enabled: Omogući odbor za promicanje
         signature_type: Vrsta potpisa
-        title: Titula
+        title: Naslov
         undo_online_signatures_enabled: Omogućite sudionicima da ponište svoje online potpise
         validate_sms_code_on_votes: Dodajte korak provjere valjanosti SMS koda procesu potpisivanja
       initiatives_vote:
@@ -190,8 +190,8 @@ hr:
     help:
       participatory_spaces:
         initiatives:
-          contextual: "<p><strong>Inicijativa</strong> je prijedlog koji može promovirati bilo tko na vlastitu inicijativu (neovisno o drugim kanalima ili prostorima za sudjelovanje) putem prikupljanja (digitalnih) potpisa kako bi organizacija izvršila određeni akciju (izmijeniti propis, pokrenuti projekt, promijeniti naziv odjela ili ulice itd.).</p> <p>Promicatelji inicijative mogu definirati njezine ciljeve, prikupljati podršku, raspravljati, širiti ih i definirati sastajališta gdje se mogu skupljati potpisi od sudionika ili debate otvorene za druge sudionike.</p> <p>Primjeri: Inicijativa može prikupljati potpise za sazivanje konzultacija među svim ljudima organizacije ili za stvaranje ili sazivanje skupštine , ili pokrenuti proces povećanja proračuna za teritorij ili područje organizacije. Tijekom procesa prikupljanja potpisa više ljudi može dodati ovaj zahtjev i prenijeti ga dalje u organizaciji.</p>\n"
-          page: "<p><strong>Inicijativa</strong> je prijedlog koji može promovirati bilo tko na vlastitu inicijativu (neovisno o drugim kanalima ili prostorima za sudjelovanje) putem prikupljanja (digitalnih) potpisa kako bi organizacija izvršila određeni akciju (izmijeniti propis, pokrenuti projekt, promijeniti naziv odjela ili ulice itd.).</p> <p>Promicatelji inicijative mogu definirati njezine ciljeve, prikupljati podršku, raspravljati, širiti ih i definirati sastajališta gdje se mogu skupljati potpisi od sudionika ili debate otvorene za druge sudionike.</p> <p>Primjeri: Inicijativa može prikupljati potpise za sazivanje konzultacija među svim ljudima organizacije ili za stvaranje ili sazivanje skupštine , ili pokrenuti proces povećanja proračuna za teritorij ili područje organizacije. Tijekom procesa prikupljanja potpisa više ljudi može dodati ovaj zahtjev i prenijeti ga dalje u organizaciji.</p>\n"
+          contextual: "<p><strong>Inicijativa</strong> je prijedlog koji može promovirati bilo tko na vlastitu inicijativu (neovisno o drugim kanalima ili prostorima za sudjelovanje) putem prikupljanja (digitalnih) potpisa kako bi organizacija izvršila određeni akciju (izmijeniti propis, pokrenuti projekt, promijeniti naziv odjeljenja ili ulice itd.).</p> <p>Promicatelji inicijative mogu definirati njezine ciljeve, prikupljati podršku, raspravljati, širiti ih i definirati sastajališta gdje se mogu skupljati potpisi od sudionika ili debate otvorene za druge sudionike.</p> <p>Primjeri: Inicijativa može prikupljati potpise za sazivanje konzultacija među svim ljudima organizacije ili za stvaranje ili sazivanje skupštine , ili pokrenuti proces povećanja proračuna za teritorij ili područje organizacije. Tijekom procesa prikupljanja potpisa više ljudi može dodati ovaj zahtjev i prenijeti ga dalje u organizaciji.</p>\n"
+          page: "<p><strong>Inicijativa</strong> je prijedlog koji može promovirati bilo tko na vlastitu inicijativu (neovisno o drugim kanalima ili prostorima za sudjelovanje) putem prikupljanja (digitalnih) potpisa kako bi organizacija izvršila određenu akciju (izmijeniti propis, pokrenuti projekt, promijeniti naziv odjeljenja ili ulice itd.).</p> <p>Promicatelji inicijative mogu definirati njezine ciljeve, prikupljati podršku, raspravljati, širiti ih i definirati sastajališta gdje se mogu skupljati potpisi od sudionika ili debate otvorene za druge sudionike.</p> <p>Primjeri: Inicijativa može prikupljati potpise za sazivanje konzultacija među svim ljudima organizacije ili za stvaranje ili sazivanje skupštine , ili pokrenuti proces povećanja proračuna za teritorij ili područje organizacije. Tijekom procesa prikupljanja potpisa više ljudi može dodati ovaj zahtjev i prenijeti ga dalje u organizaciji.</p>\n"
           title: Što su inicijative?
     initiatives:
       actions:
@@ -269,13 +269,13 @@ hr:
           destroy:
             success: Opseg je uspješno uklonjen
           edit:
-            back: leđa
+            back: Povratak
             confirm_destroy: Jesi li siguran?
             destroy: Izbrisati
             title: Uredite opseg vrste inicijative
             update: Ažuriraj
           new:
-            back: leđa
+            back: Povratak
             create: Stvoriti
             title: Stvorite opseg tipa inicijative
           update:
@@ -353,7 +353,7 @@ hr:
           name: Istaknute inicijative
       create_initiative:
         fill_data:
-          back: leđa
+          back: Povratak
           continue: Nastaviti
           fill_data_help: "<ul> <li>Pregledajte sadržaj svoje inicijative. Je li vaš naslov lako razumjeti? Je li cilj vaše inicijative jasan?</li> <li>Morate odabrati vrstu potpisa. Osobno, online ili kombinacija oboje</li> <li>Koji je zemljopisni opseg inicijative?</li> </ul>"
           initiative_type: Tip inicijative
@@ -361,7 +361,7 @@ hr:
           select_area: Odaberite područje
           select_scope: Odaberite opseg
         finish:
-          back: leđa
+          back: Povratak
           back_to_initiatives: Natrag na inicijative
           callout_text: Čestitamo! Vaša inicijativa je uspješno kreirana.
           confirm: Poslat ćete inicijativu adminu da je pregleda i objavi. Nakon što ga objavite, nećete ga moći uređivati. Jesi li siguran?
@@ -373,16 +373,16 @@ hr:
           access_reminder: Svojim inicijativama možete pristupiti putem filtra %{link} na stranici Inicijative.
           publish_helper_text: Imajte na umu da kako bi vaša inicijativa bila objavljena, morate ispuniti tražene podatke i <strong>poslati ih na tehničku provjeru</strong> kako bi ih administrator pregledao.
         previous_form:
-          back: leđa
+          back: Povratak
           continue: Nastaviti
           help: Od čega se sastoji inicijativa? Zapišite naslov i opis. Preporučamo kratak i jezgrovit naslov te opis usmjeren na predloženo rješenje.
           more_information: "(Više informacija)"
         promotal_committee:
-          back: leđa
+          back: Povratak
           individual_help_text: Ova vrsta inicijative zahtijeva Povjerenstvo za promicanje koje se sastoji od najmanje %{committee_size} ljudi (potvrđivača). Morate podijeliti sljedeću vezu s drugim ljudima koji su dio ove inicijative. Kada vaši kontakti prime ovu vezu, morat će slijediti navedene korake.
           more_information: "(Više informacija)"
         select_initiative_type:
-          back: leđa
+          back: Povratak
           choose_html: Želim stvoriti <strong>%{title}</strong>
           more_information: "(Više informacija)"
           select: Želim promovirati ovu inicijativu
@@ -391,13 +391,13 @@ hr:
           continue: Nastaviti
           invite_to_committee_help: Link za pozivanje ljudi koji će biti dio odbora promotora
         show_similar_initiatives:
-          back: leđa
+          back: Povratak
           compare_help: Ako je bilo koja od sljedećih inicijativa slična vašoj, potičemo vas da je potpišete. Vaš će prijedlog imati više mogućnosti za ostvarenje.
           continue: Moja inicijativa je drugačija
           more_information: "(Više informacija)"
       edit:
         accept: Prihvatite inicijativu
-        back: leđa
+        back: Povratak
         confirm: Jesi li siguran?
         discard: Odbacite inicijativu
         export_pdf_signatures: Eksport PDF potpisa
@@ -529,7 +529,7 @@ hr:
           initiative:
             attachments: Priložena dokumentacija (napišite naziv svakog dokumenta ispod)
             description: 'Opis:'
-            title: 'Titula:'
+            title: 'Naslov:'
             type: Vrsta inicijative
           legal_text: Prikupljene osobne podatke organizacija će uključiti i tretirati povjerljivo, u skladu s važećim zakonodavstvom.
           members_header: Članovi Pokretačkog odbora inicijative
@@ -541,7 +541,7 @@ hr:
           section: 'Na zahtjev organizacije ispišite i ispunite ovaj obrazac kako biste ga poslali tamo gdje je naznačeno:'
           signature: Potpis
         result:
-          answer_title: Ova inicijativa je uslišena
+          answer_title: Ova inicijativa je odobrena
           initiative_rejected_reason: Ova inicijativa je odbijena zbog nedostatka potpisa.
         show:
           any_vote_method: Ova inicijativa prikuplja i online i osobne potpise.
@@ -617,7 +617,7 @@ hr:
   layouts:
     decidim:
       initiative_creation_header:
-        back: leđa
+        back: Povratak
         fill_data: Stvoriti
         finish: Završi
         previous_form: Početak
@@ -629,7 +629,7 @@ hr:
       initiative_header:
         initiative_menu_item: Inicijativa
       initiative_signature_creation_header:
-        back: leđa
+        back: Povratak
         fill_personal_data: Ispunite svoje podatke
         finish: Završi
         finished: Izrađen potpis inicijative

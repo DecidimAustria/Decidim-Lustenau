@@ -6,16 +6,16 @@ hr:
         description: Opis
         image: Slika
         proposals: Povezani prijedlozi
-        title: Titula
+        title: Naslov
       election:
         description: Opis
         end_time: Glasovanje završava u
         start_time: Početak glasanja u
-        title: Titula
+        title: Naslov
       question:
         max_selections: Maksimalan broj odabira
         min_selections: Nijedna od gore navedenih opcija
-        title: Titula
+        title: Naslov
       voting:
         banner_image: Slika natpisa
         census_contact_information: Podaci za kontakt popisa
@@ -26,7 +26,7 @@ hr:
         scope: Opseg
         show_check_census: Prikaži stranicu "provjeri popis stanovništva".
         start_time: Počinje glasanje
-        title: Titula
+        title: Naslov
         voting_type: Vrsta glasovanja
     errors:
       models:
@@ -509,21 +509,21 @@ hr:
           fields:
             proposals: Prijedlozi
             selected: Odabran
-            title: Titula
+            title: Naslov
             votes: Glasovi
         election:
           fields:
             bb_status: Status oglasne ploče
             end_time: Kraj u
             start_time: Počinje u
-            title: Titula
+            title: Naslov
             verifiable_results_file_hash: Datoteka SHA256 kontrolni zbroj
             verifiable_results_file_url: Izborni spis koji se može provjeriti
         question:
           fields:
             answers: Odgovori
             max_selections: Maks. selekcije
-            title: Titula
+            title: Naslov
         trustees_participatory_space:
           fields:
             considered: razmatran
@@ -545,7 +545,7 @@ hr:
             download_icon: Ikona koja označava radnju preuzimanja
             title: Rezervni izborni ključevi za %{election}
           key_ceremony_steps:
-            back: leđa
+            back: Povratak
             description: Ovaj izbor se kreira na Oglasnoj ploči. Da biste dovršili ovaj proces, potrebno je vaše sudjelovanje kao povjerenika.
             keys:
               create_election: Generiranje ključeva
@@ -569,7 +569,7 @@ hr:
             upload_election_keys: Prenesite izborne ključeve
             upload_icon: Ikona koja označava radnju preuzimanja
           tally_started_steps:
-            back: leđa
+            back: Povratak
             description: Rezultati za ove izbore se obračunavaju na Oglasnoj ploči. Da biste dovršili ovaj proces, potrebno je vaše sudjelovanje kao povjerenika.
             keys:
               end_tally: Prebrojavanje je završilo
@@ -716,7 +716,7 @@ hr:
             header: Glasajte locirani!
             info: Vaš šifrirani glas nalazi se u glasačkoj kutiji %{link}
         voting_step:
-          back: leđa
+          back: Povratak
           continue: Sljedeći
       warnings:
         no_elections_warning: Nema izbora koji odgovaraju kriterijima pretraživanja ili nema zakazanih izbora.
@@ -874,14 +874,14 @@ hr:
               address: Adresa
               polling_station_managers: Menadžeri
               polling_station_president: predsjednik
-              title: Titula
+              title: Naslov
             name: Biračko mjesto
           voting:
             fields:
               created_at: Stvoreno u
               promoted: Istaknuto
               published: Objavljeno
-              title: Titula
+              title: Naslov
         monitoring_committee_election_results:
           actions:
             title: Radnje
@@ -1033,7 +1033,7 @@ hr:
             show_check_census_help: Treba li prikazati "Mogu li glasati?" link na izborniku javnih glasova
             slug: Puž
             slug_help: 'URL slagovi se koriste za generiranje URL-ova koji upućuju na ovo glasanje. Prihvaća samo slova, brojke i crtice i mora započeti slovom. Primjer: %{url}'
-            title: Titula
+            title: Naslov
             voting_type:
               hybrid: Hibrid
               in_person: Osobno

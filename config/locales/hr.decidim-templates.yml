@@ -3,7 +3,7 @@ hr:
   activemodel:
     attributes:
       questionnaire:
-        title: Titula
+        title: Naslov
       template:
         description: Opis
         name: Ime

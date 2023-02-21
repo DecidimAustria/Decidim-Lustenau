@@ -33,11 +33,11 @@ hr:
         slogan: Slogan
         slug: URL slug
         start_date: Početni datum
-        title: Titula
+        title: Naslov
       conference_media_link:
         date: Datum
         link: Veza
-        title: Titula
+        title: Naslov
         weight: Težina
       conference_partner:
         link: Veza
@@ -53,7 +53,7 @@ hr:
       conference_registration_type:
         description: Opis
         price: Cijena
-        title: Titula
+        title: Naslov
         weight: Težina
       conference_speaker:
         affiliation: Pripadnost
@@ -207,7 +207,7 @@ hr:
             created_at: Stvoreno u
             promoted: Istaknuto
             published: Objavljeno
-            title: Titula
+            title: Naslov
         conference_speaker:
           fields:
             affiliation: Pripadnost
@@ -229,7 +229,7 @@ hr:
           fields:
             date: Datum
             link: Veza
-            title: Titula
+            title: Naslov
           name: Medijska veza
         partner:
           fields:
@@ -246,7 +246,7 @@ hr:
             conference_meetings: Konferencijski sastanci
             price: Cijena
             registrations_count: Prijave se broje
-            title: Titula
+            title: Naslov
             weight: Položaj reda
           name: Vrsta registracije
       partners:

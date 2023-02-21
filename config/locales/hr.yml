@@ -11,7 +11,7 @@ hr:
       group:
         avatar: Avatar
       meeting:
-        cofe_charter_html: Slažem se s <a href="%{url}" target="_blank">poveljom</a> o Konferenciji o budućnosti Europe
+        cofe_charter_html: Slažem se s <a href="%{url}" target="_blank">poveljom</a>
         online_meeting_url: URL internetskog sastanka
         registration_url: URL za prijavu
       message:
@@ -25,7 +25,7 @@ hr:
         user_name: Korisničko ime
     models:
       decidim/invited_to_group_event: Pozvan u grupu
-      decidim/promoted_to_admin_event: Unapredjen u administratora grupe
+      decidim/promoted_to_admin_event: Unapređen u administratora grupe
       decidim/resource_hidden_event: Resurs skriven
       decidim/user_group_created_event: Grupa korisnika stvorena
       decidim/welcome_notification_event: Poruka dobrodošlice
@@ -255,7 +255,7 @@ hr:
       meetings:
         settings:
           global:
-            cofe_charter_url: URL dokumenata o COFE-u
+            cofe_charter_url: URL dokumenata o Konferenciji o budućnosti Europe
     content_blocks:
       cta:
         name: Slika, tekst i gumb Poziv na radnju
@@ -308,23 +308,23 @@ hr:
       notify:
         boost_instructions: Važno nam je da svaki Europljanin koji to želi pridonese raspravi o našoj zajedničkoj budućnosti. Stoga vas pozivamo da prijatelje, članove obitelji i druge građane potaknete da se registriraju na platformi, prisustvuju događanjima i izraze svoja mišljenja.
         email_greeting: Poštovani/Poštovana %{user_name},
-        email_intro: hvala na interesu i sudjelovanju na Konferenciji o budućnosti Europe. Sa zadovoljstvom vas obavještavamo da je vaše događanje %{link} uspješno objavljeno i sada je vidljivo građanima iz cijele Europe.
-        email_outro: Cijenimo vaš interes i sudjelovanje na Konferenciji o budućnosti Europe. Slobodno nam se obratite ako imate bilo kakvih pitanja.
+        email_intro: hvala na interesu i sudjelovanju. Sa zadovoljstvom vas obavještavamo da je vaše događanje %{link} uspješno objavljeno.
+        email_outro: Cijenimo vaš interes i sudjelovanje. Slobodno nam se obratite ako imate bilo kakvih pitanja.
         email_signature: S poštovanjem <br>Moderatorski tim
         more_info: 'Za više pojedinosti pogledajte naš "%{title}": %{link}'
-        subject: Hvala što ste pridonijeli Konferenciji o budućnosti Europe i organizirali događanje
+        subject: Hvala što ste pridonijeli  i organizirali događanje.
     first_published_proposal_mailer:
       notify:
         boost_instructions: 'Povećajte vidljivost ideje tako da je podijelite na društvenim mrežama:'
         email_greeting: Poštovani/Poštovana %{user_name},
-        email_intro: Hvala na interesu i sudjelovanju na Konferenciji o budućnosti Europe. Sa zadovoljstvom vas obavještavamo da je vaša ideja %{link} uspješno objavljena i sada je vidljiva građanima iz cijele Europe.
-        email_outro: Važno nam je da svaki Europljanin koji to želi pridonese raspravi o našoj zajedničkoj budućnosti. Stoga vas pozivamo da prijatelje, članove obitelji i druge građane potaknete da se registriraju na platformi, prisustvuju događanjima i izraze svoja mišljenja.
+        email_intro: Hvala na interesu i sudjelovanju. Sa zadovoljstvom vas obavještavamo da je vaša ideja %{link} uspješno objavljena.
+        email_outro: Važno nam je da mnogi mogu sudjelovati u raspravi. Stoga vas pozivamo da potaknete prijatelje, članove obitelji i druge ljude da se registriraju na platformu, prisustvuju događajima i daju svoje mišljenje.
         email_signature: S poštovanjem <br>Moderatorski tim
         share_facebook: Podijeli na Facebooku
         share_telegram: Podijeli na Telegramu
         share_twitter: Podijeli na Twitteru
         share_whats_app: Podijeli na WhatsAppu
-        subject: Hvala što ste pridonijeli Konferenciji o budućnosti Europe i predložili ideju
+        subject: Hvala što ste pridonijeli i predložili ideju
     following:
       non_public_followings: Neki od praćenih izvora nisu javni.
     forms:
@@ -351,7 +351,7 @@ hr:
           remove: Ukloniti
           replace: Zamijeniti
           save: Uštedjeti
-          title: Titula
+          title: Naslov
           title_required: Naslov je obavezan!
           uploaded: Učitano
           validating: Provjera...
@@ -364,7 +364,7 @@ hr:
         accepted_proposals:
           conditions:
             '0': Odaberite participativni (tematski) prostor koji vas zanima uz omogućene reakcije na ideje.
-            '1': Nastojte predlagati ideje koje se mogu primeniti. Veca je verovatnoca da će takve ideje biti prihvaćene.
+            '1': Nastojte predlagati ideje koje se mogu primeniti. Veća je verovatnoća da će takve ideje biti prihvaćene.
         attended_meetings:
           conditions:
             '0': Prijavite se za događanja u kojima želite sudjelovati

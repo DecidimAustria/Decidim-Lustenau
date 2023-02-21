@@ -9,7 +9,7 @@ sl:
       demographic:
         current_occupations: Trenutna zaposlitev
       meeting:
-        cofe_charter_html: Strinjam se <a href="%{url}" target="_blank">z listino</a> Konference o prihodnosti Evrope.
+        cofe_charter_html: Strinjam se <a href="%{url}" target="_blank">z listino</a>
         online_meeting_url: URL sestanka prek spleta
         registration_url: URL za registracijo
       user:
@@ -86,25 +86,25 @@ sl:
           notification_title: 'Moderator je odstranil vaš prispevek %{resource_type}, ker je bil prijavljen zaradi: %{report_reasons}.</br><i>%{resource_content}</i></br>Pojasnilo:'
     first_created_meeting_mailer:
       notify:
-        boost_instructions: Vsakemu Evropejcu, ki želi sodelovati v razpravi o naši skupni prihodnosti, želimo omogočiti, da to lahko stori. Zato vas vabimo, da širite besedo in priporočate svojim prijateljem, družinskim članom in drugim sodržavljanom, da se registrirajo na platformi, se udeležijo dogodkov in izrazijo svoje mnenje.
+        boost_instructions: Vsem, ki želijo sodelovati v razpravi, želimo omogočiti, da to storijo. Zato vas pozivamo, da razširite sporočilo in spodbudite svoje prijatelje, družinske člane in druge somišljenike, da se prijavijo na platformi, se udeležijo dogodkov in povedo svoje mnenje.
         email_greeting: Spoštovani/Spoštovana %{user_name},
-        email_intro: Zahvaljujemo se vam za zanimanje za Konferenco o prihodnosti Evrope in sodelovanje na njej. Z veseljem vas obveščamo, da je bil vaš dogodek %{link} uspešno objavljen in je zdaj viden državljanom iz vse Evrope.
-        email_outro: Zelo cenimo vaše zanimanje za konferenco o prihodnosti Evrope in sodelovanje na njej. Če imate kakršna koli vprašanja, se lahko kadar koli obrnete na nas.
+        email_intro: Zahvaljujemo se vam za vaše zanimanje in sodelovanje. Z veseljem vas obveščamo, da je bil vaš dogodek uspešno %{link} objavljen in je zdaj viden.
+        email_outro: Zelo cenimo vaše zanimanje in sodelovanje na njej. Če imate kakršna koli vprašanja, se lahko kadar koli obrnete na nas.
         email_signature: S spoštovanjem,<br>moderatorska skupina
         more_info: 'Več informacij je na voljo v "%{title}": %{link}'
-        subject: zahvaljujemo se vam, da ste z ustvarjenjem dogodka prispevali h Konferenci o prihodnosti Evrope.
+        subject: zahvaljujemo se vam, da ste z ustvarjenjem dogodka prispevali.
     first_published_proposal_mailer:
       notify:
         boost_instructions: 'Povečajte prepoznavnost svoje zamisli, tako da jo delite na družbenih omrežjih:'
         email_greeting: Spoštovani/Spoštovana %{user_name},
-        email_intro: Zahvaljujemo se vam za zanimanje za Konferenco o prihodnosti Evrope in sodelovanje na njej. Z veseljem vas obveščamo, da je bila vaša zamisel %{link} uspešno objavljena in je zdaj vidna državljanom iz vse Evrope.
-        email_outro: Vsakemu Evropejcu, ki želi sodelovati v razpravi o naši skupni prihodnosti, želimo omogočiti, da to lahko stori. Zato vas vabimo, da širite besedo in priporočate svojim prijateljem, družinskim članom in drugim sodržavljanom, da se registrirajo na platformi, se udeležijo dogodkov in izrazijo svoje mnenje.
+        email_intro: Zahvaljujemo se vam za zanimanje in sodelovanje na njej. Z veseljem vas obveščamo, da je bila vaša zamisel %{link} uspešno objavljena in je zdaj vidna državljanom..
+        email_outro: Vsem, ki želijo sodelovati v razpravi, želimo omogočiti, da to storijo. Zato vas pozivamo, da razširite sporočilo in spodbudite svoje prijatelje, družinske člane in druge državljane, da se prijavijo na platformi, se udeležijo dogodkov in povedo svoje mnenje.
         email_signature: S spoštovanjem,<br>moderatorska skupina
         share_facebook: Deli na Facebooku
         share_telegram: Deli na Telegramu
         share_twitter: Deli na Twitterju
         share_whats_app: Deli na WhatsAppu
-        subject: zahvaljujemo se vam, da ste s predložitvijo zamisli prispevali h Konferenci o prihodnosti Evrope.
+        subject: zahvaljujemo se vam, da ste s predložitvijo zamisli prispevali.
     forms:
       meetings:
         attendees_count_help_text: Ne pozabite navesti skupnega števila udeležencev dogodka. Ne glede na to, ali se ga udeležijo osebno, mešano ali spletno, je pomembno, da vemo, koliko ljudi je vključenih.
