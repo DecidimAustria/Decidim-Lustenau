@@ -515,7 +515,7 @@ hr:
             json: JSON
             xlsx: Excel (.xlsx)
           actions:
-            back: leđa
+            back: povratak
           download_example: Primjer preuzimanja
           download_example_format: Primjer kao %{name}
           file_legend: Dodajte datoteku za uvoz koja će se analizirati.

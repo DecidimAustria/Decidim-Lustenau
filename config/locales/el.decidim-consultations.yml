@@ -1,376 +1,376 @@
 ---
-en:
+el:
   activemodel:
     attributes:
       consultation:
-        banner_image: Banner image
-        decidim_highlighted_scope_id: Highlighted scope
-        description: Description
-        end_voting_date: Voting ends
-        introductory_image: Introductory image
-        introductory_video_url: Introductory video URL
-        questions: Questions
-        slug: URL slug
-        start_voting_date: Voting begins
-        subtitle: Subtitle
-        title: Title
+        banner_image: Εικόνα πανό
+        decidim_highlighted_scope_id: Επισημασμένο εύρος
+        description: Περιγραφή
+        end_voting_date: Η ψηφοφορία τελειώνει
+        introductory_image: Εισαγωγική εικόνα
+        introductory_video_url: URL εισαγωγικού βίντεο
+        questions: Ερωτήσεις
+        slug: URL γυμνοσάλιαγκος
+        start_voting_date: Η ψηφοφορία ξεκινά
+        subtitle: Υπότιτλος
+        title: Τίτλος
       question:
-        banner_image: Banner image
-        decidim_scope_id: Municipal area
+        banner_image: Εικόνα πανό
+        decidim_scope_id: Δημοτική περιοχή
         hashtag: Hashtag
-        hero_image: Home image
-        i_frame_url: External voting system URL
-        instructions: Additional instructions for voting
-        max_votes: Maximum number of votes
-        min_votes: Minimum number of votes
-        origin_scope: Scope
-        origin_title: Origin
-        origin_url: Origin URL
-        participatory_scope: Participatory scope
-        promoter_group: Promoter group
-        question_context: Context
-        reference: Reference
-        scope: Municipal area
-        slug: URL slug
-        subtitle: Subtitle
-        vote: External voting system
-        what_is_decided: What is decided
+        hero_image: Αρχική εικόνα
+        i_frame_url: URL εξωτερικού συστήματος ψηφοφορίας
+        instructions: Πρόσθετες οδηγίες για την ψηφοφορία
+        max_votes: Μέγιστος αριθμός ψήφων
+        min_votes: Ελάχιστος αριθμός ψήφων
+        origin_scope: Πεδίο εφαρμογής
+        origin_title: Προέλευση
+        origin_url: Διεύθυνση URL προέλευσης
+        participatory_scope: Συμμετοχικό πεδίο εφαρμογής
+        promoter_group: Ομάδα υποστηρικτών
+        question_context: Συμφραζόμενα
+        reference: Αναφορά
+        scope: Δημοτική περιοχή
+        slug: URL γυμνοσάλιαγκος
+        subtitle: Υπότιτλος
+        vote: Εξωτερικό σύστημα ψηφοφορίας
+        what_is_decided: Τι αποφασίζεται
       response:
-        decidim_consultations_response_group_id: Group
+        decidim_consultations_response_group_id: Ομάδα
     errors:
       models:
         question:
           attributes:
             max_votes:
-              lower_than_min: Maximum number of votes should be higher or equal than the minimum.
+              lower_than_min: Ο μέγιστος αριθμός ψήφων πρέπει να είναι μεγαλύτερος ή ίσος από τον ελάχιστο.
       vote:
         decidim_consultations_response_id:
-          not_found: Response not found.
+          not_found: Η απάντηση δεν βρέθηκε.
   activerecord:
     errors:
       models:
         decidim/consultations/vote:
           attributes:
             question:
-              invalid_num_votes: Number of votes is invalid
+              invalid_num_votes: Ο αριθμός των ψήφων δεν είναι έγκυρος
     models:
       decidim/consultation:
-        one: Consultation
-        other: Consultations
+        one: Διαβούλευση
+        other: Διαβουλεύσεις
       decidim/consultations/question:
-        one: Question
-        other: Questions
+        one: Ερώτηση
+        other: Ερωτήσεις
       decidim/consultations/response:
-        one: Response
-        other: Responses
+        one: Απάντηση
+        other: Απαντήσεις
       decidim/consultations/vote:
-        one: Vote
-        other: Votes
+        one: Ψήφος
+        other: Ψήφοι
   decidim:
     admin:
       actions:
-        back_to_responses: Back to responses
-        new_consultation: New consultation
-        new_question: New question
-        new_response: New response
-        new_response_group: New group
-        publish_results: Publish results
-        response_groups: Manage response groups
-        unpublish_results: Unpublish results
+        back_to_responses: Επιστροφή στις απαντήσεις
+        new_consultation: Νέα διαβούλευση
+        new_question: Νέα ερώτηση
+        new_response: Νέα απάντηση
+        new_response_group: Νέα ομάδα
+        publish_results: Δημοσίευση αποτελεσμάτων
+        response_groups: Διαχείριση ομάδων απόκρισης
+        unpublish_results: Κατάργηση δημοσίευσης αποτελεσμάτων
       consultation_publications:
         create:
-          error: There was a problem publishing this consultation.
-          success: Consultation successfully published.
+          error: Παρουσιάστηκε πρόβλημα με τη δημοσίευση αυτής της διαβούλευσης.
+          success: Η διαβούλευση δημοσιεύτηκε με επιτυχία.
         destroy:
-          error: There was a problem unpublishing this consultation.
-          success: Consultation successfully unpublished.
+          error: Παρουσιάστηκε πρόβλημα κατά την κατάργηση της δημοσίευσης αυτής της διαβούλευσης.
+          success: Η διαβούλευση καταργήθηκε επιτυχώς.
       consultation_results_publications:
         create:
-          error: There was a problem publishing the results for this consultation.
-          success: Consultation results successfully published.
+          error: Παρουσιάστηκε πρόβλημα με τη δημοσίευση των αποτελεσμάτων αυτής της διαβούλευσης.
+          success: Τα αποτελέσματα της διαβούλευσης δημοσιεύθηκαν με επιτυχία.
         destroy:
-          error: There was a problem unpublishing the results for this consultation.
-          success: Consultation results successfully unpublished.
+          error: Παρουσιάστηκε πρόβλημα κατά την κατάργηση της δημοσίευσης των αποτελεσμάτων αυτής της διαβούλευσης.
+          success: Τα αποτελέσματα της διαβούλευσης καταργήθηκαν με επιτυχία.
       consultations:
         create:
-          error: There was a problem creating a new consultation.
-          success: Consultation successfully created.
-        deprecation_warning: Consultations module will be deprecated in the near future. We’re working on the next cryptographically secure version called Votings.
+          error: Παρουσιάστηκε πρόβλημα με τη δημιουργία μιας νέας διαβούλευσης.
+          success: Η διαβούλευση δημιουργήθηκε με επιτυχία.
+        deprecation_warning: Η ενότητα διαβουλεύσεων θα καταργηθεί στο εγγύς μέλλον. Εργαζόμαστε για την επόμενη κρυπτογραφικά ασφαλή έκδοση που ονομάζεται Votings.
         edit:
-          update: Update
+          update: Εκσυγχρονίζω
         form:
-          slug_help: 'URL slugs are used to generate the URLs that point to this consultation. Only accepts letters, numbers and dashes, and must start with a letter. Example: %{url}'
-          title: General information
+          slug_help: 'Τα URL slugs χρησιμοποιούνται για τη δημιουργία των διευθύνσεων URL που παραπέμπουν σε αυτήν τη διαβούλευση. Δέχεται μόνο γράμματα, αριθμούς και παύλες και πρέπει να ξεκινά με γράμμα. Παράδειγμα: %{url}'
+          title: Γενικές πληροφορίες
         index:
-          not_published: Not published
-          published: Published
+          not_published: Δεν δημοσιεύτηκε
+          published: Δημοσίευσε
         new:
-          create: Create
-          title: New consultation
+          create: Δημιουργώ
+          title: Νέα διαβούλευση
         results:
-          not_visible: Results will be available when consultation closes
-          participants: "%{count} participants"
-          total_votes: 'Total: %{count} votes'
+          not_visible: Τα αποτελέσματα θα είναι διαθέσιμα όταν ολοκληρωθεί η διαβούλευση
+          participants: "%{count} συμμετέχοντες"
+          total_votes: 'Σύνολο: %{count} ψήφοι'
         update:
-          error: There was a problem updating this consultation.
-          success: Consultation updated successfully.
+          error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της διαβούλευσης.
+          success: Η διαβούλευση ενημερώθηκε με επιτυχία.
       menu:
-        consultations: Consultations
+        consultations: Διαβουλεύσεις
         consultations_submenu:
-          info: Information
-          questions: Questions
-          results: Results
+          info: Πληροφορίες
+          questions: Ερωτήσεις
+          results: Αποτελέσματα
         questions_submenu:
-          attachments: Attachments
-          categories: Categories
-          components: Components
-          configuration: Configuration
-          consultation: Consultation
-          info: Information
-          responses: Responses
+          attachments: Συνημμένα
+          categories: Κατηγορίες
+          components: Συστατικά
+          configuration: Διαμόρφωση
+          consultation: Διαβούλευση
+          info: Πληροφορίες
+          responses: Απαντήσεις
       models:
         consultation:
           fields:
-            created_at: Created at
-            published: Published
-            title: Title
+            created_at: Δημιουργήθηκε στο
+            published: Δημοσίευσε
+            title: Τίτλος
           name:
-            one: Consultation
-            other: Consultations
+            one: Διαβούλευση
+            other: Διαβουλεύσεις
         question:
           fields:
-            created_at: Created at
-            published: Published
-            title: Title
+            created_at: Δημιουργήθηκε στο
+            published: Δημοσίευσε
+            title: Τίτλος
           name:
-            one: Question
-            other: Questions
+            one: Ερώτηση
+            other: Ερωτήσεις
         response:
           fields:
-            created_at: Created at
-            response_group: Group
-            title: Title
+            created_at: Δημιουργήθηκε στο
+            response_group: Ομάδα
+            title: Τίτλος
           name:
-            one: Response
-            other: Responses
+            one: Απάντηση
+            other: Απαντήσεις
       question_configuration:
-        disable_external_voting: Please disable external voting for advanced configurations
+        disable_external_voting: Απενεργοποιήστε την εξωτερική ψηφοφορία για σύνθετες διαμορφώσεις
         form:
-          help: Set up multiple choices questions by increasing the maximum number of responses a participant can choose. Default maximum value is 1, meaning that only one response can be voted.
-          title: Advanced configuration
+          help: Ρυθμίστε ερωτήσεις πολλαπλών επιλογών αυξάνοντας τον μέγιστο αριθμό απαντήσεων που μπορεί να επιλέξει ένας συμμετέχων. Η προεπιλεγμένη μέγιστη τιμή είναι 1, που σημαίνει ότι μπορεί να ψηφιστεί μόνο μία απάντηση.
+          title: Προηγμένη διαμόρφωση
       question_publications:
         create:
-          error: There was a problem publishing this question.
-          success: Question successfully published.
+          error: Παρουσιάστηκε πρόβλημα με τη δημοσίευση αυτής της ερώτησης.
+          success: Η ερώτηση δημοσιεύτηκε με επιτυχία.
         destroy:
-          error: There was a problem unpublishing this question.
-          success: Question successfully unpublished.
+          error: Παρουσιάστηκε πρόβλημα κατά την κατάργηση της δημοσίευσης αυτής της ερώτησης.
+          success: Η δημοσίευση της ερώτησης καταργήθηκε επιτυχώς.
       questions:
         create:
-          error: There was a problem creating a new question.
-          success: Question successfully created.
+          error: Παρουσιάστηκε πρόβλημα με τη δημιουργία μιας νέας ερώτησης.
+          success: Η ερώτηση δημιουργήθηκε με επιτυχία.
         destroy:
-          success: Question successfully deleted.
+          success: Η ερώτηση διαγράφηκε επιτυχώς.
         edit:
-          update: Update
+          update: Εκσυγχρονίζω
         form:
-          title: General information
+          title: Γενικές πληροφορίες
         index:
-          not_published: Not published
-          published: Published
+          not_published: Δεν δημοσιεύτηκε
+          published: Δημοσίευσε
         new:
-          create: Create
-          title: New question
+          create: Δημιουργώ
+          title: Νέα ερώτηση
         update:
-          error: There was a problem updating this question.
-          success: Question successfully updated.
+          error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της ερώτησης.
+          success: Η ερώτηση ενημερώθηκε με επιτυχία.
       response_groups:
         create:
-          error: There was a problem creating a new response group.
-          success: Response group successfully created.
+          error: Παρουσιάστηκε πρόβλημα με τη δημιουργία μιας νέας ομάδας απόκρισης.
+          success: Η ομάδα απόκρισης δημιουργήθηκε με επιτυχία.
         destroy:
-          error: There was a problem removing the response group. Check that no responses depend on it.
-          success: Response group successfully deleted.
+          error: Παρουσιάστηκε πρόβλημα κατά την κατάργηση της ομάδας απόκρισης. Ελέγξτε ότι δεν εξαρτώνται απαντήσεις από αυτό.
+          success: Η ομάδα απόκρισης διαγράφηκε με επιτυχία.
         edit:
-          update: Update
+          update: Εκσυγχρονίζω
         form:
-          title: General information
-        help: Use groups to organize multiple choices questions in packages.
+          title: Γενικές πληροφορίες
+        help: Χρησιμοποιήστε ομάδες για να οργανώσετε ερωτήσεις πολλαπλών επιλογών σε πακέτα.
         new:
-          create: Create
-          title: New response group
+          create: Δημιουργώ
+          title: Νέα ομάδα απόκρισης
         update:
-          error: There was a problem updating this response.
-          success: Response successfully updated.
+          error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της απάντησης.
+          success: Η απάντηση ενημερώθηκε με επιτυχία.
       responses:
         create:
-          error: There was a problem creating a new response.
-          success: Response successfully created.
+          error: Παρουσιάστηκε πρόβλημα με τη δημιουργία νέας απόκρισης.
+          success: Η απάντηση δημιουργήθηκε με επιτυχία.
         destroy:
-          error: There was a problem removing the response.
-          success: Response successfully deleted.
+          error: Παρουσιάστηκε πρόβλημα κατά την κατάργηση της απόκρισης.
+          success: Η απάντηση διαγράφηκε με επιτυχία.
         edit:
-          update: Update
+          update: Εκσυγχρονίζω
         form:
-          title: General information
+          title: Γενικές πληροφορίες
         new:
-          create: Create
-          title: New response
+          create: Δημιουργώ
+          title: Νέα απάντηση
         update:
-          error: There was a problem updating this response.
-          success: Response successfully updated.
+          error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της απάντησης.
+          success: Η απάντηση ενημερώθηκε με επιτυχία.
       titles:
-        consultations: Consultations
-        questions: Questions
-        response_groups: Response Groups
-        responses: Responses
-        results: Results
+        consultations: Διαβουλεύσεις
+        questions: Ερωτήσεις
+        response_groups: Ομάδες απόκρισης
+        responses: Απαντήσεις
+        results: Αποτελέσματα
     consultations:
       admin:
         content_blocks:
           highlighted_consultations:
-            max_results: Maximum amount of elements to show
+            max_results: Μέγιστος αριθμός στοιχείων προς εμφάνιση
       consultation:
-        start_voting_date: Voting begins
-        view_results: View results
+        start_voting_date: Η ψηφοφορία ξεκινά
+        view_results: Προβολή αποτελεσμάτων
       consultation_card:
-        view_results: View results
+        view_results: Προβολή αποτελεσμάτων
       consultations:
         orders:
-          label: 'Sort consultations by:'
-          random: Random
-          recent: Most recent
+          label: 'Ταξινόμηση διαβουλεύσεων κατά:'
+          random: Τυχαίος
+          recent: Πρόσφατα
         show:
-          dates: Dates
+          dates: Ημερομηνίες
       content_blocks:
         highlighted_consultations:
-          name: Highlighted consultations
+          name: Επισημασμένες διαβουλεύσεις
       count:
         title:
-          one: "%{count} consultation"
-          other: "%{count} consultations"
+          one: "%{count} διαβούλευση"
+          other: "%{count} διαβουλεύσεις"
       filters:
-        active: Active
-        all: All
-        date: Date
-        finished: Finished
-        search: Search
-        upcoming: Upcoming
+        active: Ενεργός
+        all: Ολα
+        date: Ημερομηνία
+        finished: Πεπερασμένος
+        search: Αναζήτηση
+        upcoming: Ανερχόμενος
       filters_small_view:
-        close_modal: Close window
-        filter: Filter
-        filter_by: Filter by
-        unfold: Unfold
+        close_modal: Κλείσε το παράθυρο
+        filter: Φίλτρο
+        filter_by: Φιλτράρισμα κατά
+        unfold: Ξεδιπλώνονται
       highlighted_questions:
-        title: Questions from %{scope_name}
+        title: Ερωτήσεις από τον Χ__0
       index:
-        title: Consultations
+        title: Διαβουλεύσεις
       last_activity:
-        new_consultation: New consultation
-        new_question_at_html: "<span>New question at %{link}</span>"
+        new_consultation: Νέα διαβούλευση
+        new_question_at_html: "<span>Νέα ερώτηση στο %{link}</span>"
       pages:
         home:
           highlighted_consultations:
-            active_consultations: Active consultations
-            see_all_consultations: See all consultations
+            active_consultations: Ενεργές διαβουλεύσεις
+            see_all_consultations: Δείτε όλες τις διαβουλεύσεις
             voting_ends_in:
-              one: Voting ends <strong>tomorrow</strong>
-              other: Voting ends in <strong>%{count} days</strong>
-            voting_ends_today: Voting ends <strong>today</strong>
+              one: Η ψηφοφορία λήγει <strong>αύριο</strong>
+              other: Η ψηφοφορία λήγει σε <strong>%{count} ημέρες</strong>
+            voting_ends_today: Η ψηφοφορία λήγει <strong>σήμερα</strong>
       question:
-        take_part: Take part
-        view_results: View results
+        take_part: Συμμετέχω
+        view_results: Προβολή αποτελεσμάτων
         votes_out_of:
-          one: vote out of
-          other: votes out of
+          one: ψηφίστε έξω από
+          other: ψήφοι εκτός
       question_multiple_votes:
         results_rules:
           minimum_votes_per_user:
-            description: Participants could distribute a minimum of %{votes} votes among different options.
-          title: In this question multiple choices where allowed
-          total_participants: A total of %{count} people participated in the vote.
+            description: Οι συμμετέχοντες μπορούσαν να διανείμουν τουλάχιστον %{votes} ψήφους μεταξύ διαφορετικών επιλογών.
+          title: Σε αυτήν την ερώτηση πολλαπλές επιλογές όπου επιτρέπονται
+          total_participants: Συνολικά %{count} άτομα συμμετείχαν στην ψηφοφορία.
           vote_limit:
-            description: Participants could vote up to %{limit} options.
+            description: Οι συμμετέχοντες μπορούσαν να ψηφίσουν έως και %{limit} επιλογές.
         voting_rules:
           minimum_votes_per_user:
-            description: You must distribute a minimum of %{votes} votes among different options.
-          title: 'Votes are subject to the following rules:'
+            description: Πρέπει να διανείμετε τουλάχιστον %{votes} ψήφους μεταξύ διαφορετικών επιλογών.
+          title: 'Οι ψήφοι υπόκεινται στους ακόλουθους κανόνες:'
           vote_limit:
-            description: You can vote up to %{limit} options.
-            left: Remaining
-            votes: Votes
+            description: Μπορείτε να ψηφίσετε έως και %{limit} επιλογές.
+            left: Παραμένων
+            votes: Ψήφοι
       question_votes:
         create:
-          error: There was a problem voting the question
-          success: You can change it until the end of the consultation. Only the last vote will be accepted.
-          title_error: Vote error!
-          title_success: Vote successfully registered
+          error: Παρουσιάστηκε πρόβλημα κατά την ψήφιση της ερώτησης
+          success: Μπορείτε να το αλλάξετε μέχρι το τέλος της διαβούλευσης. Μόνο η τελευταία ψηφοφορία θα γίνει δεκτή.
+          title_error: Σφάλμα ψήφου!
+          title_success: Η ψηφοφορία εγγράφηκε επιτυχώς
       regular_questions:
-        title: Questions for this consultation
+        title: Ερωτήσεις για αυτή τη διαβούλευση
       show:
         badge_name:
-          finished: Finished
-          open: Open
-          open_votes: Open votes
-          published_results: Results published
+          finished: Πεπερασμένος
+          open: Ανοιξε
+          open_votes: Ανοιχτές ψηφοφορίες
+          published_results: Δημοσιεύτηκαν τα αποτελέσματα
         footer_button_text:
-          debate: Debate
-          view: View
-          view_results: View results
-          vote: Vote
-        unspecified: Not specified
+          debate: Δημόσια συζήτηση
+          view: Θέα
+          view_results: Προβολή αποτελεσμάτων
+          vote: Ψήφος
+        unspecified: Δεν διευκρινίζεται
     help:
       participatory_spaces:
         consultations:
-          contextual: "<p>A <strong>consultation</strong> is a space that allows you to ask a clear question to all the people who form an organization, make a call to participate in the consultation, spark and order the debate for or against a response. When the consultation date arrives, you can vote and publish the results of the votes.</p> <p>Examples: The consultations can be about almost any aspect that affects an organization: some examples are changing the name or logo of the organization offering several alternatives, deciding Yes or No to become part of a larger organization, validating or rejecting a new strategic plan or the result of a working group, or defining whether the positions should remain a maximum of 1, 2 or 3 mandates.</p>\n"
-          page: "<p>A <strong>consultation</strong> is a space that allows you to ask a clear question to all the people who form an organization, make a call to participate in the consultation, spark and order the debate for or against a response. When the consultation date arrives, you can vote and publish the results of the votes.</p> <p>Examples: The consultations can be about almost any aspect that affects an organization: some examples are changing the name or logo of the organization offering several alternatives, deciding Yes or No to become part of a larger organization, validating or rejecting a new strategic plan or the result of a working group, or defining whether the positions should remain a maximum of 1, 2 or 3 mandates in the organization.</p>\n"
-          title: What are consultations?
+          contextual: "<p>Μια <strong>διαβούλευση</strong> είναι ένας χώρος που σας επιτρέπει να κάνετε μια σαφή ερώτηση σε όλα τα άτομα που σχηματίζουν έναν οργανισμό, να καλέσετε να συμμετάσχετε στη διαβούλευση, να πυροδοτήσετε και να διατάξετε τη συζήτηση υπέρ ή κατά απάντηση. Όταν φτάσει η ημερομηνία διαβούλευσης, μπορείτε να ψηφίσετε και να δημοσιεύσετε τα αποτελέσματα των ψηφοφοριών.</p> <p>Παραδείγματα: Οι διαβουλεύσεις μπορεί να αφορούν σχεδόν οποιαδήποτε πτυχή που επηρεάζει έναν οργανισμό: ορισμένα παραδείγματα είναι η αλλαγή του ονόματος ή του λογότυπου του οργανισμού Προσφέροντας πολλές εναλλακτικές λύσεις, αποφασίζοντας Ναι ή Όχι για να γίνετε μέλος ενός μεγαλύτερου οργανισμού, επικυρώνοντας ή απορρίπτοντας ένα νέο στρατηγικό σχέδιο ή το αποτέλεσμα μιας ομάδας εργασίας ή ορίζοντας εάν οι θέσεις θα παραμείνουν το πολύ 1, 2 ή 3 εντολές.</ p>\n"
+          page: "<p>Μια <strong>διαβούλευση</strong> είναι ένας χώρος που σας επιτρέπει να κάνετε μια σαφή ερώτηση σε όλα τα άτομα που σχηματίζουν έναν οργανισμό, να καλέσετε να συμμετάσχετε στη διαβούλευση, να πυροδοτήσετε και να διατάξετε τη συζήτηση υπέρ ή κατά απάντηση. Όταν φτάσει η ημερομηνία διαβούλευσης, μπορείτε να ψηφίσετε και να δημοσιεύσετε τα αποτελέσματα των ψηφοφοριών.</p> <p>Παραδείγματα: Οι διαβουλεύσεις μπορεί να αφορούν σχεδόν οποιαδήποτε πτυχή που επηρεάζει έναν οργανισμό: ορισμένα παραδείγματα είναι η αλλαγή του ονόματος ή του λογότυπου του οργανισμού προσφέροντας πολλές εναλλακτικές λύσεις, αποφασίζοντας ναι ή όχι για να γίνετε μέλος ενός μεγαλύτερου οργανισμού, επικυρώνοντας ή απορρίπτοντας ένα νέο στρατηγικό σχέδιο ή το αποτέλεσμα μιας ομάδας εργασίας ή ορίζοντας εάν οι θέσεις θα πρέπει να παραμείνουν το πολύ 1, 2 ή 3 εντολές στον οργανισμό .</p>\n"
+          title: Τι είναι οι διαβουλεύσεις;
     menu:
-      consultations: Consultations
+      consultations: Διαβουλεύσεις
     questions:
-      next_button: Next question
-      previous_button: Previous question
+      next_button: Επόμενη ερώτηση
+      previous_button: Προηγούμενη ερώτηση
       results:
-        title: Results
+        title: Αποτελέσματα
       show:
-        read_more: Read more
+        read_more: Διαβάστε περισσότερα
       statistics:
-        assistants_count_title: Assistants
-        comments_count_title: Comments
-        meetings_count_title: Meetings
-        supports_count_title: Votes
+        assistants_count_title: Βοηθοί
+        comments_count_title: Σχόλια
+        meetings_count_title: Συναντήσεις
+        supports_count_title: Ψήφοι
       technical_info:
-        technical_data: Technical data
+        technical_data: Τεχνικά δεδομένα
       vote_button:
-        already_voted: Already voted
-        already_voted_hover: Revoke vote
-        starting_from: Starting from %{date}
-        verification_required: Verify your account to vote
-        vote: Vote
+        already_voted: Ψηφίστηκε ήδη
+        already_voted_hover: Ανάκληση ψήφου
+        starting_from: Ξεκινώντας από %{date}
+        verification_required: Επαληθεύστε τον λογαριασμό σας για να ψηφίσετε
+        vote: Ψήφος
       vote_modal:
-        close_modal: Close modal
-        contextual_help: Please, select an option.
-        title: 'Consultation: question vote'
+        close_modal: Κλείστε το modal
+        contextual_help: Παρακαλώ επιλέξτε μια επιλογή.
+        title: 'Διαβούλευση: ψηφοφορία ερωτήσεων'
       vote_modal_confirm:
-        change: Change
-        close_modal: Close modal
-        confirm: Confirm
-        contextual_help: Please confirm the selected option.
-        title: 'Consultation: confirm vote'
+        change: Αλλαγή
+        close_modal: Κλείστε το modal
+        confirm: Επιβεβαιώνω
+        contextual_help: Επιβεβαιώστε την επιλεγμένη επιλογή.
+        title: 'Διαβούλευση: επιβεβαίωση ψήφου'
     resources:
       consultations:
         actions:
-          comment: Comment
-          vote: Vote
+          comment: Σχόλιο
+          vote: Ψήφος
     statistics:
-      consultations_count: Consultations
-      votes_count: Votes
+      consultations_count: Διαβουλεύσεις
+      votes_count: Ψήφοι
   layouts:
     decidim:
       consultation_voting_data:
-        start_voting_date: Voting begins
+        start_voting_date: Η ψηφοφορία ξεκινά
       question_components:
-        question_menu_item: The question
+        question_menu_item: Το ερώτημα
       question_header:
-        back_to_consultation: See all consultations
-        back_to_question: Back to the question
+        back_to_consultation: Δείτε όλες τις διαβουλεύσεις
+        back_to_question: Επιστροφή στην ερώτηση

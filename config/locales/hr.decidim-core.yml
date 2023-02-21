@@ -991,7 +991,7 @@ hr:
           conferences_count: Konferencije
           debates_count: Rasprave
           endorsements_count: Podrške
-          headline: Što se događa na Konferenciji o budućnosti Europe?
+          headline: Što se događa?
           orders_count: Glasovi
           pages_count: Stranice
           posts_count: Objave
@@ -1346,7 +1346,7 @@ hr:
     omniauth_callbacks:
       success: Uspješna autorizacija s %{kind} računa.
       user:
-        disabled: Više se nije moguće registrirati na platformi. Svoj doprinos konferenciji o budućnosti Europe mogli ste dati do 9. svibnja 2022.
+        disabled: Više se nije moguće registrirati na platformi.
     passwords:
       edit:
         change_my_password: Promijeni moju lozinku

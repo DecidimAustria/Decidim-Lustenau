@@ -5,7 +5,7 @@ hr:
       budget:
         decidim_scope_id: Opseg
         description: Opis
-        title: Titula
+        title: Naslov
         total_budget: Ukupni proračun
         weight: Položaj reda
       project:
@@ -16,7 +16,7 @@ hr:
         proposal_ids: Povezani prijedlozi
         proposals: Prijedlozi
         selected: Odabrano za implementaciju
-        title: Titula
+        title: Naslov
       proposals_import:
         scope_id: Opseg
   activerecord:

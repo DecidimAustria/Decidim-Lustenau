@@ -176,7 +176,7 @@ hr:
       step_navigation:
         show:
           are_you_sure: Ova se radnja ne može poništiti i nećete moći uređivati svoje odgovore. Jesi li siguran?
-          back: nazad
+          back: Povratak
           continue: Nastaviti
           submit: podnijeti
       user_answers_serializer:

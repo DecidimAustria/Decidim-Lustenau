@@ -1,278 +1,278 @@
 ---
-en:
+el:
   activemodel:
     attributes:
       config:
-        available_methods: Available methods
-        offline: Offline
-        offline_explanation: Instructions for offline verification
-        online: Online
+        available_methods: Διαθέσιμες μέθοδοι
+        offline: Εκτός σύνδεσης
+        offline_explanation: Οδηγίες για επαλήθευση εκτός σύνδεσης
+        online: Σε σύνδεση
       id_document_information:
-        document_number: Document number (with letter)
-        document_type: Type of the document
+        document_number: Αριθμός εγγράφου (με γράμμα)
+        document_type: Τύπος εγγράφου
       id_document_upload:
-        document_number: Document number (with letter)
-        document_type: Type of your document
-        user: Participant
-        verification_attachment: Scanned copy of your document
+        document_number: Αριθμός εγγράφου (με γράμμα)
+        document_type: Τύπος του εγγράφου σας
+        user: Συμμέτοχος
+        verification_attachment: Σαρωμένο αντίγραφο του εγγράφου σας
       offline_confirmation:
-        email: Participant email
+        email: Email συμμετεχόντων
       postal_letter_address:
-        full_address: Full address
+        full_address: Πλήρης διεύθυνση
       postal_letter_confirmation:
-        verification_code: Verification code
+        verification_code: Κωδικός επαλήθευσης
       postal_letter_postage:
-        full_address: Full address
-        verification_code: Verification code
+        full_address: Πλήρης διεύθυνση
+        verification_code: Κωδικός επαλήθευσης
     errors:
       models:
         census_data:
           attributes:
             file:
-              malformed: Malformed import file, please read through the instructions carefully and make sure the file is UTF-8 encoded.
+              malformed: Εσφαλμένο αρχείο εισαγωγής, διαβάστε προσεκτικά τις οδηγίες και βεβαιωθείτε ότι το αρχείο έχει κωδικοποίηση UTF-8.
   decidim:
     admin:
       menu:
         authorization_revocation:
-          before_date_info: Useful if the process has already begun and you want to revoke the permissions of the previous process.
-          button: Revoke all
-          button_before: Revoke before date
+          before_date_info: Χρήσιμο εάν η διαδικασία έχει ήδη ξεκινήσει και θέλετε να ανακαλέσετε τα δικαιώματα της προηγούμενης διαδικασίας.
+          button: Ανάκληση όλων
+          button_before: Ανάκληση πριν από την ημερομηνία
           destroy:
-            confirm: Revoke before date authorizations can not be undone. Are you sure you want to continue?
-            confirm_all: Revoke all the authorizations can not be undone. Are you sure you want to continue?
-          destroy_nok: There's been a problem while revoking authorizations.
-          destroy_ok: All matched authorizations have been revocated successfully.
-          info: There are a total of %{count} verified participants.
-          no_data: No verified participants
-          title: Authorizations revocation
-        authorization_workflows: Authorizations
+            confirm: Οι εξουσιοδοτήσεις ανάκλησης πριν από την ημερομηνία δεν μπορούν να αναιρεθούν. Εισαι σιγουρος οτι θελεις να συνεχισεις?
+            confirm_all: Η ανάκληση όλων των εξουσιοδοτήσεων δεν μπορεί να αναιρεθεί. Εισαι σιγουρος οτι θελεις να συνεχισεις?
+          destroy_nok: Παρουσιάστηκε πρόβλημα κατά την ανάκληση των εξουσιοδοτήσεων.
+          destroy_ok: Όλες οι αντιστοιχισμένες εξουσιοδοτήσεις έχουν ανακληθεί με επιτυχία.
+          info: Υπάρχουν συνολικά %{count} επαληθευμένοι συμμετέχοντες.
+          no_data: Δεν υπάρχουν επαληθευμένοι συμμετέχοντες
+          title: Ανάκληση αδειών
+        authorization_workflows: Εξουσιοδοτήσεις
     admin_log:
       organization:
-        update_id_documents_config: "%{user_name} updated the Identity Documents authorization configuration"
+        update_id_documents_config: Το %{user_name} ενημέρωσε τη διαμόρφωση εξουσιοδότησης Εγγράφων Ταυτότητας
       user:
-        grant_id_documents_offline_verification: "%{user_name} verified %{resource_name} using an offline Identity Documents authorization"
+        grant_id_documents_offline_verification: Ο %{user_name} επαλήθευσε το %{resource_name} χρησιμοποιώντας μια εξουσιοδότηση Εγγράφων Ταυτότητας εκτός σύνδεσης
     authorization_handlers:
       admin:
         csv_census:
           help:
-          - Admins upload a CSV with the emails of the accepted participants
-          - Only participants with an email in that CSV file can get verified
+          - Οι διαχειριστές ανεβάζουν ένα CSV με τα email των αποδεκτών συμμετεχόντων
+          - Μόνο οι συμμετέχοντες με email σε αυτό το αρχείο CSV μπορούν να επαληθευτούν
         id_documents:
           help:
-          - Users fill in their identity information and upload a copy of their document.
-          - You fill in the information present in the uploaded image.
-          - The information should match whatever the user filled in.
-          - If you can't clearly see the information or you can't get it verified, you can reject the request and the user will be able to fix it.
+          - Οι χρήστες συμπληρώνουν τα στοιχεία ταυτότητάς τους και ανεβάζουν αντίγραφο του εγγράφου τους.
+          - Συμπληρώνετε τις πληροφορίες που υπάρχουν στην ανεβασμένη εικόνα.
+          - Οι πληροφορίες πρέπει να ταιριάζουν με ό,τι συμπλήρωσε ο χρήστης.
+          - Εάν δεν μπορείτε να δείτε καθαρά τις πληροφορίες ή δεν μπορείτε να τις επαληθεύσετε, μπορείτε να απορρίψετε το αίτημα και ο χρήστης θα μπορεί να το διορθώσει.
         postal_letter:
           help:
-          - Participants request a verification code to be sent to their address.
-          - You send the letter to their address with the verification code.
-          - You mark the letter as sent.
-          - Once you mark the letter as sent, the participant will be able to introduce the code and get verified.
+          - Οι συμμετέχοντες ζητούν να σταλεί κωδικός επαλήθευσης στη διεύθυνσή τους.
+          - Στέλνεις την επιστολή στη διεύθυνσή τους με τον κωδικό επαλήθευσης.
+          - Σημειώνεις την επιστολή ως έχει σταλεί.
+          - Μόλις επισημάνετε την επιστολή ως απεσταλμένη, ο συμμετέχων θα μπορεί να εισαγάγει τον κωδικό και να επαληθευτεί.
       csv_census:
-        explanation: Get verified using the organization's census
-        name: Organization's census
-      direct: Direct
-      help: Help
+        explanation: Επαληθεύστε χρησιμοποιώντας την απογραφή του οργανισμού
+        name: Απογραφή του Οργανισμού
+      direct: Απευθείας
+      help: Βοήθεια
       id_documents:
-        explanation: Upload your identity documents so we can check your identity
-        name: Identity documents
-      multistep: Multi-Step
-      name: Name
+        explanation: Ανεβάστε τα έγγραφα ταυτότητάς σας για να ελέγξουμε την ταυτότητά σας
+        name: Έγγραφα ταυτότητας
+      multistep: Πολυ βήμα
+      name: Ονομα
       postal_letter:
-        explanation: We'll send you a postal letter with a code that you'll have to enter so we can verify your address
-        name: Code by postal letter
+        explanation: Θα σας στείλουμε μια ταχυδρομική επιστολή με έναν κωδικό που θα πρέπει να εισαγάγετε για να επαληθεύσουμε τη διεύθυνσή σας
+        name: Κωδικός με ταχυδρομική επιστολή
     events:
       verifications:
         verify_with_managed_user:
-          email_intro: The participant <a href="%{resource_url}">%{resource_title}</a> has tried to verify themself with the data of another participant (<a href="%{managed_user_url}">%{managed_user_name}</a>).
-          email_outro: Check the <a href="%{conflicts_url}">Verifications's conflicts list</a> and contact the participant to verify their details and solve the issue.
-          email_subject: Failed verification attempt against another participant
-          notification_title: The participant <a href="%{resource_path}">%{resource_title}</a> has tried to verify themself with the data of another participant (<a href="%{managed_user_path}">%{managed_user_name}</a>).
+          email_intro: Ο συμμετέχων <a href="%{resource_url}">%{resource_title}</a> προσπάθησε να επαληθεύσει τον εαυτό του με τα δεδομένα ενός άλλου συμμετέχοντα (<a href="%{managed_user_url}">%{managed_user_name}</a>).
+          email_outro: Ελέγξτε τη <a href="%{conflicts_url}">λίστα διενέξεων των επαληθεύσεων</a> και επικοινωνήστε με τον συμμετέχοντα για να επαληθεύσετε τα στοιχεία του και να λύσετε το πρόβλημα.
+          email_subject: Αποτυχία προσπάθειας επαλήθευσης εναντίον άλλου συμμετέχοντα
+          notification_title: Ο συμμετέχων <a href="%{resource_path}">%{resource_title}</a> προσπάθησε να επαληθεύσει τον εαυτό του με τα δεδομένα ενός άλλου συμμετέχοντα (<a href="%{managed_user_path}">%{managed_user_name}</a>).
     verifications:
       authorizations:
         authorization_metadata:
-          info: 'This is the data of the current verification:'
-          no_data_stored: No data stored.
+          info: 'Αυτά είναι τα δεδομένα της τρέχουσας επαλήθευσης:'
+          no_data_stored: Δεν έχουν αποθηκευτεί δεδομένα.
         create:
-          error: There was a problem creating the authorization.
-          success: You've been successfully authorized.
-          unconfirmed: You need to confirm your email in order to authorize yourself.
+          error: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία της εξουσιοδότησης.
+          success: Έχετε εξουσιοδοτηθεί με επιτυχία.
+          unconfirmed: Πρέπει να επιβεβαιώσετε το email σας για να εξουσιοδοτήσετε τον εαυτό σας.
         destroy:
-          error: There was a problem deleting the authorization.
-          success: You've successfully deleted the authorization.
+          error: Παρουσιάστηκε πρόβλημα κατά τη διαγραφή της εξουσιοδότησης.
+          success: Διαγράψατε με επιτυχία την εξουσιοδότηση.
         first_login:
           actions:
-            another_dummy_authorization_handler: Verify against another example of authorization handler
-            csv_census: Verify against the organization's census
-            dummy_authorization_handler: Verify against the example authorization handler
-            dummy_authorization_workflow: Verify against the example authorization workflow
-            id_documents: Get verified by uploading your identity document
-            postal_letter: Get verified by receiving a verification code through postal mail
-            sms: Get verified by receiving a SMS verification code
-          title: Verify your identity
-          verify_with_these_options: 'These are the available options to verify your identity:'
+            another_dummy_authorization_handler: Επαλήθευση με άλλο παράδειγμα χειριστή εξουσιοδότησης
+            csv_census: Επαλήθευση έναντι της απογραφής του οργανισμού
+            dummy_authorization_handler: Επαλήθευση με το παράδειγμα χειριστή εξουσιοδότησης
+            dummy_authorization_workflow: Επαληθεύστε με το παράδειγμα ροής εργασίας εξουσιοδότησης
+            id_documents: Επαληθευτείτε ανεβάζοντας το έγγραφο ταυτότητάς σας
+            postal_letter: Επαληθευτείτε λαμβάνοντας έναν κωδικό επαλήθευσης μέσω ταχυδρομικής αλληλογραφίας
+            sms: Επαληθευτείτε λαμβάνοντας έναν κωδικό επαλήθευσης SMS
+          title: Επιβεβαιώστε την ταυτότητα σας
+          verify_with_these_options: 'Αυτές είναι οι διαθέσιμες επιλογές για την επαλήθευση της ταυτότητάς σας:'
         index:
-          expired_verification: Verification expired
-          pending_verification: Pending verification
-          show_renew_info: Click to renew verification
-          unauthorized_verification: New verification
+          expired_verification: Η επαλήθευση έληξε
+          pending_verification: Εκκρεμεί επαλήθευση
+          show_renew_info: Κάντε κλικ για ανανέωση επαλήθευσης
+          unauthorized_verification: Νέα επαλήθευση
         new:
-          authorize: Send
-          authorize_with: Verify with %{authorizer}
+          authorize: Στείλετε
+          authorize_with: Επαλήθευση με %{authorizer}
         renew_modal:
-          cancel: Cancel
-          close: close
-          continue: Continue
-          info_renew: If you want to update the data, continue with the renewal
-          title: Renew Verification
-        skip_verification: You can skip this for now and %{link}
-        start_exploring: start exploring
+          cancel: Ματαίωση
+          close: Κλείσε
+          continue: Να συνεχίσει
+          info_renew: Εάν θέλετε να ενημερώσετε τα δεδομένα, συνεχίστε με την ανανέωση
+          title: Ανανεώστε την επαλήθευση
+        skip_verification: Μπορείτε να το παραλείψετε προς το παρόν και %{link}
+        start_exploring: ξεκινήστε την εξερεύνηση
       csv_census:
         admin:
           census:
             create:
-              error: There was an error importing census.
-              success: Successfully imported %{count} items (%{errors} errors)
+              error: Παρουσιάστηκε σφάλμα κατά την εισαγωγή της απογραφής.
+              success: Έγινε επιτυχής εισαγωγή %{count} στοιχείων (%{errors} σφάλματα)
             destroy_all:
-              success: All census data have been deleted
+              success: Όλα τα δεδομένα απογραφής έχουν διαγραφεί
           destroy:
-            confirm: Delete all the census can not be undone. Are you sure you want to continue?
-            title: Delete all census data
+            confirm: Διαγραφή όλης της απογραφής δεν μπορεί να αναιρεθεί. Εισαι σιγουρος οτι θελεις να συνεχισεις?
+            title: Διαγραφή όλων των δεδομένων απογραφής
           index:
-            data: There are %{count} records loaded in total. Last upload date was on %{due_date}
-            empty: There are no census data. Use the form below to import it using a CSV file.
-            title: Current census data
+            data: Υπάρχουν %{count} εγγραφές φορτωμένες συνολικά. Η τελευταία ημερομηνία μεταφόρτωσης ήταν στις %{due_date}
+            empty: Δεν υπάρχουν στοιχεία απογραφής. Χρησιμοποιήστε την παρακάτω φόρμα για να το εισαγάγετε χρησιμοποιώντας ένα αρχείο CSV.
+            title: Τρέχοντα στοιχεία απογραφής
           instructions:
-            body: To do this you must enter system administration and add the csv_census authorizations to the organization
-            title: You need to activate the CSV census for this organization
+            body: Για να το κάνετε αυτό, πρέπει να εισαγάγετε τη διαχείριση συστήματος και να προσθέσετε τις εξουσιοδοτήσεις csv_census στον οργανισμό
+            title: Πρέπει να ενεργοποιήσετε την απογραφή CSV για αυτόν τον οργανισμό
           new:
-            file: ".csv file with emails data"
-            info: 'Must be a file in CSV format with only one column with the email address:'
-            submit: Upload file
-            title: Upload a new census
+            file: Αρχείο .csv με δεδομένα email
+            info: 'Πρέπει να είναι αρχείο σε μορφή CSV με μία μόνο στήλη με τη διεύθυνση email:'
+            submit: Ανέβασμα αρχείου
+            title: Ανεβάστε μια νέα απογραφή
         authorizations:
           new:
-            error: We could not verify your account or you are not in the organization's census.
-            success: Your account has been successfully verified.
+            error: Δεν μπορέσαμε να επαληθεύσουμε τον λογαριασμό σας ή δεν βρίσκεστε στην απογραφή του οργανισμού.
+            success: Ο λογαριασμός σας επαληθεύτηκε με επιτυχία.
       dummy_authorization:
         extra_explanation:
           postal_codes:
-            one: Participation is restricted to participants with the postal code %{postal_codes}.
-            other: 'Participation is restricted to participants with any of the following postal codes: %{postal_codes}.'
-          scope: Participation is restricted to participants with the scope %{scope_name}.
+            one: Η συμμετοχή περιορίζεται σε συμμετέχοντες με τον ταχυδρομικό κώδικα %{postal_codes}.
+            other: 'Η συμμετοχή περιορίζεται σε συμμετέχοντες με οποιονδήποτε από τους παρακάτω ταχυδρομικούς κώδικες: %{postal_codes}.'
+          scope: Η συμμετοχή περιορίζεται σε συμμετέχοντες με το εύρος %{scope_name}.
           user_postal_codes:
-            one: Participation is restricted to participants with the postal code %{postal_codes}, and your postal code is %{user_postal_code}.
-            other: 'Participation is restricted to participants with any of the following postal codes: %{postal_codes}. Your postal code is %{user_postal_code}.'
-          user_scope: Participation is restricted to participants with the scope %{scope_name}, and your scope is %{user_scope_name}.
+            one: Η συμμετοχή περιορίζεται σε συμμετέχοντες με τον ταχυδρομικό κώδικα %{postal_codes} και ο ταχυδρομικός σας κώδικας είναι %{user_postal_code}.
+            other: 'Η συμμετοχή περιορίζεται σε συμμετέχοντες με οποιονδήποτε από τους παρακάτω ταχυδρομικούς κώδικες: %{postal_codes}. Ο ταχυδρομικός σας κώδικας είναι %{user_postal_code}.'
+          user_scope: Η συμμετοχή περιορίζεται σε συμμετέχοντες με το εύρος %{scope_name} και το εύρος σας είναι %{user_scope_name}.
       id_documents:
         admin:
           config:
             edit:
-              title: Identity documents configuration
-              update: Update
+              title: Διαμόρφωση εγγράφων ταυτότητας
+              update: Εκσυγχρονίζω
             update:
-              error: There was a problem updating the configuration.
-              success: Configuration successfully updated
+              error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση της διαμόρφωσης.
+              success: Η διαμόρφωση ενημερώθηκε με επιτυχία
           confirmations:
             create:
-              error: Verification doesn't match. Please try again or reject the verification so the participant can amend it
-              success: Participant successfully verified
+              error: Η επαλήθευση δεν ταιριάζει. Δοκιμάστε ξανά ή απορρίψτε την επαλήθευση, ώστε ο συμμετέχων να μπορεί να την τροποποιήσει
+              success: Ο συμμετέχων επαληθεύτηκε με επιτυχία
             new:
-              introduce_user_data: Introduce the data in the picture
-              reject: Reject
-              verify: Verify
+              introduce_user_data: Εισάγετε τα δεδομένα στην εικόνα
+              reject: Απορρίπτω
+              verify: Επαληθεύω
           offline_confirmations:
             create:
-              error: Verification doesn't match. Please try again or tell the participant to amend it
-              success: Participant successfully verified
+              error: Η επαλήθευση δεν ταιριάζει. Δοκιμάστε ξανά ή πείτε στον συμμετέχοντα να το τροποποιήσει
+              success: Ο συμμετέχων επαληθεύτηκε με επιτυχία
             new:
-              cancel: Cancel
-              introduce_user_data: Introduce the participant email and the document data
-              verify: Verify
+              cancel: Ματαίωση
+              introduce_user_data: Εισαγάγετε το email του συμμετέχοντα και τα δεδομένα του εγγράφου
+              verify: Επαληθεύω
           pending_authorizations:
             index:
-              config: Config
-              offline_verification: Offline verification
-              title: Pending online verifications
-              verification_number: 'Verification #%{n}'
+              config: Διαμόρφωση
+              offline_verification: Επαλήθευση εκτός σύνδεσης
+              title: Εκκρεμείς ηλεκτρονικές επαληθεύσεις
+              verification_number: 'Επαλήθευση #%{n}'
           rejections:
             create:
-              success: Verification rejected. Participant will be prompted to amend their documents
+              success: Η επαλήθευση απορρίφθηκε. Ο συμμετέχων θα κληθεί να τροποποιήσει τα έγγραφά του
         authorizations:
           choose:
-            choose_a_type: 'Please select how you want to be verified:'
-            offline: Offline
-            online: Online
-            title: Verify yourself using your identity document
+            choose_a_type: 'Επιλέξτε πώς θέλετε να επαληθευτείτε:'
+            offline: Εκτός σύνδεσης
+            online: Σε σύνδεση
+            title: Επαληθεύστε τον εαυτό σας χρησιμοποιώντας το έγγραφο ταυτότητάς σας
           create:
-            error: There was a problem uploading your document
-            success: Document successfully uploaded
+            error: Παρουσιάστηκε πρόβλημα κατά τη μεταφόρτωση του εγγράφου σας
+            success: Το έγγραφο μεταφορτώθηκε με επιτυχία
           edit:
-            being_reviewed: We're reviewing your documents. You'll be verified shortly
-            offline: Use offline verification
-            online: Use online verification
-            rejection_clarity: Make sure the information is clearly visible in the uploaded image
-            rejection_correctness: Make sure the information entered is correct
-            rejection_notice: There was a problem with your verification. Please try again
-            send: Request verification again
+            being_reviewed: Εξετάζουμε τα έγγραφά σας. Θα επαληθευτείτε σύντομα
+            offline: Χρησιμοποιήστε επαλήθευση εκτός σύνδεσης
+            online: Χρησιμοποιήστε την ηλεκτρονική επαλήθευση
+            rejection_clarity: Βεβαιωθείτε ότι οι πληροφορίες είναι ευδιάκριτες στην μεταφορτωμένη εικόνα
+            rejection_correctness: Βεβαιωθείτε ότι οι πληροφορίες που εισάγατε είναι σωστές
+            rejection_notice: Παρουσιάστηκε πρόβλημα με την επαλήθευση σας. ΠΑΡΑΚΑΛΩ προσπαθησε ξανα
+            send: Ζητήστε ξανά επαλήθευση
           new:
-            send: Request verification
-            title: Upload your identity document
+            send: Ζητήστε επαλήθευση
+            title: Ανεβάστε το έγγραφο ταυτότητάς σας
           update:
-            error: There was a problem reuploading your document
-            success: Document successfully reuploaded
+            error: Παρουσιάστηκε πρόβλημα κατά την εκ νέου μεταφόρτωση του εγγράφου σας
+            success: Το έγγραφο μεταφορτώθηκε ξανά με επιτυχία
         dni: DNI
         nie: NIE
-        passport: Passport
+        passport: Διαβατήριο
       postal_letter:
         admin:
           pending_authorizations:
             index:
-              address: Address
-              letter_sent_at: Letter sent at
-              mark_as_sent: Mark as sent
-              not_yet_sent: Not yet sent
-              title: Ongoing verifications
-              username: Nickname
-              verification_code: Verification code
+              address: Διεύθυνση
+              letter_sent_at: Η επιστολή στάλθηκε στις
+              mark_as_sent: Επισήμανση ως αποστολής
+              not_yet_sent: Δεν έχει σταλεί ακόμα
+              title: Συνεχείς επαληθεύσεις
+              username: Παρατσούκλι
+              verification_code: Κωδικός επαλήθευσης
           postages:
             create:
-              error: Error marking letter as sent
-              success: Letter successfully marked as sent
+              error: Σφάλμα επισήμανσης της επιστολής ως απεσταλμένης
+              success: Η επιστολή επισημάνθηκε επιτυχώς ως απεσταλμένη
         authorizations:
           create:
-            error: There was a problem with your request
-            success: Thanks! We'll send a verification code to your address
+            error: Παρουσιάστηκε πρόβλημα με το αίτημά σας
+            success: Ευχαριστώ! Θα στείλουμε έναν κωδικό επαλήθευσης στη διεύθυνσή σας
           edit:
-            send: Confirm
-            title: Introduce the verification code you received
-            waiting_for_letter: We'll be sending a letter to your address with your verification code soon
+            send: Επιβεβαιώνω
+            title: Εισαγάγετε τον κωδικό επαλήθευσης που λάβατε
+            waiting_for_letter: Σύντομα θα σας στείλουμε μια επιστολή στη διεύθυνσή σας με τον κωδικό επαλήθευσης
           new:
-            send: Send me a letter
-            title: Request your verification code
+            send: Στείλε μου ένα γράμμα
+            title: Ζητήστε τον κωδικό επαλήθευσης
           update:
-            error: Your verification code doesn't match ours. Please double-check the letter we sent to you
-            success: Congratulations. You've been successfully verified
+            error: Ο κωδικός επαλήθευσης δεν ταιριάζει με τον δικό μας. Ελέγξτε ξανά την επιστολή που σας στείλαμε
+            success: Συγχαρητήρια. Έχετε επαληθευτεί με επιτυχία
       sms:
         authorizations:
           create:
-            error: There was a problem with your request
-            success: Thanks! We've sent an SMS to your phone.
+            error: Παρουσιάστηκε πρόβλημα με το αίτημά σας
+            success: Ευχαριστώ! Στείλαμε ένα SMS στο τηλέφωνό σας.
           destroy:
-            success: Verification code sucessfully reset. Please re-enter your phone number.
+            success: Ο κωδικός επαλήθευσης επαναφέρθηκε με επιτυχία. Εισαγάγετε ξανά τον αριθμό τηλεφώνου σας.
           edit:
-            confirm_destroy: Are you sure you want to reset the verification code?
-            destroy: Reset verification code
-            resend: Didn't receive the verification code?
-            send: Confirm
-            title: Introduce the verification code you received
+            confirm_destroy: Είστε βέβαιοι ότι θέλετε να επαναφέρετε τον κωδικό επαλήθευσης;
+            destroy: Επαναφορά κωδικού επαλήθευσης
+            resend: Δεν λάβατε τον κωδικό επαλήθευσης;
+            send: Επιβεβαιώνω
+            title: Εισαγάγετε τον κωδικό επαλήθευσης που λάβατε
           new:
-            send: Send me an SMS
-            title: Request your verification code
+            send: Στείλε μου ένα SMS
+            title: Ζητήστε τον κωδικό επαλήθευσης
           update:
-            error: Your verification code doesn't match ours. Please double-check the SMS we sent you.
-            success: Congratulations. You've been successfully verified.
+            error: Ο κωδικός επαλήθευσης δεν ταιριάζει με τον δικό μας. Ελέγξτε ξανά το SMS που σας στείλαμε.
+            success: Συγχαρητήρια. Έχετε επαληθευτεί με επιτυχία.
   errors:
     messages:
-      uppercase_only_letters_numbers: must be all uppercase and contain only letters and/or numbers
+      uppercase_only_letters_numbers: πρέπει να είναι όλα κεφαλαία και να περιέχει μόνο γράμματα ή/και αριθμούς

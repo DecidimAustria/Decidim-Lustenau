@@ -49,7 +49,7 @@ hr:
         participatory_scope: Što je odlučeno
         participatory_structure: Kako se odlučuje
         target: Tko sudjeluje
-        title: Titula
+        title: Naslov
       participatory_process_step:
         cta_path: Put Poziva na akciju (CTA)
         cta_text: Tekst Poziva na akciju (CTA)
@@ -59,7 +59,7 @@ hr:
         start_date: Datum početka
         title: Naslov
       participatory_process_type:
-        title: Titula
+        title: Naslov
       participatory_process_user_role:
         email: Adresa e-pošte
         name: Naziv
@@ -137,7 +137,7 @@ hr:
         participatory_process_group:
           fields:
             name: Naziv
-            title: Titula
+            title: Naslov
           name: Skupina procesa
         participatory_process_step:
           fields:
@@ -148,7 +148,7 @@ hr:
         participatory_process_type:
           fields:
             created_at: Stvoreno u
-            title: Titula
+            title: Naslov
           name: Vrsta procesa
         participatory_process_user_role:
           fields:
@@ -242,7 +242,7 @@ hr:
           title: Uredite vrstu procesa
           update: Ažuriraj
         form:
-          title: Titula
+          title: Naslov
         new:
           create: Stvoriti
           title: Nova vrsta procesa

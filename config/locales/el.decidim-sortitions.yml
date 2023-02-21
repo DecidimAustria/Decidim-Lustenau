@@ -1,151 +1,151 @@
 ---
-en:
+el:
   activemodel:
     attributes:
       sortition:
-        additional_info: Sortition information
-        decidim_category_id: Categories of the set of proposals in which you want to apply the draw
-        decidim_proposals_component_id: Proposals set
-        dice: Result of die roll. Roll a 6-sided die, or look for another random way to generate a number from 1 to 6, and enter here the resulting number in front of some witnesses. This contributes to the quality and guarantees of the randomness of the result
-        target_items: Number of proposals to be selected (indicates the number of proposals you want to be selected by drawing lots of the group of proposals you have previously chosen)
-        title: Title
-        witnesses: Witnesses
+        additional_info: Πληροφορίες ταξινόμησης
+        decidim_category_id: Κατηγορίες του σετ προτάσεων στις οποίες θέλετε να εφαρμόσετε την κλήρωση
+        decidim_proposals_component_id: Σετ προτάσεων
+        dice: Αποτέλεσμα ρολού μήτρας. Ρίξτε μια μήτρα 6 όψεων ή αναζητήστε έναν άλλο τυχαίο τρόπο για να δημιουργήσετε έναν αριθμό από το 1 έως το 6 και εισάγετε εδώ τον αριθμό που προκύπτει μπροστά σε μερικούς μάρτυρες. Αυτό συμβάλλει στην ποιότητα και εγγυάται την τυχαιότητα του αποτελέσματος
+        target_items: Αριθμός προτάσεων που θα επιλεγούν (υποδεικνύει τον αριθμό των προτάσεων που θέλετε να επιλεγούν με κλήρωση της ομάδας προτάσεων που έχετε επιλέξει προηγουμένως)
+        title: Τίτλος
+        witnesses: Μάρτυρες
     models:
-      decidim/sortitions/create_sortition_event: Sortition
+      decidim/sortitions/create_sortition_event: Ταξινόμηση
   activerecord:
     models:
       decidim/sortitions/sortition:
-        one: Sortition
-        other: Sortitions
+        one: Ταξινόμηση
+        other: Διαλογές
   decidim:
     components:
       sortitions:
         actions:
-          comment: Comment
-        name: Sortitions
+          comment: Σχόλιο
+        name: Διαλογές
         settings:
           global:
-            comments_enabled: Comments enabled
-            comments_max_length: Comments max length (Leave 0 for default value)
+            comments_enabled: Τα σχόλια ενεργοποιήθηκαν
+            comments_max_length: Μέγιστο μήκος σχολίων (Αφήστε 0 για την προεπιλεγμένη τιμή)
     events:
       sortitions:
         sortition_created:
-          email_intro: The sortition "%{resource_title}" has been added to "%{participatory_space_title}" that you are following.
-          email_outro: You have received this notification because you are following "%{participatory_space_title}". You can unfollow it from the previous link.
-          email_subject: New sortition added to %{participatory_space_title}
-          notification_title: The sortition <a href="%{resource_path}">%{resource_title}</a> has been added to %{participatory_space_title}
+          email_intro: Η ταξινόμηση "%{resource_title}" προστέθηκε στο "%{participatory_space_title}" που ακολουθείτε.
+          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το "%{participatory_space_title}". Μπορείτε να το καταργήσετε από τον προηγούμενο σύνδεσμο.
+          email_subject: Προστέθηκε νέα ταξινόμηση στο %{participatory_space_title}
+          notification_title: Η ταξινόμηση <a href="%{resource_path}">%{resource_title}</a> προστέθηκε στο %{participatory_space_title}
     sortitions:
       admin:
         actions:
-          destroy: Cancel the sortition
-          edit: Edit
-          new: New sortition
-          show: Sortition details
+          destroy: Ακυρώστε την ταξινόμηση
+          edit: Επεξεργασία
+          new: Νέα ταξινόμηση
+          show: Λεπτομέρειες ταξινόμησης
         models:
           sortition:
             fields:
-              category: Category
-              created_at: Creation date
-              decidim_proposals_component: Proposals component
-              dice: Dice
-              reference: Reference
-              request_timestamp: Draw time
-              seed: Seed
-              target_items: Items to select
-              title: Title
+              category: Κατηγορία
+              created_at: Ημερομηνία δημιουργίας
+              decidim_proposals_component: Στοιχείο προτάσεων
+              dice: Ζάρια
+              reference: Αναφορά
+              request_timestamp: Χρόνος κλήρωσης
+              seed: Σπόρος
+              target_items: Στοιχεία προς επιλογή
+              title: Τίτλος
             name:
-              one: Sortition
-              other: Sortitions
+              one: Ταξινόμηση
+              other: Διαλογές
         sortitions:
           confirm_destroy:
-            confirm_destroy: Are you sure you want to cancel this sortition?
-            destroy: Cancel sortition
-            title: Cancellation of the sortition
+            confirm_destroy: Είστε βέβαιοι ότι θέλετε να ακυρώσετε αυτήν την ταξινόμηση;
+            destroy: Ακύρωση ταξινόμησης
+            title: Ακύρωση της διαλογής
           create:
-            error: There was a problem creating a new sortition.
-            success: Sortition successfully created
+            error: Παρουσιάστηκε πρόβλημα με τη δημιουργία νέας ταξινόμησης.
+            success: Η ταξινόμηση δημιουργήθηκε με επιτυχία
           destroy:
-            error: Can not cancel the sortition.
-            success: Sortition successfully cancelled
+            error: Δεν είναι δυνατή η ακύρωση της ταξινόμησης.
+            success: Η ταξινόμηση ακυρώθηκε με επιτυχία
           edit:
-            title: Update the information about the sortition
-            update: Update
+            title: Ενημερώστε τις πληροφορίες σχετικά με την ταξινόμηση
+            update: Εκσυγχρονίζω
           form:
-            all_categories: All categories
-            select_proposal_component: Select the proposals set
-            title: New sortition for proposals
+            all_categories: Ολες οι κατηγορίες
+            select_proposal_component: Επιλέξτε το σύνολο προτάσεων
+            title: Νέα ταξινόμηση για προτάσεις
           index:
-            title: Sortitions
+            title: Διαλογές
           new:
-            confirm: By pressing the next button the platform will record the date and time (with precision of seconds) and together with the dice roll, this information will be used to generate a random selection. The action will be irreversible, once the button is clicked the result of this draw will be published, together with the data entered in this form and can not be modified, please check the content carefully
-            create: Create
-            title: New sortition
+            confirm: Πατώντας το επόμενο κουμπί η πλατφόρμα θα καταγράψει την ημερομηνία και την ώρα (με ακρίβεια δευτερολέπτων) και μαζί με την ρίψη των ζαριών, αυτές οι πληροφορίες θα χρησιμοποιηθούν για τη δημιουργία μιας τυχαίας επιλογής. Η ενέργεια θα είναι μη αναστρέψιμη, μόλις κάνετε κλικ στο κουμπί το αποτέλεσμα αυτής της κλήρωσης θα δημοσιευθεί, μαζί με τα δεδομένα που έχουν εισαχθεί σε αυτήν τη φόρμα και δεν μπορούν να τροποποιηθούν, ελέγξτε προσεκτικά το περιεχόμενο
+            create: Δημιουργώ
+            title: Νέα ταξινόμηση
           show:
-            selected_proposals: Proposals selected for draw
+            selected_proposals: Προτάσεις που επιλέχθηκαν για κλήρωση
           update:
-            error: There was a problem updating the sortition.
-            success: Sortition successfully updated
+            error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση της ταξινόμησης.
+            success: Η ταξινόμηση ενημερώθηκε με επιτυχία
       admin_log:
         sortition:
-          create: "%{user_name} created the %{resource_name} sortition in %{space_name}"
-          delete: "%{user_name} cancelled the %{resource_name} sortition in %{space_name}"
-          update: "%{user_name} updated the %{resource_name} sortition in %{space_name}"
+          create: Ο %{user_name} δημιούργησε την ταξινόμηση %{resource_name} στο %{space_name}
+          delete: Ο %{user_name} ακύρωσε την ταξινόμηση %{resource_name} στο %{space_name}
+          update: Ο %{user_name} ενημέρωσε την ταξινόμηση %{resource_name} στο %{space_name}
       sortitions:
         count:
           proposals_count:
-            one: 1 proposal
-            other: "%{count} proposals"
+            one: 1 πρόταση
+            other: "%{count} προτάσεις"
         filters:
-          active: Active
-          all: All
-          cancelled: Cancelled
-          category: Category
-          category_prompt: Select a category
-          search: Search
-          state: Status
+          active: Ενεργός
+          all: Ολα
+          cancelled: Ακυρώθηκε
+          category: Κατηγορία
+          category_prompt: Επιλέξτε μία κατηγορία
+          search: Αναζήτηση
+          state: Κατάσταση
         filters_small_view:
-          close_modal: Close modal
-          filter: Filter
-          filter_by: Filter by
-          unfold: Unfold
+          close_modal: Κλείστε το modal
+          filter: Φίλτρο
+          filter_by: Φιλτράρισμα κατά
+          unfold: Ξεδιπλώνονται
         linked_sortitions:
-          selected_proposals: Selected proposals
+          selected_proposals: Επιλεγμένες προτάσεις
         orders:
-          label: 'Order sortitions by:'
-          random: Random
-          recent: Recent
+          label: 'Παραγγείλετε ταξινομήσεις κατά:'
+          random: Τυχαίος
+          recent: Πρόσφατος
         results_count:
           count:
-            one: selected proposal
-            other: selected proposals
+            one: επιλεγμένη πρόταση
+            other: επιλεγμένες προτάσεις
         show:
-          algorithm: Sortition's algorithm code
-          any_category: from all categories
-          back: Back to list
-          cancelled: Cancelled sortition
-          candidate_proposal_ids: Sortition proposals order and IDs
-          candidate_proposals_info: 'The sortition was carried out among the following proposals (%{category_label}), with the following IDs (in bold the selected proposals)  '
-          category: from the %{category} category
-          dice_result: "(1) Dice result"
-          introduction: 'This page contains the results of the sortition %{reference}. By means of this sortition, %{target_items} number of results have been selected randomly and with an equal probability distribution from the set of proposals displayed bellow. Together with the results, the information displayed on this page provides all the information required to maximize guarantees and to reproduce the results. The key to the quality of this sortition is the double randomness provided by a the rolling of a dice(verified by witnesses) and the precise time of the sortition that provides input for an algorithm that generates a random selection. The time-seed for the sortition is so accurate (seconds) that it is impossible to control by humans thus providing a double "uncontrollable" input to guarantee a fair result.  '
-          mathematical_result: Result (1) x (2)
-          proposals_selected_by_sortition: Proposals selected by sortition
-          sortition_reproducibility_details: Sortition reproducibility details
-          time_seed: "(2) Time seed"
-          witnesses: Witnesses
+          algorithm: Κώδικας αλγορίθμου ταξινόμησης
+          any_category: από όλες τις κατηγορίες
+          back: Πίσω στη λίστα
+          cancelled: Ακυρώθηκε η ταξινόμηση
+          candidate_proposal_ids: Σειρά προτάσεων ταξινόμησης και ταυτότητες
+          candidate_proposals_info: Η ταξινόμηση πραγματοποιήθηκε μεταξύ των παρακάτω προτάσεων (%{category_label}), με τα ακόλουθα αναγνωριστικά (με έντονους χαρακτήρες οι επιλεγμένες προτάσεις)
+          category: από την κατηγορία %{category}
+          dice_result: "(1) Αποτέλεσμα ζαριών"
+          introduction: Αυτή η σελίδα περιέχει τα αποτελέσματα της ταξινόμησης %{reference}. Μέσω αυτής της ταξινόμησης, %{target_items} αριθμός αποτελεσμάτων επιλέχθηκε τυχαία και με ίση κατανομή πιθανοτήτων από το σύνολο των προτάσεων που εμφανίζεται παρακάτω. Μαζί με τα αποτελέσματα, οι πληροφορίες που εμφανίζονται σε αυτήν τη σελίδα παρέχουν όλες τις πληροφορίες που απαιτούνται για τη μεγιστοποίηση των εγγυήσεων και την αναπαραγωγή των αποτελεσμάτων. Το κλειδί για την ποιότητα αυτής της ταξινόμησης είναι η διπλή τυχαιότητα που παρέχεται από τη ρίψη ενός ζαριού (που επαληθεύεται από μάρτυρες) και ο ακριβής χρόνος της ταξινόμησης που παρέχει στοιχεία για έναν αλγόριθμο που δημιουργεί μια τυχαία επιλογή. Ο χρόνος-σπόρος για τη διαλογή είναι τόσο ακριβής (δευτερόλεπτα) που είναι αδύνατο να ελεγχθεί από τον άνθρωπο, παρέχοντας έτσι μια διπλή "ανεξέλεγκτη" εισαγωγή για να εγγυηθεί ένα δίκαιο αποτέλεσμα.
+          mathematical_result: Αποτέλεσμα (1) x (2)
+          proposals_selected_by_sortition: Προτάσεις που επιλέγονται με ταξινόμηση
+          sortition_reproducibility_details: Λεπτομέρειες αναπαραγωγιμότητας ταξινόμησης
+          time_seed: "(2) Σπόρος χρόνου"
+          witnesses: Μάρτυρες
         sortition:
-          random_seed: Random seed
+          random_seed: Τυχαίος σπόρος
           selected_proposals:
-            one: proposal selected
-            other: proposals selected
-          view: View
+            one: επιλεγμένη πρόταση
+            other: επιλεγμένες προτάσεις
+          view: Θέα
         sortition_author:
-          deleted: Deleted participant
+          deleted: Διαγραμμένος συμμετέχων
         sortition_cancel_author:
-          deleted: Deleted participant
+          deleted: Διαγραμμένος συμμετέχων
         sortitions_count:
           count:
-            one: 1 sortition
-            other: "%{count} sortitions"
+            one: 1 ταξινόμηση
+            other: "%{count} διαλογές"
     statistics:
-      sortitions_count: Sortitions
+      sortitions_count: Διαλογές

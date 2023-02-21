@@ -4,15 +4,22 @@ el:
     attributes:
       answer:
         body: Απάντηση
+        choices: Επιλογές
+        selected_choices: Επιλεγμένες επιλογές
       question:
         max_choices: Μέγιστος αριθμός επιλογών
         question_type: Τύπος
       questionnaire_question:
         mandatory: Υποχρεωτική
+        max_characters: Όριο χαρακτήρων (αφήστε στο 0 εάν δεν υπάρχει όριο)
     errors:
       models:
         answer:
           attributes:
+            add_documents:
+              needs_to_be_reattached: Χρειάζεται επανασύνδεση
+            body:
+              too_long: είναι πολύ μακρύ
             choices:
               missing: δεν έχουν ολοκληρωθεί
               too_many: είναι πάρα πολλές
@@ -43,6 +50,8 @@ el:
             export:
               answer:
                 title: 'Απόκριση #%{number}'
+            export_response:
+              title: survey_user_answers_%{token}
             index:
               title: "%{total} συνολικές απαντήσεις"
             show:
@@ -71,6 +80,7 @@ el:
           form:
             add_question: Προσθήκη ερώτησης
             add_separator: Προσθήκη διαχωριστικού
+            add_title_and_description: Προσθέστε τίτλο και περιγραφή
             already_answered_warning: Η φόρμα έχει ήδη απαντηθεί από ορισμένους χρήστες, επομένως δεν μπορείτε να τροποποιήσετε τις ερωτήσεις της.
             collapse: Σύμπτυξη όλων των ερωτήσεων
             expand: Ανάπτυξη όλων των ερωτήσεων
@@ -100,20 +110,34 @@ el:
             remove: Κατάργηση
             separator: Διαχωριστικό
             up: Επάνω
+          title_and_description:
+            collapse: Κατάρρευση
+            description: Περιγραφή
+            down: Κάτω
+            expand: Επεκτείνουν
+            remove: Αφαιρώ
+            title: Τίτλος
+            title_and_description: Τίτλος και περιγραφή
+            up: Πάνω
           update:
             invalid: Παρουσιάστηκε πρόβλημα κατά την αποθήκευση της φόρμας.
             success: Οι φόρμες αποθηκεύτηκαν με επιτυχία.
+      admin_log:
+        questionnaire:
+          update: Ο %{user_name} ενημέρωσε το ερωτηματολόγιο %{resource_name}
       errors:
         answer:
           body: Το σώμα δεν μπορεί να είναι κενό
       files:
         extension_whitelist: 'Αποδεκτές μορφές:'
       images:
+        dimensions: "%{width} x %{height} px"
         dimensions_info: 'Σε αυτήν την εικόνα θα γίνουν τα εξής:'
         processors:
           resize_and_pad: Αλλαγή μεγέθους και προσθήκη περιθωρίων εικόνας
           resize_to_fit: Αλλαγή μεγέθους για προσαρμογή
       question_types:
+        files: Αρχεία
         long_answer: Πλήρης απάντηση
         matrix_multiple: Μήτρα (Πολλαπλή επιλογή)
         matrix_single: Μήτρα (Μία επιλογή)
@@ -121,6 +145,9 @@ el:
         short_answer: Σύντομη απάντηση
         single_option: Μία επιλογή
         sorting: Ταξινόμηση
+        title_and_description: Τίτλος και περιγραφή
+      questionnaire_answer_presenter:
+        download_attachment: Λήψη συνημμένου
       questionnaires:
         answer:
           invalid: Παρουσιάστηκε πρόβλημα κατά την απάντηση της φόρμας.

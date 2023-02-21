@@ -1,92 +1,92 @@
 ---
-en:
+el:
   activemodel:
     models:
-      decidim/blogs/create_post_event: New blog post
+      decidim/blogs/create_post_event: Νέα ανάρτηση ιστολογίου
   activerecord:
     models:
       decidim/blogs/post:
-        one: Post
-        other: Posts
+        one: Θέση
+        other: Αναρτήσεις
   decidim:
     blogs:
       actions:
-        author_id: Create post as
-        confirm_destroy: Are you sure you want to delete this post?
-        destroy: Delete
-        edit: Edit
-        new: New post
-        title: Actions
+        author_id: Δημιουργία ανάρτησης ως
+        confirm_destroy: Είστε σίγουροι ότι θέλετε να διαγράψετε αυτήν την ανάρτηση;
+        destroy: Διαγράφω
+        edit: Επεξεργασία
+        new: Νέα ανάρτηση
+        title: Ενέργειες
       admin:
         models:
           components:
-            body: Body
+            body: Σώμα
           post:
-            name: Post
+            name: Θέση
         posts:
           create:
-            invalid: There was a problem creating this post
-            success: Post successfully created
+            invalid: Παρουσιάστηκε πρόβλημα με τη δημιουργία αυτής της ανάρτησης
+            success: Η ανάρτηση δημιουργήθηκε με επιτυχία
           destroy:
-            success: Post successfully deleted
+            success: Η ανάρτηση διαγράφηκε με επιτυχία
           edit:
-            save: Update
-            title: Edit post
+            save: Εκσυγχρονίζω
+            title: Επεξεργασία ανάρτησης
           index:
-            title: Posts
+            title: Αναρτήσεις
           new:
-            create: Create
-            title: Create post
+            create: Δημιουργώ
+            title: Δημιουργία ανάρτησης
           update:
-            invalid: There was a problem saving the post.
-            success: Post successfully saved
+            invalid: Παρουσιάστηκε πρόβλημα με την αποθήκευση της ανάρτησης.
+            success: Η ανάρτηση αποθηκεύτηκε με επιτυχία
       admin_log:
         post:
-          create: "%{user_name} created the %{resource_name} blog post in %{space_name}"
-          delete: "%{user_name} deleted the %{resource_name} blog post from %{space_name}"
-          update: "%{user_name} updated the %{resource_name} blog post in %{space_name}"
+          create: Ο %{user_name} δημιούργησε την ανάρτηση ιστολογίου %{resource_name} στο %{space_name}
+          delete: Ο %{user_name} διέγραψε την ανάρτηση ιστολογίου %{resource_name} από το %{space_name}
+          update: Ο %{user_name} ενημέρωσε την ανάρτηση ιστολογίου %{resource_name} στο %{space_name}
       last_activity:
-        new_post_at_html: "<span>New post at %{link}</span>"
+        new_post_at_html: "<span>Νέα ανάρτηση στο %{link}</span>"
       models:
         post:
           fields:
-            author: Author
-            body: Body
-            created_at: Created at
-            official_blog_post: Official post
-            title: title
+            author: Συντάκτης
+            body: Σώμα
+            created_at: Δημιουργήθηκε στο
+            official_blog_post: Επίσημη ανάρτηση
+            title: τίτλος
       posts:
         show:
-          back: Back to list
-          comments: Comments
-          view: View
+          back: Πίσω στη λίστα
+          comments: Σχόλια
+          view: Θέα
         sidebar_blog:
-          comments: comments
-          most_commented_posts: Most commented posts
-      read_more: Read more
+          comments: σχόλια
+          most_commented_posts: Οι αναρτήσεις με τα περισσότερα σχόλια
+      read_more: Διαβάστε περισσότερα
     components:
       blogs:
         actions:
-          create: Create
-          destroy: Delete
-          update: Update
-        name: Blog
+          create: Δημιουργώ
+          destroy: Διαγράφω
+          update: Εκσυγχρονίζω
+        name: Ιστολόγιο
         settings:
           global:
-            announcement: Announcement
-            comments_enabled: Comments enabled
-            comments_max_length: Comments max length (Leave 0 for default value)
+            announcement: Ανακοίνωση
+            comments_enabled: Τα σχόλια ενεργοποιήθηκαν
+            comments_max_length: Μέγιστο μήκος σχολίων (Αφήστε 0 για την προεπιλεγμένη τιμή)
           step:
-            announcement: Announcement
-            comments_blocked: Comments blocked
-            endorsements_blocked: Endorsements blocked
-            endorsements_enabled: Endorsements enabled
+            announcement: Ανακοίνωση
+            comments_blocked: Τα σχόλια αποκλείστηκαν
+            endorsements_blocked: Οι εγκρίσεις αποκλείστηκαν
+            endorsements_enabled: Οι εγκρίσεις ενεργοποιήθηκαν
     events:
       blogs:
         post_created:
-          email_intro: The post "%{resource_title}" has been published in "%{participatory_space_title}" that you are following.
-          email_outro: You have received this notification because you are following "%{participatory_space_title}". You can unfollow it from the previous link.
-          email_subject: New post published in %{participatory_space_title}
-          notification_title: The post <a href="%{resource_path}">%{resource_title}</a> has been published in %{participatory_space_title}
+          email_intro: Η ανάρτηση "%{resource_title}" δημοσιεύτηκε στο "%{participatory_space_title}" που παρακολουθείτε.
+          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το "%{participatory_space_title}". Μπορείτε να το καταργήσετε από τον προηγούμενο σύνδεσμο.
+          email_subject: Νέα ανάρτηση δημοσιεύτηκε στο %{participatory_space_title}
+          notification_title: Η ανάρτηση <a href="%{resource_path}">%{resource_title}</a> δημοσιεύτηκε στο %{participatory_space_title}
     statistics:
-      posts_count: Posts
+      posts_count: Αναρτήσεις

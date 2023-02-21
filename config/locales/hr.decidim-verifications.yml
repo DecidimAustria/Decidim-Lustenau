@@ -93,7 +93,7 @@ hr:
       authorizations:
         authorization_metadata:
           info: 'Ovo su podaci trenutne provjere:'
-          no_data_stored: Nema pohranjenih podataka.
+          no_data_stored: Nema sačuvanih podataka.
         create:
           error: Došlo je do problema pri izradi autorizacije.
           success: Uspješno ste autorizirani.
