@@ -1,381 +1,378 @@
 ---
-en:
+el:
   activemodel:
     attributes:
       budget:
-        decidim_scope_id: Scope
-        description: Description
-        title: Title
-        total_budget: Total budget
-        weight: Order position
+        decidim_scope_id: Πεδίο εφαρμογής
+        description: Περιγραφή
+        title: Τίτλος
+        total_budget: Συνολικός προϋπολογισμός
+        weight: Θέση παραγγελίας
       project:
-        budget_amount: Budget amount
-        decidim_category_id: Category
-        decidim_scope_id: Scope
-        description: Description
-        proposal_ids: Related proposals
-        proposals: Proposals
-        selected: Selected for implementation
-        title: Title
+        budget_amount: Ποσό προϋπολογισμού
+        decidim_category_id: Κατηγορία
+        decidim_scope_id: Πεδίο εφαρμογής
+        description: Περιγραφή
+        proposal_ids: Σχετικές προτάσεις
+        proposals: Προτάσεις
+        selected: Επιλέχθηκε για υλοποίηση
+        title: Τίτλος
       proposals_import:
-        scope_id: Scope
+        scope_id: Πεδίο εφαρμογής
   activerecord:
     models:
       decidim/budgets/project:
-        one: Project
-        other: Projects
+        one: Εργο
+        other: Εργα
   decidim:
     admin:
       filters:
         projects:
           category_id_eq:
-            label: Category
+            label: Κατηγορία
           scope_id_eq:
-            label: Scope
+            label: Πεδίο εφαρμογής
           selected_at_null:
-            label: Selected
+            label: Επιλεγμένο
             values:
-              'false': Selected for implementation
-              'true': Not selected for implementation
+              'false': Επιλέχθηκε για υλοποίηση
+              'true': Δεν έχει επιλεγεί για υλοποίηση
     budgets:
       actions:
-        attachment_collections: Folders
-        attachments: Attachments
-        confirm_destroy: Are you sure you want to delete this project?
-        destroy: Delete
-        edit: Edit
-        edit_projects: Manage projects
-        import: Import proposals to projects
-        new: New %{name}
-        preview: Preview
-        title: Actions
+        attachment_collections: Φάκελοι
+        attachments: Συνημμένα
+        confirm_destroy: Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το έργο;
+        destroy: Διαγράφω
+        edit: Επεξεργασία
+        edit_projects: Διαχείριση έργων
+        import: Εισαγωγικές προτάσεις σε έργα
+        new: Νέο %{name}
+        preview: Προεπισκόπηση
+        title: Ενέργειες
       admin:
         budgets:
           create:
-            invalid: There was a problem creating this budget
-            success: Budget successfully created
+            invalid: Παρουσιάστηκε πρόβλημα με τη δημιουργία αυτού του προϋπολογισμού
+            success: Ο προϋπολογισμός δημιουργήθηκε με επιτυχία
           destroy:
-            invalid: There was a problem deleting this budget
-            success: Budget successfully deleted
+            invalid: Παρουσιάστηκε πρόβλημα κατά τη διαγραφή αυτού του προϋπολογισμού
+            success: Ο προϋπολογισμός διαγράφηκε με επιτυχία
           edit:
-            title: Edit budget
-            update: Update budget
+            title: Επεξεργασία προϋπολογισμού
+            update: Ενημέρωση προϋπολογισμού
           index:
-            finished_orders: Finished votes
-            pending_orders: Pending votes
-            title: Budgets
-            users_with_finished_orders: Users with finished votes
-            users_with_pending_orders: Users with pending votes
+            finished_orders: Τελειωμένες ψηφοφορίες
+            pending_orders: Εκκρεμούν ψήφοι
+            title: Προϋπολογισμοί
+            users_with_finished_orders: Χρήστες με τελικές ψήφους
+            users_with_pending_orders: Χρήστες με ψήφους σε εκκρεμότητα
           new:
-            create: Create budget
-            title: New budget
+            create: Δημιουργία προϋπολογισμού
+            title: Νέος προϋπολογισμός
           update:
-            invalid: There was a problem updating this budget
-            success: Budget successfully updated
+            invalid: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτού του προϋπολογισμού
+            success: Ο προϋπολογισμός ενημερώθηκε με επιτυχία
         exports:
-          projects: Projects
+          projects: Εργα
         models:
           budget:
-            name: Budget
+            name: Προϋπολογισμός
           project:
-            name: Project
+            name: Εργο
         projects:
           create:
-            invalid: There was a problem creating this project
-            success: Project successfully created
+            invalid: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία αυτού του έργου
+            success: Το έργο δημιουργήθηκε με επιτυχία
           destroy:
-            success: Project successfully deleted
+            success: Το έργο διαγράφηκε με επιτυχία
           edit:
-            title: Edit project
-            update: Update
+            title: Επεξεργασία έργου
+            update: Εκσυγχρονίζω
           index:
-            actions: Actions
-            cancel: Cancel
-            change_category: Change category
-            change_scope: Change scope
-            change_selected: Change selected state
-            deselect_implementation: Unselect from implementation
-            finished_orders: Finished votes
-            pending_orders: Pending votes
-            select_for_implementation: Select for implementation
-            selected: Selected
-            title: Projects
-            update: Update
-            update_scope_button: Update scope
+            actions: Ενέργειες
+            cancel: Ματαίωση
+            change_category: Αλλαγή κατηγορίας
+            change_scope: Αλλαγή πεδίου εφαρμογής
+            change_selected: Αλλαγή επιλεγμένης κατάστασης
+            deselect_implementation: Αποεπιλογή από την εφαρμογή
+            finished_orders: Τελειωμένες ψηφοφορίες
+            pending_orders: Εκκρεμούν ψήφοι
+            select_for_implementation: Επιλέξτε για υλοποίηση
+            selected: Επιλεγμένο
+            title: Εργα
+            update: Εκσυγχρονίζω
+            update_scope_button: Ενημέρωση πεδίου εφαρμογής
           new:
-            create: Create
-            title: New project
+            create: Δημιουργώ
+            title: Νέο έργο
           update:
-            invalid: There was a problem updating this project
-            success: Project successfully updated
+            invalid: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτού του έργου
+            success: Το έργο ενημερώθηκε με επιτυχία
           update_category:
-            invalid: 'These projects already had the %{subject_name} category: %{projects}.'
-            select_a_category: Please select a category
-            select_a_project: Please select a project
-            success: 'Projects successfully updated to the %{subject_name} category: %{projects}.'
+            invalid: 'Αυτά τα έργα είχαν ήδη την κατηγορία %{subject_name}: %{projects}.'
+            select_a_category: Επιλέξτε μια κατηγορία
+            select_a_project: Επιλέξτε ένα έργο
+            success: 'Έργα που ενημερώθηκαν με επιτυχία στην κατηγορία %{subject_name}: %{projects}.'
           update_scope:
-            invalid: 'These projects already had the %{subject_name} scope: %{projects}.'
-            select_a_project: Please select a project
-            select_a_scope: Please select a scope
-            success: 'Projects successfully updated to the %{subject_name} scope: %{projects}.'
+            invalid: 'Αυτά τα έργα είχαν ήδη το πεδίο εφαρμογής %{subject_name}: %{projects}.'
+            select_a_project: Επιλέξτε ένα έργο
+            select_a_scope: Επιλέξτε ένα εύρος
+            success: 'Έργα που ενημερώθηκαν με επιτυχία στο πεδίο %{subject_name}: %{projects}.'
           update_selected:
             invalid:
-              selected: 'These projects were already selected for implementation: %{projects}.'
-              unselected: 'These projects were already unselected from implementation: %{projects}.'
-            select_a_project: Please select a project
-            select_a_selection: Please select an implementation state
+              selected: 'Αυτά τα έργα έχουν ήδη επιλεγεί για υλοποίηση: %{projects}.'
+              unselected: 'Αυτά τα έργα είχαν ήδη αποεπιλεγεί από την υλοποίηση: %{projects}.'
+            select_a_project: Επιλέξτε ένα έργο
+            select_a_selection: Επιλέξτε μια κατάσταση υλοποίησης
             success:
-              selected: 'These projects were successfully selected for implementation: %{projects}.'
-              unselected: 'These projects were successfully unselected from implementation: %{projects}.'
+              selected: 'Αυτά τα έργα επιλέχθηκαν με επιτυχία για υλοποίηση: %{projects}.'
+              unselected: 'Αυτά τα έργα καταργήθηκαν με επιτυχία από την υλοποίηση: %{projects}.'
         proposals_imports:
           create:
-            invalid: There was a problem importing the proposals into projects
-            success: "%{number} proposals successfully imported into projects"
+            invalid: Παρουσιάστηκε πρόβλημα κατά την εισαγωγή των προτάσεων σε έργα
+            success: "%{number} προτάσεις εισήχθησαν επιτυχώς σε έργα"
           new:
-            create: Import proposals to projects
-            default_budget: Default budget
-            import_all_accepted_proposals: Import all accepted proposals
-            no_components: There are no other proposal components in this participatory space to import the proposals into projects.
-            origin_component_id: Origin component
-            select_component: Please select a component
-            title: Import proposals
+            create: Εισαγωγικές προτάσεις σε έργα
+            default_budget: Προεπιλεγμένος προϋπολογισμός
+            import_all_accepted_proposals: Εισαγάγετε όλες τις αποδεκτές προτάσεις
+            no_components: Δεν υπάρχουν άλλα στοιχεία πρότασης σε αυτόν τον συμμετοχικό χώρο για την εισαγωγή των προτάσεων σε έργα.
+            origin_component_id: Συστατικό προέλευσης
+            select_component: Επιλέξτε ένα στοιχείο
+            title: Εισαγωγικές προτάσεις
         reminders:
           orders:
-            description: Users will receive an email with links to the budgets where they have pending order.
+            description: Οι χρήστες θα λάβουν ένα email με συνδέσμους προς τους προϋπολογισμούς στους οποίους έχουν εκκρεμή παραγγελία.
             title:
-              one: You are about to send an email reminder to %{count} user
-              other: You are about to send an email reminder to %{count} users
+              one: Πρόκειται να στείλετε μια υπενθύμιση ηλεκτρονικού ταχυδρομείου στον χρήστη %{count}
+              other: Πρόκειται να στείλετε μια υπενθύμιση μέσω email στους χρήστες %{count}
       admin_log:
         budget:
-          create: "%{user_name} created the %{resource_name} budget in the %{space_name} space"
-          delete: "%{user_name} deleted the %{resource_name} budget in the %{space_name} space"
-          update: "%{user_name} updated the %{resource_name} budget in the %{space_name} space"
+          create: Ο %{user_name} δημιούργησε τον προϋπολογισμό %{resource_name} στο χώρο %{space_name}
+          delete: Ο %{user_name} διέγραψε τον προϋπολογισμό %{resource_name} στο χώρο %{space_name}
+          update: Ο %{user_name} ενημέρωσε τον προϋπολογισμό %{resource_name} στο χώρο %{space_name}
         project:
-          create: "%{user_name} created the %{resource_name} project in the %{space_name} space"
-          delete: "%{user_name} deleted the %{resource_name} project in the %{space_name} space"
-          update: "%{user_name} updated the %{resource_name} project in the %{space_name} space"
+          create: Ο %{user_name} δημιούργησε το έργο %{resource_name} στο χώρο %{space_name}
+          delete: Ο %{user_name} διέγραψε το έργο %{resource_name} στο χώρο %{space_name}
+          update: Ο %{user_name} ενημέρωσε το έργο %{resource_name} στο χώρο %{space_name}
       budget:
-        view: View all budget projects
+        view: Δείτε όλα τα έργα προϋπολογισμού
       budget_information_modal:
-        back_to: Back to %{component_name}
-        close_modal: Close modal
-        continue: Continue
-        more_information: More information
+        back_to: Επιστροφή στο %{component_name}
+        close_modal: Κλείστε το modal
+        continue: Να συνεχίσει
+        more_information: Περισσότερες πληροφορίες
       budget_list_item:
-        voting_finished: You have voted in this budget
-        voting_started: You have started to vote in this budget
+        voting_finished: Ψηφίσατε σε αυτόν τον προϋπολογισμό
+        voting_started: Έχετε αρχίσει να ψηφίζετε σε αυτόν τον προϋπολογισμό
       budgets_list:
         cancel_order:
-          more_than_one: delete your vote on %{name} and start over
-          only_one: delete your vote and start over.
-        finished_message: You've finished the voting process. Thanks for participating!
-        highlighted_cta: Vote on %{name}
-        if_change_opinion: If you've changed your mind, you can
-        my_budgets: My budgets
-        progress: Finish voting
-        show: See projects
-        vote: Vote
-        voted_on: You've voted on %{links}
+          more_than_one: διαγράψτε την ψήφο σας στο %{name} και ξεκινήστε από την αρχή
+          only_one: διαγράψτε την ψήφο σας και ξεκινήστε από την αρχή.
+        finished_message: Ολοκληρώσατε τη διαδικασία ψηφοφορίας. Ευχαριστούμε για τη συμμετοχή!
+        highlighted_cta: Ψηφίστε στο %{name}
+        if_change_opinion: Αν έχεις αλλάξει γνώμη, μπορείς
+        my_budgets: Οι προϋπολογισμοί μου
+        progress: Ολοκληρώστε την ψηφοφορία
+        show: Δείτε έργα
+        vote: Ψήφος
+        voted_on: Ψηφίσατε στο %{links}
       last_activity:
-        new_vote_at_html: "<span>New budgeting vote at %{link}</span>"
+        new_vote_at_html: "<span>Νέα ψηφοφορία προϋπολογισμού στις %{link}</span>"
       limit_announcement:
-        cant_vote: You can't vote on this budget. <a href="%{landing_path}">Try on another budget</a>.
-        limit_reached: You have active votes in %{links}. To vote on this budget you must <a href="%{landing_path}">delete your vote and start over</a>.
+        cant_vote: Δεν μπορείτε να ψηφίσετε αυτόν τον προϋπολογισμό. <a href="%{landing_path}">Δοκιμάστε με άλλο προϋπολογισμό</a>.
+        limit_reached: Έχετε ενεργές ψήφους στο %{links}. Για να ψηφίσετε για αυτόν τον προϋπολογισμό, πρέπει να <a href="%{landing_path}">διαγράψετε την ψήφο σας και να ξεκινήσετε από την αρχή</a>.
       models:
         budget:
           fields:
-            name: Name
-            projects_count: Projects count
-            total_budget: Total budget
+            name: Ονομα
+            projects_count: Τα έργα μετράνε
+            total_budget: Συνολικός προϋπολογισμός
         project:
           fields:
-            category: Category
-            id: ID
-            scope: Scope
-            title: Title
+            category: Κατηγορία
+            id: ταυτότητα
+            scope: Πεδίο εφαρμογής
+            title: Τίτλος
       order_summary_mailer:
         order_summary:
-          selected_projects: 'The projects that you have selected are:'
-          subject: You have voted on the %{space_name} participatory space
-          voted_on_space: You have voted on the %{budget_name} budget for the %{space_name} participatory space.
-          voted_on_space_with_scope: You have voted on the %{budget_name} budget for the %{space_name} participatory space on %{scope_name} (%{scope_type}).
+          selected_projects: 'Τα έργα που επιλέξατε είναι:'
+          subject: Ψηφίσατε για τον συμμετοχικό χώρο %{space_name}
+          voted_on_space: Ψηφίσατε τον προϋπολογισμό %{budget_name} για τον συμμετοχικό χώρο %{space_name}.
+          voted_on_space_with_scope: Ψηφίσατε τον προϋπολογισμό %{budget_name} για τον συμμετοχικό χώρο %{space_name} στις %{scope_name} (%{scope_type}).
       projects:
         budget_confirm:
-          are_you_sure: If you change your mind, you can change your vote later.
-          cancel: Cancel
-          confirm: Confirm
-          description: These are the projects you have chosen to be part of the budget.
-          title: Confirm vote
+          are_you_sure: Εάν αλλάξετε γνώμη, μπορείτε να αλλάξετε την ψήφο σας αργότερα.
+          cancel: Ματαίωση
+          confirm: Επιβεβαιώνω
+          description: Αυτά είναι τα έργα που έχετε επιλέξει να είναι μέρος του προϋπολογισμού.
+          title: Επιβεβαίωση ψηφοφορίας
         budget_excess:
           budget_excess:
-            description: This project exceeds the maximum budget and can not be added. If you want, you can delete a project you have already selected, in order to be able to vote again according to your preferences.
-            title: Maximum budget exceeded
-          close: Close
-          description: This project exceeds the maximum budget and can not be added. If you want, you can delete a project you have already selected, in order to be able to vote again according to your preferences.
-          ok: OK
+            description: Αυτό το έργο υπερβαίνει τον μέγιστο προϋπολογισμό και δεν μπορεί να προστεθεί. Εάν θέλετε, μπορείτε να διαγράψετε ένα έργο που έχετε ήδη επιλέξει, για να μπορέσετε να ψηφίσετε ξανά σύμφωνα με τις προτιμήσεις σας.
+            title: Υπέρβαση του μέγιστου προϋπολογισμού
+          close: Κλείσε
+          description: Αυτό το έργο υπερβαίνει τον μέγιστο προϋπολογισμό και δεν μπορεί να προστεθεί. Εάν θέλετε, μπορείτε να διαγράψετε ένα έργο που έχετε ήδη επιλέξει, για να μπορέσετε να ψηφίσετε ξανά σύμφωνα με τις προτιμήσεις σας.
+          ok: Εντάξει
           projects_excess:
-            description: This project exceeds the maximum number of projects and cannot be added. If you want, you can delete a project you have already selected, in order to be able to vote again according to your preferences.
-            title: Maximum projects exceeded
+            description: Αυτό το έργο υπερβαίνει τον μέγιστο αριθμό έργων και δεν μπορεί να προστεθεί. Εάν θέλετε, μπορείτε να διαγράψετε ένα έργο που έχετε ήδη επιλέξει, για να μπορέσετε να ψηφίσετε ξανά σύμφωνα με τις προτιμήσεις σας.
+            title: Υπέρβαση των μέγιστων έργων
         budget_summary:
-          are_you_sure: Are you sure you want to cancel your vote?
-          assigned: 'Assigned:'
-          cancel_order: delete your vote and start over
+          are_you_sure: Είστε βέβαιοι ότι θέλετε να ακυρώσετε την ψήφο σας;
+          assigned: 'Ανατεθεί:'
+          cancel_order: διαγράψτε την ψήφο σας και ξεκινήστε από την αρχή
           checked_out:
-            description: You've already voted for the budget. If you've changed your mind, you can %{cancel_link}.
-            title: Budget vote completed
+            description: Έχετε ήδη ψηφίσει υπέρ του προϋπολογισμού. Εάν έχετε αλλάξει γνώμη, μπορείτε να %{cancel_link}.
+            title: Ολοκληρώθηκε η ψηφοφορία του προϋπολογισμού
           minimum_projects_rule:
-            description: What projects do you think we should allocate budget for? Select at least %{minimum_number} projects you want and vote according to your preferences to define the budget.
-            instruction: "<li>Select at least %{minimum_number} projects you want and vote according to your preferences to define the budget.</li>"
+            description: Για ποια έργα πιστεύετε ότι πρέπει να διαθέσουμε προϋπολογισμό; Επιλέξτε τουλάχιστον %{minimum_number} έργα που θέλετε και ψηφίστε σύμφωνα με τις προτιμήσεις σας για να ορίσετε τον προϋπολογισμό.
+            instruction: "<li>Επιλέξτε τουλάχιστον %{minimum_number} έργα που θέλετε και ψηφίστε σύμφωνα με τις προτιμήσεις σας για να καθορίσετε τον προϋπολογισμό.</li>"
           projects_rule:
-            description: What projects do you think we should allocate budget for? Select at least %{minimum_number} and up to %{maximum_number} projects you want and vote according to your preferences to define the budget.
-            instruction: "<li>Select at least %{minimum_number} and up to %{maximum_number} projects you want and vote according to your preferences to define the budget.</li>"
+            description: Για ποια έργα πιστεύετε ότι πρέπει να διαθέσουμε προϋπολογισμό; Επιλέξτε τουλάχιστον %{minimum_number} και έως και %{maximum_number} έργα που θέλετε και ψηφίστε σύμφωνα με τις προτιμήσεις σας για να καθορίσετε τον προϋπολογισμό.
+            instruction: "<li>Επιλέξτε τουλάχιστον %{minimum_number} και έως και %{maximum_number} έργα που θέλετε και ψηφίστε σύμφωνα με τις προτιμήσεις σας για να καθορίσετε τον προϋπολογισμό.</li>"
           projects_rule_maximum_only:
-            description: What projects do you think we should allocate budget for? Select up to %{maximum_number} projects you want and vote according to your preferences to define the budget.
-            instruction: "<li>Select up to %{maximum_number} projects you want and vote according to your preferences to define the budget.</li>"
+            description: Για ποια έργα πιστεύετε ότι πρέπει να διαθέσουμε προϋπολογισμό; Επιλέξτε έως και %{maximum_number} έργα που θέλετε και ψηφίστε σύμφωνα με τις προτιμήσεις σας για να καθορίσετε τον προϋπολογισμό.
+            instruction: "<li>Επιλέξτε έως και %{maximum_number} έργα που θέλετε και ψηφίστε σύμφωνα με τις προτιμήσεις σας για να καθορίσετε τον προϋπολογισμό.</li>"
           rules:
-            title: Budget rules
-          title: You decide the budget
-          total_budget: Total budget
-          total_projects: Total votes
+            title: Κανόνες προϋπολογισμού
+          title: Εσείς αποφασίζετε τον προϋπολογισμό
+          total_budget: Συνολικός προϋπολογισμός
+          total_projects: Σύνολο ψήφων
           vote_threshold_percent_rule:
-            description: What projects do you think we should allocate budget for? Assign at least %{minimum_budget} to the projects you want and vote according to your preferences to define the budget.
-            instruction: "<li>Assign at least %{minimum_budget} to the projects you want and vote according to your preferences to define the budget.</li>"
+            description: Για ποια έργα πιστεύετε ότι πρέπει να διαθέσουμε προϋπολογισμό; Εκχωρήστε τουλάχιστον %{minimum_budget} στα έργα που θέλετε και ψηφίστε σύμφωνα με τις προτιμήσεις σας για να καθορίσετε τον προϋπολογισμό.
+            instruction: "<li>Εκχωρήστε τουλάχιστον %{minimum_budget} στα έργα που θέλετε και ψηφίστε σύμφωνα με τις προτιμήσεις σας για να καθορίσετε τον προϋπολογισμό.</li>"
         count:
           projects_count:
-            one: 1 project
-            other: "%{count} projects"
+            one: 1 έργο
+            other: "%{count} έργα"
         exit_modal:
-          cancel: Return to voting
-          close_modal: Close modal
-          exit: Exit voting
-          message: Your vote has not been registered because you have not yet completed the voting process. Are you sure you want to exit voting?
-          title: You have not yet voted
+          cancel: Επιστροφή στην ψηφοφορία
+          close_modal: Κλείστε το modal
+          exit: Εξόδου από την ψηφοφορία
+          message: Η ψήφος σας δεν έχει καταχωρηθεί γιατί δεν έχετε ολοκληρώσει ακόμη τη διαδικασία ψηφοφορίας. Είστε βέβαιοι ότι θέλετε να βγείτε από την ψηφοφορία;
+          title: Δεν έχετε ψηφίσει ακόμα
         filters:
-          category: Category
-          scope: Scope
-          search: Search
-          status: Status
+          category: Κατηγορία
+          scope: Πεδίο εφαρμογής
+          search: Αναζήτηση
+          status: Κατάσταση
           status_values:
-            all: All
-            not_selected: Not selected
-            selected: Selected
+            all: Ολα
+            not_selected: Μη επιλεγμένο
+            selected: Επιλεγμένο
         filters_small_view:
-          close_modal: Close modal
-          filter: Filter
-          filter_by: Filter by
-          unfold: Unfold
+          close_modal: Κλείστε το modal
+          filter: Φίλτρο
+          filter_by: Φιλτράρισμα κατά
+          unfold: Ξεδιπλώνονται
         index:
-          view_project: View project
+          view_project: Προβολή έργου
         order_progress:
-          vote: Vote
+          vote: Ψήφος
         order_selected_projects:
-          remove: Remove
+          remove: Αφαιρώ
           selected_projects:
-            one: project selected
-            other: projects selected
-          view: View
+            one: επιλεγμένο έργο
+            other: επιλεγμένα έργα
+          view: Θέα
         orders:
-          highest_cost: Highest cost
-          label: Order projects by
-          lowest_cost: Lowest cost
-          most_voted: Most voted
-          random: Random order
-          selected: Selected
+          highest_cost: Το υψηλότερο κόστος
+          label: Παραγγελία έργων από
+          lowest_cost: Χαμηλότερο κόστος
+          most_voted: Οι περισσότεροι ψήφισαν
+          random: Τυχαία σειρά
+          selected: Επιλεγμένο
         project:
-          add: Add project %{resource_name} to your vote
-          remove: Remove project %{resource_name} from your vote
-          selected: Selected
-          view: View
+          add: Προσθέστε το έργο %{resource_name} στην ψήφο σας
+          remove: Καταργήστε το έργο %{resource_name} από την ψήφο σας
+          selected: Επιλεγμένο
+          view: Θέα
           votes:
-            one: vote
-            other: votes
-          you_voted: You voted this
+            one: ψήφος
+            other: ψήφους
+          you_voted: Ψηφίσατε αυτό
         project_budget_button:
-          add: Add to your vote
-          add_descriptive: Add project %{resource_name} to your vote
-          added: Added to your vote
-          added_descriptive: Project %{resource_name} added to your vote
-        projects_for: Projects for %{name}
+          add: Προσθέστε στην ψήφο σας
+          add_descriptive: Προσθέστε το έργο %{resource_name} στην ψήφο σας
+          added: Προστέθηκε στην ψήφο σας
+          added_descriptive: Το Project %{resource_name} προστέθηκε στην ψήφο σας
+        projects_for: Έργα για %{name}
         show:
-          budget: Budget
-          view_all_projects: View all projects
+          budget: Προϋπολογισμός
+          view_all_projects: Δείτε όλα τα έργα
       vote_reminder_mailer:
         vote_reminder:
-          email_budgets: 'Areas where you have an unfinished vote:'
-          email_intro: You have started the participatory budgeting vote, but have not completed it.
-          email_link: Go to continue voting
-          email_outro: Please remember to complete the vote. To vote, you must first select the proposal or proposals you want to vote on and then confirm your vote with the "Vote" button.
+          email_budgets: 'Περιοχές όπου έχετε μια ημιτελή ψήφο:'
+          email_intro: Ξεκινήσατε τη συμμετοχική ψηφοφορία για τον προϋπολογισμό, αλλά δεν την έχετε ολοκληρώσει.
+          email_link: Πηγαίνετε για να συνεχίσετε την ψηφοφορία
+          email_outro: Θυμηθείτε να ολοκληρώσετε την ψηφοφορία. Για να ψηφίσετε, πρέπει πρώτα να επιλέξετε την πρόταση ή τις προτάσεις που θέλετε να ψηφίσετε και στη συνέχεια να επιβεβαιώσετε την ψήφο σας με το κουμπί "Ψηφοφορία".
           email_subject:
-            one: You have an unfinished vote in the participatory budgeting vote
-            other: You have unfinished votes in the participatory budgeting vote
+            one: Έχετε μια ημιτελή ψήφο στη συμμετοχική ψηφοφορία προϋπολογισμού
+            other: Έχετε ημιτελείς ψήφους στη συμμετοχική ψηφοφορία προϋπολογισμού
     components:
       budgets:
         actions:
-          comment: Comment
-          vote: Vote
-        name: Budgets
+          comment: Σχόλιο
+          vote: Ψήφος
+        name: Προϋπολογισμοί
         settings:
           global:
-            announcement: Announcement
-            comments_enabled: Comments enabled
-            comments_max_length: Comments max length (Leave 0 for default value)
+            announcement: Ανακοίνωση
+            comments_enabled: Τα σχόλια ενεργοποιήθηκαν
+            comments_max_length: Μέγιστο μήκος σχολίων (Αφήστε 0 για την προεπιλεγμένη τιμή)
             form:
               errors:
-                budget_voting_rule_only_one: Only one voting rule must be enabled
-                budget_voting_rule_required: One voting rule is required
-            geocoding_enabled: Geocoding enabled
-            landing_page_content: Budgets landing page
-            more_information_modal: More information modal
-            projects_per_page: Projects per page
-            resources_permissions_enabled: Actions permissions can be set for each project
-            scope_id: Scope
-            scopes_enabled: Scopes enabled
-            title: Title
-            total_budget: Total budget
-            vote_minimum_budget_projects_number: Minimum number of projects to vote
-            vote_rule_minimum_budget_projects_enabled: 'Enable rule: Minimum number of projects to be voted on'
-            vote_rule_selected_projects_enabled: 'Enable rule: Minimum and maximum number of projects to be voted on'
-            vote_rule_threshold_percent_enabled: 'Enable rule: Minimum budget percentage'
-            vote_selected_projects_maximum: Maximum amount of projects to be selected
-            vote_selected_projects_minimum: Minimum amount of projects to be selected
-            vote_threshold_percent: Vote threshold percent
-            workflow: Workflow
+                budget_voting_rule_only_one: Πρέπει να ενεργοποιηθεί μόνο ένας κανόνας ψηφοφορίας
+                budget_voting_rule_required: Απαιτείται ένας κανόνας ψηφοφορίας
+            geocoding_enabled: Η γεωκωδικοποίηση ενεργοποιήθηκε
+            landing_page_content: Σελίδα προορισμού προϋπολογισμών
+            more_information_modal: Περισσότερες πληροφορίες modal
+            projects_per_page: Έργα ανά σελίδα
+            resources_permissions_enabled: Τα δικαιώματα ενεργειών μπορούν να οριστούν για κάθε έργο
+            scope_id: Πεδίο εφαρμογής
+            scopes_enabled: Τα πεδία είναι ενεργοποιημένα
+            title: Τίτλος
+            total_budget: Συνολικός προϋπολογισμός
+            vote_minimum_budget_projects_number: Ελάχιστος αριθμός έργων προς ψήφιση
+            vote_rule_minimum_budget_projects_enabled: 'Κανόνας ενεργοποίησης: Ελάχιστος αριθμός έργων προς ψηφοφορία'
+            vote_rule_selected_projects_enabled: 'Ενεργοποίηση κανόνα: Ελάχιστος και μέγιστος αριθμός έργων προς ψηφοφορία'
+            vote_rule_threshold_percent_enabled: 'Κανόνας ενεργοποίησης: Ελάχιστο ποσοστό προϋπολογισμού'
+            vote_selected_projects_maximum: Μέγιστος αριθμός έργων που θα επιλεγούν
+            vote_selected_projects_minimum: Ελάχιστος αριθμός έργων που θα επιλεγούν
+            vote_threshold_percent: Ποσοστό ορίου ψήφου
+            workflow: Ροή εργασιών
             workflow_choices:
-              all: 'Vote in all: allows participants to vote in all budgets.'
-              one: 'Vote in one: allows participants to vote in any budget, but only in one.'
+              all: 'Vote in all: επιτρέπει στους συμμετέχοντες να ψηφίζουν σε όλους τους προϋπολογισμούς.'
+              one: 'Ψηφοφορία σε ένα: επιτρέπει στους συμμετέχοντες να ψηφίζουν σε οποιονδήποτε προϋπολογισμό, αλλά μόνο σε έναν.'
           step:
-            announcement: Announcement
-            comments_blocked: Comments blocked
-            highlighted_heading: Highlighted heading
-            landing_page_content: Budgets landing page
-            list_heading: List heading
-            more_information_modal: More information modal
-            show_votes: Show votes
-            title: Title
-            votes: Voting
+            announcement: Ανακοίνωση
+            comments_blocked: Τα σχόλια αποκλείστηκαν
+            highlighted_heading: Επισημασμένη επικεφαλίδα
+            landing_page_content: Σελίδα προορισμού προϋπολογισμών
+            list_heading: Επικεφαλίδα λίστας
+            more_information_modal: Περισσότερες πληροφορίες modal
+            show_votes: Εμφάνιση ψήφων
+            title: Τίτλος
+            votes: Ψηφοφορία
             votes_choices:
-              disabled: Voting disabled
-              enabled: Voting enabled
-              finished: Voting finished
+              disabled: Η ψηφοφορία απενεργοποιήθηκε
+              enabled: Η ψηφοφορία ενεργοποιήθηκε
+              finished: Η ψηφοφορία ολοκληρώθηκε
     events:
       budgets:
         budget_published:
-          email_intro: 'The %{resource_title} budget is now active for %{participatory_space_title}. You can see it from this page:'
-          email_outro: You have received this notification because you are following %{participatory_space_title}. You can stop receiving notifications following the previous link.
-          email_subject: The %{resource_title} budget is now active for %{participatory_space_title}.
-          notification_title: The <a href="%{resource_path}">%{resource_title}</a> budget is now active for %{participatory_space_title}.
+          email_intro: 'Ο προϋπολογισμός %{resource_title} είναι πλέον ενεργός για το %{participatory_space_title}. Μπορείτε να το δείτε από αυτή τη σελίδα:'
+          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το %{participatory_space_title}. Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο.
+          email_subject: Ο προϋπολογισμός %{resource_title} είναι πλέον ενεργός για το %{participatory_space_title}.
+          notification_title: Ο προϋπολογισμός <a href="%{resource_path}">%{resource_title}</a> είναι πλέον ενεργός για το %{participatory_space_title}.
     orders:
       checkout:
-        error: There was a problem processing your vote
-        success: Your vote has been successfully accepted
+        error: Παρουσιάστηκε πρόβλημα κατά την επεξεργασία της ψήφου σας
+        success: Η ψήφος σας έγινε δεκτή με επιτυχία
       destroy:
-        error: There was a problem canceling your vote
-        success: Your vote has been successfully canceled
+        error: Παρουσιάστηκε πρόβλημα κατά την ακύρωση της ψήφου σας
+        success: Η ψήφος σας ακυρώθηκε με επιτυχία
     resource_links:
       included_proposals:
-        project_proposal: Proposals included in this project
-    statistics:
-      orders_count: Supports
-      projects_count: Projects
+        project_proposal: Προτάσεις που περιλαμβάνονται σε αυτό το έργο
   index:
-    confirmed_orders_count: Votes count
+    confirmed_orders_count: Οι ψήφοι μετράνε

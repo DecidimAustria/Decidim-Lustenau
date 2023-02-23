@@ -1,618 +1,617 @@
 ---
-en:
+el:
   activemodel:
     attributes:
       conference:
-        assemblies_ids: Related Assemblies
-        available_slots: Available slots
-        banner_image: Banner image
-        consultations_ids: Related Consultations
-        copy_categories: Copy categories
-        copy_components: Copy components
-        copy_features: Copy features
-        decidim_scope_id: Scope
-        description: Description
-        end_date: End date
+        assemblies_ids: Σχετικές Συνελεύσεις
+        available_slots: Διαθέσιμες κουλοχέρηδες
+        banner_image: Εικόνα πανό
+        consultations_ids: Σχετικές Διαβουλεύσεις
+        copy_categories: Αντιγραφή κατηγοριών
+        copy_components: Αντιγραφή στοιχείων
+        copy_features: Χαρακτηριστικά αντιγραφής
+        decidim_scope_id: Πεδίο εφαρμογής
+        description: Περιγραφή
+        end_date: Ημερομηνία λήξης
         hashtag: Hashtag
-        hero_image: Home image
-        location: Location
-        main_logo: Main logo
-        objectives: Objectives
-        participatory_processes_ids: Related participatory processes
-        promoted: Highlighted
-        published_at: Published at
-        registration_terms: Registration terms
-        registrations_enabled: Registrations enabled
-        scope_id: Scope
-        scopes_enabled: Scopes enabled
-        short_description: Short description
-        show_statistics: Show statistics
-        sign_date: Sign date
-        signature: Signature
-        signature_name: signature name
-        slogan: Slogan
-        slug: URL slug
-        start_date: Start date
-        title: Title
+        hero_image: Αρχική εικόνα
+        location: Τοποθεσία
+        main_logo: Κύριο λογότυπο
+        objectives: Στόχοι
+        participatory_processes_ids: Σχετικές συμμετοχικές διαδικασίες
+        promoted: Επισημαίνεται
+        published_at: Δημοσιεύθηκε στο
+        registration_terms: Όροι εγγραφής
+        registrations_enabled: Οι εγγραφές ενεργοποιήθηκαν
+        scope_id: Πεδίο εφαρμογής
+        scopes_enabled: Τα πεδία είναι ενεργοποιημένα
+        short_description: Σύντομη περιγραφή
+        show_statistics: Εμφάνιση στατιστικών
+        sign_date: Ημερομηνία υπογραφής
+        signature: Υπογραφή
+        signature_name: όνομα υπογραφής
+        slogan: Σύνθημα
+        slug: URL γυμνοσάλιαγκος
+        start_date: Ημερομηνία έναρξης
+        title: Τίτλος
       conference_media_link:
-        date: Date
-        link: Link
-        title: Title
-        weight: Weight
+        date: Ημερομηνία
+        link: Σύνδεσμος
+        title: Τίτλος
+        weight: Βάρος
       conference_partner:
-        link: Link
-        logo: Logo
-        name: Name
-        partner_type: Partner type
-        weight: Weight
+        link: Σύνδεσμος
+        logo: Λογότυπο
+        name: Ονομα
+        partner_type: Τύπος συνεργάτη
+        weight: Βάρος
       conference_registration_invite:
-        email: Email
-        name: Name
-        registration_type_id: Registration type
-        user_id: User
+        email: ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ
+        name: Ονομα
+        registration_type_id: Τύπος εγγραφής
+        user_id: Χρήστης
       conference_registration_type:
-        description: Description
-        price: Price
-        title: Title
-        weight: Weight
+        description: Περιγραφή
+        price: Τιμή
+        title: Τίτλος
+        weight: Βάρος
       conference_speaker:
-        affiliation: Affiliation
+        affiliation: Δεσμός
         avatar: Avatar
-        conference_meeting_ids: Related meetings
-        full_name: Full name
-        personal_url: Personal URL
-        position: Position
-        short_bio: Short bio
-        twitter_handle: Twitter handle
-        user_id: User
+        conference_meeting_ids: Σχετικές συναντήσεις
+        full_name: Πλήρες όνομα
+        personal_url: Προσωπική διεύθυνση URL
+        position: Θέση
+        short_bio: Σύντομο Βιογραφικό
+        twitter_handle: Λαβή Twitter
+        user_id: Χρήστης
       conference_user_role:
-        email: Email
-        name: Name
-        role: Role
+        email: ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ
+        name: Ονομα
+        role: Ρόλος
     errors:
       models:
         conference_registration_invite:
           attributes:
             email:
-              already_invited: This email has already been invited
+              already_invited: Αυτό το email έχει ήδη προσκληθεί
   activerecord:
     models:
       decidim/conference:
-        one: Conference
-        other: Conferences
+        one: Διάσκεψη
+        other: συνέδρια
       decidim/conference_speaker:
-        one: Conference speaker
-        other: Conference speakers
+        one: Ομιλητής συνεδρίου
+        other: Ομιλητές του συνεδρίου
       decidim/conference_user_role:
-        one: Conference user role
-        other: Conference user roles
+        one: Ρόλος χρήστη του συνεδρίου
+        other: Ρόλοι χρηστών του συνεδρίου
   decidim:
     admin:
       actions:
-        confirm: Confirm
-        new_conference: New Conference
-        send_diplomas: Send certificates of attendance
+        confirm: Επιβεβαιώνω
+        new_conference: Νέο Συνέδριο
+        send_diplomas: Αποστολή βεβαιώσεων παρακολούθησης
       conference_copies:
         new:
-          copy: Copy
-          select: Select which data you would like to duplicate
-          title: Duplicate conference
+          copy: αντίγραφο
+          select: Επιλέξτε ποια δεδομένα θέλετε να αντιγράψετε
+          title: Διπλό συνέδριο
       conference_publications:
         create:
-          error: There was a problem publishing this conference.
-          success: Conference successfully published.
+          error: Παρουσιάστηκε πρόβλημα με τη δημοσίευση αυτού του συνεδρίου.
+          success: Το συνέδριο δημοσιεύτηκε με επιτυχία.
         destroy:
-          error: There was a problem unpublishing this conference.
-          success: Conference successfully unpublished.
+          error: Παρουσιάστηκε πρόβλημα κατά την κατάργηση της δημοσίευσης αυτού του συνεδρίου.
+          success: Το συνέδριο καταργήθηκε επιτυχώς.
       conference_registration:
         confirm:
-          error: There was a problem confirming this conference registration.
-          success: Conference registration successfully confirmed.
+          error: Παρουσιάστηκε πρόβλημα κατά την επιβεβαίωση της εγγραφής αυτής της διάσκεψης.
+          success: Η εγγραφή του συνεδρίου επιβεβαιώθηκε με επιτυχία.
       conference_speakers:
         create:
-          error: There was a problem adding a speaker to this conference.
-          success: Conference speaker successfully created.
+          error: Παρουσιάστηκε πρόβλημα με την προσθήκη ενός ομιλητή σε αυτό το συνέδριο.
+          success: Ο ομιλητής του συνεδρίου δημιουργήθηκε με επιτυχία.
         destroy:
-          success: Conference speaker successfully deleted.
+          success: Ο ομιλητής της διάσκεψης διαγράφηκε με επιτυχία.
         edit:
-          title: Update conference speaker.
-          update: Update
+          title: Ενημέρωση ομιλητή διάσκεψης.
+          update: Εκσυγχρονίζω
         index:
-          conference_speakers_title: Conference speakers
+          conference_speakers_title: Ομιλητές του συνεδρίου
         new:
-          create: Create
-          title: New conference speaker.
+          create: Δημιουργώ
+          title: Νέος ομιλητής συνεδρίου.
         update:
-          error: There was a problem updating this conference speaker.
-          success: Conference speaker successfully updated.
+          error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτού του ομιλητή συνδιάσκεψης.
+          success: Ο ομιλητής του συνεδρίου ενημερώθηκε με επιτυχία.
       conference_user_roles:
         create:
-          error: There was a problem adding an admin to this conference.
-          success: Conference admin successfully added.
+          error: Παρουσιάστηκε πρόβλημα με την προσθήκη διαχειριστή σε αυτό το συνέδριο.
+          success: Ο διαχειριστής του συνεδρίου προστέθηκε με επιτυχία.
         destroy:
-          success: Conference admin successfully removed.
+          success: Ο διαχειριστής του συνεδρίου καταργήθηκε με επιτυχία.
         edit:
-          title: Update conference admin.
-          update: Update
+          title: Ενημέρωση διαχειριστή συνεδρίου.
+          update: Εκσυγχρονίζω
         index:
-          conference_admins_title: conference admins
+          conference_admins_title: διαχειριστές συνεδρίου
         new:
-          create: Create
-          title: New conference admin.
+          create: Δημιουργώ
+          title: Νέος διαχειριστής συνεδρίου.
         update:
-          error: There was a problem updating this conference admin.
-          success: Conference admin successfully updated.
+          error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτού του διαχειριστή συνεδρίου.
+          success: Ο διαχειριστής του συνεδρίου ενημερώθηκε με επιτυχία.
       conferences:
         create:
-          error: There was a problem creating this conference.
-          success: Conference successfully created.
+          error: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία αυτής της διάσκεψης.
+          success: Η διάσκεψη δημιουργήθηκε με επιτυχία.
         edit:
-          update: Update
+          update: Εκσυγχρονίζω
         exports:
-          registrations: Registrations
+          registrations: Εγγραφές
         form:
-          title: General Information
+          title: Γενικές πληροφορίες
         index:
-          not_published: Not published
-          published: Published
+          not_published: Δεν δημοσιεύτηκε
+          published: Δημοσίευσε
         new:
-          create: Create
-          title: Conference
+          create: Δημιουργώ
+          title: Διάσκεψη
         update:
-          error: There was a problem updating this conference.
-          success: Conference successfully updated.
+          error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της διάσκεψης.
+          success: Η διάσκεψη ενημερώθηκε με επιτυχία.
       conferences_copies:
         create:
-          error: There was a problem duplicating this conference.
-          success: Conference successfully duplicated.
+          error: Παρουσιάστηκε πρόβλημα κατά την αντιγραφή αυτής της διάσκεψης.
+          success: Το συνέδριο αντιγράφηκε με επιτυχία.
       media_links:
         create:
-          error: There was a problem creating a new media link.
-          success: Media Link successfully created.
+          error: Παρουσιάστηκε πρόβλημα με τη δημιουργία ενός νέου συνδέσμου πολυμέσων.
+          success: Ο σύνδεσμος πολυμέσων δημιουργήθηκε με επιτυχία.
         destroy:
-          success: Media Link successfully deleted.
+          success: Ο σύνδεσμος πολυμέσων διαγράφηκε επιτυχώς.
         edit:
-          title: Update media link.
-          update: Update
+          title: Ενημέρωση συνδέσμου πολυμέσων.
+          update: Εκσυγχρονίζω
         index:
-          media_links_title: Media Links
+          media_links_title: Σύνδεσμοι πολυμέσων
         new:
-          create: Create
-          title: Media Link
+          create: Δημιουργώ
+          title: Σύνδεσμος πολυμέσων
         update:
-          error: There was a problem updating this media link.
-          success: Media Link successfully updated.
+          error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτού του συνδέσμου πολυμέσων.
+          success: Ο σύνδεσμος πολυμέσων ενημερώθηκε με επιτυχία.
       menu:
-        conferences: Conferences
+        conferences: συνέδρια
         conferences_submenu:
-          attachment_collections: Folders
-          attachment_files: Files
-          attachments: Attachments
-          categories: Categories
-          components: Components
-          conference_admins: Conference admins
-          conference_invites: Invites
-          conference_speakers: Speakers
-          diploma: Certificate of Attendance
-          info: Info
-          media_links: Media Links
-          moderations: Moderations
-          partners: Partners
-          registration_types: Registration Types
-          registrations: Registrations
-          user_registrations: User Registrations
+          attachment_collections: Φάκελοι
+          attachment_files: Αρχεία
+          attachments: Συνημμένα
+          categories: Κατηγορίες
+          components: Συστατικά
+          conference_admins: Διαχειριστές συνεδρίου
+          conference_invites: Προσκαλεί
+          conference_speakers: Ηχεία
+          diploma: Πιστοποιητικό παρακολούθησης
+          info: Πληροφορίες
+          media_links: Σύνδεσμοι πολυμέσων
+          moderations: Μετριασμούς
+          partners: Συνεργάτες
+          registration_types: Τύποι εγγραφής
+          registrations: Εγγραφές
+          user_registrations: Εγγραφές χρηστών
       models:
         conference:
           fields:
-            created_at: Created at
-            promoted: Highlighted
-            published: Published
-            title: Title
+            created_at: Δημιουργήθηκε στο
+            promoted: Επισημαίνεται
+            published: Δημοσίευσε
+            title: Τίτλος
         conference_speaker:
           fields:
-            affiliation: Affiliation
-            full_name: Full name
-            position: Position
-          name: Conference Speaker
+            affiliation: Δεσμός
+            full_name: Πλήρες όνομα
+            position: Θέση
+          name: Ομιλητής Συνεδρίου
         conference_user_role:
           fields:
-            email: Email
-            name: Name
-            role: Role
-          name: Conference Admin
+            email: ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ
+            name: Ονομα
+            role: Ρόλος
+          name: Διαχειριστής Συνεδρίου
           roles:
-            admin: Administrator
-            collaborator: Collaborator
-            moderator: Moderator
-            valuator: Valuator
+            admin: Διαχειριστής
+            collaborator: Συνεργάτης
+            moderator: Μεσολαβητής
+            valuator: Εκτιμητής
         media_link:
           fields:
-            date: Date
-            link: Link
-            title: Title
-          name: Media Link
+            date: Ημερομηνία
+            link: Σύνδεσμος
+            title: Τίτλος
+          name: Σύνδεσμος πολυμέσων
         partner:
           fields:
-            link: Link
-            logo: Logo
-            name: Name
-            partner_type: Type
-          name: Partner
+            link: Σύνδεσμος
+            logo: Λογότυπο
+            name: Ονομα
+            partner_type: Τύπος
+          name: Εταίρος
           types:
-            collaborator: Collaborator
-            main_promotor: Main promotor
+            collaborator: Συνεργάτης
+            main_promotor: Κύριος προωθητής
         registration_type:
           fields:
-            conference_meetings: Conference meetings
-            price: Price
-            registrations_count: Registrations count
-            title: Title
-            weight: Order position
-          name: Registration type
+            conference_meetings: Συνεδριάσεις συνεδρίων
+            price: Τιμή
+            registrations_count: Οι εγγραφές μετράνε
+            title: Τίτλος
+            weight: Θέση παραγγελίας
+          name: Τύπος εγγραφής
       partners:
         create:
-          error: There was a problem adding a partner for this conference.
-          success: Conference partner successfully added.
+          error: Παρουσιάστηκε πρόβλημα με την προσθήκη συνεργάτη για αυτό το συνέδριο.
+          success: Ο συνεργάτης του συνεδρίου προστέθηκε με επιτυχία.
         destroy:
-          success: Conference partner successfully removed.
+          success: Ο συνεργάτης διάσκεψης καταργήθηκε με επιτυχία.
         edit:
-          title: Update partner.
-          update: Update
+          title: Ενημέρωση συνεργάτη.
+          update: Εκσυγχρονίζω
         new:
-          create: Create
-          title: New partner
+          create: Δημιουργώ
+          title: Νέος συνεργάτης
         update:
-          error: There was a problem updating a partner for this conference.
-          success: Conference partner successfully updated.
+          error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση ενός συνεργάτη για αυτό το συνέδριο.
+          success: Ο συνεργάτης του συνεδρίου ενημερώθηκε με επιτυχία.
       registration_type_publications:
         create:
-          error: There was a problem publishing this registration type.
-          success: Registration type successfully published.
+          error: Παρουσιάστηκε πρόβλημα με τη δημοσίευση αυτού του τύπου εγγραφής.
+          success: Ο τύπος εγγραφής δημοσιεύτηκε με επιτυχία.
         destroy:
-          error: There was a problem unpublishing this registration type.
-          success: Registration type successfully unpublished.
+          error: Παρουσιάστηκε πρόβλημα κατά την κατάργηση της δημοσίευσης αυτού του τύπου εγγραφής.
+          success: Ο τύπος εγγραφής καταργήθηκε επιτυχώς.
       registration_types:
         create:
-          error: There was a problem adding a registration type for this conference.
-          success: Conference registration type successfully added.
+          error: Παρουσιάστηκε πρόβλημα με την προσθήκη ενός τύπου εγγραφής για αυτό το συνέδριο.
+          success: Ο τύπος εγγραφής συνεδρίου προστέθηκε με επιτυχία.
         destroy:
-          success: Conference registration type successfully removed.
+          success: Ο τύπος εγγραφής συνεδρίου καταργήθηκε με επιτυχία.
         edit:
-          title: Update registration type.
-          update: Update
+          title: Ενημέρωση τύπου εγγραφής.
+          update: Εκσυγχρονίζω
         new:
-          create: Create
-          title: New registration type
+          create: Δημιουργώ
+          title: Νέος τύπος εγγραφής
         update:
-          error: There was a problem updating a registration type for this conference.
-          success: Conference registration type successfully updated.
+          error: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση ενός τύπου εγγραφής για αυτό το συνέδριο.
+          success: Ο τύπος εγγραφής συνεδρίου ενημερώθηκε με επιτυχία.
       titles:
-        conferences: Conferences
+        conferences: συνέδρια
     admin_log:
       conference:
-        create: "%{user_name} created the %{resource_name} conference"
-        publish: "%{user_name} published the %{resource_name} conference"
-        send_conference_diplomas: "%{user_name} sent certificates of attendance to the %{resource_name} conference atendees"
-        unpublish: "%{user_name} unpublished the %{resource_name} conference"
-        update: "%{user_name} updated the %{resource_name} conference"
-        update_diploma: "%{user_name} updated the certificates of attendance configuration for %{resource_name} conference"
+        create: Ο %{user_name} δημιούργησε το συνέδριο %{resource_name}
+        publish: Ο Χ__0 δημοσίευσε το συνέδριο %{resource_name}
+        send_conference_diplomas: Ο %{user_name} έστειλε πιστοποιητικά παρακολούθησης στους συμμετέχοντες στο συνέδριο %{resource_name}
+        unpublish: Ο %{user_name} κατάργησε τη δημοσίευση του συνεδρίου %{resource_name}
+        update: Ο %{user_name} ενημέρωσε τη διάσκεψη %{resource_name}
+        update_diploma: Το %{user_name} ενημέρωσε τη διαμόρφωση των πιστοποιητικών παρακολούθησης για το συνέδριο %{resource_name}
       conference_speaker:
-        create: "%{user_name} created the %{resource_name} speaker in the %{space_name} conference"
-        delete: "%{user_name} removed the %{resource_name} speaker from the %{space_name} conference"
-        update: "%{user_name} updated the %{resource_name} speaker in the %{space_name} conference"
+        create: Ο %{user_name} δημιούργησε το ηχείο %{resource_name} στη διάσκεψη %{space_name}
+        delete: Ο %{user_name} αφαίρεσε το ηχείο %{resource_name} από τη διάσκεψη %{space_name}
+        update: Ο %{user_name} ενημέρωσε το ηχείο %{resource_name} στη διάσκεψη %{space_name}
       conference_user_role:
-        create: "%{user_name} invited %{resource_name} to the %{space_name} conference"
-        delete: "%{user_name} removed the admin %{resource_name} from the %{space_name} conference"
-        update: "%{user_name} changed the role of %{resource_name} in the %{space_name} conference"
+        create: Ο %{user_name} προσκάλεσε τον %{resource_name} στο συνέδριο %{space_name}
+        delete: Ο %{user_name} αφαίρεσε τον διαχειριστή %{resource_name} από τη διάσκεψη %{space_name}
+        update: Ο %{user_name} άλλαξε το ρόλο του %{resource_name} στο συνέδριο %{space_name}
       conferences:
         conference_registration:
-          confirm: "%{user_name} confirmed a conference registration in %{resource_name} conference"
+          confirm: Ο %{user_name} επιβεβαίωσε μια εγγραφή συνεδρίου στο συνέδριο %{resource_name}
         partner:
-          create: "%{user_name} created the partner %{resource_name} in the %{space_name} conference"
-          delete: "%{user_name} removed the partner %{resource_name} from the %{space_name} conference"
-          update: "%{user_name} updated the partner %{resource_name} in the %{space_name} conference"
+          create: Ο %{user_name} δημιούργησε τον συνεργάτη %{resource_name} στη διάσκεψη %{space_name}
+          delete: Ο %{user_name} αφαίρεσε τον συνεργάτη %{resource_name} από τη διάσκεψη %{space_name}
+          update: Ο %{user_name} ενημέρωσε τον συνεργάτη %{resource_name} στη διάσκεψη %{space_name}
         registration_type:
-          create: "%{user_name} created the %{resource_name} registration type in the %{space_name} conference"
-          publish: "%{user_name} published the %{resource_name} registration type in the %{space_name} conference"
-          unpublish: "%{user_name} unpublished the %{resource_name} registration type in the %{space_name} conference"
-          update: "%{user_name} updated the %{resource_name} registration type in the %{space_name} conference"
+          create: Ο %{user_name} δημιούργησε τον τύπο εγγραφής %{resource_name} στη διάσκεψη %{space_name}
+          publish: Ο %{user_name} δημοσίευσε τον τύπο εγγραφής %{resource_name} στο συνέδριο %{space_name}
+          unpublish: Ο %{user_name} κατάργησε τη δημοσίευση του τύπου εγγραφής %{resource_name} στο συνέδριο %{space_name}
+          update: Ο %{user_name} ενημέρωσε τον τύπο εγγραφής %{resource_name} στη διάσκεψη %{space_name}
       media_link:
-        create: "%{user_name} created the %{resource_name} media link in the %{space_name} conference"
-        delete: "%{user_name} removed the %{resource_name} media link from the %{space_name} conference"
-        update: "%{user_name} updated the %{resource_name} media link in the %{space_name} conference"
+        create: Ο %{user_name} δημιούργησε τον σύνδεσμο πολυμέσων %{resource_name} στη διάσκεψη %{space_name}
+        delete: Ο %{user_name} αφαίρεσε τον σύνδεσμο πολυμέσων %{resource_name} από τη διάσκεψη %{space_name}
+        update: Ο %{user_name} ενημέρωσε τον σύνδεσμο πολυμέσων %{resource_name} στη διάσκεψη %{space_name}
     conference_program:
       index:
-        title: Program
+        title: Πρόγραμμα
     conference_speakers:
       index:
-        title: Speakers
+        title: Ηχεία
     conferences:
       admin:
         conference_copies:
           form:
-            slug_help: 'URL slugs are used to generate the URLs that point to this conference. Only accepts letters, numbers and dashes, and must start with a letter. Example: %{url}'
+            slug_help: 'Τα URL slugs χρησιμοποιούνται για τη δημιουργία των διευθύνσεων URL που οδηγούν σε αυτήν τη διάσκεψη. Δέχεται μόνο γράμματα, αριθμούς και παύλες και πρέπει να ξεκινά με γράμμα. Παράδειγμα: %{url}'
         conference_invites:
           create:
-            error: There was a problem inviting the participant to join the conference.
-            success: Participant successfully invited to join the conference.
+            error: Παρουσιάστηκε πρόβλημα με την πρόσκληση του συμμετέχοντα να συμμετάσχει στη διάσκεψη.
+            success: Ο συμμετέχων προσκλήθηκε επιτυχώς να συμμετάσχει στο συνέδριο.
           form:
-            attendee_type: Attendee type
-            existing_user: Existing participant
-            invite_explanation: The participant will be invited to join the conference and to the organization as well.
-            non_user: Non existing participant
-            select_user: Select participant
+            attendee_type: Τύπος παρευρισκομένου
+            existing_user: Υπάρχων συμμετέχων
+            invite_explanation: Ο συμμετέχων θα προσκληθεί να συμμετάσχει στο συνέδριο και στον οργανισμό επίσης.
+            non_user: Μη υπάρχων συμμετέχων
+            select_user: Επιλέξτε συμμετέχοντα
           index:
             filter:
-              accepted: Accepted
-              all: All
-              rejected: Rejected
-              sent: Sent
-            filter_by: Filter by
-            invite_attendee: Invite participant
-            invites: Invites
-            search: Search
+              accepted: Αποδεκτό
+              all: Ολα
+              rejected: Απορρίφθηκε
+              sent: Απεσταλμένα
+            filter_by: Φιλτράρισμα κατά
+            invite_attendee: Προσκαλέστε τον συμμετέχοντα
+            invites: Προσκαλεί
+            search: Αναζήτηση
           new:
-            explanation: The participant will be invited to join a conference. If their email is not registered, they'll be invited to the organization as well.
-            invite: Invite
-            new_invite: Invite participant
+            explanation: Ο συμμετέχων θα προσκληθεί να συμμετάσχει σε ένα συνέδριο. Εάν το email τους δεν είναι καταχωρημένο, θα προσκληθούν επίσης στον οργανισμό.
+            invite: Καλώ
+            new_invite: Προσκαλέστε τον συμμετέχοντα
         conference_registrations:
           index:
-            registrations: Registrations
+            registrations: Εγγραφές
         conference_speakers:
           form:
-            existing_user: Existing participant
-            non_user: Non participant
-            select_user: Select participant
-            user_type: Participant type
+            existing_user: Υπάρχων συμμετέχων
+            non_user: Μη συμμετέχων
+            select_user: Επιλέξτε συμμετέχοντα
+            user_type: Τύπος συμμετέχοντα
           index:
-            search: Search
+            search: Αναζήτηση
         conferences:
           form:
-            available_slots_help: Leave it to 0 if you have unlimited slots available.
+            available_slots_help: Αφήστε το στο 0 αν έχετε απεριόριστους διαθέσιμους κουλοχέρηδες.
             registrations_count:
-              one: There has been 1 registration.
-              other: There has been %{count} registrations.
-            slug_help: 'URL slugs are used to generate the URLs that point to this conference. Only accepts letters, numbers and dashes, and must start with a letter. Example: %{url}'
+              one: Έγινε 1 εγγραφή.
+              other: Έχουν γίνει %{count} εγγραφές.
+            slug_help: 'Τα URL slugs χρησιμοποιούνται για τη δημιουργία των διευθύνσεων URL που οδηγούν σε αυτήν τη διάσκεψη. Δέχεται μόνο γράμματα, αριθμούς και παύλες και πρέπει να ξεκινά με γράμμα. Παράδειγμα: %{url}'
         diplomas:
           edit:
-            save: Save
-            title: Certificate of Attendance
+            save: Σώσει
+            title: Πιστοποιητικό παρακολούθησης
         invite_join_conference_mailer:
           invite:
-            decline: Decline invitation '%{conference_title}'
-            invited_existing_user_to_join_a_conference: "%{invited_by} has invited you to join a conference at %{application}. You can decline or accept it through the links below."
-            invited_user_to_join_a_conference: "%{invited_by} has invited you to join a conference at %{application}. You can accept it through the link below."
-            registration: Registration for '%{conference_title}'
+            decline: Απόρριψη πρόσκλησης "%{conference_title}"
+            invited_existing_user_to_join_a_conference: Ο %{invited_by} σας προσκάλεσε να συμμετάσχετε σε ένα συνέδριο στο %{application}. Μπορείτε να το απορρίψετε ή να το αποδεχτείτε μέσω των παρακάτω συνδέσμων.
+            invited_user_to_join_a_conference: Ο %{invited_by} σας προσκάλεσε να συμμετάσχετε σε ένα συνέδριο στο %{application}. Μπορείτε να το αποδεχτείτε μέσω του παρακάτω συνδέσμου.
+            registration: Εγγραφή για '%{conference_title}'
         partners:
           index:
-            title: Partners
+            title: Συνεργάτες
         registration_types:
           form:
-            select_conference_meetings: Select conference meetings
+            select_conference_meetings: Επιλέξτε συναντήσεις συνεδρίων
           index:
-            title: Registration types
+            title: Τύποι εγγραφής
         send_conference_diploma_mailer:
           diploma:
-            diploma_html: You will be find the certificate of attendance for the conference <a href="%{url}">%{title}</a> in the attachments.
+            diploma_html: Το πιστοποιητικό παρακολούθησης του συνεδρίου <a href="%{url}">%{title}</a> θα το βρείτε στα συνημμένα.
           diploma_user:
-            attendance_verified_by: Attendance verified by
-            certificate_of_attendance: Certificate of Attendance
-            certificate_of_attendance_description: This is to certify that <strong>%{user}</strong> has attended and taken part in the <strong>%{title}</strong> held at the <strong>%{location}</strong> on <strong>%{start} - %{end}</strong>
+            attendance_verified_by: Η συμμετοχή επαληθεύτηκε από
+            certificate_of_attendance: Πιστοποιητικό παρακολούθησης
+            certificate_of_attendance_description: Αυτό γίνεται για να πιστοποιηθεί ότι ο <strong>%{user}</strong> παρακολούθησε και έλαβε μέρος στο <strong>%{title}</strong> που πραγματοποιήθηκε στο <strong>%{location}</strong> στις <strong>%{start} - %{end}</strong>
         send_diploma:
-          error: There was a problem sending the conference certificates of attendance.
-          success: Conference certificates of attendance successfully sent
+          error: Παρουσιάστηκε πρόβλημα με την αποστολή των πιστοποιητικών παρακολούθησης του συνεδρίου.
+          success: Τα πιστοποιητικά παρακολούθησης του συνεδρίου εστάλησαν με επιτυχία
       conference:
         registration_confirm:
-          cancel: Cancel
-          confirm: Confirm
+          cancel: Ματαίωση
+          confirm: Επιβεβαιώνω
         show:
-          free: Free
-          going: Attending
-          no_slots_available: No slots available
-          registration: Registration
+          free: Ελεύθερος
+          going: Παρακολούθηση
+          no_slots_available: Δεν υπάρχουν διαθέσιμοι κουλοχέρηδες
+          registration: Εγγραφή
       conference_program:
         program_meeting:
-          content: Content
-          location: Location
-          speakers: Speakers
-          streaming: Streaming
+          content: Περιεχόμενο
+          location: Τοποθεσία
+          speakers: Ηχεία
+          streaming: Ροή
         show:
-          day: Day
-          program: Program
+          day: Ημέρα
+          program: Πρόγραμμα
       conference_registration_mailer:
         confirmation:
-          confirmed_html: Your registration for the conference <a href="%{url}">%{title}</a> has been confirmed.
-          details_1: 'You are registered to the conference with %{registration_type} type. It has a cost of %{price} and you can attend to the following events:'
-          details_2: You will find the conference's details in the attachment.
+          confirmed_html: Η εγγραφή σας για το συνέδριο <a href="%{url}">%{title}</a> έχει επιβεβαιωθεί.
+          details_1: 'Είστε εγγεγραμμένοι στο συνέδριο με τον τύπο %{registration_type}. Έχει κόστος %{price} και μπορείτε να παρακολουθήσετε τις ακόλουθες εκδηλώσεις:'
+          details_2: Θα βρείτε λεπτομέρειες για το συνέδριο στο συνημμένο.
         pending_validation:
-          confirmation_pending: You will receive the confirmation shortly
-          details: 'You have registered to %{registration_type} type with a cost of %{price} and you can attend to the following events:'
-          pending_html: Your registration for the conference <a href="%{url}">%{title}</a> is pending confirmation.
+          confirmation_pending: Θα λάβετε την επιβεβαίωση σύντομα
+          details: 'Έχετε εγγραφεί στον τύπο %{registration_type} με κόστος %{price} και μπορείτε να παρακολουθήσετε τις ακόλουθες εκδηλώσεις:'
+          pending_html: Η εγγραφή σας για το συνέδριο <a href="%{url}">%{title}</a> εκκρεμεί επιβεβαίωση.
       conference_registrations:
         create:
-          invalid: There was a problem joining this conference.
-          success: You have successfully joined the conference.
-          unauthorized: You need to sign in before registering to the conference.
+          invalid: Παρουσιάστηκε πρόβλημα με τη συμμετοχή σε αυτό το συνέδριο.
+          success: Συμμετείχατε με επιτυχία στο συνέδριο.
+          unauthorized: Πρέπει να συνδεθείτε πριν εγγραφείτε στο συνέδριο.
         decline_invitation:
-          invalid: There was a problem declining the invitation.
-          success: You have successfully declined the invitation.
-          unauthorized: You need to sign in before declining the invitation.
+          invalid: Παρουσιάστηκε πρόβλημα με την απόρριψη της πρόσκλησης.
+          success: Απορρίψατε με επιτυχία την πρόσκληση.
+          unauthorized: Πρέπει να συνδεθείτε πριν απορρίψετε την πρόσκληση.
         destroy:
-          invalid: There was a problem leaving this conference.
-          success: You have successfully left the conference.
+          invalid: Παρουσιάστηκε πρόβλημα αποχώρησης από αυτό το συνέδριο.
+          success: Αποχωρήσατε επιτυχώς από το συνέδριο.
       conference_speaker:
-        go_to_twitter: Go to Twitter
-        more_info: more info
-        personal_website: Personal website
+        go_to_twitter: Μεταβείτε στο Twitter
+        more_info: περισσότερες πληροφορίες
+        personal_website: Προσωπική ιστοσελίδα
         show:
-          more_info: more info
-          speaking_at: Speaking at
+          more_info: περισσότερες πληροφορίες
+          speaking_at: Μιλώντας στο
       conference_speaker_cell:
         personal_url:
-          personal_website: Personal website
+          personal_website: Προσωπική ιστοσελίδα
         twitter_handle:
-          go_to_twitter: Go to Twitter
+          go_to_twitter: Μεταβείτε στο Twitter
       conference_speakers:
         index:
-          speakers: Speakers
+          speakers: Ηχεία
       conferences:
         partners:
-          collaborators: Partners
-          main_promotors: Organizers
+          collaborators: Συνεργάτες
+          main_promotors: Διοργανωτές
         show:
-          login_as: You are logged in as %{name} <%{email}>
-          make_conference_registration: 'Make your registration in the conference:'
-          register: Register
+          login_as: Έχετε συνδεθεί ως %{name} <%{email}>
+          make_conference_registration: 'Κάντε την εγγραφή σας στο συνέδριο:'
+          register: Κανω ΕΓΓΡΑΦΗ
       content_blocks:
         highlighted_conferences:
-          name: Highlighted conferences
+          name: Επισημασμένα συνέδρια
       index:
-        title: Conferences
+        title: συνέδρια
       mailer:
         conference_registration_mailer:
           confirmation:
-            subject: Your conference's registration has been confirmed
+            subject: Η εγγραφή του συνεδρίου σας έχει επιβεβαιωθεί
           pending_validation:
-            subject: Your conference's registration is pending confirmation
+            subject: Η εγγραφή του συνεδρίου σας εκκρεμεί για επιβεβαίωση
         invite_join_conference_mailer:
           invite:
-            subject: Invitation to join a conference
+            subject: Πρόσκληση για συμμετοχή σε συνέδριο
         send_conference_diploma_mailer:
           diploma:
-            subject: Your conference certificate of attendance has been sent
+            subject: Το πιστοποιητικό παρακολούθησης του συνεδρίου σας έχει σταλεί
       models:
         conference_invite:
           fields:
-            email: Email
-            name: Name
-            registration_type: Registration type
-            sent_at: Sent at
-            status: Status
+            email: ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ
+            name: Ονομα
+            registration_type: Τύπος εγγραφής
+            sent_at: Στάλθηκε στο
+            status: Κατάσταση
           status:
-            accepted: Accepted (%{at})
-            rejected: Rejected (%{at})
-            sent: Sent
+            accepted: Αποδεκτό (%{at})
+            rejected: Απορρίφθηκε (%{at})
+            sent: Απεσταλμένα
         conference_registration:
           fields:
-            email: Email
-            name: Name
-            registration_type: Registration type
-            state: Status
+            email: ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ
+            name: Ονομα
+            registration_type: Τύπος εγγραφής
+            state: Κατάσταση
             states:
-              confirmed: Confirmed
-              pending: Pending
+              confirmed: Επιβεβαιωμένος
+              pending: εκκρεμής
       pages:
         home:
           highlighted_conferences:
-            active_conferences: Active conferences
-            conferences_button_title: Link to the Conferences page displaying all the conferences
-            see_all_conferences: See all conferences
+            active_conferences: Ενεργά συνέδρια
+            see_all_conferences: Δείτε όλα τα συνέδρια
       photo:
         image:
           attributes:
-            alt: Media picture
+            alt: Εικόνα πολυμέσων
         show:
-          close_modal: Close modal
-          photo: Image
+          close_modal: Κλείστε το modal
+          photo: Εικόνα
       photos_list:
         show:
-          related_photos: Images
+          related_photos: εικόνες
       registration_types:
         index:
-          choose_an_option: 'Choose your registration option:'
-          login_as: You are logged in as %{name} <%{email}>
-          no_registrations: No registrations
-          register: Register
-          title: Registration types
+          choose_an_option: 'Επιλέξτε την επιλογή εγγραφής σας:'
+          login_as: Έχετε συνδεθεί ως %{name} <%{email}>
+          no_registrations: Χωρίς εγγραφές
+          register: Κανω ΕΓΓΡΑΦΗ
+          title: Τύποι εγγραφής
       shared:
         conference_user_login:
-          already_account: Do you already have an account in decidim?
-          new_user: New user?
-          sign_in: Login to register for the conference
-          sign_up: Create an account in decidim to register for the conference
+          already_account: Έχετε ήδη λογαριασμό στο decidim;
+          new_user: Νέος χρήστης?
+          sign_in: Συνδεθείτε για να εγγραφείτε στο συνέδριο
+          sign_up: Δημιουργήστε έναν λογαριασμό in decidim για να εγγραφείτε στο συνέδριο
       show:
-        details: Details
-        introduction: Introduction
-        objectives: Objectives
-        related_assemblies: Related assemblies
-        related_consultations: Related Consultations
-        related_participatory_processes: Related participatory processes
+        details: Λεπτομέριες
+        introduction: Εισαγωγή
+        objectives: Στόχοι
+        related_assemblies: Σχετικές συνελεύσεις
+        related_consultations: Σχετικές Διαβουλεύσεις
+        related_participatory_processes: Σχετικές συμμετοχικές διαδικασίες
     events:
       conferences:
         conference_registration_confirmed:
-          notification_title: Your registration for the conference <a href="%{resource_url}">%{resource_title}</a> has been confirmed.
+          notification_title: Η εγγραφή σας για τη διάσκεψη <a href="%{resource_url}">%{resource_title}</a> έχει επιβεβαιωθεί.
         conference_registration_validation_pending:
-          notification_title: Your registration for the conference <a href="%{resource_url}">%{resource_title}</a> is pending to be confirmed.
+          notification_title: Η εγγραφή σας για τη διάσκεψη <a href="%{resource_url}">%{resource_title}</a> εκκρεμεί για επιβεβαίωση.
         conference_registrations_over_percentage:
-          email_intro: The "%{resource_title}" conference occupied slots are over %{percentage}%.
-          email_outro: You have received this notification because you are an admin of the conference's participatory space.
-          email_subject: The "%{resource_title}" conference occupied slots are over %{percentage}%
-          notification_title: The <a href="%{resource_path}">%{resource_title}</a> conference occupied slots are over %{percentage}%.
+          email_intro: Οι κατειλημμένες θέσεις της διάσκεψης "%{resource_title}" είναι πάνω από %{percentage}%.
+          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή είστε διαχειριστής του συμμετοχικού χώρου του συνεδρίου.
+          email_subject: Οι κατειλημμένες θέσεις της διάσκεψης "%{resource_title}" είναι πάνω από %{percentage}%
+          notification_title: Οι κατειλημμένες θέσεις της διάσκεψης <a href="%{resource_path}">%{resource_title}</a> υπερβαίνουν το %{percentage}%.
         conference_updated:
-          email_intro: 'The "%{resource_title}" conference was updated. You can read the new version from its page:'
-          email_outro: You have received this notification because you are following the "%{resource_title}" conference. You can unfollow it from the previous link.
-          email_subject: The "%{resource_title}" conference was updated
-          notification_title: The <a href="%{resource_path}">%{resource_title}</a> conference was updated.
+          email_intro: 'Το συνέδριο "%{resource_title}" ενημερώθηκε. Μπορείτε να διαβάσετε τη νέα έκδοση από τη σελίδα του:'
+          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή παρακολουθείτε τη διάσκεψη "%{resource_title}". Μπορείτε να το καταργήσετε από τον προηγούμενο σύνδεσμο.
+          email_subject: Το συνέδριο "%{resource_title}" ενημερώθηκε
+          notification_title: Η διάσκεψη <a href="%{resource_path}">%{resource_title}</a> ενημερώθηκε.
         registrations_enabled:
-          email_intro: 'The "%{resource_title}" conference has enabled registrations. You can register yourself on its page:'
-          email_outro: You have received this notification because you are following the "%{resource_title}" conference. You can unfollow it from the previous link.
-          email_subject: The "%{resource_title}" conference has enabled registrations.
-          notification_title: The <a href="%{resource_path}">%{resource_title}</a> conference has enabled registrations.
+          email_intro: 'Το συνέδριο "%{resource_title}" έχει ενεργοποιήσει τις εγγραφές. Μπορείτε να εγγραφείτε στη σελίδα του:'
+          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή παρακολουθείτε τη διάσκεψη "%{resource_title}". Μπορείτε να το καταργήσετε από τον προηγούμενο σύνδεσμο.
+          email_subject: Το συνέδριο "%{resource_title}" έχει ενεργοποιήσει τις εγγραφές.
+          notification_title: Το συνέδριο <a href="%{resource_path}">%{resource_title}</a> έχει ενεργοποιήσει τις εγγραφές.
         role_assigned:
-          email_intro: You have been assigned as %{role} for conference "%{resource_title}".
-          email_outro: You have received this notification because you are %{role} of the "%{resource_title}" conference.
-          email_subject: You have been assigned as %{role} for "%{resource_title}".
-          notification_title: You have been assigned as %{role} for conference <a href="%{resource_url}">%{resource_title}</a>.
+          email_intro: Έχετε οριστεί ως %{role} για τη διάσκεψη "%{resource_title}".
+          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή είστε %{role} της διάσκεψης "%{resource_title}".
+          email_subject: Έχετε ανατεθεί ως %{role} για το "%{resource_title}".
+          notification_title: Έχετε ανατεθεί ως %{role} για τη διάσκεψη <a href="%{resource_url}">%{resource_title}</a>.
         upcoming_conference:
-          email_intro: 'The "%{resource_title}" conference is taking place in 2 days. You can read the description from its page:'
-          email_outro: You have received this notification because you are following the "%{resource_title}" conference. You can unfollow it from the previous link.
-          email_subject: The "%{resource_title}" conference is coming!
-          notification_title: The <a href="%{resource_path}">%{resource_title}</a> conference is coming in 2 days.
+          email_intro: 'Το συνέδριο "%{resource_title}" πραγματοποιείται σε 2 ημέρες. Μπορείτε να διαβάσετε την περιγραφή από τη σελίδα του:'
+          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή παρακολουθείτε τη διάσκεψη "%{resource_title}". Μπορείτε να το καταργήσετε από τον προηγούμενο σύνδεσμο.
+          email_subject: Έρχεται το συνέδριο "%{resource_title}"!
+          notification_title: Το συνέδριο <a href="%{resource_path}">%{resource_title}</a> έρχεται σε 2 ημέρες.
     help:
       participatory_spaces:
         conferences:
-          contextual: "<p>A <strong>conference</strong> is a collection of meetings arranged in a programme, with a number of people invited as speakers, and other information fields typical of large congresses or social events (registration, list of organisations that support or sponsor the event, etc.).</p> <p>Examples: A conference can be a relevant event for an organization and its members, or take place as part of a participatory process or follow a consultation.</p>\n"
-          page: "<p>A <strong>conference</strong> is a collection of meetings arranged in a programme, with a number of people invited as speakers, and other information fields typical of large congresses or social events (registration, list of organisations that support or sponsor the event, etc.).</p> <p>Examples: A conference can be a relevant event for an organization and its members, or take place as part of a participatory process or follow a consultation.</p>\n"
-          title: What are conferences?
+          contextual: "<p>Ένα <strong>συνέδριο</strong> είναι μια συλλογή συναντήσεων που διοργανώνονται σε ένα πρόγραμμα, με έναν αριθμό ατόμων προσκεκλημένων ως ομιλητών, και άλλα πεδία πληροφοριών τυπικά μεγάλων συνεδρίων ή κοινωνικών εκδηλώσεων (εγγραφή, λίστα οργανισμών που υποστηρίζουν ή χορηγός της εκδήλωσης, κ.λπ.).</p> <p>Παραδείγματα: Ένα συνέδριο μπορεί να είναι μια σχετική εκδήλωση για έναν οργανισμό και τα μέλη του ή να λάβει χώρα ως μέρος μιας συμμετοχικής διαδικασίας ή να ακολουθήσει μια διαβούλευση.</p>\n"
+          page: "<p>Ένα <strong>συνέδριο</strong> είναι μια συλλογή συναντήσεων που διοργανώνονται σε ένα πρόγραμμα, με έναν αριθμό ατόμων προσκεκλημένων ως ομιλητών, και άλλα πεδία πληροφοριών τυπικά μεγάλων συνεδρίων ή κοινωνικών εκδηλώσεων (εγγραφή, λίστα οργανισμών που υποστηρίζουν ή χορηγός της εκδήλωσης, κ.λπ.).</p> <p>Παραδείγματα: Ένα συνέδριο μπορεί να είναι μια σχετική εκδήλωση για έναν οργανισμό και τα μέλη του ή να λάβει χώρα ως μέρος μιας συμμετοχικής διαδικασίας ή να ακολουθήσει μια διαβούλευση.</p>\n"
+          title: Τι είναι τα συνέδρια;
     log:
       value_types:
         conference_presenter:
-          not_found: 'The conference was not found on the database (ID: %{id})'
+          not_found: 'Η διάσκεψη δεν βρέθηκε στη βάση δεδομένων (ID: %{id})'
     media:
       index:
-        description: Links about this conference
-        title: Media and Links
+        description: Σύνδεσμοι για αυτό το συνέδριο
+        title: Μέσα και Σύνδεσμοι
     menu:
-      conferences: Conferences
+      conferences: συνέδρια
     statistics:
-      conferences_count: Conferences
+      conferences_count: συνέδρια
   devise:
     mailer:
       join_conference:
-        subject: Invitation to join a conference
+        subject: Πρόσκληση για συμμετοχή σε συνέδριο
   layouts:
     decidim:
       conference_hero:
-        register: Register
+        register: Κανω ΕΓΓΡΑΦΗ
       conference_widgets:
         show:
-          take_part: Take part
+          take_part: Συμμετέχω
       conferences:
         conference:
-          more_info: More info
-          take_part: Take part
+          more_info: Περισσότερες πληροφορίες
+          take_part: Συμμετέχω
         index:
-          promoted_conferences: Highlighted conferences
+          promoted_conferences: Επισημασμένα συνέδρια
         order_by_conferences:
           conferences:
-            one: "%{count} conference"
-            other: "%{count} conferences"
+            one: "%{count} συνέδριο"
+            other: "%{count} συνέδρια"
         promoted_conference:
-          more_info: More info
-          take_part: Take part
+          more_info: Περισσότερες πληροφορίες
+          take_part: Συμμετέχω
       conferences_nav:
-        conference_menu_item: Information
-        conference_partners_menu_item: Partners
-        conference_speaker_menu_item: Speakers
-        media: Media
-        venues: Venues
+        conference_menu_item: Πληροφορίες
+        conference_partners_menu_item: Συνεργάτες
+        conference_speaker_menu_item: Ηχεία
+        media: Μεσο ΜΑΖΙΚΗΣ ΕΝΗΜΕΡΩΣΗΣ
+        venues: Χώροι διεξαγωγής

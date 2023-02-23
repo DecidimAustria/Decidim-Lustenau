@@ -111,7 +111,7 @@ hr:
         debate:
           participate: Sudjelovati
         edit:
-          back: nazad
+          back: Povratak
           save: Spremi promjene
           title: Uredi raspravu
         filters:
@@ -141,7 +141,7 @@ hr:
         index:
           new_debate: Nova rasprava
         new:
-          back: nazad
+          back: Povratak
           create: Stvoriti
           title: Nova rasprava
         orders:

@@ -4,6 +4,7 @@ el:
     models:
       decidim/comments/comment_by_followed_user_event: Σχόλιο
       decidim/comments/comment_created_event: Σχόλιο
+      decidim/comments/comment_upvoted_event: Το σχόλιο υπερψηφίστηκε
       decidim/comments/reply_created_event: Απάντηση σε σχόλιο
       decidim/comments/user_group_mentioned_event: Αναφορά
       decidim/comments/user_mentioned_event: Αναφορά
@@ -17,7 +18,17 @@ el:
         other: Ψήφοι
   decidim:
     comments:
+      admin:
+        shared:
+          availability_fields:
+            enabled: Τα σχόλια ενεργοποιήθηκαν
+            end_time: Τα σχόλια ενεργοποιήθηκαν μέχρι
+            start_time: Τα σχόλια ενεργοποιήθηκαν από
+      comments:
+        create:
+          error: Παρουσιάστηκε πρόβλημα με τη δημιουργία του σχολίου.
       comments_count: Αριθμός σχολίων
+      comments_title: Σχόλια
       last_activity:
         new_comment_at_html: "<span>Νέο σχόλιο σε %{link}</span>"
       view: Προβολή
@@ -36,7 +47,13 @@ el:
           user_group_id:
             label: 'Προσθήκη σχολίου ως:'
         opinion:
+          label: Η γνώμη σας για αυτό το θέμα
+          negative: Αρνητικός
+          negative_selected: Η γνώμη σας για αυτό το θέμα είναι αρνητική
           neutral: Ουδέτερο
+          neutral_selected: Η γνώμη σας για αυτό το θέμα είναι ουδέτερη
+          positive: Θετικός
+          positive_selected: Η γνώμη σας για αυτό το θέμα είναι θετική
         remaining_characters: Απομένουν %{count} χαρακτήρες
         remaining_characters_1: Απομένουν %{count} χαρακτήρες
         title: Ανάρτηση
@@ -46,6 +63,7 @@ el:
           in_favor: Υπέρ
         deleted_user: Διαγραμμένος συμμετέχων
         hide_replies: Απόκρυψη απαντήσεων
+        moderated_at: Το σχόλιο εποπτεύτηκε στο %{date}
         reply: Απάντηση
         report:
           action: Αναφορά
@@ -70,6 +88,7 @@ el:
       comment_thread:
         title: Συνομιλία
       comments:
+        blocked_comments_for_unauthorized_user_warning: Πρέπει να επαληθευτείτε για να σχολιάσετε αυτήν τη στιγμή, αλλά μπορείτε να διαβάσετε τα προηγούμενα.
         blocked_comments_for_user_warning: Αυτήν τη στιγμή δεν μπορείτε να σχολιάσετε, αλλά μπορείτε να διαβάσετε τα προηγούμενα σχόλια.
         blocked_comments_warning: Αυτήν τη στιγμή τα σχόλια είναι απενεργοποιημένα, αλλά μπορείτε να διαβάσετε τα προηγούμενα σχόλια.
         comment_details_title: Λεπτομέρειες σχολίου
@@ -98,6 +117,16 @@ el:
           email_outro: Λάβατε αυτήν την ειδοποίηση, επειδή ακολουθείτε τον πόρο "%{resource_title}" ή τον συντάκτη του. Μπορείτε να σταματήσετε να τον ακολουθείτε από τον προηγούμενο σύνδεσμο.
           email_subject: Υπάρχει ένα νέο σχόλιο από τον συντάκτη %{author_name} στο στοιχείο %{resource_title}
           notification_title: Υπάρχει ένα νέο σχόλιο από τον συντάκτη <a href="%{author_path}">%{author_name} %{author_nickname}</a> στο στοιχείο <a href="%{resource_path}">%{resource_title}</a>.
+        comment_downvoted:
+          email_intro: Το σχόλιό σας στο "%{resource_title}" καταψηφίστηκε. Τώρα έχει συνολικά %{upvotes} υπέρ και %{downvotes} ψήφους κατά.
+          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή είστε ο συντάκτης αυτού του σχολίου.
+          email_subject: Το σχόλιό σας στο "%{resource_title}" καταψηφίστηκε.
+          notification_title: Το <a href="%{resource_path}">σχόλιο</a> σας στο "%{resource_title}" καταψηφίστηκε. Τώρα έχει συνολικά %{upvotes} υπέρ και %{downvotes} αρνητικές ψήφους.
+        comment_upvoted:
+          email_intro: Το σχόλιό σας στο "%{resource_title}" έχει υπερψηφιστεί. Τώρα έχει συνολικά %{upvotes} υπέρ και %{downvotes} ψήφους κατά.
+          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή είστε ο συντάκτης αυτού του σχολίου.
+          email_subject: Το σχόλιό σας στο "%{resource_title}" έχει υπερψηφιστεί.
+          notification_title: Το <a href="%{resource_path}">σχόλιο</a> σας στο "%{resource_title}" υπερψηφίστηκε. Τώρα έχει συνολικά %{upvotes} υπέρ και %{downvotes} αρνητικές ψήφους.
         reply_created:
           email_intro: 'Ο συντάκτης %{author_name} έχει απαντήσει στο σχόλιο που υποβάλατε στο στοιχείο %{resource_title}. Μπορείτε να το διαβάσετε σε αυτήν τη σελίδα:'
           email_outro: Λάβατε αυτήν την ειδοποίηση, επειδή το σχόλιό σας απαντήθηκε.

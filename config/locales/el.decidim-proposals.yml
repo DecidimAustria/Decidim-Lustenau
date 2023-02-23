@@ -28,11 +28,15 @@ el:
         user_group_id: Δημιουργία πρότασης ως
       proposal_answer:
         answer: Απάντηση
+        cost: Κόστος
+        cost_report: Αναφορά κόστους
+        execution_period: Περίοδος εκτέλεσης
       proposals_copy:
         copy_proposals: Κατανοώ ότι με την ενέργεια αυτή θα εισαχθούν όλες οι προτάσεις από το επιλεγμένο στοιχείο στο τρέχον και ότι αυτή η ενέργεια είναι μη αναστρέψιμη.
         origin_component_id: Στοιχείο για την αντιγραφή των προτάσεων από
       proposals_import:
         import_proposals: Εισαγωγή προτάσεων
+        keep_answers: Κρατήστε κατάσταση και απαντήσεις
         keep_authors: Διατήρηση αρχικών συντακτών
       valuation_assignment:
         admin_log:
@@ -42,9 +46,14 @@ el:
         participatory_text:
           attributes:
             document:
+              allowed_file_content_types: 'Μη έγκυρος τύπος εγγράφου. Επιτρέπονται μόνο αρχεία με τις ακόλουθες επεκτάσεις: %{types}'
               invalid_document_type: 'Μη έγκυρος τύπος εγγράφου. Αποδεκτές μορφές: %{valid_mime_types}'
         proposal:
           attributes:
+            add_documents:
+              needs_to_be_reattached: Χρειάζεται επανασύνδεση
+            add_photos:
+              needs_to_be_reattached: Χρειάζεται επανασύνδεση
             attachment:
               needs_to_be_reattached: Πρέπει να επισυναφθεί εκ νέου
             body:
@@ -52,6 +61,16 @@ el:
               identical: ΚΑΙ ο τίτλος δεν μπορεί να είναι πανομοιότυπος
             title:
               identical: ΚΑΙ το σώμα δεν μπορεί να είναι πανομοιότυπο
+        proposals_merge:
+          attributes:
+            base:
+              not_official: Δεν είναι επίσημες
+              supported: Έχετε λάβει υποστήριξη ή εγκρίσεις
+        proposals_split:
+          attributes:
+            base:
+              not_official: Δεν είναι επίσημες
+              supported: Έχετε λάβει υποστήριξη ή εγκρίσεις
     models:
       decidim/proposals/accepted_proposal_event: Η πρόταση έγινε δεκτή
       decidim/proposals/admin/update_proposal_category_event: Η κατηγορία της πρότασης άλλαξε
@@ -111,9 +130,11 @@ el:
       proposals:
         actions:
           amend: Τροποποίηση
+          comment: Σχόλιο
           create: Δημιουργία
           endorse: Έγκριση
           vote: Υποστήριξη
+          vote_comment: Ψηφίστε σχόλιο
           withdraw: Απόσυρση
         name: Ιδέες
         settings:
@@ -128,6 +149,17 @@ el:
             collaborative_drafts_enabled: Τα συνεργατικά προσχέδια ενεργοποιήθηκαν
             comments_enabled: Τα σχόλια ενεργοποιήθηκαν
             comments_max_length: Μέγιστο μήκος σχολίων (για την προεπιλεγμένη τιμή πληκτρολογήστε «0»)
+            default_sort_order: Προεπιλεγμένη ταξινόμηση πρότασης
+            default_sort_order_help: Προεπιλογή σημαίνει ότι εάν είναι ενεργοποιημένες οι υποστηρίξεις, οι προτάσεις θα εμφανίζονται ταξινομημένες κατά τυχαία σειρά, και εάν οι υποστηρίξεις είναι αποκλεισμένες, τότε θα ταξινομούνται με τις πιο υποστηριζόμενες.
+            default_sort_order_options:
+              default: Προκαθορισμένο
+              most_commented: Τα περισσότερα σχόλια
+              most_endorsed: Οι περισσότεροι εγκρίθηκαν
+              most_followed: Οι περισσότεροι ακολούθησαν
+              most_voted: Οι περισσότεροι υποστηρίζονται
+              random: Τυχαίος
+              recent: Πρόσφατος
+              with_more_authors: Με περισσότερους συγγραφείς
             geocoding_enabled: Ενεργοποίηση γεωκωδικοποίησης
             minimum_votes_per_user: Ελάχιστος αριθμός υποστηρικτών ανά χρήστη
             new_proposal_body_template: Υπόδειγμα σώματος νέας πρότασης
@@ -138,6 +170,10 @@ el:
             participatory_texts_enabled_readonly: Δεν είναι δυνατή η αλληλεπίδραση με αυτήν τη ρύθμιση, εάν υφίστανται υπάρχουσες προτάσεις. Δημιουργήστε ένα νέο «Στοιχείο προτάσεων», εάν θέλετε να ενεργοποιήσετε αυτήν τη δυνατότητα, ή απορρίψτε όλες τις εισαγόμενες προτάσεις στο μενού «Συμμετοχικά κείμενα», εάν θέλετε να την απενεργοποιήσετε.
             proposal_answering_enabled: Οι απαντήσεις στην πρόταση ενεργοποιήθηκαν
             proposal_edit_before_minutes: Οι ιδέες μπορούν να υποβληθούν σε επεξεργασία από τους συντάκτες τους προτού παρέλθει αυτός ο αριθμός λεπτών
+            proposal_edit_time: Επιμέλεια πρότασης
+            proposal_edit_time_choices:
+              infinite: Επιτρέψτε την επεξεργασία προτάσεων για άπειρο χρονικό διάστημα
+              limited: Να επιτρέπεται η επεξεργασία των προτάσεων εντός συγκεκριμένου χρονικού πλαισίου
             proposal_length: Μέγιστο μήκος σώματος πρότασης
             proposal_limit: Όριο πρότασης ανά συμμετέχοντα
             proposal_wizard_step_1_help_text: Κείμενο βοήθειας για το βήμα «Δημιουργία» του Οδηγού προτάσεων
@@ -145,6 +181,8 @@ el:
             proposal_wizard_step_3_help_text: Επανεξέταση
             proposal_wizard_step_4_help_text: Κείμενο βοήθειας για το βήμα «Δημοσίευση» του Οδηγού προτάσεων
             resources_permissions_enabled: Μπορούν να οριστούν δικαιώματα ενεργειών για κάθε πρόταση
+            scope_id: Πεδίο εφαρμογής
+            scopes_enabled: Τα πεδία είναι ενεργοποιημένα
             threshold_per_proposal: Κατώτατο όριο ανά πρόταση
             vote_limit: Όριο υποστηρικτών ανά συμμετέχοντα
           step:
@@ -164,10 +202,23 @@ el:
             automatic_hashtags: Προστέθηκαν hashtag σε όλες τις προτάσεις
             comments_blocked: Τα σχόλια απενεργοποιήθηκαν
             creation_enabled: Η δημιουργία πρότασης ενεργοποιήθηκε
+            creation_enabled_readonly: Αυτή η ρύθμιση απενεργοποιείται όταν ενεργοποιείτε τη λειτουργία Συμμετοχικών κειμένων. Για να ανεβάσετε προτάσεις ως συμμετοχικό κείμενο κάντε κλικ στο κουμπί Συμμετοχικά Κείμενα και ακολουθήστε τις οδηγίες.
+            default_sort_order: Προεπιλεγμένη ταξινόμηση πρότασης
+            default_sort_order_help: Προεπιλογή σημαίνει ότι εάν οι υποστηρίξεις είναι ενεργοποιημένες, οι προτάσεις θα εμφανίζονται ταξινομημένες κατά τυχαία, και εάν οι υποστηρίξεις είναι αποκλεισμένες, τότε θα ταξινομηθούν με τις πιο υποστηριζόμενες.
+            default_sort_order_options:
+              default: Προκαθορισμένο
+              most_commented: Τα περισσότερα σχόλια
+              most_endorsed: Οι περισσότεροι εγκρίθηκαν
+              most_followed: Οι περισσότεροι ακολούθησαν
+              most_voted: Οι περισσότεροι υποστηρίζονται
+              random: Τυχαίος
+              recent: Πρόσφατος
+              with_more_authors: Με περισσότερους συγγραφείς
             endorsements_blocked: Οι εγκρίσεις απενεργοποιήθηκαν
             endorsements_enabled: Οι εγκρίσεις ενεργοποιήθηκαν
             proposal_answering_enabled: Οι απαντήσεις στην πρόταση ενεργοποιήθηκαν
             publish_answers_immediately: Άμεση δημοσίευση των απαντήσεων στην πρόταση
+            publish_answers_immediately_help_html: Λάβετε υπόψη ότι εάν απαντήσετε σε οποιαδήποτε πρόταση χωρίς αυτό να είναι ενεργοποιημένο, θα πρέπει να τη δημοσιεύσετε μη αυτόματα επιλέγοντάς τις και χρησιμοποιώντας την ενέργεια για δημοσίευση. Για περισσότερες πληροφορίες σχετικά με το πώς λειτουργεί αυτό, ανατρέξτε <a href="https://docs.decidim.org/en/admin/components/proposals/answers#_publication" target="_blank">στη σελίδα τεκμηρίωσης των απαντήσεων των προτάσεων</a> .
             suggested_hashtags: Προτεινόμενα hashtag στους συμμετέχοντες για νέες προτάσεις
             votes_blocked: Οι υποστηρικτές αποκλείστηκαν
             votes_enabled: Οι υποστηρικτές ενεργοποιήθηκαν
@@ -257,6 +308,7 @@ el:
           email_outro: Λάβατε αυτήν την ειδοποίηση, επειδή ακολουθείτε τον συμμετοχικό χώρο "%{participatory_space_title}". Μπορείτε να διακόψετε τη λήψη ειδοποιήσεων, ακολουθώντας τον προηγούμενο σύνδεσμο.
           email_subject: '- Μια νέα ιδέα "%{resource_title}" προστέθηκε στο θέμα %{participatory_space_title}'
           notification_title: '- Η ιδέα <a href="%{resource_path}">%{resource_title}</a> προστέθηκε στο θέμα %{participatory_space_title}'
+          notification_title_official: Η επίσημη πρόταση <a href="%{resource_path}">%{resource_title}</a> προστέθηκε στο %{participatory_space_title}
         proposal_rejected:
           affected_user:
             email_intro: 'Η ιδέα σας "%{resource_title}» απορρίφθηκε. Μπορείτε να διαβάσετε την απάντηση σε αυτήν τη σελίδα:'
@@ -347,7 +399,38 @@ el:
           preview: Προεπισκόπηση
         exports:
           comments: Σχόλια
+          proposal_comments: Σχόλια
           proposals: Προτάσεις
+        imports:
+          help:
+            answers: |
+              Το έγγραφο εισαγωγής θα πρέπει να περιέχει τα ακόλουθα ονόματα στηλών στην περίπτωση αρχείων CSV ή Excel ή ονόματα κλειδιών στην περίπτωση αρχείων JSON:
+              <ul>
+              <li><b>id:</b> Αναγνωριστικό της πρότασης προς απάντηση</li>
+              <li><b>state:</b> Ένα από τα "αποδεκτά", "αξιολόγηση" ή "απορρίφθηκαν"</li>
+              <li><b>answer/en:</b> Απάντηση στην αγγλική γλώσσα. Αυτό θα εξαρτηθεί από τη διαμόρφωση της γλώσσας της πλατφόρμας σας.</li>
+              </ul>
+            proposals: |
+              Το αρχείο πρέπει να έχει τα ακόλουθα ονόματα στηλών στην περίπτωση αρχείων CSV ή Excel ή ονόματα κλειδιών στην περίπτωση αρχείων JSON:
+              <ul>
+              <li><b>title/en:</b> Τίτλος στην αγγλική γλώσσα. Αυτό θα εξαρτηθεί από τη διαμόρφωση της γλώσσας της πλατφόρμας σας.</li>
+              <li><b>body/en:</b> Body στην αγγλική γλώσσα. Αυτό θα εξαρτηθεί από τη διαμόρφωση της γλώσσας της πλατφόρμας σας.</li>
+              <li><b>scope/id:</b> ID για το Scope</li>
+              <li><b>κατηγορία/αναγνωριστικό:</b> Αναγνωριστικό για την κατηγορία</li>
+              </ul>
+          label:
+            answers: Εισαγωγή απαντήσεων από αρχείο
+            proposals: Εισαγωγή προτάσεων από αρχείο
+          resources:
+            answers:
+              one: απάντηση πρότασης
+              other: απαντήσεις της πρότασης
+            proposals:
+              one: πρόταση
+              other: προτάσεις
+          title:
+            answers: Απαντήσεις πρότασης εισαγωγής
+            proposals: Εισαγωγικές προτάσεις
         models:
           proposal:
             name: Πρόταση
@@ -368,6 +451,9 @@ el:
             save_draft: Αποθήκευση προσχεδίου
             title: Προεπισκόπηση συμμετοχικού κειμένου
           new_import:
+            accepted_mime_types:
+              md: Χαμήλωση τιμής
+              odt: ODT
             bottom_hint: "(Θα μπορείτε να κάνετε προεπισκόπηση και ταξινόμηση των ενοτήτων του εγγράφου)"
             document_legend: 'Προσθέστε ένα έγγραφο μικρότερο από 2 MB, κάθε ενότητα σε βάθος έως 3 επιπέδων θα αναλυθεί σε προτάσεις. Οι υποστηριζόμενες μορφές είναι: %{valid_mime_types}'
             title: Προσθήκη εγγράφου
@@ -386,6 +472,7 @@ el:
             accepted: Έγινε δεκτό
             answer_proposal: Απάντηση
             evaluating: Υπό αξιολόγηση
+            not_answered: Δεν απαντήθηκε
             rejected: Έχει απορριφθεί
             title: Απάντηση για την πρόταση %{title}
         proposal_notes:
@@ -410,6 +497,7 @@ el:
           form:
             attachment_legend: "(Προαιρετικό) Προσθήκη συνημμένου"
             created_in_meeting: Η πρόταση αυτή προέρχεται από συνεδρίαση
+            delete_attachment: Διαγραφή συνημμένου
             select_a_category: Επιλέξτε κατηγορία
             select_a_meeting: Επιλέξτε συνεδρίαση
           index:
@@ -484,6 +572,7 @@ el:
             no_components: Δεν υπάρχουν στοιχεία προτάσεων σε αυτόν τον συμμετοχικό χώρο από τον οποίο μπορούν να εισαχθούν οι προτάσεις.
             select_component: Επιλέξτε στοιχείο
             select_states: Ελέγξτε την κατάσταση των προτάσεων προς εισαγωγή
+            title: Εισαγωγικές προτάσεις
         proposals_merges:
           create:
             invalid: Παρουσιάστηκε πρόβλημα κατά τη συγχώνευση των επιλεγμένων προτάσεων.
@@ -593,6 +682,8 @@ el:
           filter_by: Φιλτράρισμα κατά
           unfold: Ανάπτυξη
         new:
+          add_file: Προσθήκη αρχείου
+          edit_file: Επεξεργασία αρχείου
           send: Συνέχεια
           title: Δημιουργήστε το συνεργατικό προσχέδιό σας
         new_collaborative_draft_button:
@@ -648,6 +739,8 @@ el:
           back_from_step_3: Επιστροφή στη σύγκριση συνεργατικών προσχεδίων
           back_from_step_4: Επιστροφή στην επεξεργασία προσχεδίου
           info: Δημιουργείτε ένα <strong>συνεργατικό προσχέδιο</strong>.
+        wizard_header:
+          title: Δημιουργήστε το συλλογικό σας προσχέδιο
         wizard_steps:
           current_step: Τρέχον βήμα
           see_steps: εμφάνιση βημάτων
@@ -664,6 +757,7 @@ el:
         success: Το προσχέδιο ιδέας διαγράφηκε με επιτυχία.
       last_activity:
         new_proposal_at_html: "<span>Νέα ιδέα σε %{link}</span>"
+        proposal_updated_at_html: "<span>Η πρόταση ενημερώθηκε στις %{link}</span>"
       models:
         collaborative_draft:
           fields:
@@ -708,9 +802,16 @@ el:
           proposals_count:
             one: "%{count} Ιδέα"
             other: "%{count} Ιδέες"
+        dynamic_map_instructions:
+          description: Οι συντεταγμένες θα ενημερωθούν όταν κάνετε κλικ στο κουμπί «προεπισκόπηση». Ωστόσο, η διεύθυνση δεν αλλάζει.
+          instructions: Μπορείτε να μετακινήσετε το σημείο στο χάρτη.
         edit:
+          add_documents: Προσθήκη εγγράφων
+          add_image: Προσθέστε εικόνα
           attachment_legend: "(Προαιρετικό) Προσθήκη εικόνας"
           back: Πίσω
+          edit_documents: Επεξεργασία εγγράφων
+          edit_image: Επεξεργασία εικόνας
           select_a_category: Επιλέξτε κατηγορία
           send: Προεπισκόπηση
           title: Επεξεργασία πρότασης
@@ -766,6 +867,8 @@ el:
             document_index: Ευρετήριο εγγράφων
           view_index:
             see_index: Βλ. ευρετήριο
+        placeholder:
+          address: 37 Homewood Drive Brownsburg, IN 46112
         preview:
           modify: Τροποποίηση της ιδέας
           proposal_edit_before_minutes:
@@ -889,3 +992,5 @@ el:
       included_proposals:
         proposal_project: 'Πρόταση που εμφανίζεται σε αυτά τα έργα:'
         proposal_result: 'Πρόταση που εμφανίζεται σε αυτά τα αποτελέσματα:'
+    statistics:
+      proposals_accepted: Αποδεκτές προτάσεις

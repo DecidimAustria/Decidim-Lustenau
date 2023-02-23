@@ -2,6 +2,8 @@
 el:
   activemodel:
     attributes:
+      assemblies_setting:
+        enable_organization_chart: Ενεργοποίηση οργανογράμματος
       assembly:
         area_id: Περιοχή
         assembly_type: Τύπος συνέλευσης
@@ -51,6 +53,7 @@ el:
         target: Ποιος συμμετέχει
         title: Τίτλος
         twitter: Twitter
+        weight: Θέση παραγγελίας
         youtube: YouTube
       assembly_member:
         birthday: Ημερομηνία γέννησης
@@ -60,7 +63,9 @@ el:
         designation_mode: Τρόπος ορισμού
         full_name: Ονοματεπώνυμο
         gender: Φύλο
+        non_user_avatar: Avatar
         position: Θέση
+        user_id: Χρήστης ή ομάδα
       assembly_user_role:
         email: Email
         name: Όνομα
@@ -70,6 +75,7 @@ el:
         assembly:
           attributes:
             document:
+              allowed_file_content_types: 'Μη έγκυρος τύπος εγγράφου. Επιτρέπονται μόνο αρχεία με τις ακόλουθες επεκτάσεις: %{types}'
               invalid_document_type: 'Μη έγκυρος τύπος εγγράφου. Αποδεκτές μορφές: %{valid_mime_types}'
   activerecord:
     models:
@@ -179,6 +185,9 @@ el:
         update:
           error: Παρουσιάστηκε πρόβλημα κατά την επικαιροποίηση διαχειριστή για αυτήν τη συνέλευση.
           success: Ο διαχειριστής επικαιροποιήθηκε με επιτυχία για αυτήν τη συνέλευση.
+      filters:
+        decidim_assemblies_type_id_eq:
+          label: Τύπος συναρμολόγησης
       menu:
         assemblies: Συνελεύσεις
         assemblies_settings: Ρυθμίσεις
@@ -221,6 +230,7 @@ el:
             vice_president: Αντιπρόεδρος
         assembly_user_role:
           fields:
+            email: ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ
             name: Όνομα
             role: Ρόλος
           name: Διαχειριστής συνέλευσης
@@ -235,6 +245,9 @@ el:
     admin_log:
       assembly:
         create: Ο χρήστης %{user_name} δημιούργησε τη συνέλευση %{resource_name}
+        duplicate: Ο %{user_name} αντιτύπωσε τη διάταξη %{resource_name}
+        export: Ο %{user_name} εξήγαγε το συγκρότημα %{resource_name}
+        import: Ο %{user_name} εισήγαγε τη διάταξη %{resource_name}
         publish: Ο χρήστης %{user_name} δημοσίευσε τη συνέλευση %{resource_name}
         unpublish: Ο χρήστης %{user_name} κατάργησε τη δημοσίευση για τη συνέλευση %{resource_name}
         update: Ο χρήστης %{user_name} επικαιροποίησε τη συνέλευση %{resource_name}
@@ -258,6 +271,7 @@ el:
       admin:
         assemblies:
           form:
+            announcement_help: Το κείμενο που εισάγετε εδώ θα εμφανίζεται στον χρήστη ακριβώς κάτω από τις πληροφορίες συναρμολόγησης.
             duration: Διάρκεια
             duration_help: Εάν η διάρκεια αυτής της συνέλευσης είναι περιορισμένη, επιλέξτε την ημερομηνία λήξης. Διαφορετικά, θα εμφανίζεται ως αορίστου χρόνου.
             filters: Φίλτρα
@@ -291,7 +305,10 @@ el:
         assembly_members:
           form:
             existing_user: Υφιστάμενος συμμετέχων
+            explanation: 'Οδηγίες για την εικόνα:'
+            image_guide: Κατά προτίμηση μια εικόνα πορτραίτου που δεν έχει κείμενο.
             non_user: Μη συμμετέχων
+            non_user_avatar_help: Θα πρέπει να λάβετε τη συγκατάθεση των προσώπων πριν τα δημοσιεύσετε ως μέλη.
             select_a_position: Επιλέξτε θέση
             select_user: Επιλέξτε συμμετέχοντα
             user_type: Τύπος συμμετέχοντος
@@ -305,6 +322,12 @@ el:
         content_blocks:
           highlighted_assemblies:
             max_results: Μέγιστος αριθμός στοιχείων για εμφάνιση
+        new_import:
+          accepted_types:
+            json: JSON
+      assemblies:
+        show:
+          title: Σχετικά με αυτή τη συνέλευση
       assembly_members:
         index:
           members: Μέλη
@@ -446,6 +469,8 @@ el:
             processes_button_title: Σύνδεσμος προς τη σελίδα «Διαδικασίες» όπου εμφανίζονται όλες οι διαδικασίες
       show:
         related_assemblies: Σχετικές συνελεύσεις
+    statistics:
+      assemblies_count: Συνελεύσεις
   errors:
     messages:
       cannot_be_blank: δεν μπορεί να είναι κενό
