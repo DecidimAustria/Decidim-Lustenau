@@ -1,5 +1,5 @@
 ---
-ar:
+ar-SA:
   activerecord:
     models:
       decidim/pages/page:

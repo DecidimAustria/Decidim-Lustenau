@@ -1,5 +1,5 @@
 ---
-hr:
+sr-CS:
   activerecord:
     models:
       decidim/pages/page:
