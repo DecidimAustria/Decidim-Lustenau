@@ -23,6 +23,7 @@ hr:
     models:
       decidim/budgets/project:
         one: Projekt
+        few: Projekti
         other: Projekti
   decidim:
     admin:
@@ -135,15 +136,18 @@ hr:
             create: Uvoz prijedloga u projekte
             default_budget: Zadani proračun
             import_all_accepted_proposals: Uvezi sve prihvaćene prijedloge
-            no_components: U ovom prostoru za sudjelovanje nema drugih komponenti prijedloga za uvoz prijedloga u projekte.
+            no_components: U ovom prostoru za sudjelovanje nema drugih komponenti
+              prijedloga za uvoz prijedloga u projekte.
             origin_component_id: komponenta porijekla
             select_component: Odaberite komponentu
             title: Uvoz prijedloga
         reminders:
           orders:
-            description: Korisnici će primiti e-poruku s vezama na proračune u kojima imaju narudžbe na čekanju.
+            description: Korisnici će primiti e-poruku s vezama na proračune u kojima
+              imaju narudžbe na čekanju.
             title:
               one: Upravo ćete poslati podsjetnik e-poštom korisniku %{count}
+              few: Upravo ćete poslati podsjetnik putem e-pošte %{count} korisnicima
               other: Upravo ćete poslati podsjetnik putem e-pošte %{count} korisnicima
       admin_log:
         budget:
@@ -179,8 +183,10 @@ hr:
       last_activity:
         new_vote_at_html: "<span>Novo glasovanje o proračunu u %{link}</span>"
       limit_announcement:
-        cant_vote: Ne možete glasovati o ovom proračunu. <a href="%{landing_path}">Pokušajte s drugim proračunom</a>.
-        limit_reached: Imate aktivne glasove u %{links}. Za glasanje o ovom proračunu morate <a href="%{landing_path}">izbrisati svoj glas i početi ispočetka</a>.
+        cant_vote: Ne možete glasovati o ovom proračunu. <a href="%{landing_path}">Pokušajte
+          s drugim proračunom</a>.
+        limit_reached: Imate aktivne glasove u %{links}. Za glasanje o ovom proračunu
+          morate <a href="%{landing_path}">izbrisati svoj glas i početi ispočetka</a>.
       models:
         budget:
           fields:
@@ -197,8 +203,10 @@ hr:
         order_summary:
           selected_projects: 'Projekti koje ste odabrali su:'
           subject: Glasovali ste na prostoru za sudjelovanje %{space_name}
-          voted_on_space: Glasovali ste za proračun %{budget_name} za prostor za sudjelovanje %{space_name}.
-          voted_on_space_with_scope: Glasovali ste za %{budget_name} proračun za %{space_name} prostor za sudjelovanje na %{scope_name} (%{scope_type}).
+          voted_on_space: Glasovali ste za proračun %{budget_name} za prostor za sudjelovanje
+            %{space_name}.
+          voted_on_space_with_scope: Glasovali ste za %{budget_name} proračun za %{space_name}
+            prostor za sudjelovanje na %{scope_name} (%{scope_type}).
       projects:
         budget_confirm:
           are_you_sure: Ako se predomislite, svoj glas možete promijeniti kasnije.
@@ -208,47 +216,69 @@ hr:
           title: Potvrdi glas
         budget_excess:
           budget_excess:
-            description: Ovaj projekt premašuje maksimalni proračun i ne može se dodati. Ako želite, možete izbrisati projekt koji ste već odabrali, kako biste mogli ponovno glasovati prema svojim preferencijama.
+            description: Ovaj projekt premašuje maksimalni proračun i ne može se dodati.
+              Ako želite, možete izbrisati projekt koji ste već odabrali, kako biste
+              mogli ponovno glasovati prema svojim preferencijama.
             title: Maksimalni proračun premašen
           close: Zatvoriti
-          description: Ovaj projekt premašuje maksimalni proračun i ne može se dodati. Ako želite, možete izbrisati projekt koji ste već odabrali, kako biste mogli ponovno glasovati prema svojim preferencijama.
+          description: Ovaj projekt premašuje maksimalni proračun i ne može se dodati.
+            Ako želite, možete izbrisati projekt koji ste već odabrali, kako biste
+            mogli ponovno glasovati prema svojim preferencijama.
           ok: u redu
           projects_excess:
-            description: Ovaj projekt premašuje maksimalan broj projekata i ne može se dodati. Ako želite, možete izbrisati projekt koji ste već odabrali, kako biste mogli ponovno glasovati prema svojim preferencijama.
+            description: Ovaj projekt premašuje maksimalan broj projekata i ne može
+              se dodati. Ako želite, možete izbrisati projekt koji ste već odabrali,
+              kako biste mogli ponovno glasovati prema svojim preferencijama.
             title: Premašen je maksimalan broj projekata
         budget_summary:
           are_you_sure: Jeste li sigurni da želite poništiti svoj glas?
           assigned: 'Dodijeljeno:'
           cancel_order: izbriši svoj glas i počni ispočetka
           checked_out:
-            description: Već ste glasali za proračun. Ako ste se predomislili, možete %{cancel_link}.
+            description: Već ste glasali za proračun. Ako ste se predomislili, možete
+              %{cancel_link}.
             title: Glasovanje o proračunu završeno
           minimum_projects_rule:
-            description: Za koje projekte mislite da bismo trebali izdvojiti proračun? Odaberite najmanje %{minimum_number} projekata koje želite i glasajte prema svojim preferencijama za definiranje proračuna.
-            instruction: "<li>Odaberite najmanje %{minimum_number} projekata koje želite i glasajte prema svojim preferencijama da biste definirali proračun.</li>"
+            description: Za koje projekte mislite da bismo trebali izdvojiti proračun?
+              Odaberite najmanje %{minimum_number} projekata koje želite i glasajte
+              prema svojim preferencijama za definiranje proračuna.
+            instruction: "<li>Odaberite najmanje %{minimum_number} projekata koje
+              želite i glasajte prema svojim preferencijama da biste definirali proračun.</li>"
           projects_rule:
-            description: Za koje projekte mislite da bismo trebali izdvojiti proračun? Odaberite najmanje %{minimum_number} i do %{maximum_number} projekata koje želite i glasajte prema svojim preferencijama za definiranje proračuna.
-            instruction: "<li>Odaberite najmanje %{minimum_number} i najviše %{maximum_number} projekata koje želite i glasajte u skladu sa svojim preferencijama za definiranje proračuna.</li>"
+            description: Za koje projekte mislite da bismo trebali izdvojiti proračun?
+              Odaberite najmanje %{minimum_number} i do %{maximum_number} projekata
+              koje želite i glasajte prema svojim preferencijama za definiranje proračuna.
+            instruction: "<li>Odaberite najmanje %{minimum_number} i najviše %{maximum_number}
+              projekata koje želite i glasajte u skladu sa svojim preferencijama za
+              definiranje proračuna.</li>"
           projects_rule_maximum_only:
-            description: Za koje projekte mislite da bismo trebali izdvojiti proračun? Odaberite do %{maximum_number} projekata koje želite i glasajte u skladu sa svojim preferencijama kako biste definirali proračun.
-            instruction: "<li>Odaberite do %{maximum_number} projekata koje želite i glasajte u skladu sa svojim preferencijama kako biste definirali proračun.</li>"
+            description: Za koje projekte mislite da bismo trebali izdvojiti proračun?
+              Odaberite do %{maximum_number} projekata koje želite i glasajte u skladu
+              sa svojim preferencijama kako biste definirali proračun.
+            instruction: "<li>Odaberite do %{maximum_number} projekata koje želite
+              i glasajte u skladu sa svojim preferencijama kako biste definirali proračun.</li>"
           rules:
             title: Proračunska pravila
           title: Vi odlučujete o proračunu
           total_budget: Ukupni proračun
           total_projects: Ukupno glasova
           vote_threshold_percent_rule:
-            description: Za koje projekte mislite da bismo trebali izdvojiti proračun? Dodijelite najmanje %{minimum_budget} projektima koje želite i glasajte prema svojim preferencijama kako biste definirali proračun.
-            instruction: "<li>Dodijelite najmanje %{minimum_budget} projektima koje želite i glasajte prema svojim preferencijama da biste definirali proračun.</li>"
+            description: Za koje projekte mislite da bismo trebali izdvojiti proračun?
+              Dodijelite najmanje %{minimum_budget} projektima koje želite i glasajte
+              prema svojim preferencijama kako biste definirali proračun.
+            instruction: "<li>Dodijelite najmanje %{minimum_budget} projektima koje
+              želite i glasajte prema svojim preferencijama da biste definirali proračun.</li>"
         count:
           projects_count:
             one: 1 projekt
+            few: "%{count} projekata"
             other: "%{count} projekata"
         exit_modal:
           cancel: Povratak na glasovanje
           close_modal: Zatvori modal
           exit: Izlaz iz glasanja
-          message: Vaš glas nije registriran jer još niste završili proces glasovanja. Jeste li sigurni da želite izaći iz glasanja?
+          message: Vaš glas nije registriran jer još niste završili proces glasovanja.
+            Jeste li sigurni da želite izaći iz glasanja?
           title: Još niste glasali
         filters:
           category: Kategorija
@@ -272,6 +302,7 @@ hr:
           remove: Ukloniti
           selected_projects:
             one: projekt odabran
+            few: odabranih projekata
             other: odabranih projekata
           view: Pogled
         orders:
@@ -288,6 +319,7 @@ hr:
           view: Pogled
           votes:
             one: glasanje
+            few: glasova
             other: glasova
           you_voted: Ovo ste glasali
         project_budget_button:
@@ -302,11 +334,15 @@ hr:
       vote_reminder_mailer:
         vote_reminder:
           email_budgets: 'Područja u kojima imate nedovršeno glasanje:'
-          email_intro: Započeli ste glasovanje o participativnom proračunu, ali ga niste dovršili.
+          email_intro: Započeli ste glasovanje o participativnom proračunu, ali ga
+            niste dovršili.
           email_link: Idite na nastavak glasovanja
-          email_outro: Ne zaboravite dovršiti glasovanje. Da biste glasovali, prvo morate odabrati prijedlog ili prijedloge o kojima želite glasovati, a zatim svoj glas potvrditi dugmetom "Glasaj".
+          email_outro: Ne zaboravite dovršiti glasovanje. Da biste glasovali, prvo
+            morate odabrati prijedlog ili prijedloge o kojima želite glasovati, a
+            zatim svoj glas potvrditi dugmetom "Glasaj".
           email_subject:
             one: Imate nedovršeno glasovanje u glasovanju o participativnom proračunu
+            few: Imate nedovršene glasove u glasovanju o participativnom proračunu
             other: Imate nedovršene glasove u glasovanju o participativnom proračunu
     components:
       budgets:
@@ -318,31 +354,38 @@ hr:
           global:
             announcement: Obavijest
             comments_enabled: Komentari omogućeni
-            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu vrijednost)
+            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu
+              vrijednost)
             form:
               errors:
-                budget_voting_rule_only_one: Mora biti omogućeno samo jedno pravilo glasanja
+                budget_voting_rule_only_one: Mora biti omogućeno samo jedno pravilo
+                  glasanja
                 budget_voting_rule_required: Potrebno je jedno pravilo glasanja
             geocoding_enabled: Geokodiranje omogućeno
             landing_page_content: Odredišna stranica proračuna
             more_information_modal: Više informacija modalno
             projects_per_page: Projekti po stranici
-            resources_permissions_enabled: Dopuštenja radnji mogu se postaviti za svaki projekt
+            resources_permissions_enabled: Dopuštenja radnji mogu se postaviti za
+              svaki projekt
             scope_id: Opseg
             scopes_enabled: Opsezi omogućeni
             title: Titula
             total_budget: Ukupni proračun
             vote_minimum_budget_projects_number: Minimalan broj projekata za glasanje
-            vote_rule_minimum_budget_projects_enabled: 'Omogući pravilo: minimalan broj projekata za koje se glasa'
-            vote_rule_selected_projects_enabled: 'Omogući pravilo: Minimalni i maksimalni broj projekata za koje se glasa'
-            vote_rule_threshold_percent_enabled: 'Omogući pravilo: Minimalni postotak proračuna'
+            vote_rule_minimum_budget_projects_enabled: 'Omogući pravilo: minimalan
+              broj projekata za koje se glasa'
+            vote_rule_selected_projects_enabled: 'Omogući pravilo: Minimalni i maksimalni
+              broj projekata za koje se glasa'
+            vote_rule_threshold_percent_enabled: 'Omogući pravilo: Minimalni postotak
+              proračuna'
             vote_selected_projects_maximum: Maksimalan broj projekata za odabir
             vote_selected_projects_minimum: Minimalna količina projekata za odabir
             vote_threshold_percent: Postotak glasačkog praga
             workflow: Tijek rada
             workflow_choices:
               all: 'Glasaj za sve: omogućuje sudionicima da glasaju za sve proračune.'
-              one: 'Glasaj u jednom: omogućuje sudionicima da glasaju u bilo kojem proračunu, ali samo u jednom.'
+              one: 'Glasaj u jednom: omogućuje sudionicima da glasaju u bilo kojem
+                proračunu, ali samo u jednom.'
           step:
             announcement: Obavijest
             comments_blocked: Komentari blokirani
@@ -360,10 +403,13 @@ hr:
     events:
       budgets:
         budget_published:
-          email_intro: 'Proračun %{resource_title} sada je aktivan za %{participatory_space_title}. Možete ga vidjeti na ovoj stranici:'
-          email_outro: Primili ste ovu obavijest jer pratite %{participatory_space_title}. Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+          email_intro: 'Proračun %{resource_title} sada je aktivan za %{participatory_space_title}.
+            Možete ga vidjeti na ovoj stranici:'
+          email_outro: Primili ste ovu obavijest jer pratite %{participatory_space_title}.
+            Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
           email_subject: Proračun %{resource_title} sada je aktivan za %{participatory_space_title}.
-          notification_title: Proračun <a href="%{resource_path}">%{resource_title}</a> sada je aktivan za %{participatory_space_title}.
+          notification_title: Proračun <a href="%{resource_path}">%{resource_title}</a>
+            sada je aktivan za %{participatory_space_title}.
     orders:
       checkout:
         error: Došlo je do problema s obradom vašeg glasa

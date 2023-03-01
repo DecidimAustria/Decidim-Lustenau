@@ -4,6 +4,8 @@ uk:
     models:
       decidim/pages/page:
         one: Сторінка
+        few: сторінки
+        many: сторінки
         other: сторінки
   decidim:
     admin_log:

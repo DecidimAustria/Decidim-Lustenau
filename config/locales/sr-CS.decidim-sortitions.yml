@@ -4,10 +4,16 @@ hr:
     attributes:
       sortition:
         additional_info: Informacije o razvrstavanju
-        decidim_category_id: Kategorije skupa prijedloga u kojima želite primijeniti izvlačenje
+        decidim_category_id: Kategorije skupa prijedloga u kojima želite primijeniti
+          izvlačenje
         decidim_proposals_component_id: Prijedlozi postavljeni
-        dice: Rezultat bacanja kocke. Bacite kocku sa 6 strana ili potražite neki drugi slučajni način za generiranje broja od 1 do 6 i ovdje unesite dobiveni broj pred nekoliko svjedoka. To pridonosi kvalitetu i garantuje slučajnost rezultata
-        target_items: Broj prijedloga za odabir (označava broj prijedloga za koje želite da budu odabrani izvlačenjem skupine prijedloga koje ste prethodno odabrali)
+        dice: Rezultat bacanja kocke. Bacite kocku sa 6 strana ili potražite neki
+          drugi slučajni način za generiranje broja od 1 do 6 i ovdje unesite dobiveni
+          broj pred nekoliko svjedoka. To pridonosi kvalitetu i garantuje slučajnost
+          rezultata
+        target_items: Broj prijedloga za odabir (označava broj prijedloga za koje
+          želite da budu odabrani izvlačenjem skupine prijedloga koje ste prethodno
+          odabrali)
         title: Naslov
         witnesses: svjedoci
     models:
@@ -16,6 +22,7 @@ hr:
     models:
       decidim/sortitions/sortition:
         one: Bacanje kocke
+        few: Razvrstavanja
         other: Razvrstavanja
   decidim:
     components:
@@ -26,14 +33,18 @@ hr:
         settings:
           global:
             comments_enabled: Komentari omogućeni
-            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu vrijednost)
+            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu
+              vrijednost)
     events:
       sortitions:
         sortition_created:
-          email_intro: Razvrstavanje "%{resource_title}" je dodano u "%{participatory_space_title}" koji pratite.
-          email_outro: Primili ste ovu obavijest jer pratite "%{participatory_space_title}". Možete ga prestati pratiti s prethodne poveznice.
+          email_intro: Razvrstavanje "%{resource_title}" je dodano u "%{participatory_space_title}"
+            koji pratite.
+          email_outro: Primili ste ovu obavijest jer pratite "%{participatory_space_title}".
+            Možete ga prestati pratiti s prethodne poveznice.
           email_subject: Novo razvrstavanje dodano u %{participatory_space_title}
-          notification_title: Razvrstavanje <a href="%{resource_path}">%{resource_title}</a> je dodano u %{participatory_space_title}
+          notification_title: Razvrstavanje <a href="%{resource_path}">%{resource_title}</a>
+            je dodano u %{participatory_space_title}
     sortitions:
       admin:
         actions:
@@ -55,6 +66,7 @@ hr:
               title: Naslov
             name:
               one: Bacanje kocke
+              few: Razvrstavanja
               other: Razvrstavanja
         sortitions:
           confirm_destroy:
@@ -77,7 +89,12 @@ hr:
           index:
             title: Razvrstavanja
           new:
-            confirm: Pritiskom na sljedeći gumb platforma će zabilježiti datum i vrijeme (s preciznošću sekunde) i zajedno s bacanjem kockica, te će se informacije koristiti za generiranje slučajnog odabira. Akcija će biti nepovratna, nakon što se klikne na gumb rezultat ovog izvlačenja bit će objavljen, zajedno s podacima unesenim u ovaj obrazac i ne može se mijenjati, pažljivo provjerite sadržaj
+            confirm: Pritiskom na sljedeći gumb platforma će zabilježiti datum i vrijeme
+              (s preciznošću sekunde) i zajedno s bacanjem kockica, te će se informacije
+              koristiti za generiranje slučajnog odabira. Akcija će biti nepovratna,
+              nakon što se klikne na gumb rezultat ovog izvlačenja bit će objavljen,
+              zajedno s podacima unesenim u ovaj obrazac i ne može se mijenjati, pažljivo
+              provjerite sadržaj
             create: Stvoriti
             title: Nova sorticija
           show:
@@ -94,6 +111,7 @@ hr:
         count:
           proposals_count:
             one: 1 prijedlog
+            few: "%{count} prijedloga"
             other: "%{count} prijedloga"
         filters:
           active: Aktivan
@@ -117,6 +135,7 @@ hr:
         results_count:
           count:
             one: odabrani prijedlog
+            few: odabranih prijedloga
             other: odabranih prijedloga
         show:
           algorithm: Kod algoritma razvrstavanja
@@ -124,10 +143,21 @@ hr:
           back: Povratak na popis
           cancelled: Otkazano razvrstavanje
           candidate_proposal_ids: Redoslijed prijedloga razvrstavanja i ID-ovi
-          candidate_proposals_info: Razvrstavanje je provedeno između sljedećih prijedloga (%{category_label}), sa sljedećim ID-ovima (podebljani odabrani prijedlozi)
+          candidate_proposals_info: Razvrstavanje je provedeno između sljedećih prijedloga
+            (%{category_label}), sa sljedećim ID-ovima (podebljani odabrani prijedlozi)
           category: iz kategorije %{category}
           dice_result: "(1) Rezultat kocke"
-          introduction: Ova stranica sadrži rezultate razvrstavanja %{reference}. Pomoću ovog razvrstavanja, %{target_items} broj rezultata odabran je nasumično i s jednakom distribucijom vjerojatnosti iz skupa prijedloga prikazanih u nastavku. Zajedno s rezultatima, informacije prikazane na ovoj stranici pružaju sve informacije potrebne za maksimiziranje garancija i reprodukciju rezultata. Ključ kvalitete ovog razvrstavanja je dvostruka slučajnost koju osigurava bacanje kocke (potvrđeno svjedocima) i točno vrijeme razvrstavanja koje daje ulazne podatke za algoritam koji generira slučajni odabir. Vremensko sjeme za razvrstavanje je toliko točno (sekunde) da ga je nemoguće kontrolirati od strane ljudi, čime se osigurava dvostruki "nekontrolirani" unos koji garantuje fer rezultat.
+          introduction: Ova stranica sadrži rezultate razvrstavanja %{reference}.
+            Pomoću ovog razvrstavanja, %{target_items} broj rezultata odabran je nasumično
+            i s jednakom distribucijom vjerojatnosti iz skupa prijedloga prikazanih
+            u nastavku. Zajedno s rezultatima, informacije prikazane na ovoj stranici
+            pružaju sve informacije potrebne za maksimiziranje garancija i reprodukciju
+            rezultata. Ključ kvalitete ovog razvrstavanja je dvostruka slučajnost
+            koju osigurava bacanje kocke (potvrđeno svjedocima) i točno vrijeme razvrstavanja
+            koje daje ulazne podatke za algoritam koji generira slučajni odabir. Vremensko
+            sjeme za razvrstavanje je toliko točno (sekunde) da ga je nemoguće kontrolirati
+            od strane ljudi, čime se osigurava dvostruki "nekontrolirani" unos koji
+            garantuje fer rezultat.
           mathematical_result: Rezultat (1) x (2)
           proposals_selected_by_sortition: Prijedlozi odabrani sortiranjem
           sortition_reproducibility_details: Pojedinosti o ponovljivosti razvrstavanja
@@ -137,6 +167,7 @@ hr:
           random_seed: Nasumično sjeme
           selected_proposals:
             one: odabrani prijedlog
+            few: odabranih prijedloga
             other: odabranih prijedloga
           view: Pogled
         sortition_author:
@@ -146,6 +177,7 @@ hr:
         sortitions_count:
           count:
             one: 1 razvrstavanje
+            few: "%{count} razvrstavanja"
             other: "%{count} razvrstavanja"
     statistics:
       sortitions_count: Razvrstavanja

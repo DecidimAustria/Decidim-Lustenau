@@ -45,7 +45,8 @@ hr:
         questionnaire_templates:
           choose:
             create_from_template: Izradi iz predloška
-            description: Upravo ćete izraditi novi upitnik. Možete odabrati unaprijed definirani predložak i naknadno ga mijenjati.
+            description: Upravo ćete izraditi novi upitnik. Možete odabrati unaprijed
+              definirani predložak i naknadno ga mijenjati.
             label: Odaberite predložak
             placeholder: Odaberite predložak
             skip_template: Preskočiti

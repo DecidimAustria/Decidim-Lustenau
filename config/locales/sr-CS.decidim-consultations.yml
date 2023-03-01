@@ -56,15 +56,19 @@ hr:
     models:
       decidim/consultation:
         one: Konzultacija
+        few: Konzultacije
         other: Konzultacije
       decidim/consultations/question:
         one: Pitanje
+        few: Pitanja
         other: Pitanja
       decidim/consultations/response:
         one: Odgovor
+        few: Odgovori
         other: Odgovori
       decidim/consultations/vote:
         one: Glasanje
+        few: Glasovi
         other: Glasovi
   decidim:
     admin:
@@ -89,17 +93,21 @@ hr:
           error: Došlo je do problema s objavljivanjem rezultata za ovo savjetovanje.
           success: Rezultati konzultacija uspješno objavljeni.
         destroy:
-          error: Došlo je do problema prilikom poništavanja objave rezultata za ovo savjetovanje.
+          error: Došlo je do problema prilikom poništavanja objave rezultata za ovo
+            savjetovanje.
           success: Rezultati savjetovanja uspješno su poništeni.
       consultations:
         create:
           error: Došlo je do problema pri stvaranju novog savjetovanja.
           success: Savjetovanje je uspješno kreirano.
-        deprecation_warning: Modul konzultacija bit će zastario u bliskoj budućnosti. Radimo na sljedećoj kriptografski sigurnoj verziji pod nazivom Votings.
+        deprecation_warning: Modul konzultacija bit će zastario u bliskoj budućnosti.
+          Radimo na sljedećoj kriptografski sigurnoj verziji pod nazivom Votings.
         edit:
           update: Ažuriraj
         form:
-          slug_help: 'URL slagovi se koriste za generiranje URL-ova koji upućuju na ovo savjetovanje. Prihvaća samo slova, brojke i crtice i mora započeti slovom. Primjer: %{url}'
+          slug_help: 'URL slagovi se koriste za generiranje URL-ova koji upućuju na
+            ovo savjetovanje. Prihvaća samo slova, brojke i crtice i mora započeti
+            slovom. Primjer: %{url}'
           title: Opće informacije
         index:
           not_published: Nije objavljeno
@@ -136,6 +144,7 @@ hr:
             title: Naslov
           name:
             one: Konzultacija
+            few: Konzultacije
             other: Konzultacije
         question:
           fields:
@@ -144,6 +153,7 @@ hr:
             title: Naslov
           name:
             one: Pitanje
+            few: Pitanja
             other: Pitanja
         response:
           fields:
@@ -152,11 +162,14 @@ hr:
             title: Naslov
           name:
             one: Odgovor
+            few: Odgovori
             other: Odgovori
       question_configuration:
         disable_external_voting: Onemogućite vanjsko glasovanje za napredne konfiguracije
         form:
-          help: Postavite pitanja s višestrukim izborom povećanjem maksimalnog broja odgovora koje sudionik može odabrati. Zadana najveća vrijednost je 1, što znači da se može glasovati samo za jedan odgovor.
+          help: Postavite pitanja s višestrukim izborom povećanjem maksimalnog broja
+            odgovora koje sudionik može odabrati. Zadana najveća vrijednost je 1,
+            što znači da se može glasovati samo za jedan odgovor.
           title: Napredna konfiguracija
       question_publications:
         create:
@@ -189,7 +202,8 @@ hr:
           error: Došlo je do problema pri izradi nove grupe odgovora.
           success: Grupa za odgovor uspješno je stvorena.
         destroy:
-          error: Došlo je do problema prilikom uklanjanja grupe odgovora. Provjerite da nijedan odgovor ne ovisi o tome.
+          error: Došlo je do problema prilikom uklanjanja grupe odgovora. Provjerite
+            da nijedan odgovor ne ovisi o tome.
           success: Grupa odgovora uspješno izbrisana.
         edit:
           update: Ažuriraj
@@ -248,6 +262,7 @@ hr:
       count:
         title:
           one: "%{count} konzultacija"
+          few: "%{count} konzultacije"
           other: "%{count} konzultacije"
       filters:
         active: Aktivan
@@ -275,6 +290,7 @@ hr:
             see_all_consultations: Pogledajte sve konzultacije
             voting_ends_in:
               one: Glasovanje završava <strong>sutra</strong>
+              few: Glasovanje završava za <strong>%{count} dana</strong>
               other: Glasovanje završava za <strong>%{count} dana</strong>
             voting_ends_today: Glasanje završava <strong>danas</strong>
       question:
@@ -282,18 +298,21 @@ hr:
         view_results: Pogledaj rezultate
         votes_out_of:
           one: glasati izvan
+          few: glasova od
           other: glasova od
       question_multiple_votes:
         results_rules:
           minimum_votes_per_user:
-            description: Sudionici su mogli raspodijeliti najmanje %{votes} glasova između različitih opcija.
+            description: Sudionici su mogli raspodijeliti najmanje %{votes} glasova
+              između različitih opcija.
           title: U ovom pitanju postoji mogućnost višestrukih izbora
           total_participants: U glasovanju je sudjelovalo ukupno %{count} ljudi.
           vote_limit:
             description: Sudionici su mogli glasati za najviše %{limit} opcija.
         voting_rules:
           minimum_votes_per_user:
-            description: Morate raspodijeliti najmanje %{votes} glasova između različitih opcija.
+            description: Morate raspodijeliti najmanje %{votes} glasova između različitih
+              opcija.
           title: 'Glasovi podliježu sljedećim pravilima:'
           vote_limit:
             description: Možete glasati za najviše %{limit} opcija.
@@ -302,7 +321,8 @@ hr:
       question_votes:
         create:
           error: Došlo je do problema pri glasanju za pitanje
-          success: Možete ga promijeniti do kraja konzultacija. Prihvaća se samo posljednji glas.
+          success: Možete ga promijeniti do kraja konzultacija. Prihvaća se samo posljednji
+            glas.
           title_error: Greška pri glasanju!
           title_success: Glasanje je uspješno registrirano
       regular_questions:
@@ -322,8 +342,26 @@ hr:
     help:
       participatory_spaces:
         consultations:
-          contextual: "<p><strong>Savjetovanje</strong> je prostor koji vam omogućuje da postavite jasno pitanje svim ljudima koji čine organizaciju, uputite poziv za sudjelovanje u savjetovanju, potaknete i naručite debatu za ili protiv odgovor. Kada dođe datum konzultacija, možete glasovati i objaviti rezultate glasovanja.</p> <p>Primjeri: Konzultacije se mogu odnositi na gotovo bilo koji aspekt koji utječe na organizaciju: neki primjeri su promjena naziva ili logotipa organizacije nuđenje nekoliko alternativa, odlučivanje Da ili Ne da postane dio veće organizacije, potvrđivanje ili odbijanje novog strateškog plana ili rezultata radne skupine, ili definiranje trebaju li pozicije ostati najviše 1, 2 ili 3 mandata.</ p>\n"
-          page: "<p><strong>Savjetovanje</strong> je prostor koji vam omogućuje da postavite jasno pitanje svim ljudima koji čine organizaciju, uputite poziv za sudjelovanje u savjetovanju, potaknete i naručite debatu za ili protiv odgovor. Kada dođe datum konzultacija, možete glasovati i objaviti rezultate glasovanja.</p> <p>Primjeri: Konzultacije se mogu odnositi na gotovo bilo koji aspekt koji utječe na organizaciju: neki primjeri su promjena naziva ili logotipa organizacije nuđenje nekoliko alternativa, odlučivanje Da ili Ne da postane dio veće organizacije, potvrđivanje ili odbijanje novog strateškog plana ili rezultata radne skupine ili definiranje trebaju li pozicije ostati najviše 1, 2 ili 3 mandata u organizaciji .</p>\n"
+          contextual: "<p><strong>Savjetovanje</strong> je prostor koji vam omogućuje
+            da postavite jasno pitanje svim ljudima koji čine organizaciju, uputite
+            poziv za sudjelovanje u savjetovanju, potaknete i naručite debatu za ili
+            protiv odgovor. Kada dođe datum konzultacija, možete glasovati i objaviti
+            rezultate glasovanja.</p> <p>Primjeri: Konzultacije se mogu odnositi na
+            gotovo bilo koji aspekt koji utječe na organizaciju: neki primjeri su
+            promjena naziva ili logotipa organizacije nuđenje nekoliko alternativa,
+            odlučivanje Da ili Ne da postane dio veće organizacije, potvrđivanje ili
+            odbijanje novog strateškog plana ili rezultata radne skupine, ili definiranje
+            trebaju li pozicije ostati najviše 1, 2 ili 3 mandata.</ p>\n"
+          page: "<p><strong>Savjetovanje</strong> je prostor koji vam omogućuje da
+            postavite jasno pitanje svim ljudima koji čine organizaciju, uputite poziv
+            za sudjelovanje u savjetovanju, potaknete i naručite debatu za ili protiv
+            odgovor. Kada dođe datum konzultacija, možete glasovati i objaviti rezultate
+            glasovanja.</p> <p>Primjeri: Konzultacije se mogu odnositi na gotovo bilo
+            koji aspekt koji utječe na organizaciju: neki primjeri su promjena naziva
+            ili logotipa organizacije nuđenje nekoliko alternativa, odlučivanje Da
+            ili Ne da postane dio veće organizacije, potvrđivanje ili odbijanje novog
+            strateškog plana ili rezultata radne skupine ili definiranje trebaju li
+            pozicije ostati najviše 1, 2 ili 3 mandata u organizaciji .</p>\n"
           title: Što su konzultacije?
     menu:
       consultations: Konzultacije
