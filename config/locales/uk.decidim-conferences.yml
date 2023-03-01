@@ -79,12 +79,18 @@ uk:
     models:
       decidim/conference:
         one: Конференція
+        few: Конференції
+        many: Конференції
         other: Конференції
       decidim/conference_speaker:
         one: Спікер конференції
+        few: Доповідачі конференції
+        many: Доповідачі конференції
         other: Доповідачі конференції
       decidim/conference_user_role:
         one: Роль користувача конференції
+        few: Ролі користувачів конференції
+        many: Ролі користувачів конференції
         other: Ролі користувачів конференції
   decidim:
     admin:
@@ -292,17 +298,20 @@ uk:
       conference:
         create: "%{user_name} створив конференцію %{resource_name}"
         publish: "%{user_name} опублікував конференцію %{resource_name}"
-        send_conference_diplomas: "%{user_name} надіслав сертифікати відвідувачів конференції %{resource_name}"
+        send_conference_diplomas: "%{user_name} надіслав сертифікати відвідувачів
+          конференції %{resource_name}"
         unpublish: "%{user_name} скасував публікацію конференції %{resource_name}"
         update: "%{user_name} оновив конференцію %{resource_name}"
-        update_diploma: "%{user_name} оновив конфігурацію сертифікатів відвідуваності для конференції %{resource_name}"
+        update_diploma: "%{user_name} оновив конфігурацію сертифікатів відвідуваності
+          для конференції %{resource_name}"
       conference_speaker:
         create: "%{user_name} створив спікера %{resource_name} на конференції %{space_name}"
         delete: "%{user_name} видалив спікера %{resource_name} з конференції %{space_name}"
         update: "%{user_name} оновив спікера %{resource_name} на конференції %{space_name}"
       conference_user_role:
         create: "%{user_name} запросив %{resource_name} на конференцію %{space_name}"
-        delete: "%{user_name} видалив адміністратора %{resource_name} із конференції %{space_name}"
+        delete: "%{user_name} видалив адміністратора %{resource_name} із конференції
+          %{space_name}"
         update: "%{user_name} змінив роль %{resource_name} у конференції %{space_name}"
       conferences:
         conference_registration:
@@ -312,14 +321,21 @@ uk:
           delete: "%{user_name} видалив партнера %{resource_name} із конференції %{space_name}"
           update: "%{user_name} оновив партнера %{resource_name} у конференції %{space_name}"
         registration_type:
-          create: "%{user_name} створив тип реєстрації %{resource_name} у конференції %{space_name}"
-          publish: "%{user_name} опублікував тип реєстрації %{resource_name} на конференції %{space_name}"
-          unpublish: "%{user_name} скасував публікацію типу реєстрації %{resource_name} у конференції %{space_name}"
-          update: "%{user_name} оновив тип реєстрації %{resource_name} у конференції %{space_name}"
+          create: "%{user_name} створив тип реєстрації %{resource_name} у конференції
+            %{space_name}"
+          publish: "%{user_name} опублікував тип реєстрації %{resource_name} на конференції
+            %{space_name}"
+          unpublish: "%{user_name} скасував публікацію типу реєстрації %{resource_name}
+            у конференції %{space_name}"
+          update: "%{user_name} оновив тип реєстрації %{resource_name} у конференції
+            %{space_name}"
       media_link:
-        create: "%{user_name} створив медіа-посилання %{resource_name} у конференції %{space_name}"
-        delete: "%{user_name} видалив медіапосилання %{resource_name} із конференції %{space_name}"
-        update: "%{user_name} оновив медіа-посилання %{resource_name} у конференції %{space_name}"
+        create: "%{user_name} створив медіа-посилання %{resource_name} у конференції
+          %{space_name}"
+        delete: "%{user_name} видалив медіапосилання %{resource_name} із конференції
+          %{space_name}"
+        update: "%{user_name} оновив медіа-посилання %{resource_name} у конференції
+          %{space_name}"
     conference_program:
       index:
         title: програма
@@ -330,15 +346,19 @@ uk:
       admin:
         conference_copies:
           form:
-            slug_help: 'URL-слаги використовуються для створення URL-адрес, які вказують на цю конференцію. Приймає лише літери, цифри та тире та має починатися з літери. Приклад: %{url}'
+            slug_help: 'URL-слаги використовуються для створення URL-адрес, які вказують
+              на цю конференцію. Приймає лише літери, цифри та тире та має починатися
+              з літери. Приклад: %{url}'
         conference_invites:
           create:
-            error: Під час запрошення учасника приєднатися до конференції виникла проблема.
+            error: Під час запрошення учасника приєднатися до конференції виникла
+              проблема.
             success: Учасника успішно запрошено приєднатися до конференції.
           form:
             attendee_type: Тип учасника
             existing_user: Існуючий учасник
-            invite_explanation: Учасник буде запрошений приєднатися до конференції, а також до організації.
+            invite_explanation: Учасник буде запрошений приєднатися до конференції,
+              а також до організації.
             non_user: Неіснуючий учасник
             select_user: Виберіть учасника
           index:
@@ -352,7 +372,9 @@ uk:
             invites: Запрошує
             search: Пошук
           new:
-            explanation: Учасник буде запрошений приєднатися до конференції. Якщо їхня електронна адреса не зареєстрована, їх також буде запрошено до організації.
+            explanation: Учасник буде запрошений приєднатися до конференції. Якщо
+              їхня електронна адреса не зареєстрована, їх також буде запрошено до
+              організації.
             invite: Запросити
             new_invite: Запросити учасника
         conference_registrations:
@@ -368,11 +390,16 @@ uk:
             search: Пошук
         conferences:
           form:
-            available_slots_help: Залиште значення 0, якщо у вас є необмежена кількість слотів.
+            available_slots_help: Залиште значення 0, якщо у вас є необмежена кількість
+              слотів.
             registrations_count:
               one: Була 1 реєстрація.
+              few: Було %{count} реєстрацій.
+              many: Було %{count} реєстрацій.
               other: Було %{count} реєстрацій.
-            slug_help: 'URL-слаги використовуються для створення URL-адрес, які вказують на цю конференцію. Приймає лише літери, цифри та тире та має починатися з літери. Приклад: %{url}'
+            slug_help: 'URL-слаги використовуються для створення URL-адрес, які вказують
+              на цю конференцію. Приймає лише літери, цифри та тире та має починатися
+              з літери. Приклад: %{url}'
         diplomas:
           edit:
             save: зберегти
@@ -380,8 +407,12 @@ uk:
         invite_join_conference_mailer:
           invite:
             decline: Відхилити запрошення "%{conference_title}"
-            invited_existing_user_to_join_a_conference: "%{invited_by} запросив вас приєднатися до конференції о %{application}. Ви можете відхилити або прийняти це за посиланнями нижче."
-            invited_user_to_join_a_conference: "%{invited_by} запросив вас приєднатися до конференції о %{application}. Ви можете прийняти його за посиланням нижче."
+            invited_existing_user_to_join_a_conference: "%{invited_by} запросив вас
+              приєднатися до конференції о %{application}. Ви можете відхилити або
+              прийняти це за посиланнями нижче."
+            invited_user_to_join_a_conference: "%{invited_by} запросив вас приєднатися
+              до конференції о %{application}. Ви можете прийняти його за посиланням
+              нижче."
             registration: Реєстрація для '%{conference_title}'
         partners:
           index:
@@ -393,11 +424,14 @@ uk:
             title: Види реєстрації
         send_conference_diploma_mailer:
           diploma:
-            diploma_html: Сертифікат про участь у конференції <a href="%{url}">%{title}</a> ви знайдете у вкладених файлах.
+            diploma_html: Сертифікат про участь у конференції <a href="%{url}">%{title}</a>
+              ви знайдете у вкладених файлах.
           diploma_user:
             attendance_verified_by: Відвідування перевірено
             certificate_of_attendance: Довідка про відвідування
-            certificate_of_attendance_description: Цим підтверджується, що <strong>%{user}</strong> відвідав і взяв участь у <strong>%{title}</strong>, який відбувся <strong>%{location}</strong> <strong>%{start} - %{end}</strong>
+            certificate_of_attendance_description: Цим підтверджується, що <strong>%{user}</strong>
+              відвідав і взяв участь у <strong>%{title}</strong>, який відбувся <strong>%{location}</strong>
+              <strong>%{start} - %{end}</strong>
         send_diploma:
           error: Виникла проблема з надсиланням сертифікатів про участь у конференції.
           success: Сертифікати про участь у конференції успішно надіслані
@@ -421,13 +455,17 @@ uk:
           program: програма
       conference_registration_mailer:
         confirmation:
-          confirmed_html: Вашу реєстрацію на конференцію <a href="%{url}">%{title}</a> підтверджено.
-          details_1: 'Ви зареєстровані на конференції з типом %{registration_type}. Його вартість становить %{price}, і ви можете відвідати такі події:'
+          confirmed_html: Вашу реєстрацію на конференцію <a href="%{url}">%{title}</a>
+            підтверджено.
+          details_1: 'Ви зареєстровані на конференції з типом %{registration_type}.
+            Його вартість становить %{price}, і ви можете відвідати такі події:'
           details_2: Деталі конференції ви знайдете у вкладенні.
         pending_validation:
           confirmation_pending: Незабаром ви отримаєте підтвердження
-          details: 'Ви зареєструвалися на тип %{registration_type} із вартістю %{price} і можете відвідувати такі події:'
-          pending_html: Ваша реєстрація на конференцію <a href="%{url}">%{title}</a> очікує підтвердження.
+          details: 'Ви зареєструвалися на тип %{registration_type} із вартістю %{price}
+            і можете відвідувати такі події:'
+          pending_html: Ваша реєстрація на конференцію <a href="%{url}">%{title}</a>
+            очікує підтвердження.
       conference_registrations:
         create:
           invalid: Виникла проблема з приєднанням до цієї конференції.
@@ -505,7 +543,8 @@ uk:
         home:
           highlighted_conferences:
             active_conferences: Активні конференції
-            conferences_button_title: Посилання на сторінку конференцій, на якій відображаються всі конференції
+            conferences_button_title: Посилання на сторінку конференцій, на якій відображаються
+              всі конференції
             see_all_conferences: Переглянути всі конференції
       photo:
         image:
@@ -540,39 +579,65 @@ uk:
     events:
       conferences:
         conference_registration_confirmed:
-          notification_title: Вашу реєстрацію на конференцію <a href="%{resource_url}">%{resource_title}</a> підтверджено.
+          notification_title: Вашу реєстрацію на конференцію <a href="%{resource_url}">%{resource_title}</a>
+            підтверджено.
         conference_registration_validation_pending:
-          notification_title: Ваша реєстрація на конференцію <a href="%{resource_url}">%{resource_title}</a> очікує на підтвердження.
+          notification_title: Ваша реєстрація на конференцію <a href="%{resource_url}">%{resource_title}</a>
+            очікує на підтвердження.
         conference_registrations_over_percentage:
           email_intro: Зайняті слоти конференції "%{resource_title}" перевищують %{percentage}%.
-          email_outro: Ви отримали це сповіщення, оскільки ви є адміністратором простору для участі в конференції.
-          email_subject: Зайняті слоти конференції "%{resource_title}" перевищують %{percentage}%
-          notification_title: <a href="%{resource_path}">%{resource_title}</a> слоти конференції зайняті понад %{percentage}%.
+          email_outro: Ви отримали це сповіщення, оскільки ви є адміністратором простору
+            для участі в конференції.
+          email_subject: Зайняті слоти конференції "%{resource_title}" перевищують
+            %{percentage}%
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> слоти
+            конференції зайняті понад %{percentage}%.
         conference_updated:
-          email_intro: 'Оновлено конференцію "%{resource_title}". Ви можете прочитати нову версію на її сторінці:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за конференцією "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
+          email_intro: 'Оновлено конференцію "%{resource_title}". Ви можете прочитати
+            нову версію на її сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за конференцією
+            "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
           email_subject: Оновлено конференцію "%{resource_title}".
-          notification_title: Конференцію <a href="%{resource_path}">%{resource_title}</a> оновлено.
+          notification_title: Конференцію <a href="%{resource_path}">%{resource_title}</a>
+            оновлено.
         registrations_enabled:
-          email_intro: 'Конференція "%{resource_title}" дозволила реєстрацію. Ви можете зареєструватися на його сторінці:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за конференцією "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
+          email_intro: 'Конференція "%{resource_title}" дозволила реєстрацію. Ви можете
+            зареєструватися на його сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за конференцією
+            "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
           email_subject: Конференція "%{resource_title}" дозволила реєстрацію.
-          notification_title: Конференція <a href="%{resource_path}">%{resource_title}</a> дозволила реєстрацію.
+          notification_title: Конференція <a href="%{resource_path}">%{resource_title}</a>
+            дозволила реєстрацію.
         role_assigned:
           email_intro: Вам призначено %{role} для конференції "%{resource_title}".
-          email_outro: Ви отримали це сповіщення, оскільки ви %{role} конференції "%{resource_title}".
+          email_outro: Ви отримали це сповіщення, оскільки ви %{role} конференції
+            "%{resource_title}".
           email_subject: Вас призначили %{role} для "%{resource_title}".
           notification_title: Вам призначено %{role} для конференції <a href="%{resource_url}">%{resource_title}</a>.
         upcoming_conference:
-          email_intro: 'Через 2 дні відбудеться конференція "%{resource_title}". Ви можете прочитати опис на його сторінці:'
-          email_outro: Ви отримали це сповіщення, оскільки стежите за конференцією "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
+          email_intro: 'Через 2 дні відбудеться конференція "%{resource_title}". Ви
+            можете прочитати опис на його сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за конференцією
+            "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
           email_subject: Конференція "%{resource_title}" наближається!
-          notification_title: Конференція <a href="%{resource_path}">%{resource_title}</a> відбудеться за 2 дні.
+          notification_title: Конференція <a href="%{resource_path}">%{resource_title}</a>
+            відбудеться за 2 дні.
     help:
       participatory_spaces:
         conferences:
-          contextual: "<p><strong>Конференція</strong> – це сукупність зустрічей, організованих за програмою, із запрошенням кількох людей як доповідачів та іншими інформаційними полями, типовими для великих конгресів або соціальних заходів (реєстрація, список організацій, які підтримують або виступити спонсором події тощо).</p> <p>Приклади: конференція може бути важливою подією для організації та її членів або відбуватися як частина процесу участі чи після консультації.</p>\n"
-          page: "<p><strong>Конференція</strong> – це сукупність зустрічей, організованих за програмою, із запрошенням кількох людей як доповідачів та іншими інформаційними полями, типовими для великих конгресів або соціальних заходів (реєстрація, список організацій, які підтримують або виступити спонсором події тощо).</p> <p>Приклади: конференція може бути важливою подією для організації та її членів або відбуватися як частина процесу участі чи після консультації.</p>\n"
+          contextual: "<p><strong>Конференція</strong> – це сукупність зустрічей,
+            організованих за програмою, із запрошенням кількох людей як доповідачів
+            та іншими інформаційними полями, типовими для великих конгресів або соціальних
+            заходів (реєстрація, список організацій, які підтримують або виступити
+            спонсором події тощо).</p> <p>Приклади: конференція може бути важливою
+            подією для організації та її членів або відбуватися як частина процесу
+            участі чи після консультації.</p>\n"
+          page: "<p><strong>Конференція</strong> – це сукупність зустрічей, організованих
+            за програмою, із запрошенням кількох людей як доповідачів та іншими інформаційними
+            полями, типовими для великих конгресів або соціальних заходів (реєстрація,
+            список організацій, які підтримують або виступити спонсором події тощо).</p>
+            <p>Приклади: конференція може бути важливою подією для організації та
+            її членів або відбуватися як частина процесу участі чи після консультації.</p>\n"
           title: Що таке конференції?
     log:
       value_types:
@@ -606,6 +671,8 @@ uk:
         order_by_conferences:
           conferences:
             one: Х__0 конференція
+            few: Х__0 конференцій
+            many: Х__0 конференцій
             other: Х__0 конференцій
         promoted_conference:
           more_info: Більше інформації

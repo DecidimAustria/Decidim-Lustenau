@@ -7,6 +7,8 @@ uk:
     models:
       decidim/blogs/post:
         one: Опублікувати
+        few: Пости
+        many: Пости
         other: Пости
   decidim:
     blogs:
@@ -75,7 +77,8 @@ uk:
           global:
             announcement: Оголошення
             comments_enabled: Коментарі ввімкнено
-            comments_max_length: Максимальна довжина коментарів (залиште 0 для значення за умовчанням)
+            comments_max_length: Максимальна довжина коментарів (залиште 0 для значення
+              за умовчанням)
           step:
             announcement: Оголошення
             comments_blocked: Коментарі заблоковано
@@ -84,9 +87,12 @@ uk:
     events:
       blogs:
         post_created:
-          email_intro: Допис "%{resource_title}" опубліковано в "%{participatory_space_title}", за яким ви стежите.
-          email_outro: Ви отримали це сповіщення, тому що стежите за "%{participatory_space_title}". Ви можете скасувати підписку за попереднім посиланням.
+          email_intro: Допис "%{resource_title}" опубліковано в "%{participatory_space_title}",
+            за яким ви стежите.
+          email_outro: Ви отримали це сповіщення, тому що стежите за "%{participatory_space_title}".
+            Ви можете скасувати підписку за попереднім посиланням.
           email_subject: Нова публікація опублікована в %{participatory_space_title}
-          notification_title: Повідомлення <a href="%{resource_path}">%{resource_title}</a> опубліковано в %{participatory_space_title}
+          notification_title: Повідомлення <a href="%{resource_path}">%{resource_title}</a>
+            опубліковано в %{participatory_space_title}
     statistics:
       posts_count: Пости

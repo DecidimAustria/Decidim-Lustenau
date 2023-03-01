@@ -29,17 +29,21 @@ hr:
         census_data:
           attributes:
             file:
-              malformed: Neispravno oblikovana datoteka za uvoz, pažljivo pročitajte upute i provjerite je li datoteka kodirana UTF-8.
+              malformed: Neispravno oblikovana datoteka za uvoz, pažljivo pročitajte
+                upute i provjerite je li datoteka kodirana UTF-8.
   decidim:
     admin:
       menu:
         authorization_revocation:
-          before_date_info: Korisno ako je proces već započeo i želite opozvati dopuštenja prethodnog procesa.
+          before_date_info: Korisno ako je proces već započeo i želite opozvati dopuštenja
+            prethodnog procesa.
           button: Opozovi sve
           button_before: Opozovi prije datuma
           destroy:
-            confirm: Opoziv autorizacija prije datuma ne može se poništiti. Jeste li sigurni da želite nastaviti?
-            confirm_all: Opoziv svih ovlaštenja ne može se poništiti. Jeste li sigurni da želite nastaviti?
+            confirm: Opoziv autorizacija prije datuma ne može se poništiti. Jeste
+              li sigurni da želite nastaviti?
+            confirm_all: Opoziv svih ovlaštenja ne može se poništiti. Jeste li sigurni
+              da želite nastaviti?
           destroy_nok: Došlo je do problema prilikom opoziva autorizacija.
           destroy_ok: Sve podudarne autorizacije su uspješno opozvane.
           info: Postoji ukupno %{count} potvrđenih sudionika.
@@ -48,9 +52,11 @@ hr:
         authorization_workflows: Ovlaštenja
     admin_log:
       organization:
-        update_id_documents_config: "%{user_name} ažurirao je konfiguraciju autorizacije identifikacijskih dokumenata"
+        update_id_documents_config: "%{user_name} ažurirao je konfiguraciju autorizacije
+          identifikacijskih dokumenata"
       user:
-        grant_id_documents_offline_verification: "%{user_name} potvrdio je %{resource_name} korištenjem izvanmrežne autorizacije osobnih dokumenata"
+        grant_id_documents_offline_verification: "%{user_name} potvrdio je %{resource_name}
+          korištenjem izvanmrežne autorizacije osobnih dokumenata"
     authorization_handlers:
       admin:
         csv_census:
@@ -59,36 +65,45 @@ hr:
           - Samo sudionici s e-adresom u toj CSV datoteci mogu se potvrditi
         id_documents:
           help:
-          - Korisnici ispunjavaju svoje podatke o identitetu i učitavaju kopiju svog dokumenta.
+          - Korisnici ispunjavaju svoje podatke o identitetu i učitavaju kopiju svog
+            dokumenta.
           - Vi ispunjavate informacije koje se nalaze na učitanoj slici.
           - Informacije bi trebale odgovarati onima koje je korisnik ispunio.
-          - Ako ne možete jasno vidjeti informacije ili ih ne možete provjeriti, možete odbiti zahtjev i korisnik će to moći popraviti.
+          - Ako ne možete jasno vidjeti informacije ili ih ne možete provjeriti, možete
+            odbiti zahtjev i korisnik će to moći popraviti.
         postal_letter:
           help:
           - Sudionici traže da im se na njihovu adresu pošalje kontrolni kod.
           - Pismo šaljete na njihovu adresu s kontrolnim kodom.
           - Označite pismo kao poslano.
-          - Nakon što označite pismo kao poslano, sudionik će moći unijeti kod i dobiti potvrdu.
+          - Nakon što označite pismo kao poslano, sudionik će moći unijeti kod i dobiti
+            potvrdu.
       csv_census:
         explanation: Potvrdite se pomoću popisa stanovništva organizacije
         name: Popis organizacije
       direct: Direktno
       help: Pomozite
       id_documents:
-        explanation: Učitajte svoje osobne dokumente kako bismo mogli provjeriti vaš identitet
+        explanation: Učitajte svoje osobne dokumente kako bismo mogli provjeriti vaš
+          identitet
         name: Identifikacijski dokumenti
       multistep: Više koraka
       name: Ime
       postal_letter:
-        explanation: Poslat ćemo vam pismo s kodom koji morate unijeti kako bismo mogli potvrditi vašu adresu
+        explanation: Poslat ćemo vam pismo s kodom koji morate unijeti kako bismo
+          mogli potvrditi vašu adresu
         name: Šifra poštanskim pismom
     events:
       verifications:
         verify_with_managed_user:
-          email_intro: Sudionik <a href="%{resource_url}">%{resource_title}</a> pokušao se potvrditi podacima drugog sudionika (<a href="%{managed_user_url}">%{managed_user_name}</a>).
-          email_outro: Provjerite <a href="%{conflicts_url}">popis sukoba Verifications</a> i kontaktirajte sudionika kako biste potvrdili njegove podatke i riješili problem.
+          email_intro: Sudionik <a href="%{resource_url}">%{resource_title}</a> pokušao
+            se potvrditi podacima drugog sudionika (<a href="%{managed_user_url}">%{managed_user_name}</a>).
+          email_outro: Provjerite <a href="%{conflicts_url}">popis sukoba Verifications</a>
+            i kontaktirajte sudionika kako biste potvrdili njegove podatke i riješili
+            problem.
           email_subject: Neuspjeli pokušaj provjere drugog sudionika
-          notification_title: Sudionik <a href="%{resource_path}">%{resource_title}</a> pokušao se potvrditi podacima drugog sudionika (<a href="%{managed_user_path}">%{managed_user_name}</a>).
+          notification_title: Sudionik <a href="%{resource_path}">%{resource_title}</a>
+            pokušao se potvrditi podacima drugog sudionika (<a href="%{managed_user_path}">%{managed_user_name}</a>).
     verifications:
       authorizations:
         authorization_metadata:
@@ -103,9 +118,11 @@ hr:
           success: Uspješno ste izbrisali autorizaciju.
         first_login:
           actions:
-            another_dummy_authorization_handler: Provjerite s drugim primjerom rukovatelja autorizacijom
+            another_dummy_authorization_handler: Provjerite s drugim primjerom rukovatelja
+              autorizacijom
             csv_census: Provjerite prema popisu stanovništva organizacije
-            dummy_authorization_handler: Provjerite prema primjeru autorizacijskog rukovatelja
+            dummy_authorization_handler: Provjerite prema primjeru autorizacijskog
+              rukovatelja
             dummy_authorization_workflow: Provjerite prema primjeru tijeka rada autorizacije
             id_documents: Potvrdite se učitavanjem svog identifikacijskog dokumenta
             postal_letter: Potvrdite se primanjem kontrolnog koda poštom
@@ -137,34 +154,48 @@ hr:
             destroy_all:
               success: Svi podaci popisa su izbrisani
           destroy:
-            confirm: Brisanje svih popisa ne može se poništiti. Jeste li sigurni da želite nastaviti?
+            confirm: Brisanje svih popisa ne može se poništiti. Jeste li sigurni da
+              želite nastaviti?
             title: Izbrišite sve popisne podatke
           index:
-            data: Ukupno je učitano %{count} zapisa. Zadnji datum učitavanja bio je %{due_date}
-            empty: Nema popisnih podataka. Upotrijebite donji obrazac za uvoz pomoću CSV datoteke.
+            data: Ukupno je učitano %{count} zapisa. Zadnji datum učitavanja bio je
+              %{due_date}
+            empty: Nema popisnih podataka. Upotrijebite donji obrazac za uvoz pomoću
+              CSV datoteke.
             title: Aktualni podaci popisa stanovništva
           instructions:
-            body: Da biste to učinili, morate unijeti administraciju sustava i dodati ovlaštenja csv_census u organizaciju
+            body: Da biste to učinili, morate unijeti administraciju sustava i dodati
+              ovlaštenja csv_census u organizaciju
             title: Morate aktivirati CSV popis za ovu organizaciju
           new:
             file: ".csv datoteka s podacima o e-pošti"
-            info: 'Mora biti datoteka u CSV formatu sa samo jednim stupcem s adresom e-pošte:'
+            info: 'Mora biti datoteka u CSV formatu sa samo jednim stupcem s adresom
+              e-pošte:'
             submit: Učitaj datoteku
             title: Učitajte novi popis stanovništva
         authorizations:
           new:
-            error: Nismo mogli potvrditi vaš račun ili niste u popisu stanovništva organizacije.
+            error: Nismo mogli potvrditi vaš račun ili niste u popisu stanovništva
+              organizacije.
             success: Vaš račun je uspješno potvrđen.
       dummy_authorization:
         extra_explanation:
           postal_codes:
             one: Sudjelovanje je ograničeno na sudionike s poštanskim brojem %{postal_codes}.
-            other: 'Sudjelovanje je ograničeno na sudionike s bilo kojim od sljedećih poštanskih brojeva: %{postal_codes}.'
+            few: 'Sudjelovanje je ograničeno na sudionike s bilo kojim od sljedećih
+              poštanskih brojeva: %{postal_codes}.'
+            other: 'Sudjelovanje je ograničeno na sudionike s bilo kojim od sljedećih
+              poštanskih brojeva: %{postal_codes}.'
           scope: Sudjelovanje je ograničeno na sudionike s opsegom %{scope_name}.
           user_postal_codes:
-            one: Sudjelovanje je ograničeno na sudionike s poštanskim brojem %{postal_codes}, a vaš poštanski broj je %{user_postal_code}.
-            other: 'Sudjelovanje je ograničeno na sudionike s bilo kojim od sljedećih poštanskih brojeva: %{postal_codes}. Vaš poštanski broj je %{user_postal_code}.'
-          user_scope: Sudjelovanje je ograničeno na sudionike s opsegom %{scope_name}, a vaš opseg je %{user_scope_name}.
+            one: Sudjelovanje je ograničeno na sudionike s poštanskim brojem %{postal_codes},
+              a vaš poštanski broj je %{user_postal_code}.
+            few: 'Sudjelovanje je ograničeno na sudionike s bilo kojim od sljedećih
+              poštanskih brojeva: %{postal_codes}. Vaš poštanski broj je %{user_postal_code}.'
+            other: 'Sudjelovanje je ograničeno na sudionike s bilo kojim od sljedećih
+              poštanskih brojeva: %{postal_codes}. Vaš poštanski broj je %{user_postal_code}.'
+          user_scope: Sudjelovanje je ograničeno na sudionike s opsegom %{scope_name},
+            a vaš opseg je %{user_scope_name}.
       id_documents:
         admin:
           config:
@@ -176,7 +207,8 @@ hr:
               success: Konfiguracija je uspješno ažurirana
           confirmations:
             create:
-              error: Potvrda se ne podudara. Pokušajte ponovno ili odbijte potvrdu kako bi je sudionik mogao izmijeniti
+              error: Potvrda se ne podudara. Pokušajte ponovno ili odbijte potvrdu
+                kako bi je sudionik mogao izmijeniti
               success: Sudionik je uspješno verificiran
             new:
               introduce_user_data: Uvedite podatke na slici
@@ -184,7 +216,8 @@ hr:
               verify: Potvrdi
           offline_confirmations:
             create:
-              error: Potvrda se ne podudara. Molimo pokušajte ponovno ili recite sudioniku da ga dopuni
+              error: Potvrda se ne podudara. Molimo pokušajte ponovno ili recite sudioniku
+                da ga dopuni
               success: Sudionik je uspješno verificiran
             new:
               cancel: Otkazati
@@ -198,7 +231,8 @@ hr:
               verification_number: 'Potvrda #%{n}'
           rejections:
             create:
-              success: Provjera odbijena. Od sudionika će se tražiti da izmijene svoje dokumente
+              success: Provjera odbijena. Od sudionika će se tražiti da izmijene svoje
+                dokumente
         authorizations:
           choose:
             choose_a_type: 'Odaberite kako želite biti potvrđeni:'
@@ -212,9 +246,11 @@ hr:
             being_reviewed: Pregledavamo vaše dokumente. Uskoro ćete biti potvrđeni
             offline: Koristite izvanmrežnu provjeru
             online: Koristite online provjeru
-            rejection_clarity: Provjerite jesu li informacije jasno vidljive na učitanoj slici
+            rejection_clarity: Provjerite jesu li informacije jasno vidljive na učitanoj
+              slici
             rejection_correctness: Provjerite jesu li uneseni podaci točni
-            rejection_notice: Došlo je do problema s vašom provjerom. Molim te pokušaj ponovno
+            rejection_notice: Došlo je do problema s vašom provjerom. Molim te pokušaj
+              ponovno
             send: Ponovno zatražite potvrdu
           new:
             send: Zahtjev za provjeru
@@ -247,12 +283,14 @@ hr:
           edit:
             send: Potvrdi
             title: Unesite kontrolni kod koji ste primili
-            waiting_for_letter: Uskoro ćemo na vašu adresu poslati pismo s vašim kontrolnim kodom
+            waiting_for_letter: Uskoro ćemo na vašu adresu poslati pismo s vašim kontrolnim
+              kodom
           new:
             send: Pošalji mi pismo
             title: Zatražite svoj kontrolni kod
           update:
-            error: Vaš kontrolni kod ne odgovara našem. Molimo još jednom provjerite pismo koje smo vam poslali
+            error: Vaš kontrolni kod ne odgovara našem. Molimo još jednom provjerite
+              pismo koje smo vam poslali
             success: Čestitamo. Uspješno ste potvrđeni
       sms:
         authorizations:
@@ -260,7 +298,8 @@ hr:
             error: Došlo je do problema s vašim zahtjevom
             success: Hvala! Poslali smo SMS na vaš telefon.
           destroy:
-            success: Kontrolni kod je uspješno resetiran. Molimo ponovno unesite svoj broj telefona.
+            success: Kontrolni kod je uspješno resetiran. Molimo ponovno unesite svoj
+              broj telefona.
           edit:
             confirm_destroy: Jeste li sigurni da želite poništiti kontrolni kod?
             destroy: Poništi kontrolni kod
@@ -271,8 +310,10 @@ hr:
             send: Pošalji mi SMS
             title: Zatražite svoj kontrolni kod
           update:
-            error: Vaš kontrolni kod ne odgovara našem. Još jednom provjerite SMS koji smo vam poslali.
+            error: Vaš kontrolni kod ne odgovara našem. Još jednom provjerite SMS
+              koji smo vam poslali.
             success: Čestitamo. Uspješno ste potvrđeni.
   errors:
     messages:
-      uppercase_only_letters_numbers: moraju biti samo velika slova i sadržavati samo slova i/ili brojke
+      uppercase_only_letters_numbers: moraju biti samo velika slova i sadržavati samo
+        slova i/ili brojke
