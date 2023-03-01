@@ -1,0 +1,376 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      consultation:
+        banner_image: تصویر بنر
+        decidim_highlighted_scope_id: دامنه برجسته شده
+        description: شرح
+        end_voting_date: رای گیری به پایان می رسد
+        introductory_image: تصویر مقدماتی
+        introductory_video_url: URL ویدیوی مقدماتی
+        questions: سوالات
+        slug: اسلاگ URL
+        start_voting_date: رای گیری آغاز می شود
+        subtitle: عنوان فرعی
+        title: عنوان
+      question:
+        banner_image: تصویر بنر
+        decidim_scope_id: منطقه شهرداری
+        hashtag: هشتگ
+        hero_image: تصویر خانه
+        i_frame_url: URL سیستم رای گیری خارجی
+        instructions: دستورالعمل های اضافی برای رای دادن
+        max_votes: حداکثر تعداد رای
+        min_votes: حداقل تعداد آرا
+        origin_scope: محدوده
+        origin_title: اصل و نسب
+        origin_url: URL مبدا
+        participatory_scope: حوزه مشارکتی
+        promoter_group: گروه مروج
+        question_context: متن نوشته
+        reference: ارجاع
+        scope: منطقه شهرداری
+        slug: اسلاگ URL
+        subtitle: عنوان فرعی
+        vote: سیستم رای گیری خارجی
+        what_is_decided: چه تصمیمی گرفته می شود
+      response:
+        decidim_consultations_response_group_id: گروه
+    errors:
+      models:
+        question:
+          attributes:
+            max_votes:
+              lower_than_min: حداکثر تعداد آرا باید بیشتر یا مساوی از حداقل باشد.
+      vote:
+        decidim_consultations_response_id:
+          not_found: پاسخ یافت نشد.
+  activerecord:
+    errors:
+      models:
+        decidim/consultations/vote:
+          attributes:
+            question:
+              invalid_num_votes: تعداد آرا نامعتبر است
+    models:
+      decidim/consultation:
+        one: مشاوره
+        other: مشاوره ها
+      decidim/consultations/question:
+        one: سوال
+        other: سوالات
+      decidim/consultations/response:
+        one: واکنش
+        other: پاسخ
+      decidim/consultations/vote:
+        one: رای
+        other: رای
+  decidim:
+    admin:
+      actions:
+        back_to_responses: بازگشت به پاسخ ها
+        new_consultation: مشاوره جدید
+        new_question: سوال جدید
+        new_response: پاسخ جدید
+        new_response_group: گروه جدید
+        publish_results: نتایج را منتشر کنید
+        response_groups: گروه های پاسخ را مدیریت کنید
+        unpublish_results: لغو انتشار نتایج
+      consultation_publications:
+        create:
+          error: مشکلی در انتشار این مشاوره وجود داشت.
+          success: مشاوره با موفقیت منتشر شد.
+        destroy:
+          error: مشکلی در لغو انتشار این مشاوره وجود داشت.
+          success: مشاوره با موفقیت لغو شد.
+      consultation_results_publications:
+        create:
+          error: در انتشار نتایج این مشاوره مشکلی وجود داشت.
+          success: نتایج مشاوره با موفقیت منتشر شد.
+        destroy:
+          error: مشکلی در لغو انتشار نتایج این مشاوره وجود داشت.
+          success: نتایج مشاوره با موفقیت لغو شد.
+      consultations:
+        create:
+          error: مشکلی در ایجاد یک مشاوره جدید وجود داشت.
+          success: مشاوره با موفقیت ایجاد شد.
+        deprecation_warning: ماژول مشاوره در آینده نزدیک منسوخ خواهد شد. ما در حال کار بر روی نسخه رمزنگاری امن بعدی به نام Vottings هستیم.
+        edit:
+          update: به روز رسانی
+        form:
+          slug_help: 'از اسلاگ های URL برای تولید URL هایی استفاده می شود که به این مشاوره اشاره می کنند. فقط حروف، اعداد و خط تیره را می پذیرد و باید با یک حرف شروع شود. مثال: %{url}'
+          title: اطلاعات کلی
+        index:
+          not_published: منتشر نشده
+          published: منتشر شده
+        new:
+          create: ايجاد كردن
+          title: مشاوره جدید
+        results:
+          not_visible: نتایج پس از پایان مشاوره در دسترس خواهد بود
+          participants: "%{count} شرکت کننده"
+          total_votes: 'مجموع: %{count} رای'
+        update:
+          error: مشکلی در به‌روزرسانی این مشاوره وجود داشت.
+          success: مشاوره با موفقیت به روز شد.
+      menu:
+        consultations: مشاوره ها
+        consultations_submenu:
+          info: اطلاعات
+          questions: سوالات
+          results: نتایج
+        questions_submenu:
+          attachments: پیوست ها
+          categories: دسته بندی ها
+          components: اجزاء
+          configuration: پیکربندی
+          consultation: مشاوره
+          info: اطلاعات
+          responses: پاسخ
+      models:
+        consultation:
+          fields:
+            created_at: ایجاد شده در
+            published: منتشر شده
+            title: عنوان
+          name:
+            one: مشاوره
+            other: مشاوره ها
+        question:
+          fields:
+            created_at: ایجاد شده در
+            published: منتشر شده
+            title: عنوان
+          name:
+            one: سوال
+            other: سوالات
+        response:
+          fields:
+            created_at: ایجاد شده در
+            response_group: گروه
+            title: عنوان
+          name:
+            one: واکنش
+            other: پاسخ
+      question_configuration:
+        disable_external_voting: لطفاً رأی‌گیری خارجی را برای پیکربندی‌های پیشرفته غیرفعال کنید
+        form:
+          help: با افزایش حداکثر تعداد پاسخ هایی که یک شرکت کننده می تواند انتخاب کند، سؤالات چند گزینه ای را تنظیم کنید. حداکثر مقدار پیش فرض 1 است، به این معنی که فقط یک پاسخ را می توان رای داد.
+          title: پیکربندی پیشرفته
+      question_publications:
+        create:
+          error: در انتشار این سوال مشکلی وجود داشت.
+          success: سوال با موفقیت منتشر شد.
+        destroy:
+          error: مشکلی در لغو انتشار این سوال وجود داشت.
+          success: سوال با موفقیت لغو شد.
+      questions:
+        create:
+          error: مشکلی در ایجاد یک سوال جدید وجود داشت.
+          success: سوال با موفقیت ایجاد شد.
+        destroy:
+          success: سوال با موفقیت حذف شد.
+        edit:
+          update: به روز رسانی
+        form:
+          title: اطلاعات کلی
+        index:
+          not_published: منتشر نشده
+          published: منتشر شده
+        new:
+          create: ايجاد كردن
+          title: سوال جدید
+        update:
+          error: مشکلی در به‌روزرسانی این سؤال وجود داشت.
+          success: سوال با موفقیت به روز شد.
+      response_groups:
+        create:
+          error: مشکلی در ایجاد یک گروه پاسخ جدید وجود داشت.
+          success: گروه پاسخ با موفقیت ایجاد شد.
+        destroy:
+          error: مشکلی در حذف گروه پاسخ وجود داشت. بررسی کنید که هیچ پاسخی به آن بستگی ندارد.
+          success: گروه پاسخ با موفقیت حذف شد.
+        edit:
+          update: به روز رسانی
+        form:
+          title: اطلاعات کلی
+        help: از گروه ها برای سازماندهی سوالات چند گزینه ای در بسته ها استفاده کنید.
+        new:
+          create: ايجاد كردن
+          title: گروه پاسخگویی جدید
+        update:
+          error: مشکلی در به‌روزرسانی این پاسخ وجود داشت.
+          success: پاسخ با موفقیت به روز شد.
+      responses:
+        create:
+          error: در ایجاد پاسخ جدید مشکلی وجود داشت.
+          success: پاسخ با موفقیت ایجاد شد.
+        destroy:
+          error: مشکلی در حذف پاسخ وجود داشت.
+          success: پاسخ با موفقیت حذف شد.
+        edit:
+          update: به روز رسانی
+        form:
+          title: اطلاعات کلی
+        new:
+          create: ايجاد كردن
+          title: پاسخ جدید
+        update:
+          error: مشکلی در به‌روزرسانی این پاسخ وجود داشت.
+          success: پاسخ با موفقیت به روز شد.
+      titles:
+        consultations: مشاوره ها
+        questions: سوالات
+        response_groups: گروه های پاسخگویی
+        responses: پاسخ
+        results: نتایج
+    consultations:
+      admin:
+        content_blocks:
+          highlighted_consultations:
+            max_results: حداکثر مقدار عناصر برای نمایش
+      consultation:
+        start_voting_date: رای گیری آغاز می شود
+        view_results: مشاهده نتایج
+      consultation_card:
+        view_results: مشاهده نتایج
+      consultations:
+        orders:
+          label: 'مرتب سازی مشاوره ها بر اساس:'
+          random: تصادفی
+          recent: اخیرا
+        show:
+          dates: تاریخ
+      content_blocks:
+        highlighted_consultations:
+          name: مشاوره های برجسته
+      count:
+        title:
+          one: مشاوره %{count}
+          other: "%{count} مشاوره"
+      filters:
+        active: فعال
+        all: همه
+        date: تاریخ
+        finished: تمام شده
+        search: جستجو کردن
+        upcoming: آینده
+      filters_small_view:
+        close_modal: پنجره بسته
+        filter: فیلتر کنید
+        filter_by: محدود شده توسط
+        unfold: باز کردن
+      highlighted_questions:
+        title: سوالات از %{scope_name}
+      index:
+        title: مشاوره ها
+      last_activity:
+        new_consultation: مشاوره جدید
+        new_question_at_html: "<span>سوال جدید در %{link}</span>"
+      pages:
+        home:
+          highlighted_consultations:
+            active_consultations: مشاوره های فعال
+            see_all_consultations: مشاهده تمام مشاوره ها
+            voting_ends_in:
+              one: رأی گیری <strong>فردا</strong> به پایان می رسد
+              other: رأی گیری در <strong>%{count} روز</strong> به پایان می رسد
+            voting_ends_today: رأی گیری <strong>امروز</strong> به پایان می رسد
+      question:
+        take_part: شرکت داشتن
+        view_results: مشاهده نتایج
+        votes_out_of:
+          one: رای دادن به
+          other: رای خارج از
+      question_multiple_votes:
+        results_rules:
+          minimum_votes_per_user:
+            description: شرکت کنندگان می توانند حداقل %{votes} رای را بین گزینه های مختلف توزیع کنند.
+          title: در این سوال گزینه های متعدد در جایی که مجاز است
+          total_participants: در مجموع %{count} نفر در رای گیری شرکت کردند.
+          vote_limit:
+            description: شرکت‌کنندگان می‌توانند به گزینه‌های %{limit} رأی دهند.
+        voting_rules:
+          minimum_votes_per_user:
+            description: شما باید حداقل %{votes} رای را بین گزینه های مختلف توزیع کنید.
+          title: 'رای ها تابع قوانین زیر است:'
+          vote_limit:
+            description: می‌توانید به گزینه‌های %{limit} رأی دهید.
+            left: باقی مانده است
+            votes: رای
+      question_votes:
+        create:
+          error: در رای دادن به سوال مشکلی وجود داشت
+          success: تا پایان مشاوره می توانید آن را تغییر دهید. فقط آخرین رای پذیرفته می شود.
+          title_error: خطای رای!
+          title_success: رای با موفقیت ثبت شد
+      regular_questions:
+        title: سوالات این مشاوره
+      show:
+        badge_name:
+          finished: تمام شده
+          open: باز کن
+          open_votes: آرای باز
+          published_results: نتایج منتشر شد
+        footer_button_text:
+          debate: مناظره
+          view: چشم انداز
+          view_results: مشاهده نتایج
+          vote: رای
+        unspecified: مشخص نشده است
+    help:
+      participatory_spaces:
+        consultations:
+          contextual: "<p>یک <strong>مشاوره</strong> فضایی است که به شما امکان می‌دهد از همه افرادی که یک سازمان را تشکیل می‌دهند، یک سوال واضح بپرسید، برای شرکت در مشاوره تماس بگیرید، جرقه بزنید و دستور دهید که بحث موافق یا علیه یک سازمان باشد. واکنش. وقتی تاریخ مشاوره فرا رسید، می‌توانید رأی دهید و نتایج رای‌گیری‌ها را منتشر کنید.</p> <p>مثال‌ها: مشاوره‌ها می‌تواند تقریباً در مورد هر جنبه‌ای باشد که بر یک سازمان تأثیر می‌گذارد: برخی از نمونه‌ها تغییر نام یا نشان‌واره سازمان است. ارائه چندین گزینه، تصمیم گیری بله یا خیر برای عضویت در یک سازمان بزرگتر، تأیید یا رد یک برنامه استراتژیک جدید یا نتیجه یک گروه کاری، یا تعیین اینکه آیا این موقعیت ها باید حداکثر 1، 2 یا 3 مأموریت باقی بمانند. p>\n"
+          page: "<p>یک <strong>مشاوره</strong> فضایی است که به شما امکان می‌دهد از همه افرادی که یک سازمان را تشکیل می‌دهند، یک سوال واضح بپرسید، برای شرکت در مشاوره تماس بگیرید، جرقه بزنید و دستور دهید که بحث موافق یا علیه یک سازمان باشد. واکنش. وقتی تاریخ مشاوره فرا رسید، می‌توانید رأی دهید و نتایج رای‌گیری‌ها را منتشر کنید.</p> <p>مثال‌ها: مشاوره‌ها می‌تواند تقریباً در مورد هر جنبه‌ای باشد که بر یک سازمان تأثیر می‌گذارد: برخی از نمونه‌ها تغییر نام یا نشان‌واره سازمان است. ارائه چندین گزینه، تصمیم گیری بله یا خیر برای عضویت در یک سازمان بزرگتر، تایید یا رد یک برنامه استراتژیک جدید یا نتیجه یک گروه کاری، یا تعیین اینکه آیا این موقعیت ها باید حداکثر 1، 2 یا 3 ماموریت در سازمان باقی بمانند. .</p>\n"
+          title: مشاوره چیست؟
+    menu:
+      consultations: مشاوره ها
+    questions:
+      next_button: سوال بعدی
+      previous_button: سوال قبلی
+      results:
+        title: نتایج
+      show:
+        read_more: ادامه مطلب
+      statistics:
+        assistants_count_title: دستیاران
+        comments_count_title: نظرات
+        meetings_count_title: جلسات
+        supports_count_title: رای
+      technical_info:
+        technical_data: داده های تکنیکی
+      vote_button:
+        already_voted: قبلاً رای داده است
+        already_voted_hover: ابطال رای
+        starting_from: شروع از %{date}
+        verification_required: برای رای دادن حساب خود را تأیید کنید
+        vote: رای
+      vote_modal:
+        close_modal: بستن مودال
+        contextual_help: لطفا یک گزینه را انتخاب کنید.
+        title: 'مشاوره: رای سوال'
+      vote_modal_confirm:
+        change: تغییر دادن
+        close_modal: بستن مودال
+        confirm: تایید
+        contextual_help: لطفا گزینه انتخاب شده را تایید کنید.
+        title: 'مشاوره: تایید رای'
+    resources:
+      consultations:
+        actions:
+          comment: اظهار نظر
+          vote: رای
+    statistics:
+      consultations_count: مشاوره ها
+      votes_count: رای
+  layouts:
+    decidim:
+      consultation_voting_data:
+        start_voting_date: رای گیری آغاز می شود
+      question_components:
+        question_menu_item: سوال
+      question_header:
+        back_to_consultation: مشاهده تمام مشاوره ها
+        back_to_question: بازگشت به سوال

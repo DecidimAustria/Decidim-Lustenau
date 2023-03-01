@@ -1,0 +1,69 @@
+---
+fa-IR:
+  activemodel:
+    models:
+      decidim/surveys/closed_survey_event: نظرسنجی به پایان رسید
+      decidim/surveys/opened_survey_event: نظرسنجی شروع شد
+  activerecord:
+    models:
+      decidim/surveys/survey:
+        one: نظر سنجی
+        other: نظرسنجی ها
+      decidim/surveys/survey_answer:
+        one: پاسخ
+        other: پاسخ ها
+  decidim:
+    components:
+      surveys:
+        actions:
+          answer: پاسخ
+        name: نظر سنجی
+        settings:
+          global:
+            announcement: اعلامیه
+            clean_after_publish: هنگام انتشار نظرسنجی پاسخ ها را حذف کنید
+            ends_at: پاسخ ها پذیرفته شد تا
+            ends_at_help: بدون تاریخ خاصی خالی بگذارید
+            scope_id: محدوده
+            scopes_enabled: دامنه ها فعال شد
+            starts_at: پاسخ های پذیرفته شده از
+            starts_at_help: بدون تاریخ خاصی خالی بگذارید
+          step:
+            allow_answers: اجازه دادن به پاسخ ها
+            allow_unregistered: به کاربران ثبت نام نشده اجازه دهید به نظرسنجی پاسخ دهند
+            allow_unregistered_help: در صورت فعال بودن، برای پاسخ به نظرسنجی نیازی به لاگین نیست. این ممکن است منجر به داده های ضعیف یا غیرقابل اعتماد شود و در برابر حملات خودکار آسیب پذیرتر خواهد بود. با احتیاط استفاده کنید! توجه داشته باشید که یک شرکت‌کننده می‌تواند با استفاده از مرورگرهای مختلف یا ویژگی «مرور خصوصی» مرورگر وب خود، چندین بار به یک نظرسنجی پاسخ دهد.
+            announcement: اعلامیه
+    events:
+      surveys:
+        survey_closed:
+          email_intro: نظرسنجی %{resource_title} در %{participatory_space_title} بسته شده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: یک نظرسنجی در %{participatory_space_title} به پایان رسید
+          notification_title: نظرسنجی <a href="%{resource_path}">%{resource_title}</a> در <a href="%{participatory_space_url}">%{participatory_space_title}</a> به پایان رسید.
+        survey_opened:
+          email_intro: 'نظرسنجی %{resource_title} در %{participatory_space_title} اکنون باز است. می توانید از این صفحه در آن شرکت کنید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: یک نظرسنجی جدید در %{participatory_space_title}
+          notification_title: نظرسنجی <a href="%{resource_path}">%{resource_title}</a> در <a href="%{participatory_space_url}">%{participatory_space_title}</a> اکنون باز است.
+    metrics:
+      survey_answers:
+        description: تعداد نظرسنجی های پاسخ داده شده توسط شرکت کنندگان
+        object: پاسخ به نظرسنجی ها
+        title: پاسخ به نظرسنجی ها
+    statistics:
+      answers_count: پاسخ ها
+    surveys:
+      admin:
+        exports:
+          survey_user_answers: پاسخ های شرکت کننده در نظرسنجی
+        surveys:
+          update:
+            invalid: مشکلی در ذخیره نظرسنجی وجود داشت.
+            success: نظرسنجی با موفقیت ذخیره شد.
+      last_activity:
+        new_survey_at_html: "<span>نظرسنجی جدید در %{link}</span>"
+      surveys:
+        answer:
+          invalid: در پاسخ به نظرسنجی مشکلی وجود داشت.
+          spam_detected: در پاسخ به فرم مشکلی وجود داشت. شاید خیلی سریع عمل کرده اید، می توانید دوباره امتحان کنید؟
+          success: نظرسنجی با موفقیت پاسخ داده شد.

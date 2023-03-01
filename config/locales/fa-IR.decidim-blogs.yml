@@ -1,0 +1,92 @@
+---
+fa-IR:
+  activemodel:
+    models:
+      decidim/blogs/create_post_event: پست جدید وبلاگ
+  activerecord:
+    models:
+      decidim/blogs/post:
+        one: پست
+        other: نوشته ها
+  decidim:
+    blogs:
+      actions:
+        author_id: ایجاد پست به عنوان
+        confirm_destroy: آیا مطمئن هستید که می خواهید این پست را حذف کنید؟
+        destroy: حذف
+        edit: ویرایش کنید
+        new: مطلب جدید
+        title: اقدامات
+      admin:
+        models:
+          components:
+            body: بدن
+          post:
+            name: پست
+        posts:
+          create:
+            invalid: مشکلی در ایجاد این پست وجود داشت
+            success: پست با موفقیت ایجاد شد
+          destroy:
+            success: پست با موفقیت حذف شد
+          edit:
+            save: به روز رسانی
+            title: ویرایش پست
+          index:
+            title: نوشته ها
+          new:
+            create: ايجاد كردن
+            title: پست ایجاد کنید
+          update:
+            invalid: مشکلی در ذخیره پست وجود داشت.
+            success: پست با موفقیت ذخیره شد
+      admin_log:
+        post:
+          create: "%{user_name} پست وبلاگ %{resource_name} را در %{space_name} ایجاد کرد"
+          delete: "%{user_name} پست وبلاگ %{resource_name} را از %{space_name} حذف کرد"
+          update: "%{user_name} پست وبلاگ %{resource_name} را در %{space_name} به روز کرد"
+      last_activity:
+        new_post_at_html: "<span>پست جدید در %{link}</span>"
+      models:
+        post:
+          fields:
+            author: نویسنده
+            body: بدن
+            created_at: ایجاد شده در
+            official_blog_post: پست رسمی
+            title: عنوان
+      posts:
+        show:
+          back: بازگشت به لیست
+          comments: نظرات
+          view: چشم انداز
+        sidebar_blog:
+          comments: نظرات
+          most_commented_posts: بیشترین پست های نظر داده شده
+      read_more: ادامه مطلب
+    components:
+      blogs:
+        actions:
+          create: ايجاد كردن
+          destroy: حذف
+          update: به روز رسانی
+        name: وبلاگ
+        settings:
+          global:
+            announcement: اعلامیه
+            comments_enabled: نظرات فعال شد
+            comments_max_length: حداکثر طول نظرات (0 را برای مقدار پیش فرض بگذارید)
+          step:
+            announcement: اعلامیه
+            comments_blocked: نظرات مسدود شده است
+            endorsements_blocked: تأییدات مسدود شده است
+            endorsements_enabled: تأییدیه ها فعال شد
+    events:
+      blogs:
+        post_created:
+          email_intro: پست "%{resource_title}" در "%{participatory_space_title}" منتشر شده است که شما دنبال می کنید.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا "%{participatory_space_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+          email_subject: پست جدید در %{participatory_space_title} منتشر شده است
+          notification_title: پست <a href="%{resource_path}">%{resource_title}</a> در %{participatory_space_title} منتشر شده است
+    statistics:
+      posts_count: نوشته ها

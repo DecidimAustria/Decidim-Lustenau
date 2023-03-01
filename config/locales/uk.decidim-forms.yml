@@ -1,0 +1,192 @@
+---
+uk:
+  activemodel:
+    attributes:
+      answer:
+        body: Відповідь
+        choices: Вибір
+        selected_choices: Вибрані варіанти
+      question:
+        max_choices: Максимальна кількість варіантів
+        question_type: Тип
+      questionnaire_question:
+        mandatory: Обов'язковий
+        max_characters: Обмеження кількості символів (залиште 0, якщо обмеження немає)
+    errors:
+      models:
+        answer:
+          attributes:
+            add_documents:
+              needs_to_be_reattached: Потрібно повторно прикріпити
+            body:
+              too_long: занадто довгий
+            choices:
+              missing: не повні
+              too_many: занадто багато
+        questionnaire:
+          request_invalid: Під час обробки запиту сталася помилка. Будь ласка спробуйте ще раз
+  decidim:
+    forms:
+      admin:
+        models:
+          components:
+            description: опис
+            tos: Умови використання
+        questionnaires:
+          actions:
+            back: Повернутися до питань
+            show: Показати відповіді
+          answer_option:
+            answer_option: Варіант відповіді
+            free_text: Вільний текст
+            remove: видалити
+            statement: Заява
+          answers:
+            actions:
+              back: Повернутися до відповідей
+              export: Експорт
+              show: Показати відповіді
+            empty: Відповідей ще немає
+            export:
+              answer:
+                title: Відповідь № %{number}
+            export_response:
+              title: survey_user_answers_%{token}
+            index:
+              title: Усього відповідей %{total}
+            show:
+              title: Відповідь № %{number}
+          display_condition:
+            answer_option: Варіант відповіді
+            condition_question: Питання
+            condition_type: Хвороба
+            condition_types:
+              answered: відповів
+              equal: Рівні
+              match: Включає текст
+              not_answered: Без відповіді
+              not_equal: Не рівні
+            condition_value: Включений текст
+            display_condition: Стан дисплея
+            mandatory: Ця умова має виконуватися завжди, незалежно від стану інших умов
+            remove: видалити
+            save_warning: Не забудьте зберегти форму перед налаштуванням умов відображення
+            select_answer_option: Виберіть варіант відповіді
+            select_condition_question: Виберіть запитання
+            select_condition_type: Виберіть тип умови
+          edit:
+            save: зберегти
+            title: Редагувати анкету
+          form:
+            add_question: Додайте запитання
+            add_separator: Додайте роздільник
+            add_title_and_description: Додайте назву й опис
+            already_answered_warning: Деякі користувачі вже відповіли на форму, тому ви не можете змінити запитання.
+            collapse: Згорнути всі запитання
+            expand: Розгорнути всі питання
+            preview: Попередній перегляд
+            title: Редагувати форму для %{questionnaire_for}
+            unpublished_warning: Форма не опублікована. Ви можете змінити запитання, але це призведе до видалення поточних відповідей.
+          matrix_row:
+            matrix_row: рядок
+            remove: видалити
+            statement: Заява
+          question:
+            add_answer_option: Додайте варіант відповіді
+            add_display_condition: Додати умову відображення
+            add_display_condition_info: Збережіть форму, щоб налаштувати умови відображення
+            add_matrix_row: Додати рядок
+            any: Будь-який
+            collapse: Згорнути
+            description: опис
+            down: вниз
+            expand: Розгорнути
+            question: Питання
+            remove: видалити
+            statement: Заява
+            up: вгору
+          separator:
+            down: вниз
+            remove: видалити
+            separator: Роздільник
+            up: вгору
+          title_and_description:
+            collapse: Згорнути
+            description: опис
+            down: вниз
+            expand: Розгорнути
+            remove: видалити
+            title: Назва
+            title_and_description: Назва та опис
+            up: вгору
+          update:
+            invalid: Під час збереження форми виникла проблема.
+            success: Форма успішно збережена.
+      admin_log:
+        questionnaire:
+          update: "%{user_name} оновив анкету %{resource_name}"
+      errors:
+        answer:
+          body: Тіло не може бути порожнім
+      images:
+        dimensions: "%{width} x %{height} пікс"
+        processors:
+          resize_and_pad: Розмір цього зображення буде змінено та додано до %{dimensions}.
+          resize_to_fit: Розмір цього зображення буде змінено відповідно до %{dimensions}.
+      question_types:
+        files: Файли
+        long_answer: Довга відповідь
+        matrix_multiple: Матриця (кілька варіантів)
+        matrix_single: Матриця (один варіант)
+        multiple_option: Кілька варіантів
+        short_answer: Коротка відповідь
+        single_option: Одинарний варіант
+        sorting: Сортування
+        title_and_description: Назва та опис
+      questionnaire_answer_presenter:
+        download_attachment: Завантажити вкладення
+      questionnaires:
+        answer:
+          invalid: Під час відповіді на форму виникла проблема.
+          max_choices_alert: Вибрано забагато варіантів
+          success: На форму надано відповідь.
+        question:
+          max_choices: 'Максимальний вибір: %{n}'
+        show:
+          answer_questionnaire:
+            anonymous_user_message: <a href="%{sign_in_link}">Увійдіть за допомогою свого облікового запису</a> або <a href="%{sign_up_link}">зареєструйтеся</a>, щоб відповісти на форму.
+            title: Відповідь на форму
+          current_step: Крок %{step}
+          of_total_steps: з %{total_steps}
+          questionnaire_answered:
+            body: Ви вже відповіли на цю форму.
+            title: Вже відповів
+          questionnaire_closed:
+            body: Форма закрита і на неї неможливо відповісти.
+            title: Форма закрита
+          questionnaire_for_private_users:
+            body: Форма доступна лише для приватних користувачів
+            title: Форма закрита
+          questionnaire_js_disabled:
+            body: Деякі функції цієї форми будуть вимкнені. Щоб покращити ваш досвід, увімкніть JavaScript у своєму браузері.
+            title: JavaScript вимкнено
+          questionnaire_not_published:
+            body: Ця форма ще не опублікована.
+          tos_agreement: Беручи участь, ви приймаєте Умови обслуговування
+      step_navigation:
+        show:
+          are_you_sure: Цю дію неможливо скасувати, і ви не зможете редагувати свої відповіді. Ти впевнений?
+          back: Назад
+          continue: Продовжити
+          submit: Надіслати
+      user_answers_serializer:
+        body: Відповідь
+        completion: Завершення
+        created_at: Відповів на
+        id: Ідентифікатор відповіді
+        ip_hash: IP хеш
+        question: Питання
+        registered: Зареєстрований
+        session_token: Ідентифікатор користувача
+        unregistered: Незареєстрований
+        user_status: Статус користувача

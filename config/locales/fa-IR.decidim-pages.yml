@@ -1,0 +1,36 @@
+---
+fa-IR:
+  activerecord:
+    models:
+      decidim/pages/page:
+        one: صفحه
+        other: صفحات
+  decidim:
+    admin_log:
+      page:
+        update: "%{user_name} صفحه %{resource_name} را در %{space_name} به روز کرد"
+    components:
+      pages:
+        name: صفحه
+        settings:
+          global:
+            announcement: اعلامیه
+          step:
+            announcement: اعلامیه
+    pages:
+      admin:
+        models:
+          components:
+            body: بدن
+        pages:
+          edit:
+            save: به روز رسانی
+            title: ویرایش صفحه
+          update:
+            invalid: مشکلی در ذخیره صفحه وجود داشت.
+            success: صفحه با موفقیت ذخیره شد.
+      home:
+        hero:
+          participate_title: در فرآیندهای پلتفرم شرکت کنید
+        sub_hero:
+          register_title: برای ایجاد حساب کاربری ثبت نام کنید

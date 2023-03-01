@@ -1,0 +1,171 @@
+---
+fa-IR:
+  activemodel:
+    models:
+      decidim/comments/comment_by_followed_user_event: اظهار نظر
+      decidim/comments/comment_created_event: اظهار نظر
+      decidim/comments/comment_upvoted_event: نظر موافق است
+      decidim/comments/reply_created_event: پاسخ کامنت
+      decidim/comments/user_group_mentioned_event: اشاره
+      decidim/comments/user_mentioned_event: اشاره
+  activerecord:
+    models:
+      decidim/comments/comment:
+        one: اظهار نظر
+        other: نظرات
+      decidim/comments/comment_vote:
+        one: رای
+        other: رای
+  decidim:
+    comments:
+      admin:
+        shared:
+          availability_fields:
+            enabled: نظرات فعال شد
+            end_time: نظرات تا زمان فعال شدن
+            start_time: نظرات از
+      comments:
+        create:
+          error: مشکلی در ایجاد نظر وجود داشت.
+        delete:
+          error: نظر حذف نشد.
+        update:
+          error: مشکلی در به‌روزرسانی نظر وجود داشت.
+      comments_count: نظرات به حساب می آیند
+      comments_title: نظرات
+      last_activity:
+        new_comment_at_html: "<span>نظر جدید در %{link}</span>"
+      view: چشم انداز
+      votes:
+        create:
+          error: در رأی دادن به نظر مشکلی وجود داشت.
+    components:
+      add_comment_form:
+        account_message: برای افزودن نظر خود <a href="%{sign_in_url}">با حساب خود وارد شوید</a> یا <a href="%{sign_up_url}">ثبت نام کنید</a>.
+        form:
+          body:
+            label: اظهار نظر
+            placeholder: چه فکری در این باره دارید؟
+          form_error: متن مورد نیاز است و نمی‌تواند بیشتر از %{length} کاراکتر باشد.
+          submit: ارسال
+          user_group_id:
+            label: نظر دهید به عنوان
+        opinion:
+          label: نظر شما در مورد این موضوع
+          negative: منفی
+          negative_selected: نظر شما در مورد این موضوع منفی است
+          neutral: خنثی
+          neutral_selected: نظر شما در مورد این موضوع خنثی است
+          positive: مثبت
+          positive_selected: نظر شما در مورد این موضوع مثبت است
+        remaining_characters: "%{count} کاراکتر باقی مانده است"
+        remaining_characters_1: "%{count} کاراکتر باقی مانده است"
+        title: نظر خود را اضافه کنید
+      comment:
+        alignment:
+          against: در برابر
+          in_favor: به نفع
+        confirm_destroy: آیا مطمئن هستید که می خواهید این نظر را حذف کنید؟
+        delete: حذف
+        deleted_at: نظر در %{date} حذف شد
+        deleted_user: شرکت کننده حذف شده
+        edit: ویرایش کنید
+        edited: ویرایش شده
+        hide_replies: پنهان کردن پاسخ ها
+        moderated_at: نظر در %{date} تعدیل شد
+        reply: پاسخ
+        report:
+          action: گزارش
+          already_reported: این محتوا قبلا گزارش شده است و توسط یک مدیر بررسی می شود.
+          close: بستن
+          description: آیا این محتوا نامناسب است؟
+          details: نظرات اضافی
+          reasons:
+            does_not_belong: حاوی فعالیت غیرقانونی، تهدید به خودکشی، اطلاعات شخصی یا چیز دیگری است که فکر می‌کنید به %{organization_name} تعلق ندارد.
+            offensive: حاوی نژادپرستی، تبعیض جنسی، توهین، حملات شخصی، تهدید به مرگ، درخواست خودکشی یا هر شکلی از سخنان نفرت انگیز است.
+            spam: شامل طعمه کلیک، تبلیغات، کلاهبرداری یا ربات های اسکریپت است.
+          title: گزارش محتوای نامناسب
+        show_replies: نمایش %{replies_count} پاسخ
+        single_comment_link_title: دریافت لینک
+      comment_order_selector:
+        order:
+          best_rated: بهترین امتیاز
+          most_discussed: بیشترین بحث
+          older: مسن تر
+          recent: اخیر
+        title: 'سفارش توسط:'
+      comment_thread:
+        title: مکالمه با %{authorName}
+      comments:
+        blocked_comments_for_unauthorized_user_warning: برای نظر دادن در این لحظه باید تأیید شوید، اما می توانید موارد قبلی را بخوانید.
+        blocked_comments_for_user_warning: در حال حاضر نمی توانید نظر بدهید، اما می توانید موارد قبلی را بخوانید.
+        blocked_comments_warning: نظرات در حال حاضر غیرفعال هستند، اما می توانید نظرات قبلی را بخوانید.
+        comment_details_title: جزئیات کامنت
+        loading: در حال بارگیری نظرات...
+        single_comment_warning: <a href="%{url}">مشاهده همه نظرات</a>
+        single_comment_warning_title: شما در حال مشاهده یک نظر واحد هستید
+        title:
+          one: نظر %{count}
+          other: "%{count} نظر"
+      down_vote_button:
+        text: من با این نظر مخالفم
+      edit_comment_modal_form:
+        close: بستن
+        form:
+          body:
+            label: اظهار نظر
+            placeholder: چه فکری در این باره دارید؟
+          submit: ارسال
+        title: نظر خود را ویرایش کنید
+      up_vote_button:
+        text: با این نظر موافقم
+    events:
+      comments:
+        comment_by_followed_user:
+          email_intro: "%{author_name} نظری در %{resource_title} گذاشته است. می توانید آن را در این صفحه بخوانید:"
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{author_name} را دنبال می کنید. می توانید این کاربر را از صفحه نمایه او لغو فالو کنید.
+          email_subject: نظر جدیدی توسط %{author_name} در %{resource_title} وجود دارد
+          notification_title: نظر جدیدی توسط <a href="%{author_path}">%{author_name} %{author_nickname}</a> در <a href="%{resource_path}">%{resource_title}</a> وجود دارد.
+        comment_by_followed_user_group:
+          email_intro: 'گروه %{author_name} در %{resource_title} نظر گذاشته است. می توانید آن را در این صفحه بخوانید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{author_name} را دنبال می کنید. می توانید این گروه را از صفحه نمایه آن لغو فالو کنید.
+          email_subject: نظر جدیدی توسط %{author_name} در %{resource_title} وجود دارد
+          notification_title: نظر جدیدی توسط <a href="%{author_path}">%{author_name} %{author_nickname}</a> در <a href="%{resource_path}">%{resource_title}</a> وجود دارد.
+        comment_created:
+          email_intro: "%{resource_title} نظر داده شده است. می توانید نظر را در این صفحه بخوانید:"
+          email_outro: شما این اعلان را دریافت کرده اید زیرا "%{resource_title}" یا نویسنده آن را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+          email_subject: نظر جدیدی از %{author_name} در %{resource_title} وجود دارد
+          notification_title: نظر جدیدی از <a href="%{author_path}">%{author_name} %{author_nickname}</a> در <a href="%{resource_path}">%{resource_title}</a> وجود دارد
+        comment_downvoted:
+          email_intro: نظر شما در "%{resource_title}" رای منفی داده شده است. اکنون در مجموع دارای %{upvotes} رای موافق و %{downvotes} رای منفی است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا شما نویسنده این نظر هستید.
+          email_subject: نظر شما در "%{resource_title}" رای منفی داده شده است.
+          notification_title: <a href="%{resource_path}">نظر</a> شما در "%{resource_title}" رأی منفی داده شده است. اکنون در مجموع دارای %{upvotes} رای موافق و %{downvotes} رای منفی است.
+        comment_upvoted:
+          email_intro: نظر شما در "%{resource_title}" رأی مثبت داده است. اکنون در مجموع دارای %{upvotes} رای موافق و %{downvotes} رای منفی است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا شما نویسنده این نظر هستید.
+          email_subject: نظر شما در "%{resource_title}" رأی مثبت داده است.
+          notification_title: <a href="%{resource_path}">نظر</a> شما در "%{resource_title}" رأی مثبت داده است. اکنون در مجموع دارای %{upvotes} رای موافق و %{downvotes} رای منفی است.
+        reply_created:
+          email_intro: "%{author_name} به نظر شما در %{resource_title} پاسخ داده است. می توانید آن را در این صفحه بخوانید:"
+          email_outro: شما این اعلان را دریافت کرده اید زیرا به نظر شما پاسخ داده شده است.
+          email_subject: "%{author_name} به نظر شما در %{resource_title} پاسخ داده است"
+          notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> به نظر شما در <a href="%{resource_path}">%{resource_title}</a> پاسخ داده است
+        user_group_mentioned:
+          email_intro: گروهی که شما به آن تعلق دارید ذکر شده است
+          email_outro: شما این اعلان را دریافت کرده اید زیرا عضو گروه %{group_name} هستید که در %{resource_title} ذکر شده است.
+          email_subject: از شما در %{resource_title} به عنوان عضوی از %{group_name} نام برده شده است
+          notification_title: شما در <a href="%{resource_path}">%{resource_title}</a> توسط <a href="%{author_path}">%{author_name} %{author_nickname}</a> به عنوان عضوی از <a href="%{group_path}">%{group_name} %{group_nickname}</a نام برده شده‌اید >
+        user_mentioned:
+          email_intro: به شما اشاره شده است
+          email_outro: شما این اعلان را دریافت کرده اید زیرا در %{resource_title} از شما نام برده شده است.
+          email_subject: شما در %{resource_title} نام برده شده اید
+          notification_title: شما در <a href="%{resource_path}">%{resource_title}</a> توسط <a href="%{author_path}">%{author_name} %{author_nickname}</a> نام برده شده‌اید
+    metrics:
+      comments:
+        description: تعداد نظرات ایجاد شده توسط شرکت کنندگان
+        object: نظرات
+        title: نظرات
+  errors:
+    messages:
+      cannot_have_comments: نمی توانم نظر داشته باشم

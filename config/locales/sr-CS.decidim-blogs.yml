@@ -1,0 +1,92 @@
+---
+hr:
+  activemodel:
+    models:
+      decidim/blogs/create_post_event: Novi post na blogu
+  activerecord:
+    models:
+      decidim/blogs/post:
+        one: Post
+        other: Postovi
+  decidim:
+    blogs:
+      actions:
+        author_id: Izradi objavu kao
+        confirm_destroy: Jeste li sigurni da želite izbrisati ovaj post?
+        destroy: Izbrisati
+        edit: Uredi
+        new: Nova objava
+        title: Radnje
+      admin:
+        models:
+          components:
+            body: Tijelo
+          post:
+            name: Post
+        posts:
+          create:
+            invalid: Došlo je do problema pri izradi ovog posta
+            success: Post je uspješno kreiran
+          destroy:
+            success: Post je uspješno izbrisan
+          edit:
+            save: Ažuriraj
+            title: Uredi post
+          index:
+            title: Postovi
+          new:
+            create: Stvoriti
+            title: Izradi post
+          update:
+            invalid: Došlo je do problema prilikom spremanja objave.
+            success: Post je uspješno spremljen
+      admin_log:
+        post:
+          create: "%{user_name} stvorio je post na blogu %{resource_name} u %{space_name}"
+          delete: "%{user_name} je izbrisao %{resource_name} blog post od %{space_name}"
+          update: "%{user_name} ažurirao je post na blogu %{resource_name} u %{space_name}"
+      last_activity:
+        new_post_at_html: "<span>Novi post na %{link}</span>"
+      models:
+        post:
+          fields:
+            author: Autor
+            body: Tijelo
+            created_at: Stvoreno u
+            official_blog_post: Službeni post
+            title: titula
+      posts:
+        show:
+          back: Povratak na popis
+          comments: Komentari
+          view: Pogled
+        sidebar_blog:
+          comments: komentari
+          most_commented_posts: Najkomentiraniji postovi
+      read_more: Čitaj više
+    components:
+      blogs:
+        actions:
+          create: Stvoriti
+          destroy: Izbrisati
+          update: Ažuriraj
+        name: Blog
+        settings:
+          global:
+            announcement: Obavijest
+            comments_enabled: Komentari omogućeni
+            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu vrijednost)
+          step:
+            announcement: Obavijest
+            comments_blocked: Komentari blokirani
+            endorsements_blocked: Preporuke blokirane
+            endorsements_enabled: Preporuke omogućene
+    events:
+      blogs:
+        post_created:
+          email_intro: Post "%{resource_title}" objavljen je u "%{participatory_space_title}" koji pratite.
+          email_outro: Primili ste ovu obavijest jer pratite "%{participatory_space_title}". Možete ga prestati pratiti s prethodne poveznice.
+          email_subject: Novi post objavljen u %{participatory_space_title}
+          notification_title: Post <a href="%{resource_path}">%{resource_title}</a> je objavljen u %{participatory_space_title}
+    statistics:
+      posts_count: Postovi

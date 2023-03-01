@@ -1,0 +1,242 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      debate:
+        category_id: دسته بندی
+        closed_at: بسته شده در
+        conclusions: نتیجه گیری
+        decidim_category_id: دسته بندی
+        description: شرح
+        end_time: به پایان می رسد
+        information_updates: به روز رسانی اطلاعات
+        instructions: دستورالعمل برای شرکت
+        scope_id: محدوده
+        start_time: شروع میشود از
+        title: عنوان
+        user_group_id: ایجاد بحث به عنوان
+    models:
+      decidim/debates/close_debate_event: مناظره بسته شد
+      decidim/debates/create_debate_event: مناظره
+      decidim/debates/creation_disabled_event: مناظره ها غیر فعال شد
+      decidim/debates/creation_enabled_event: ایجاد بحث فعال شد
+  activerecord:
+    models:
+      decidim/debates/debate:
+        one: مناظره
+        other: مناظره ها
+  decidim:
+    components:
+      debates:
+        actions:
+          comment: اظهار نظر
+          create: ايجاد كردن
+          endorse: تایید و امضا
+        name: مناظره ها
+        settings:
+          global:
+            announcement: اعلامیه
+            comments_enabled: نظرات فعال شد
+            comments_max_length: حداکثر طول نظرات (برای مقدار پیش فرض 0 بگذارید)
+            scope_id: محدوده
+            scopes_enabled: دامنه ها فعال شد
+          step:
+            announcement: اعلامیه
+            comments_blocked: نظرات مسدود شده است
+            creation_enabled: شرکت کنندگان می توانند مناظره ایجاد کنند
+            endorsements_blocked: تأییدات مسدود شده است
+            endorsements_enabled: تأییدیه ها فعال شد
+    debates:
+      actions:
+        close: بستن
+        confirm_destroy: مطمئنی؟
+        destroy: حذف
+        edit: ویرایش کنید
+        new: "%{name} جدید"
+        title: اقدامات
+      admin:
+        debate_closes:
+          edit:
+            close: بستن
+            title: مناظره را ببندید
+        debates:
+          create:
+            invalid: مشکلی در ایجاد بحث وجود داشت.
+            success: بحث با موفقیت ایجاد شد.
+          destroy:
+            success: بحث با موفقیت حذف شد.
+          edit:
+            title: ویرایش بحث
+            update: بحث به روز رسانی
+          form:
+            debate_type: نوع مناظره
+            finite: متناهی (با زمان شروع و پایان)
+            open: باز (بدون زمان شروع یا پایان)
+          index:
+            title: مناظره ها
+          new:
+            create: بحث ایجاد کنید
+            title: بحث جدید
+          update:
+            invalid: مشکلی در به‌روزرسانی این بحث وجود داشت.
+            success: بحث با موفقیت به روز شد.
+        exports:
+          comments: نظرات
+        models:
+          debate:
+            name: مناظره
+      admin_log:
+        debate:
+          close: "%{user_name} بحث %{resource_name} را در مورد فضای %{space_name} بسته است"
+          create: "%{user_name} بحث %{resource_name} را در فضای %{space_name} ایجاد کرد"
+          update: "%{user_name} بحث %{resource_name} را در فضای %{space_name} به روز کرد"
+      debate_m:
+        commented_time_ago: "%{time} قبل نظر داد"
+      debates:
+        close:
+          invalid: مشکلی در بسته شدن بحث وجود داشت.
+          success: بحث با موفقیت بسته شد
+        close_debate_modal:
+          close: بستن
+          description: خلاصه یا نتیجه گیری این بحث چیست؟
+          send: مناظره را ببندید
+        closed: بسته شد
+        count:
+          debates_count:
+            one: بحث %{count}
+            other: "%{count} مناظره"
+        create:
+          invalid: مشکلی در ایجاد بحث وجود داشت.
+          success: بحث با موفقیت ایجاد شد.
+        debate:
+          participate: شرکت کردن
+        edit:
+          back: بازگشت
+          save: ذخیره تغییرات
+          title: ویرایش بحث
+        filters:
+          activity: فعالیت من
+          all: همه
+          category: دسته بندی
+          category_prompt: یک دسته را انتخاب کنید
+          commented: نظر داد
+          my_debates: بحث های من
+          official: رسمی
+          origin: اصل و نسب
+          participants: شركت كنندگان
+          scope: محدوده
+          search: جستجو کردن
+          state: وضعیت
+          state_values:
+            closed: بسته شد
+            open: باز کن
+          user_groups: گروه ها
+        filters_small_view:
+          close_modal: بستن مودال
+          filter: فیلتر کنید
+          filter_by: محدود شده توسط
+          unfold: باز کردن
+        form:
+          select_a_category: لطفا یک دسته را انتخاب کنید
+        index:
+          new_debate: بحث جدید
+        new:
+          back: بازگشت
+          create: ايجاد كردن
+          title: بحث جدید
+        orders:
+          commented: بیشترین نظرات
+          label: سفارش مناظره توسط
+          random: ترتیب تصادفی
+          recent: اخیرا
+          updated: به تازگی به روز شده است
+        show:
+          back: بازگشت به لیست
+          close_debate: مناظره را ببندید
+          date: تاریخ
+          debate_closed: بسته شد
+          debate_conclusions_are: 'بحث در %{date} با این نتیجه‌گیری بسته شد:'
+          edit_conclusions: ویرایش نتیجه گیری
+          edit_debate: ویرایش بحث
+          groups_count: گروه ها
+          last_comment_by: آخرین نظر توسط
+          no_comments_yet: هنوز نظری وجود ندارد
+          open: بحث باز
+          participants_count: شركت كنندگان
+        update:
+          invalid: مشکلی در به‌روزرسانی بحث وجود داشت.
+          success: بحث با موفقیت به روز شد.
+        versions:
+          debates:
+            back_to_resource: به بحث برگردید
+          index:
+            title: نسخه ها
+        versions_list:
+          back_to_resource: به بحث برگردید
+      last_activity:
+        debate_updated_at_html: "<span>مناظره در %{link} به روز شد</span>"
+        new_debate_at_html: "<span>مناظره جدید در %{link}</span>"
+      models:
+        debate:
+          fields:
+            end_time: تاریخ پایان
+            official_debate: مناظره رسمی
+            start_time: تاریخ شروع
+            title: عنوان
+    events:
+      debates:
+        create_debate_event:
+          space_followers:
+            email_intro: |-
+              سلام،
+              یک بحث جدید "%{resource_title}" در فضای مشارکتی %{space_title} ایجاد شده است، آن را بررسی کنید و مشارکت کنید:
+            email_outro: شما این اعلان را دریافت کرده اید زیرا فضای مشارکتی %{space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+            email_subject: مناظره جدید "%{resource_title}" در %{space_title}
+            notification_title: بحث <a href="%{resource_path}">%{resource_title}</a> در <a href="%{space_path}">%{space_title}</a> ایجاد شد.
+          user_followers:
+            email_intro: |-
+              سلام،
+              %{author_name} %{author_nickname}، که شما دنبال می‌کنید، یک بحث جدید "%{resource_title}" ایجاد کرده است. آن را بررسی کنید و مشارکت کنید:
+            email_outro: شما این اعلان را دریافت کرده اید زیرا %{author_nickname} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+            email_subject: مناظره جدید "%{resource_title}" توسط %{author_nickname}
+            notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> بحث <a href="%{resource_path}">%{resource_title}</a> را ایجاد کرد.
+        creation_disabled:
+          email_intro: 'ایجاد بحث دیگر در %{participatory_space_title} فعال نیست. همچنان می توانید از این صفحه در مناظره های آزاد شرکت کنید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: ایجاد بحث در %{participatory_space_title} غیرفعال شد
+          notification_title: ایجاد بحث اکنون در <a href="%{participatory_space_url}">%{participatory_space_title}</a> غیرفعال است
+        creation_enabled:
+          email_intro: 'اکنون می توانید بحث های جدیدی را در %{participatory_space_title} شروع کنید! شروع به شرکت در این صفحه کنید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: مناظرات اکنون در %{participatory_space_title} موجود است
+          notification_title: اکنون می‌توانید <a href="%{resource_path}">مناظره‌های جدید</a> را در <a href="%{participatory_space_url}">%{participatory_space_title}</a> شروع کنید
+        debate_closed:
+          affected_user:
+            email_intro: 'مناظره "%{resource_title}" بسته شد. می توانید نتیجه گیری را از صفحه آن بخوانید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا بحث "%{resource_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+            email_subject: مناظره "%{resource_title}" بسته شد
+            notification_title: بحث <a href="%{resource_path}">%{resource_title}</a> بسته شد.
+          follower:
+            email_intro: 'مناظره "%{resource_title}" بسته شد. می توانید نتیجه گیری را از صفحه آن بخوانید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا بحث "%{resource_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+            email_subject: مناظره "%{resource_title}" بسته شد
+            notification_title: بحث <a href="%{resource_path}">%{resource_title}</a> بسته شد.
+    gamification:
+      badges:
+        commented_debates:
+          conditions:
+          - یک مناظره آزاد را برای شرکت در آن انتخاب کنید
+          description: این نشان زمانی اعطا می شود که با گذاشتن نظرات خود به طور فعال در بحث های مختلف شرکت کنید.
+          description_another: این شرکت کننده در مناظره های %{score} شرکت کرده است.
+          description_own: شما در مناظره های %{score} شرکت کرده اید.
+          name: مناظره ها
+          next_level_in: در %{score} مناظره های بیشتر شرکت کنید تا به سطح بعدی برسید!
+          unearned_another: این شرکت کننده هنوز در هیچ مناظره ای شرکت نکرده است.
+          unearned_own: شما هنوز در هیچ مناظره ای شرکت نکرده اید.
+    metrics:
+      debates:
+        description: تعداد بحث های ایجاد شده
+        object: مناظرات
+        title: مناظره ها
+    statistics:
+      debates_count: مناظره ها

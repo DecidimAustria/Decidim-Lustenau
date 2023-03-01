@@ -1,0 +1,647 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      initiative:
+        area_id: حوزه
+        decidim_user_group_id: نویسنده
+        description: شرح
+        offline_votes: امضاهای حضوری
+        offline_votes_for_scope: امضاهای حضوری برای %{scope_name}
+        scope_id: محدوده
+        signature_end_date: پایان دوره جمع آوری امضا
+        signature_start_date: شروع دوره جمع آوری امضا
+        signature_type: نوع جمع آوری امضا
+        signature_type_values:
+          any: مختلط
+          offline: به صورت حضوری
+          online: برخط
+        state: وضعیت
+        title: عنوان
+      initiatives_committee_member:
+        user: عضو کمیته
+      initiatives_settings:
+        initiatives_order: سفارش
+      initiatives_type:
+        area_enabled: نویسندگان را قادر می سازد تا منطقه را برای ابتکار خود انتخاب کنند
+        attachments_enabled: پیوست ها را فعال کنید
+        banner_image: تصویر بنر
+        child_scope_threshold_enabled: امضاهای محدوده کودک را فعال کنید
+        collect_user_extra_fields: جمع آوری اطلاعات شخصی شرکت کنندگان در امضا
+        comments_enabled: فعال کردن نظرات
+        custom_signature_end_date_enabled: نویسندگان را فعال کنید تا پایان دوره جمع آوری امضا را انتخاب کنند
+        description: شرح
+        document_number_authorization_handler: مجوز تأیید شماره سند در امضاها
+        extra_fields_legal_information: اطلاعات حقوقی در مورد جمع آوری داده های شخصی
+        minimum_committee_members: حداقل اعضای کمیته
+        online_signature_enabled: امضای آنلاین فعال شد
+        only_global_scope_enabled: فقط اجازه ایجاد ابتکارات دامنه جهانی را بدهید
+        promoting_committee_enabled: فعال کردن کمیته ترویج
+        signature_type: نوع امضا
+        title: عنوان
+        undo_online_signatures_enabled: شرکت‌کنندگان را فعال کنید تا امضاهای آنلاین خود را لغو کنند
+        validate_sms_code_on_votes: مرحله تأیید کد SMS را به فرآیند امضا اضافه کنید
+      initiatives_vote:
+        date_of_birth: تاریخ تولد
+        document_number: شماره سند
+        name_and_surname: نام و نام خانوادگی
+        postal_code: کد پستی
+      organization_data:
+        address: نشانی
+        id_document: مدرک شناسایی
+        name: اسم کامل
+    errors:
+      models:
+        initiative:
+          attributes:
+            attachment:
+              file: فایل نامعتبر است
+              needs_to_be_reattached: نیاز به اتصال مجدد دارد
+              title: عنوان نباید خالی باشد
+  activerecord:
+    models:
+      decidim/initiative:
+        one: ابتکار عمل
+        other: ابتکارات
+      decidim/initiative_comittee:
+        one: کمیته
+        other: کمیته ها
+      decidim/initiative_vote:
+        one: امضا
+        other: امضاها
+  decidim:
+    admin:
+      actions:
+        new_initiative_type: نوع ابتکار جدید
+      filters:
+        initiatives:
+          decidim_area_id_eq:
+            label: حوزه
+          state_eq:
+            label: حالت
+            values:
+              accepted: امضا کافیه
+              created: ایجاد شده
+              discarded: دور انداخته شد
+              published: منتشر شده
+              rejected: امضای کافی نیست
+              validating: اعتبار سنجی فنی
+          type_id_eq:
+            label: تایپ کنید
+        search_placeholder:
+          title_or_description_or_id_string_or_author_name_or_author_nickname_cont: "%{collection} را بر اساس عنوان، توضیحات، شناسه یا نام نویسنده جستجو کنید."
+      initiatives_settings:
+        update:
+          error: خطایی رخ داده است
+          success: تنظیمات ابتکارات با موفقیت به روز شد
+      menu:
+        attachments: پیوست ها
+        committee_members: اعضای کمیته
+        components: اجزاء
+        information: اطلاعات
+        initiatives: ابتکارات
+        initiatives_settings: تنظیمات
+        initiatives_types: انواع ابتکار
+        moderations: اعتدال
+      models:
+        initiatives:
+          fields:
+            created_at: ایجاد شده در
+            id: شناسه
+            published_at: منتشر شده در
+            state: وضعیت
+            supports_count: امضاها
+            title: ابتکارات
+        initiatives_type_scope:
+          fields:
+            scope: محدوده
+            supports_required: امضا لازم است
+          name: محدوده نوع ابتکار
+        initiatives_types:
+          fields:
+            created_at: ایجاد شده در
+            title: انواع ابتکار
+          name: نوع ابتکار
+        initiatives_votes:
+          fields:
+            date_of_birth: تاریخ تولد
+            document_number: شماره سند
+            hash: هش
+            initiative_end_date: تاریخ پایان
+            initiative_id: شناسه ابتکار
+            initiative_signatures_count: تعداد امضاها
+            initiative_start_date: تاریخ شروع
+            initiative_title: عنوان ابتکار
+            name_and_surname: نام و نام خانوادگی
+            postal_code: کد پستی
+            scope: محدوده
+            time_and_date: زمان و تاریخ
+            timestamp: مهر زمان
+      titles:
+        initiatives: ابتکارات
+        initiatives_types: انواع ابتکار
+    events:
+      initiatives:
+        admin:
+          initiative_sent_to_technical_validation:
+            email_intro: ابتکار "%{resource_title}" برای تایید فنی ارسال شده است. آن را در <a href="%{admin_initiative_url}">پنل مدیریت</a> بررسی کنید
+            email_outro: شما این اعلان را دریافت کرده اید زیرا شما یک ادمین پلتفرم هستید.
+            email_subject: ابتکار "%{resource_title}" برای تایید فنی ارسال شد.
+            notification_title: ابتکار "%{resource_title}" برای تایید فنی ارسال شده است. آن را در <a href="%{admin_initiative_path}">پنل مدیریت</a> بررسی کنید
+        initiative_extended:
+          email_intro: تاریخ پایان امضا برای ابتکار %{resource_title} تمدید شد!
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{resource_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: تاریخ پایان امضای طرح تمدید شد!
+          notification_title: تاریخ پایان امضا برای ابتکار <a href="%{resource_path}">%{resource_title}</a> تمدید شد.
+        initiative_sent_to_technical_validation:
+          email_intro: ابتکار "%{resource_title}" برای تایید فنی ارسال شده است. آن را در <a href="%{admin_initiative_url}">پنل مدیریت</a> بررسی کنید
+          email_outro: شما این اعلان را دریافت کرده اید زیرا شما یک ادمین پلتفرم هستید.
+          email_subject: ابتکار "%{resource_title}" برای تایید فنی ارسال شد.
+          notification_title: ابتکار "%{resource_title}" برای تایید فنی ارسال شده است. آن را در <a href="%{admin_initiative_path}">پنل مدیریت</a> بررسی کنید
+        milestone_completed:
+          affected_user:
+            email_intro: ابتکار شما %{resource_title} به %{percentage}٪ از امضاها دست یافته است!
+            email_outro: شما این اعلان را دریافت کرده اید زیرا شما نویسنده ابتکار %{resource_title} هستید.
+            email_subject: نقطه عطف جدید تکمیل شد!
+            notification_title: ابتکار <a href="%{resource_path}">%{resource_title}</a> شما %{percentage}٪ از امضاها را به دست آورده است.
+          follower:
+            email_intro: ابتکار %{resource_title} به %{percentage}٪ از امضاها دست یافته است!
+            email_outro: شما این اعلان را دریافت کرده اید زیرا %{resource_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+            email_subject: نقطه عطف جدید تکمیل شد!
+            notification_title: ابتکار <a href="%{resource_path}">%{resource_title}</a> %{percentage}٪ از امضاها را به دست آورده است.
+        support_threshold_reached:
+          email_intro: ابتکار %{resource_title} به آستانه امضا رسیده است
+          email_outro: شما این اعلان را دریافت کرده اید زیرا شما یک ادمین پلتفرم هستید.
+          email_subject: به آستانه امضا رسید
+          notification_title: طرح <a href="%{resource_path}">%{resource_title}</a> به آستانه امضا رسیده است
+    gamification:
+      badges:
+        initiatives:
+          conditions:
+          - به فضای مشارکت Intiatives بروید
+          - مراحل ایجاد یک ابتکار جدید را دنبال کنید
+          description: این نشان زمانی اعطا می‌شود که ابتکارات جدیدی را راه‌اندازی می‌کنید و برای اجرای آنها با دیگران شریک می‌شوید.
+          description_another: این شرکت‌کننده ابتکارات %{score} را منتشر کرده است.
+          description_own: شما ابتکارات %{score} را منتشر کرده اید.
+          name: ابتکارات منتشر شده
+          next_level_in: "%{score} ابتکارات بیشتری منتشر کنید تا به سطح بعدی برسید!"
+          unearned_another: این شرکت‌کننده هنوز هیچ ابتکاری منتشر نکرده است.
+          unearned_own: شما هنوز هیچ ابتکاری منتشر نکرده اید.
+    help:
+      participatory_spaces:
+        initiatives:
+          contextual: "<p>یک <strong>ابتکار</strong> پیشنهادی است که می‌تواند توسط هر کسی به ابتکار خود (مستقل از سایر کانال‌ها یا فضاهای مشارکت) از طریق جمع‌آوری امضاهای (دیجیتال) برای سازمان برای انجام یک کار خاص تبلیغ شود. اقدام (تغییر یک مقررات، شروع یک پروژه، تغییر نام یک بخش یا یک خیابان، و غیره).</p> <p> مروجین یک ابتکار می توانند اهداف آن را تعریف کنند، حمایت جمع کنند، بحث کنند، آن را منتشر کنند و تعریف کنند. نقاط جلسه ای که در آن می توان از شرکت کنندگان امضا جمع آوری کرد یا بحث هایی که برای سایر شرکت کنندگان باز است.</p> <p>مثال ها: یک ابتکار می تواند امضاهایی را برای تشکیل جلسه مشاوره بین همه افراد یک سازمان، یا ایجاد یا تشکیل مجمعی جمع آوری کند. ، یا برای شروع فرآیند افزایش بودجه برای یک قلمرو یا منطقه از سازمان. در طول فرآیند جمع آوری امضا، افراد بیشتری می توانند به این تقاضا اضافه کرده و آن را در سازمان پیش ببرند.</p>\n"
+          page: "<p>یک <strong>ابتکار</strong> پیشنهادی است که می‌تواند توسط هر کسی به ابتکار خود (مستقل از سایر کانال‌ها یا فضاهای مشارکت) از طریق جمع‌آوری امضاهای (دیجیتال) برای سازمان برای انجام یک کار خاص تبلیغ شود. اقدام (تغییر یک مقررات، شروع یک پروژه، تغییر نام یک بخش یا یک خیابان، و غیره).</p> <p> مروجین یک ابتکار می توانند اهداف آن را تعریف کنند، حمایت جمع کنند، بحث کنند، آن را منتشر کنند و تعریف کنند. نقاط جلسه ای که در آن می توان از شرکت کنندگان امضا جمع آوری کرد یا بحث هایی که برای سایر شرکت کنندگان باز است.</p> <p>مثال ها: یک ابتکار می تواند امضاهایی را برای تشکیل جلسه مشاوره بین همه افراد یک سازمان، یا ایجاد یا تشکیل مجمعی جمع آوری کند. ، یا برای شروع فرآیند افزایش بودجه برای یک قلمرو یا منطقه از سازمان. در طول فرآیند جمع آوری امضا، افراد بیشتری می توانند به این تقاضا اضافه کرده و آن را در سازمان پیش ببرند.</p>\n"
+          title: ابتکارات چیست؟
+    initiatives:
+      actions:
+        answer: پاسخ
+      admin:
+        answers:
+          edit:
+            answer: پاسخ
+            title: برای %{title} پاسخ دهید
+          info_initiative:
+            created_at: ایجاد شده در
+            description: شرح
+            initiative_votes_count: آرا شمارش می شود
+            initiatives: ابتکارات
+            state: حالت
+        committee_requests:
+          index:
+            approve: تایید
+            confirm_revoke: مطمئنی؟
+            invite_to_committee_help: این پیوند را برای دعوت از سایر شرکت کنندگان به کمیته مروج به اشتراک بگذارید
+            no_members_yet: هیچ عضوی در کمیته مروج وجود ندارد
+            revoke: لغو
+            title: اعضای کمیته
+        content_blocks:
+          highlighted_initiatives:
+            max_results: حداکثر مقدار عناصر برای نمایش
+            order:
+              default: پیش فرض (آخرین اخیر)
+              label: 'عنصر سفارش بر اساس:'
+              most_recent: اخیرا
+        exports:
+          initiatives: ابتکارات
+        initiatives:
+          edit:
+            accept: ابتکار عمل را بپذیرید
+            confirm: مطمئنی؟
+            confirm_send_to_technical_validation: مطمئنی؟
+            discard: ابتکار عمل را کنار بگذارید
+            export_pdf_signatures: PDF امضاها را صادر کنید
+            export_votes: صادرات امضا
+            reject: ابتکار را رد کنید
+            send_to_technical_validation: ارسال به تایید فنی
+            success: ابتکار عمل برای تایید فنی ارسال شده است
+            update: به روز رسانی
+          form:
+            attachments: پیوست ها
+            settings: تنظیمات
+            title: اطلاعات کلی
+          index:
+            actions_title: عمل
+            preview: پیش نمایش
+            print: چاپ
+          initiative_attachments:
+            documents: اسناد
+            edit: ویرایش کنید
+            new: جدید
+            photos: عکس ها
+          update:
+            error: خطایی رخ داده است
+            success: ابتکار با موفقیت به روز شد
+        initiatives_settings:
+          edit:
+            update: به روز رسانی
+          form:
+            comments: بیشترین نظرات
+            date: اخیرا
+            publication_date: اخیرا منتشر شده است
+            random: تصادفی
+            signatures: بیشتر امضا کردند
+            title: تنظیمات برای ابتکارات
+        initiatives_type_scopes:
+          create:
+            error: خطایی رخ داده است
+            success: یک محدوده جدید برای نوع ابتکار معین ایجاد شده است
+          destroy:
+            success: دامنه با موفقیت حذف شد
+          edit:
+            back: بازگشت
+            confirm_destroy: مطمئنی؟
+            destroy: حذف
+            title: قلمرو نوع ابتکار را ویرایش کنید
+            update: به روز رسانی
+          new:
+            back: بازگشت
+            create: ايجاد كردن
+            title: محدوده نوع ابتکار ایجاد کنید
+          update:
+            error: خطایی رخ داده است
+            success: دامنه با موفقیت به روز شد
+        initiatives_types:
+          create:
+            error: خطایی رخ داده است
+            success: یک نوع ابتکار جدید با موفقیت ایجاد شده است
+          destroy:
+            success: نوع ابتکار با موفقیت حذف شد
+          edit:
+            confirm_destroy: مطمئنی؟
+            destroy: حذف
+            update: به روز رسانی
+          form:
+            authorizations: تنظیمات مجوز
+            child_scope_threshold_enabled_help: 'این پرچم پیکربندی از آرای آفلاین پشتیبانی نمی کند. زیرشاخه ها را فعال می کند و با یک کنترل کننده مجوز کار می کند که یک محدوده را به کاربر مرتبط می کند. مطمئن شوید که آن مجوز را در زیر در تنظیمات مجوز انتخاب کرده اید. برای اینکه بتواند کار کند، دامنه ها باید به صورت سلسله مراتبی پیکربندی شوند: 1 Parent - N Child. برای اطلاعات بیشتر در مورد نحوه عملکرد این پیکربندی، به <a href="https://docs.decidim.org/en/admin/spaces/initiatives/" target="_blank">صفحه مستندات سرپرستی ابتکارات</a> مراجعه کنید.'
+            only_global_scope_enabled_help: اگر «امضای حوزه کودک» را فعال کرده‌اید و دامنه جهانی را به‌عنوان محدوده والدین خود پیکربندی کرده‌اید، این پرچم را علامت بزنید. با فعال کردن این، انتخاب نوع ابتکار در جادوگر ایجاد ابتکار حذف می شود. برای اطلاعات بیشتر در مورد نحوه عملکرد این پیکربندی، به این <a href="https://docs.decidim.org/en/admin/spaces/initiatives/" target="_blank">پیوند</a> مراجعه کنید.
+            options: گزینه ها
+            title: اطلاعات کلی
+          initiative_type_scopes:
+            title: محدوده برای نوع ابتکار
+          new:
+            create: ايجاد كردن
+            title: نوع ابتکار جدید
+          update:
+            error: خطایی رخ داده است
+            success: نوع ابتکار با موفقیت به روز شد
+      admin_log:
+        initiative:
+          publish: "%{user_name} ابتکار %{resource_name} را منتشر کرد"
+          send_to_technical_validation: "%{user_name} ابتکار %{resource_name} را برای تأیید فنی ارسال کرد"
+          unpublish: "%{user_name} ابتکار %{resource_name} را کنار گذاشت"
+          update: "%{user_name} ابتکار %{resource_name} را به روز کرد"
+        initiatives_settings:
+          update: "%{user_name} تنظیمات ابتکارات را به روز کرد"
+        initiatives_type:
+          create: "%{user_name} نوع %{resource_name} ابتکار را ایجاد کرد"
+          delete: "%{user_name} نوع %{resource_name} ابتکار را حذف کرد"
+          update: "%{user_name} نوع ابتکارات %{resource_name} را به روز کرد"
+      admin_states:
+        accepted: امضا کافیه
+        created: ایجاد شده
+        discarded: دور انداخته شد
+        published: منتشر شده
+        rejected: امضای کافی نیست
+        validating: اعتبار سنجی فنی
+      application_helper:
+        filter_area_values:
+          all: همه
+        filter_scope_values:
+          all: همه
+        filter_state_values:
+          accepted: امضا کافیه
+          all: همه
+          answered: جواب داد
+          closed: بسته شد
+          open: باز کن
+          rejected: امضای کافی نیست
+        filter_type_values:
+          all: همه
+      committee_requests:
+        approve:
+          success: درخواست تایید شده است.
+        new:
+          continue: ادامه هید
+          help_text: شما در شرف درخواست عضویت در کمیته مروج این طرح هستید
+        revoke:
+          success: درخواست لغو شده است.
+        spawn:
+          success: درخواست شما برای نویسنده ابتکار ارسال شده است.
+      content_blocks:
+        highlighted_initiatives:
+          name: ابتکارات برجسته
+      create_initiative:
+        fill_data:
+          back: بازگشت
+          continue: ادامه هید
+          fill_data_help: "<ul> <li>محتوای ابتکار خود را مرور کنید. آیا عنوان شما به راحتی قابل درک است؟ آیا هدف ابتکار شما مشخص است؟</li> <li>شما باید نوع امضا را انتخاب کنید. حضوری، آنلاین یا ترکیبی از هر دو</li> <li>حوزه جغرافیایی طرح ابتکاری کدام است؟</li> </ul>"
+          initiative_type: نوع ابتکار
+          more_information: "(اطلاعات بیشتر)"
+          select_area: یک منطقه را انتخاب کنید
+          select_scope: یک محدوده انتخاب کنید
+        finish:
+          back: بازگشت
+          back_to_initiatives: بازگشت به ابتکارات
+          callout_text: تبریک می گویم! ابتکار شما با موفقیت ایجاد شد.
+          confirm: شما قصد دارید ابتکار عمل را برای یک مدیر ارسال کنید تا آن را بررسی و منتشر کند. پس از انتشار، نمی توانید آن را ویرایش کنید. مطمئنی؟
+          edit_my_initiative: ابتکار من را ویرایش کنید
+          go_to_my_initiatives: برو سراغ ابتکارات من
+          more_information: "(اطلاعات بیشتر)"
+          send_my_initiative: ابتکار عمل من را به اعتبار فنی ارسال کنید
+        finish_help:
+          access_reminder: می توانید از طریق فیلتر %{link} در صفحه ابتکارات به طرح های خود دسترسی داشته باشید.
+          publish_helper_text: به یاد داشته باشید که برای انتشار ابتکار عمل شما باید اطلاعات مورد نیاز را تکمیل کنید و <strong>آن را به اعتبار فنی ارسال کنید</strong> تا یک سرپرست آن را بررسی کند.
+        previous_form:
+          back: بازگشت
+          continue: ادامه هید
+          help: ابتکار از چه چیزی تشکیل شده است؟ عنوان و توضیحات را بنویسید. ما یک عنوان کوتاه و مختصر و توضیحی متمرکز بر راه حل پیشنهادی را توصیه می کنیم.
+          more_information: "(اطلاعات بیشتر)"
+        promotal_committee:
+          back: بازگشت
+          individual_help_text: این نوع ابتکار به یک کمیسیون ترویجی متشکل از حداقل %{committee_size} نفر (اثارکننده) نیاز دارد. شما باید پیوند زیر را با سایر افرادی که بخشی از این طرح هستند به اشتراک بگذارید. وقتی مخاطبین شما این پیوند را دریافت کردند، باید مراحل مشخص شده را دنبال کنند.
+          more_information: "(اطلاعات بیشتر)"
+        select_initiative_type:
+          back: بازگشت
+          choose_html: من می خواهم یک <strong>%{title}</strong> ایجاد کنم
+          more_information: "(اطلاعات بیشتر)"
+          select: من می خواهم این ابتکار را ترویج کنم
+          select_initiative_type_help: ابتکارات وسیله ای است که شرکت کنندگان می توانند از طریق آن مداخله کنند تا سازمان بتواند اقداماتی را در دفاع از منافع عمومی انجام دهد. کدام ابتکار را می خواهید راه اندازی کنید؟
+        share_committee_link:
+          continue: ادامه هید
+          invite_to_committee_help: پیوند دعوت از افرادی که بخشی از کمیته مروج خواهند بود
+        show_similar_initiatives:
+          back: بازگشت
+          compare_help: اگر هر یک از ابتکارات زیر مشابه طرح شما است، شما را تشویق می کنیم آن را امضا کنید. پیشنهاد شما امکانات بیشتری برای انجام خواهد داشت.
+          continue: ابتکار من متفاوت است
+          more_information: "(اطلاعات بیشتر)"
+      edit:
+        accept: ابتکار عمل را بپذیرید
+        back: بازگشت
+        confirm: مطمئنی؟
+        discard: ابتکار عمل را کنار بگذارید
+        export_pdf_signatures: PDF امضاها را صادر کنید
+        export_votes: صادرات امضا
+        reject: ابتکار را رد کنید
+        title: ویرایش ابتکار
+        update: به روز رسانی
+      events:
+        approve_membership_request:
+          email_intro: "%{author_nickname} درخواست شما را برای عضویت در کمیته مروج ابتکار %{resource_title} پذیرفت."
+          email_outro: 'شما این اعلان را دریافت کردید زیرا برای این طرح درخواست دادید: %{resource_title}'
+          email_subject: "%{author_nickname} درخواست شما را برای کمیته مروج پذیرفت"
+          notification_title: <a href="%{author_profile_url}">%{author_nickname}</a> درخواست شما را برای عضویت در کمیته مروج برای طرح زیر <a href="%{resource_url}">%{resource_title}</a> پذیرفت.
+        create_initiative_event:
+          email_intro: "%{author_name} %{author_nickname}، که شما دنبال می‌کنید، ابتکار جدیدی ایجاد کرده است، آن را بررسی کنید و مشارکت کنید:"
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{author_nickname} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: ابتکار جدید توسط %{author_nickname}
+          notification_title: ابتکار <a href="%{resource_path}">%{resource_title}</a> توسط <a href="%{author_path}">%{author_name} %{author_nickname}</a> ایجاد شد.
+        endorse_initiative_event:
+          email_intro: "%{author_name} %{author_nickname}، کسی که دنبال می‌کنید، ابتکار زیر را تأیید کرده است، شاید بخواهید در گفتگو مشارکت کنید:"
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{author_nickname} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: ابتکار مورد تایید %{author_nickname}
+          notification_title: ابتکار <a href="%{resource_path}">%{resource_title}</a> توسط <a href="%{author_path}">%{author_name} %{author_nickname}</a> تأیید شد.
+        revoke_membership_request:
+          email_intro: "%{author_nickname} درخواست شما را برای عضویت در کمیته مروج ابتکار زیر %{resource_title} رد کرد."
+          email_outro: 'شما این اعلان را دریافت کردید زیرا برای این طرح درخواست دادید: %{resource_title}.'
+          email_subject: "%{author_nickname} درخواست شما را به کمیته مروج رد کرد"
+          notification_title: <a href="%{author_profile_url}">%{author_nickname}</a> درخواست شما را برای عضویت در کمیته مروج طرح زیر <a href="%{resource_url}">%{resource_title}</a> رد کرد.
+        spawn_committee_request_event:
+          email_intro: "%{applicant_nickname} برای کمیته مروج ابتکار %{resource_title} شما درخواست داد. برای پذیرش یا رد درخواست، به فرم ویرایش طرح خود بروید."
+          email_outro: 'شما این اعلان را دریافت کردید زیرا شما نویسنده این ابتکار هستید: %{resource_title}'
+          email_subject: "%{applicant_nickname} می خواهد به ابتکار عمل شما بپیوندد"
+          notification_title: <a href="%{applicant_profile_url}">%{applicant_nickname}</a> برای کمیته مروج طرح شما <a href="%{resource_url}">%{resource_title}</a> درخواست داد. برای پذیرش یا رد کردن، <a href="%{resource_url}/edit">اینجا</a> را کلیک کنید.
+      form:
+        add_attachments: اسناد
+        attachment_legend: "(اختیاری) یک پیوست اضافه کنید"
+        delete_attachment: حذف
+      index:
+        title: ابتکارات
+      initiative_signatures:
+        fill_personal_data:
+          continue: ادامه هید
+          date_select:
+            day: روز
+            month: ماه
+            year: سال
+          help: لطفاً برای امضای ابتکار، فیلدهای زیر را با اطلاعات شخصی خود پر کنید
+        finish:
+          back_to_initiative: بازگشت به ابتکار
+        sms_code:
+          continue: کد را بررسی کنید و ادامه دهید
+          help: اس ام اس های دریافتی در گوشی خود را بررسی کنید
+        sms_phone_number:
+          continue: برام اس ام اس بفرست
+          help: فرم را با شماره تلفن تأیید شده خود پر کنید تا کد تأیید خود را درخواست کنید
+      initiative_votes:
+        create:
+          error: مشکلی در امضای طرح وجود داشت.
+          invalid: داده های ارائه شده برای امضای ابتکار معتبر نیست
+          success_html: تبریک می گویم! ابتکار <strong>%{title}</strong> با موفقیت امضا شد
+        personal_data:
+          invalid: داده های شخصی با داده های ارائه شده برای مجوز مطابقت ندارد.
+        sms_code:
+          invalid: کد تأیید شما با کد ما مطابقت ندارد. لطفاً اس ام اسی را که برایتان فرستادیم دوباره بررسی کنید.
+        sms_phone:
+          invalid: شماره تلفن نامعتبر است یا در انتظار مجوز است. لطفاً مجوزهای خود را بررسی کنید.
+      initiatives:
+        author:
+          deleted: حذف شده
+        author_list:
+          hidden_authors_count:
+            one: و 1 نفر دیگر
+            other: و %{count} نفر دیگر
+        committee_members:
+          approve: تایید
+          confirm_revoke: مطمئنی؟
+          invite_to_committee_help: این پیوند را برای دعوت از سایر شرکت کنندگان به کمیته مروج به اشتراک بگذارید
+          no_members_yet: هیچ عضوی در کمیته مروج وجود ندارد
+          revoke: لغو
+          title: اعضای کمیته
+        count:
+          title:
+            one: ابتکار %{count}
+            other: "%{count} ابتکارات"
+        filters:
+          any: هر
+          area: حوزه
+          author: نویسنده
+          myself: ابتکارات من
+          scope: محدوده
+          search: جستجو کردن
+          state: وضعیت
+          type: تایپ کنید
+        filters_small_view:
+          close_modal: پنجره بسته
+          filter: فیلتر کنید
+          filter_by: محدود شده توسط
+          unfold: باز کردن
+        index_header:
+          new_initiative: ابتکار جدید
+          not_authorized:
+            authorizations_page: مشاهده مجوزها
+            close: بستن
+            explanation: برای ایجاد یک ابتکار جدید باید تأیید شوید.
+            title: مجوز لازم است
+        initiatives:
+          closed_initiatives_warning: در حال حاضر، هیچ طرح باز وجود ندارد، اما در اینجا می توانید تمام ابتکارات بسته فهرست شده را پیدا کنید.
+          no_initiatives_warning: هیچ طرحی با معیارهای جستجوی شما مطابقت ندارد.
+        interactions:
+          comments_count:
+            count:
+              one: اظهار نظر
+              other: نظرات
+        orders:
+          label: 'مرتب سازی ابتکارات بر اساس:'
+          most_commented: بیشترین نظرات
+          most_voted: بیشتر امضا کردند
+          random: تصادفی
+          recent: اخیرا
+          recently_published: اخیرا منتشر شده است
+        print:
+          address: نشانی
+          author_title: نویسنده ابتکار
+          city: شهر
+          email: پست الکترونیک
+          full_name: نام و نام خانوادگی
+          general_title: درخواست پذیرش یک ابتکار
+          id_number: شماره شناسایی
+          initiative:
+            attachments: اسناد پیوست (لطفا نام هر سند را در زیر بنویسید)
+            description: 'شرح:'
+            title: 'عنوان:'
+            type: نوع ابتکار
+          legal_text: طبق قوانین فعلی، داده های شخصی جمع آوری شده توسط سازمان گنجانده شده و به صورت محرمانه با آنها رفتار خواهد شد.
+          members_header: اعضای کمیته مروج این طرح
+          phone_number: شماره تلفن
+          place_date: مکان، تاریخ
+          postal_code: کد پستی/پستی
+          print: چاپ
+          province: استان / ایالت
+          section: 'در صورت درخواست سازمان، لطفاً این فرم را پرینت و پر کنید تا در موارد ذکر شده ارسال کنید:'
+          signature: امضا
+        result:
+          answer_title: این ابتکار پاسخ داده شده است
+          initiative_rejected_reason: این طرح به دلیل عدم امضای آن رد شده است.
+        show:
+          any_vote_method: این طرح هم امضاهای آنلاین و هم حضوری را جمع آوری می کند.
+          confirm: شما قصد دارید ابتکار عمل را برای یک مدیر ارسال کنید تا آن را بررسی و منتشر کند. پس از انتشار، نمی توانید آن را ویرایش کنید. مطمئنی؟
+          edit: ویرایش کنید
+          follow_description: هنگامی که اخباری در این طرح وجود دارد، یک اعلان دریافت کنید
+          offline_method: این ابتکار فقط امضاهای حضوری را جمع آوری می کند.
+          print: ابتکار چاپ
+          send_to_technical_validation: ارسال به تایید فنی
+        signatures_count:
+          one: " امضا"
+          other: " امضاها"
+        vote_cabin:
+          already_voted: قبلا امضا شده است
+          supports_required: "%{total_supports} امضا لازم است"
+          verification_required: برای امضای ابتکار، حساب خود را تأیید کنید
+          vote: امضا کردن
+          votes_blocked: امضا غیرفعال شد
+        votes_count:
+          count:
+            one: امضا
+            other: امضاها
+          most_popular_initiative: محبوب ترین ابتکار عمل
+          need_more_votes: نیاز به امضای بیشتر
+      initiatives_mailer:
+        creation_subject: ابتکار عمل شما "%{title}" ایجاد شده است
+        initiative_link:
+          check_initiative_details: می توانید جزئیات ابتکار را مشاهده کنید
+          here: اینجا
+        more_information: در اینجا اطلاعات بیشتری در مورد فرآیند ایجاد ابتکار دارید.
+        progress_report_body_for: ابتکار %{title} به %{percentage}٪ از امضاهای مورد نیاز رسیده است.
+        progress_report_for: 'خلاصه در مورد ابتکار: %{title}'
+        promotal_committee_help: به یاد داشته باشید که باید حداقل %{member_count} نفر را به کمیته مروج دعوت کنید. برای دعوت از افراد به کمیته مروج لینک زیر را فوروارد کنید
+        status_change_body_for: ابتکار %{title} وضعیت خود را به %{state} تغییر داده است
+        status_change_for: ابتکار %{title} وضعیت خود را تغییر داده است
+      last_activity:
+        new_initiative: ابتکار جدید
+      pages:
+        home:
+          highlighted_initiatives:
+            active_initiatives: ابتکارات فعال
+            see_all_initiatives: همه ابتکارات را ببینید
+      show:
+        badge_name:
+          accepted: امضا کافیه
+          created: ایجاد شده
+          discarded: دور انداخته شد
+          published: منتشر شده
+          rejected: امضای کافی نیست
+          validating: اعتبار سنجی فنی
+      signature_interval:
+        title: دوره جمع آوری امضا
+      states:
+        accepted: پذیرفته شده
+        expired: منقضی شده
+      unavailable_scope: محدوده در دسترس نیست
+      update:
+        error: خطایی رخ داده است
+        success: ابتکار با موفقیت به روز شد
+      versions:
+        shared:
+          back_to_resource: به ابتکار بازگردید
+    menu:
+      initiatives: ابتکارات
+    resources:
+      initiative:
+        actions:
+          comment: اظهار نظر
+      initiatives_type:
+        actions:
+          title: اقدامات
+          vote: امضا کردن
+  layouts:
+    decidim:
+      initiative_creation_header:
+        back: بازگشت
+        fill_data: ايجاد كردن
+        finish: پایان
+        previous_form: شروع کنید
+        promotal_committee: کمیته مروج
+        select_initiative_type: انتخاب کنید
+        show_similar_initiatives: مقایسه کنید
+        step: مرحله %{current} از %{total}
+        title: ابتکار جدید ایجاد کنید
+      initiative_header:
+        initiative_menu_item: ابتکار عمل
+      initiative_signature_creation_header:
+        back: بازگشت
+        fill_personal_data: داده های خود را تکمیل کنید
+        finish: پایان
+        finished: امضای ابتکار ایجاد شد
+        see_steps: مراحل را ببینید
+        select_identity: هویت را انتخاب کنید
+        sms_code: تایید کد پیامکی
+        sms_phone_number: شماره موبایل
+        step: مرحله %{current} از %{total}
+        title: علامت %{initiative_title}
+      initiatives:
+        initiative:
+          check: آن را بررسی کنید
+          check_and_support: بررسی کنید و امضا کنید
+        no_initiatives_yet:
+          no_initiatives_yet: هنوز هیچ ابتکاری وجود ندارد!

@@ -1,0 +1,280 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      result:
+        decidim_accountability_status_id: وضعیت
+        decidim_category_id: دسته بندی
+        decidim_scope_id: محدوده
+        description: شرح
+        end_date: تاریخ پایان
+        progress: پیش رفتن
+        project_ids: پروژه های شامل
+        proposals: شامل پیشنهادات
+        start_date: تاریخ شروع
+        title: عنوان
+        updated_at: به روز شده در
+      status:
+        description: شرح
+        key: کلید
+        name: نام
+        progress: پیش رفتن
+      timeline_entry:
+        description: شرح
+        entry_date: تاریخ
+        title: عنوان
+    models:
+      decidim/accountability/proposal_linked_event: پیشنهاد در یک نتیجه گنجانده شده است
+      decidim/accountability/result_progress_updated_event: پیشرفت نتیجه به روز شد
+  activerecord:
+    models:
+      decidim/accountability/result:
+        one: نتیجه
+        other: نتایج
+  decidim:
+    accountability:
+      actions:
+        attachment_collections: پوشه ها
+        attachments: پیوست ها
+        confirm_destroy: آیا مطمئن هستید که می خواهید این %{name} را حذف کنید؟
+        destroy: حذف
+        edit: ویرایش کنید
+        import_csv: CSV را وارد کنید
+        new: "%{name} جدید"
+        preview: پیش نمایش
+        timeline_entries: تکامل پروژه
+        title: اقدامات
+      admin:
+        exports:
+          result_comments: نظرات
+          results: نتایج
+        import_results:
+          new:
+            download_export: صادرات با فرمت CSV را دانلود کنید
+            import: وارد كردن
+            info: |
+              <p>توصیه می کنیم این مراحل را دنبال کنید:</p>
+              <ol>
+              <li><a href='%{link_new_status}' target='_blank'>وضعیت‌هایی را برای نتایجی که می‌خواهید اضافه کنید</a> ایجاد کنید</li>
+              <li><a href='%{link_new_result}' target='_blank'>حداقل یک نتیجه را به صورت دستی ایجاد کنید</a> قبل از استفاده از Import، برای درک بهتر قالب و آنچه باید پر کنید، از طریق این پانل مدیریت بیرون.</li>
+              <li>%{link_export_csv}</li>
+              <li>تغییرات را به صورت محلی انجام دهید. شما فقط می توانید ستون های زیر CSV را تغییر دهید:
+                <ul>
+                <li><b>category/id:</b> ID برای دسته</li>
+                <li><b>scope/id:</b> ID برای Scope</li>
+                <li><b>parent/id:</b> ID والد (برای نتایج مرتبط). اختیاری</li>
+                <li><b>title/en:</b> عنوان به زبان انگلیسی. این به پیکربندی زبان پلتفرم شما بستگی دارد.</li>
+                <li><b>description/en:</b> توضیحات در زبان انگلیسی. این به پیکربندی زبان پلتفرم شما بستگی دارد.</li>
+                <li><b>تاریخ_شروع:</b> تاریخی که نتیجه شروع به اجرا می‌کند (قالب YYYY-MM-DD)</li>
+                <li><b>تاریخ_پایان:</b> تاریخی که نتیجه اجرا به پایان می رسد (قالب YYYY-MM-DD)</li>
+                <li><b>status/id:</b> شناسه وضعیت برای این نتیجه</li>
+                <li><b>پیشرفت:</b> درصد (از 0 تا 100) اجرا</li>
+                <li><b>proposals_ids:</b> شناسه داخلی پیشنهادهای مرتبط (با کاما از هم جدا شده اند). به طور خودکار به <span class='attribute-name'>proposal_url</span></li> تبدیل می شود
+                </ul>
+              </li>
+              </ol>
+            title: نتایج را از CSV وارد کنید
+        imports:
+          create:
+            success: وارد کردن فایل شروع شده است. در چند دقیقه آینده یک ایمیل با نتیجه واردات دریافت خواهید کرد
+        models:
+          result:
+            name: نتیجه
+          status:
+            name: وضعیت
+          timeline_entry:
+            name: ورود به جدول زمانی
+        results:
+          create:
+            invalid: در ایجاد این نتیجه مشکلی وجود داشت
+            success: نتیجه با موفقیت ایجاد شد
+          destroy:
+            success: نتیجه با موفقیت حذف شد
+          edit:
+            title: نتیجه را ویرایش کنید
+            update: به روز رسانی نتیجه
+          index:
+            title: نتایج
+          new:
+            create: نتیجه ایجاد کنید
+            title: نتیجه جدید
+          update:
+            invalid: مشکلی در به‌روزرسانی این نتیجه وجود داشت
+            success: نتیجه با موفقیت به روز شد
+        shared:
+          subnav:
+            statuses: وضعیت ها
+        statuses:
+          create:
+            invalid: مشکلی در ایجاد این وضعیت وجود داشت
+            success: وضعیت با موفقیت ایجاد شد
+          destroy:
+            success: وضعیت با موفقیت حذف شد
+          edit:
+            title: ویرایش وضعیت
+            update: وضعیت به روز رسانی
+          index:
+            title: وضعیت ها
+          new:
+            create: وضعیت ایجاد کنید
+            title: وضعیت جدید
+          update:
+            invalid: مشکلی در به روز رسانی این وضعیت وجود داشت
+            success: وضعیت با موفقیت به روز شد
+        timeline_entries:
+          create:
+            invalid: مشکلی در ایجاد این ورودی وجود داشت
+            success: ورودی با موفقیت ایجاد شد
+          destroy:
+            success: مدخل با موفقیت حذف شد
+          edit:
+            title: ویرایش مدخل
+            update: ورودی را به روز کنید
+          index:
+            title: ورودی های جدول زمانی پروژه
+          new:
+            create: ورودی ایجاد کنید
+            title: ورودی جدید
+          update:
+            invalid: مشکلی در به‌روزرسانی این ورودی وجود داشت
+            success: ورودی با موفقیت به روز شد
+      admin_log:
+        result:
+          create: "%{user_name} نتیجه %{resource_name} را در %{space_name} ایجاد کرد"
+          delete: "%{user_name} نتیجه %{resource_name} را در %{space_name} حذف کرد"
+          update: "%{user_name} نتیجه %{resource_name} را در %{space_name} به روز کرد"
+        status:
+          create: "%{user_name} وضعیت %{resource_name} را ایجاد کرد"
+          delete: "%{user_name} وضعیت %{resource_name} را حذف کرد"
+          update: "%{user_name} وضعیت %{resource_name} را به روز کرد"
+        timeline_entry:
+          create: "%{user_name} ورودی خط زمانی %{resource_name} را ایجاد کرد"
+          delete: "%{user_name} ورودی خط زمانی %{resource_name} را حذف کرد"
+          update: "%{user_name} ورودی خط زمانی %{resource_name} را به روز کرد"
+        value_types:
+          parent_presenter:
+            not_found: 'والد در پایگاه داده یافت نشد (ID: %{id})'
+      content_blocks:
+        highlighted_results:
+          dates: تاریخ
+          results: نتایج
+          unspecified: مشخص نشده است
+      import_mailer:
+        import:
+          errors: خطاها
+          errors_present: مشکلی در وارد کردن نتایج وجود داشت
+          row_number: ردیف
+          subject: واردات موفقیت آمیز نتایج
+          success: واردات موفقیت آمیز نتایج می توانید نتایج را در رابط مدیریت بررسی کنید.
+      last_activity:
+        new_result_at_html: "<span>نتیجه جدید در %{link}</span>"
+      models:
+        result:
+          fields:
+            category: دسته بندی
+            created_at: ایجاد شده
+            end_date: تاریخ پایان
+            id: شناسه
+            progress: پیش رفتن
+            scope: محدوده
+            start_date: تاریخ شروع
+            status: وضعیت
+            title: عنوان
+        status:
+          fields:
+            description: شرح
+            key: کلید
+            name: نام
+            progress: پیش رفتن
+        timeline_entry:
+          fields:
+            entry_date: تاریخ
+            title: عنوان
+      result_m:
+        executed: اجرا شده
+        view: چشم انداز
+      results:
+        count:
+          results_count:
+            one: 1 نتیجه
+            other: نتایج %{count}
+        filters:
+          all: همه
+          scopes: محدوده ها
+        home:
+          categories_label: دسته بندی ها
+          subcategories_label: زیر مجموعه ها
+        home_header:
+          global_status: وضعیت اجرای جهانی
+        nav_breadcrumb:
+          global: اعدام جهانی
+        search:
+          search: جستجو برای اقدامات
+        show:
+          stats:
+            attendees: شرکت کنندگان
+            back_to_resource: به نتیجه برگردید
+            comments: نظرات
+            contributions: مشارکت ها
+            last_edited_by: آخرین ویرایش توسط
+            last_updated_at: آخرین به روز رسانی در
+            meetings: جلسات
+            proposals: پیشنهادات
+            votes: پشتیبانی می کند
+        timeline:
+          title: تکامل پروژه
+    admin:
+      filters:
+        results:
+          category_id_eq:
+            label: دسته بندی
+          scope_id_eq:
+            label: محدوده
+          status_id_eq:
+            label: وضعیت
+    components:
+      accountability:
+        actions:
+          comment: اظهار نظر
+        name: مسئوليت
+        settings:
+          global:
+            categories_label: نام "دسته ها"
+            comments_enabled: نظرات فعال شد
+            comments_max_length: حداکثر طول نظرات (0 را برای مقدار پیش فرض بگذارید)
+            display_progress_enabled: نمایش پیشرفت
+            heading_leaf_level_results: نام برای "پروژه ها"
+            heading_parent_level_results: نام برای "نتایج"
+            intro: مقدمه
+            scope_id: محدوده
+            scopes_enabled: دامنه ها فعال شد
+            subcategories_label: نام "زیر دسته ها"
+          step:
+            comments_blocked: نظرات مسدود شده است
+    events:
+      accountability:
+        proposal_linked:
+          email_intro: 'پیشنهاد "%{proposal_title}" در یک نتیجه گنجانده شده است. می توانید آن را از این صفحه ببینید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا "%{proposal_title}" را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: به روز رسانی به %{proposal_title}
+          notification_title: پیشنهاد <a href="%{proposal_path}">%{proposal_title}</a> در نتیجه <a href="%{resource_path}">%{resource_title}</a> گنجانده شده است.
+        result_progress_updated:
+          email_intro: 'نتیجه "%{resource_title}" که شامل پیشنهاد "%{proposal_title}" است، اکنون %{progress}٪ کامل شده است. می توانید آن را از این صفحه ببینید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا "%{proposal_title}" را دنبال می کنید، و این پیشنهاد در نتیجه "%{resource_title}" گنجانده شده است. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: به‌روزرسانی برای پیشرفت %{resource_title}
+          notification_title: نتیجه <a href="%{resource_path}">%{resource_title}</a>، که شامل پیشنهاد <a href="%{proposal_path}">%{proposal_title}</a> است، اکنون %{progress}٪ کامل شده است.
+    metrics:
+      results:
+        description: تعداد نتایج ایجاد شده
+        object: نتایج
+        title: نتایج
+    participatory_spaces:
+      highlighted_results:
+        see_all: مشاهده همه نتایج (%{count})
+    resource_links:
+      included_projects:
+        result_project: پروژه هایی که در این نتیجه گنجانده شده اند
+      included_proposals:
+        result_proposal: پیشنهادات در این نتیجه گنجانده شده است
+    statistics:
+      results_count: نتایج

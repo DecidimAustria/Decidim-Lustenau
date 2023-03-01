@@ -1,0 +1,278 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      config:
+        available_methods: روش های موجود
+        offline: آفلاین
+        offline_explanation: دستورالعمل برای تأیید آفلاین
+        online: برخط
+      id_document_information:
+        document_number: شماره سند (با حرف)
+        document_type: نوع سند
+      id_document_upload:
+        document_number: شماره سند (با حرف)
+        document_type: سند خود را تایپ کنید
+        user: شرکت کننده
+        verification_attachment: کپی اسکن شده سند شما
+      offline_confirmation:
+        email: ایمیل شرکت کننده
+      postal_letter_address:
+        full_address: آدرس کامل
+      postal_letter_confirmation:
+        verification_code: کد تایید
+      postal_letter_postage:
+        full_address: آدرس کامل
+        verification_code: کد تایید
+    errors:
+      models:
+        census_data:
+          attributes:
+            file:
+              malformed: فایل وارداتی نادرست است، لطفاً دستورالعمل ها را به دقت بخوانید و مطمئن شوید که فایل دارای کد UTF-8 است.
+  decidim:
+    admin:
+      menu:
+        authorization_revocation:
+          before_date_info: اگر فرآیند قبلاً شروع شده باشد و بخواهید مجوزهای فرآیند قبلی را لغو کنید مفید است.
+          button: همه را لغو کنید
+          button_before: ابطال قبل از تاریخ
+          destroy:
+            confirm: لغو مجوزهای قبل از تاریخ قابل لغو نیست. آیا مطمئن هستید که میخواهید ادامه دهید؟
+            confirm_all: لغو همه مجوزها قابل لغو نیست. آیا مطمئن هستید که میخواهید ادامه دهید؟
+          destroy_nok: هنگام لغو مجوزها مشکلی پیش آمد.
+          destroy_ok: همه مجوزهای منطبق با موفقیت لغو شدند.
+          info: در مجموع %{count} شرکت کننده تأیید شده وجود دارد.
+          no_data: هیچ شرکت کننده تأیید شده ای وجود ندارد
+          title: لغو مجوزها
+        authorization_workflows: مجوزها
+    admin_log:
+      organization:
+        update_id_documents_config: "%{user_name} پیکربندی مجوز اسناد هویت را به روز کرد"
+      user:
+        grant_id_documents_offline_verification: "%{user_name} %{resource_name} را با استفاده از مجوز اسناد هویت آفلاین تأیید کرد"
+    authorization_handlers:
+      admin:
+        csv_census:
+          help:
+          - مدیران یک CSV را با ایمیل های شرکت کنندگان پذیرفته شده آپلود می کنند
+          - فقط شرکت‌کنندگانی که ایمیلی در آن فایل CSV دارند می‌توانند تأیید شوند
+        id_documents:
+          help:
+          - کاربران اطلاعات هویتی خود را پر می کنند و یک کپی از سند خود را آپلود می کنند.
+          - شما اطلاعات موجود در تصویر آپلود شده را پر می کنید.
+          - اطلاعات باید با آنچه کاربر پر کرده است مطابقت داشته باشد.
+          - اگر نمی توانید اطلاعات را به وضوح ببینید یا نمی توانید آنها را تأیید کنید، می توانید درخواست را رد کنید و کاربر می تواند آن را برطرف کند.
+        postal_letter:
+          help:
+          - شرکت‌کنندگان درخواست می‌کنند یک کد تأیید به آدرس آنها ارسال شود.
+          - شما نامه را با کد تایید به آدرس آنها ارسال می کنید.
+          - شما نامه را به عنوان ارسال علامت گذاری می کنید.
+          - پس از علامت گذاری نامه به عنوان ارسال شده، شرکت کننده می تواند کد را معرفی کند و تأیید شود.
+      csv_census:
+        explanation: با استفاده از سرشماری سازمان تایید صلاحیت شوید
+        name: سرشماری سازمان
+      direct: مستقیم
+      help: کمک
+      id_documents:
+        explanation: مدارک هویتی خود را آپلود کنید تا بتوانیم هویت شما را بررسی کنیم
+        name: مدارک هویتی
+      multistep: چند مرحله ای
+      name: نام
+      postal_letter:
+        explanation: ما نامه ای پستی با کدی برای شما ارسال می کنیم که باید آن را وارد کنید تا بتوانیم آدرس شما را تأیید کنیم
+        name: کد با نامه پستی
+    events:
+      verifications:
+        verify_with_managed_user:
+          email_intro: شرکت‌کننده <a href="%{resource_url}">%{resource_title}</a> سعی کرده است خود را با داده‌های یک شرکت‌کننده دیگر تأیید کند (<a href="%{managed_user_url}">%{managed_user_name}</a>).
+          email_outro: <a href="%{conflicts_url}">فهرست تداخل تأییدیه‌ها</a> را بررسی کنید و با شرکت‌کننده تماس بگیرید تا جزئیات او را تأیید کرده و مشکل را حل کنید.
+          email_subject: تلاش برای تأیید ناموفق علیه شرکت‌کننده دیگر
+          notification_title: شرکت‌کننده <a href="%{resource_path}">%{resource_title}</a> سعی کرده است خود را با داده‌های یک شرکت‌کننده دیگر تأیید کند (<a href="%{managed_user_path}">%{managed_user_name}</a>).
+    verifications:
+      authorizations:
+        authorization_metadata:
+          info: 'این داده های تأیید فعلی است:'
+          no_data_stored: هیچ داده ای ذخیره نشده است.
+        create:
+          error: مشکلی در ایجاد مجوز وجود داشت.
+          success: شما با موفقیت مجوز گرفتید.
+          unconfirmed: برای اینکه خود را مجاز کنید باید ایمیل خود را تأیید کنید.
+        destroy:
+          error: مشکلی در حذف مجوز وجود داشت.
+          success: شما با موفقیت مجوز را حذف کردید.
+        first_login:
+          actions:
+            another_dummy_authorization_handler: با نمونه دیگری از کنترل کننده مجوز تأیید کنید
+            csv_census: بررسی در برابر سرشماری سازمان
+            dummy_authorization_handler: در مقابل کنترل کننده مجوز نمونه تأیید کنید
+            dummy_authorization_workflow: در برابر گردش کار مجوز نمونه تأیید کنید
+            id_documents: با بارگذاری سند هویت خود تأیید شوید
+            postal_letter: با دریافت کد تأیید از طریق پست پستی تأیید شوید
+            sms: با دریافت کد تایید پیامکی تایید شوید
+          title: هویت خود را تأیید کنید
+          verify_with_these_options: 'این گزینه های موجود برای تأیید هویت شما هستند:'
+        index:
+          expired_verification: تأیید اعتبار منقضی شد
+          pending_verification: تایید در حال بررسی
+          show_renew_info: برای تمدید تأیید کلیک کنید
+          unauthorized_verification: تأیید جدید
+        new:
+          authorize: ارسال
+          authorize_with: با %{authorizer} تأیید کنید
+        renew_modal:
+          cancel: لغو کنید
+          close: بستن
+          continue: ادامه هید
+          info_renew: اگر می خواهید داده ها را به روز کنید، به تمدید ادامه دهید
+          title: تمدید تأیید
+        skip_verification: می توانید فعلاً از این و %{link} صرف نظر کنید
+        start_exploring: شروع به کاوش کنید
+      csv_census:
+        admin:
+          census:
+            create:
+              error: هنگام وارد کردن سرشماری خطایی روی داد.
+              success: "%{count} مورد با موفقیت وارد شد (خطاهای %{errors})"
+            destroy_all:
+              success: تمام اطلاعات سرشماری حذف شده است
+          destroy:
+            confirm: حذف همه سرشماری را نمی توان واگرد کرد. آیا مطمئن هستید که میخواهید ادامه دهید؟
+            title: تمام داده های سرشماری را حذف کنید
+          index:
+            data: در کل رکوردهای %{count} بارگیری شده است. آخرین تاریخ آپلود در %{due_date} بود
+            empty: هیچ داده سرشماری وجود ندارد. از فرم زیر برای وارد کردن آن با استفاده از یک فایل CSV استفاده کنید.
+            title: داده های سرشماری فعلی
+          instructions:
+            body: برای این کار باید وارد مدیریت سیستم شوید و مجوزهای csv_census را به سازمان اضافه کنید
+            title: شما باید سرشماری CSV را برای این سازمان فعال کنید
+          new:
+            file: فایل csv. با داده های ایمیل
+            info: 'باید یک فایل با فرمت CSV با تنها یک ستون با آدرس ایمیل باشد:'
+            submit: آپلود فایل
+            title: یک سرشماری جدید آپلود کنید
+        authorizations:
+          new:
+            error: ما نتوانستیم حساب شما را تأیید کنیم یا در سرشماری سازمان نیستید.
+            success: حساب شما با موفقیت تأیید شد.
+      dummy_authorization:
+        extra_explanation:
+          postal_codes:
+            one: شرکت به شرکت‌کنندگانی که کد پستی %{postal_codes} را دارند محدود می‌شود.
+            other: 'شرکت برای شرکت‌کنندگان با هر یک از کد پستی زیر محدود می‌شود: %{postal_codes}.'
+          scope: شرکت به شرکت‌کنندگانی با محدوده %{scope_name} محدود می‌شود.
+          user_postal_codes:
+            one: شرکت محدود به شرکت‌کنندگان با کد پستی %{postal_codes} است و کد پستی شما %{user_postal_code} است.
+            other: 'شرکت برای شرکت‌کنندگان با هر یک از کد پستی زیر محدود می‌شود: %{postal_codes}. کد پستی شما %{user_postal_code} است.'
+          user_scope: شرکت محدود به شرکت‌کنندگان با دامنه %{scope_name} است و دامنه شما %{user_scope_name} است.
+      id_documents:
+        admin:
+          config:
+            edit:
+              title: پیکربندی اسناد هویتی
+              update: به روز رسانی
+            update:
+              error: مشکلی در به‌روزرسانی پیکربندی وجود داشت.
+              success: پیکربندی با موفقیت به روز شد
+          confirmations:
+            create:
+              error: تأیید مطابقت ندارد. لطفاً دوباره امتحان کنید یا تأیید را رد کنید تا شرکت‌کننده بتواند آن را اصلاح کند
+              success: شرکت‌کننده با موفقیت تأیید شد
+            new:
+              introduce_user_data: داده های موجود در تصویر را معرفی کنید
+              reject: رد کردن
+              verify: تأیید کنید
+          offline_confirmations:
+            create:
+              error: تأیید مطابقت ندارد. لطفاً دوباره امتحان کنید یا به شرکت کننده بگویید آن را اصلاح کند
+              success: شرکت‌کننده با موفقیت تأیید شد
+            new:
+              cancel: لغو کنید
+              introduce_user_data: ایمیل شرکت کننده و داده های سند را معرفی کنید
+              verify: تأیید کنید
+          pending_authorizations:
+            index:
+              config: پیکربندی
+              offline_verification: تأیید آفلاین
+              title: در انتظار تأییدهای آنلاین
+              verification_number: تأیید شماره %{n}
+          rejections:
+            create:
+              success: تأیید رد شد. از شرکت کننده خواسته می شود تا اسناد خود را اصلاح کند
+        authorizations:
+          choose:
+            choose_a_type: 'لطفاً نحوه تأیید را انتخاب کنید:'
+            offline: آفلاین
+            online: برخط
+            title: با استفاده از مدرک هویت خود را تأیید کنید
+          create:
+            error: مشکلی در بارگذاری سند شما وجود داشت
+            success: سند با موفقیت بارگذاری شد
+          edit:
+            being_reviewed: ما در حال بررسی اسناد شما هستیم. به زودی تأیید خواهید شد
+            offline: از تأیید آفلاین استفاده کنید
+            online: از تایید آنلاین استفاده کنید
+            rejection_clarity: اطمینان حاصل کنید که اطلاعات به وضوح در تصویر آپلود شده قابل مشاهده است
+            rejection_correctness: اطمینان حاصل کنید که اطلاعات وارد شده صحیح است
+            rejection_notice: مشکلی در تأیید شما وجود داشت. لطفا دوباره تلاش کنید
+            send: دوباره درخواست تأیید کنید
+          new:
+            send: درخواست تأیید
+            title: سند هویت خود را آپلود کنید
+          update:
+            error: مشکلی در بارگذاری مجدد سند شما وجود داشت
+            success: سند با موفقیت بارگذاری مجدد شد
+        dni: DNI
+        nie: NIE
+        passport: گذرنامه
+      postal_letter:
+        admin:
+          pending_authorizations:
+            index:
+              address: نشانی
+              letter_sent_at: نامه ارسال شده در
+              mark_as_sent: علامت گذاری به عنوان ارسال شده
+              not_yet_sent: هنوز ارسال نشده
+              title: راستی‌آزمایی‌های در حال انجام
+              username: نام مستعار
+              verification_code: کد تایید
+          postages:
+            create:
+              error: خطا در علامت‌گذاری نامه به عنوان ارسال شده
+              success: نامه با موفقیت به عنوان ارسال علامت گذاری شد
+        authorizations:
+          create:
+            error: مشکلی در درخواست شما وجود داشت
+            success: با تشکر! ما یک کد تأیید را به آدرس شما ارسال خواهیم کرد
+          edit:
+            send: تایید
+            title: کد تأیید دریافتی را معرفی کنید
+            waiting_for_letter: به زودی نامه ای با کد تأیید شما به آدرس شما ارسال خواهیم کرد
+          new:
+            send: برای من نامه بفرست
+            title: کد تأیید خود را درخواست کنید
+          update:
+            error: کد تأیید شما با کد ما مطابقت ندارد. لطفا نامه ای را که برای شما فرستادیم دوباره بررسی کنید
+            success: تبریک می گویم. شما با موفقیت تأیید شدید
+      sms:
+        authorizations:
+          create:
+            error: مشکلی در درخواست شما وجود داشت
+            success: با تشکر! ما یک پیامک به تلفن شما ارسال کرده ایم.
+          destroy:
+            success: کد تأیید با موفقیت بازنشانی شد. لطفا شماره تلفن خود را دوباره وارد کنید.
+          edit:
+            confirm_destroy: آیا مطمئن هستید که می خواهید کد تأیید را بازنشانی کنید؟
+            destroy: کد تأیید را بازنشانی کنید
+            resend: کد تأیید را دریافت نکردید؟
+            send: تایید
+            title: کد تأیید دریافتی را معرفی کنید
+          new:
+            send: برام اس ام اس بفرست
+            title: کد تأیید خود را درخواست کنید
+          update:
+            error: کد تأیید شما با کد ما مطابقت ندارد. لطفاً اس ام اسی را که برایتان فرستادیم دوباره بررسی کنید.
+            success: تبریک می گویم. شما با موفقیت تأیید شدید.
+  errors:
+    messages:
+      uppercase_only_letters_numbers: همه باید بزرگ باشند و فقط شامل حروف و/یا اعداد باشند

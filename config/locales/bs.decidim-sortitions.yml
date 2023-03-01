@@ -1,0 +1,151 @@
+---
+hr:
+  activemodel:
+    attributes:
+      sortition:
+        additional_info: Informacije o razvrstavanju
+        decidim_category_id: Kategorije skupa prijedloga u kojima želite primijeniti izvlačenje
+        decidim_proposals_component_id: Prijedlozi postavljeni
+        dice: Rezultat bacanja kocke. Bacite kocku sa 6 strana ili potražite neki drugi slučajni način za generiranje broja od 1 do 6 i ovdje unesite dobiveni broj pred nekoliko svjedoka. To pridonosi kvalitetu i garantuje slučajnost rezultata
+        target_items: Broj prijedloga za odabir (označava broj prijedloga za koje želite da budu odabrani izvlačenjem skupine prijedloga koje ste prethodno odabrali)
+        title: Naslov
+        witnesses: svjedoci
+    models:
+      decidim/sortitions/create_sortition_event: Bacanje kocke
+  activerecord:
+    models:
+      decidim/sortitions/sortition:
+        one: Bacanje kocke
+        other: Razvrstavanja
+  decidim:
+    components:
+      sortitions:
+        actions:
+          comment: Komentar
+        name: Razvrstavanja
+        settings:
+          global:
+            comments_enabled: Komentari omogućeni
+            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu vrijednost)
+    events:
+      sortitions:
+        sortition_created:
+          email_intro: Razvrstavanje "%{resource_title}" je dodano u "%{participatory_space_title}" koji pratite.
+          email_outro: Primili ste ovu obavijest jer pratite "%{participatory_space_title}". Možete ga prestati pratiti s prethodne poveznice.
+          email_subject: Novo razvrstavanje dodano u %{participatory_space_title}
+          notification_title: Razvrstavanje <a href="%{resource_path}">%{resource_title}</a> je dodano u %{participatory_space_title}
+    sortitions:
+      admin:
+        actions:
+          destroy: Otkaži razvrstavanje
+          edit: Uredi
+          new: Nova sorticija
+          show: Pojedinosti o razvrstavanju
+        models:
+          sortition:
+            fields:
+              category: Kategorija
+              created_at: Datum stvaranja
+              decidim_proposals_component: Komponenta prijedloga
+              dice: Kocke
+              reference: Referenca
+              request_timestamp: Vrijeme crtanja
+              seed: Sjeme
+              target_items: Stavke za odabir
+              title: Naslov
+            name:
+              one: Bacanje kocke
+              other: Razvrstavanja
+        sortitions:
+          confirm_destroy:
+            confirm_destroy: Jeste li sigurni da želite poništiti ovo razvrstavanje?
+            destroy: Otkaži sortiranje
+            title: Otkazivanje razvrstavanja
+          create:
+            error: Došlo je do problema pri izradi novog razvrstavanja.
+            success: Razvrstavanje je uspješno kreirano
+          destroy:
+            error: Nije moguće poništiti razvrstavanje.
+            success: Razvrstavanje je uspješno otkazano
+          edit:
+            title: Ažurirajte podatke o razvrstavanju
+            update: Ažuriraj
+          form:
+            all_categories: Sve kategorije
+            select_proposal_component: Odaberite skup prijedloga
+            title: Nova sorticija za prijedloge
+          index:
+            title: Razvrstavanja
+          new:
+            confirm: Pritiskom na sljedeći gumb platforma će zabilježiti datum i vrijeme (s preciznošću sekunde) i zajedno s bacanjem kockica, te će se informacije koristiti za generiranje slučajnog odabira. Akcija će biti nepovratna, nakon što se klikne na gumb rezultat ovog izvlačenja bit će objavljen, zajedno s podacima unesenim u ovaj obrazac i ne može se mijenjati, pažljivo provjerite sadržaj
+            create: Stvoriti
+            title: Nova sorticija
+          show:
+            selected_proposals: Prijedlozi odabrani za izvlačenje
+          update:
+            error: Došlo je do problema prilikom ažuriranja sortiranja.
+            success: Razvrstavanje je uspješno ažurirano
+      admin_log:
+        sortition:
+          create: "%{user_name} je stvorio %{resource_name} sortiranje u %{space_name}"
+          delete: "%{user_name} otkazao je sortiranje %{resource_name} u %{space_name}"
+          update: "%{user_name} je ažurirao %{resource_name} razvrstavanje u %{space_name}"
+      sortitions:
+        count:
+          proposals_count:
+            one: 1 prijedlog
+            other: "%{count} prijedloga"
+        filters:
+          active: Aktivan
+          all: svi
+          cancelled: Otkazano
+          category: Kategorija
+          category_prompt: Izaberi kategoriju
+          search: traži
+          state: Status
+        filters_small_view:
+          close_modal: Zatvori modal
+          filter: filtar
+          filter_by: Filtrirati po
+          unfold: Otklopite
+        linked_sortitions:
+          selected_proposals: Odabrani prijedlozi
+        orders:
+          label: 'Poredaj sortiranja prema:'
+          random: Slučajno
+          recent: Nedavno
+        results_count:
+          count:
+            one: odabrani prijedlog
+            other: odabranih prijedloga
+        show:
+          algorithm: Kod algoritma razvrstavanja
+          any_category: iz svih kategorija
+          back: Povratak na popis
+          cancelled: Otkazano razvrstavanje
+          candidate_proposal_ids: Redoslijed prijedloga razvrstavanja i ID-ovi
+          candidate_proposals_info: Razvrstavanje je provedeno između sljedećih prijedloga (%{category_label}), sa sljedećim ID-ovima (podebljani odabrani prijedlozi)
+          category: iz kategorije %{category}
+          dice_result: "(1) Rezultat kocke"
+          introduction: Ova stranica sadrži rezultate razvrstavanja %{reference}. Pomoću ovog razvrstavanja, %{target_items} broj rezultata odabran je nasumično i s jednakom distribucijom vjerojatnosti iz skupa prijedloga prikazanih u nastavku. Zajedno s rezultatima, informacije prikazane na ovoj stranici pružaju sve informacije potrebne za maksimiziranje garancija i reprodukciju rezultata. Ključ kvalitete ovog razvrstavanja je dvostruka slučajnost koju osigurava bacanje kocke (potvrđeno svjedocima) i točno vrijeme razvrstavanja koje daje ulazne podatke za algoritam koji generira slučajni odabir. Vremensko sjeme za razvrstavanje je toliko točno (sekunde) da ga je nemoguće kontrolirati od strane ljudi, čime se osigurava dvostruki "nekontrolirani" unos koji garantuje fer rezultat.
+          mathematical_result: Rezultat (1) x (2)
+          proposals_selected_by_sortition: Prijedlozi odabrani sortiranjem
+          sortition_reproducibility_details: Pojedinosti o ponovljivosti razvrstavanja
+          time_seed: "(2) Vremensko sjeme"
+          witnesses: svjedoci
+        sortition:
+          random_seed: Nasumično sjeme
+          selected_proposals:
+            one: odabrani prijedlog
+            other: odabranih prijedloga
+          view: Pogled
+        sortition_author:
+          deleted: Izbrisani sudionik
+        sortition_cancel_author:
+          deleted: Izbrisani sudionik
+        sortitions_count:
+          count:
+            one: 1 razvrstavanje
+            other: "%{count} razvrstavanja"
+    statistics:
+      sortitions_count: Razvrstavanja
