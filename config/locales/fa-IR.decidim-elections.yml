@@ -1,0 +1,1421 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      answer:
+        description: شرح
+        image: تصویر
+        proposals: پیشنهادات مرتبط
+        title: عنوان
+      election:
+        description: شرح
+        end_time: رای گیری به پایان می رسد
+        start_time: شروع رای گیری در
+        title: عنوان
+      question:
+        max_selections: حداکثر تعداد انتخاب
+        min_selections: هیچ کدام از گزینه های بالا
+        title: عنوان
+      voting:
+        banner_image: تصویر بنر
+        census_contact_information: اطلاعات تماس سرشماری
+        description: شرح
+        end_time: رای گیری به پایان می رسد
+        introductory_image: تصویر مقدماتی
+        promoted: ارتقاء یافت
+        scope: محدوده
+        show_check_census: نمایش صفحه "بررسی سرشماری".
+        start_time: رای گیری آغاز می شود
+        title: عنوان
+        voting_type: نوع رای گیری
+    errors:
+      models:
+        answer:
+          attributes:
+            attachment:
+              needs_to_be_reattached: نیاز به اتصال مجدد دارد
+        election:
+          attributes:
+            attachment:
+              needs_to_be_reattached: نیاز به اتصال مجدد دارد
+        trustee:
+          attributes:
+            name:
+              cant_be_changed: قابل تغییر نیست
+            public_key:
+              cant_be_changed: قابل تغییر نیست
+        voting:
+          attributes:
+            voting_type:
+              inclusion: "%{value} نوع رأی گیری معتبری نیست"
+  activerecord:
+    errors:
+      models:
+        decidim/votings/polling_officer:
+          attributes:
+            presided_polling_station:
+              president_and_manager: افسر رأی‌دهی قبلاً رئیس/مدیر شعبه رأی‌گیری است
+            voting:
+              different_organization: رای گیری باید در سازمانی مشابه کاربر باشد
+        decidim/votings/polling_station:
+          attributes:
+            polling_station_president:
+              different_voting: افسر رای گیری باید در همان شعبه رای گیری حضور داشته باشد
+    models:
+      decidim/elections/answer:
+        one: پاسخ
+        other: پاسخ ها
+      decidim/elections/election:
+        one: انتخابات
+        other: انتخابات
+      decidim/elections/question:
+        one: سوال
+        other: سوالات
+      decidim/voting:
+        one: رای دادن
+        other: رای گیری ها
+      decidim/votings/census/dataset:
+        one: مجموعه داده
+        other: مجموعه داده ها
+      decidim/votings/census/datum:
+        one: داده
+        other: داده ها
+      decidim/votings/polling_officer:
+        one: افسر رای گیری
+        other: افسران رای گیری
+      decidim/votings/polling_station:
+        one: شعبه رای گیری
+        other: مراکز رای گیری
+      decidim/votings/voting:
+        one: رای دادن
+        other: رای گیری ها
+  decidim:
+    admin:
+      filters:
+        officers_assigned_eq:
+          label: افسران
+          values:
+            assigned: اختصاص داده
+            unassigned: اختصاص داده نشده
+        role_eq:
+          label: نقش
+          values:
+            manager: مدیر
+            president: رئيس جمهور
+            unassigned: واگذار نشده است
+        search_placeholder:
+          name_or_email_or_nickname_or_presided_station_title_or_managed_station_title_cont: "%{collection} را بر اساس نام/ایمیل/نام مستعار یا مرکز رای گیری جستجو کنید."
+          ? title_or_address_or_manager_name_or_manager_email_or_manager_nickname_or_president_name_or_president_email_or_president_nickname_cont
+          : "%{collection} را بر اساس عنوان، آدرس یا نام افسر/ایمیل/نام مستعار جستجو کنید."
+        signed_eq:
+          label: امضاء شده
+          values:
+            'false': امضاء شده
+            'true': امضا نشده
+        validated_eq:
+          label: تایید شد
+          values:
+            'false': تایید شد
+            'true': تایید نشده است
+    components:
+      elections:
+        actions:
+          vote: رای
+        name: انتخابات
+        settings:
+          global:
+            announcement: اعلامیه
+          step:
+            announcement: اعلامیه
+    elections:
+      actions:
+        confirm_destroy: مطمئنی؟
+        destroy: از بین رفتن
+        edit: ویرایش کنید
+        feedback: بازخورد رأی دهندگان
+        import: واردات پیشنهادات به پاسخ
+        manage_answers: مدیریت پاسخ ها
+        manage_questions: مدیریت سوالات
+        manage_steps: مراحل را مدیریت کنید
+        new: "%{name} جدید"
+        preview: پیش نمایش
+        publish: انتشار
+        title: اقدامات
+        unpublish: لغو انتشار
+      admin:
+        answers:
+          create:
+            invalid: در ایجاد این پاسخ مشکلی وجود داشت
+            success: پاسخ با موفقیت ایجاد شد
+          destroy:
+            invalid: مشکلی در حذف این پاسخ وجود داشت
+            success: پاسخ با موفقیت حذف شد
+          edit:
+            title: پاسخ را ویرایش کنید
+            update: پاسخ را به روز کنید
+          index:
+            invalid_max_selections: برای مطابقت با حداکثر انتخاب‌ها، به %{missing_answers} پاسخ/های دیگر نیاز دارید
+            title: پاسخ ها
+          new:
+            create: پاسخ ایجاد کنید
+            title: پاسخ جدید
+          not_selected: انتخاب نشده
+          select:
+            disable: پاسخ را لغو انتخاب کنید
+            enable: پاسخ را به عنوان انتخاب شده علامت بزنید
+            invalid: در انتخاب این پاسخ مشکلی وجود داشت
+            success: پاسخ با موفقیت انتخاب شد
+          selected: انتخاب شد
+          unselect:
+            invalid: مشکلی در لغو انتخاب این پاسخ وجود داشت
+            success: پاسخ با موفقیت لغو شد
+          update:
+            invalid: مشکلی در به‌روزرسانی این پاسخ وجود داشت
+            success: پاسخ با موفقیت به روز شد
+        elections:
+          create:
+            invalid: در ایجاد این انتخابات مشکلی وجود داشت
+            success: انتخابات با موفقیت ایجاد شد
+          destroy:
+            invalid: مشکلی در حذف این انتخابات وجود داشت
+            success: انتخابات با موفقیت حذف شد
+          edit:
+            title: ویرایش انتخابات
+            update: به روز رسانی انتخابات
+          index:
+            no_bulletin_board: هیچ <a href="https://github.com/decidim/decidim-bulletin-board">سرور تابلوی اعلانات</a> پیکربندی نشده است که برای استفاده از این ماژول لازم است. این کار باید توسط مدیر سیستم انجام شود.
+            title: انتخابات
+          new:
+            create: انتخابات ایجاد کنید
+            title: انتخابات جدید
+          publish:
+            success: انتخابات با موفقیت منتشر شد.
+          unpublish:
+            success: انتخابات با موفقیت لغو شد.
+          update:
+            invalid: مشکلی در به‌روزرسانی این انتخابات وجود داشت
+            success: انتخابات با موفقیت به روز شد
+        exports:
+          elections: انتخابات
+          feedback_form_answers: پاسخ های فرم بازخورد
+        mailers:
+          trustee_mailer:
+            body: "<p>سلام %{user_name}،</p><p>شما به عنوان یک معتمد به %{resource_name} اضافه شده اید.</p>"
+            subject: شما به عنوان یک معتمد به %{resource_name} اضافه شده اید
+            trustee_zone: مرا به منطقه معتمد ببرید
+        menu:
+          trustees: متولیان
+        models:
+          answer:
+            name: پاسخ
+          election:
+            name: انتخابات
+          question:
+            name: سوال
+          trustee:
+            name: متولی
+        proposals_imports:
+          create:
+            invalid: مشکلی در وارد کردن پیشنهادها در پاسخ‌ها وجود داشت
+            success: "%{number} پیشنهاد با موفقیت وارد پاسخ ها شد"
+          new:
+            create: واردات پیشنهادات به پاسخ
+            no_components: هیچ مؤلفه پیشنهادی دیگری در این فضای مشارکتی برای وارد کردن پیشنهادها به پاسخ ها وجود ندارد.
+            select_component: لطفا یک جزء را انتخاب کنید
+            title: پیشنهادات واردات
+        questions:
+          create:
+            election_started: انتخابات از قبل شروع شده است
+            invalid: در ایجاد این سوال مشکلی وجود داشت
+            success: سوال با موفقیت ایجاد شد
+          destroy:
+            invalid: مشکلی در حذف این سوال وجود داشت
+            success: سوال با موفقیت حذف شد
+          edit:
+            title: ویرایش سوال
+            update: به روز رسانی سوال
+          index:
+            title: سوالات
+          new:
+            create: سوال ایجاد کنید
+            title: سوال جدید
+          update:
+            invalid: مشکلی در به‌روزرسانی این سؤال وجود داشت
+            success: سوال با موفقیت به روز شد
+        steps:
+          create_election:
+            census: سرشماری
+            errors:
+              census_codes_generated: کدهای دسترسی برای سرشماری ایجاد نمی شود.
+              census_frozen: کدهای دسترسی برای سرشماری صادر نمی شوند.
+              census_uploaded: هیچ سرشماری برای این انتخابات آپلود نشده است.
+              component_published: مؤلفه انتخابات <strong>منتشر نشده</strong> است.
+              max_selections: سوالات <strong>مقدار صحیحی برای تعداد پاسخ ها</strong> ندارند
+              minimum_answers: سؤالات باید دارای <strong>حداقل دو پاسخ</strong> باشند.
+              minimum_questions: انتخابات<strong>باید حداقل یک سوال داشته باشد.
+              published: انتخابات <strong>منتشر نشده</strong> است.
+              time_before: زمان شروع در <strong>کمتر از %{hours} ساعت</strong> قبل از شروع انتخابات است.
+              trustees_number: فضای مشارکتی <strong>باید حداقل %{number} معتمد با کلید عمومی داشته باشد</strong>.
+            invalid: مشکلی در تنظیم این انتخابات وجود داشت
+            no_trustees: هیچ متولی برای این فضای مشارکتی پیکربندی نشده است
+            not_used_trustee: "(استفاده نشده)"
+            public_key:
+              'false': "<strong>کلید عمومی</strong> ندارد"
+              'true': دارای <strong>کلید عمومی</strong> است
+            requirements:
+              census_codes_generated: کدهای دسترسی برای سرشماری تولید می شود.
+              census_frozen: کدهای دسترسی برای سرشماری صادر شده و سرشماری متوقف شده است.
+              census_uploaded: سرشماری آپلود شده است.
+              component_published: مؤلفه انتخابات <strong>منتشر</strong> شده است.
+              max_selections: همه سوالات دارای مقدار صحیح برای <strong>حداکثر پاسخ ها</strong> هستند.
+              minimum_answers: هر سؤال دارای <strong>حداقل 2 پاسخ</strong> است.
+              minimum_questions: انتخابات دارای <strong>حداقل 1 سوال</strong> است.
+              published: انتخابات<strong>منتشر شده است.
+              time_before: تنظیم <strong>حداقل %{hours} ساعت</strong> قبل از شروع انتخابات در حال انجام است.
+              trustees_number: فضای مشارکتی دارای <strong>حداقل %{number} معتمد با کلید عمومی</strong> است.
+            submit: راه اندازی انتخابات
+            success: انتخابات با موفقیت به تابلوی اعلانات ارسال شد
+            title: راه اندازی انتخابات
+            trustees: معتمدین انتخابات
+          created:
+            invalid: مشکلی در شروع مراسم کلید وجود داشت
+            submit: مراسم کلید را شروع کنید
+            success: درخواست مراسم کلید شروع با موفقیت به تابلوی اعلانات ارسال شد
+            title: انتخابات ایجاد شد
+            trustees: متولیان
+          key_ceremony:
+            continue: ادامه هید
+            title: مراسم کلیدی
+          key_ceremony_ended:
+            errors:
+              time_before: انتخابات آماده شروع است. برای شروع دوره رای گیری باید تا %{hours} ساعت قبل از زمان شروع (%{start_time}) صبر کنید.
+            invalid: مشکلی در شروع دوره رای‌گیری وجود داشت
+            requirements:
+              time_before: انتخابات به زودی آغاز می شود. می توانید دوره رای گیری را به صورت دستی شروع کنید، یا به طور خودکار قبل از زمان شروع، در %{start_time} شروع می شود.
+            submit: شروع دوره رای گیری
+            success: درخواست شروع دوره رای گیری با موفقیت به تابلوی اعلانات ارسال شد
+            title: آماده برای شروع
+          processing: در حال پردازش...
+          results_published:
+            answer: پاسخ
+            not_selected: انتخاب نشده
+            question: سوال
+            result: نتیجه
+            selected: انتخاب شد
+            submit: ارسال
+            title: نتایج منتشر شد
+          tally_ended:
+            answer: پاسخ
+            not_selected: انتخاب نشده
+            question: سوال
+            result: نتیجه
+            selected: انتخاب شد
+            submit: نتایج را منتشر کنید
+            success: درخواست انتشار نتایج با موفقیت به تابلوی اعلانات ارسال شد
+            title: نتایج محاسبه شده
+          tally_started:
+            continue: ادامه هید
+            invalid: مشکلی در گزارش معتمد گمشده وجود داشت
+            mark_as_missing: علامت گذاری به عنوان گمشده
+            mark_as_missing_description: همه متولیان باید در این فرآیند شرکت کنند، اما اگر یک متولی نمی تواند در این فرآیند شرکت کند، می توانید آن را به عنوان مفقود علامت گذاری کنید.
+            success: گزارش معتمد مفقود با موفقیت به تابلوی اعلانات ارسال شد
+            tally_completion: این فرآیند زمانی تکمیل می شود که همه متولیان فعال باشند یا به عنوان مفقود علامت گذاری شوند. حداقل %{quorum} متولی برای تکمیل فرآیند مورد نیاز است.
+            title: فرآیند محاسبه
+            undo_mark_as_missing: متولی که به اشتباه به عنوان مفقود علامت گذاری شده است، می تواند قبل از تکمیل فرآیند شرکت کند. آنها می توانند طبق معمول ادامه دهند و علامت گم شده نادیده گرفته می شود.
+          vote:
+            errors:
+              time_after: انتخابات همچنان ادامه دارد. برای پایان دوره رای گیری باید تا زمان پایان (%{end_time}) صبر کنید.
+            invalid: مشکلی در پایان دوره رای‌گیری وجود داشت
+            requirements:
+              time_after: انتخابات به پایان رسیده است. می توانید دوره رای گیری را به صورت دستی به پایان برسانید یا در عرض چند دقیقه به طور خودکار پایان می یابد.
+            submit: پایان دوره رای گیری
+            success: درخواست پایان دوره رای گیری با موفقیت به تابلوی اعلانات ارسال شد
+            title: دوره رای گیری
+          vote_ended:
+            invalid: مشکلی در شروع محاسبه وجود داشت
+            submit: محاسبه را شروع کنید
+            success: درخواست آمار شروع با موفقیت به تابلوی اعلانات ارسال شد
+            text: رای گیری به پایان رسید اکنون می توانید آمارگیری را شروع کنید.
+            title: دوره رای گیری به پایان رسید
+          vote_stats:
+            no_vote_statistics_yet: هنوز آمار رای وجود ندارد
+            title: آمار رای
+            voters: رای دهندگان
+            votes: رای
+        trustees_participatory_spaces:
+          actions:
+            disable: غیر فعال کردن
+            enable: در نظر گرفتن
+          create:
+            exists: متولی برای این فضای مشارکتی وجود دارد
+            invalid: مشکلی در ایجاد متولی وجود داشت
+            success: متولی با موفقیت ایجاد شد
+          delete:
+            invalid: مشکلی در حذف این متولی وجود داشت
+            success: متولی با موفقیت حذف شد
+          form:
+            select_user: کاربر را انتخاب کنید
+          index:
+            title: متولیان
+          new:
+            create: متولی ایجاد کنید
+            title: متولی جدید
+          update:
+            invalid: مشکلی در به‌روزرسانی %{trustee} متولی وجود داشت
+            success: معتمد %{trustee} با موفقیت به روز شد
+      admin_log:
+        election:
+          create: "%{user_name} انتخابات %{resource_name} از %{space_name} را ایجاد کرد"
+          delete: "%{user_name} انتخابات %{resource_name} از %{space_name} را حذف کرد"
+          end_vote: "%{user_name} دوره رای گیری برای انتخابات %{resource_name} از %{space_name} در تابلوی اعلانات پایان یافت"
+          publish: "%{user_name} انتخابات %{resource_name} از %{space_name} را منتشر کرد"
+          publish_results: "%{user_name} نتایج انتخابات %{resource_name} از %{space_name} را در تابلوی اعلانات منتشر کرد"
+          report_missing_trustee: "%{user_name} %{trustee_name} را به عنوان یک معتمد مفقود در طول شمارش انتخابات %{resource_name} از %{space_name} در تابلوی اعلانات گزارش کرد."
+          setup: "%{user_name} انتخابات %{resource_name} از %{space_name} را در تابلوی اعلانات ایجاد کرد"
+          start_key_ceremony: "%{user_name} مراسم کلیدی انتخابات %{resource_name} از %{space_name} را در تابلوی اعلانات آغاز کرد"
+          start_tally: "%{user_name} شمارش را برای انتخابات %{resource_name} از %{space_name} در تابلوی اعلانات آغاز کرد"
+          start_vote: "%{user_name} دوره رای گیری برای انتخابات %{resource_name} از %{space_name} را در تابلوی اعلانات آغاز کرد"
+          unpublish: "%{user_name} %{resource_name} انتخابات %{space_name} را لغو کرد"
+          update: "%{user_name} انتخابات %{resource_name} از %{space_name} را به روز کرد"
+        trustee:
+          create: "%{user_name} کاربر %{trustee_user} را به عنوان امین منصوب کرد"
+      connection:
+        failed:
+          modal:
+            close: بستن
+            communication_lost: متأسفانه، به نظر می رسد ارتباط با سرور رأی گیری (تبلیغ اعلانات) قطع شده است.<br>ممکن است اتصال اینترنت قطع شده باشد یا سرور مقصد خیلی شلوغ باشد.<br>می توانید بعداً دوباره امتحان کنید یا با پشتیبانی تماس بگیرید. اگر این مشکل ادامه پیدا کند
+            generic_error: متأسفانه یک خطای ناشناخته رخ داده است. این احتمال وجود دارد که مرورگر شما پشتیبانی نمی شود یا از حالت "ناشناس" یا "خصوصی" استفاده می کنید که پشتیبانی نمی شود.
+            title: مشکلی پیش آمد
+      election_m:
+        badge_name:
+          finished: تمام شده
+          ongoing: فعال
+          upcoming: آینده
+        end_date: به پایان می رسد
+        footer:
+          remaining_time:
+            one: "<strong>%{count} ساعت %{minutes} دقیقه</strong> باقی مانده برای رأی دادن."
+            other: "<strong>%{count} ساعت %{minutes} دقیقه</strong> برای رای دادن باقی مانده است."
+            zero: "<strong>%{minutes} دقیقه</strong> برای رای دادن باقی مانده است."
+          view: چشم انداز
+          vote: رای
+        label:
+          date: تاریخ
+        questions: سوالات %{count}
+        start_date: شروع می شود
+        unspecified: مشخص نشده است
+      elections:
+        count:
+          elections_count:
+            one: "%{count} انتخابات"
+            other: "%{count} انتخابات"
+        election_log:
+          chained_hash: هش زنجیر شده این پیام
+          complete: کامل
+          creation_description:
+            complete: انتخابات ایجاد شد و با موفقیت در تابلوی اعلانات راه اندازی شد.
+            not_created: انتخابات هنوز ایجاد نشده است.
+          creation_title: انتخابات ایجاد شد
+          description: این گزارش انتخابات است که در آن می توانید وضعیت هر مرحله را بررسی کنید، به عنوان مثال. زمانی که انتخابات ایجاد شد، اگر روند جمع بندی کامل شد و زمانی که انتخابات بسته شد.
+          download: دانلود
+          key_ceremony_description:
+            complete: مراسم کلید به پایان رسید. هر متولی دارای کلیدهای معتبر است و کلیدهای پشتیبان لازم را دانلود کرده است.
+            not_started: مراسم کلیدی هنوز شروع نشده است.
+            started: مراسم کلیدی آغاز شده اما هنوز تکمیل نشده است.
+          key_ceremony_title: مراسم کلید
+          not_available: هنوز در دسترس نیست
+          not_created: ایجاد نشده است
+          not_published: منتشر نشده
+          not_ready: آماده نیست
+          not_started: شروع نشده است
+          published: منتشر شده
+          results_description:
+            not_published: نتایج هنوز منتشر نشده است.
+            published: نتایج منتشر می شود.
+          results_title: نتایج
+          started: آغاز شده
+          tally_description:
+            finished: فرآیند محاسبه به پایان رسیده است.
+            not_started: روند محاسبه هنوز شروع نشده است.
+            started: روند محاسبه شروع شده است.
+          tally_title: فرآیند محاسبه
+          title: گزارش انتخابات
+          verifiable_results:
+            checksum: 'فایل SHA256 checksum:'
+            description:
+              not_ready: پرونده انتخاباتی قابل تأیید و جمع‌بندی بررسی SHA256 هنوز در دسترس نیستند. به محض انتشار نتایج، می‌توانید این انتخابات را تأیید کنید.
+              ready: 'در اینجا، شما این امکان را دارید که انتخابات را تأیید کنید. ابتدا باید فایل را دانلود کنید و مطمئن شوید که خراب نشده است. برای انجام این کار، دستور زیر را اجرا کنید و بررسی کنید که خروجی با چک جمع مطابقت داشته باشد:'
+            how_to_verify: 'هنگامی که فایل را دانلود کردید و از سالم بودن آن مطمئن شدید، می توانید به اجرای تایید کننده جهانی ادامه دهید. <a href=''https://github.com/decidim/decidim-bulletin-board''>این مخزن</a> را کلون کنید و از پوشه root دستور زیر را اجرا کنید:'
+            title: بررسی نتایج انتخابات
+            verifiable_file: 'پرونده انتخاباتی قابل تایید:'
+          verify: تایید انتخابات
+          vote_description:
+            finished: روند رای گیری به پایان رسیده است.
+            not_started: روند رای گیری هنوز شروع نشده است.
+            started: روند رای گیری آغاز شده است.
+          vote_title: روند رای گیری
+        filters:
+          active: فعال
+          all: همه
+          date: تاریخ
+          finished: تمام شده
+          search: جستجو کردن
+          upcoming: آینده
+        filters_small_view:
+          close_modal: بستن مودال
+          filter: فیلتر کنید
+          filter_by: محدود شده توسط
+          unfold: باز کردن
+        preview:
+          available_answers: 'پاسخ های موجود:'
+          description: 'اینها سوالاتی است که در فرآیند رای گیری پیدا خواهید کرد:'
+          title: سوالات انتخاباتی
+        results:
+          description: 'این نتایج رای گیری برای هر سوال است:'
+          percentage: "%{count}%"
+          selected: انتخاب شد
+          title: نتایج انتخابات
+          votes:
+            one: "%{count} رای"
+            other: "%{count} رای"
+            zero: "%{count} رای"
+        show:
+          action_button:
+            change_vote: رای خود را تغییر دهید
+            vote: شروع به رای دادن کنید
+            vote_again: دوباره رای دهید
+          back: انتخابات موجود
+          callout:
+            already_voted: شما قبلا در این انتخابات رای داده اید. می توانید رأی خود را تغییر دهید یا آن را تأیید کنید.
+            pending_vote: رای شما در سرور ارسال می شود.
+            vote_rejected: امکان تایید رای شما وجود نداشت. لطفا دوباره آن را پخش کنید.
+          election_log: گزارش انتخابات
+          preview: پیش نمایش
+          verify:
+            already_voted: قبلا رای داده اید؟
+            verify_here: رای خود را اینجا بررسی کنید.
+            will_verify: پس از شروع انتخابات، می توانید رای خود را تأیید کنید.
+          voting_period_status:
+            finished: رای گیری در %{start_time} آغاز شد و در %{end_time} به پایان رسید
+            ongoing: 'رای گیری فعال تا: %{end_time}'
+            upcoming: رای گیری در %{start_time} آغاز می شود
+      feedback:
+        answer:
+          invalid: مشکلی در ارسال بازخورد شما وجود داشت.
+          spam_detected: در پاسخ به فرم مشکلی وجود داشت. شاید خیلی سریع عمل کرده اید، می توانید دوباره امتحان کنید؟
+          success: بازخورد با موفقیت ارسال شد.
+      models:
+        answer:
+          fields:
+            proposals: پیشنهادات
+            selected: انتخاب شد
+            title: عنوان
+            votes: رای
+        election:
+          fields:
+            bb_status: وضعیت تابلوی اعلانات
+            end_time: پایان در
+            start_time: شروع میشود از
+            title: عنوان
+            verifiable_results_file_hash: فایل SHA256 checksum
+            verifiable_results_file_url: پرونده انتخاباتی قابل تایید
+        question:
+          fields:
+            answers: پاسخ ها
+            max_selections: حداکثر انتخاب ها
+            title: عنوان
+        trustees_participatory_space:
+          fields:
+            considered: در نظر گرفته شده
+            email: پست الکترونیک
+            inactive: غیر فعال
+            name: نام
+            notification: اعلان ارسال شد
+            public_key: کلید عمومی
+            status: وضعیت
+      orders:
+        label: ترتیب انتخابات توسط
+        older: مسن تر
+        recent: اخیر
+      trustee_zone:
+        elections:
+          backup_modal:
+            description: این انتخابات در تابلوی اعلانات ایجاد می شود. بسیار مهم است که هر متولی شرکت کننده در آن یک نسخه پشتیبان از این کلیدها ایجاد کرده و آنها را در مکانی امن ذخیره کند. پس از آن، روند ادامه می یابد.
+            download_election_keys: کلیدهای دانلود
+            download_icon: نمادی که یک اقدام دانلود را نشان می دهد
+            title: کلیدهای انتخاباتی پشتیبان برای %{election}
+          key_ceremony_steps:
+            back: بازگشت
+            description: این انتخابات در تابلوی اعلانات ایجاد می شود. برای تکمیل این فرآیند، مشارکت شما به عنوان یک سرپرست مورد نیاز است.
+            keys:
+              create_election: تولید کلید
+              key_ceremony:
+                joint_election_key: تولید کلید مشترک
+                step_1: انتشار کلید
+            list:
+              status: وضعیت
+              task: وظیفه
+            process_warning: پس از شروع فرآیند، تا پایان فرآیند نباید از این صفحه خارج شوید. چند دقیقه طول می کشد، زیرا برای تکمیل آن باید همه Trustees متصل شوند.
+            start: شروع کنید
+            start_icon: نمادی که دکمه شروع را برای شروع تولید کلیدهای انتخابات نشان می دهد
+            status:
+              completed: تکمیل شد
+              pending: انتظار
+              processing: در حال پردازش
+            title: کلیدهای انتخاباتی برای %{election} ایجاد کنید
+          restore_modal:
+            description: هیئت اعلانات اطلاعاتی از شما به عنوان متولی در مورد این انتخابات دارد. برای ادامه فرآیند، ابتدا فایل پشتیبان تولید شده در جلسه قبل را آپلود کنید.
+            title: بازیابی کلیدهای انتخاباتی برای %{election}
+            upload_election_keys: بارگذاری کلیدهای انتخاباتی
+            upload_icon: نمادی که یک اقدام دانلود را نشان می دهد
+          tally_started_steps:
+            back: بازگشت
+            description: نتایج این انتخابات در تابلوی اعلانات در حال محاسبه است. برای تکمیل این فرآیند، مشارکت شما به عنوان یک سرپرست مورد نیاز است.
+            keys:
+              end_tally: آمار به پایان رسید
+              tally:
+                cast: بازیگران تالی
+                share: آمار به اشتراک بگذارید
+            list:
+              status: وضعیت
+              task: وظیفه
+            process_warning: پس از شروع فرآیند، تا پایان فرآیند نباید از این صفحه خارج شوید. چند دقیقه طول می کشد، زیرا برای تکمیل آن باید همه Trustees متصل شوند.
+            start: شروع کنید
+            start_icon: نمادی که دکمه شروع را برای شروع تولید کلیدهای انتخابات نشان می دهد
+            status:
+              completed: تکمیل شد
+              pending: انتظار
+              processing: در حال پردازش
+            title: آمار برای %{election}
+          update:
+            error: وضعیت انتخابات به‌روزرسانی نشد.
+            success: 'وضعیت انتخابات: %{status}'
+        menu:
+          trustee_zone: منطقه متولی
+        no_bulletin_board:
+          body: یک تابلوی اعلانات پیکربندی شده برای این بخش مورد نیاز است. برای جزئیات بیشتر با مدیر تماس بگیرید.
+          title: با عرض پوزش، تابلوی اعلانات هنوز پیکربندی نشده است.
+        trustees:
+          show:
+            elections:
+              list:
+                action_required:
+                  'false': خیر
+                  name: اقدام لازم؟
+                  'true': اقدامی انجام دهد
+                bb_status: وضعیت
+                election: انتخابات
+                voting_period: دوره رای گیری
+              no_elections: هیچ انتخاباتی وجود ندارد که در آن شما به عنوان یک متولی عمل کنید.
+              title: انتخابات
+            identification_keys:
+              cancel: لغو کنید
+              generate: تولید کلیدهای شناسایی
+              generate_error: خطایی در تولید کلیدهای شناسایی روی داد.
+              generate_legend: برای شرکت در انتخابات به عنوان امین باید یک جفت کلید شناسایی ایجاد کنید.
+              generate_legend_1: پس از فشار دادن دکمه باید فایل را با کلیدهای شناسایی تولید شده دانلود کنید.
+              generate_legend_2: فایل دانلود شده را در یک دستگاه USB تمیز کپی کنید
+              generate_legend_3: مطمئن شوید که رایانه شما نسخه‌ای از فایل ندارد (به عنوان مثال پوشه‌های Downloads و Desktop را بررسی کنید).
+              generate_legend_4: یک کپی دیگر از فایل را در یک دستگاه خارجی دیگر تهیه کنید و آن را در مکانی بسیار امن ذخیره کنید.
+              submit: ارسال
+              submit_legend: پس از انجام تمام مراحل توضیح داده شده در بالا، فرآیند ارسال کلید شناسایی عمومی به سرور را تکمیل کنید.
+              submit_title: کلید شناسایی عمومی را ارسال کنید
+              title: کلیدهای شناسایی متولی
+              upload: کلیدهای شناسایی خود را آپلود کنید
+              upload_error:
+                invalid_format: فایل آپلود شده حاوی هیچ کلید شناسایی نیست.
+                invalid_key: کلیدهای شناسایی در فایل آپلود شده بارگیری نمی شوند.
+                invalid_public_key: کلیدهای شناسایی در فایل آپلود شده با کلید شناسایی عمومی ذخیره شده مطابقت ندارد.
+              upload_legend: سرور کلیدهای شناسایی عمومی شما را دارد، اما مرورگر شما هنوز آن را ندارد. شما باید فایل را با کلیدهای شناسایی خود از پشتیبان گیری که پس از تولید آنها ایجاد کرده اید به رایانه خود وارد کنید.
+            not_supported_browser_description: به نظر می‌رسد از مرورگر وب استفاده می‌کنید که نمی‌توان از آن برای عمل به عنوان امانتدار استفاده کرد. مطمئن شوید که از جدیدترین نسخه مرورگر خود استفاده می کنید، یا سعی کنید از یکی از محبوب ترین مرورگرها استفاده کنید تا بتوانید وظایف Trustee خود را انجام دهید.
+            not_supported_browser_title: مرورگر را ارتقا دهید تا به عنوان یک امانتدار عمل کنید
+            trustee_role_description: شما مأمور شده اید که در برخی از انتخاباتی که در این پلتفرم برگزار می شود، به عنوان معتمد عمل کنید.
+          update:
+            success: کلید عمومی شناسایی شما با موفقیت ذخیره شد.
+      votes:
+        ballot_decision:
+          audit: "(رای حسابرسی)"
+          back: روند رای گیری را دوباره شروع کنید
+          ballot_hash: 'شناسه برگه رای شما:'
+          cast: برای تکمیل رای خود رای بدهید
+          description: در اینجا، شما گزینه‌هایی دارید که رای خود را به صندوق بیندازید تا به درستی شمارش شود یا، در عوض، بتوانید حسابرسی کنید که رای شما به درستی رمزگذاری شده است. به دلایل امنیتی، ممیزی برگه رای شما آن را خراب می کند. این بدان معناست که برای دادن رای خود، باید روند رای گیری را دوباره شروع کنید.
+          header: 'رای رمزگذاری شده است: آن را به صندوق بیندازید یا حسابرسی کنید'
+        casting:
+          header: رای دادن...
+          text: رای شما در صندوق ریخته می شود.
+        confirm:
+          answer: پاسخ
+          answer_number: پاسخ %{number}
+          confirm: تایید
+          edit: ویرایش کنید
+          header: رای خود را تایید کنید
+          intro: در اینجا خلاصه ای از رأیی است که می خواهید به آن بدهید. <br> لطفاً رأی خود را تأیید کنید یا پاسخ های خود را ویرایش کنید.
+          nota_option: جای خالی
+          question: سوال %{count}
+        confirmed:
+          back: بازگشت به انتخابات
+          experience: تجربه شما چطور بود؟
+          feedback: به ما بازخورد بدهید
+          header: رای تایید شد
+          lead: رای شما داده شد!
+          text: 'با شناسه زیر می توانید بررسی کنید که رای شما با موفقیت به صندوق رای اضافه شده است: <strong class="evote__poll-id">%{e_vote_poll_id}</strong>'
+          verify_link: برای بررسی آن، شناسه را کپی کرده و در <a href="%{link}">صفحه تأیید رأی</a> جای‌گذاری کنید.
+        create:
+          error: در رای دادن مشکلی وجود داشت. لطفا دوباره تلاش کنید.
+        encrypting:
+          header: رمزگذاری رای...
+          text: رای شما برای اطمینان از رای شما رمزگذاری می شود.
+        failed:
+          header: رای دادن ناموفق بود
+          lead: رای شما داده نشده است!
+          text: مشکلی پیش آمد، لطفاً دوباره امتحان کنید.
+          try_again: دوباره امتحان کنید
+        header:
+          ballot_decision: رأی خود را به صندوق بیندازید یا حسابرسی کنید
+          casting: رای دادن
+          confirm: رای خود را تایید کنید
+          confirmed: رای تایید شد
+          encrypting: رمزگذاری رأی
+          failed: رای دادن ناموفق بود
+        messages:
+          invalid_token: جلسه شما در اتاق رای گیری معتبر نیست. سعی کن دوباره رای بدی
+          not_allowed: شما در حال حاضر اجازه رای دادن به این انتخابات را ندارید.
+        modal:
+          close: بستن
+          proposal_header: 'پیشنهادات:'
+        new:
+          answer_choices: می توانید حداکثر %{choices} پاسخ را انتخاب کنید
+          more_information: اطلاعات بیشتر
+          nota_option: خالی / هیچ یک از موارد بالا
+          preview_alert: این پیش نمایشی از اتاق رای گیری است.
+          question_steps: سوال %{current_step} از %{total_steps}
+          selections: "%{selected} از %{max_selections}<br> انتخاب"
+        onboarding_modal:
+          close: بستن مودال
+          create_account: ایجاد حساب کاربری
+          description: آیا می خواهید یک حساب کاربری جدید در پلتفرم ایجاد کنید؟ شما قادر خواهید بود در فرآیندها شرکت کنید و بخشی فعال از سازمان باشید.
+          no_account: نه ممنون.
+          title: جدید به پلت فرم؟
+        update:
+          error: مشکلی در به‌روزرسانی وضعیت رأی وجود داشت. لطفا دوباره رای دهید
+        verify:
+          content:
+            heading: رای خود را تایید کنید
+            info: این تأیید کننده بررسی می کند که رأی شما، که با یک رشته متن رمزگذاری شده شناسایی شده است، به درستی داده شده است و در داخل صندوق رأی است.
+          error:
+            header: رای پیدا نشد!
+            info: کد رأی در صندوق رأی %{link} یافت نشد، دوباره امتحان کنید.
+          form:
+            back: بازگشت به پلت فرم
+            submit: بررسی
+            vote_identifier: 'کد شناسه:'
+            vote_identifier_help: این شناسه ای است که پس از رای دادن به شما داده شد (نه کد ورود به اتاق رای گیری).
+          header:
+            title: رای خود را تایید کنید
+          success:
+            header: رای قرار گرفته است!
+            info: رای رمزگذاری شده شما در صندوق رای %{link} است
+        voting_step:
+          back: بازگشت
+          continue: بعد
+      warnings:
+        no_elections_warning: هیچ انتخاباتی با معیارهای جستجوی شما مطابقت ندارد یا هیچ انتخاباتی برنامه ریزی نشده است.
+        no_scheduled_elections_warning: در حال حاضر، هیچ انتخابات برنامه‌ریزی‌شده‌ای وجود ندارد، اما در اینجا می‌توانید فهرستی از انتخابات گذشته را پیدا کنید.
+    events:
+      elections:
+        election_published:
+          email_intro: 'انتخابات %{resource_title} اکنون برای %{participatory_space_title} فعال است. می توانید آن را از این صفحه ببینید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: انتخابات %{resource_title} اکنون برای %{participatory_space_title} فعال است.
+          notification_title: انتخابات <a href="%{resource_path}">%{resource_title}</a> اکنون برای %{participatory_space_title} فعال است.
+        trustees:
+          new_election:
+            email_intro: شما به عنوان متولی برای انتخابات %{resource_title} اضافه شده اید.
+            email_outro: شما این اعلان را دریافت کرده اید زیرا به عنوان متولی برای انتخابات %{resource_title} اضافه شده اید.
+            email_subject: شما متولی انتخابات %{resource_title} هستید..
+            notification_title: شما یک امین برای انتخابات <a href="%{resource_path}">%{resource_title}</a> هستید.
+          new_trustee:
+            email_intro: یک سرپرست شما را به عنوان امین برای %{resource_name} اضافه کرده است. شما باید کلید عمومی خود را <a href='%{trustee_zone_url}'>در منطقه معتمد خود</a> ایجاد کنید
+            email_outro: شما این اعلان را دریافت کرده اید زیرا به عنوان متولی %{resource_name} اضافه شده اید.
+            email_subject: شما امین %{resource_name} هستید.
+            notification_title: شما یک امین برای <a href="%{participatory_space_url}">%{resource_name}</a> هستید.
+        votes:
+          accepted_votes:
+            email_intro: 'رای شما پذیرفته شد! با استفاده از رمز رای خود: %{encrypted_vote_hash}، می‌توانید رای خود را <a href="%{verify_url}">اینجا</a> تأیید کنید.'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا به انتخابات %{resource_name} رأی داده اید.
+            email_subject: رای شما برای %{resource_name} پذیرفته شد.
+            notification_title: 'رای شما پذیرفته شد رای خود را <a href="%{verify_url}">اینجا</a> با استفاده از رمز رای خود تأیید کنید: %{encrypted_vote_hash}'
+      votings:
+        polling_officers:
+          polling_station_assigned:
+            email_intro: شما در <a href="%{resource_url}">%{resource_title}</a> به‌عنوان %{role} حوزه رأی‌گیری %{polling_station_name} منصوب شده‌اید. می‌توانید مرکز رأی‌گیری را از <a href="%{polling_officer_zone_url}">منطقه افسر رای‌گیری</a> مدیریت کنید.
+            email_outro: شما این اعلان را دریافت کرده اید زیرا به عنوان %{role} از %{polling_station_name} به شما اختصاص داده شده است.
+            email_subject: شما %{role} از حوزه رأی گیری %{polling_station_name} هستید.
+            notification_title: شما %{role} از حوزه رأی گیری %{polling_station_name} در رأی گیری <a href="%{resource_path}">%{resource_title}</a> هستید.
+        send_access_code:
+          instruction: 'این کد دسترسی شماست که درخواست کردید: %{access_code}. با این کار می توانید در %{voting} شرکت کنید.'
+          subject: کد دسترسی شما برای شرکت در %{voting}
+    help:
+      participatory_spaces:
+        votings:
+          contextual: "<p><strong>رای گیری</strong> فضایی است که به شما امکان می دهد از همه افرادی که یک سازمان را تشکیل می دهند یک سوال واضح بپرسید، برای شرکت در رای گیری تماس بگیرید، جرقه بزنید و دستور دهید بحث موافق یا مخالف یک سازمان باشد. واکنش. وقتی تاریخ رای‌گیری فرا رسید، می‌توانید رای دهید و نتایج رای‌گیری‌ها را منتشر کنید.</p> <p>مثال‌ها: رای‌گیری‌ها می‌تواند تقریباً در مورد هر جنبه‌ای باشد که بر یک سازمان تأثیر می‌گذارد: برخی از نمونه‌ها تغییر نام یا نشان‌واره سازمان است. ارائه چندین گزینه، تصمیم گیری بله یا خیر برای عضویت در یک سازمان بزرگتر، تأیید یا رد یک برنامه استراتژیک جدید یا نتیجه یک گروه کاری، یا تعیین اینکه آیا این موقعیت ها باید حداکثر 1، 2 یا 3 مأموریت باقی بمانند. p>\n"
+          page: "<p><strong>رای گیری</strong> فضایی است که به شما امکان می دهد از همه افرادی که یک سازمان را تشکیل می دهند یک سوال واضح بپرسید، برای شرکت در رای گیری تماس بگیرید، جرقه بزنید و دستور دهید بحث موافق یا مخالف یک سازمان باشد. واکنش. وقتی تاریخ رای‌گیری فرا رسید، می‌توانید رای دهید و نتایج رای‌گیری‌ها را منتشر کنید.</p> <p>مثال‌ها: رای‌گیری‌ها می‌تواند تقریباً در مورد هر جنبه‌ای باشد که بر یک سازمان تأثیر می‌گذارد: برخی از نمونه‌ها تغییر نام یا نشان‌واره سازمان است. ارائه چندین گزینه، تصمیم گیری بله یا خیر برای عضویت در یک سازمان بزرگتر، تأیید یا رد یک برنامه استراتژیک جدید یا نتیجه یک گروه کاری، یا تعیین اینکه آیا این موقعیت ها باید حداکثر 1، 2 یا 3 مأموریت باقی بمانند. p>\n"
+          title: رای گیری چیست؟
+    menu:
+      votings: رای گیری ها
+    statistics:
+      elections_count: انتخابات
+      votings_count: رای گیری ها
+    votings:
+      admin:
+        ballot_styles:
+          create:
+            error: در ایجاد این سبک رأی گیری مشکلی وجود داشت
+            success: سبک رای گیری با موفقیت ایجاد شد
+          destroy:
+            invalid: مشکلی در حذف این سبک رأی‌گیری وجود داشت
+            success: سبک رأی با موفقیت حذف شد
+          edit:
+            title: ویرایش سبک رای گیری
+            update: به روز رسانی
+          form:
+            code_help: 'نکته: کد رابط بین سرشماری و شیوه رای گیری است. هنگام بارگذاری اطلاعات سرشماری، با تطبیق کد، به هر ورودی یک سبک رای اختصاص داده می شود'
+            election: انتخابات
+            questions: سوالات مربوط به این سبک رای گیری
+            questions_help: 'نکته: سؤالات را از مؤلفه های انتخابات انتخاب کنید تا به رأی دهندگان اختصاص داده شده به این شیوه رأی گیری ارائه شود'
+          index:
+            actions:
+              confirm_destroy: مطمئنی؟
+              destroy: حذف
+              edit: ویرایش کنید
+              new: جدید
+              title: اقدامات
+            associated_census_data: مدخل های سرشماری مرتبط
+            explanation_callout: سبک رای گیری مشخص می کند که چه سوالاتی برای یک رای دهنده در غرفه ارائه خواهد شد. در سبک رای گیری، می توانید انتخاب کنید که چه سوالاتی از اجزای انتخاباتی این رای گیری به یک برگه رای تعلق دارد. کد سبک رای گیری برای تطبیق یک رای دهنده از سرشماری با برگه ای که در غرفه ارائه می شود استفاده می شود. اگر می‌خواهید همیشه همه سؤالات را ارائه کنید، هیچ سبک رأی‌گیری ایجاد نکنید.
+            title: سبک های رای گیری
+          new:
+            create: ايجاد كردن
+            title: ایجاد سبک رای گیری
+          update:
+            invalid: مشکلی در به‌روزرسانی این شیوه رأی‌دهی وجود داشت
+            success: سبک رای گیری با موفقیت به روز شد
+        content_blocks:
+          highlighted_votings:
+            max_results: حداکثر مقدار عناصر برای نمایش
+          landing_page:
+            attachments_and_folders:
+              name: رای گیری پیوست ها و پوشه ها
+            description:
+              name: توضیحات رأی گیری
+            elections:
+              name: انتخابات رای دادن
+            header:
+              name: سرصفحه رای گیری
+            html_block_1:
+              name: رای گیری html بلوک 1
+            html_block_2:
+              name: رای گیری html بلوک 2
+            html_block_3:
+              name: رای گیری html بلوک 3
+            metrics:
+              name: معیارهای رای گیری
+            polling_stations:
+              name: مراکز رای گیری
+            stats:
+              name: آمار رای گیری
+            timeline:
+              name: جدول زمانی رای گیری
+        index:
+          not_published: منتشر نشده
+          published: منتشر شده
+        landing_page:
+          content_blocks:
+            edit:
+              update: به روز رسانی
+          edit:
+            active_content_blocks: بلوک های محتوای فعال
+            inactive_content_blocks: بلوک های محتوای غیر فعال
+        menu:
+          votings: رای گیری ها
+          votings_submenu:
+            attachment_collections: پوشه ها
+            attachment_files: فایل ها
+            attachments: پیوست ها
+            ballot_styles: سبک های رای گیری
+            census: سرشماری
+            components: اجزاء
+            info: اطلاعات
+            landing_page: صفحه فرود
+            monitoring_committee: کمیته نظارت
+            monitoring_committee_election_results: اعتبار سنجی نتایج
+            monitoring_committee_members: اعضا
+            monitoring_committee_polling_station_closures: اعتبار گواهینامه ها
+            monitoring_committee_verify_elections: تایید انتخابات
+            polling_officers: افسران رای گیری
+            polling_stations: مراکز رای گیری
+        models:
+          ballot_style:
+            fields:
+              code: کد
+            name: سبک رای گیری
+          monitoring_committee_member:
+            fields:
+              email: پست الکترونیک
+              name: نام
+            name: عضو کمیته نظارت
+          polling_officer:
+            fields:
+              email: پست الکترونیک
+              name: نام
+              polling_station: شعبه رای گیری (نقش)
+            name: افسر رای گیری
+          polling_station:
+            fields:
+              address: نشانی
+              polling_station_managers: مدیران
+              polling_station_president: رئيس جمهور
+              title: عنوان
+            name: شعبه رای گیری
+          voting:
+            fields:
+              created_at: ایجاد شده در
+              promoted: برجسته شده است
+              published: منتشر شده
+              title: عنوان
+        monitoring_committee_election_results:
+          actions:
+            title: اقدامات
+            view: چشم انداز
+          index:
+            title: انتخاباتی را انتخاب کنید که می‌خواهید نتایج آن را ببینید
+          results:
+            bulletin_board: تابلوی اعلانات
+            election_totals: مجموع انتخابات
+            polling_stations: مراکز رای گیری
+            result_types:
+              blank_answers: پاسخ های خالی
+              blank_ballots: برگه های سفید
+              null_ballots: برگه های رای باطل
+              total_ballots: کل برگه های رای
+              valid_ballots: برگه های رای معتبر
+            selected: انتخاب شد
+            title: نتایج انتخابات <i>%{election_title}</i>
+            totals: جمع کل
+          show:
+            change_election: انتخابات را تغییر دهید
+            publish_results: نتایج را منتشر کنید
+            publishing: انتشار نتایج...
+          update:
+            invalid: در انتشار نتایج مشکلی پیش آمد
+            rejected: انتشار نتایج توسط هیئت اعلانات رد شد. دوباره امتحان کنید یا با مدیر سیستم تماس بگیرید.
+            success: نتایج با موفقیت منتشر شد
+        monitoring_committee_members:
+          create:
+            invalid: مشکلی در ایجاد این عضو کمیته نظارت وجود داشت
+            success: عضو کمیته نظارت با موفقیت ایجاد شد
+          destroy:
+            invalid: مشکلی در حذف این عضو کمیته نظارت وجود داشت
+            success: عضو کمیته نظارت با موفقیت حذف شد
+          form:
+            existing_user: شرکت کننده موجود
+            non_user: دعوت از شرکت کننده جدید
+            select_user: جستجو بر اساس نام، ایمیل یا نام مستعار
+            user_type: نوع شرکت کننده
+          index:
+            title: کمیته نظارت
+          new:
+            create: ايجاد كردن
+            title: ایجاد عضو کمیته نظارت
+        monitoring_committee_polling_station_closures:
+          actions:
+            title: اقدامات
+            validate: تایید اعتبار
+            view: چشم انداز
+          closures:
+            change_election: انتخابات را تغییر دهید
+            signed: امضاء شده؟
+            title: مراکز رای گیری برای انتخابات <i>%{election_title}</i>
+            validated: تایید شده؟
+          edit:
+            change_polling_station: بازگشت به حوزه های رای گیری
+            monitoring_committee_notes: ملاحظات
+            monitoring_committee_notes_placeholder: هر حادثه ای را اینجا گزارش کنید
+            title: نتایج انتخابات <i>%{election_title}</i> در حوزه رای گیری <i>%{polling_station_title}</i>
+          elections:
+            title: انتخاباتی را انتخاب کنید که می خواهید اعتبار سنجی کنید
+          show:
+            change_polling_station: بازگشت به حوزه های رای گیری
+            monitoring_committee_notes: اظهارات کمیته نظارت
+          validate:
+            error: مشکلی در تأیید بسته شدن وجود داشت
+            success: بسته شدن به درستی تایید شده است
+        monitoring_committee_verify_elections:
+          index:
+            download: دانلود
+            how_to_checksum: 'برای اینکه مطمئن شوید فایلی که دانلود کرده اید در طول فرآیند دانلود خراب یا دستکاری نشده است، دستور زیر را در کنسول خود اجرا کنید و بررسی کنید که خروجی با چک جمع گزارش شده در بالا مطابقت داشته باشد:'
+            how_to_download: برای تأیید یک انتخابات، فایل قابل تأیید آن را از جدول بالا دانلود کنید.
+            how_to_run_verifier: 'هنگامی که فایل را دانلود کردید و از سالم بودن آن مطمئن شدید، می توانید به اجرای تایید کننده جهانی ادامه دهید. <a href=''https://github.com/decidim/decidim-bulletin-board''>این مخزن</a> را کلون کنید و از پوشه root دستور زیر را اجرا کنید:'
+            how_to_title: نحوه بررسی صحت انتخابات
+            not_available: هنوز در دسترس نیست
+            title: انتخابات
+        polling_officers:
+          create:
+            invalid: در ایجاد این افسر رای گیری مشکلی وجود داشت
+            success: افسر رای گیری با موفقیت ایجاد شد
+          destroy:
+            invalid: مشکلی در حذف این افسر نظرسنجی وجود داشت
+            success: افسر نظرسنجی با موفقیت حذف شد
+          form:
+            existing_user: شرکت کننده موجود
+            non_user: دعوت از شرکت کننده جدید
+            select_user: جستجو بر اساس نام، ایمیل یا نام مستعار
+            user_type: نوع شرکت کننده
+          index:
+            role_manager: مدیر
+            role_president: رئيس جمهور
+            title: افسران رای گیری
+          new:
+            create: ايجاد كردن
+            title: افسر رای گیری ایجاد کنید
+          polling_officers_picker:
+            choose_polling_officers: افسران رای گیری را انتخاب کنید
+            close: بستن
+            more_polling_officers: "%{number} افسر رای گیری دیگر وجود دارد. جستجوی خود را برای یافتن آنها اصلاح کنید."
+            no_polling_officers: هیچ افسر رای گیری با معیارهای جستجوی شما مطابقت ندارد یا هیچ افسر رای گیری وجود ندارد.
+        polling_stations:
+          create:
+            invalid: در ایجاد این شعبه رای گیری مشکلی وجود داشت
+            success: مرکز رای گیری با موفقیت ایجاد شد
+          destroy:
+            invalid: مشکلی در حذف این شعبه رای‌دهی وجود داشت
+            success: شعبه رای گیری با موفقیت حذف شد
+          edit:
+            title: ویرایش شعبه رای گیری
+            update: به روز رسانی مرکز رای گیری
+          form:
+            address_help: 'آدرس: توسط Geocoder برای یافتن مکان استفاده می شود'
+            location_help: 'مکان: پیامی که به رای دهندگان ارسال می شود که محل دقیق شعبه رای گیری را نشان می دهد'
+            location_hints_help: 'نکات مکان: اطلاعات اضافی. مثال: طبقه ساختمانی که شعبه اخذ رای در آن قرار دارد.'
+            polling_station_managers_help: 'مدیران شعب اخذ رای: افسرانی که به عنوان مدیر شعب اخذ رای عمل خواهند کرد. اطمینان حاصل کنید که افسران قبلاً در افسران رای گیری ایجاد شده اند و آنها قبلاً به شعبه رأی گیری دیگری منصوب نشده اند.'
+            polling_station_president_help: 'افسر شعبه اخذ رای: افسری که به عنوان رئیس شعبه اخذ رای عمل می کند. اطمینان حاصل کنید که افسر قبلاً در افسران رای گیری ایجاد شده است و او قبلاً به شعبه رای گیری دیگری منصوب نشده است.'
+            select_president: یک افسر رای گیری را به عنوان رئیس مرکز رای گیری انتخاب کنید
+          index:
+            title: مراکز رای گیری
+          new:
+            create: ايجاد كردن
+            title: ایجاد شعبه رای گیری
+          update:
+            invalid: مشکلی در به‌روزرسانی این مرکز رأی‌گیری وجود داشت
+            success: مرکز رای گیری با موفقیت به روز شد
+        titles:
+          votings: رای گیری ها
+        votings:
+          actions:
+            confirm_destroy: مطمئنی؟
+            destroy: از بین رفتن
+            new_voting: فضای جدید رای گیری
+            publish: انتشار
+            unpublish: لغو انتشار
+          create:
+            invalid: مشکلی در ایجاد این رأی‌گیری وجود داشت
+            success: رای گیری با موفقیت ایجاد شد
+          edit:
+            add_election_component: شما هیچ انتخاباتی برای این رأی گیری پیکربندی نکرده اید. لطفاً آن را در بخش اجزاء اضافه کنید
+            assign_missing_officers: مراکز رای گیری بدون رئیس و/یا مدیران وجود دارد. لطفا آنها را از قسمت حوزه های رای گیری اختصاص دهید
+            update: به روز رسانی
+          form:
+            banner_image: تصویر بنر
+            census_contact_information: اطلاعات تماس سرشماری
+            census_contact_information_help: این اطلاعات تماس برای شرکت کننده ای است که می خواهد مشکلات مربوط به سرشماری را گزارش کند. این می تواند یک آدرس ایمیل، یک فرم تماس در یک سایت دیگر، نظرسنجی برای بازدیدکنندگان و غیره باشد.
+            introductory_image: تصویر مقدماتی
+            promoted: ارتقاء یافت
+            select_a_voting_type: لطفا نوع رای گیری را انتخاب کنید
+            show_check_census_help: '"آیا می توانم رای بدهم؟" پیوند در منوی رای گیری عمومی'
+            slug: حلزون حرکت کردن
+            slug_help: 'Slugs URL برای تولید URL هایی که به این رأی گیری اشاره می کنند استفاده می شود. فقط حروف، اعداد و خط تیره را می پذیرد و باید با یک حرف شروع شود. مثال: %{url}'
+            title: عنوان
+            voting_type:
+              hybrid: ترکیبی
+              in_person: به صورت حضوری
+              online: برخط
+            voting_type_label: نوع رای گیری
+          new:
+            create: ايجاد كردن
+            title: رای گیری جدید
+          publish:
+            success: رای گیری با موفقیت منتشر شد
+          unpublish:
+            success: رای گیری با موفقیت لغو شد
+          update:
+            invalid: مشکلی در به‌روزرسانی این رأی‌گیری وجود داشت
+            success: رای گیری با موفقیت به روز شد
+      admin_log:
+        ballot_style:
+          create: "%{user_name} یک استایل رأی با کد %{ballot_style_code} در فضای %{space_name} ایجاد کرد"
+          delete: "%{user_name} سبک رای گیری را با کد %{ballot_style_code} در فضای %{space_name} حذف کرد"
+          update: "%{user_name} سبک برگه رای را با کد %{ballot_style_code} در فضای %{space_name} به روز کرد"
+        census:
+          create: "%{user_name} سرشماری فضای %{space_name} را ایجاد کرد"
+          delete: "%{user_name} سرشماری فضای %{space_name} را حذف کرد"
+          update: "%{user_name} سرشماری فضای %{space_name} را به روز کرد"
+        monitoring_committee_member:
+          create: "%{user_name} کاربر %{monitoring_committee_member_user} را به عنوان عضو کمیته نظارت در فضای %{space_name} اختصاص داد"
+          delete: "%{user_name} کاربر %{monitoring_committee_member_user} را به عنوان عضو کمیته نظارت در فضای %{space_name} لغو کرد"
+        polling_officer:
+          create: "%{user_name} کاربر %{polling_officer_user} را به عنوان افسر رای گیری در فضای %{space_name} اختصاص داد"
+          delete: "%{user_name} کاربر %{polling_officer_user} را به عنوان افسر رای گیری در فضای %{space_name} لغو کرد"
+        polling_station:
+          create: "%{user_name} مرکز رای گیری %{resource_name} را در فضای %{space_name} ایجاد کرد"
+          delete: "%{user_name} شعبه رای گیری %{resource_name} را در فضای %{space_name} حذف کرد"
+          update: "%{user_name} مرکز رای گیری %{resource_name} را در فضای %{space_name} به روز کرد"
+        voting:
+          create: "%{user_name} رای %{resource_name} را ایجاد کرد"
+          publish: "%{user_name} رای %{resource_name} را منتشر کرد"
+          unpublish: "%{user_name} رأی %{resource_name} را لغو منتشر کرد"
+      census:
+        admin:
+          census:
+            create:
+              invalid: هنگام آپلود سرشماری خطایی روی داد، لطفاً بعداً دوباره امتحان کنید.
+              invalid_csv_header: سرصفحه‌های CSV وجود ندارند یا درست نیستند - لطفاً دستورالعمل‌ها را با دقت بخوانید
+            creating_data:
+              info_message: "<strong>لطفاً صبر کنید</strong>، %{processed_count} از %{raw_count} ردیف از فایل %{file} پردازش شد (ممکن است چند دقیقه طول بکشد)."
+            delete:
+              button: تمام داده های سرشماری را حذف کنید
+              confirm: حذف همه داده‌های سرشماری قابل بازگشت نیست. آیا مطمئن هستید که میخواهید ادامه دهید؟
+            destroy:
+              error: هنگام حذف سرشماری خطایی روی داد، لطفاً بعداً دوباره امتحان کنید.
+              success: اطلاعات سرشماری حذف شد
+            export_access_codes:
+              button: کدهای دسترسی رأی گیری را صادر کنید
+              callout: اکنون می توانید به صادرات کدهای دسترسی ادامه دهید. این کار فقط یک بار قابل انجام است. پس از راه‌اندازی صادرات، ایمیلی حاوی دستورالعمل‌های <strong>%{email}</strong> دریافت خواهید کرد
+              confirm: فقط یک بار می توانید کدهای دسترسی را صادر کنید. مطمئن شوید که به حساب ایمیل <strong>%{email}</strong> دسترسی دارید.
+              file_not_exist: این فایل وجود ندارد
+              launch_error: مشکل در راه اندازی صادرات کدهای دسترسی
+              launch_success: صادرات کدهای دسترسی راه اندازی شد. به زودی یک ایمیل به %{email} دریافت خواهید کرد
+            exporting_access_codes:
+              info_message: "<strong>لطفاً صبر کنید</strong>، صادرات در حال آماده شدن است، به زودی آن را تا %{email} دریافت خواهید کرد (ممکن است چند دقیقه طول بکشد)."
+            freeze:
+              callout: سرشماری متوقف شده و قابل تغییر نیست.
+              help_html: اطلاعات سرشماری آپلود شد، کدها با موفقیت تولید و صادر شدند.<br> <strong>شما اکنون آماده شروع انتخابات هستید.</strong><br> از CSV صادر شده با کدهای فردی برای توزیع آن در سرشماری خود با استفاده از ابزار شخصی خود استفاده کنید یا برگه "آیا می توانم رای دهم" را فعال کنید تا به هر کسی اجازه دهید این کد را با استفاده از داده های سرشماری خود بازیابی کند.
+            generate_access_codes:
+              button: کدهای دسترسی رای گیری را ایجاد کنید
+              callout: اکنون می توانید به تولید کدهای دسترسی ادامه دهید. توجه داشته باشید که پس از ایجاد کدهای دسترسی، دیگر نمی توانید سرشماری را تغییر دهید.
+              confirm: اگر ادامه دهید، نمی توانید سرشماری را تغییر دهید.
+              info_message_all: "<strong>همه ردیف‌ها با موفقیت وارد شدند</strong> از فایل %{file} (%{raw_count} از %{data_count})."
+              info_message_warn: لطفاً بررسی کنید که هیچ داده ای وجود نداشته باشد، زیرا رکوردهای %{data_count} ایجاد شده اند و فایل %{file} بارگذاری شده دارای %{raw_count} ردیف است.
+              launch_error: مشکل در راه اندازی تولید کدهای دسترسی
+              launch_success: تولید کد راه اندازی شد.
+              start_over: لطفاً سرشماری فعلی را حذف کنید و دوباره با یک فایل CSV مناسب با ردیف‌های معتبر شروع کنید.
+            generating_access_codes:
+              info_message: "<strong>لطفاً صبر کنید</strong>، کدهای دسترسی رای‌گیری در حال ایجاد هستند (ممکن است چند دقیقه طول بکشد)..."
+            new:
+              file_help:
+                explanation: 'راهنمای فایل:'
+                message_1: فقط فایل‌های CSV (csv.) مجاز هستند.
+                message_2: جداکننده بین ستون ها باید نقطه ویرگول (";") باشد.
+              has_ballot_styles_message: شما سبک های رای دهی را تنظیم کردید. لطفاً مطمئن شوید که فیلد "%{ballot_style_code_header}" در CSV با کد سبک رای مورد نظر مطابقت دارد.
+              info_message: "<strong>هنوز سرشماری وجود ندارد.</strong> لطفاً از فرم زیر برای ایجاد یک فایل CSV استفاده کنید."
+              missing_ballot_styles_message: 'هنوز شیوه رأی گیری برای این رأی گیری وجود ندارد. اگر می‌خواهید سؤالات مشروط داشته باشید (به عنوان مثال: به رأی‌دهنده سؤالات مختلفی بسته به، به عنوان مثال، منطقه/منطقه محل سکونت ارائه دهید)، باید <a href=%{ballot_styles_admin_path}>سبک‌های رأی‌گیری</a> <strong> را تنظیم کنید. قبل</strong>وارد سرشماری. اگر می خواهید همه رای دهندگان را با سوالات یکسان مطرح کنید، می توانید مراحل واردات سرشماری را ادامه دهید.'
+              submit: CSV را ارسال کنید
+              title: سرشماری ایجاد کنید
+            show:
+              heading: سرشماری فضای رای گیری
+            upload_info:
+              csv_example_with_ballot_style: 'نمونه ای از فایل <strong>با</strong> سبک های رای:'
+              csv_example_without_ballot_style: 'نمونه ای از فایل <strong>بدون</strong> سبک های رأی گیری:'
+              csv_header_after: اگر به سبک‌های رای‌گیری/سوالات مشروط نیاز ندارید، آخرین فیلد ("%{ballot_style_code_header}") را وارد نکنید
+              csv_header_before: 'فایل سرشماری باید یک فایل CSV با هدر زیر باشد:'
+        document_types:
+          dni: DNI
+          nie: NIE
+          passport: گذرنامه
+        export_mailer:
+          access_codes_export:
+            click_button: 'برای بارگیری داده‌های کدهای دسترسی، روی پیوند بعدی کلیک کنید.<br/>این فایل تا %{date} در دسترس خواهد بود.<br/>به <a href="https://www.7-zip.org/">7 نیاز دارید -Zip</a> (برای Windows)، <a href="https://www.keka.io/en/">Keka</a> (برای MacOS) یا <a href="https://peazip .github.io">PeaZip</a> (برای لینوکس) برای باز کردن آن. رمز عبور: %{password}'
+            download: دانلود
+            subject: صدور کدهای دسترسی رای گیری برای %{voting_title} در دسترس است
+        vote_flow:
+          already_voted_in_person: این شرکت کننده قبلاً شخصاً رأی داده است و حق رأی ندارد.
+          datum_not_found: داده های داده شده با هیچ رأی دهنده ای مطابقت ندارد.
+      content_blocks:
+        highlighted_votings:
+          name: رای های برجسته شده
+        landing_page:
+          description:
+            title: در مورد این رای گیری
+          metrics:
+            heading: معیارهای
+          polling_stations:
+            heading: مراکز رای گیری
+            no_polling_stations: هنوز شعبه رای گیری وجود ندارد.
+          timeline:
+            heading: جدول زمانی
+      monitoring_committee_members:
+        actions:
+          confirm_destroy: مطمئنی؟
+          destroy: حذف
+          new: عضو جدید
+          title: اقدامات
+      pages:
+        home:
+          highlighted_votings:
+            active_votings: رای گیری فعال
+            see_all_votings: مشاهده همه رای گیری ها
+            votings_button_title: پیوند به صفحه رای گیری که همه رای ها را نشان می دهد
+      polling_officer_zone:
+        closures:
+          back_to_polling_stations: بازگشت به حوزه های رای گیری
+          certify:
+            add_images: اضافه کردن تصاویر
+            error: هنگام پیوست کردن گواهی خطایی روی داد، لطفاً دوباره امتحان کنید.
+            form_legend: تصویری از گواهی اختتامیه انتخابات بارگذاری کنید
+            heading: بازشماری آرا - بارگذاری گواهی
+            info_text: لطفا تصویری از گواهی اختتامیه انتخابات آپلود کنید.
+            submit: گواهی را بارگذاری کنید
+            success: گواهی با موفقیت آپلود شد.
+          create:
+            error: در ایجاد بسته شدن خطایی روی داد، لطفاً بعداً دوباره امتحان کنید.
+            success: بسته شدن با موفقیت ایجاد شد.
+          edit:
+            heading: شمارش مجدد آرا - شمارش مجدد پاسخ ها
+            info_text: لطفا تعداد کل پاسخ های هر سوال را معرفی کنید.
+            modal_ballots_results_count_error:
+              close_modal: بستن
+              info_text: تعداد کل برگه ها با تعداد کل پاکت ها مطابقت ندارد. لطفا کل آرا را بررسی کنید.
+              title: مجموع آرا جمع نمی شود
+            save_recount: ذخیره مجدد شمارش
+            total_ballots: کل برگه های رای
+            total_blank_ballots: کل برگه های سفید
+            total_null_ballots: مجموع آراء باطل
+            total_valid_ballots: کل آرای معتبر
+          new:
+            election: 'انتخابات:'
+            heading: بازشماری آرا
+            info_text: 'لطفا تعداد کل برگه های رای (پاکت) بازشماری شده در این شعبه رای گیری را معرفی کنید:'
+            modal_ballots_count_error:
+              btn_validate_total: بازشماری کل آرا را تأیید کنید
+              close_modal: بستن
+              info_explanation_text: 'لطفا تعداد کل برگه های رای را بررسی کنید. اگر تعداد کل نادرست است، باید برای کمیته نظارت توضیح دهید:'
+              info_text: تعداد کل برگه های رای (پاکت) معرفی شده با رکورد افرادی که در این شعبه رای رای داده اند مطابقت ندارد.
+              message_for_monitoring_committee: پیام کمیته نظارت
+              review_recount: بازشماری را مرور کنید
+              text_area_placeholder: لطفا پیام خود را تایپ کنید
+              title: کل رکوردها جمع نمی شوند
+              total_ballots: 'مجموع آراء:'
+              total_people: 'مجموع افراد:'
+            polling_station: 'شعبه رای گیری:'
+            submit: تعداد کل را تأیید کنید
+            total_ballots_count: تعداد برگه های رای
+          show:
+            heading: بازشماری آرا
+            info_text: تعطیلی حوزه انتخاباتی
+          sign:
+            cancel: لغو کنید
+            check_box: من این را بررسی کرده ام و همان گواهی اختتامیه فیزیکی انتخابات است
+            close_modal: بستن
+            confirm: باشه ادامه بده
+            error: خطایی روی داد، لطفا دوباره امتحان کنید.
+            heading: بازشماری آرا - امضای بسته شدن
+            info_text: اگر ادامه دهید، دیگر نمی توانید هیچ یک از اطلاعات را تغییر دهید، این عمل قابل واگرد نیست.
+            submit: بسته شدن را امضا کنید
+            success: بسته شدن با موفقیت امضا شد.
+            title: عمل قابل واگرد نیست
+          update:
+            error: هنگام به‌روزرسانی نتایج بسته شدن خطایی روی داد، لطفاً بعداً دوباره امتحان کنید.
+            success: نتایج بسته شدن با موفقیت به روز شد.
+        in_person_votes:
+          complete_voting:
+            available_answers: 'پاسخ های موجود:'
+            census_verified: این شرکت کننده هنوز شخصاً رای نداده است.
+            census_verified_with_online_vote: این شرکت کننده قبلاً به صورت آنلاین رأی داده است. اگر حضوری رای دهند، آرای قبلی باطل می شود و این رای قطعی خواهد بود.
+            complete_voting: رای گیری کامل
+            identify_another: شرکت کننده دیگری را شناسایی کنید
+            questions_title: 'آنها حق رای دادن در سوالات زیر را دارند:'
+            questions_title_voted: 'این شرکت کننده قبلاً به صورت آنلاین رأی داده است و حق رای دادن در سؤالات زیر را دارد:'
+            voted: شرکت کننده رای داده است
+          create:
+            error: رای ثبت نشد. لطفا دوباره تلاش کنید.
+          in_person_form:
+            census_not_present: این شرکت کننده در سرشماری فهرست نشده است.
+            census_not_present_description: آنها باید به اداره شکایات سرشماری مراجعه کنند یا با پشتیبانی تماس بگیرند.
+            date_of_birth: تاریخ تولد
+            day: روز
+            day_placeholder: DD
+            document_number: شماره سند
+            document_number_placeholder: شماره شناسایی
+            month: ماه
+            month_placeholder: MM
+            select: نوع سند را انتخاب کنید
+            title: 'نوع سند را انتخاب کنید و شماره سند شرکت کننده را وارد کنید:'
+            validate_document: اعتبار سنجی سند
+            year: سال
+            year_placeholder: YYYY
+          new:
+            back: بازگشت به حوزه های رای گیری
+            title: یک شرکت کننده را شناسایی و تأیید کنید
+          show:
+            back: بازگشت به حوزه های رای گیری
+            title: منتظر ثبت رای حضوری هستیم
+          update:
+            error: هنگام ثبت رأی خطایی روی داد. لطفا دوباره تلاش کنید.
+            success:
+              accepted: رای با موفقیت ثبت شد.
+              rejected: این رای توسط هیئت اعلانات پذیرفته نشد. لطفا با مدیر سیستم تماس بگیرید.
+          verify_document:
+            census_present: این شرکت کننده در سرشماری فهرست شده است.
+            name: نام
+            title: 'بررسی کنید که داده های زیر صحیح هستند:'
+            verify_document: تایید سند
+        menu:
+          polling_officer_zone: منطقه افسر رای گیری
+        polling_officers:
+          index:
+            polling_officer_role_description: شما به عنوان افسر مرکز رأی گیری (رئیس یا مدیر) در برخی از انتخاباتی که در این پلتفرم جشن گرفته می شود، منصوب شده اید.
+            polling_station:
+              address: نشانی
+              count_votes: شمارش آرا
+              election: انتخابات
+              identify_person: یک فرد را شناسایی کنید
+              name: نام
+              no_polling_stations: شما هنوز به هیچ مرکز رای گیری منصوب نشده اید.
+              role: وظیفه شما
+              show_closure: مشاهده بسته شدن
+              title: مراکز رای گیری
+              voting: رای دادن
+      polling_officers:
+        actions:
+          confirm_destroy: مطمئنی؟
+          destroy: حذف
+          new: جدید
+          title: اقدامات
+        roles:
+          manager: مدیر
+          president: رئيس جمهور
+          unassigned: واگذار نشده است
+      polling_station_closure_recount:
+        nota_option: خالی / هیچ یک از موارد بالا
+        polling_officer_notes: 'افسر رای گیری خاطرنشان می کند:'
+        polling_officer_notes_blank: هیچ یادداشتی وجود ندارد
+        recount_summary: 'خلاصه بازشماری:'
+        signed: امضاء شده
+        total_ballots: 'کل آرا:'
+        total_blank_ballots: 'کل برگه های سفید رای:'
+        total_null_ballots: 'مجموع آراء باطل:'
+        total_valid_ballots: 'مجموع آراء معتبر:'
+      polling_stations:
+        actions:
+          confirm_destroy: مطمئنی؟
+          destroy: حذف
+          edit: ویرایش کنید
+          new: جدید
+          title: اقدامات
+      votings:
+        access_code_modal:
+          email: از طریق ایمیل به %{email} ارسال کنید
+          info: برای شرکت به یک کد دسترسی نیاز دارید. اگر از طریق پست پستی دریافت نکردید، می توانیم یک مورد جدید برای شما ارسال کنیم.
+          no_email: ایمیلی موجود نیست
+          no_sms: شماره تلفنی موجود نیست
+          sms: ارسال پیامک به %{sms}
+          title: کد دسترسی را دریافت کنید
+        check_census:
+          check_status: وضعیت را بررسی کنید
+          description: در اینجا، شما می توانید داده های سرشماری خود را بررسی کنید تا بدانید آیا حق شرکت در این رای گیری را دارید یا خیر. شما باید از قبل یک کد دسترسی داشته باشید، اما اگر آن را گم کردید، می توانید دوباره آن را درخواست کنید، زمانی که اطلاعات شما درست باشد.
+          error:
+            info: 'لطفا دوباره تلاش کنید. اگر فکر می کنید داده های موجود در سیستم نادرست است، می توانید آن را در اینجا گزارش دهید: %{census_contact_information}'
+            title: داده هایی که وارد کرده اید در سرشماری این رای نیست
+          form_title: 'برای بررسی اطلاعات سرشماری خود فرم زیر را پر کنید:'
+          invalid: مشکلی در بررسی سرشماری وجود داشت.
+          success:
+            access_link: از طریق ایمیل.
+            access_link_with_sms: از طریق پیامک یا ایمیل.
+            info: قبلاً باید کد دسترسی خود را از طریق پست پستی دریافت کرده باشید. در صورتی که آن را ندارید، می توانید آن را از اینجا درخواست کنید
+            title: اطلاعات سرشماری شما صحیح است!
+          title: میتونم رای بدم؟
+        check_fields:
+          date_of_birth: تاریخ تولد
+          day: روز
+          day_placeholder: DD
+          document_number: شماره سند
+          document_number_placeholder: شماره شناسایی
+          document_type: نوع سند
+          month: ماه
+          month_placeholder: MM
+          postal_code: کد پستی
+          postal_code_placeholder: شماره کد پستی
+          select: نوع سند را انتخاب کنید
+          year: سال
+          year_placeholder: YYYY
+        count:
+          title:
+            one: "%{count} رای دادن"
+            other: "%{count} رای"
+        elections_log:
+          bb_status: وضعیت انتخابات
+          description: گزارش انتخابات تمام اطلاعات مربوط به هر رأی گیری را به شما نشان می دهد. به عنوان مثال، وضعیت مراسم کلیدی یا آمارگیری یا اگر نتایج قبلاً منتشر شده است. بر روی انتخاباتی که می خواهید اطلاعات گزارش مربوط به آن را دریافت کنید، کلیک کنید.
+          election_log: گزارش انتخابات
+          title: گزارش انتخابات
+        filters:
+          active: فعال
+          all: همه
+          date: تاریخ
+          finished: تمام شده
+          search: جستجو کردن
+          upcoming: آینده
+        filters_small_view:
+          close_modal: بستن مودال
+          filter: فیلتر کنید
+          filter_by: محدود شده توسط
+          unfold: باز کردن
+        index:
+          no_votings: هیچ رأی گیری با معیارهای جستجوی شما مطابقت ندارد.
+          only_finished: در حال حاضر، هیچ رأی‌گیری برنامه‌ریزی‌شده‌ای وجود ندارد، اما در اینجا می‌توانید رأی‌های نهایی فهرست شده را پیدا کنید.
+          title: رای گیری ها
+        login:
+          access_code: کد دسترسی
+          access_code_placeholder: کد دسترسی
+          ask_for_a_new_one: یک مورد جدید بخواهید.
+          dont_have_access_code: کد دسترسی ندارید؟
+          form_title: 'برای دسترسی به رای گیری فرم زیر را پر کنید:'
+          start_voting: شروع به رای دادن کنید
+          step: شناسایی
+          title: با داده‌های سرشماری رأی‌دهی خود را شناسایی کنم
+        no_census_contact_information: هنوز اطلاعات تماسی وجود ندارد
+        orders:
+          label: 'مرتب سازی آرا بر اساس:'
+          random: تصادفی
+          recent: اخیرا
+        send_access_code:
+          invalid: مشکلی در ارسال کد دسترسی وجود داشت
+          success: کد دسترسی شما با موفقیت ارسال شد
+        show:
+          dates: تاریخ
+      votings_m:
+        badge_name:
+          finished: تمام شده
+          ongoing: در دست اقدام
+          upcoming: آینده
+        footer_button_text:
+          participate: شرکت کردن
+          view: چشم انداز
+          vote: رای
+        unspecified: مشخص نشده است
+        voting_type:
+          hybrid: ترکیبی
+          in_person: به صورت حضوری
+          online: برخط
+        voting_types_label: نوع رای گیری
+  layouts:
+    decidim:
+      election_votes_header:
+        exit: خارج شوید
+      voting_navigation:
+        check_census: میتونم رای بدم؟
+        election_log: گزارش انتخابات
+        voting_menu_item: رای گیری
+      votings:
+        index:
+          promoted_votings: رای های برجسته شده
+        promoted_voting:
+          more_info: اطلاعات بیشتر
+          vote: رای

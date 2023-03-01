@@ -1,0 +1,151 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      sortition:
+        additional_info: اطلاعات مرتب سازی
+        decidim_category_id: دسته بندی مجموعه پیشنهادهایی که می خواهید قرعه کشی را در آنها اعمال کنید
+        decidim_proposals_component_id: مجموعه پیشنهادات
+        dice: نتیجه دای رول. یک قالب 6 وجهی بچرخانید، یا به دنبال راه تصادفی دیگری برای تولید یک عدد از 1 تا 6 بگردید، و عدد حاصل را در مقابل چند شاهد در اینجا وارد کنید. این به کیفیت و تضمین تصادفی بودن نتیجه کمک می کند
+        target_items: تعداد پروپوزال هایی که باید انتخاب شوند (نشان دهنده تعداد پیشنهادهایی است که می خواهید با قرعه کشی گروه پیشنهاداتی که قبلا انتخاب کرده اید انتخاب شوند)
+        title: عنوان
+        witnesses: شاهدان
+    models:
+      decidim/sortitions/create_sortition_event: مرتب سازی
+  activerecord:
+    models:
+      decidim/sortitions/sortition:
+        one: مرتب سازی
+        other: دسته بندی ها
+  decidim:
+    components:
+      sortitions:
+        actions:
+          comment: اظهار نظر
+        name: دسته بندی ها
+        settings:
+          global:
+            comments_enabled: نظرات فعال شد
+            comments_max_length: حداکثر طول نظرات (برای مقدار پیش فرض 0 بگذارید)
+    events:
+      sortitions:
+        sortition_created:
+          email_intro: مرتب سازی "%{resource_title}" به "%{participatory_space_title}" که شما دنبال می کنید اضافه شده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا "%{participatory_space_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+          email_subject: مرتب سازی جدید به %{participatory_space_title} اضافه شد
+          notification_title: مرتب‌سازی <a href="%{resource_path}">%{resource_title}</a> به %{participatory_space_title} اضافه شد
+    sortitions:
+      admin:
+        actions:
+          destroy: مرتب سازی را لغو کنید
+          edit: ویرایش کنید
+          new: مرتب سازی جدید
+          show: جزئیات مرتب سازی
+        models:
+          sortition:
+            fields:
+              category: دسته بندی
+              created_at: تاریخ ایجاد
+              decidim_proposals_component: جزء پیشنهادات
+              dice: تاس
+              reference: ارجاع
+              request_timestamp: زمان قرعه کشی
+              seed: بذر
+              target_items: موارد برای انتخاب
+              title: عنوان
+            name:
+              one: مرتب سازی
+              other: دسته بندی ها
+        sortitions:
+          confirm_destroy:
+            confirm_destroy: آیا مطمئنید که می خواهید این مرتب سازی را لغو کنید؟
+            destroy: لغو مرتب سازی
+            title: لغو مرتب سازی
+          create:
+            error: مشکلی در ایجاد مرتب‌سازی جدید وجود داشت.
+            success: مرتب سازی با موفقیت ایجاد شد
+          destroy:
+            error: نمی توان مرتب سازی را لغو کرد.
+            success: مرتب سازی با موفقیت لغو شد
+          edit:
+            title: اطلاعات مربوط به مرتب سازی را به روز کنید
+            update: به روز رسانی
+          form:
+            all_categories: همه دسته بندی ها
+            select_proposal_component: مجموعه پیشنهادات را انتخاب کنید
+            title: طبقه بندی جدید برای پیشنهادات
+          index:
+            title: دسته بندی ها
+          new:
+            confirm: با فشار دادن دکمه بعدی، پلتفرم تاریخ و زمان را (با دقت ثانیه) ثبت می کند و همراه با تاس انداختن، از این اطلاعات برای ایجاد یک انتخاب تصادفی استفاده می شود. عمل غیر قابل برگشت خواهد بود، پس از کلیک بر روی دکمه، نتیجه این قرعه کشی به همراه داده های وارد شده در این فرم منتشر می شود و قابل تغییر نیست، لطفاً محتوا را با دقت بررسی کنید.
+            create: ايجاد كردن
+            title: مرتب سازی جدید
+          show:
+            selected_proposals: پیشنهادات برای قرعه کشی انتخاب شدند
+          update:
+            error: مشکلی در به‌روزرسانی مرتب‌سازی وجود داشت.
+            success: مرتب سازی با موفقیت به روز شد
+      admin_log:
+        sortition:
+          create: "%{user_name} مرتب سازی %{resource_name} را در %{space_name} ایجاد کرد"
+          delete: "%{user_name} مرتب‌سازی %{resource_name} را در %{space_name} لغو کرد"
+          update: "%{user_name} مرتب سازی %{resource_name} را در %{space_name} به روز کرد"
+      sortitions:
+        count:
+          proposals_count:
+            one: 1 پیشنهاد
+            other: "%{count} پیشنهاد"
+        filters:
+          active: فعال
+          all: همه
+          cancelled: لغو شد
+          category: دسته بندی
+          category_prompt: یک دسته را انتخاب کنید
+          search: جستجو کردن
+          state: وضعیت
+        filters_small_view:
+          close_modal: بستن مودال
+          filter: فیلتر کنید
+          filter_by: محدود شده توسط
+          unfold: باز کردن
+        linked_sortitions:
+          selected_proposals: پیشنهادات منتخب
+        orders:
+          label: 'مرتب سازی را بر اساس:'
+          random: تصادفی
+          recent: اخیر
+        results_count:
+          count:
+            one: پیشنهاد انتخاب شده
+            other: پیشنهادات منتخب
+        show:
+          algorithm: کد الگوریتم مرتب سازی
+          any_category: از همه دسته ها
+          back: بازگشت به لیست
+          cancelled: مرتب سازی لغو شد
+          candidate_proposal_ids: ترتیب پیشنهادات مرتب سازی و شناسه
+          candidate_proposals_info: مرتب‌سازی بین پیشنهادات زیر انجام شد (%{category_label})، با شناسه‌های زیر (پیشنهادهای انتخابی به صورت پررنگ)
+          category: از دسته %{category}
+          dice_result: "(1) نتیجه تاس"
+          introduction: این صفحه حاوی نتایج مرتب‌سازی %{reference} است. با استفاده از این مرتب سازی، تعداد %{target_items} نتیجه به صورت تصادفی و با توزیع احتمال مساوی از مجموعه پیشنهادات نمایش داده شده در زیر انتخاب شده است. همراه با نتایج، اطلاعات نمایش داده شده در این صفحه تمام اطلاعات مورد نیاز برای به حداکثر رساندن تضمین ها و بازتولید نتایج را فراهم می کند. کلید کیفیت این مرتب‌سازی تصادفی مضاعف ارائه شده توسط پرتاب تاس (تأیید شده توسط شاهدان) و زمان دقیق مرتب‌سازی است که ورودی الگوریتمی را فراهم می‌کند که انتخاب تصادفی ایجاد می‌کند. بذر زمان برای مرتب سازی آنقدر دقیق (ثانیه) است که کنترل آن توسط انسان غیرممکن است، بنابراین یک ورودی "غیرقابل کنترل" مضاعف برای تضمین یک نتیجه منصفانه ارائه می دهد.
+          mathematical_result: نتیجه (1) x (2)
+          proposals_selected_by_sortition: پیشنهادات بر اساس مرتب سازی انتخاب شده اند
+          sortition_reproducibility_details: جزئیات تکرارپذیری مرتب سازی
+          time_seed: "(2) بذر زمان"
+          witnesses: شاهدان
+        sortition:
+          random_seed: دانه تصادفی
+          selected_proposals:
+            one: پیشنهاد انتخاب شد
+            other: پیشنهادات انتخاب شده
+          view: چشم انداز
+        sortition_author:
+          deleted: شرکت کننده حذف شده
+        sortition_cancel_author:
+          deleted: شرکت کننده حذف شده
+        sortitions_count:
+          count:
+            one: 1 مرتب سازی
+            other: مرتب سازی %{count}
+    statistics:
+      sortitions_count: دسته بندی ها

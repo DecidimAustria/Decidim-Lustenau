@@ -1,0 +1,381 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      budget:
+        decidim_scope_id: محدوده
+        description: شرح
+        title: عنوان
+        total_budget: کل بودجه
+        weight: موقعیت سفارش
+      project:
+        budget_amount: مبلغ بودجه
+        decidim_category_id: دسته بندی
+        decidim_scope_id: محدوده
+        description: شرح
+        proposal_ids: پیشنهادات مرتبط
+        proposals: پیشنهادات
+        selected: برای اجرا انتخاب شد
+        title: عنوان
+      proposals_import:
+        scope_id: محدوده
+  activerecord:
+    models:
+      decidim/budgets/project:
+        one: پروژه
+        other: پروژه ها
+  decidim:
+    admin:
+      filters:
+        projects:
+          category_id_eq:
+            label: دسته بندی
+          scope_id_eq:
+            label: محدوده
+          selected_at_null:
+            label: انتخاب شد
+            values:
+              'false': برای اجرا انتخاب شد
+              'true': برای اجرا انتخاب نشده است
+    budgets:
+      actions:
+        attachment_collections: پوشه ها
+        attachments: پیوست ها
+        confirm_destroy: آیا مطمئن هستید که می خواهید این پروژه را حذف کنید؟
+        destroy: حذف
+        edit: ویرایش کنید
+        edit_projects: پروژه ها را مدیریت کنید
+        import: پیشنهاد واردات به پروژه ها
+        new: "%{name} جدید"
+        preview: پیش نمایش
+        title: اقدامات
+      admin:
+        budgets:
+          create:
+            invalid: در ایجاد این بودجه مشکلی وجود داشت
+            success: بودجه با موفقیت ایجاد شد
+          destroy:
+            invalid: مشکلی در حذف این بودجه وجود داشت
+            success: بودجه با موفقیت حذف شد
+          edit:
+            title: ویرایش بودجه
+            update: به روز رسانی بودجه
+          index:
+            finished_orders: آرای تمام شده
+            pending_orders: آرای معلق
+            title: بودجه ها
+            users_with_finished_orders: کاربران با رای تمام شده
+            users_with_pending_orders: کاربران با آرای معلق
+          new:
+            create: بودجه ایجاد کنید
+            title: بودجه جدید
+          update:
+            invalid: مشکلی در به‌روزرسانی این بودجه وجود داشت
+            success: بودجه با موفقیت به روز شد
+        exports:
+          projects: پروژه ها
+        models:
+          budget:
+            name: بودجه
+          project:
+            name: پروژه
+        projects:
+          create:
+            invalid: در ایجاد این پروژه مشکلی وجود داشت
+            success: پروژه با موفقیت ایجاد شد
+          destroy:
+            success: پروژه با موفقیت حذف شد
+          edit:
+            title: ویرایش پروژه
+            update: به روز رسانی
+          index:
+            actions: اقدامات
+            cancel: لغو کنید
+            change_category: دسته بندی را تغییر دهید
+            change_scope: دامنه را تغییر دهید
+            change_selected: تغییر حالت انتخاب شده
+            deselect_implementation: لغو انتخاب از پیاده سازی
+            finished_orders: آرای تمام شده
+            pending_orders: آرای معلق
+            select_for_implementation: برای اجرا انتخاب کنید
+            selected: انتخاب شد
+            title: پروژه ها
+            update: به روز رسانی
+            update_scope_button: دامنه به روز رسانی
+          new:
+            create: ايجاد كردن
+            title: پروژه جدید
+          update:
+            invalid: مشکلی در به‌روزرسانی این پروژه وجود داشت
+            success: پروژه با موفقیت به روز شد
+          update_category:
+            invalid: 'این پروژه ها قبلاً دارای دسته %{subject_name} بودند: %{projects}.'
+            select_a_category: لطفاً یک دسته را انتخاب کنید
+            select_a_project: لطفا یک پروژه را انتخاب کنید
+            success: 'پروژه ها با موفقیت به رده %{subject_name} به روز شدند: %{projects}.'
+          update_scope:
+            invalid: 'این پروژه ها قبلاً محدوده %{subject_name} را داشتند: %{projects}.'
+            select_a_project: لطفا یک پروژه را انتخاب کنید
+            select_a_scope: لطفاً یک محدوده انتخاب کنید
+            success: 'پروژه ها با موفقیت به محدوده %{subject_name} به روز شدند: %{projects}.'
+          update_selected:
+            invalid:
+              selected: 'این پروژه ها قبلاً برای اجرا انتخاب شده بودند: %{projects}.'
+              unselected: 'این پروژه‌ها قبلاً از پیاده‌سازی انتخاب نشده بودند: %{projects}.'
+            select_a_project: لطفا یک پروژه را انتخاب کنید
+            select_a_selection: لطفاً یک وضعیت پیاده سازی را انتخاب کنید
+            success:
+              selected: 'این پروژه ها با موفقیت برای اجرا انتخاب شدند: %{projects}.'
+              unselected: 'این پروژه ها با موفقیت از پیاده سازی حذف شدند: %{projects}.'
+        proposals_imports:
+          create:
+            invalid: مشکلی در وارد کردن پیشنهادها به پروژه‌ها وجود داشت
+            success: پیشنهادات %{number} با موفقیت به پروژه ها وارد شدند
+          new:
+            create: پیشنهاد واردات به پروژه ها
+            default_budget: بودجه پیش فرض
+            import_all_accepted_proposals: تمام پیشنهادات پذیرفته شده را وارد کنید
+            no_components: هیچ مؤلفه پیشنهادی دیگری در این فضای مشارکتی برای وارد کردن پیشنهادها به پروژه ها وجود ندارد.
+            origin_component_id: جزء مبدا
+            select_component: لطفا یک جزء را انتخاب کنید
+            title: پیشنهادات واردات
+        reminders:
+          orders:
+            description: کاربران ایمیلی با پیوندهایی به بودجه هایی که در آن سفارش معلق دارند دریافت خواهند کرد.
+            title:
+              one: شما در شرف ارسال ایمیل یادآوری به کاربر %{count} هستید
+              other: شما در شرف ارسال یک ایمیل یادآوری برای کاربران %{count} هستید
+      admin_log:
+        budget:
+          create: "%{user_name} بودجه %{resource_name} را در فضای %{space_name} ایجاد کرد"
+          delete: "%{user_name} بودجه %{resource_name} را در فضای %{space_name} حذف کرد"
+          update: "%{user_name} بودجه %{resource_name} را در فضای %{space_name} به روز کرد"
+        project:
+          create: "%{user_name} پروژه %{resource_name} را در فضای %{space_name} ایجاد کرد"
+          delete: "%{user_name} پروژه %{resource_name} را در فضای %{space_name} حذف کرد"
+          update: "%{user_name} پروژه %{resource_name} را در فضای %{space_name} به روز کرد"
+      budget:
+        view: مشاهده تمام پروژه های بودجه
+      budget_information_modal:
+        back_to: بازگشت به %{component_name}
+        close_modal: بستن مودال
+        continue: ادامه هید
+        more_information: اطلاعات بیشتر
+      budget_list_item:
+        voting_finished: شما به این بودجه رای داده اید
+        voting_started: شما شروع به رای دادن به این بودجه کرده اید
+      budgets_list:
+        cancel_order:
+          more_than_one: رای خود را در %{name} حذف کنید و دوباره شروع کنید
+          only_one: رای خود را حذف کنید و دوباره شروع کنید.
+        finished_message: شما مراحل رای گیری را تمام کرده اید. با تشکر برای شرکت!
+        highlighted_cta: به %{name} رای دهید
+        if_change_opinion: اگر نظر خود را تغییر داده اید، می توانید
+        my_budgets: بودجه های من
+        progress: رای دادن را تمام کنید
+        show: پروژه ها را ببینید
+        vote: رای
+        voted_on: شما به %{links} رای داده اید
+      last_activity:
+        new_vote_at_html: "<span>رای بودجه جدید در %{link}</span>"
+      limit_announcement:
+        cant_vote: شما نمی توانید به این بودجه رای دهید. <a href="%{landing_path}">با بودجه دیگری امتحان کنید</a>.
+        limit_reached: شما در %{links} رای فعال دارید. برای رأی دادن به این بودجه، باید <a href="%{landing_path}">رای خود را حذف کنید و از نو شروع کنید</a>.
+      models:
+        budget:
+          fields:
+            name: نام
+            projects_count: پروژه ها به حساب می آیند
+            total_budget: کل بودجه
+        project:
+          fields:
+            category: دسته بندی
+            id: شناسه
+            scope: محدوده
+            title: عنوان
+      order_summary_mailer:
+        order_summary:
+          selected_projects: 'پروژه هایی که انتخاب کرده اید عبارتند از:'
+          subject: شما به فضای مشارکتی %{space_name} رأی داده اید
+          voted_on_space: شما به بودجه %{budget_name} برای فضای مشارکتی %{space_name} رأی داده اید.
+          voted_on_space_with_scope: شما به بودجه %{budget_name} برای فضای مشارکتی %{space_name} در %{scope_name} (%{scope_type}) رای داده اید.
+      projects:
+        budget_confirm:
+          are_you_sure: اگر نظر خود را تغییر دهید، می توانید بعداً رأی خود را تغییر دهید.
+          cancel: لغو کنید
+          confirm: تایید
+          description: اینها پروژه هایی هستند که شما انتخاب کرده اید تا بخشی از بودجه باشند.
+          title: تایید رای
+        budget_excess:
+          budget_excess:
+            description: این پروژه از حداکثر بودجه بیشتر است و نمی توان آن را اضافه کرد. در صورت تمایل می‌توانید پروژه‌ای را که قبلاً انتخاب کرده‌اید حذف کنید تا بتوانید دوباره مطابق با اولویت‌های خود رای دهید.
+            title: از حداکثر بودجه فراتر رفت
+          close: بستن
+          description: این پروژه از حداکثر بودجه بیشتر است و نمی توان آن را اضافه کرد. در صورت تمایل می‌توانید پروژه‌ای را که قبلاً انتخاب کرده‌اید حذف کنید تا بتوانید دوباره مطابق با اولویت‌های خود رای دهید.
+          ok: خوب
+          projects_excess:
+            description: این پروژه از حداکثر تعداد پروژه ها بیشتر است و نمی توان آن را اضافه کرد. در صورت تمایل می‌توانید پروژه‌ای را که قبلاً انتخاب کرده‌اید حذف کنید تا بتوانید دوباره مطابق با اولویت‌های خود رای دهید.
+            title: از حداکثر پروژه ها فراتر رفت
+        budget_summary:
+          are_you_sure: آیا مطمئن هستید که می خواهید رای خود را لغو کنید؟
+          assigned: 'اختصاص داده:'
+          cancel_order: رای خود را حذف کنید و دوباره شروع کنید
+          checked_out:
+            description: شما قبلاً به بودجه رای داده اید. اگر نظر خود را تغییر داده اید، می توانید %{cancel_link}.
+            title: رای بودجه تکمیل شد
+          minimum_projects_rule:
+            description: به نظر شما برای چه پروژه هایی بودجه اختصاص دهیم؟ حداقل %{minimum_number} پروژه مورد نظر خود را انتخاب کنید و با توجه به اولویت های خود رای دهید تا بودجه را تعریف کنید.
+            instruction: "<li>حداقل %{minimum_number} پروژه‌ای را که می‌خواهید انتخاب کنید و بر اساس اولویت‌های خود رای دهید تا بودجه را تعریف کنید.</li>"
+          projects_rule:
+            description: به نظر شما برای چه پروژه هایی بودجه اختصاص دهیم؟ حداقل %{minimum_number} و حداکثر %{maximum_number} پروژه مورد نظر خود را انتخاب کنید و با توجه به ترجیحات خود رای دهید تا بودجه تعریف شود.
+            instruction: "<li>حداقل %{minimum_number} و حداکثر %{maximum_number} پروژه مورد نظر خود را انتخاب کنید و بر اساس اولویت های خود رای دهید تا بودجه را تعریف کنید.</li>"
+          projects_rule_maximum_only:
+            description: به نظر شما برای چه پروژه هایی بودجه اختصاص دهیم؟ حداکثر %{maximum_number} پروژه مورد نظر خود را انتخاب کنید و با توجه به اولویت های خود رای دهید تا بودجه تعریف شود.
+            instruction: "<li>حداکثر %{maximum_number} پروژه‌ای را که می‌خواهید انتخاب کنید و بر اساس اولویت‌های خود رای دهید تا بودجه را تعریف کنید.</li>"
+          rules:
+            title: قوانین بودجه
+          title: شما بودجه را تعیین می کنید
+          total_budget: کل بودجه
+          total_projects: کل آرا
+          vote_threshold_percent_rule:
+            description: به نظر شما برای چه پروژه هایی بودجه اختصاص دهیم؟ حداقل %{minimum_budget} را به پروژه هایی که می خواهید اختصاص دهید و با توجه به اولویت های خود رای دهید تا بودجه تعریف شود.
+            instruction: "<li>حداقل %{minimum_budget} را به پروژه‌هایی که می‌خواهید اختصاص دهید و بر اساس اولویت‌های خود رای دهید تا بودجه تعریف شود.</li>"
+        count:
+          projects_count:
+            one: 1 پروژه
+            other: پروژه های %{count}
+        exit_modal:
+          cancel: بازگشت به رای گیری
+          close_modal: بستن مودال
+          exit: خروج از رای گیری
+          message: رای شما ثبت نشده است زیرا هنوز مراحل رای گیری را تکمیل نکرده اید. آیا مطمئنید که می خواهید از رای گیری خارج شوید؟
+          title: شما هنوز رای نداده اید
+        filters:
+          category: دسته بندی
+          scope: محدوده
+          search: جستجو کردن
+          status: وضعیت
+          status_values:
+            all: همه
+            not_selected: انتخاب نشده
+            selected: انتخاب شد
+        filters_small_view:
+          close_modal: بستن مودال
+          filter: فیلتر کنید
+          filter_by: محدود شده توسط
+          unfold: باز کردن
+        index:
+          view_project: مشاهده پروژه
+        order_progress:
+          vote: رای
+        order_selected_projects:
+          remove: برداشتن
+          selected_projects:
+            one: پروژه انتخاب شد
+            other: پروژه های انتخاب شده
+          view: چشم انداز
+        orders:
+          highest_cost: بالاترین هزینه
+          label: سفارش پروژه ها توسط
+          lowest_cost: کمترین هزینه
+          most_voted: بیشترین رای دادند
+          random: ترتیب تصادفی
+          selected: انتخاب شد
+        project:
+          add: پروژه %{resource_name} را به رای خود اضافه کنید
+          remove: پروژه %{resource_name} را از رای خود حذف کنید
+          selected: انتخاب شد
+          view: چشم انداز
+          votes:
+            one: رای
+            other: رای
+          you_voted: شما به این رای دادید
+        project_budget_button:
+          add: به رای خود اضافه کنید
+          add_descriptive: پروژه %{resource_name} را به رای خود اضافه کنید
+          added: به رای شما اضافه شد
+          added_descriptive: پروژه %{resource_name} به رای شما اضافه شد
+        projects_for: پروژه های %{name}
+        show:
+          budget: بودجه
+          view_all_projects: مشاهده تمامی پروژه ها
+      vote_reminder_mailer:
+        vote_reminder:
+          email_budgets: 'مناطقی که رای ناتمام دارید:'
+          email_intro: شما رای بودجه مشارکتی را آغاز کرده اید، اما آن را تکمیل نکرده اید.
+          email_link: برای ادامه رای دادن بروید
+          email_outro: لطفا به یاد داشته باشید که رای را کامل کنید. برای رای دادن ابتدا باید پیشنهاد یا پیشنهادهایی را که می خواهید به آن رای دهید انتخاب کنید و سپس با دکمه "رای دادن" رای خود را تایید کنید.
+          email_subject:
+            one: در رای بودجه مشارکتی یک رای ناتمام دارید
+            other: شما در رای بودجه مشارکتی آرای ناتمام دارید
+    components:
+      budgets:
+        actions:
+          comment: اظهار نظر
+          vote: رای
+        name: بودجه ها
+        settings:
+          global:
+            announcement: اعلامیه
+            comments_enabled: نظرات فعال شد
+            comments_max_length: حداکثر طول نظرات (0 را برای مقدار پیش فرض بگذارید)
+            form:
+              errors:
+                budget_voting_rule_only_one: فقط یک قانون رای باید فعال باشد
+                budget_voting_rule_required: یک قانون رای گیری لازم است
+            geocoding_enabled: کدگذاری جغرافیایی فعال شد
+            landing_page_content: صفحه فرود بودجه
+            more_information_modal: اطلاعات بیشتر مودال
+            projects_per_page: پروژه ها در هر صفحه
+            resources_permissions_enabled: مجوزهای Actions را می توان برای هر پروژه تنظیم کرد
+            scope_id: محدوده
+            scopes_enabled: دامنه ها فعال شد
+            title: عنوان
+            total_budget: کل بودجه
+            vote_minimum_budget_projects_number: حداقل تعداد پروژه برای رای دادن
+            vote_rule_minimum_budget_projects_enabled: 'قانون فعال کردن: حداقل تعداد پروژه هایی که باید به آنها رای داده شود'
+            vote_rule_selected_projects_enabled: 'قانون فعال کردن: حداقل و حداکثر تعداد پروژه هایی که باید به آنها رأی داده شود'
+            vote_rule_threshold_percent_enabled: 'قانون فعال کردن: حداقل درصد بودجه'
+            vote_selected_projects_maximum: حداکثر تعداد پروژه هایی که باید انتخاب شوند
+            vote_selected_projects_minimum: حداقل تعداد پروژه هایی که باید انتخاب شوند
+            vote_threshold_percent: درصد آستانه رای
+            workflow: جریان کار
+            workflow_choices:
+              all: 'رای در همه: به شرکت کنندگان اجازه می دهد در همه بودجه ها رای دهند.'
+              one: 'رای در یک: به شرکت کنندگان اجازه می دهد تا در هر بودجه ای رای دهند، اما فقط در یک بودجه.'
+          step:
+            announcement: اعلامیه
+            comments_blocked: نظرات مسدود شده است
+            highlighted_heading: عنوان برجسته شده
+            landing_page_content: صفحه فرود بودجه
+            list_heading: عنوان فهرست
+            more_information_modal: اطلاعات بیشتر مودال
+            show_votes: نمایش آرا
+            title: عنوان
+            votes: رای دادن
+            votes_choices:
+              disabled: رای گیری غیرفعال شد
+              enabled: رای گیری فعال شد
+              finished: رای گیری تمام شد
+    events:
+      budgets:
+        budget_published:
+          email_intro: 'بودجه %{resource_title} اکنون برای %{participatory_space_title} فعال است. می توانید آن را از این صفحه ببینید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: بودجه %{resource_title} اکنون برای %{participatory_space_title} فعال است.
+          notification_title: بودجه <a href="%{resource_path}">%{resource_title}</a> اکنون برای %{participatory_space_title} فعال است.
+    orders:
+      checkout:
+        error: مشکلی در پردازش رای شما وجود داشت
+        success: رای شما با موفقیت پذیرفته شد
+      destroy:
+        error: مشکلی در لغو رأی شما وجود داشت
+        success: رای شما با موفقیت لغو شد
+    resource_links:
+      included_proposals:
+        project_proposal: پیشنهادات موجود در این پروژه
+    statistics:
+      orders_count: پشتیبانی می کند
+      projects_count: پروژه ها
+  index:
+    confirmed_orders_count: آرا شمارش می شود

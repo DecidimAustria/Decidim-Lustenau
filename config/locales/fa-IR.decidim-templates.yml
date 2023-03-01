@@ -1,0 +1,74 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      questionnaire:
+        title: عنوان
+      template:
+        description: شرح
+        name: نام
+  decidim:
+    admin:
+      menu:
+        templates: قالب ها
+      templates:
+        apply:
+          error: در اعمال این الگو مشکلی وجود داشت.
+          success: الگو با موفقیت اعمال شد
+        copy:
+          error: مشکلی در کپی کردن این الگو وجود داشت.
+          success: الگو با موفقیت کپی شد
+        create:
+          error: در ایجاد این الگو مشکلی وجود داشت.
+          success: الگو با موفقیت ایجاد شد
+        destroy:
+          success: الگو با موفقیت حذف شد
+        empty: هنوز هیچ قالبی وجود ندارد.
+        update:
+          error: مشکلی در به روز رسانی این الگو وجود داشت.
+          success: الگو با موفقیت به روز شد
+      titles:
+        template_types:
+          questionnaires: قالب های پرسشنامه
+        templates: قالب ها
+    models:
+      questionnaire_template:
+        fields:
+          questions: تعداد سوالات
+          title: عنوان پرسشنامه
+      template:
+        fields:
+          created_at: ایجاد شده در
+        name: قالب
+    templates:
+      admin:
+        questionnaire_templates:
+          choose:
+            create_from_template: از قالب ایجاد کنید
+            description: شما در حال ایجاد یک پرسشنامه جدید هستید. می توانید یک الگوی از پیش تعریف شده را انتخاب کرده و سپس آن را تغییر دهید.
+            label: الگو را انتخاب کنید
+            placeholder: الگو را انتخاب کنید
+            skip_template: پرش کنید
+          edit:
+            edit: ویرایش کنید
+            empty: سوالی هنوز موجود نیست
+            questionnaire: پرسشنامه
+          form:
+            save: صرفه جویی
+            template_title: اطلاعات الگو
+            title: قالب پرسشنامه %{questionnaire_for}
+          index:
+            confirm_delete: آیا مطمئن هستید که می خواهید این الگو را حذف کنید؟
+            title: قالب های پرسشنامه
+          preview:
+            current_step: مرحله %{step}
+            of_total_steps: از %{total_steps}
+            tos_agreement: با شرکت، شرایط خدمات آن را می پذیرید
+      admin_log:
+        template:
+          create: "%{user_name} الگوی پرسشنامه %{resource_name} را ایجاد کرد"
+          delete: "%{user_name} الگوی پرسشنامه %{resource_name} را حذف کرد"
+          duplicate: "%{user_name} الگوی پرسشنامه %{resource_name} را کپی کرد"
+          update: "%{user_name} الگوی پرسشنامه %{resource_name} را به روز کرد"
+      template_types:
+        questionnaires: پرسشنامه ها
