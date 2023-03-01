@@ -24,7 +24,8 @@ hr:
               missing: nisu potpuni
               too_many: su previše
         questionnaire:
-          request_invalid: Došlo je do pogreške prilikom obrade zahtjeva. Molim te pokušaj ponovno
+          request_invalid: Došlo je do pogreške prilikom obrade zahtjeva. Molim te
+            pokušaj ponovno
   decidim:
     forms:
       admin:
@@ -68,9 +69,11 @@ hr:
               not_equal: Nejednak
             condition_value: Uključen tekst
             display_condition: Stanje prikaza
-            mandatory: Ovaj uvjet treba uvijek biti zadovoljen bez obzira na status drugih uvjeta
+            mandatory: Ovaj uvjet treba uvijek biti zadovoljen bez obzira na status
+              drugih uvjeta
             remove: Ukloniti
-            save_warning: Ne zaboravite spremiti obrazac prije konfiguriranja uvjeta prikaza
+            save_warning: Ne zaboravite spremiti obrazac prije konfiguriranja uvjeta
+              prikaza
             select_answer_option: Odaberite opciju odgovora
             select_condition_question: Odaberite pitanje
             select_condition_type: Odaberite vrstu uvjeta
@@ -81,12 +84,14 @@ hr:
             add_question: Dodajte pitanje
             add_separator: Dodaj separator
             add_title_and_description: Dodajte naslov i opis
-            already_answered_warning: Neki korisnici već odgovaraju na obrazac pa ne možete mijenjati njegova pitanja.
+            already_answered_warning: Neki korisnici već odgovaraju na obrazac pa
+              ne možete mijenjati njegova pitanja.
             collapse: Sažmi sva pitanja
             expand: Proširi sva pitanja
             preview: Pregled
             title: Uredite obrazac za %{questionnaire_for}
-            unpublished_warning: Obrazac nije objavljen. Možete izmijeniti njegova pitanja, ali time ćete izbrisati trenutne odgovore.
+            unpublished_warning: Obrazac nije objavljen. Možete izmijeniti njegova
+              pitanja, ali time ćete izbrisati trenutne odgovore.
           matrix_row:
             matrix_row: Red
             remove: Ukloniti
@@ -94,7 +99,8 @@ hr:
           question:
             add_answer_option: Dodajte opciju odgovora
             add_display_condition: Dodajte stanje prikaza
-            add_display_condition_info: Spremite obrazac za konfiguriranje uvjeta prikaza
+            add_display_condition_info: Spremite obrazac za konfiguriranje uvjeta
+              prikaza
             add_matrix_row: Dodaj red
             any: Bilo koje
             collapse: Kolaps
@@ -132,7 +138,8 @@ hr:
         dimensions: "%{width} x %{height} px"
         processors:
           resize_and_pad: Ovoj će se slici promijeniti veličina i dopuniti na %{dimensions}.
-          resize_to_fit: Veličina ove slike bit će promijenjena kako bi odgovarala %{dimensions}.
+          resize_to_fit: Veličina ove slike bit će promijenjena kako bi odgovarala
+            %{dimensions}.
       question_types:
         files: Datoteke
         long_answer: Dug odgovor
@@ -154,7 +161,9 @@ hr:
           max_choices: 'Maksimalan broj izbora: %{n}'
         show:
           answer_questionnaire:
-            anonymous_user_message: <a href="%{sign_in_link}">Prijavite se sa svojim računom</a> ili <a href="%{sign_up_link}">prijavite se</a> da odgovorite na obrazac.
+            anonymous_user_message: <a href="%{sign_in_link}">Prijavite se sa svojim
+              računom</a> ili <a href="%{sign_up_link}">prijavite se</a> da odgovorite
+              na obrazac.
             title: Odgovorite na obrazac
           current_step: Korak %{step}
           of_total_steps: od %{total_steps}
@@ -168,14 +177,16 @@ hr:
             body: Obrazac je dostupan samo privatnim korisnicima
             title: Obrazac zatvoren
           questionnaire_js_disabled:
-            body: Neke karakteristike ovog obrasca bit će onemogućene. Kako biste poboljšali svoje iskustvo, omogućite JavaScript u svom pregledniku.
+            body: Neke karakteristike ovog obrasca bit će onemogućene. Kako biste
+              poboljšali svoje iskustvo, omogućite JavaScript u svom pregledniku.
             title: JavaScript je onemogućen
           questionnaire_not_published:
             body: Ovaj obrazac još nije objavljen.
           tos_agreement: Sudjelovanjem prihvaćate Uvjete pružanja usluge
       step_navigation:
         show:
-          are_you_sure: Ova se radnja ne može poništiti i nećete moći uređivati svoje odgovore. Jesi li siguran?
+          are_you_sure: Ova se radnja ne može poništiti i nećete moći uređivati svoje
+            odgovore. Jesi li siguran?
           back: Povratak
           continue: Nastaviti
           submit: podnijeti

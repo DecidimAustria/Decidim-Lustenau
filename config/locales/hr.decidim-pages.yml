@@ -4,6 +4,7 @@ hr:
     models:
       decidim/pages/page:
         one: Stranica
+        few: Stranice
         other: Stranice
   decidim:
     admin_log:

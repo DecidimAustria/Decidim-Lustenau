@@ -30,6 +30,7 @@ hr:
     models:
       decidim/accountability/result:
         one: Proizlaziti
+        few: Rezultati
         other: Rezultati
   decidim:
     accountability:
@@ -76,7 +77,8 @@ hr:
             title: Uvoz rezultata iz CSV-a
         imports:
           create:
-            success: Datoteka je počela s uvozom. U sljedećih nekoliko minuta primit ćete e-poruku s rezultatom uvoza
+            success: Datoteka je počela s uvozom. U sljedećih nekoliko minuta primit
+              ćete e-poruku s rezultatom uvoza
         models:
           result:
             name: Proizlaziti
@@ -165,7 +167,8 @@ hr:
           errors_present: Došlo je do problema pri uvozu rezultata
           row_number: Red
           subject: Uspješan uvoz rezultata
-          success: Uspješan uvoz rezultata. Rezultate možete pregledati u administrativnom sučelju.
+          success: Uspješan uvoz rezultata. Rezultate možete pregledati u administrativnom
+            sučelju.
       last_activity:
         new_result_at_html: "<span>Novi rezultat na %{link}</span>"
       models:
@@ -197,6 +200,7 @@ hr:
         count:
           results_count:
             one: 1 rezultat
+            few: "%{count} rezultata"
             other: "%{count} rezultata"
         filters:
           all: svi
@@ -241,7 +245,8 @@ hr:
           global:
             categories_label: Naziv za "Kategorije"
             comments_enabled: Komentari omogućeni
-            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu vrijednost)
+            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu
+              vrijednost)
             display_progress_enabled: Prikaz napretka
             heading_leaf_level_results: Naziv za "Projekte"
             heading_parent_level_results: Naziv za "Rezultate"
@@ -254,15 +259,23 @@ hr:
     events:
       accountability:
         proposal_linked:
-          email_intro: 'Prijedlog "%{proposal_title}" je uključen u rezultat. Možete ga vidjeti na ovoj stranici:'
-          email_outro: Primili ste ovu obavijest jer pratite "%{proposal_title}". Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+          email_intro: 'Prijedlog "%{proposal_title}" je uključen u rezultat. Možete
+            ga vidjeti na ovoj stranici:'
+          email_outro: Primili ste ovu obavijest jer pratite "%{proposal_title}".
+            Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
           email_subject: Ažuriranje %{proposal_title}
-          notification_title: Prijedlog <a href="%{proposal_path}">%{proposal_title}</a> je uključen u rezultat <a href="%{resource_path}">%{resource_title}</a>.
+          notification_title: Prijedlog <a href="%{proposal_path}">%{proposal_title}</a>
+            je uključen u rezultat <a href="%{resource_path}">%{resource_title}</a>.
         result_progress_updated:
-          email_intro: 'Rezultat "%{resource_title}", koji uključuje prijedlog "%{proposal_title}", sada je dovršen %{progress}%. Možete ga vidjeti na ovoj stranici:'
-          email_outro: Primili ste ovu obavijest jer pratite "%{proposal_title}", a ovaj prijedlog je uključen u rezultat "%{resource_title}". Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+          email_intro: 'Rezultat "%{resource_title}", koji uključuje prijedlog "%{proposal_title}",
+            sada je dovršen %{progress}%. Možete ga vidjeti na ovoj stranici:'
+          email_outro: Primili ste ovu obavijest jer pratite "%{proposal_title}",
+            a ovaj prijedlog je uključen u rezultat "%{resource_title}". Možete prestati
+            primati obavijesti slijedeći prethodnu poveznicu.
           email_subject: Ažuriranje napretka %{resource_title}
-          notification_title: Rezultat <a href="%{resource_path}">%{resource_title}</a>, koji uključuje prijedlog <a href="%{proposal_path}">%{proposal_title}</a>, sada je dovršen %{progress}%.
+          notification_title: Rezultat <a href="%{resource_path}">%{resource_title}</a>,
+            koji uključuje prijedlog <a href="%{proposal_path}">%{proposal_title}</a>,
+            sada je dovršen %{progress}%.
     metrics:
       results:
         description: Broj generiranih rezultata
