@@ -1,5 +1,5 @@
 ---
-hr:
+sr-CS:
   activemodel:
     attributes:
       debate:
@@ -24,6 +24,7 @@ hr:
     models:
       decidim/debates/debate:
         one: Rasprava
+        few: Rasprave
         other: Rasprave
   decidim:
     components:
@@ -37,7 +38,8 @@ hr:
           global:
             announcement: Obavijest
             comments_enabled: Komentari omogućeni
-            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu vrijednost)
+            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu
+              vrijednost)
             scope_id: Opseg
             scopes_enabled: Opsezi omogućeni
           step:
@@ -104,6 +106,7 @@ hr:
         count:
           debates_count:
             one: "%{count} rasprava"
+            few: "%{count} rasprave"
             other: "%{count} rasprave"
         create:
           invalid: Došlo je do problema u kreiranju rasprave.
@@ -190,47 +193,65 @@ hr:
             email_intro: |-
               Bok,
               Nova debata "%{resource_title}" stvorena je na prostoru za sudjelovanje %{space_title}, pogledajte je i doprinesite:
-            email_outro: Primili ste ovu obavijest jer pratite prostor za sudjelovanje %{space_title}. Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+            email_outro: Primili ste ovu obavijest jer pratite prostor za sudjelovanje
+              %{space_title}. Možete prestati primati obavijesti slijedeći prethodnu
+              poveznicu.
             email_subject: Nova debata "%{resource_title}" na %{space_title}
-            notification_title: Rasprava o <a href="%{resource_path}">%{resource_title}</a> stvorena je <a href="%{space_path}">%{space_title}</a>.
+            notification_title: Rasprava o <a href="%{resource_path}">%{resource_title}</a>
+              stvorena je <a href="%{space_path}">%{space_title}</a>.
           user_followers:
             email_intro: |-
               Bok,
               %{author_name} %{author_nickname}, kojeg pratite, kreirao je novu debatu "%{resource_title}". Provjerite i doprinesite:
-            email_outro: Primili ste ovu obavijest jer pratite %{author_nickname}. Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+            email_outro: Primili ste ovu obavijest jer pratite %{author_nickname}.
+              Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
             email_subject: Nova rasprava "%{resource_title}" od %{author_nickname}
-            notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> stvorio je <a href="%{resource_path}">%{resource_title}</a> debatu.
+            notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a>
+              stvorio je <a href="%{resource_path}">%{resource_title}</a> debatu.
         creation_disabled:
-          email_intro: 'Stvaranje debate više nije aktivno u %{participatory_space_title}. Još uvijek možete sudjelovati u otvorenim raspravama s ove stranice:'
-          email_outro: Primili ste ovu obavijest jer pratite %{participatory_space_title}. Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+          email_intro: 'Stvaranje debate više nije aktivno u %{participatory_space_title}.
+            Još uvijek možete sudjelovati u otvorenim raspravama s ove stranice:'
+          email_outro: Primili ste ovu obavijest jer pratite %{participatory_space_title}.
+            Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
           email_subject: Stvaranje debate onemogućeno u %{participatory_space_title}
           notification_title: Stvaranje debate sada je onemogućeno u <a href="%{participatory_space_url}">%{participatory_space_title}</a>
         creation_enabled:
-          email_intro: 'Sada možete započeti nove debate u %{participatory_space_title}! Počnite sudjelovati na ovoj stranici:'
-          email_outro: Primili ste ovu obavijest jer pratite %{participatory_space_title}. Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+          email_intro: 'Sada možete započeti nove debate u %{participatory_space_title}!
+            Počnite sudjelovati na ovoj stranici:'
+          email_outro: Primili ste ovu obavijest jer pratite %{participatory_space_title}.
+            Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
           email_subject: Rasprave su sada dostupne u %{participatory_space_title}
-          notification_title: Sada možete započeti <a href="%{resource_path}">nove rasprave</a> u <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          notification_title: Sada možete započeti <a href="%{resource_path}">nove
+            rasprave</a> u <a href="%{participatory_space_url}">%{participatory_space_title}</a>
         debate_closed:
           affected_user:
-            email_intro: 'Rasprava "%{resource_title}" je zatvorena. Zaključke možete pročitati na njegovoj stranici:'
-            email_outro: Primili ste ovu obavijest jer pratite raspravu "%{resource_title}". Možete ga prestati pratiti s prethodne poveznice.
+            email_intro: 'Rasprava "%{resource_title}" je zatvorena. Zaključke možete
+              pročitati na njegovoj stranici:'
+            email_outro: Primili ste ovu obavijest jer pratite raspravu "%{resource_title}".
+              Možete ga prestati pratiti s prethodne poveznice.
             email_subject: Rasprava "%{resource_title}" je zatvorena
-            notification_title: Rasprava <a href="%{resource_path}">%{resource_title}</a> je zatvorena.
+            notification_title: Rasprava <a href="%{resource_path}">%{resource_title}</a>
+              je zatvorena.
           follower:
-            email_intro: 'Rasprava "%{resource_title}" je zatvorena. Zaključke možete pročitati na njegovoj stranici:'
-            email_outro: Primili ste ovu obavijest jer pratite raspravu "%{resource_title}". Možete ga prestati pratiti s prethodne poveznice.
+            email_intro: 'Rasprava "%{resource_title}" je zatvorena. Zaključke možete
+              pročitati na njegovoj stranici:'
+            email_outro: Primili ste ovu obavijest jer pratite raspravu "%{resource_title}".
+              Možete ga prestati pratiti s prethodne poveznice.
             email_subject: Rasprava "%{resource_title}" je zatvorena
-            notification_title: Rasprava <a href="%{resource_path}">%{resource_title}</a> je zatvorena.
+            notification_title: Rasprava <a href="%{resource_path}">%{resource_title}</a>
+              je zatvorena.
     gamification:
       badges:
         commented_debates:
           conditions:
           - Odaberite otvorenu debatu u kojoj želite sudjelovati
-          description: Ova značka se dodjeljuje kada aktivno sudjelujete u različitim raspravama ostavljajući svoje komentare.
+          description: Ova značka se dodjeljuje kada aktivno sudjelujete u različitim
+            raspravama ostavljajući svoje komentare.
           description_another: Ovaj je sudionik sudjelovao u %{score} debati.
           description_own: Sudjelovali ste u %{score} debati.
           name: Rasprave
-          next_level_in: Sudjelujte u još %{score} debata kako biste dosegnuli sljedeću razinu!
+          next_level_in: Sudjelujte u još %{score} debata kako biste dosegnuli sljedeću
+            razinu!
           unearned_another: Ovaj sudionik još nije sudjelovao ni u jednoj raspravi.
           unearned_own: Još niste sudjelovali ni u jednoj raspravi.
     metrics:

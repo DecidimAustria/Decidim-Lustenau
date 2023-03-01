@@ -1,5 +1,5 @@
 ---
-hr:
+sr-CS:
   activemodel:
     attributes:
       conference:
@@ -79,12 +79,15 @@ hr:
     models:
       decidim/conference:
         one: Konferencija
+        few: Konferencije
         other: Konferencije
       decidim/conference_speaker:
         one: Govornik na konferenciji
+        few: Konferencijski govornici
         other: Konferencijski govornici
       decidim/conference_user_role:
         one: Uloga korisnika konferencije
+        few: Uloge korisnika konferencije
         other: Uloge korisnika konferencije
   decidim:
     admin:
@@ -284,7 +287,8 @@ hr:
           create: Stvoriti
           title: Nova vrsta registracije
         update:
-          error: Došlo je do problema prilikom ažuriranja vrste registracije za ovu konferenciju.
+          error: Došlo je do problema prilikom ažuriranja vrste registracije za ovu
+            konferenciju.
           success: Vrsta registracije za konferenciju uspješno ažurirana.
       titles:
         conferences: Konferencije
@@ -292,34 +296,52 @@ hr:
       conference:
         create: "%{user_name} stvorio je konferenciju %{resource_name}"
         publish: "%{user_name} objavio konferenciju %{resource_name}"
-        send_conference_diplomas: "%{user_name} je poslao potvrde o sudjelovanju sudionicima konferencije %{resource_name}"
+        send_conference_diplomas: "%{user_name} je poslao potvrde o sudjelovanju sudionicima
+          konferencije %{resource_name}"
         unpublish: "%{user_name} poništio je objavu konferencije %{resource_name}"
         update: "%{user_name} je ažurirao konferenciju %{resource_name}"
-        update_diploma: "%{user_name} je ažurirao konfiguraciju sertifikata o sudjelovanju za %{resource_name} konferenciju"
+        update_diploma: "%{user_name} je ažurirao konfiguraciju sertifikata o sudjelovanju
+          za %{resource_name} konferenciju"
       conference_speaker:
-        create: "%{user_name} stvorio je govornika %{resource_name} na konferenciji %{space_name}"
-        delete: "%{user_name} uklonio je govornika %{resource_name} s konferencije %{space_name}"
-        update: "%{user_name} je ažurirao govornika %{resource_name} na konferenciji %{space_name}"
+        create: "%{user_name} stvorio je govornika %{resource_name} na konferenciji
+          %{space_name}"
+        delete: "%{user_name} uklonio je govornika %{resource_name} s konferencije
+          %{space_name}"
+        update: "%{user_name} je ažurirao govornika %{resource_name} na konferenciji
+          %{space_name}"
       conference_user_role:
         create: "%{user_name} je pozvao %{resource_name} na konferenciju %{space_name}"
-        delete: "%{user_name} uklonio je administratora %{resource_name} s konferencije %{space_name}"
-        update: "%{user_name} je promijenio ulogu %{resource_name} u %{space_name} konferenciji"
+        delete: "%{user_name} uklonio je administratora %{resource_name} s konferencije
+          %{space_name}"
+        update: "%{user_name} je promijenio ulogu %{resource_name} u %{space_name}
+          konferenciji"
       conferences:
         conference_registration:
-          confirm: "%{user_name} potvrdio je registraciju za konferenciju u %{resource_name} konferenciji"
+          confirm: "%{user_name} potvrdio je registraciju za konferenciju u %{resource_name}
+            konferenciji"
         partner:
-          create: "%{user_name} je stvorio partnera %{resource_name} u %{space_name} konferenciji"
-          delete: "%{user_name} je uklonio partnera %{resource_name} iz %{space_name} konferencije"
-          update: "%{user_name} je ažurirao partnera %{resource_name} na konferenciji %{space_name}"
+          create: "%{user_name} je stvorio partnera %{resource_name} u %{space_name}
+            konferenciji"
+          delete: "%{user_name} je uklonio partnera %{resource_name} iz %{space_name}
+            konferencije"
+          update: "%{user_name} je ažurirao partnera %{resource_name} na konferenciji
+            %{space_name}"
         registration_type:
-          create: "%{user_name} stvorio je tip registracije %{resource_name} u konferenciji %{space_name}"
-          publish: "%{user_name} je objavio tip registracije %{resource_name} na konferenciji %{space_name}"
-          unpublish: "%{user_name} je poništio objavu vrste registracije %{resource_name} na konferenciji %{space_name}"
-          update: "%{user_name} ažurirao je tip registracije %{resource_name} na konferenciji %{space_name}"
+          create: "%{user_name} stvorio je tip registracije %{resource_name} u konferenciji
+            %{space_name}"
+          publish: "%{user_name} je objavio tip registracije %{resource_name} na konferenciji
+            %{space_name}"
+          unpublish: "%{user_name} je poništio objavu vrste registracije %{resource_name}
+            na konferenciji %{space_name}"
+          update: "%{user_name} ažurirao je tip registracije %{resource_name} na konferenciji
+            %{space_name}"
       media_link:
-        create: "%{user_name} stvorio je medijsku vezu %{resource_name} na konferenciji %{space_name}"
-        delete: "%{user_name} je uklonio medijsku vezu %{resource_name} s konferencije %{space_name}"
-        update: "%{user_name} je ažurirao medijsku vezu %{resource_name} na konferenciji %{space_name}"
+        create: "%{user_name} stvorio je medijsku vezu %{resource_name} na konferenciji
+          %{space_name}"
+        delete: "%{user_name} je uklonio medijsku vezu %{resource_name} s konferencije
+          %{space_name}"
+        update: "%{user_name} je ažurirao medijsku vezu %{resource_name} na konferenciji
+          %{space_name}"
     conference_program:
       index:
         title: Program
@@ -330,15 +352,19 @@ hr:
       admin:
         conference_copies:
           form:
-            slug_help: 'URL slagovi se koriste za generiranje URL-ova koji upućuju na ovu konferenciju. Prihvaća samo slova, brojke i crtice i mora započeti slovom. Primjer: %{url}'
+            slug_help: 'URL slagovi se koriste za generiranje URL-ova koji upućuju
+              na ovu konferenciju. Prihvaća samo slova, brojke i crtice i mora započeti
+              slovom. Primjer: %{url}'
         conference_invites:
           create:
-            error: Došlo je do problema prilikom pozivanja sudionika da se pridruži konferenciji.
+            error: Došlo je do problema prilikom pozivanja sudionika da se pridruži
+              konferenciji.
             success: Sudionik je uspješno pozvan da se pridruži konferenciji.
           form:
             attendee_type: Vrsta sudionika
             existing_user: Postojeći sudionik
-            invite_explanation: Sudionik će biti pozvan da se pridruži konferenciji i organizaciji.
+            invite_explanation: Sudionik će biti pozvan da se pridruži konferenciji
+              i organizaciji.
             non_user: Nepostojeći sudionik
             select_user: Odaberite sudionika
           index:
@@ -352,7 +378,9 @@ hr:
             invites: poziva
             search: traži
           new:
-            explanation: Sudionik će biti pozvan da se pridruži konferenciji. Ako njihova adresa e-pošte nije registrirana, također će biti pozvani u organizaciju.
+            explanation: Sudionik će biti pozvan da se pridruži konferenciji. Ako
+              njihova adresa e-pošte nije registrirana, također će biti pozvani u
+              organizaciju.
             invite: Pozvati
             new_invite: Pozovite sudionika
         conference_registrations:
@@ -368,11 +396,15 @@ hr:
             search: traži
         conferences:
           form:
-            available_slots_help: Ostavite na 0 ako imate neograničen broj slobodnih mjesta.
+            available_slots_help: Ostavite na 0 ako imate neograničen broj slobodnih
+              mjesta.
             registrations_count:
               one: Bila je 1 registracija.
+              few: Bilo je %{count} registracija.
               other: Bilo je %{count} registracija.
-            slug_help: 'URL slagovi se koriste za generiranje URL-ova koji upućuju na ovu konferenciju. Prihvaća samo slova, brojke i crtice i mora započeti slovom. Primjer: %{url}'
+            slug_help: 'URL slagovi se koriste za generiranje URL-ova koji upućuju
+              na ovu konferenciju. Prihvaća samo slova, brojke i crtice i mora započeti
+              slovom. Primjer: %{url}'
         diplomas:
           edit:
             save: Uštedjeti
@@ -380,8 +412,12 @@ hr:
         invite_join_conference_mailer:
           invite:
             decline: Odbij pozivnicu '%{conference_title}'
-            invited_existing_user_to_join_a_conference: "%{invited_by} vas je pozvao da se pridružite konferenciji u %{application}. Možete ga odbiti ili prihvatiti putem poveznica u nastavku."
-            invited_user_to_join_a_conference: "%{invited_by} vas je pozvao da se pridružite konferenciji u %{application}. Možete ga prihvatiti putem poveznice u nastavku."
+            invited_existing_user_to_join_a_conference: "%{invited_by} vas je pozvao
+              da se pridružite konferenciji u %{application}. Možete ga odbiti ili
+              prihvatiti putem poveznica u nastavku."
+            invited_user_to_join_a_conference: "%{invited_by} vas je pozvao da se
+              pridružite konferenciji u %{application}. Možete ga prihvatiti putem
+              poveznice u nastavku."
             registration: Registracija za '%{conference_title}'
         partners:
           index:
@@ -393,11 +429,14 @@ hr:
             title: Vrste registracije
         send_conference_diploma_mailer:
           diploma:
-            diploma_html: Potvrdu o sudjelovanju na konferenciji <a href="%{url}">%{title} možete pronaći</a> u predlozima.
+            diploma_html: Potvrdu o sudjelovanju na konferenciji <a href="%{url}">%{title}
+              možete pronaći</a> u predlozima.
           diploma_user:
             attendance_verified_by: Prisustvo ovjerava
             certificate_of_attendance: Potvrda o pohađanju
-            certificate_of_attendance_description: Ovime se potvrđuje da je <strong>%{user}</strong> prisustvovao i sudjelovao u <strong>%{title}</strong> održanom u <strong>%{location}</strong> <strong>%{start} - %{end}</strong>
+            certificate_of_attendance_description: Ovime se potvrđuje da je <strong>%{user}</strong>
+              prisustvovao i sudjelovao u <strong>%{title}</strong> održanom u <strong>%{location}</strong>
+              <strong>%{start} - %{end}</strong>
         send_diploma:
           error: Došlo je do problema pri slanju potvrda o sudjelovanju na konferenciji.
           success: Potvrde o sudjelovanju na konferenciji uspješno poslane
@@ -421,13 +460,17 @@ hr:
           program: Program
       conference_registration_mailer:
         confirmation:
-          confirmed_html: Vaša registracija za konferenciju <a href="%{url}">%{title}</a> je potvrđena.
-          details_1: 'Prijavljeni ste na konferenciju s tipom %{registration_type}. Cijena mu je %{price} i možete prisustvovati sljedećim događajima:'
+          confirmed_html: Vaša registracija za konferenciju <a href="%{url}">%{title}</a>
+            je potvrđena.
+          details_1: 'Prijavljeni ste na konferenciju s tipom %{registration_type}.
+            Cijena mu je %{price} i možete prisustvovati sljedećim događajima:'
           details_2: Detalje konferencije možete pronaći u prilogu.
         pending_validation:
           confirmation_pending: Potvrdu ćete dobiti uskoro
-          details: 'Registrirali ste se na tip %{registration_type} po cijeni od %{price} i možete prisustvovati sljedećim događajima:'
-          pending_html: Vaša registracija za konferenciju <a href="%{url}">%{title}</a> čeka potvrdu.
+          details: 'Registrirali ste se na tip %{registration_type} po cijeni od %{price}
+            i možete prisustvovati sljedećim događajima:'
+          pending_html: Vaša registracija za konferenciju <a href="%{url}">%{title}</a>
+            čeka potvrdu.
       conference_registrations:
         create:
           invalid: Došlo je do problema pri pridruživanju ovoj konferenciji.
@@ -539,39 +582,66 @@ hr:
     events:
       conferences:
         conference_registration_confirmed:
-          notification_title: Vaša registracija za konferenciju <a href="%{resource_url}">%{resource_title}</a> je potvrđena.
+          notification_title: Vaša registracija za konferenciju <a href="%{resource_url}">%{resource_title}</a>
+            je potvrđena.
         conference_registration_validation_pending:
-          notification_title: Vaša registracija za konferenciju <a href="%{resource_url}">%{resource_title}</a> čeka na potvrdu.
+          notification_title: Vaša registracija za konferenciju <a href="%{resource_url}">%{resource_title}</a>
+            čeka na potvrdu.
         conference_registrations_over_percentage:
-          email_intro: Zauzeta konferencijska mjesta "%{resource_title}" su preko %{percentage}%.
-          email_outro: Primili ste ovu obavijest jer ste administrator prostora za sudjelovanje na konferenciji.
-          email_subject: Zauzeta mjesta konferencije "%{resource_title}" su preko %{percentage}%
-          notification_title: <a href="%{resource_path}">%{resource_title}</a> konferencijska zauzeta mjesta su preko %{percentage}%.
+          email_intro: Zauzeta konferencijska mjesta "%{resource_title}" su preko
+            %{percentage}%.
+          email_outro: Primili ste ovu obavijest jer ste administrator prostora za
+            sudjelovanje na konferenciji.
+          email_subject: Zauzeta mjesta konferencije "%{resource_title}" su preko
+            %{percentage}%
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> konferencijska
+            zauzeta mjesta su preko %{percentage}%.
         conference_updated:
-          email_intro: 'Konferencija "%{resource_title}" je ažurirana. Novu verziju možete pročitati na stranici:'
-          email_outro: Primili ste ovu obavijest jer pratite konferenciju "%{resource_title}". Možete ga prestati pratiti s prethodne poveznice.
+          email_intro: 'Konferencija "%{resource_title}" je ažurirana. Novu verziju
+            možete pročitati na stranici:'
+          email_outro: Primili ste ovu obavijest jer pratite konferenciju "%{resource_title}".
+            Možete ga prestati pratiti s prethodne poveznice.
           email_subject: Konferencija "%{resource_title}" je ažurirana
-          notification_title: Konferencija <a href="%{resource_path}">%{resource_title}</a> je ažurirana.
+          notification_title: Konferencija <a href="%{resource_path}">%{resource_title}</a>
+            je ažurirana.
         registrations_enabled:
-          email_intro: 'Konferencija "%{resource_title}" omogućila je registracije. Registrirati se možete na stranici:'
-          email_outro: Primili ste ovu obavijest jer pratite konferenciju "%{resource_title}". Možete ga prestati pratiti s prethodne poveznice.
+          email_intro: 'Konferencija "%{resource_title}" omogućila je registracije.
+            Registrirati se možete na stranici:'
+          email_outro: Primili ste ovu obavijest jer pratite konferenciju "%{resource_title}".
+            Možete ga prestati pratiti s prethodne poveznice.
           email_subject: Konferencija "%{resource_title}" omogućila je registracije.
-          notification_title: Konferencija <a href="%{resource_path}">%{resource_title}</a> omogućila je registracije.
+          notification_title: Konferencija <a href="%{resource_path}">%{resource_title}</a>
+            omogućila je registracije.
         role_assigned:
           email_intro: Dodijeljeni ste kao %{role} za konferenciju "%{resource_title}".
           email_outro: Primili ste ovu obavijest jer ste %{role} na konferenciji "%{resource_title}".
           email_subject: Dodijeljeni ste kao %{role} za "%{resource_title}".
           notification_title: Dodijeljeni ste kao %{role} za konferenciju <a href="%{resource_url}">%{resource_title}</a>.
         upcoming_conference:
-          email_intro: 'Konferencija "%{resource_title}" održava se za 2 dana. Opis možete pročitati na stranici:'
-          email_outro: Primili ste ovu obavijest jer pratite konferenciju "%{resource_title}". Možete ga prestati pratiti s prethodne poveznice.
+          email_intro: 'Konferencija "%{resource_title}" održava se za 2 dana. Opis
+            možete pročitati na stranici:'
+          email_outro: Primili ste ovu obavijest jer pratite konferenciju "%{resource_title}".
+            Možete ga prestati pratiti s prethodne poveznice.
           email_subject: Dolazi konferencija "%{resource_title}"!
-          notification_title: Konferencija <a href="%{resource_path}">%{resource_title}</a> dolazi za 2 dana.
+          notification_title: Konferencija <a href="%{resource_path}">%{resource_title}</a>
+            dolazi za 2 dana.
     help:
       participatory_spaces:
         conferences:
-          contextual: "<p><strong>Konferencija</strong> je zbirka sastanaka organiziranih u programu, s određenim brojem ljudi pozvanih kao govornici, i drugim informativnim poljima tipičnim za velike kongrese ili društvena događanja (registracija, popis organizacija koje podržavaju ili sponzorirajte događaj, itd.).</p> <p>Primjeri: Konferencija može biti relevantan događaj za organizaciju i njezine članove, ili se može održati kao dio participativnog procesa ili nakon konzultacija.</p>\n"
-          page: "<p><strong>Konferencija</strong> je zbirka sastanaka organiziranih u programu, s određenim brojem ljudi pozvanih kao govornici, i drugim informativnim poljima tipičnim za velike kongrese ili društvena događanja (registracija, popis organizacija koje podržavaju ili sponzorirajte događaj, itd.).</p> <p>Primjeri: Konferencija može biti relevantan događaj za organizaciju i njezine članove, ili se može održati kao dio participativnog procesa ili nakon konzultacija.</p>\n"
+          contextual: "<p><strong>Konferencija</strong> je zbirka sastanaka organiziranih
+            u programu, s određenim brojem ljudi pozvanih kao govornici, i drugim
+            informativnim poljima tipičnim za velike kongrese ili društvena događanja
+            (registracija, popis organizacija koje podržavaju ili sponzorirajte događaj,
+            itd.).</p> <p>Primjeri: Konferencija može biti relevantan događaj za organizaciju
+            i njezine članove, ili se može održati kao dio participativnog procesa
+            ili nakon konzultacija.</p>\n"
+          page: "<p><strong>Konferencija</strong> je zbirka sastanaka organiziranih
+            u programu, s određenim brojem ljudi pozvanih kao govornici, i drugim
+            informativnim poljima tipičnim za velike kongrese ili društvena događanja
+            (registracija, popis organizacija koje podržavaju ili sponzorirajte događaj,
+            itd.).</p> <p>Primjeri: Konferencija može biti relevantan događaj za organizaciju
+            i njezine članove, ili se može održati kao dio participativnog procesa
+            ili nakon konzultacija.</p>\n"
           title: Što su konferencije?
     log:
       value_types:
@@ -605,6 +675,7 @@ hr:
         order_by_conferences:
           conferences:
             one: "%{count} konferencija"
+            few: "%{count} konferencija"
             other: "%{count} konferencija"
         promoted_conference:
           more_info: Više informacija

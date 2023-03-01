@@ -1,5 +1,5 @@
 ---
-hr:
+sr-CS:
   decidim:
     footer_links:
       common:
@@ -12,9 +12,12 @@ hr:
       contact_the_eu:
         items:
           call_us: Nazovite nas na <a href="tel:0080067891011">00 800 6 7 8 9 10 11</a>
-          contact_form: Pišite nam služeći se našim <a href="https://europa.eu/european-union/contact/write-to-us_hr">obrascem za kontakt</a>
-          meet_us: Upoznajte nas <a href="https://europa.eu/european-union/contact/meet-us_hr">u lokalnom uredu EU-a</a>
-          other_telephone: Uspostavite <a href="https://europa.eu/european-union/contact/call-us_hr">telefonsku vezu na drugi način</a>
+          contact_form: Pišite nam služeći se našim <a href="https://europa.eu/european-union/contact/write-to-us_hr">obrascem
+            za kontakt</a>
+          meet_us: Upoznajte nas <a href="https://europa.eu/european-union/contact/meet-us_hr">u
+            lokalnom uredu EU-a</a>
+          other_telephone: Uspostavite <a href="https://europa.eu/european-union/contact/call-us_hr">telefonsku
+            vezu na drugi način</a>
         title: Obratite se EU-u
       eu_institution:
         items:

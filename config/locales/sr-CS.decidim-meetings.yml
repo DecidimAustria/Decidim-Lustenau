@@ -1,5 +1,5 @@
 ---
-hr:
+sr-CS:
   activemodel:
     attributes:
       agenda:
@@ -58,12 +58,15 @@ hr:
             cofe_charter:
               accepted: Molimo vas da prihvatite gornje uvjete
             iframe_embed_type:
-              not_embeddable: Ovaj URL ne može se ugraditi u stranicu sastanka ili događaja uživo
+              not_embeddable: Ovaj URL ne može se ugraditi u stranicu sastanka ili
+                događaja uživo
         meeting_agenda:
           attributes:
             base:
-              too_many_minutes: 'Trajanje točaka premašuje trajanje sastanka za ovoliko minuta: %{count}'
-              too_many_minutes_child: 'Trajanje podtočaka premašuje trajanje glavne točke "%{parent_title}" za ovoliko minuta: %{count}'
+              too_many_minutes: 'Trajanje točaka premašuje trajanje sastanka za ovoliko
+                minuta: %{count}'
+              too_many_minutes_child: 'Trajanje podtočaka premašuje trajanje glavne
+                točke "%{parent_title}" za ovoliko minuta: %{count}'
         meeting_registration_invite:
           attributes:
             email:
@@ -72,19 +75,23 @@ hr:
       decidim/meetings/close_meeting_event: Sastanak je završen
       decidim/meetings/create_meeting_event: Sastanak
       decidim/meetings/meeting_registrations_enabled_event: Prijave su omogućene
-      decidim/meetings/meeting_registrations_over_percentage_event: Broj prijava premašuje ograničenje
+      decidim/meetings/meeting_registrations_over_percentage_event: Broj prijava premašuje
+        ograničenje
       decidim/meetings/upcoming_meeting_event: Nadolazeći sastanak
       decidim/meetings/update_meeting_event: Sastanak je ažuriran
   activerecord:
     models:
       decidim/meetings/meeting:
         one: Događaj
+        few: Događanja
         other: Događanja
       decidim/meetings/minutes:
         one: minuta
+        few: minuta
         other: minuta
       decidim/meetings/registration:
         one: Registracija
+        few: Prijave
         other: Prijave
   decidim:
     admin:
@@ -134,67 +141,97 @@ hr:
           global:
             announcement: Objava
             comments_enabled: Komentari su omogućeni
-            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu vrijednost)
+            comments_max_length: Maksimalna duljina komentara (ostavite 0 za zadanu
+              vrijednost)
             creation_enabled_for_participants: Sudionici mogu stvarati sastanke
             default_registration_terms: Zadani uvjeti prijave
             enable_pads_creation: Omogući stvaranje blokova
             maps_enabled: Karte omogućene
             registration_code_enabled: Registracijski kod omogućen
-            resources_permissions_enabled: Za svaki sastanak mogu se odrediti dopuštenja za radnje
+            resources_permissions_enabled: Za svaki sastanak mogu se odrediti dopuštenja
+              za radnje
             scope_id: Opseg
             scopes_enabled: Opsezi omogućeni
-            terms_and_conditions_url_for_meeting_creators: URL uvjeta i odredbi za kreatore sastanaka
+            terms_and_conditions_url_for_meeting_creators: URL uvjeta i odredbi za
+              kreatore sastanaka
           step:
             announcement: Objava
             comments_blocked: Komentari su blokirani
-            creation_enabled_for_participants: Sudionicima je omogućeno stvaranje sastanaka
-            creation_enabled_for_user_groups: Korisničkim skupinama omogućeno je stvaranje sastanaka
+            creation_enabled_for_participants: Sudionicima je omogućeno stvaranje
+              sastanaka
+            creation_enabled_for_user_groups: Korisničkim skupinama omogućeno je stvaranje
+              sastanaka
     events:
       meetings:
         meeting_closed:
           affected_user:
-            email_intro: 'Vaše događanje "%{resource_title}“ je zatvoreno. Zaključke možete pročitati na stranici:'
-            email_outro: Primili ste ovu obavijest jer ste organizirali događanje "%{resource_title}“.
+            email_intro: 'Vaše događanje "%{resource_title}“ je zatvoreno. Zaključke
+              možete pročitati na stranici:'
+            email_outro: Primili ste ovu obavijest jer ste organizirali događanje
+              "%{resource_title}“.
             email_subject: Događanje "%{resource_title}“ je zatvoreno
-            notification_title: Događanje <a href="%{resource_path}">%{resource_title}</a> je zatvoreno.
+            notification_title: Događanje <a href="%{resource_path}">%{resource_title}</a>
+              je zatvoreno.
           follower:
-            email_intro: 'Događanje "%{resource_title}" je zatvoreno. Zaključke možete pročitati na stranici:'
-            email_outro: Primili ste ovu obavijest jer pratite događanje "%{resource_title}". Ako ga želite prestati pratiti, kliknite prethodnu poveznicu.
+            email_intro: 'Događanje "%{resource_title}" je zatvoreno. Zaključke možete
+              pročitati na stranici:'
+            email_outro: Primili ste ovu obavijest jer pratite događanje "%{resource_title}".
+              Ako ga želite prestati pratiti, kliknite prethodnu poveznicu.
             email_subject: Događanje "%{resource_title}" je zatvoreno
-            notification_title: Događanje <a href="%{resource_path}">%{resource_title}</a> je zatvoreno.
+            notification_title: Događanje <a href="%{resource_path}">%{resource_title}</a>
+              je zatvoreno.
         meeting_created:
           button_text: Prijavite se na sastanak
-          email_intro: Događanje "%{resource_title}"  dodano je u participativni prostor "%{participatory_space_title}", koji pratite.
-          email_outro: Primili ste ovu obavijest jer pratite participativni prostor "%{participatory_space_title}". Klikom na prethodnu poveznicu možete ga prestati pratiti.
+          email_intro: Događanje "%{resource_title}"  dodano je u participativni prostor
+            "%{participatory_space_title}", koji pratite.
+          email_outro: Primili ste ovu obavijest jer pratite participativni prostor
+            "%{participatory_space_title}". Klikom na prethodnu poveznicu možete ga
+            prestati pratiti.
           email_subject: Novo događanje u participativnom prostoru %{participatory_space_title}
-          notification_title: Događanje <a href="%{resource_path}">%{resource_title}</a> dodano je u participativni prostor %{participatory_space_title}
+          notification_title: Događanje <a href="%{resource_path}">%{resource_title}</a>
+            dodano je u participativni prostor %{participatory_space_title}
         meeting_registration_confirmed:
-          notification_title: Vaša prijava za događanje <a href="%{resource_url}">%{resource_title}</a> je potvrđena. Vaš prijavni kôd je %{registration_code}.
+          notification_title: Vaša prijava za događanje <a href="%{resource_url}">%{resource_title}</a>
+            je potvrđena. Vaš prijavni kôd je %{registration_code}.
         meeting_registrations_over_percentage:
-          email_intro: Popunjeno je više od %{percentage}% mjesta predviđenih za događanje "%{resource_title}".
-          email_outro: Primili ste ovu obavijest jer ste administrator participativnog prostora događanja.
+          email_intro: Popunjeno je više od %{percentage}% mjesta predviđenih za događanje
+            "%{resource_title}".
+          email_outro: Primili ste ovu obavijest jer ste administrator participativnog
+            prostora događanja.
           email_subject: Popunjeno je više od %{percentage}% mjesta za događanje "%{resource_title}“
-          notification_title: Popunjeno je više od %{percentage}% mjesta predviđenih za događanje <a href="%{resource_path}">%{resource_title}</a>.
+          notification_title: Popunjeno je više od %{percentage}% mjesta predviđenih
+            za događanje <a href="%{resource_path}">%{resource_title}</a>.
         meeting_updated:
-          email_intro: 'Događanje "%{resource_title}" je ažurirano. Novu verziju možete pročitati na stranici:'
-          email_outro: Primili ste ovu obavijest jer pratite događanje "%{resource_title}". Ako ga želite prestati pratiti, kliknite prethodnu poveznicu.
+          email_intro: 'Događanje "%{resource_title}" je ažurirano. Novu verziju možete
+            pročitati na stranici:'
+          email_outro: Primili ste ovu obavijest jer pratite događanje "%{resource_title}".
+            Ako ga želite prestati pratiti, kliknite prethodnu poveznicu.
           email_subject: Događanje "%{resource_title}“ je ažurirano
-          notification_title: Događanje <a href="%{resource_path}">%{resource_title}</a> je ažurirano.
+          notification_title: Događanje <a href="%{resource_path}">%{resource_title}</a>
+            je ažurirano.
         registration_code_validated:
-          email_intro: Vaš je kôd za prijavu "%{registration_code}" za sastanak "%{resource_title}" potvrđen.
-          email_outro: Primili ste ovu obavijest jer je vaš kôd za prijavu za sastanak "%{resource_title}" potvrđen.
-          email_subject: Vaš je kôd za prijavu "%{registration_code}" za sastanak "%{resource_title}" potvrđen
-          notification_title: Vaš je kôd za prijavu "%{registration_code}" za sastanak <a href="%{resource_path}">%{resource_title}</a> potvrđen.
+          email_intro: Vaš je kôd za prijavu "%{registration_code}" za sastanak "%{resource_title}"
+            potvrđen.
+          email_outro: Primili ste ovu obavijest jer je vaš kôd za prijavu za sastanak
+            "%{resource_title}" potvrđen.
+          email_subject: Vaš je kôd za prijavu "%{registration_code}" za sastanak
+            "%{resource_title}" potvrđen
+          notification_title: Vaš je kôd za prijavu "%{registration_code}" za sastanak
+            <a href="%{resource_path}">%{resource_title}</a> potvrđen.
         registrations_enabled:
-          email_intro: 'Otvorene su prijave za događanje  "%{resource_title}“. Prijaviti se možete na stranici:'
-          email_outro: Primili ste ovu obavijest jer pratite događanje "%{resource_title}". Ako ga želite prestati pratiti, kliknite prethodnu poveznicu.
+          email_intro: 'Otvorene su prijave za događanje  "%{resource_title}“. Prijaviti
+            se možete na stranici:'
+          email_outro: Primili ste ovu obavijest jer pratite događanje "%{resource_title}".
+            Ako ga želite prestati pratiti, kliknite prethodnu poveznicu.
           email_subject: Otvorene su prijave za događanje  "%{resource_title}“.
           notification_title: Otvorene su prijave za događanje <a href="%{resource_path}">%{resource_title}</a>.
         upcoming_meeting:
           email_intro: Događanje "%{resource_title}“ počinje za manje od 48 sati.
-          email_outro: Primili ste ovu obavijest jer pratite događanje "%{resource_title}". Ako ga želite prestati pratiti, kliknite prethodnu poveznicu.
+          email_outro: Primili ste ovu obavijest jer pratite događanje "%{resource_title}".
+            Ako ga želite prestati pratiti, kliknite prethodnu poveznicu.
           email_subject: Događanje "%{resource_title}“ počinje za manje od 48 sati.
-          notification_title: Događanje <a href="%{resource_path}">%{resource_title}</a> počinje za manje od 48 sati.
+          notification_title: Događanje <a href="%{resource_path}">%{resource_title}</a>
+            počinje za manje od 48 sati.
     forms:
       errors:
         meeting:
@@ -208,11 +245,14 @@ hr:
     gamification:
       badges:
         attended_meetings:
-          description: Ta se značka dodjeljuje za sudjelovanje na nekoliko događanja uživo.
-          description_another: 'Broj sastanaka na kojima je sudjelovao ovaj sudionik: %{score}.'
+          description: Ta se značka dodjeljuje za sudjelovanje na nekoliko događanja
+            uživo.
+          description_another: 'Broj sastanaka na kojima je sudjelovao ovaj sudionik:
+            %{score}.'
           description_own: 'Broj sastanaka na kojima ste sudjelovali: %{score}.'
           name: Događanja na kojima ste sudjelovali
-          next_level_in: 'Za sljedeću razinu morate sudjelovati na još ovoliko događanja: %{score}'
+          next_level_in: 'Za sljedeću razinu morate sudjelovati na još ovoliko događanja:
+            %{score}'
           unearned_another: Sudionik još nije sudjelovao ni na jednom sastanku.
           unearned_own: Još niste sudjelovali ni na jednom sastanku.
     meetings:
@@ -226,10 +266,11 @@ hr:
         edit: Uređivanje
         invalid_destroy:
           proposals_count:
-            few: 'Sastanak nije moguće uništiti jer su s njim povezana %{count} prijedloga:'
+            few: 'Sastanak nije moguće uništiti jer je s njim povezano %{count} prijedloga:'
             many: 'Sastanak nije moguće uništiti jer je s njim povezano %{count} prijedloga:'
             one: 'Sastanak nije moguće uništiti jer je s njim povezan %{count} prijedlog:'
-            other: 'Sastanak nije moguće uništiti jer je s njim povezano %{count} prijedloga:'
+            other: 'Sastanak nije moguće uništiti jer je s njim povezano %{count}
+              prijedloga:'
         manage_poll: Upravljanje anketom
         minutes: Zapisnik
         preview: Pretpregled
@@ -274,7 +315,9 @@ hr:
         invite_join_meeting_mailer:
           invite:
             decline: Odbij pozivnicu
-            invited_you_to_join_a_meeting: "%{invited_by} vas je pozvao da se pridružite sastanku na %{application}. Možete odbiti ili prihvatiti putem poveznica u nastavku."
+            invited_you_to_join_a_meeting: "%{invited_by} vas je pozvao da se pridružite
+              sastanku na %{application}. Možete odbiti ili prihvatiti putem poveznica
+              u nastavku."
             join: Pridružite se sastanku '%{meeting_title}'
         invites:
           create:
@@ -284,7 +327,8 @@ hr:
             attendee_type: Vrsta sudionika sastanka
             existing_user: Postojeći sudionik
             invite: Pozovi
-            invite_explanation: Sudionik će biti pozvan da se pridruži sastanku i organizaciji.
+            invite_explanation: Sudionik će biti pozvan da se pridruži sastanku i
+              organizaciji.
             non_user: Nepostojeći sudionik
             select_user: Odaberite sudionika
           index:
@@ -296,7 +340,8 @@ hr:
             filter_by: Filtriraj po
             invite_attendee: Pozovi sudionika sastanka
             invites: Pozivnice
-            registrations_disabled: Ne možete pozvati sudionika sastanka jer su prijave onemogućene.
+            registrations_disabled: Ne možete pozvati sudionika sastanka jer su prijave
+              onemogućene.
             search: Pretraži
         meeting_closes:
           edit:
@@ -316,20 +361,30 @@ hr:
             invalid:
               proposals_count:
                 one: Sastanak se ne može uništiti jer mu je pridružen %{count} prijedlog
-                other: Sastanak se ne može uništiti jer ima %{count} prijedloga povezanih s njim
+                few: Sastanak se ne može uništiti jer ima %{count} prijedloga povezanih
+                  s njim
+                other: Sastanak se ne može uništiti jer ima %{count} prijedloga povezanih
+                  s njim
             success: Sastanak je uspješno izbrisan
           edit:
             update: Ažuriraj
           form:
             address_help: 'Adresa: Geocoder je upotrebljava za pronalaženje lokacije'
-            disclaimer: 'Odricanje od odgovornosti: Korištenjem vanjskog sustava registracije, svjesni ste da organizatori %{organization} nisu odgovorni za podatke koje korisnici daju vanjskoj usluzi.'
-            location_help: 'Lokacija: poruka upućena korisnicima s informacijama o mjestu sastanka'
-            location_hints_help: 'Upute o lokaciji: dodatne informacije. Primjer: kat zgrade'
-            online_meeting_url_help: 'Veza: omogućite sudionicima da se povežu izravno na vaš sastanak'
-            registration_url_help: 'Veza: dopustite sudionicima da idu na vanjsku uslugu koju koristite za registracije'
+            disclaimer: 'Odricanje od odgovornosti: Korištenjem vanjskog sustava registracije,
+              svjesni ste da organizatori %{organization} nisu odgovorni za podatke
+              koje korisnici daju vanjskoj usluzi.'
+            location_help: 'Lokacija: poruka upućena korisnicima s informacijama o
+              mjestu sastanka'
+            location_hints_help: 'Upute o lokaciji: dodatne informacije. Primjer:
+              kat zgrade'
+            online_meeting_url_help: 'Veza: omogućite sudionicima da se povežu izravno
+              na vaš sastanak'
+            registration_url_help: 'Veza: dopustite sudionicima da idu na vanjsku
+              uslugu koju koristite za registracije'
             select_a_registration_type: Odaberite vrstu registracije
             select_an_iframe_access_level: Odaberite razinu pristupa iframeu
-            show_embedded_iframe_help: 'Samo nekoliko usluga dopušta ugrađivanje u sastanak ili događaj uživo iz sljedećih domena: %{domains}'
+            show_embedded_iframe_help: 'Samo nekoliko usluga dopušta ugrađivanje u
+              sastanak ili događaj uživo iz sljedećih domena: %{domains}'
           index:
             title: Sastanci
           new:
@@ -381,13 +436,18 @@ hr:
             validate: Potvrdi
             validate_registration_code: Potvrdi kôd za prijavu
           form:
-            available_slots_help: Ostavite 0 ako imate neograničeni broj slobodnih mjesta.
+            available_slots_help: Ostavite 0 ako imate neograničeni broj slobodnih
+              mjesta.
             invites: Pozivnice
-            recommendation_message: Zbog privatnosti preporučujemo da ovaj obrazac za upis izbrišete kada vam više ne bude potreban. To je u pravilu tri mjeseca nakon završetka sastanka.
-            registration_email_help: Ovaj će se tekst pojaviti u sredini e-poruke potvrde registracije. Odmah nakon registracijske šifre.
+            recommendation_message: Zbog privatnosti preporučujemo da ovaj obrazac
+              za upis izbrišete kada vam više ne bude potreban. To je u pravilu tri
+              mjeseca nakon završetka sastanka.
+            registration_email_help: Ovaj će se tekst pojaviti u sredini e-poruke
+              potvrde registracije. Odmah nakon registracijske šifre.
             registration_form: Obrazac za registraciju
             registrations_count:
               one: Bilo je %{count} registracija.
+              few: Bilo je %{count} registracija.
               other: Bilo je %{count} registracija.
             reserved_slots_help: Ostavite 0 ako nemate rezerviranih mjesta.
             reserved_slots_less_than: Mora biti manje od ili jednako %{count}
@@ -400,21 +460,28 @@ hr:
             success: Kôd za prijavu uspješno je potvrđen.
       admin_log:
         invite:
-          create: "%{user_name} je pozvao sudionika %{attendee_name} da se pridruži sastanku %{resource_name} u prostoru %{space_name}"
-          deleted: "%{user_name} je povukao pozivnicu sudioniku %{attendee_name} da se pridruži sastanku %{resource_name} u prostoru %{space_name}"
-          update: "%{user_name} je pozvao sudionika %{attendee_name} da se pridruži sastanku %{resource_name} u prostoru %{space_name}"
+          create: "%{user_name} je pozvao sudionika %{attendee_name} da se pridruži
+            sastanku %{resource_name} u prostoru %{space_name}"
+          deleted: "%{user_name} je povukao pozivnicu sudioniku %{attendee_name} da
+            se pridruži sastanku %{resource_name} u prostoru %{space_name}"
+          update: "%{user_name} je pozvao sudionika %{attendee_name} da se pridruži
+            sastanku %{resource_name} u prostoru %{space_name}"
         meeting:
           close: "%{user_name} je zatvorio sastanak %{resource_name} u prostoru %{space_name}"
           create: "%{user_name} je stvorio sastanak %{resource_name} u prostoru %{space_name}"
           delete: "%{user_name} je izbrisao sastanak %{resource_name} u prostoru %{space_name}"
-          export_registrations: "%{user_name} je izvezao prijave za sastanak %{resource_name} u prostoru %{space_name}"
+          export_registrations: "%{user_name} je izvezao prijave za sastanak %{resource_name}
+            u prostoru %{space_name}"
           update: "%{user_name} je ažurirao sastanak %{resource_name} u prostoru %{space_name}"
           value_types:
             organizer_presenter:
-              not_found: 'Organizator nije pronađen u bazi podataka (identifikacijska oznaka: %{id})'
+              not_found: 'Organizator nije pronađen u bazi podataka (identifikacijska
+                oznaka: %{id})'
         minutes:
-          create: "%{user_name} je stvorio zapisnik sa sastanka %{resource_name} u prostoru %{space_name}"
-          update: "%{user_name} je ažurirao zapisnik sa sastanka %{resource_name} u prostoru %{space_name}"
+          create: "%{user_name} je stvorio zapisnik sa sastanka %{resource_name} u
+            prostoru %{space_name}"
+          update: "%{user_name} je ažurirao zapisnik sa sastanka %{resource_name}
+            u prostoru %{space_name}"
         questionnaire:
           update: "%{user_name} ažurirao je upitnik za sastanak %{meeting_name}"
       application_helper:
@@ -430,13 +497,30 @@ hr:
         copy_calendar_url: Kopirati
         copy_calendar_url_clarification: Kopiraj URL kalendara u međuspremnik
         copy_calendar_url_copied: Kopirano!
-        copy_calendar_url_description: Sve objavljene sastanke možete vidjeti u svojoj kalendarskoj aplikaciji ili davatelju usluga. Kopirajte i zalijepite ovaj URL u svoj kalendar pomoću opcije "Dodaj novi kalendar iz URL-a".
-        copy_calendar_url_explanation: Imajte na umu da izvozite odabir sastanaka jer postoje aktivni filtri. Ako ih želite sve izvesti, prvo poništite sve filtre.
+        copy_calendar_url_description: Sve objavljene sastanke možete vidjeti u svojoj
+          kalendarskoj aplikaciji ili davatelju usluga. Kopirajte i zalijepite ovaj
+          URL u svoj kalendar pomoću opcije "Dodaj novi kalendar iz URL-a".
+        copy_calendar_url_explanation: Imajte na umu da izvozite odabir sastanaka
+          jer postoje aktivni filtri. Ako ih želite sve izvesti, prvo poništite sve
+          filtre.
         copy_calendar_url_message: URL je uspješno kopiran u međuspremnik.
         export_calendar: Izvezi kalendar
       close_meeting_reminder_mailer:
         close_meeting_reminder:
-          body: 'Zahvaljujemo na sudjelovanju u procesu organizacije događaja <a href=''%{meeting_path}''>''%{meeting_title}''</a>. Nadamo se da je događanje bilo uspješno, a rasprava produktivna. Na stranici posvećenoj događanju dodajte izvješće o događanju i kliknite na „Zatvori događanje”. <br><br>Tako će drugi imati pregled ideja koje su ondje predstavljene. Te se ideje kasnije mogu uzeti u obzir u analizi, što omogućuje odgovarajuće povratne informacije i poduzimanje daljnjih koraka. <br><br>Izvješće bi trebalo sadržavati informacije o vrsti događanja (npr. radionica s aktivnim sudjelovanjem, otvoreni prostor, world café), broj sudionika i demografske podatke o sudionicima (npr. dob, rod), glavne predmete rasprave i glavne ideje, argumente koji su doveli do njih te opće ozračje i očekivane daljnje korake. <br><br> Potičemo vas i da povežete ideje koje su se pojavile tijekom događanja s idejama koje su već objavljene na platformi. <br><br>To je važno za analizu. <br><br>Hvala što sudjelujete! Imate li pitanja, slobodno nam se obratite.'
+          body: Zahvaljujemo na sudjelovanju u procesu organizacije događaja <a href='%{meeting_path}'>'%{meeting_title}'</a>.
+            Nadamo se da je događanje bilo uspješno, a rasprava produktivna. Na stranici
+            posvećenoj događanju dodajte izvješće o događanju i kliknite na „Zatvori
+            događanje”. <br><br>Tako će drugi imati pregled ideja koje su ondje predstavljene.
+            Te se ideje kasnije mogu uzeti u obzir u analizi, što omogućuje odgovarajuće
+            povratne informacije i poduzimanje daljnjih koraka. <br><br>Izvješće bi
+            trebalo sadržavati informacije o vrsti događanja (npr. radionica s aktivnim
+            sudjelovanjem, otvoreni prostor, world café), broj sudionika i demografske
+            podatke o sudionicima (npr. dob, rod), glavne predmete rasprave i glavne
+            ideje, argumente koji su doveli do njih te opće ozračje i očekivane daljnje
+            korake. <br><br> Potičemo vas i da povežete ideje koje su se pojavile
+            tijekom događanja s idejama koje su već objavljene na platformi. <br><br>To
+            je važno za analizu. <br><br>Hvala što sudjelujete! Imate li pitanja,
+            slobodno nam se obratite.
           greetings: S poštovanjem<br/>Moderatorski tim<br/>
           hello: Poštovani/Poštovana %{username},
           subject: Sada možete zatvoriti svoj sastanak izvješćem na platformi %{organization_name}
@@ -465,7 +549,8 @@ hr:
       iframe_embed_type:
         embed_in_meeting_page: Ugradite na stranicu sastanka
         none: Nijedan
-        open_in_live_event_page: Otvori na stranici događaja uživo (s neobaveznim anketama)
+        open_in_live_event_page: Otvori na stranici događaja uživo (s neobaveznim
+          anketama)
         open_in_new_tab: Otvori URL u novoj kartici
       last_activity:
         new_meeting_at_html: Novo događanje
@@ -498,7 +583,7 @@ hr:
           outlook: Dodaj u Outlook kalendar
         count:
           meetings_count:
-            few: "%{count} sastanka"
+            few: "%{count} događanja"
             many: "%{count} sastanaka"
             one: "%{count} događaj"
             other: "%{count} događanja"
@@ -532,27 +617,42 @@ hr:
           filter_by: Filtriraj po
           unfold: Otvori
         form:
-          address_help: 'Morate navesti poštansku adresu da bi se događanje pojavilo na karti, čak i ako je riječ o internetskom događanju. Adresa se može sastojati samo od poštanskog broja i države. Primjer: „Rue de la Loi 200, 1000 Bruxelles, Belgija”.'
-          available_slots_help: Ostavite na 0 ako imate neograničen broj slobodnih mjesta
-          disclaimer: 'Odricanje od odgovornosti: Korištenjem vanjskog sustava registracije, svjesni ste da organizatori %{organization} nisu odgovorni za podatke koje korisnici daju vanjskoj usluzi.'
-          location_help: 'Morate navesti mjesto sastanka. Primjer: „konferencijska dvorana Jean Monnet”; „poveznica na videokonferenciju”.'
-          location_hints_help: 'Možete dati kratke upute za dolazak. Primjer: „Linijom podzemne željeznice 5 do postaje Schuman”.'
-          online_meeting_url_help: Morate navesti poveznicu na detaljniji prikaz događanja ili poveznicu na videokonferenciju za sudjelovanje. Poveznice na početku moraju imati oznaku „https://”.
+          address_help: 'Morate navesti poštansku adresu da bi se događanje pojavilo
+            na karti, čak i ako je riječ o internetskom događanju. Adresa se može
+            sastojati samo od poštanskog broja i države. Primjer: „Rue de la Loi 200,
+            1000 Bruxelles, Belgija”.'
+          available_slots_help: Ostavite na 0 ako imate neograničen broj slobodnih
+            mjesta
+          disclaimer: 'Odricanje od odgovornosti: Korištenjem vanjskog sustava registracije,
+            svjesni ste da organizatori %{organization} nisu odgovorni za podatke
+            koje korisnici daju vanjskoj usluzi.'
+          location_help: 'Morate navesti mjesto sastanka. Primjer: „konferencijska
+            dvorana Jean Monnet”; „poveznica na videokonferenciju”.'
+          location_hints_help: 'Možete dati kratke upute za dolazak. Primjer: „Linijom
+            podzemne željeznice 5 do postaje Schuman”.'
+          online_meeting_url_help: Morate navesti poveznicu na detaljniji prikaz događanja
+            ili poveznicu na videokonferenciju za sudjelovanje. Poveznice na početku
+            moraju imati oznaku „https://”.
           registration_type_help: Za događaj možete koristiti vanjski sustav za prijavljivanje.
-          registration_url_help: Morate navesti poveznicu na sustav za prijavljivanje. Poveznica na početku mora imati oznaku „https://” ili „http://”.
+          registration_url_help: Morate navesti poveznicu na sustav za prijavljivanje.
+            Poveznica na početku mora imati oznaku „https://” ili „http://”.
           select_a_category: Odaberite kategoriju
           select_an_iframe_access_level: Odaberite razinu pristupa iframeu
-          show_embedded_iframe_help: 'Samo nekoliko usluga dopušta ugrađivanje u sastanak ili događaj uživo iz sljedećih domena: %{domains}'
+          show_embedded_iframe_help: 'Samo nekoliko usluga dopušta ugrađivanje u sastanak
+            ili događaj uživo iz sljedećih domena: %{domains}'
         index:
           see_all: Prikaži sva događanja
           see_all_withdrawn: Prikaži sva povučena događanja
-          text_banner: Pregledavate popis događanja koja su povukli njihovi organizatori. %{go_back_link} za povratak na kazalo događanja.
+          text_banner: Pregledavate popis događanja koja su povukli njihovi organizatori.
+            %{go_back_link} za povratak na kazalo događanja.
         meeting_minutes:
           meeting_minutes: Zapisnik sa sastanka
           related_information: Povezane informacije
         meetings:
-          no_meetings_warning: Nema događanja koja odgovaraju vašim kriterijima pretraživanja ili nema zakazanih događanja.
-          upcoming_meetings_warning: Trenutačno nema predstojećih događanja, ali ovdje možete pronaći popis svih dosadašnjih događanja.
+          no_meetings_warning: Nema događanja koja odgovaraju vašim kriterijima pretraživanja
+            ili nema zakazanih događanja.
+          upcoming_meetings_warning: Trenutačno nema predstojećih događanja, ali ovdje
+            možete pronaći popis svih dosadašnjih događanja.
         new:
           back: Povratak
           create: Stvori
@@ -569,13 +669,16 @@ hr:
           going: Idem
           join: Uključi se u događanje
           leave: Otkažite svoju registraciju
-          leave_confirmation: Jeste li sigurni da želite otkazati svoju registraciju za ovaj sastanak?
+          leave_confirmation: Jeste li sigurni da želite otkazati svoju registraciju
+            za ovaj sastanak?
           link_available_soon: Link dostupan uskoro
-          link_closed: Veza za pridruživanje sastanku bit će dostupna nekoliko minuta prije početka
+          link_closed: Veza za pridruživanje sastanku bit će dostupna nekoliko minuta
+            prije početka
           live_event: Ovaj sastanak se upravo održava
           meeting_minutes: Zapisnik sa sastanka
           meeting_report: Izvješće o događanju
-          micro_camera_permissions_warning: Kada kliknete na gumb ispod, od vas će se tražiti dopuštenja za mikrofon i/ili kameru i pridružit ćete se videokonferenciji
+          micro_camera_permissions_warning: Kada kliknete na gumb ispod, od vas će
+            se tražiti dopuštenja za mikrofon i/ili kameru i pridružit ćete se videokonferenciji
           no_slots_available: Nema slobodnih mjesta
           organizations: Organizacije sudionici
           registration_code_help_text: Vaš kôd za prijavu
@@ -583,14 +686,16 @@ hr:
             validated: POTVRĐENO
             validation_pending: POTVRĐIVANJE U TIJEKU
           remaining_slots:
-            few: "%{count} preostala mjesta"
+            few: "%{count} preostalih mjesta"
             many: "%{count} preostalih mjesta"
             one: "%{count} preostalo mjesto"
             other: "%{count} preostalih mjesta"
           view: Prikaži
           visit_finished: Pogledajte prošli sastanak
-          withdraw_btn_hint: Ako se predomislite, možete povući svoje događanje. Ono neće biti izbrisano, nego će se pojaviti na popisu povučenih događanja.
-          withdraw_confirmation_html: Želite li zaista povući događanje?<br><br><strong>Tu radnju više nećete moći poništiti!</strong>
+          withdraw_btn_hint: Ako se predomislite, možete povući svoje događanje. Ono
+            neće biti izbrisano, nego će se pojaviti na popisu povučenih događanja.
+          withdraw_confirmation_html: Želite li zaista povući događanje?<br><br><strong>Tu
+            radnju više nećete moći poništiti!</strong>
           withdraw_meeting: Povuci događanje
         update:
           invalid: Došlo je do problema pri ažuriranju sastanka.
@@ -621,7 +726,8 @@ hr:
           closed_question:
             question_results: Rezultati pitanja
           index:
-            empty_questions: Tijekom ovog sastanka bit će poslana neka pitanja na koja ćete moći odgovoriti. Oni će biti prikazani ovdje.
+            empty_questions: Tijekom ovog sastanka bit će poslana neka pitanja na
+              koja ćete moći odgovoriti. Oni će biti prikazani ovdje.
           index_admin:
             admin_dashboard: Nadzorna ploča administratora
             edit: Uredite u administratorskoj ploči
@@ -640,11 +746,13 @@ hr:
         attending_participants: Prisutni sudionici
         hidden_participants_count:
           one: i još %{count} osoba
+          few: i još %{count} osoba
           other: i još %{count} osoba
       read_more: "(više informacija)"
       registration_mailer:
         confirmation:
-          confirmed_html: Vaša prijava za događanje <a href="%{resource_url}">%{resource_title}</a> je potvrđena.
+          confirmed_html: Vaša prijava za događanje <a href="%{resource_url}">%{resource_title}</a>
+            je potvrđena.
           details: Pojedinosti o događanju nalaze se u privitku.
           registration_code: Vaš kôd za prijavu glasi %{code}.
       registration_type:
@@ -652,7 +760,8 @@ hr:
       registrations:
         create:
           invalid: Došlo je do problema pri pridruživanju sastanku.
-          success: Uspješno ste se pridružili događanju. Budući da ste se prijavili za to događanje, primat ćete obavijesti o eventualnim novostima.
+          success: Uspješno ste se pridružili događanju. Budući da ste se prijavili
+            za to događanje, primat ćete obavijesti o eventualnim novostima.
         decline_invitation:
           invalid: Došlo je do problema pri odbijanju pozivnice.
           success: Uspješno ste odbili pozivnicu.

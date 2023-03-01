@@ -1,5 +1,5 @@
 ---
-hr:
+sr-CS:
   activemodel:
     attributes:
       area:
@@ -49,7 +49,8 @@ hr:
         facebook_handler: Rukovatelj (handler) za Facebook
         favicon: Ikona
         force_authentication: Prisilna provjera autentičnosti
-        force_users_to_authenticate_before_access_organization: Prisilite korisnike na autentifikaciju prije pristupa organizaciji
+        force_users_to_authenticate_before_access_organization: Prisilite korisnike
+          na autentifikaciju prije pristupa organizaciji
         from: S adrese e-pošte
         github_handler: Rukovatelj (handler) za GitHub
         header_snippets: Isječci zaglavlja
@@ -141,15 +142,18 @@ hr:
         participatory_space_private_user_csv_import:
           attributes:
             file:
-              malformed: Neispravno oblikovana datoteka za uvoz, pažljivo pročitajte upute i provjerite je li datoteka kodirana UTF-8.
+              malformed: Neispravno oblikovana datoteka za uvoz, pažljivo pročitajte
+                upute i provjerite je li datoteka kodirana UTF-8.
         user_group_csv_verification:
           attributes:
             file:
-              malformed: Neispravno oblikovana datoteka za uvoz, pažljivo pročitajte upute i provjerite je li datoteka kodirana UTF-8.
+              malformed: Neispravno oblikovana datoteka za uvoz, pažljivo pročitajte
+                upute i provjerite je li datoteka kodirana UTF-8.
       new_import:
         attributes:
           file:
-            invalid_file: Navedena je nevažeća datoteka, provjerite je li datoteka ispravno formatirana
+            invalid_file: Navedena je nevažeća datoteka, provjerite je li datoteka
+              ispravno formatirana
             invalid_mime_type: Nevažeća mime vrsta
   activerecord:
     attributes:
@@ -203,7 +207,8 @@ hr:
           title: Slažem se s uvjetima korištenja
         required_review:
           alert: 'Obvezno: pregledajte naše administratorske uvjete korištenja'
-          callout: Odvojite trenutak i pregledajte Administratorske uvjete korištenja. Ako ih ne pregledate, nećete moći administrirati platformu.
+          callout: Odvojite trenutak i pregledajte Administratorske uvjete korištenja.
+            Ako ih ne pregledate, nećete moći administrirati platformu.
           cta: Pregledajte ih sada.
         title: Administratorski uvjeti korištenja
       area_types:
@@ -274,14 +279,17 @@ hr:
           error: Došlo je do problema pri ažuriranju privitka.
           success: Privitak je uspješno ažuriran.
       attachments_privacy_warning:
-        message: Budite oprezni kada radite s prilozima u privatnom prostoru. Svaki sudionik može podijeliti ovaj dokument s drugima.
+        message: Budite oprezni kada radite s prilozima u privatnom prostoru. Svaki
+          sudionik može podijeliti ovaj dokument s drugima.
       autocomplete:
         no_results: Nije pronađen nijedan rezultat
         search_prompt: Unesite najmanje tri znaka za pretraživanje
       block_user:
         new:
           action: Blokirajte račun i pošaljite obrazloženje
-          description: Blokiranje korisnika učinit će njegov račun neupotrebljivim. U obrazloženju možete navesti bilo kakve smjernice o načinima na koje biste razmotrili deblokiranje korisnika.
+          description: Blokiranje korisnika učinit će njegov račun neupotrebljivim.
+            U obrazloženju možete navesti bilo kakve smjernice o načinima na koje
+            biste razmotrili deblokiranje korisnika.
           justification: Opravdanje
           title: Blokiraj korisnika %{name}
       categories:
@@ -289,7 +297,9 @@ hr:
           error: Došlo je do problema pri stvaranju kategorije.
           success: Kategorija je uspješno stvorena.
         destroy:
-          error: Došlo je do problema pri brisanju kategorije. Prvo izbrišite bilo koju potkategoriju, pripazite da nijedan drugi subjekt ne pripada kategoriji i pokušajte ponovno.
+          error: Došlo je do problema pri brisanju kategorije. Prvo izbrišite bilo
+            koju potkategoriju, pripazite da nijedan drugi subjekt ne pripada kategoriji
+            i pokušajte ponovno.
           success: Kategorija je uspješno izbrisana.
         edit:
           title: Uređivanje kategorije
@@ -347,7 +357,8 @@ hr:
         title: Sukobi verifikacije
         transfer:
           email: E-mail
-          error: Došlo je do problema pri prijenosu trenutnog sudionika na upravljanog sudionika.
+          error: Došlo je do problema pri prijenosu trenutnog sudionika na upravljanog
+            sudionika.
           name: Ime
           reason: Razlog
           success: Trenutni prijenos je uspješno dovršen.
@@ -426,12 +437,15 @@ hr:
           label: Tema
         search_label: Pretraži
         search_placeholder:
-          name_or_nickname_or_email_cont: Pretraži %{collection} po e-pošti, imenu ili nadimku.
+          name_or_nickname_or_email_cont: Pretraži %{collection} po e-pošti, imenu
+            ili nadimku.
           report_count_eq: Izvješće o broju eq
-          reported_id_string_or_reported_content_cont: Pretražite %{collection} prema ID-u ili sadržaju koji se može prijaviti.
+          reported_id_string_or_reported_content_cont: Pretražite %{collection} prema
+            ID-u ili sadržaju koji se može prijaviti.
           title_cont: Pretraži %{collection} po naslovu.
           user_name_or_user_email_cont: Traži %{collection} po imenu ili e-pošti.
-          user_name_or_user_nickname_or_user_email_cont: Traži %{collection} po e-pošti, imenu ili nadimku.
+          user_name_or_user_nickname_or_user_email_cont: Traži %{collection} po e-pošti,
+            imenu ili nadimku.
         state_eq:
           label: Status
           values:
@@ -444,7 +458,8 @@ hr:
           import:
             explanation: 'Uputstvo za datoteku:'
             message_1: Podržane su CSV, JSON i Excel (.xlsx) datoteke
-            message_2: Za CSV datoteke, razdjelnik između stupaca mora biti točka-zarez (";")
+            message_2: Za CSV datoteke, razdjelnik između stupaca mora biti točka-zarez
+              (";")
       help_sections:
         error: Došlo je do problema pri ažuriranju odjeljaka za pomoć
         form:
@@ -461,7 +476,8 @@ hr:
           impersonate_new_managed_user: Upravljaj novim sudionikom
           managed: Upravlja se
           name: Naziv
-          needs_authorization_warning: Za ovu organizaciju morate imate omogućenu barem jednu autorizaciju.
+          needs_authorization_warning: Za ovu organizaciju morate imate omogućenu
+            barem jednu autorizaciju.
           not_managed: Neupravljano
           promote: Promakni
           search: Pretraži
@@ -469,7 +485,8 @@ hr:
           view_logs: Prikaži evidencije
       impersonations:
         close_session:
-          error: Došlo je do problema pri zatvaranju trenutačne sesije upravljanja sudionicima.
+          error: Došlo je do problema pri zatvaranju trenutačne sesije upravljanja
+            sudionicima.
           success: Trenutačna sesija personificiranja uspješno je završena.
         create:
           error: Došlo je do problema pri upravljanju sudionikom.
@@ -487,25 +504,35 @@ hr:
         and: i
         data_errors:
           duplicate_headers:
-            detail: Provjerite sadrži li datoteka potrebne stupce ili zaglavlja samo jednom.
+            detail: Provjerite sadrži li datoteka potrebne stupce ili zaglavlja samo
+              jednom.
             message:
               one: Duplicirani stupac %{columns}.
+              few: Dvostruki stupci %{columns}.
               other: Dvostruki stupci %{columns}.
           invalid_indexes:
             lines:
-              detail: Provjerite jesu li ovi redovi ispravno formatirani i sadrže li važeće zapise.
+              detail: Provjerite jesu li ovi redovi ispravno formatirani i sadrže
+                li važeće zapise.
               message:
                 one: Pronađena pogreška u datoteci za uvoz u retku %{indexes}.
+                few: Pronađene pogreške u datoteci za uvoz u recima %{indexes}.
                 other: Pronađene pogreške u datoteci za uvoz u recima %{indexes}.
             records:
-              detail: Provjerite jesu li ovi zapisi ispravno formatirani i sadrže li važeće zapise.
+              detail: Provjerite jesu li ovi zapisi ispravno formatirani i sadrže
+                li važeće zapise.
               message:
-                one: Pronađena pogreška u datoteci za uvoz za zapise s brojevima naloga %{indexes}.
-                other: Pronađene su pogreške u datoteci za uvoz za zapise s brojevima naloga %{indexes}.
+                one: Pronađena pogreška u datoteci za uvoz za zapise s brojevima naloga
+                  %{indexes}.
+                few: Pronađene su pogreške u datoteci za uvoz za zapise s brojevima
+                  naloga %{indexes}.
+                other: Pronađene su pogreške u datoteci za uvoz za zapise s brojevima
+                  naloga %{indexes}.
           missing_headers:
             detail: Provjerite sadrži li datoteka potrebne stupce.
             message:
               one: Nedostaje stupac %{columns}.
+              few: Nedostaju stupci %{columns}.
               other: Nedostaju stupci %{columns}.
         error: Došlo je do problema tijekom uvoza
         example_error: Nije moguće izraditi primjer za navedeni tip
@@ -530,7 +557,10 @@ hr:
           success: Upravljani sudionik uspješno je promaknut.
         promotions:
           new:
-            explanation: Upravljani sudionici mogu biti promaknuti u standardne sudionike. To znači da će biti pozvani da se prijave i nećete moći ponovno upravljati njima. Pozvani sudionik primit će poruku e-pošte kako bi prihvatio vaš poziv.
+            explanation: Upravljani sudionici mogu biti promaknuti u standardne sudionike.
+              To znači da će biti pozvani da se prijave i nećete moći ponovno upravljati
+              njima. Pozvani sudionik primit će poruku e-pošte kako bi prihvatio vaš
+              poziv.
             new_managed_user_promotion: Promicanje novih upravljanih sudionika
             promote: Promakni
       menu:
@@ -667,7 +697,9 @@ hr:
         reports:
           index:
             author: Autor(i)
-            callout_html: Sadržaj se pojavljuje na ploči za moderiranje kada ga je signalizirao korisnik (može biti bilo tko s registriranim računom) klikom na zastavicu %{icon} pored stavke.
+            callout_html: Sadržaj se pojavljuje na ploči za moderiranje kada ga je
+              signalizirao korisnik (može biti bilo tko s registriranim računom) klikom
+              na zastavicu %{icon} pored stavke.
             content_original_language: Izvorni jezik sadržaja
             participatory_space: Prostor za sudjelovanje
             reported_content: Prijavljeni sadržaj
@@ -721,19 +753,26 @@ hr:
           all_users_help: Šalje bilten svim potvrđenim korisnicima.
           confirm_deliver: Želite li zaista poslati bilten? Radnju nije moguće poništiti.
           deliver: Pošalji bilten
-          followers_help: Šalje bilten svim potvrđenim korisnicima koji prate odabrane participativne prostore na popisu.
+          followers_help: Šalje bilten svim potvrđenim korisnicima koji prate odabrane
+            participativne prostore na popisu.
           none: Nijedna
-          participants_help: Šalje bilten svim potvrđenim korisnicima koji su sudjelovali u nekom od odabranih participativnih prostora na popisu.
-          recipients_count: 'Broj korisnika kojima će bilten biti poslan: <strong id=''recipients_count''>%{count}</strong>.'
-          scopes_help: Šalje bilten korisnicima koji su aktivirali neku od odabranih tema u postavkama „Moji interesi” njihova računa.
-          select_scopes: Filtriraj za korisnike koji su aktivirali neku od odabranih tema u postavkama Moji interesi njihova računa.
+          participants_help: Šalje bilten svim potvrđenim korisnicima koji su sudjelovali
+            u nekom od odabranih participativnih prostora na popisu.
+          recipients_count: 'Broj korisnika kojima će bilten biti poslan: <strong
+            id=''recipients_count''>%{count}</strong>.'
+          scopes_help: Šalje bilten korisnicima koji su aktivirali neku od odabranih
+            tema u postavkama „Moji interesi” njihova računa.
+          select_scopes: Filtriraj za korisnike koji su aktivirali neku od odabranih
+            tema u postavkama Moji interesi njihova računa.
           select_spaces: Odaberite prostore za segmentiranje biltena
           select_users: Odaberite korisnike kojima želite poslati bilten
           send_to_all_users: Pošalji svim korisnicima
           send_to_followers: Pošalji pratiteljima
           send_to_participants: Pošalji sudionicima
           title: Odaberite primatelje za slanje
-          warning: "<strong>Pozor:</strong> Ovaj bilten šalje se samo korisnicima koji su aktivirali <em>Želim primati biltene</em> u svojim postavkama obavijesti."
+          warning: "<strong>Pozor:</strong> Ovaj bilten šalje se samo korisnicima
+            koji su aktivirali <em>Želim primati biltene</em> u svojim postavkama
+            obavijesti."
         send:
           no_recipients: Nema primatelja za ovaj odabir
         show:
@@ -773,7 +812,9 @@ hr:
           title: Službeno potvrdi sudionika "%{name}"
         show_email_modal:
           close_modal: Zatvori modalni prozor
-          description: Ako morate izravno stupiti u kontakt sa sudionikom, možete kliknuti na gumb Prikaži kako biste vidjeli adresu e-pošte. Ova će se radnja zabilježiti.
+          description: Ako morate izravno stupiti u kontakt sa sudionikom, možete
+            kliknuti na gumb Prikaži kako biste vidjeli adresu e-pošte. Ova će se
+            radnja zabilježiti.
           email_address: Adresa e-pošte
           full_name: Ime i prezime
           hidden: skriveno
@@ -790,7 +831,8 @@ hr:
           facebook: Facebook
           github: GitHub
           instagram: Instagram
-          rich_text_editor_in_public_views_help: U nekim područjima teksta sudionici će moći unijeti neke HTML oznake s pomoću uređivača obogaćenog teksta.
+          rich_text_editor_in_public_views_help: U nekim područjima teksta sudionici
+            će moći unijeti neke HTML oznake s pomoću uređivača obogaćenog teksta.
           social_handlers: Društvene mreže
           twitter: Twitter
           url: URL
@@ -804,10 +846,24 @@ hr:
         form:
           colors:
             colors_title: Boje profila organizacije
-            colors_warning_html: Upozorenje! Promjena ovih boja može prekinuti kontraste pristupačnosti. Kontrast po svom izboru možete provjeriti s <a href="%{link}">WebAIM Contrast Checkerom</a> ili drugim sličnim alatima.
-            header_snippets_help: Upotrijebite ovo polje kako biste dodali elemente u zaglavlje HTML-a. Najčešća je upotreba integriranje usluga trećih strana za koje su potrebni dodatni JavaScript ili CSS. Možete ga upotrijebiti i za dodavanje dodatnih metaoznaka u HTML. Imajte na umu da će ovo biti dostupno samo na javnim stranicama, a ne u administratorskom odjeljku.
-          cta_button_path_help: 'Možete promijeniti kamo vodi gumb Poziv na akciju (CTA) na početnoj stranici. Upotrijebite djelomične putove, a ne potpune URL-ove. Dopušteni su slova, brojke, crtice i kose crte, prvi znak mora biti slovo. Gumb Poziv na akciju (CTA) prikazan je na početnoj stranici između teksta dobrodošlice i opisa. Primjer: %{url}'
-          cta_button_text_help: Možete promijeniti tekst gumba Poziv na akciju (CTA) na početnoj stranici za svaki jezik dostupan u vašem profilu organizacije. Ako nije postavljeno, primjenjuje se zadana vrijednost. Gumb Poziv na akciju (CTA) prikazan je na početnoj stranici između teksta dobrodošlice i opisa.
+            colors_warning_html: Upozorenje! Promjena ovih boja može prekinuti kontraste
+              pristupačnosti. Kontrast po svom izboru možete provjeriti s <a href="%{link}">WebAIM
+              Contrast Checkerom</a> ili drugim sličnim alatima.
+            header_snippets_help: Upotrijebite ovo polje kako biste dodali elemente
+              u zaglavlje HTML-a. Najčešća je upotreba integriranje usluga trećih
+              strana za koje su potrebni dodatni JavaScript ili CSS. Možete ga upotrijebiti
+              i za dodavanje dodatnih metaoznaka u HTML. Imajte na umu da će ovo biti
+              dostupno samo na javnim stranicama, a ne u administratorskom odjeljku.
+          cta_button_path_help: 'Možete promijeniti kamo vodi gumb Poziv na akciju
+            (CTA) na početnoj stranici. Upotrijebite djelomične putove, a ne potpune
+            URL-ove. Dopušteni su slova, brojke, crtice i kose crte, prvi znak mora
+            biti slovo. Gumb Poziv na akciju (CTA) prikazan je na početnoj stranici
+            između teksta dobrodošlice i opisa. Primjer: %{url}'
+          cta_button_text_help: Možete promijeniti tekst gumba Poziv na akciju (CTA)
+            na početnoj stranici za svaki jezik dostupan u vašem profilu organizacije.
+            Ako nije postavljeno, primjenjuje se zadana vrijednost. Gumb Poziv na
+            akciju (CTA) prikazan je na početnoj stranici između teksta dobrodošlice
+            i opisa.
           homepage_appearance_title: Uređivanje izgleda početne stranice
           homepage_highlighted_content_banner_title: Istaknut natpis sadržaja
           images:
@@ -834,11 +890,15 @@ hr:
           update: Ažuriraj
       participatory_space_private_users:
         create:
-          error: Došlo je do problema pri dodavanju privatnog sudionika za ovaj participativni prostor.
-          success: Pristup privatnog sudionika participativnom prostoru uspješno je stvoren.
+          error: Došlo je do problema pri dodavanju privatnog sudionika za ovaj participativni
+            prostor.
+          success: Pristup privatnog sudionika participativnom prostoru uspješno je
+            stvoren.
         destroy:
-          error: Došlo je do problema pri brisanju privatnog sudionika za ovaj participativni prostor.
-          success: Pristup privatnog sudionika participativnom prostoru uspješno je uništen.
+          error: Došlo je do problema pri brisanju privatnog sudionika za ovaj participativni
+            prostor.
+          success: Pristup privatnog sudionika participativnom prostoru uspješno je
+            uništen.
         index:
           import_via_csv: Uvezi putem CSV-a
           title: Privatni sudionik u participativnom prostoru
@@ -848,15 +908,20 @@ hr:
       participatory_space_private_users_csv_imports:
         create:
           invalid: Došlo je do problema pri čitanju datoteke CSV.
-          success: Datoteka CSV uspješno je učitana, sudionicima šaljemo poruku e-pošte s pozivnicom. Ovo bi moglo potrajati.
+          success: Datoteka CSV uspješno je učitana, sudionicima šaljemo poruku e-pošte
+            s pozivnicom. Ovo bi moglo potrajati.
         new:
           destroy:
             button: Izbrišite sve privatne sudionike
-            confirm: Jeste li sigurni da želite izbrisati sve privatne sudionike? Ova se radnja ne može poništiti, nećete ih moći oporaviti.
+            confirm: Jeste li sigurni da želite izbrisati sve privatne sudionike?
+              Ova se radnja ne može poništiti, nećete ih moći oporaviti.
             empty: Nemate privatnih sudionika.
             explanation: Imate %{count} privatnih sudionika.
             title: Izbrišite privatne sudionike
-          explanation: Učitajte svoju datoteku CSV. Datoteka mora sadržavati dva stupca, adresu e-pošte u prvom stupcu datoteke i ime korisnikâ koje želite dodati u participativni prostor u posljednjem stupcu datoteke (adresa e-pošte, ime), bez zaglavlja.
+          explanation: Učitajte svoju datoteku CSV. Datoteka mora sadržavati dva stupca,
+            adresu e-pošte u prvom stupcu datoteke i ime korisnikâ koje želite dodati
+            u participativni prostor u posljednjem stupcu datoteke (adresa e-pošte,
+            ime), bez zaglavlja.
           title: Učitajte svoju datoteku CSV
           upload: Učitaj
       reminders:
@@ -864,6 +929,7 @@ hr:
           error: Došlo je do problema pri izradi podsjetnika.
           success:
             one: "%{count} korisnik će biti podsjetnik."
+            few: "%{count} korisnika će se podsjetiti."
             other: "%{count} korisnika će se podsjetiti."
         new:
           submit: Poslati
@@ -918,7 +984,10 @@ hr:
           success: Token je uspješno uništen.
         share_tokens:
           empty: Nema aktivnih tokena
-          help: Ovi se tokeni upotrebljavaju za javno dijeljenje ovog neobjavljenog izvora s bilo kojim korisnikom. Bit će skriveni kada se objavi izvor. Kliknite na ikonu za dijeljenje tokena kako biste pristupili URL-u koji se može podijeliti.
+          help: Ovi se tokeni upotrebljavaju za javno dijeljenje ovog neobjavljenog
+            izvora s bilo kojim korisnikom. Bit će skriveni kada se objavi izvor.
+            Kliknite na ikonu za dijeljenje tokena kako biste pristupili URL-u koji
+            se može podijeliti.
           title: Dijeli tokene
       shared:
         gallery:
@@ -950,12 +1019,15 @@ hr:
         destroy:
           success: Stranica je uspješno uništena
         edit:
-          changed_notably_help: Ako se označi, sudionici će biti obaviješteni da bi trebali prihvatiti nove uvjete.
+          changed_notably_help: Ako se označi, sudionici će biti obaviješteni da bi
+            trebali prihvatiti nove uvjete.
           title: Uređivanje stranice
           update: Ažuriraj
         form:
           none: Nijedna
-          slug_help: 'Upotrijebite djelomične putove, a ne potpune URL-ove. Dopušteni su slova, brojke, crtice i kose crte, prvi znak mora biti slovo. Primjer: %{url}'
+          slug_help: 'Upotrijebite djelomične putove, a ne potpune URL-ove. Dopušteni
+            su slova, brojke, crtice i kose crte, prvi znak mora biti slovo. Primjer:
+            %{url}'
         index:
           last_notable_change: Posljednja primjetna promjena
         new:
@@ -989,7 +1061,8 @@ hr:
       user_group:
         csv_verify:
           invalid: Došlo je do problema pri čitanju datoteke CSV.
-          success: Datoteka CSV uspješno je učitana, provjeravamo skupine koje ispunjavaju kriterije. Ovo bi moglo potrajati.
+          success: Datoteka CSV uspješno je učitana, provjeravamo skupine koje ispunjavaju
+            kriterije. Ovo bi moglo potrajati.
         reject:
           invalid: Došlo je do problema pri odbijanju skupine.
           success: Skupina je uspješno odbijena
@@ -1012,7 +1085,10 @@ hr:
           verify_via_csv: Potvrdi putem CSV-a
       user_groups_csv_verifications:
         new:
-          explanation: Učitajte svoju datoteku CSV. Datoteka mora sadržavati službene adrese e-pošte skupina u vašem profilu organizacije u prvom stupcu datoteke, bez zaglavlja. Potvrdit će se samo one skupine koje su potvrdile svoju adresu e-pošte i koje imaju adresu e-pošte u datoteci CSV.
+          explanation: Učitajte svoju datoteku CSV. Datoteka mora sadržavati službene
+            adrese e-pošte skupina u vašem profilu organizacije u prvom stupcu datoteke,
+            bez zaglavlja. Potvrdit će se samo one skupine koje su potvrdile svoju
+            adresu e-pošte i koje imaju adresu e-pošte u datoteci CSV.
           title: Učitajte svoju datoteku CSV
           upload: Učitaj
       users:

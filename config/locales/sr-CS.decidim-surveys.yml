@@ -1,5 +1,5 @@
 ---
-hr:
+sr-CS:
   activemodel:
     models:
       decidim/surveys/closed_survey_event: Anketa je završena
@@ -8,9 +8,11 @@ hr:
     models:
       decidim/surveys/survey:
         one: Pregled
+        few: Ankete
         other: Ankete
       decidim/surveys/survey_answer:
         one: Odgovor
+        few: Odgovori
         other: Odgovori
   decidim:
     components:
@@ -30,21 +32,35 @@ hr:
             starts_at_help: Ostavite prazno ako nema određenog datuma
           step:
             allow_answers: Dopusti odgovore
-            allow_unregistered: Dopustite neregistriranim korisnicima da odgovore na anketu
-            allow_unregistered_help: Ako je aktivan, neće biti potrebna prijava za ispunjavanje ankete. To može dovesti do loših ili nepouzdanih podataka i bit će ranjiviji na automatizirane napade. Koristite s oprezom! Imajte na umu da bi sudionik mogao odgovoriti na istu anketu više puta, koristeći različite preglednike ili značajku "privatnog pregledavanja" svog web preglednika.
+            allow_unregistered: Dopustite neregistriranim korisnicima da odgovore
+              na anketu
+            allow_unregistered_help: Ako je aktivan, neće biti potrebna prijava za
+              ispunjavanje ankete. To može dovesti do loših ili nepouzdanih podataka
+              i bit će ranjiviji na automatizirane napade. Koristite s oprezom! Imajte
+              na umu da bi sudionik mogao odgovoriti na istu anketu više puta, koristeći
+              različite preglednike ili značajku "privatnog pregledavanja" svog web
+              preglednika.
             announcement: Obavijest
     events:
       surveys:
         survey_closed:
-          email_intro: Anketa %{resource_title} u %{participatory_space_title} je zatvorena.
-          email_outro: Primili ste ovu obavijest jer pratite %{participatory_space_title}. Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+          email_intro: Anketa %{resource_title} u %{participatory_space_title} je
+            zatvorena.
+          email_outro: Primili ste ovu obavijest jer pratite %{participatory_space_title}.
+            Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
           email_subject: Anketa je završena u %{participatory_space_title}
-          notification_title: Anketa <a href="%{resource_path}">%{resource_title}</a> u <a href="%{participatory_space_url}">%{participatory_space_title}</a> je završena.
+          notification_title: Anketa <a href="%{resource_path}">%{resource_title}</a>
+            u <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+            je završena.
         survey_opened:
-          email_intro: 'Anketa %{resource_title} u %{participatory_space_title} je sada otvorena. U njoj možete sudjelovati s ove stranice:'
-          email_outro: Primili ste ovu obavijest jer pratite %{participatory_space_title}. Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+          email_intro: 'Anketa %{resource_title} u %{participatory_space_title} je
+            sada otvorena. U njoj možete sudjelovati s ove stranice:'
+          email_outro: Primili ste ovu obavijest jer pratite %{participatory_space_title}.
+            Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
           email_subject: Nova anketa u %{participatory_space_title}
-          notification_title: Anketa <a href="%{resource_path}">%{resource_title}</a> u <a href="%{participatory_space_url}">%{participatory_space_title}</a> je sada otvorena.
+          notification_title: Anketa <a href="%{resource_path}">%{resource_title}</a>
+            u <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+            je sada otvorena.
     metrics:
       survey_answers:
         description: Broj anketa na koje su sudionici odgovorili
@@ -63,5 +79,6 @@ hr:
       surveys:
         answer:
           invalid: Došlo je do problema prilikom odgovaranja na anketu.
-          spam_detected: Došlo je do problema prilikom odgovaranja na obrazac. Možda ste bili prebrzi, možete li pokušati ponovno?
+          spam_detected: Došlo je do problema prilikom odgovaranja na obrazac. Možda
+            ste bili prebrzi, možete li pokušati ponovno?
           success: Uspješno odgovoreno na anketu.

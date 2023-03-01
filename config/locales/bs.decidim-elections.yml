@@ -1,5 +1,5 @@
 ---
-hr:
+bs:
   activemodel:
     attributes:
       answer:
@@ -56,38 +56,49 @@ hr:
             presided_polling_station:
               president_and_manager: Birač je već predsjednik/voditelj biračkog mjesta
             voting:
-              different_organization: Glasovanje mora biti u istoj organizaciji kao i korisnik
+              different_organization: Glasovanje mora biti u istoj organizaciji kao
+                i korisnik
         decidim/votings/polling_station:
           attributes:
             polling_station_president:
-              different_voting: Birački službenik mora biti na istom biračkom mjestu kao i biračko mjesto
+              different_voting: Birački službenik mora biti na istom biračkom mjestu
+                kao i biračko mjesto
     models:
       decidim/elections/answer:
         one: Odgovor
+        few: Odgovori
         other: Odgovori
       decidim/elections/election:
         one: Izbori
+        few: Izbori
         other: Izbori
       decidim/elections/question:
         one: Pitanje
+        few: Pitanja
         other: Pitanja
       decidim/voting:
         one: Glasovanje
+        few: Glasanja
         other: Glasanja
       decidim/votings/census/dataset:
         one: Skup podataka
+        few: Skupovi podataka
         other: Skupovi podataka
       decidim/votings/census/datum:
         one: Podatak
+        few: Podaci
         other: Podaci
       decidim/votings/polling_officer:
         one: Birački službenik
+        few: Birački službenici
         other: Birački službenici
       decidim/votings/polling_station:
         one: Biračko mjesto
+        few: Biračka mjesta
         other: Biračka mjesta
       decidim/votings/voting:
         one: Glasovanje
+        few: Glasanja
         other: Glasanja
   decidim:
     admin:
@@ -104,9 +115,11 @@ hr:
             president: predsjednik
             unassigned: Nedodijeljeno
         search_placeholder:
-          name_or_email_or_nickname_or_presided_station_title_or_managed_station_title_cont: Tražite %{collection} po imenu/e-mailu/nadimku ili biračkom mjestu.
+          name_or_email_or_nickname_or_presided_station_title_or_managed_station_title_cont: Tražite
+            %{collection} po imenu/e-mailu/nadimku ili biračkom mjestu.
           ? title_or_address_or_manager_name_or_manager_email_or_manager_nickname_or_president_name_or_president_email_or_president_nickname_cont
-          : Pretražite %{collection} prema tituli, adresi ili imenu/e-mailu/nadimku službenika.
+          : Pretražite %{collection} prema tituli, adresi ili imenu/e-mailu/nadimku
+            službenika.
         signed_eq:
           label: Potpisano
           values:
@@ -154,7 +167,8 @@ hr:
             title: Uredi odgovor
             update: Ažuriraj odgovor
           index:
-            invalid_max_selections: Potrebno vam je još %{missing_answers} odgovora za podudaranje s najvećim brojem odabira
+            invalid_max_selections: Potrebno vam je još %{missing_answers} odgovora
+              za podudaranje s najvećim brojem odabira
             title: Odgovori
           new:
             create: Stvori odgovor
@@ -183,7 +197,9 @@ hr:
             title: Uredite izbore
             update: Ažurirajte izbore
           index:
-            no_bulletin_board: Nije konfiguriran <a href="https://github.com/decidim/decidim-bulletin-board">poslužitelj oglasne ploče</a> koji je potreban za korištenje ovog modula. Ovaj bi zadatak trebao obaviti administrator sustava.
+            no_bulletin_board: Nije konfiguriran <a href="https://github.com/decidim/decidim-bulletin-board">poslužitelj
+              oglasne ploče</a> koji je potreban za korištenje ovog modula. Ovaj bi
+              zadatak trebao obaviti administrator sustava.
             title: Izbori
           new:
             create: Stvorite izbore
@@ -220,7 +236,8 @@ hr:
             success: "%{number} prijedloga uspješno je uvezeno u odgovore"
           new:
             create: Uvoz prijedloga odgovora
-            no_components: U ovom prostoru za sudjelovanje nema drugih komponenti prijedloga za uvoz prijedloga u odgovore.
+            no_components: U ovom prostoru za sudjelovanje nema drugih komponenti
+              prijedloga za uvoz prijedloga u odgovore.
             select_component: Odaberite komponentu
             title: Uvoz prijedloga
         questions:
@@ -250,12 +267,15 @@ hr:
               census_frozen: Pristupne šifre za popis se ne izvoze.
               census_uploaded: Za ove izbore nije učitan popis stanovništva.
               component_published: Izborna komponenta <strong>nije objavljena</strong>.
-              max_selections: Pitanja nemaju <strong>ispravnu vrijednost za količinu odgovora</strong>
+              max_selections: Pitanja nemaju <strong>ispravnu vrijednost za količinu
+                odgovora</strong>
               minimum_answers: Pitanja moraju imati <strong>barem dva odgovora</strong>.
               minimum_questions: Izbori <strong>moraju imati barem jedno pitanje</strong>.
               published: Izbori <strong>nisu objavljeni</strong>.
-              time_before: Vrijeme početka je za <strong>manje od %{hours} sati</strong> prije početka izbora.
-              trustees_number: Prostor za sudjelovanje <strong>mora imati najmanje %{number} povjerenika s javnim ključem</strong>.
+              time_before: Vrijeme početka je za <strong>manje od %{hours} sati</strong>
+                prije početka izbora.
+              trustees_number: Prostor za sudjelovanje <strong>mora imati najmanje
+                %{number} povjerenika s javnim ključem</strong>.
             invalid: Došlo je do problema s namještanjem ovih izbora
             no_trustees: Nema povjerenika konfiguriranih za ovaj participativni prostor
             not_used_trustee: "(ne koristi se)"
@@ -267,12 +287,15 @@ hr:
               census_frozen: Pristupne šifre za popis se izvoze i popis se zamrzava.
               census_uploaded: Popis stanovništva je učitan.
               component_published: Izborna komponenta je <strong>objavljena</strong>.
-              max_selections: Sva pitanja imaju točnu vrijednost za <strong>maksimalni broj odgovora</strong>.
+              max_selections: Sva pitanja imaju točnu vrijednost za <strong>maksimalni
+                broj odgovora</strong>.
               minimum_answers: Svako pitanje ima <strong>najmanje 2 odgovora</strong>.
               minimum_questions: Izbori imaju <strong>barem 1 pitanje</strong>.
               published: Izbori su <strong>objavljeni</strong>.
-              time_before: Postavljanje se provodi <strong>najmanje %{hours} sati</strong> prije početka izbora.
-              trustees_number: Prostor za sudjelovanje ima <strong>najmanje %{number} povjerenika s javnim ključem</strong>.
+              time_before: Postavljanje se provodi <strong>najmanje %{hours} sati</strong>
+                prije početka izbora.
+              trustees_number: Prostor za sudjelovanje ima <strong>najmanje %{number}
+                povjerenika s javnim ključem</strong>.
             submit: Postavljanje izbora
             success: Izbor je uspješno poslan na oglasnu ploču
             title: Postavljanje izbora
@@ -280,7 +303,8 @@ hr:
           created:
             invalid: Došlo je do problema prilikom pokretanja ceremonije dodjele ključeva
             submit: Započnite ceremoniju dodjele ključeva
-            success: Zahtjev za ceremoniju ključa za početak uspješno je poslan na oglasnu ploču
+            success: Zahtjev za ceremoniju ključa za početak uspješno je poslan na
+              oglasnu ploču
             title: Izbor je stvoren
             trustees: Povjerenici
           key_ceremony:
@@ -288,12 +312,16 @@ hr:
             title: Svečanost ključa
           key_ceremony_ended:
             errors:
-              time_before: Izbori su spremni za početak. Morate pričekati do %{hours} sati prije vremena početka (%{start_time}) da biste započeli razdoblje glasovanja.
+              time_before: Izbori su spremni za početak. Morate pričekati do %{hours}
+                sati prije vremena početka (%{start_time}) da biste započeli razdoblje
+                glasovanja.
             invalid: Došlo je do problema s početkom razdoblja glasovanja
             requirements:
-              time_before: Uskoro počinju izbori. Razdoblje glasovanja možete započeti ručno ili će se pokrenuti automatski prije vremena početka, u %{start_time}.
+              time_before: Uskoro počinju izbori. Razdoblje glasovanja možete započeti
+                ručno ili će se pokrenuti automatski prije vremena početka, u %{start_time}.
             submit: Početak razdoblja glasovanja
-            success: Zahtjev za početak razdoblja glasovanja uspješno je poslan na oglasnu ploču
+            success: Zahtjev za početak razdoblja glasovanja uspješno je poslan na
+              oglasnu ploču
             title: Spreman za početak
           processing: Obrada...
           results_published:
@@ -317,19 +345,29 @@ hr:
             continue: Nastaviti
             invalid: Došlo je do problema s prijavom nestalog povjerenika
             mark_as_missing: Označi kao nestalo
-            mark_as_missing_description: U ovom procesu trebaju sudjelovati svi povjerenici, ali ako povjerenik ne može sudjelovati u procesu, možete ga označiti kao nestalog.
-            success: Izvješće stečajnog upravitelja koje nedostaje uspješno je poslano na oglasnu ploču
-            tally_completion: Proces će biti dovršen kada svi povjerenici budu aktivni ili označeni kao nedostajući. Za dovršetak procesa potrebno je najmanje %{quorum} povjerenika.
+            mark_as_missing_description: U ovom procesu trebaju sudjelovati svi povjerenici,
+              ali ako povjerenik ne može sudjelovati u procesu, možete ga označiti
+              kao nestalog.
+            success: Izvješće stečajnog upravitelja koje nedostaje uspješno je poslano
+              na oglasnu ploču
+            tally_completion: Proces će biti dovršen kada svi povjerenici budu aktivni
+              ili označeni kao nedostajući. Za dovršetak procesa potrebno je najmanje
+              %{quorum} povjerenika.
             title: Proces zbrajanja
-            undo_mark_as_missing: Povjerenik koji je greškom označen kao nestao moći će sudjelovati prije završetka procesa. Mogu nastaviti kao i obično, a znak koji nedostaje bit će zanemaren.
+            undo_mark_as_missing: Povjerenik koji je greškom označen kao nestao moći
+              će sudjelovati prije završetka procesa. Mogu nastaviti kao i obično,
+              a znak koji nedostaje bit će zanemaren.
           vote:
             errors:
-              time_after: Izbori još uvijek traju. Morate pričekati vrijeme završetka (%{end_time}) da završite razdoblje glasovanja.
+              time_after: Izbori još uvijek traju. Morate pričekati vrijeme završetka
+                (%{end_time}) da završite razdoblje glasovanja.
             invalid: Došlo je do problema pri završetku razdoblja glasovanja
             requirements:
-              time_after: Izbori su završili. Razdoblje glasovanja možete završiti ručno ili će ono biti završeno automatski za nekoliko minuta.
+              time_after: Izbori su završili. Razdoblje glasovanja možete završiti
+                ručno ili će ono biti završeno automatski za nekoliko minuta.
             submit: Kraj razdoblja glasovanja
-            success: Zahtjev za završetak razdoblja glasovanja uspješno je poslan na oglasnu ploču
+            success: Zahtjev za završetak razdoblja glasovanja uspješno je poslan
+              na oglasnu ploču
             title: Razdoblje glasovanja
           vote_ended:
             invalid: Došlo je do problema s pokretanjem zbrajanja
@@ -367,14 +405,22 @@ hr:
         election:
           create: "%{user_name} je kreirao izbor %{resource_name} od %{space_name}"
           delete: "%{user_name} je izbrisao izbor %{resource_name} od %{space_name}"
-          end_vote: "%{user_name} je završio period glasovanja za izbor %{resource_name} od %{space_name} na oglasnoj ploči"
+          end_vote: "%{user_name} je završio period glasovanja za izbor %{resource_name}
+            od %{space_name} na oglasnoj ploči"
           publish: "%{user_name} je objavio izbore %{resource_name} od %{space_name}"
-          publish_results: "%{user_name} objavio rezultate izbora %{resource_name} od %{space_name} na Oglasnoj ploči"
-          report_missing_trustee: "%{user_name} prijavio je %{trustee_name} kao nestalog povjerenika tijekom zbrajanja za izbor %{resource_name} od %{space_name} na oglasnoj ploči"
-          setup: "%{user_name} je kreirao izbor %{resource_name} od %{space_name} na oglasnoj ploči"
-          start_key_ceremony: "%{user_name} je započeo ključnu ceremoniju za izbor %{resource_name} od %{space_name} na oglasnoj ploči"
-          start_tally: "%{user_name} je započeo zbrajanje za izbore %{resource_name} od %{space_name} na oglasnoj ploči"
-          start_vote: "%{user_name} započeo je period glasovanja za izbore %{resource_name} od %{space_name} na Oglasnoj ploči"
+          publish_results: "%{user_name} objavio rezultate izbora %{resource_name}
+            od %{space_name} na Oglasnoj ploči"
+          report_missing_trustee: "%{user_name} prijavio je %{trustee_name} kao nestalog
+            povjerenika tijekom zbrajanja za izbor %{resource_name} od %{space_name}
+            na oglasnoj ploči"
+          setup: "%{user_name} je kreirao izbor %{resource_name} od %{space_name}
+            na oglasnoj ploči"
+          start_key_ceremony: "%{user_name} je započeo ključnu ceremoniju za izbor
+            %{resource_name} od %{space_name} na oglasnoj ploči"
+          start_tally: "%{user_name} je započeo zbrajanje za izbore %{resource_name}
+            od %{space_name} na oglasnoj ploči"
+          start_vote: "%{user_name} započeo je period glasovanja za izbore %{resource_name}
+            od %{space_name} na Oglasnoj ploči"
           unpublish: "%{user_name} poništio je objavu izbora %{resource_name} od %{space_name}"
           update: "%{user_name} je ažurirao izbore %{resource_name} od %{space_name}"
         trustee:
@@ -383,8 +429,13 @@ hr:
         failed:
           modal:
             close: Zatvoriti
-            communication_lost: Nažalost, izgleda da je komunikacija s poslužiteljem za glasanje (Oglasna ploča) izgubljena.<br>Možda je internetska veza prekinuta ili da je odredišni poslužitelj prezauzet.<br>Možete pokušati ponovo kasnije ili kontaktirati podršku ako ovaj problem potraje.
-            generic_error: Nažalost, došlo je do nepoznate pogreške. Vjerojatno je da vaš preglednik nije podržan ili da koristite "inkognito" ili "privatni" način rada koji nije podržan.
+            communication_lost: Nažalost, izgleda da je komunikacija s poslužiteljem
+              za glasanje (Oglasna ploča) izgubljena.<br>Možda je internetska veza
+              prekinuta ili da je odredišni poslužitelj prezauzet.<br>Možete pokušati
+              ponovo kasnije ili kontaktirati podršku ako ovaj problem potraje.
+            generic_error: Nažalost, došlo je do nepoznate pogreške. Vjerojatno je
+              da vaš preglednik nije podržan ili da koristite "inkognito" ili "privatni"
+              način rada koji nije podržan.
             title: Nešto je pošlo po zlu
       election_m:
         badge_name:
@@ -395,6 +446,7 @@ hr:
         footer:
           remaining_time:
             one: Preostalo <strong>%{count} sat %{minutes} minuta</strong> za glasanje.
+            few: Za glasanje je preostalo <strong>%{count} sati %{minutes} minuta</strong>.
             other: Za glasanje je preostalo <strong>%{count} sati %{minutes} minuta</strong>.
             zero: Preostalo <strong>%{minutes} minuta</strong> za glasanje.
           view: Pogled
@@ -408,6 +460,7 @@ hr:
         count:
           elections_count:
             one: "%{count} izbori"
+            few: "%{count} izbori"
             other: "%{count} izbori"
         election_log:
           chained_hash: Ulančani hash ove poruke
@@ -416,10 +469,13 @@ hr:
             complete: Izbor je kreiran i uspješno postavljen na oglasnoj ploči.
             not_created: Izbor još nije kreiran.
           creation_title: Izbor je stvoren
-          description: Ovo je izborni dnevnik u kojem možete provjeriti status svakog koraka, npr. kada su izbori kreirani, ako je proces zbrajanja završen i kada su izbori zatvoreni.
+          description: Ovo je izborni dnevnik u kojem možete provjeriti status svakog
+            koraka, npr. kada su izbori kreirani, ako je proces zbrajanja završen
+            i kada su izbori zatvoreni.
           download: preuzimanje datoteka
           key_ceremony_description:
-            complete: Ceremonija dodjele ključa je završena. Svaki povjerenik ima važeće ključeve i preuzeo je potrebne rezervne ključeve.
+            complete: Ceremonija dodjele ključa je završena. Svaki povjerenik ima
+              važeće ključeve i preuzeo je potrebne rezervne ključeve.
             not_started: Svečanost dodjele ključeva još nije počela.
             started: Ceremonija dodjele ključeva je započela, ali još nije dovršena.
           key_ceremony_title: Ceremonija dodjele ključeva
@@ -443,9 +499,16 @@ hr:
           verifiable_results:
             checksum: 'Datoteka SHA256 kontrolni zbroj:'
             description:
-              not_ready: Izborna datoteka koja se može provjeriti i kontrolni zbroj SHA256 još nisu dostupni. Čim rezultati budu objavljeni, moći ćete provjeriti ove izbore.
-              ready: 'Ovdje imate mogućnost ovjere izbora. Najprije morate preuzeti datoteku i provjeriti je li oštećena. Da biste to učinili, pokrenite sljedeću naredbu i provjerite odgovara li izlaz kontrolnom zbroju:'
-            how_to_verify: 'Nakon što preuzmete datoteku i uvjerite se da je u redu, možete nastaviti s pokretanjem univerzalnog verifikatora. Klonirajte <a href=''https://github.com/decidim/decidim-bulletin-board''>ovo spremište</a> i iz korijenske mape pokrenite sljedeću naredbu:'
+              not_ready: Izborna datoteka koja se može provjeriti i kontrolni zbroj
+                SHA256 još nisu dostupni. Čim rezultati budu objavljeni, moći ćete
+                provjeriti ove izbore.
+              ready: 'Ovdje imate mogućnost ovjere izbora. Najprije morate preuzeti
+                datoteku i provjeriti je li oštećena. Da biste to učinili, pokrenite
+                sljedeću naredbu i provjerite odgovara li izlaz kontrolnom zbroju:'
+            how_to_verify: 'Nakon što preuzmete datoteku i uvjerite se da je u redu,
+              možete nastaviti s pokretanjem univerzalnog verifikatora. Klonirajte
+              <a href=''https://github.com/decidim/decidim-bulletin-board''>ovo spremište</a>
+              i iz korijenske mape pokrenite sljedeću naredbu:'
             title: Potvrdite rezultate izbora
             verifiable_file: 'Izborni dosje koji se može provjeriti:'
           verify: Potvrdite izbore
@@ -477,6 +540,7 @@ hr:
           title: Rezultati izbora
           votes:
             one: "%{count} glasova"
+            few: "%{count} glasova"
             other: "%{count} glasova"
             zero: "%{count} glasova"
         show:
@@ -486,9 +550,11 @@ hr:
             vote_again: Glasajte ponovo
           back: Dostupni izbori
           callout:
-            already_voted: Već ste glasali na ovim izborima. Možete promijeniti svoj glas ili ga potvrditi.
+            already_voted: Već ste glasali na ovim izborima. Možete promijeniti svoj
+              glas ili ga potvrditi.
             pending_vote: Vaš glas se daje na serveru.
-            vote_rejected: Nije bilo moguće provjeriti vaš glas. Molim vas, bacite ga ponovno.
+            vote_rejected: Nije bilo moguće provjeriti vaš glas. Molim vas, bacite
+              ga ponovno.
           election_log: Izborni dnevnik
           preview: Pregled
           verify:
@@ -502,7 +568,8 @@ hr:
       feedback:
         answer:
           invalid: Došlo je do problema prilikom slanja vaših povratnih informacija.
-          spam_detected: Došlo je do problema prilikom odgovaranja na obrazac. Možda ste bili prebrzi, možete li pokušati ponovno?
+          spam_detected: Došlo je do problema prilikom odgovaranja na obrazac. Možda
+            ste bili prebrzi, možete li pokušati ponovno?
           success: Povratne informacije uspješno poslane.
       models:
         answer:
@@ -540,13 +607,16 @@ hr:
       trustee_zone:
         elections:
           backup_modal:
-            description: Ovaj izbor se kreira na Oglasnoj ploči. Vrlo je važno da svaki Povjerenik koji u tome sudjeluje napravi sigurnosnu kopiju ovih ključeva i pohrani ih na sigurno mjesto. Nakon toga se proces nastavlja.
+            description: Ovaj izbor se kreira na Oglasnoj ploči. Vrlo je važno da
+              svaki Povjerenik koji u tome sudjeluje napravi sigurnosnu kopiju ovih
+              ključeva i pohrani ih na sigurno mjesto. Nakon toga se proces nastavlja.
             download_election_keys: Preuzmite ključeve
             download_icon: Ikona koja označava radnju preuzimanja
             title: Rezervni izborni ključevi za %{election}
           key_ceremony_steps:
             back: Povratak
-            description: Ovaj izbor se kreira na Oglasnoj ploči. Da biste dovršili ovaj proces, potrebno je vaše sudjelovanje kao povjerenika.
+            description: Ovaj izbor se kreira na Oglasnoj ploči. Da biste dovršili
+              ovaj proces, potrebno je vaše sudjelovanje kao povjerenika.
             keys:
               create_election: Generiranje ključeva
               key_ceremony:
@@ -555,22 +625,28 @@ hr:
             list:
               status: Status
               task: Zadatak
-            process_warning: Nakon što je proces pokrenut, ne biste trebali napustiti ovu stranicu dok proces ne završi. Trajat će nekoliko minuta jer bi svi povjerenici trebali biti povezani da bi se to dovršilo.
+            process_warning: Nakon što je proces pokrenut, ne biste trebali napustiti
+              ovu stranicu dok proces ne završi. Trajat će nekoliko minuta jer bi
+              svi povjerenici trebali biti povezani da bi se to dovršilo.
             start: Početak
-            start_icon: Ikona koja označava gumb za pokretanje za početak generiranja izbornih ključeva
+            start_icon: Ikona koja označava gumb za pokretanje za početak generiranja
+              izbornih ključeva
             status:
               completed: Završeno
               pending: U tijeku
               processing: Obrada
             title: Stvorite izborne ključeve za %{election}
           restore_modal:
-            description: Oglasna ploča ima informacije od vas kao povjerenika o ovim izborima. Da biste nastavili s postupkom, prvo prenesite datoteku sigurnosne kopije generiranu tijekom prethodne sesije.
+            description: Oglasna ploča ima informacije od vas kao povjerenika o ovim
+              izborima. Da biste nastavili s postupkom, prvo prenesite datoteku sigurnosne
+              kopije generiranu tijekom prethodne sesije.
             title: Vrati izborne ključeve za %{election}
             upload_election_keys: Prenesite izborne ključeve
             upload_icon: Ikona koja označava radnju preuzimanja
           tally_started_steps:
             back: Povratak
-            description: Rezultati za ove izbore se obračunavaju na Oglasnoj ploči. Da biste dovršili ovaj proces, potrebno je vaše sudjelovanje kao povjerenika.
+            description: Rezultati za ove izbore se obračunavaju na Oglasnoj ploči.
+              Da biste dovršili ovaj proces, potrebno je vaše sudjelovanje kao povjerenika.
             keys:
               end_tally: Prebrojavanje je završilo
               tally:
@@ -579,9 +655,12 @@ hr:
             list:
               status: Status
               task: Zadatak
-            process_warning: Nakon što je proces pokrenut, ne biste trebali napustiti ovu stranicu dok proces ne završi. Trajat će nekoliko minuta jer bi svi povjerenici trebali biti povezani da bi se to dovršilo.
+            process_warning: Nakon što je proces pokrenut, ne biste trebali napustiti
+              ovu stranicu dok proces ne završi. Trajat će nekoliko minuta jer bi
+              svi povjerenici trebali biti povezani da bi se to dovršilo.
             start: Početak
-            start_icon: Ikona koja označava gumb za pokretanje za početak generiranja izbornih ključeva
+            start_icon: Ikona koja označava gumb za pokretanje za početak generiranja
+              izbornih ključeva
             status:
               completed: Završeno
               pending: U tijeku
@@ -593,7 +672,8 @@ hr:
         menu:
           trustee_zone: Zona povjerenika
         no_bulletin_board:
-          body: Za ovaj odjeljak potrebna je konfigurirana oglasna ploča. Za više detalja obratite se Administratoru.
+          body: Za ovaj odjeljak potrebna je konfigurirana oglasna ploča. Za više
+            detalja obratite se Administratoru.
           title: Nažalost, oglasna ploča još nije konfigurirana.
         trustees:
           show:
@@ -611,25 +691,41 @@ hr:
             identification_keys:
               cancel: Otkazati
               generate: Generirajte identifikacijske ključeve
-              generate_error: Došlo je do pogreške prilikom generiranja identifikacijskih ključeva.
-              generate_legend: Morate generirati identifikacijski par ključeva da biste sudjelovali na izborima kao povjerenik.
-              generate_legend_1: Nakon pritiska na gumb trebate preuzeti datoteku s generiranim identifikacijskim ključevima.
+              generate_error: Došlo je do pogreške prilikom generiranja identifikacijskih
+                ključeva.
+              generate_legend: Morate generirati identifikacijski par ključeva da
+                biste sudjelovali na izborima kao povjerenik.
+              generate_legend_1: Nakon pritiska na gumb trebate preuzeti datoteku
+                s generiranim identifikacijskim ključevima.
               generate_legend_2: Kopirajte preuzetu datoteku na čisti USB uređaj
-              generate_legend_3: Uvjerite se da vaše računalo nema kopiju datoteke (npr. provjerite mape Downloads i Desktop).
-              generate_legend_4: Napravite drugu kopiju datoteke na drugom vanjskom uređaju i pohranite je na vrlo sigurno mjesto.
+              generate_legend_3: Uvjerite se da vaše računalo nema kopiju datoteke
+                (npr. provjerite mape Downloads i Desktop).
+              generate_legend_4: Napravite drugu kopiju datoteke na drugom vanjskom
+                uređaju i pohranite je na vrlo sigurno mjesto.
               submit: podnijeti
-              submit_legend: Nakon što slijedite sve gore objašnjene korake, dovršite postupak slanjem javnog identifikacijskog ključa na poslužitelj.
+              submit_legend: Nakon što slijedite sve gore objašnjene korake, dovršite
+                postupak slanjem javnog identifikacijskog ključa na poslužitelj.
               submit_title: Pošaljite javni identifikacijski ključ
               title: Ključevi za identifikaciju povjerenika
               upload: Učitajte svoje identifikacijske ključeve
               upload_error:
-                invalid_format: Učitana datoteka ne sadrži nikakav identifikacijski ključ.
-                invalid_key: Identifikacijski ključevi u učitanoj datoteci ne mogu se učitati.
-                invalid_public_key: Identifikacijski ključevi u učitanoj datoteci ne podudaraju se s pohranjenim javnim identifikacijskim ključem.
-              upload_legend: Poslužitelj ima vaše javne identifikacijske ključeve, ali vaš preglednik ih još uvijek nema. Morate uvesti datoteku sa svojim identifikacijskim ključevima na svoje računalo iz sigurnosne kopije koju ste izradili nakon što ste ih generirali.
-            not_supported_browser_description: Čini se da koristite web-preglednik koji se ne može koristiti kao povjerenik. Provjerite koristite li najnoviju verziju svog preglednika ili pokušajte koristiti bilo koji od najpopularnijih preglednika kako biste mogli dovršiti svoje zadatke Povjerenika.
+                invalid_format: Učitana datoteka ne sadrži nikakav identifikacijski
+                  ključ.
+                invalid_key: Identifikacijski ključevi u učitanoj datoteci ne mogu
+                  se učitati.
+                invalid_public_key: Identifikacijski ključevi u učitanoj datoteci
+                  ne podudaraju se s pohranjenim javnim identifikacijskim ključem.
+              upload_legend: Poslužitelj ima vaše javne identifikacijske ključeve,
+                ali vaš preglednik ih još uvijek nema. Morate uvesti datoteku sa svojim
+                identifikacijskim ključevima na svoje računalo iz sigurnosne kopije
+                koju ste izradili nakon što ste ih generirali.
+            not_supported_browser_description: Čini se da koristite web-preglednik
+              koji se ne može koristiti kao povjerenik. Provjerite koristite li najnoviju
+              verziju svog preglednika ili pokušajte koristiti bilo koji od najpopularnijih
+              preglednika kako biste mogli dovršiti svoje zadatke Povjerenika.
             not_supported_browser_title: Nadogradite preglednik da djelujete kao povjerenik
-            trustee_role_description: Dodijeljeno vam je da djelujete kao povjerenik na nekim od izbora koji se slave u ovoj platformi.
+            trustee_role_description: Dodijeljeno vam je da djelujete kao povjerenik
+              na nekim od izbora koji se slave u ovoj platformi.
           update:
             success: Vaš identifikacijski javni ključ je uspješno pohranjen.
       votes:
@@ -638,7 +734,11 @@ hr:
           back: Ponovno započnite postupak glasovanja
           ballot_hash: 'Vaš identifikator glasačkog listića je:'
           cast: Glasajte da završite svoj glas
-          description: Ovdje imate opcije da glasate tako da se ispravno prebroji ili, alternativno, možete provjeriti je li vaš glasački listić ispravno šifriran. Iz sigurnosnih razloga, revizija glasačkog listića će ga pokvariti. To znači da ćete morati ponovno pokrenuti proces glasovanja da biste dali svoj glas.
+          description: Ovdje imate opcije da glasate tako da se ispravno prebroji
+            ili, alternativno, možete provjeriti je li vaš glasački listić ispravno
+            šifriran. Iz sigurnosnih razloga, revizija glasačkog listića će ga pokvariti.
+            To znači da ćete morati ponovno pokrenuti proces glasovanja da biste dali
+            svoj glas.
           header: 'Glasački je listić šifriran: bacite ga ili provjerite'
         casting:
           header: Glasanje...
@@ -649,7 +749,8 @@ hr:
           confirm: Potvrdi
           edit: Uredi
           header: Potvrdite svoj glas
-          intro: Ovdje je sažetak glasovanja koje ćete dati. <br> Molimo potvrdite svoj glas ili uredite svoje odgovore.
+          intro: Ovdje je sažetak glasovanja koje ćete dati. <br> Molimo potvrdite
+            svoj glas ili uredite svoje odgovore.
           nota_option: Prazan
           question: Pitanje %{count}
         confirmed:
@@ -658,13 +759,16 @@ hr:
           feedback: Pošaljite nam povratne informacije
           header: Glasanje potvrđeno
           lead: Vaš glas je dan!
-          text: 'Možete provjeriti je li vaš glas uspješno dodan u glasačku kutiju sa sljedećim identifikatorom: <strong class="evote__poll-id">%{e_vote_poll_id}</strong>'
-          verify_link: Da biste to provjerili, kopirajte identifikator i zalijepite ga na <a href="%{link}">stranicu za potvrdu glasovanja</a>
+          text: 'Možete provjeriti je li vaš glas uspješno dodan u glasačku kutiju
+            sa sljedećim identifikatorom: <strong class="evote__poll-id">%{e_vote_poll_id}</strong>'
+          verify_link: Da biste to provjerili, kopirajte identifikator i zalijepite
+            ga na <a href="%{link}">stranicu za potvrdu glasovanja</a>
         create:
           error: Došlo je do problema prilikom glasanja. Molim te pokušaj ponovno.
         encrypting:
           header: Šifriranje glasovanja...
-          text: Vaš glasački listić je šifriran kako bi se osigurala tajnost vašeg glasa.
+          text: Vaš glasački listić je šifriran kako bi se osigurala tajnost vašeg
+            glasa.
         failed:
           header: Glasovanje nije uspjelo
           lead: Vaš glas nije dat!
@@ -678,7 +782,8 @@ hr:
           encrypting: Šifriranje glasova
           failed: Glasovanje nije uspjelo
         messages:
-          invalid_token: Vaša sesija u glasačkoj kabini nije važeća. Pokušajte ponovo glasati.
+          invalid_token: Vaša sesija u glasačkoj kabini nije važeća. Pokušajte ponovo
+            glasati.
           not_allowed: Trenutno vam nije dopušteno glasati na ovim izborima.
         modal:
           close: Zatvoriti
@@ -693,23 +798,28 @@ hr:
         onboarding_modal:
           close: Zatvori modal
           create_account: Napravi račun
-          description: Želite li otvoriti novi račun na platformi? Moći ćete sudjelovati u procesima i biti aktivan dio organizacije.
+          description: Želite li otvoriti novi račun na platformi? Moći ćete sudjelovati
+            u procesima i biti aktivan dio organizacije.
           no_account: Ne hvala.
           title: Novi ste na platformi?
         update:
-          error: Došlo je do problema prilikom ažuriranja statusa glasovanja. Molim vas, glasajte ponovno.
+          error: Došlo je do problema prilikom ažuriranja statusa glasovanja. Molim
+            vas, glasajte ponovno.
         verify:
           content:
             heading: Potvrdite svoj glas
-            info: Ovaj verifikator provjerava je li vaš glas, identificiran šifriranim tekstualnim nizom, ispravno oddan i nalazi li se u glasačkoj kutiji.
+            info: Ovaj verifikator provjerava je li vaš glas, identificiran šifriranim
+              tekstualnim nizom, ispravno oddan i nalazi li se u glasačkoj kutiji.
           error:
             header: Glas nije pronađen!
-            info: Glasački kod nije pronađen u glasačkoj kutiji %{link}, pokušajte ponovno.
+            info: Glasački kod nije pronađen u glasačkoj kutiji %{link}, pokušajte
+              ponovno.
           form:
             back: Natrag na platformu
             submit: Ček
             vote_identifier: 'Identifikacijski kod:'
-            vote_identifier_help: Ovo je identifikator koji ste dobili nakon što ste dali svoj glas (ne šifra za ulazak u glasačku kabinu).
+            vote_identifier_help: Ovo je identifikator koji ste dobili nakon što ste
+              dali svoj glas (ne šifra za ulazak u glasačku kabinu).
           header:
             title: Potvrdite svoj glas
           success:
@@ -719,47 +829,84 @@ hr:
           back: Povratak
           continue: Sljedeći
       warnings:
-        no_elections_warning: Nema izbora koji odgovaraju kriterijima pretraživanja ili nema zakazanih izbora.
-        no_scheduled_elections_warning: Trenutno nema zakazanih izbora, ali ovdje možete pronaći popis svih prošlih izbora.
+        no_elections_warning: Nema izbora koji odgovaraju kriterijima pretraživanja
+          ili nema zakazanih izbora.
+        no_scheduled_elections_warning: Trenutno nema zakazanih izbora, ali ovdje
+          možete pronaći popis svih prošlih izbora.
     events:
       elections:
         election_published:
-          email_intro: 'Izbori %{resource_title} sada su aktivni za %{participatory_space_title}. Možete ga vidjeti na ovoj stranici:'
-          email_outro: Primili ste ovu obavijest jer pratite %{participatory_space_title}. Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
+          email_intro: 'Izbori %{resource_title} sada su aktivni za %{participatory_space_title}.
+            Možete ga vidjeti na ovoj stranici:'
+          email_outro: Primili ste ovu obavijest jer pratite %{participatory_space_title}.
+            Možete prestati primati obavijesti slijedeći prethodnu poveznicu.
           email_subject: Izbori %{resource_title} sada su aktivni za %{participatory_space_title}.
-          notification_title: Izbori <a href="%{resource_path}">%{resource_title}</a> sada su aktivni za %{participatory_space_title}.
+          notification_title: Izbori <a href="%{resource_path}">%{resource_title}</a>
+            sada su aktivni za %{participatory_space_title}.
         trustees:
           new_election:
             email_intro: Dodani ste kao povjerenik za %{resource_title} izbore.
-            email_outro: Primili ste ovu obavijest jer ste dodani kao povjerenik za %{resource_title} izbore.
+            email_outro: Primili ste ovu obavijest jer ste dodani kao povjerenik za
+              %{resource_title} izbore.
             email_subject: Vi ste povjerenik za %{resource_title} izbore..
-            notification_title: Vi ste povjerenik za <a href="%{resource_path}">%{resource_title}</a> izbor.
+            notification_title: Vi ste povjerenik za <a href="%{resource_path}">%{resource_title}</a>
+              izbor.
           new_trustee:
-            email_intro: Administrator vas je dodao kao povjerenika za %{resource_name}. Trebali biste izraditi svoj javni ključ <a href='%{trustee_zone_url}'>u svojoj zoni povjerenika</a>
-            email_outro: Primili ste ovu obavijest jer ste dodani kao povjerenik za %{resource_name}.
+            email_intro: Administrator vas je dodao kao povjerenika za %{resource_name}.
+              Trebali biste izraditi svoj javni ključ <a href='%{trustee_zone_url}'>u
+              svojoj zoni povjerenika</a>
+            email_outro: Primili ste ovu obavijest jer ste dodani kao povjerenik za
+              %{resource_name}.
             email_subject: Vi ste povjerenik za %{resource_name}.
             notification_title: Vi ste povjerenik za <a href="%{participatory_space_url}">%{resource_name}</a>.
         votes:
           accepted_votes:
-            email_intro: 'Vaš glas je prihvaćen! Koristeći svoj glasački token: %{encrypted_vote_hash}, možete potvrditi svoj glas <a href="%{verify_url}">ovdje</a>.'
-            email_outro: Primili ste ovu obavijest jer ste glasali za %{resource_name} izbore.
+            email_intro: 'Vaš glas je prihvaćen! Koristeći svoj glasački token: %{encrypted_vote_hash},
+              možete potvrditi svoj glas <a href="%{verify_url}">ovdje</a>.'
+            email_outro: Primili ste ovu obavijest jer ste glasali za %{resource_name}
+              izbore.
             email_subject: Vaš glas za %{resource_name} je prihvaćen.
-            notification_title: 'Vaš glas je prihvaćen. Potvrdite svoj glas <a href="%{verify_url}">ovdje</a> pomoću svog glasačkog tokena: %{encrypted_vote_hash}'
+            notification_title: 'Vaš glas je prihvaćen. Potvrdite svoj glas <a href="%{verify_url}">ovdje</a>
+              pomoću svog glasačkog tokena: %{encrypted_vote_hash}'
       votings:
         polling_officers:
           polling_station_assigned:
-            email_intro: Dodijeljeni ste kao %{role} biračkog mjesta %{polling_station_name} u <a href="%{resource_url}">%{resource_title}</a>. Biračkim mjestom možete upravljati iz namjenske <a href="%{polling_officer_zone_url}">zone biračkog službenika</a>.
-            email_outro: Primili ste ovu obavijest jer ste dodijeljeni kao %{role} od %{polling_station_name}.
+            email_intro: Dodijeljeni ste kao %{role} biračkog mjesta %{polling_station_name}
+              u <a href="%{resource_url}">%{resource_title}</a>. Biračkim mjestom
+              možete upravljati iz namjenske <a href="%{polling_officer_zone_url}">zone
+              biračkog službenika</a>.
+            email_outro: Primili ste ovu obavijest jer ste dodijeljeni kao %{role}
+              od %{polling_station_name}.
             email_subject: Vi ste %{role} na biračkom mjestu %{polling_station_name}.
-            notification_title: Vi ste %{role} na biračkom mjestu %{polling_station_name} u glasovanju <a href="%{resource_path}">%{resource_title}</a>.
+            notification_title: Vi ste %{role} na biračkom mjestu %{polling_station_name}
+              u glasovanju <a href="%{resource_path}">%{resource_title}</a>.
         send_access_code:
-          instruction: 'Ovo je vaš pristupni kod koji ste tražili: %{access_code}. S ovim ćete moći sudjelovati u %{voting}.'
+          instruction: 'Ovo je vaš pristupni kod koji ste tražili: %{access_code}.
+            S ovim ćete moći sudjelovati u %{voting}.'
           subject: Vaš pristupni kod za sudjelovanje u %{voting}
     help:
       participatory_spaces:
         votings:
-          contextual: "<p><strong>Glasovanje</strong> je prostor koji vam omogućuje da postavite jasno pitanje svim ljudima koji čine organizaciju, uputite poziv za sudjelovanje u glasovanju, potaknete i naručite debatu za ili protiv odgovor. Kada dođe datum glasovanja, možete glasati i objaviti rezultate glasovanja.</p> <p>Primjeri: glasovanje se može odnositi na gotovo bilo koji aspekt koji utječe na organizaciju: neki primjeri su promjena imena ili logotipa organizacije nuđenje nekoliko alternativa, odlučivanje Da ili Ne da postane dio veće organizacije, potvrđivanje ili odbijanje novog strateškog plana ili rezultata radne skupine, ili definiranje trebaju li pozicije ostati najviše 1, 2 ili 3 mandata.</ p>\n"
-          page: "<p><strong>Glasovanje</strong> je prostor koji vam omogućuje da postavite jasno pitanje svim ljudima koji čine organizaciju, uputite poziv za sudjelovanje u glasovanju, potaknete i naručite debatu za ili protiv odgovor. Kada dođe datum glasovanja, možete glasati i objaviti rezultate glasovanja.</p> <p>Primjeri: glasovanje se može odnositi na gotovo bilo koji aspekt koji utječe na organizaciju: neki primjeri su promjena imena ili logotipa organizacije nuđenje nekoliko alternativa, odlučivanje Da ili Ne da postane dio veće organizacije, potvrđivanje ili odbijanje novog strateškog plana ili rezultata radne skupine, ili definiranje trebaju li pozicije ostati najviše 1, 2 ili 3 mandata.</ p>\n"
+          contextual: "<p><strong>Glasovanje</strong> je prostor koji vam omogućuje
+            da postavite jasno pitanje svim ljudima koji čine organizaciju, uputite
+            poziv za sudjelovanje u glasovanju, potaknete i naručite debatu za ili
+            protiv odgovor. Kada dođe datum glasovanja, možete glasati i objaviti
+            rezultate glasovanja.</p> <p>Primjeri: glasovanje se može odnositi na
+            gotovo bilo koji aspekt koji utječe na organizaciju: neki primjeri su
+            promjena imena ili logotipa organizacije nuđenje nekoliko alternativa,
+            odlučivanje Da ili Ne da postane dio veće organizacije, potvrđivanje ili
+            odbijanje novog strateškog plana ili rezultata radne skupine, ili definiranje
+            trebaju li pozicije ostati najviše 1, 2 ili 3 mandata.</ p>\n"
+          page: "<p><strong>Glasovanje</strong> je prostor koji vam omogućuje da postavite
+            jasno pitanje svim ljudima koji čine organizaciju, uputite poziv za sudjelovanje
+            u glasovanju, potaknete i naručite debatu za ili protiv odgovor. Kada
+            dođe datum glasovanja, možete glasati i objaviti rezultate glasovanja.</p>
+            <p>Primjeri: glasovanje se može odnositi na gotovo bilo koji aspekt koji
+            utječe na organizaciju: neki primjeri su promjena imena ili logotipa organizacije
+            nuđenje nekoliko alternativa, odlučivanje Da ili Ne da postane dio veće
+            organizacije, potvrđivanje ili odbijanje novog strateškog plana ili rezultata
+            radne skupine, ili definiranje trebaju li pozicije ostati najviše 1, 2
+            ili 3 mandata.</ p>\n"
           title: Što su glasovanja?
     menu:
       votings: Glasanja
@@ -779,10 +926,13 @@ hr:
             title: Uredite stil glasovanja
             update: Ažuriraj
           form:
-            code_help: 'Savjet: šifra je poveznica između popisa i stila glasovanja. Prilikom učitavanja popisnih podataka, svakom unosu će biti dodijeljen stil glasačkog listića podudaranjem koda'
+            code_help: 'Savjet: šifra je poveznica između popisa i stila glasovanja.
+              Prilikom učitavanja popisnih podataka, svakom unosu će biti dodijeljen
+              stil glasačkog listića podudaranjem koda'
             election: Izbori
             questions: Pitanja za ovaj stil glasovanja
-            questions_help: 'Savjet: odaberite pitanja iz sastavnica izbora koja će se predstaviti biračima koji su dodijeljeni ovom stilu glasovanja'
+            questions_help: 'Savjet: odaberite pitanja iz sastavnica izbora koja će
+              se predstaviti biračima koji su dodijeljeni ovom stilu glasovanja'
           index:
             actions:
               confirm_destroy: Jesi li siguran?
@@ -791,7 +941,13 @@ hr:
               new: Novi
               title: Radnje
             associated_census_data: Povezani popisni unosi
-            explanation_callout: Stil glasačkog listića određuje koja će se pitanja biraču postaviti u kabini. U stilu glasovanja možete odabrati koja pitanja iz izbornih komponenti ovog glasovanja pripadaju glasačkom listiću. Kôd stila glasačkog listića koristi se za uparivanje glasača iz popisa stanovništva s glasačkim listićem koji će biti predstavljen u kabini. Nemojte stvarati nikakav stil glasovanja ako uvijek želite predstaviti sva pitanja.
+            explanation_callout: Stil glasačkog listića određuje koja će se pitanja
+              biraču postaviti u kabini. U stilu glasovanja možete odabrati koja pitanja
+              iz izbornih komponenti ovog glasovanja pripadaju glasačkom listiću.
+              Kôd stila glasačkog listića koristi se za uparivanje glasača iz popisa
+              stanovništva s glasačkim listićem koji će biti predstavljen u kabini.
+              Nemojte stvarati nikakav stil glasovanja ako uvijek želite predstaviti
+              sva pitanja.
             title: Stilovi glasačkih listića
           new:
             create: Stvoriti
@@ -907,11 +1063,13 @@ hr:
             publishing: Objavljivanje rezultata...
           update:
             invalid: Došlo je do problema s objavljivanjem rezultata
-            rejected: Objavu rezultata odbila je Oglasna ploča. Pokušajte ponovo ili kontaktirajte administratora sustava.
+            rejected: Objavu rezultata odbila je Oglasna ploča. Pokušajte ponovo ili
+              kontaktirajte administratora sustava.
             success: Rezultati su uspješno objavljeni
         monitoring_committee_members:
           create:
-            invalid: Došlo je do problema prilikom kreiranja ovog člana nadzornog odbora
+            invalid: Došlo je do problema prilikom kreiranja ovog člana nadzornog
+              odbora
             success: Član odbora za praćenje uspješno je kreiran
           destroy:
             invalid: Došlo je do problema prilikom brisanja ovog člana odbora za praćenje
@@ -952,9 +1110,16 @@ hr:
         monitoring_committee_verify_elections:
           index:
             download: preuzimanje datoteka
-            how_to_checksum: 'Kako biste bili sigurni da datoteka koju ste preuzeli nije oštećena ili neovlašteno mijenjana tijekom procesa preuzimanja, pokrenite sljedeću naredbu na svojoj konzoli i provjerite odgovara li izlaz gore navedenom kontrolnom zbroju:'
-            how_to_download: Da biste potvrdili izbore, preuzmite njihovu provjerljivu datoteku iz gornje tablice.
-            how_to_run_verifier: 'Nakon što preuzmete datoteku i uvjerite se da je u redu, možete nastaviti s pokretanjem univerzalnog verifikatora. Klonirajte <a href=''https://github.com/decidim/decidim-bulletin-board''>ovo spremište</a> i iz korijenske mape pokrenite sljedeću naredbu:'
+            how_to_checksum: 'Kako biste bili sigurni da datoteka koju ste preuzeli
+              nije oštećena ili neovlašteno mijenjana tijekom procesa preuzimanja,
+              pokrenite sljedeću naredbu na svojoj konzoli i provjerite odgovara li
+              izlaz gore navedenom kontrolnom zbroju:'
+            how_to_download: Da biste potvrdili izbore, preuzmite njihovu provjerljivu
+              datoteku iz gornje tablice.
+            how_to_run_verifier: 'Nakon što preuzmete datoteku i uvjerite se da je
+              u redu, možete nastaviti s pokretanjem univerzalnog verifikatora. Klonirajte
+              <a href=''https://github.com/decidim/decidim-bulletin-board''>ovo spremište</a>
+              i iz korijenske mape pokrenite sljedeću naredbu:'
             how_to_title: Kako provjeriti valjanost izbora
             not_available: Još nije dostupno
             title: Izbori
@@ -980,8 +1145,10 @@ hr:
           polling_officers_picker:
             choose_polling_officers: Odaberite biračke službenike
             close: Zatvoriti
-            more_polling_officers: Ima još %{number} birača. Pročistite svoju pretragu kako biste ih locirali.
-            no_polling_officers: Niti jedan birač ne odgovara vašem kriteriju pretraživanja ili ne postoji niti jedan birač.
+            more_polling_officers: Ima još %{number} birača. Pročistite svoju pretragu
+              kako biste ih locirali.
+            no_polling_officers: Niti jedan birač ne odgovara vašem kriteriju pretraživanja
+              ili ne postoji niti jedan birač.
         polling_stations:
           create:
             invalid: Došlo je do problema prilikom kreiranja ovog biračkog mjesta
@@ -994,10 +1161,18 @@ hr:
             update: Ažurirajte biračko mjesto
           form:
             address_help: 'Adresa: koristi je Geocoder za pronalaženje lokacije'
-            location_help: 'Lokacija: poruka upućena biračima koja podrazumijeva točno mjesto biračkog mjesta'
-            location_hints_help: 'Savjeti za lokaciju: dodatne informacije. Primjer: kat zgrade u kojoj se nalazi biračko mjesto.'
-            polling_station_managers_help: 'Voditelji biračkih mjesta: službenici koji će djelovati kao voditelji biračkih mjesta. Provjerite jesu li službenici već kreirani u Biračkim službenicima i da nisu već dodijeljeni drugom biračkom mjestu'
-            polling_station_president_help: 'Birački službenik: službenik koji će obnašati dužnost predsjednika biračkog odbora. Provjerite je li službenik već kreiran u Biračkim službenicima i da nije već dodijeljen drugom biračkom mjestu'
+            location_help: 'Lokacija: poruka upućena biračima koja podrazumijeva točno
+              mjesto biračkog mjesta'
+            location_hints_help: 'Savjeti za lokaciju: dodatne informacije. Primjer:
+              kat zgrade u kojoj se nalazi biračko mjesto.'
+            polling_station_managers_help: 'Voditelji biračkih mjesta: službenici
+              koji će djelovati kao voditelji biračkih mjesta. Provjerite jesu li
+              službenici već kreirani u Biračkim službenicima i da nisu već dodijeljeni
+              drugom biračkom mjestu'
+            polling_station_president_help: 'Birački službenik: službenik koji će
+              obnašati dužnost predsjednika biračkog odbora. Provjerite je li službenik
+              već kreiran u Biračkim službenicima i da nije već dodijeljen drugom
+              biračkom mjestu'
             select_president: Izabrati birača za predsjednika biračkog odbora
           index:
             title: Biračka mjesta
@@ -1020,19 +1195,26 @@ hr:
             invalid: Došlo je do problema prilikom kreiranja ovog glasanja
             success: Glasanje je uspješno kreirano
           edit:
-            add_election_component: Nemate nijedan izbor konfiguriran za ovo glasovanje. Dodajte ga u odjeljak Komponente
-            assign_missing_officers: Postoje biračka mjesta bez predsjednika i/ili upravitelja. Dodijelite ih iz rubrike Biračka mjesta
+            add_election_component: Nemate nijedan izbor konfiguriran za ovo glasovanje.
+              Dodajte ga u odjeljak Komponente
+            assign_missing_officers: Postoje biračka mjesta bez predsjednika i/ili
+              upravitelja. Dodijelite ih iz rubrike Biračka mjesta
             update: Ažuriraj
           form:
             banner_image: Slika natpisa
             census_contact_information: Podaci za kontakt popisa
-            census_contact_information_help: Ove kontakt informacije su za sudionike koji žele prijaviti probleme s popisom. To može biti e-mail adresa, kontakt obrazac na drugom mjestu, anketa za posjetitelje itd.
+            census_contact_information_help: Ove kontakt informacije su za sudionike
+              koji žele prijaviti probleme s popisom. To može biti e-mail adresa,
+              kontakt obrazac na drugom mjestu, anketa za posjetitelje itd.
             introductory_image: Uvodna slika
             promoted: Unaprijeđen
             select_a_voting_type: Odaberite vrstu glasovanja
-            show_check_census_help: Treba li prikazati "Mogu li glasati?" link na izborniku javnih glasova
+            show_check_census_help: Treba li prikazati "Mogu li glasati?" link na
+              izborniku javnih glasova
             slug: Puž
-            slug_help: 'URL slagovi se koriste za generiranje URL-ova koji upućuju na ovo glasanje. Prihvaća samo slova, brojke i crtice i mora započeti slovom. Primjer: %{url}'
+            slug_help: 'URL slagovi se koriste za generiranje URL-ova koji upućuju
+              na ovo glasanje. Prihvaća samo slova, brojke i crtice i mora započeti
+              slovom. Primjer: %{url}'
             title: Naslov
             voting_type:
               hybrid: Hibrid
@@ -1051,23 +1233,33 @@ hr:
             success: Glasanje je uspješno ažurirano
       admin_log:
         ballot_style:
-          create: "%{user_name} stvorio je stil glasovanja s kodom %{ballot_style_code} u prostoru %{space_name}"
-          delete: "%{user_name} je izbrisao stil glasovanja s kodom %{ballot_style_code} u prostoru %{space_name}"
-          update: "%{user_name} je ažurirao stil glasačkog listića s kodom %{ballot_style_code} u prostoru %{space_name}"
+          create: "%{user_name} stvorio je stil glasovanja s kodom %{ballot_style_code}
+            u prostoru %{space_name}"
+          delete: "%{user_name} je izbrisao stil glasovanja s kodom %{ballot_style_code}
+            u prostoru %{space_name}"
+          update: "%{user_name} je ažurirao stil glasačkog listića s kodom %{ballot_style_code}
+            u prostoru %{space_name}"
         census:
           create: "%{user_name} je izradio cenzus za prostor %{space_name}"
           delete: "%{user_name} je izbrisao cenzus za prostor %{space_name}"
           update: "%{user_name} je ažurirao popis za prostor %{space_name}"
         monitoring_committee_member:
-          create: "%{user_name} je dodijelio korisnika %{monitoring_committee_member_user} kao člana nadzornog odbora u prostoru %{space_name}"
-          delete: "%{user_name} poništio je korisnika %{monitoring_committee_member_user} kao člana nadzornog odbora u prostoru %{space_name}"
+          create: "%{user_name} je dodijelio korisnika %{monitoring_committee_member_user}
+            kao člana nadzornog odbora u prostoru %{space_name}"
+          delete: "%{user_name} poništio je korisnika %{monitoring_committee_member_user}
+            kao člana nadzornog odbora u prostoru %{space_name}"
         polling_officer:
-          create: "%{user_name} odredio je korisnika %{polling_officer_user} za biračko mjesto u prostoru %{space_name}"
-          delete: "%{user_name} je poništio korisnika %{polling_officer_user} kao birača u prostoru %{space_name}"
+          create: "%{user_name} odredio je korisnika %{polling_officer_user} za biračko
+            mjesto u prostoru %{space_name}"
+          delete: "%{user_name} je poništio korisnika %{polling_officer_user} kao
+            birača u prostoru %{space_name}"
         polling_station:
-          create: "%{user_name} je kreirao biračko mjesto %{resource_name} u prostoru %{space_name}"
-          delete: "%{user_name} je izbrisao biračko mjesto %{resource_name} u prostoru %{space_name}"
-          update: "%{user_name} ažurira biračko mjesto %{resource_name} u prostoru %{space_name}"
+          create: "%{user_name} je kreirao biračko mjesto %{resource_name} u prostoru
+            %{space_name}"
+          delete: "%{user_name} je izbrisao biračko mjesto %{resource_name} u prostoru
+            %{space_name}"
+          update: "%{user_name} ažurira biračko mjesto %{resource_name} u prostoru
+            %{space_name}"
         voting:
           create: "%{user_name} je stvorio %{resource_name} glasovanje"
           publish: "%{user_name} je objavio glasovanje %{resource_name}"
@@ -1076,67 +1268,107 @@ hr:
         admin:
           census:
             create:
-              invalid: Došlo je do pogreške prilikom učitavanja popisa, pokušajte ponovno kasnije.
-              invalid_csv_header: CSV zaglavlja nedostaju ili nisu ispravna - pažljivo pročitajte upute
+              invalid: Došlo je do pogreške prilikom učitavanja popisa, pokušajte
+                ponovno kasnije.
+              invalid_csv_header: CSV zaglavlja nedostaju ili nisu ispravna - pažljivo
+                pročitajte upute
             creating_data:
-              info_message: "<strong>Pričekajte</strong>, obrađenih %{processed_count} od %{raw_count} redaka iz datoteke %{file} (ovo može potrajati nekoliko minuta)."
+              info_message: "<strong>Pričekajte</strong>, obrađenih %{processed_count}
+                od %{raw_count} redaka iz datoteke %{file} (ovo može potrajati nekoliko
+                minuta)."
             delete:
               button: Izbrišite sve popisne podatke
-              confirm: Brisanje svih popisnih podataka ne može se poništiti. Jeste li sigurni da želite nastaviti?
+              confirm: Brisanje svih popisnih podataka ne može se poništiti. Jeste
+                li sigurni da želite nastaviti?
             destroy:
-              error: Došlo je do pogreške prilikom brisanja popisa, pokušajte ponovno kasnije.
+              error: Došlo je do pogreške prilikom brisanja popisa, pokušajte ponovno
+                kasnije.
               success: Podaci popisa stanovništva izbrisani
             export_access_codes:
               button: Izvoz pristupnih kodova za glasanje
-              callout: Sada možete nastaviti s izvozom pristupnih kodova. To se može učiniti samo jednom. Nakon što pokrenete izvoz, primit ćete e-poruku s uputama za <strong>%{email}</strong>
-              confirm: Pristupne kodove možete izvesti samo jednom. Provjerite imate li pristup računu e-pošte <strong>%{email}</strong>.
+              callout: Sada možete nastaviti s izvozom pristupnih kodova. To se može
+                učiniti samo jednom. Nakon što pokrenete izvoz, primit ćete e-poruku
+                s uputama za <strong>%{email}</strong>
+              confirm: Pristupne kodove možete izvesti samo jednom. Provjerite imate
+                li pristup računu e-pošte <strong>%{email}</strong>.
               file_not_exist: Ova datoteka ne postoji
               launch_error: Problem s pokretanjem izvoza pristupnih kodova
-              launch_success: Pokrenut izvoz pristupnih kodova. Uskoro ćete dobiti e-poruku na %{email}
+              launch_success: Pokrenut izvoz pristupnih kodova. Uskoro ćete dobiti
+                e-poruku na %{email}
             exporting_access_codes:
-              info_message: "<strong>Molimo pričekajte</strong>, izvoz se priprema, primit ćete ga uskoro na %{email} (ovo može potrajati nekoliko minuta)."
+              info_message: "<strong>Molimo pričekajte</strong>, izvoz se priprema,
+                primit ćete ga uskoro na %{email} (ovo može potrajati nekoliko minuta)."
             freeze:
               callout: Popis je zamrznut i ne može se mijenjati.
-              help_html: Podaci popisa su učitani, kodovi su generirani i uspješno izvezeni.<br> <strong>Sada ste spremni za početak izbora.</strong><br> Upotrijebite izvezeni CSV s pojedinačnim kodovima kako biste ga distribuirali duž svog popisa koristeći vlastita sredstva ili aktivirajte karticu "Mogu li glasati" kako biste omogućili bilo kome da dohvati ovaj kod pomoću vlastitih popisnih podataka.
+              help_html: Podaci popisa su učitani, kodovi su generirani i uspješno
+                izvezeni.<br> <strong>Sada ste spremni za početak izbora.</strong><br>
+                Upotrijebite izvezeni CSV s pojedinačnim kodovima kako biste ga distribuirali
+                duž svog popisa koristeći vlastita sredstva ili aktivirajte karticu
+                "Mogu li glasati" kako biste omogućili bilo kome da dohvati ovaj kod
+                pomoću vlastitih popisnih podataka.
             generate_access_codes:
               button: Generirajte pristupne kodove za glasanje
-              callout: Sada možete nastaviti s generiranjem pristupnih kodova. Imajte na umu da nakon generiranja pristupnih kodova više nećete moći mijenjati popis stanovništva.
+              callout: Sada možete nastaviti s generiranjem pristupnih kodova. Imajte
+                na umu da nakon generiranja pristupnih kodova više nećete moći mijenjati
+                popis stanovništva.
               confirm: Ako nastavite, nećete moći mijenjati popis stanovništva.
-              info_message_all: "<strong>Svi su retci uspješno uvezeni</strong> iz datoteke %{file} (%{raw_count} od %{data_count})."
-              info_message_warn: Provjerite nedostaju li podaci jer je stvoreno %{data_count} zapisa, a učitana datoteka %{file} imala je %{raw_count} redaka.
+              info_message_all: "<strong>Svi su retci uspješno uvezeni</strong> iz
+                datoteke %{file} (%{raw_count} od %{data_count})."
+              info_message_warn: Provjerite nedostaju li podaci jer je stvoreno %{data_count}
+                zapisa, a učitana datoteka %{file} imala je %{raw_count} redaka.
               launch_error: Problem s pokretanjem generiranja pristupnih kodova
               launch_success: Pokrenuto generiranje kodova.
-              start_over: Molimo izbrišite trenutni popis i počnite ispočetka s ispravnom CSV datotekom s valjanim redovima.
+              start_over: Molimo izbrišite trenutni popis i počnite ispočetka s ispravnom
+                CSV datotekom s valjanim redovima.
             generating_access_codes:
-              info_message: "<strong>Pričekajte</strong>, kodovi za pristup glasanju se generiraju (ovo može potrajati nekoliko minuta)..."
+              info_message: "<strong>Pričekajte</strong>, kodovi za pristup glasanju
+                se generiraju (ovo može potrajati nekoliko minuta)..."
             new:
               file_help:
                 explanation: 'Uputstvo za datoteku:'
                 message_1: Dopuštene su samo CSV (.csv) datoteke.
                 message_2: Razdjelnik između stupaca mora biti točka-zarez (";").
-              has_ballot_styles_message: Vi postavljate stilove glasovanja. Provjerite odgovara li polje "%{ballot_style_code_header}" u CSV-u željenom kodu stila glasačkog listića.
-              info_message: "<strong>Još nema popisa.</strong> Upotrijebite obrazac u nastavku da biste ga izradili uvozom CSV datoteke."
-              missing_ballot_styles_message: 'Još nema stila glasačkog listića za ovo glasovanje. Ako želite imati uvjetna pitanja (tj.: predstaviti biraču različita pitanja ovisno o, npr. okrugu/regiji prebivališta), trebate postaviti <a href=%{ballot_styles_admin_path}>Stilove glasačkih listića</a> <strong> prije</strong>uvoz popisa. Ako želite svim biračima postaviti ista pitanja, možete nastaviti s procedurom uvoza popisa stanovništva.'
+              has_ballot_styles_message: Vi postavljate stilove glasovanja. Provjerite
+                odgovara li polje "%{ballot_style_code_header}" u CSV-u željenom kodu
+                stila glasačkog listića.
+              info_message: "<strong>Još nema popisa.</strong> Upotrijebite obrazac
+                u nastavku da biste ga izradili uvozom CSV datoteke."
+              missing_ballot_styles_message: 'Još nema stila glasačkog listića za
+                ovo glasovanje. Ako želite imati uvjetna pitanja (tj.: predstaviti
+                biraču različita pitanja ovisno o, npr. okrugu/regiji prebivališta),
+                trebate postaviti <a href=%{ballot_styles_admin_path}>Stilove glasačkih
+                listića</a> <strong> prije</strong>uvoz popisa. Ako želite svim biračima
+                postaviti ista pitanja, možete nastaviti s procedurom uvoza popisa
+                stanovništva.'
               submit: Pošaljite CSV
               title: Napravite popis stanovništva
             show:
               heading: Cenzus biračkog prostora
             upload_info:
-              csv_example_with_ballot_style: 'Primjer datoteke <strong>sa</strong> stilovima glasovanja:'
-              csv_example_without_ballot_style: 'Primjer datoteke <strong>bez</strong> stilova glasovanja:'
-              csv_header_after: Nemojte uključivati posljednje polje ("%{ballot_style_code_header}") ako vam nisu potrebni stilovi glasovanja/uvjetna pitanja
-              csv_header_before: 'Popisna datoteka mora biti CSV datoteka sa sljedećim zaglavljem:'
+              csv_example_with_ballot_style: 'Primjer datoteke <strong>sa</strong>
+                stilovima glasovanja:'
+              csv_example_without_ballot_style: 'Primjer datoteke <strong>bez</strong>
+                stilova glasovanja:'
+              csv_header_after: Nemojte uključivati posljednje polje ("%{ballot_style_code_header}")
+                ako vam nisu potrebni stilovi glasovanja/uvjetna pitanja
+              csv_header_before: 'Popisna datoteka mora biti CSV datoteka sa sljedećim
+                zaglavljem:'
         document_types:
           dni: DNI
           nie: NIJE
           passport: Putovnica
         export_mailer:
           access_codes_export:
-            click_button: 'Kliknite na sljedeću vezu za preuzimanje podataka o pristupnim kodovima.<br/>Datoteka će biti dostupna do %{date}.<br/>Trebat će vam <a href="https://www.7-zip.org/">7 -Zip</a> (za Windows), <a href="https://www.keka.io/en/">Keka</a> (za MacOS) ili <a href="https://peazip .github.io">PeaZip</a> (za Linux) da biste ga otvorili. Lozinka: %{password}'
+            click_button: 'Kliknite na sljedeću vezu za preuzimanje podataka o pristupnim
+              kodovima.<br/>Datoteka će biti dostupna do %{date}.<br/>Trebat će vam
+              <a href="https://www.7-zip.org/">7 -Zip</a> (za Windows), <a href="https://www.keka.io/en/">Keka</a>
+              (za MacOS) ili <a href="https://peazip .github.io">PeaZip</a> (za Linux)
+              da biste ga otvorili. Lozinka: %{password}'
             download: preuzimanje datoteka
             subject: Dostupan je izvoz pristupnih kodova za glasovanje za %{voting_title}
         vote_flow:
-          already_voted_in_person: Ovaj je sudionik već osobno glasovao i nema pravo glasa.
+          already_voted_in_person: Ovaj je sudionik već osobno glasovao i nema pravo
+            glasa.
           datum_not_found: Navedeni podaci ne odgovaraju niti jednom glasaču.
       content_blocks:
         highlighted_votings:
@@ -1162,13 +1394,15 @@ hr:
           highlighted_votings:
             active_votings: Aktivno glasovanje
             see_all_votings: Pogledajte sva glasanja
-            votings_button_title: Poveznica na stranicu Glasanja koja prikazuje sva glasovanja
+            votings_button_title: Poveznica na stranicu Glasanja koja prikazuje sva
+              glasovanja
       polling_officer_zone:
         closures:
           back_to_polling_stations: Povratak na biračka mjesta
           certify:
             add_images: Dodajte slike
-            error: Došlo je do pogreške prilikom prilaganja certifikata, pokušajte ponovo.
+            error: Došlo je do pogreške prilikom prilaganja certifikata, pokušajte
+              ponovo.
             form_legend: Učitajte sliku potvrde o završetku izbora
             heading: Ponovno prebrojavanje glasova - Učitaj potvrdu
             info_text: Molimo prenesite sliku potvrde o završetku izbora.
@@ -1182,7 +1416,8 @@ hr:
             info_text: Molimo navedite ukupan broj odgovora za svako pitanje.
             modal_ballots_results_count_error:
               close_modal: Zatvoriti
-              info_text: Ukupan broj glasačkih listića ne odgovara ukupnom broju koverti. Molimo pregledajte ukupan broj glasačkih listića.
+              info_text: Ukupan broj glasačkih listića ne odgovara ukupnom broju koverti.
+                Molimo pregledajte ukupan broj glasačkih listića.
               title: Zbroj glasačkih listića se ne zbraja
             save_recount: Spremi ponovno brojanje
             total_ballots: Ukupno glasačkih listića
@@ -1192,12 +1427,15 @@ hr:
           new:
             election: 'Izbori:'
             heading: Ponovno brojanje glasova
-            info_text: 'Molimo Vas da navedete ukupan broj glasačkih listića (koverti) ponovno prebrojanih na ovom biračkom mjestu:'
+            info_text: 'Molimo Vas da navedete ukupan broj glasačkih listića (koverti)
+              ponovno prebrojanih na ovom biračkom mjestu:'
             modal_ballots_count_error:
               btn_validate_total: Potvrdite ukupno ponovno brojanje glasačkih listića
               close_modal: Zatvoriti
-              info_explanation_text: 'Molimo pregledajte ukupan broj glasačkih listića. Ako je ukupni broj netočan, morate dati objašnjenje Odboru za praćenje:'
-              info_text: Ukupan broj unesenih glasačkih listića (koverti) ne odgovara evidenciji ljudi koji su glasali na ovom biračkom mjestu.
+              info_explanation_text: 'Molimo pregledajte ukupan broj glasačkih listića.
+                Ako je ukupni broj netočan, morate dati objašnjenje Odboru za praćenje:'
+              info_text: Ukupan broj unesenih glasačkih listića (koverti) ne odgovara
+                evidenciji ljudi koji su glasali na ovom biračkom mjestu.
               message_for_monitoring_committee: Poruka Odboru za praćenje
               review_recount: Pregledajte ponovno brojanje
               text_area_placeholder: Molimo upišite svoju poruku
@@ -1212,33 +1450,40 @@ hr:
             info_text: Zatvaranje birališta za izbore.
           sign:
             cancel: Otkazati
-            check_box: Pregledao sam ovo i isto je kao potvrda o fizičkom završetku izbora
+            check_box: Pregledao sam ovo i isto je kao potvrda o fizičkom završetku
+              izbora
             close_modal: Zatvoriti
             confirm: Ok, nastavi
             error: Došlo je do greške, pokušajte ponovno.
             heading: Ponovno prebrojavanje glasova - Potpišite zatvaranje
-            info_text: Ako nastavite, više ne možete mijenjati nijednu informaciju, ova se radnja ne može poništiti.
+            info_text: Ako nastavite, više ne možete mijenjati nijednu informaciju,
+              ova se radnja ne može poništiti.
             submit: Potpišite zatvaranje
             success: Zatvaranje je uspješno potpisano.
             title: Radnja se ne može poništiti
           update:
-            error: Došlo je do pogreške prilikom ažuriranja rezultata zatvaranja, pokušajte ponovno kasnije.
+            error: Došlo je do pogreške prilikom ažuriranja rezultata zatvaranja,
+              pokušajte ponovno kasnije.
             success: Rezultati zatvaranja uspješno ažurirani.
         in_person_votes:
           complete_voting:
             available_answers: 'Dostupni odgovori:'
             census_verified: Ovaj sudionik još nije osobno glasovao.
-            census_verified_with_online_vote: Ovaj je sudionik već glasovao online. Ako glasaju osobno, prethodni glasovi bit će poništeni i ovo će biti konačno glasovanje.
+            census_verified_with_online_vote: Ovaj je sudionik već glasovao online.
+              Ako glasaju osobno, prethodni glasovi bit će poništeni i ovo će biti
+              konačno glasovanje.
             complete_voting: Kompletno glasovanje
             identify_another: Identificirajte drugog sudionika
             questions_title: 'Oni imaju pravo glasati u sljedećim pitanjima:'
-            questions_title_voted: 'Ovaj je sudionik već glasovao putem interneta i ima pravo glasati u sljedećim pitanjima:'
+            questions_title_voted: 'Ovaj je sudionik već glasovao putem interneta
+              i ima pravo glasati u sljedećim pitanjima:'
             voted: Sudionik je glasao
           create:
             error: Glas nije registriran. Molim te pokušaj ponovno.
           in_person_form:
             census_not_present: Ovaj sudionik nije naveden u popisu stanovništva.
-            census_not_present_description: Moraju otići u popisni ured za žalbe ili kontaktirati podršku.
+            census_not_present_description: Moraju otići u popisni ured za žalbe ili
+              kontaktirati podršku.
             date_of_birth: Datum rođenja
             day: Dan
             day_placeholder: dd
@@ -1261,7 +1506,8 @@ hr:
             error: Došlo je do pogreške pri registraciji glasa. Molim te pokušaj ponovno.
             success:
               accepted: Glas je uspješno registriran.
-              rejected: Oglasna ploča nije prihvatila glasovanje. Molimo kontaktirajte administratora sustava.
+              rejected: Oglasna ploča nije prihvatila glasovanje. Molimo kontaktirajte
+                administratora sustava.
           verify_document:
             census_present: Ovaj sudionik je naveden u popisu stanovništva.
             name: Ime
@@ -1271,7 +1517,9 @@ hr:
           polling_officer_zone: Zona biračkog službenika
         polling_officers:
           index:
-            polling_officer_role_description: Dodijeljeni ste da djelujete kao službenik na biračkom mjestu (predsjednik ili upravitelj) na nekim od izbora koji se održavaju na ovoj platformi.
+            polling_officer_role_description: Dodijeljeni ste da djelujete kao službenik
+              na biračkom mjestu (predsjednik ili upravitelj) na nekim od izbora koji
+              se održavaju na ovoj platformi.
             polling_station:
               address: Adresa
               count_votes: Broji glasove
@@ -1313,23 +1561,30 @@ hr:
       votings:
         access_code_modal:
           email: Pošalji e-poštom na %{email}
-          info: Za sudjelovanje vam je potreban pristupni kod. Ako ga niste dobili poštom, možemo vam poslati novi.
+          info: Za sudjelovanje vam je potreban pristupni kod. Ako ga niste dobili
+            poštom, možemo vam poslati novi.
           no_email: Nema dostupne e-pošte
           no_sms: Nema dostupnog telefonskog broja
           sms: Pošalji SMS-om na %{sms}
           title: Nabavite pristupni kod
         check_census:
           check_status: Provjeri status
-          description: Ovdje imate mogućnost provjeriti svoje popisne podatke kako biste znali imate li pravo sudjelovati u ovom glasovanju. Već biste trebali imati pristupnu šifru, ali ako ste je izgubili, možete je ponovno zatražiti kada vaši podaci budu točni.
+          description: Ovdje imate mogućnost provjeriti svoje popisne podatke kako
+            biste znali imate li pravo sudjelovati u ovom glasovanju. Već biste trebali
+            imati pristupnu šifru, ali ako ste je izgubili, možete je ponovno zatražiti
+            kada vaši podaci budu točni.
           error:
-            info: 'Molim te pokušaj ponovno. Ukoliko mislite da su podaci u sustavu netočni, možete to prijaviti ovdje: %{census_contact_information}'
+            info: 'Molim te pokušaj ponovno. Ukoliko mislite da su podaci u sustavu
+              netočni, možete to prijaviti ovdje: %{census_contact_information}'
             title: Podaci koje ste unijeli nisu u cenzusu za ovo glasanje
-          form_title: 'Ispunite sljedeći obrazac kako biste provjerili svoje popisne podatke:'
+          form_title: 'Ispunite sljedeći obrazac kako biste provjerili svoje popisne
+            podatke:'
           invalid: Došlo je do problema prilikom provjere popisa stanovništva.
           success:
             access_link: putem e-pošte.
             access_link_with_sms: putem SMS-a ili e-maila.
-            info: Već ste trebali dobiti svoj pristupni kod poštom. U slučaju da ga nemate, možete ga zatražiti ovdje
+            info: Već ste trebali dobiti svoj pristupni kod poštom. U slučaju da ga
+              nemate, možete ga zatražiti ovdje
             title: Vaši podaci iz popisa su točni!
           title: Mogu li glasati?
         check_fields:
@@ -1349,10 +1604,14 @@ hr:
         count:
           title:
             one: "%{count} glasovanje"
+            few: "%{count} glasova"
             other: "%{count} glasova"
         elections_log:
           bb_status: Izborni status
-          description: Izborni dnevnik će vam pokazati sve relevantne podatke o svakom glasovanju. Na primjer, status ključne ceremonije ili zbroja ili jesu li rezultati već objavljeni. Kliknite na izbore o kojima želite podatke dnevnika.
+          description: Izborni dnevnik će vam pokazati sve relevantne podatke o svakom
+            glasovanju. Na primjer, status ključne ceremonije ili zbroja ili jesu
+            li rezultati već objavljeni. Kliknite na izbore o kojima želite podatke
+            dnevnika.
           election_log: Izborni dnevnik
           title: Izborni dnevnik
         filters:
@@ -1369,7 +1628,8 @@ hr:
           unfold: Otklopite
         index:
           no_votings: Nijedno glasovanje ne odgovara kriterijima pretraživanja.
-          only_finished: Trenutno nema zakazanih glasovanja, ali ovdje možete pronaći popis završenih glasovanja.
+          only_finished: Trenutno nema zakazanih glasovanja, ali ovdje možete pronaći
+            popis završenih glasovanja.
           title: Glasanja
         login:
           access_code: Pristupni kod

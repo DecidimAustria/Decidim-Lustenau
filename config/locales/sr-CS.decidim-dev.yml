@@ -1,5 +1,5 @@
 ---
-hr:
+sr-CS:
   activemodel:
     attributes:
       dummy_resource:
@@ -37,7 +37,8 @@ hr:
           description_another: 'Sudionik je stvorio sljedeći broj testova: %{score}.'
           description_own: 'Broj testova koje ste stvorili: %{score}.'
           name: Testovi
-          next_level_in: 'Kako biste dostigli sljedeću razinu, stvorite sljedeći broj testova: %{score}!'
+          next_level_in: 'Kako biste dostigli sljedeću razinu, stvorite sljedeći broj
+            testova: %{score}!'
           unearned_another: Sudionik još nije stvorio nijedan test.
           unearned_own: Još niste stvorili nijedan test.
     pages:
