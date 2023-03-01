@@ -1,0 +1,1421 @@
+---
+tr-TR:
+  activemodel:
+    attributes:
+      answer:
+        description: Tanım
+        image: resim
+        proposals: ilgili teklifler
+        title: Başlık
+      election:
+        description: Tanım
+        end_time: oylama biter
+        start_time: oylama başlar
+        title: Başlık
+      question:
+        max_selections: Maksimum seçim sayısı
+        min_selections: Yukarıdaki seçeneklerin hiçbiri
+        title: Başlık
+      voting:
+        banner_image: Afiş resmi
+        census_contact_information: Nüfus sayımı iletişim bilgileri
+        description: Tanım
+        end_time: Oylama biter
+        introductory_image: tanıtım resmi
+        promoted: terfi
+        scope: Kapsam
+        show_check_census: '"Kontrol sayımı" sayfasını göster'
+        start_time: oylama başlıyor
+        title: Başlık
+        voting_type: Oylama türü
+    errors:
+      models:
+        answer:
+          attributes:
+            attachment:
+              needs_to_be_reattached: Yeniden takılması gerekiyor
+        election:
+          attributes:
+            attachment:
+              needs_to_be_reattached: Yeniden takılması gerekiyor
+        trustee:
+          attributes:
+            name:
+              cant_be_changed: değiştirilemez
+            public_key:
+              cant_be_changed: değiştirilemez
+        voting:
+          attributes:
+            voting_type:
+              inclusion: "%{value} geçerli bir oylama türü değil"
+  activerecord:
+    errors:
+      models:
+        decidim/votings/polling_officer:
+          attributes:
+            presided_polling_station:
+              president_and_manager: Oy kullanma memuru zaten bir sandık merkezi başkanı/yöneticisi
+            voting:
+              different_organization: Oylama, kullanıcı ile aynı kuruluşta olmalıdır.
+        decidim/votings/polling_station:
+          attributes:
+            polling_station_president:
+              different_voting: Sandık görevlisi, sandık görevlisi ile aynı oy verme yerinde bulunmalıdır.
+    models:
+      decidim/elections/answer:
+        one: Cevap
+        other: Yanıtlar
+      decidim/elections/election:
+        one: Seçim
+        other: seçimler
+      decidim/elections/question:
+        one: Soru
+        other: Sorular
+      decidim/voting:
+        one: oylama
+        other: oylamalar
+      decidim/votings/census/dataset:
+        one: veri kümesi
+        other: veri kümeleri
+      decidim/votings/census/datum:
+        one: veri
+        other: Veri
+      decidim/votings/polling_officer:
+        one: oylama memuru
+        other: Oylama memurları
+      decidim/votings/polling_station:
+        one: Oy verme yeri
+        other: oy kullanma istasyonları
+      decidim/votings/voting:
+        one: oylama
+        other: oylamalar
+  decidim:
+    admin:
+      filters:
+        officers_assigned_eq:
+          label: Memurlar
+          values:
+            assigned: Atandı
+            unassigned: Atanmadı
+        role_eq:
+          label: rol
+          values:
+            manager: Müdür
+            president: Başkan
+            unassigned: Atanmamış
+        search_placeholder:
+          name_or_email_or_nickname_or_presided_station_title_or_managed_station_title_cont: Ad/e-posta/takma ad veya oylama istasyonuna göre %{collection} arayın.
+          ? title_or_address_or_manager_name_or_manager_email_or_manager_nickname_or_president_name_or_president_email_or_president_nickname_cont
+          : "%{collection}'ı unvan, adres veya memur adı/e-posta/rumuz ile arayın."
+        signed_eq:
+          label: İmzalı
+          values:
+            'false': İmzalı
+            'true': İmzalanmamış
+        validated_eq:
+          label: doğrulandı
+          values:
+            'false': doğrulandı
+            'true': Doğrulanmamış
+    components:
+      elections:
+        actions:
+          vote: Oy
+        name: seçimler
+        settings:
+          global:
+            announcement: Duyuru
+          step:
+            announcement: Duyuru
+    elections:
+      actions:
+        confirm_destroy: Emin misin?
+        destroy: Tahrip etmek
+        edit: Düzenlemek
+        feedback: seçmen geri bildirimi
+        import: Teklifleri yanıtlara aktar
+        manage_answers: Yanıtları yönet
+        manage_questions: Soruları yönet
+        manage_steps: Adımları yönet
+        new: Yeni %{name}
+        preview: Ön izleme
+        publish: Yayınla
+        title: Hareketler
+        unpublish: yayından kaldır
+      admin:
+        answers:
+          create:
+            invalid: Bu yanıt oluşturulurken bir sorun oluştu
+            success: Yanıt başarıyla oluşturuldu
+          destroy:
+            invalid: Bu yanıt silinirken bir sorun oluştu
+            success: Yanıt başarıyla silindi
+          edit:
+            title: Cevabı düzenle
+            update: Cevabı güncelle
+          index:
+            invalid_max_selections: Maksimum seçimi eşleştirmek için %{missing_answers} yanıta daha ihtiyacınız var
+            title: Yanıtlar
+          new:
+            create: Cevap oluştur
+            title: yeni cevap
+          not_selected: Seçili değil
+          select:
+            disable: Cevabın seçimini kaldır
+            enable: Cevabı seçili olarak işaretle
+            invalid: Bu yanıt seçilirken bir sorun oluştu
+            success: Yanıt başarıyla seçildi
+          selected: Seçildi
+          unselect:
+            invalid: Bu yanıtın seçimi kaldırılırken bir sorun oluştu
+            success: Yanıt başarıyla seçili değil
+          update:
+            invalid: Bu yanıt güncellenirken bir sorun oluştu
+            success: Yanıt başarıyla güncellendi
+        elections:
+          create:
+            invalid: Bu seçim oluşturulurken bir sorun oluştu
+            success: Seçim başarıyla oluşturuldu
+          destroy:
+            invalid: Bu seçim silinirken bir sorun oluştu
+            success: Seçim başarıyla silindi
+          edit:
+            title: Seçimi düzenle
+            update: Seçimi güncelle
+          index:
+            no_bulletin_board: Bu modülü kullanmak için gerekli olan yapılandırılmış bir <a href="https://github.com/decidim/decidim-bulletin-board">Bülten Tahtası sunucusu</a> yok. Bu görev Sistem Yöneticisi tarafından yapılmalıdır.
+            title: seçimler
+          new:
+            create: Seçim oluştur
+            title: Yeni seçim
+          publish:
+            success: Seçim başarıyla yayınlandı.
+          unpublish:
+            success: Seçim başarıyla yayından kaldırıldı.
+          update:
+            invalid: Bu seçim güncellenirken bir sorun oluştu
+            success: Seçim başarıyla güncellendi
+        exports:
+          elections: seçimler
+          feedback_form_answers: Geri bildirim formu yanıtları
+        mailers:
+          trustee_mailer:
+            body: "<p>Merhaba %{user_name},</p><p>%{resource_name}'e mütevelli olarak eklendiniz.</p>"
+            subject: "%{resource_name}'a mütevelli olarak eklendiniz"
+            trustee_zone: Beni güvenilir bölgeye götür
+        menu:
+          trustees: mütevelliler
+        models:
+          answer:
+            name: Cevap
+          election:
+            name: Seçim
+          question:
+            name: Soru
+          trustee:
+            name: mütevelli
+        proposals_imports:
+          create:
+            invalid: Teklifler yanıtlara aktarılırken bir sorun oluştu
+            success: "%{number} teklif başarıyla yanıtlara aktarıldı"
+          new:
+            create: Teklifleri yanıtlara aktar
+            no_components: Bu katılımcı alanda, teklifleri yanıtlara aktarmak için başka teklif bileşeni yoktur.
+            select_component: Lütfen bir bileşen seçin
+            title: Teklifleri içe aktar
+        questions:
+          create:
+            election_started: Seçim çoktan başladı
+            invalid: Bu soru oluşturulurken bir sorun oluştu
+            success: Soru başarıyla oluşturuldu
+          destroy:
+            invalid: Bu soru silinirken bir sorun oluştu
+            success: Soru başarıyla silindi
+          edit:
+            title: Soruyu düzenle
+            update: Soruyu güncelle
+          index:
+            title: Sorular
+          new:
+            create: Soru oluştur
+            title: yeni soru
+          update:
+            invalid: Bu soru güncellenirken bir sorun oluştu
+            success: Soru başarıyla güncellendi
+        steps:
+          create_election:
+            census: nüfus sayımı
+            errors:
+              census_codes_generated: Nüfus sayımı için erişim kodları oluşturulmaz.
+              census_frozen: Sayım için erişim kodları dışa aktarılmaz.
+              census_uploaded: Bu seçim için yüklenmiş bir nüfus sayımı yok.
+              component_published: Seçim bileşeni <strong>yayınlanmadı</strong>.
+              max_selections: Soruların <strong>yanıt miktarı için doğru bir değeri</strong> yok
+              minimum_answers: Soruların <strong>en az iki yanıtı</strong> olmalıdır.
+              minimum_questions: Seçimin <strong>en az bir sorusu olmalıdır</strong>.
+              published: Seçim <strong>yayınlanmadı</strong>.
+              time_before: Başlangıç zamanı, seçimin başlamasına <strong>%{hours} saatten az</strong> kaldı.
+              trustees_number: Katılımcı alan <strong>ortak anahtara sahip en az %{number} mütevelliye sahip olmalıdır</strong>.
+            invalid: Bu seçim ayarlanırken bir sorun oluştu
+            no_trustees: Bu katılımcı alan için yapılandırılmış Mütevelli yok
+            not_used_trustee: "(kullanılmamış)"
+            public_key:
+              'false': "<strong>ortak anahtarı</strong> yok"
+              'true': bir <strong>ortak anahtara</strong> sahiptir
+            requirements:
+              census_codes_generated: Nüfus sayımı için erişim kodları oluşturulur.
+              census_frozen: Nüfus sayımı için erişim kodları dışa aktarılır ve nüfus sayımı dondurulur.
+              census_uploaded: Nüfus sayımı yüklendi.
+              component_published: Seçim bileşeni <strong>yayınlandı</strong>.
+              max_selections: Tüm sorular, <strong>maksimum yanıt</strong> için doğru bir değere sahiptir.
+              minimum_answers: Her sorunun <strong>en az 2 yanıtı</strong> vardır.
+              minimum_questions: Seçimde <strong>en az 1 soru</strong> var.
+              published: Seçim <strong>yayınlandı</strong>.
+              time_before: Kurulum, seçim başlamadan <strong>en az %{hours} saat</strong> yapılıyor.
+              trustees_number: Katılımcı alanda <strong>ortak anahtara sahip en az %{number} mütevelli var</strong>.
+            submit: Kurulum seçimi
+            success: Seçim başarıyla Bülten Tahtasına gönderildi
+            title: Kurulum seçimi
+            trustees: Seçim Mütevelli Heyeti
+          created:
+            invalid: Anahtar töreni başlatılırken bir sorun oluştu
+            submit: Anahtar töreni başlat
+            success: Başlatma anahtarı töreni isteği Bülten Tahtasına başarıyla gönderildi
+            title: Seçim oluşturuldu
+            trustees: mütevelliler
+          key_ceremony:
+            continue: Devam etmek
+            title: Anahtar töreni
+          key_ceremony_ended:
+            errors:
+              time_before: Seçim başlamaya hazır. Oy verme dönemini başlatmak için başlangıç saatinden (%{start_time}) %{hours} saat öncesine kadar beklemeniz gerekir.
+            invalid: Oylama dönemi başlatılırken bir sorun oluştu
+            requirements:
+              time_before: Seçim yakında başlayacak. Oylama dönemini manuel olarak başlatabilirsiniz veya başlangıç saatinden önce, %{start_time}'da otomatik olarak başlatılacaktır.
+            submit: Oylama dönemini başlat
+            success: Oylama dönemini başlatma talebi Bülten Tahtasına başarıyla gönderildi
+            title: Başlamaya hazır
+          processing: İşleme...
+          results_published:
+            answer: Cevap
+            not_selected: Seçili değil
+            question: Soru
+            result: Sonuç
+            selected: Seçildi
+            submit: Göndermek
+            title: Sonuçlar yayınlandı
+          tally_ended:
+            answer: Cevap
+            not_selected: Seçili değil
+            question: Soru
+            result: Sonuç
+            selected: Seçildi
+            submit: Sonuçları yayınla
+            success: Sonuçları yayınlama isteği Bülten Tahtasına başarıyla gönderildi
+            title: Hesaplanan sonuçlar
+          tally_started:
+            continue: Devam etmek
+            invalid: Kayıp mütevelli bildirilirken bir sorun oluştu
+            mark_as_missing: Eksik olarak işaretle
+            mark_as_missing_description: Tüm mütevelliler bu sürece katılmalıdır, ancak bir mütevelli süreçte yer alamazsa, onu eksik olarak işaretleyebilirsiniz.
+            success: Kayıp kayyum raporu Bülten Tahtasına başarıyla gönderildi
+            tally_completion: Tüm mütevelliler aktif olduğunda veya eksik olarak işaretlendiğinde süreç tamamlanacaktır. Süreci tamamlamak için en az %{quorum} mütevelli gerekir.
+            title: Taksitli işlem
+            undo_mark_as_missing: Yanlışlıkla kayıp olarak işaretlenen bir kayyum, süreç tamamlanmadan katılım sağlayabilecektir. Her zamanki gibi devam edebilirler ve eksik işaret dikkate alınmaz.
+          vote:
+            errors:
+              time_after: Seçim hala devam ediyor. Oylamayı sonlandırmak için bitiş saatine (%{end_time}) kadar beklemeniz gerekmektedir.
+            invalid: Oylama süresi sonlandırılırken bir sorun oluştu
+            requirements:
+              time_after: Seçim sona erdi. Oylama süresini manuel olarak sonlandırabilirsiniz veya birkaç dakika içinde otomatik olarak sonlandırılacaktır.
+            submit: Oylama dönemini bitir
+            success: Oylama dönemi sonu talebi Bülten Tahtasına başarıyla gönderildi
+            title: oylama dönemi
+          vote_ended:
+            invalid: Sayım başlatılırken bir sorun oluştu
+            submit: Sayımı başlat
+            success: Sayım başlatma isteği Bülten Tahtasına başarıyla gönderildi
+            text: Oylama sona erdi. Sayımı şimdi başlatabilirsiniz.
+            title: Oy verme süresi sona erdi
+          vote_stats:
+            no_vote_statistics_yet: Henüz oy istatistiği yok
+            title: Oy İstatistikleri
+            voters: seçmenler
+            votes: oylar
+        trustees_participatory_spaces:
+          actions:
+            disable: Devre dışı bırakmak
+            enable: Dikkate almak
+          create:
+            exists: Bu katılımcı alan için mütevelli var
+            invalid: Mütevelli oluşturulurken bir sorun oluştu
+            success: Mütevelli başarıyla oluşturuldu
+          delete:
+            invalid: Bu mütevelli kaldırılırken bir sorun oluştu
+            success: Mütevelli başarıyla kaldırıldı
+          form:
+            select_user: Kullanıcı seç
+          index:
+            title: mütevelliler
+          new:
+            create: Mütevelli Oluştur
+            title: Yeni Vekil
+          update:
+            invalid: "%{trustee} mütevellisi güncellenirken bir sorun oluştu"
+            success: Trustee %{trustee} başarıyla güncellendi
+      admin_log:
+        election:
+          create: "%{user_name}, %{space_name}'nin %{resource_name} seçimini yarattı"
+          delete: "%{user_name}, %{space_name}'nin %{resource_name} seçimini sildi"
+          end_vote: "%{user_name}, Bülten Tahtasında %{space_name}'nin %{resource_name} seçimi için oylama dönemini sonlandırdı"
+          publish: "%{user_name}, %{space_name}'nin %{resource_name} seçimini yayınladı"
+          publish_results: "%{user_name}, %{space_name}'nin %{resource_name} seçiminin sonuçlarını Bülten Tahtasında yayınladı"
+          report_missing_trustee: "%{user_name}, Bülten Tahtasında %{space_name}'ün %{resource_name} seçimi için çetele sırasında %{trustee_name}'i kayıp bir mütevelli olarak bildirdi"
+          setup: "%{user_name}, Bülten Tahtasında %{space_name}'nin %{resource_name} seçimini oluşturdu"
+          start_key_ceremony: "%{user_name}, Bülten Tahtasında %{space_name}'nin %{resource_name} seçimi için anahtar törenini başlattı"
+          start_tally: "%{user_name}, Bülten Tahtasında %{space_name}'nin %{resource_name} seçimi için çeteleyi başlattı"
+          start_vote: "%{user_name}, Bülten Tahtasında %{space_name}'nin %{resource_name} seçimi için oylama dönemini başlattı"
+          unpublish: "%{user_name}, %{space_name} seçiminin %{resource_name}'ini yayından kaldırdı"
+          update: "%{user_name}, %{space_name}'nin %{resource_name} seçimini güncelledi"
+        trustee:
+          create: "%{user_name}, %{trustee_user} kullanıcısını Mütevelli olarak atadı"
+      connection:
+        failed:
+          modal:
+            close: Kapalı
+            communication_lost: Maalesef oylama sunucusuyla (Bülten Tahtası) iletişim kopmuş gibi görünüyor.<br>İnternet bağlantısı kopmuş veya hedef sunucu çok meşgul olabilir.<br>Daha sonra tekrar deneyebilir veya destek ekibiyle iletişime geçebilirsiniz. bu sorun devam ederse.
+            generic_error: Maalesef bilinmeyen bir hata oluştu. Muhtemelen tarayıcınız desteklenmiyor veya desteklenmeyen "gizli" veya "özel" modu kullanıyorsunuz.
+            title: Bir şeyler yanlış gitti
+      election_m:
+        badge_name:
+          finished: Bitti
+          ongoing: Aktif
+          upcoming: Yaklaşan
+        end_date: biter
+        footer:
+          remaining_time:
+            one: Oylamaya <strong>%{count} saat %{minutes} dakika</strong> kaldı.
+            other: Oylamaya <strong>%{count} saat %{minutes} dakika</strong> kaldı.
+            zero: Oylamaya <strong>%{minutes} dakika</strong> kaldı.
+          view: Görüş
+          vote: Oy
+        label:
+          date: Tarih
+        questions: Sorular %{count}
+        start_date: başlar
+        unspecified: Belirtilmemiş
+      elections:
+        count:
+          elections_count:
+            one: X_0 seçim
+            other: "%{count} seçimleri"
+        election_log:
+          chained_hash: Bu mesajın zincirlenmiş Hash'i
+          complete: Tamamlamak
+          creation_description:
+            complete: Seçim oluşturuldu ve Bülten Tahtasında başarıyla kuruldu.
+            not_created: Seçim henüz oluşturulmadı.
+          creation_title: Seçim oluşturuldu
+          description: Bu, her adımın durumunu kontrol edebileceğiniz seçim günlüğüdür, örn. seçimin ne zaman oluşturulduğu, sayım işleminin tamamlanıp tamamlanmadığı ve seçimin ne zaman kapatıldığı.
+          download: İndirmek
+          key_ceremony_description:
+            complete: Anahtar töreni tamamlandı. Her mütevelli geçerli anahtarlara sahiptir ve gerekli yedek anahtarları indirmiştir.
+            not_started: Anahtar töreni henüz başlamadı.
+            started: Anahtar töreni başladı ama henüz tamamlanmadı.
+          key_ceremony_title: Anahtar Töreni
+          not_available: Henüz uygun değil
+          not_created: oluşturulmadı
+          not_published: yayınlanmadı
+          not_ready: Hazır değil
+          not_started: Başlatılmadı
+          published: Yayınlanan
+          results_description:
+            not_published: Sonuçlar henüz yayınlanmadı.
+            published: Sonuçlar yayınlandı.
+          results_title: Sonuçlar
+          started: başladı
+          tally_description:
+            finished: Sayım işlemi tamamlanmıştır.
+            not_started: Taksitlendirme süreci henüz başlamadı.
+            started: Sayım işlemi başladı.
+          tally_title: Taksitli işlem
+          title: Seçim Günlüğü
+          verifiable_results:
+            checksum: 'Dosya SHA256 sağlama toplamı:'
+            description:
+              not_ready: Doğrulanabilir seçim dosyası ve SHA256 sağlama toplamı henüz mevcut değil. Sonuçlar yayınlanır yayınlanmaz, bu seçimi doğrulayabileceksiniz.
+              ready: 'Burada, seçimi doğrulama seçeneğiniz vardır. Öncelikle, dosyayı indirmeniz ve bozuk olmadığından emin olmanız gerekir. Bunu yapmak için aşağıdaki komutu çalıştırın ve çıktının sağlama toplamıyla eşleştiğini kontrol edin:'
+            how_to_verify: 'Dosyayı indirdikten ve düzgün olduğundan emin olduktan sonra, evrensel doğrulayıcıyı çalıştırmaya devam edebilirsiniz. <a href=''https://github.com/decidim/decidim-bulletin-board''>bu depoyu</a> kopyalayın ve kök klasörden aşağıdaki komutu çalıştırın:'
+            title: Seçim sonuçlarını doğrulayın
+            verifiable_file: 'Doğrulanabilir seçim dosyası:'
+          verify: Seçimi doğrula
+          vote_description:
+            finished: Oy verme işlemi tamamlanmıştır.
+            not_started: Oylama süreci henüz başlamadı.
+            started: Oylama süreci başladı.
+          vote_title: oylama süreci
+        filters:
+          active: Aktif
+          all: Tüm
+          date: Tarih
+          finished: Bitti
+          search: Aramak
+          upcoming: Yaklaşan
+        filters_small_view:
+          close_modal: Modeli kapat
+          filter: filtre
+          filter_by: Tarafından filtre
+          unfold: açmak
+        preview:
+          available_answers: 'Mevcut cevaplar:'
+          description: 'Oylama sürecinde bulacağınız sorular şunlardır:'
+          title: Seçim soruları
+        results:
+          description: 'Her soru için yapılan oylamanın sonuçları şöyle:'
+          percentage: "%{count}%"
+          selected: Seçilmiş
+          title: Seçim sonuçları
+          votes:
+            one: "%{count} oy"
+            other: "%{count} oy"
+            zero: "%{count} oy"
+        show:
+          action_button:
+            change_vote: Oyunuzu değiştirin
+            vote: Oylamaya başla
+            vote_again: Tekrar oyla
+          back: Mevcut seçimler
+          callout:
+            already_voted: Bu seçimde zaten oy kullandınız. Oyunuzu değiştirebilir veya doğrulayabilirsiniz.
+            pending_vote: Oyunuz sunucuda kullanılıyor.
+            vote_rejected: Oyunuzu doğrulamak mümkün olmadı. Lütfen tekrar yayınlayın.
+          election_log: Seçim günlüğü
+          preview: Ön izleme
+          verify:
+            already_voted: Zaten oy verdiniz mi?
+            verify_here: Oyunuzu buradan kontrol edin.
+            will_verify: Seçim başladıktan sonra oyunuzu doğrulayabileceksiniz.
+          voting_period_status:
+            finished: Oylama %{start_time} tarihinde başladı ve %{end_time} tarihinde sona erdi
+            ongoing: 'Şu tarihe kadar aktif oylama: %{end_time}'
+            upcoming: Oylama %{start_time} tarihinde başlıyor
+      feedback:
+        answer:
+          invalid: Geri bildiriminiz gönderilirken bir sorun oluştu.
+          spam_detected: Form yanıtlanırken bir sorun oluştu. Belki çok hızlı oldun, tekrar deneyebilir misin?
+          success: Geri bildirim başarıyla gönderildi.
+      models:
+        answer:
+          fields:
+            proposals: teklifler
+            selected: Seçildi
+            title: Başlık
+            votes: oylar
+        election:
+          fields:
+            bb_status: Bülten Tahtası durumu
+            end_time: Sonunda
+            start_time: başlar
+            title: Başlık
+            verifiable_results_file_hash: Dosya SHA256 sağlama toplamı
+            verifiable_results_file_url: Doğrulanabilir seçim dosyası
+        question:
+          fields:
+            answers: Yanıtlar
+            max_selections: Maks. seçimler
+            title: Başlık
+        trustees_participatory_space:
+          fields:
+            considered: dikkate alınan
+            email: E-posta
+            inactive: etkin değil
+            name: İsim
+            notification: bildirim gönderildi
+            public_key: Genel anahtar
+            status: Durum
+      orders:
+        label: 'Seçimleri şuna göre sırala:'
+        older: Daha eski
+        recent: Son
+      trustee_zone:
+        elections:
+          backup_modal:
+            description: Bu seçim Bülten Tahtasında oluşturuluyor. Katılan her Mütevelli'nin bu anahtarların yedek bir kopyasını oluşturması ve bunları güvenli bir yerde saklaması çok önemlidir. Ondan sonra süreç devam ediyor.
+            download_election_keys: Anahtarları indir
+            download_icon: İndirme işlemini gösteren simge
+            title: "%{election} için yedek seçim anahtarları"
+          key_ceremony_steps:
+            back: Geri
+            description: Bu seçim Bülten Tahtasında oluşturuluyor. Bu süreci tamamlamak için Mütevelli olarak katılımınız gereklidir.
+            keys:
+              create_election: Anahtar üretimi
+              key_ceremony:
+                joint_election_key: Ortak Anahtar üretimi
+                step_1: Anahtar yayınlama
+            list:
+              status: Durum
+              task: Görev
+            process_warning: İşlem başladıktan sonra işlem bitene kadar bu sayfadan çıkmamalısınız. Tamamlamak için tüm Mütevelli Heyetlerinin bağlanması gerektiğinden, birkaç dakika sürecektir.
+            start: Başlangıç
+            start_icon: Seçim anahtarlarının oluşturulmasını başlatmak için bir başlat düğmesini gösteren simge
+            status:
+              completed: Tamamlanmış
+              pending: Askıda olması
+              processing: İşleme
+            title: "%{election} için seçim anahtarları oluşturun"
+          restore_modal:
+            description: Bülten Tahtasında bu seçimle ilgili Mütevelli olarak sizden bilgi var. İşleme devam etmek için önce bir önceki oturumda oluşturulan yedek dosyasını karşıya yükleyin.
+            title: "%{election} için seçim anahtarlarını geri yükle"
+            upload_election_keys: Seçim anahtarlarını yükle
+            upload_icon: İndirme işlemini gösteren simge
+          tally_started_steps:
+            back: Geri
+            description: Bu seçimin sonuçları Bülten Tahtasında hesaplanıyor. Bu süreci tamamlamak için Mütevelli olarak katılımınız gereklidir.
+            keys:
+              end_tally: Sayım sona erdi
+              tally:
+                cast: Tally döküm
+                share: Taksitli pay
+            list:
+              status: Durum
+              task: Görev
+            process_warning: İşlem başladıktan sonra işlem bitene kadar bu sayfadan çıkmamalısınız. Tamamlamak için tüm Mütevelli Heyetlerinin bağlanması gerektiğinden, birkaç dakika sürecektir.
+            start: Başlangıç
+            start_icon: Seçim anahtarlarının oluşturulmasını başlatmak için bir başlat düğmesini gösteren simge
+            status:
+              completed: Tamamlanmış
+              pending: Askıda olması
+              processing: İşleme
+            title: "%{election} için taksitli"
+          update:
+            error: Seçim durumu güncellenmedi.
+            success: 'Seçim durumu: %{status}'
+        menu:
+          trustee_zone: güvenilir bölge
+        no_bulletin_board:
+          body: Bu bölüm için yapılandırılmış bir Bülten Tahtası gereklidir. Daha fazla ayrıntı için Yönetici ile iletişime geçin.
+          title: Üzgünüz, Bülten Tahtası henüz yapılandırılmadı.
+        trustees:
+          show:
+            elections:
+              list:
+                action_required:
+                  'false': HAYIR
+                  name: Eylem Gerekli?
+                  'true': Eylem gerçekleştir
+                bb_status: Durum
+                election: Seçim
+                voting_period: oylama dönemi
+              no_elections: Kayyum olarak hareket ettiğiniz bir seçim yoktur.
+              title: seçimler
+            identification_keys:
+              cancel: İptal etmek
+              generate: Kimlik anahtarları oluştur
+              generate_error: Tanımlama anahtarları oluşturulurken bir hata oluştu.
+              generate_legend: Seçimlere Mütevelli olarak katılmak için bir kimlik anahtarı çifti oluşturmanız gerekir.
+              generate_legend_1: Düğmeye bastıktan sonra, oluşturulan tanımlama anahtarlarını içeren dosyayı indirmelisiniz.
+              generate_legend_2: İndirilen dosyayı temiz bir USB cihazına kopyalayın
+              generate_legend_3: Bilgisayarınızda dosyanın bir kopyası olmadığından emin olun (örn. İndirilenler ve Masaüstü klasörlerini kontrol edin).
+              generate_legend_4: Dosyanın başka bir kopyasını farklı bir harici aygıtta oluşturun ve çok güvenli bir yerde saklayın.
+              submit: Göndermek
+              submit_legend: Yukarıda açıklanan tüm adımları izledikten sonra, genel tanımlama anahtarını sunucuya gönderme işlemini tamamlayın.
+              submit_title: Genel kimlik anahtarını gönderin
+              title: Yediemin kimlik anahtarları
+              upload: Kimlik anahtarlarınızı yükleyin
+              upload_error:
+                invalid_format: Yüklenen dosya herhangi bir tanımlama anahtarı içermiyor.
+                invalid_key: Yüklenen dosyadaki tanımlama anahtarları yüklenemiyor.
+                invalid_public_key: Yüklenen dosyadaki tanımlama anahtarları, saklanan genel tanımlama anahtarıyla eşleşmiyor.
+              upload_legend: Sunucu, genel tanımlama anahtarlarınıza sahiptir, ancak tarayıcınızda hala yoktur. Tanımlama anahtarlarınızı içeren dosyayı oluşturduktan sonra oluşturduğunuz yedekten bilgisayarınıza aktarmanız gerekir.
+            not_supported_browser_description: Görünüşe göre Mütevelli olarak hareket etmek için kullanılamayan bir web tarayıcısı kullanıyorsunuz. Trustee görevlerinizi tamamlayabilmek için tarayıcınızın en son sürümünü kullandığınızdan emin olun veya en popüler tarayıcılardan herhangi birini kullanmayı deneyin.
+            not_supported_browser_title: Mütevelli olarak hareket etmek için tarayıcıyı yükseltin
+            trustee_role_description: Bu platformda yapılan seçimlerin bir kısmında kayyum olarak görevlendirildiniz.
+          update:
+            success: Tanımlama ortak anahtarınız başarıyla saklandı.
+      votes:
+        ballot_decision:
+          audit: "( Denetim oylaması )"
+          back: Oylama sürecini yeniden başlatın
+          ballot_hash: 'Oy pusulası tanımlayıcınız:'
+          cast: Oyunuzu bitirmek için oy kullanın
+          description: Burada, doğru bir şekilde sayılması için oy pusulanızı kullanma seçeneklerine sahipsiniz veya alternatif olarak, oy pusulanızın doğru bir şekilde şifrelenip şifrelenmediğini denetleyebilirsiniz. Güvenlik nedeniyle, oy pusulanızı denetlemek onu bozacaktır. Bu, oyunuzu kullanmak için oylama sürecini yeniden başlatmanız gerektiği anlamına gelir.
+          header: 'Oy pusulası şifrelidir: yayınlayın veya denetleyin'
+        casting:
+          header: Oy vermek...
+          text: Oylarınız sandıkta atılıyor.
+        confirm:
+          answer: Cevap
+          answer_number: cevap %{number}
+          confirm: Onaylamak
+          edit: düzenlemek
+          header: Oyunuzu onaylayın
+          intro: İşte vermek üzere olduğunuz oylamanın bir özeti. <br> Lütfen oyunuzu onaylayın veya yanıtlarınızı düzenleyin.
+          nota_option: Boşluk
+          question: Soru %{count}
+        confirmed:
+          back: Seçimlere geri dön
+          experience: Deneyimin nasıldı?
+          feedback: Bize biraz geribildirim verin
+          header: oy onaylandı
+          lead: Oyunuz kullanıldı!
+          text: 'Oyununuzun sandıklara başarıyla eklendiğini şu tanımlayıcıyla kontrol edebilirsiniz: <strong class="evote__poll-id">%{e_vote_poll_id}</strong>'
+          verify_link: Kontrol etmek için tanımlayıcıyı kopyalayın ve <a href="%{link}">oy doğrulama sayfasına</a> yapıştırın
+        create:
+          error: Oy verme işleminde bir sorun oluştu. Lütfen tekrar deneyin.
+        encrypting:
+          header: Oylama şifreleniyor...
+          text: Oyunuzun gizliliğini sağlamak için oy pusulanız şifreleniyor.
+        failed:
+          header: Oylama başarısız oldu
+          lead: Oyunuz verilmedi!
+          text: Bir şeyler ters gitti, lütfen tekrar deneyin.
+          try_again: Tekrar deneyin
+        header:
+          ballot_decision: Oyunuzu kullanın veya denetleyin
+          casting: oy verme
+          confirm: Oyunuzu onaylayın
+          confirmed: oy onaylandı
+          encrypting: Oylamanın şifrelenmesi
+          failed: Oylama başarısız oldu
+        messages:
+          invalid_token: Oylama kabinindeki oturumunuz geçerli değil. Tekrar oy vermeyi deneyin.
+          not_allowed: Şu anda bu seçimde oy kullanmanıza izin verilmiyor.
+        modal:
+          close: Kapalı
+          proposal_header: 'teklifler:'
+        new:
+          answer_choices: En fazla %{choices} yanıt seçebilirsiniz
+          more_information: Daha fazla bilgi
+          nota_option: Boş/Yukarıdakilerin hiçbiri
+          preview_alert: Bu, oylama kabininin bir önizlemesidir.
+          question_steps: Soru %{current_step} / %{total_steps}
+          selections: "%{selected} / %{max_selections}<br> seçim"
+        onboarding_modal:
+          close: Modeli kapat
+          create_account: Hesap oluşturmak
+          description: Platformda yeni bir hesap oluşturmak istiyor musunuz? Süreçlere katılabilecek ve organizasyonun aktif bir parçası olabileceksiniz.
+          no_account: Hayır, teşekkürler.
+          title: Platformda yeni misiniz?
+        update:
+          error: Oy durumu güncellenirken bir sorun oluştu. Lütfen tekrar oy verin.
+        verify:
+          content:
+            heading: Oyunuzu doğrulayın
+            info: Bu doğrulayıcı, şifreli bir metin dizisiyle tanımlanan oyununuzun doğru bir şekilde kullanıldığını ve oy sandığının içinde olduğunu kontrol eder.
+          error:
+            header: Oy bulunamadı!
+            info: Oy kodu %{link} sandıkta bulunamadı, tekrar deneyin.
+          form:
+            back: platforma geri dön
+            submit: Kontrol etmek
+            vote_identifier: 'Tanımlayıcı kod:'
+            vote_identifier_help: Bu, oyunuzu kullandıktan sonra size verilen tanımlayıcıdır (oylama kabinine girmek için kullanılan kod değil).
+          header:
+            title: Oyunuzu doğrulayın
+          success:
+            header: Bulunan oy!
+            info: Şifreli oyunuzu %{link} sandıkta
+        voting_step:
+          back: Geri
+          continue: Sonraki
+      warnings:
+        no_elections_warning: Arama kriterlerinize uyan seçim yok veya planlanmış bir seçim yok.
+        no_scheduled_elections_warning: Şu anda planlanmış bir seçim yok, ancak burada listelenen tüm geçmiş seçimleri bulabilirsiniz.
+    events:
+      elections:
+        election_published:
+          email_intro: "%{resource_title} seçimi artık %{participatory_space_title} için etkin. Bu sayfadan görebilirsiniz:"
+          email_outro: "%{participatory_space_title}'ı takip ettiğiniz için bu bildirimi aldınız. Önceki bağlantıyı izleyerek bildirim almayı durdurabilirsiniz."
+          email_subject: "%{resource_title} seçimi artık %{participatory_space_title} için etkin."
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> seçimi artık %{participatory_space_title} için etkin.
+        trustees:
+          new_election:
+            email_intro: "%{resource_title} seçimi için mütevelli olarak eklendiniz."
+            email_outro: Bu bildirimi, %{resource_title} seçimi için kayyum olarak eklendiğiniz için aldınız.
+            email_subject: "%{resource_title} seçimi için kayyumsunuz.."
+            notification_title: <a href="%{resource_path}">%{resource_title}</a> seçiminin mütevellisisiniz.
+          new_trustee:
+            email_intro: Bir yönetici sizi %{resource_name} için mütevelli olarak ekledi. Genel anahtarınızı <a href='%{trustee_zone_url}'>güvenli bölgenizde</a> oluşturmalısınız
+            email_outro: Bu bildirimi, %{resource_name} için mütevelli olarak eklendiğiniz için aldınız.
+            email_subject: "%{resource_name} için bir mütevellisiniz."
+            notification_title: <a href="%{participatory_space_url}">%{resource_name}</a> için bir mütevellisiniz.
+        votes:
+          accepted_votes:
+            email_intro: 'Oyunuz kabul edildi! Oylama jetonunuzu kullanarak: %{encrypted_vote_hash}, oyunuzu <a href="%{verify_url}">buradan</a> doğrulayabilirsiniz.'
+            email_outro: "%{resource_name} seçimi için oy verdiğiniz için bu bildirimi aldınız."
+            email_subject: "%{resource_name} için verdiğiniz oyun kabul edildi."
+            notification_title: 'Oyunuz kabul edildi. Oy belirtecinizi kullanarak <a href="%{verify_url}">buradan</a> oyunuzu doğrulayın: %{encrypted_vote_hash}'
+      votings:
+        polling_officers:
+          polling_station_assigned:
+            email_intro: <a href="%{resource_url}">%{resource_title}</a>'de Oy Verme Yeri %{polling_station_name}'in %{role}'ı olarak atandınız. Oy Verme Yerini özel <a href="%{polling_officer_zone_url}">Oylama Görevlisi Bölgesinden</a> yönetebilirsiniz.
+            email_outro: "%{polling_station_name}'in %{role}'ı olarak atandığınız için bu bildirimi aldınız."
+            email_subject: "%{polling_station_name} Oy Verme Yerinden %{role} sizsiniz."
+            notification_title: <a href="%{resource_path}">%{resource_title}</a> oylamasında %{polling_station_name} Oylama Merkezinin %{role} üyesisiniz.
+        send_access_code:
+          instruction: 'İşte istediğiniz Erişim Kodunuz: %{access_code}. Bununla %{voting}''e katılabileceksiniz.'
+          subject: "%{voting}'a katılmak için Erişim Kodunuz"
+    help:
+      participatory_spaces:
+        votings:
+          contextual: "<p><strong>Oylama</strong>, bir kuruluşu oluşturan herkese net bir soru sormanıza, oylamaya katılmak için çağrıda bulunmanıza, bir lehte veya aleyhte tartışma başlatmanıza ve talimat vermenize olanak tanıyan bir alandır. cevap. Oylama tarihi geldiğinde oy verebilir ve oy sonuçlarını yayınlayabilirsiniz.</p> <p>Örnekler: Oylamalar, bir kuruluşu etkileyen hemen hemen her konuda olabilir: bazı örnekler, kuruluşun adını veya logosunu değiştirmektir. birkaç alternatif sunmak, daha büyük bir organizasyonun parçası olmak için Evet veya Hayır'a karar vermek, yeni bir stratejik planı veya bir çalışma grubunun sonucunu onaylamak veya reddetmek veya pozisyonların en fazla 1, 2 veya 3 görev olarak kalması gerektiğini belirlemek.</ p>\n"
+          page: "<p><strong>Oylama</strong>, bir kuruluşu oluşturan herkese net bir soru sormanıza, oylamaya katılmak için çağrıda bulunmanıza, bir lehte veya aleyhte tartışma başlatmanıza ve talimat vermenize olanak tanıyan bir alandır. cevap. Oylama tarihi geldiğinde oy verebilir ve oy sonuçlarını yayınlayabilirsiniz.</p> <p>Örnekler: Oylamalar, bir kuruluşu etkileyen hemen hemen her konuda olabilir: bazı örnekler, kuruluşun adını veya logosunu değiştirmektir. birkaç alternatif sunmak, daha büyük bir organizasyonun parçası olmak için Evet veya Hayır'a karar vermek, yeni bir stratejik planı veya bir çalışma grubunun sonucunu onaylamak veya reddetmek veya pozisyonların en fazla 1, 2 veya 3 görev olarak kalması gerektiğini belirlemek.</ p>\n"
+          title: Oylama nedir?
+    menu:
+      votings: oylamalar
+    statistics:
+      elections_count: seçimler
+      votings_count: oylamalar
+    votings:
+      admin:
+        ballot_styles:
+          create:
+            error: Bu oy pusulası stili oluşturulurken bir sorun oluştu
+            success: Oy pusulası stili başarıyla oluşturuldu
+          destroy:
+            invalid: Bu oylama stili silinirken bir sorun oluştu
+            success: Oy pusulası stili başarıyla silindi
+          edit:
+            title: Oy pusulası stilini düzenle
+            update: Güncelleme
+          form:
+            code_help: 'İpucu: Kod, nüfus sayımı ile oy pusulası stili arasındaki bağlantıdır. Nüfus sayımı verilerini yüklerken, kodla eşleşen her girişe bir oy pusulası stili atanacaktır.'
+            election: Seçim
+            questions: Bu oy pusulası stili için sorular
+            questions_help: 'İpucu: Bu oy pusulası stiline atanan seçmenlere sunulacak seçim bileşenlerinden soruları seçin'
+          index:
+            actions:
+              confirm_destroy: Emin misin?
+              destroy: Silmek
+              edit: Düzenlemek
+              new: Yeni
+              title: Hareketler
+            associated_census_data: İlişkili nüfus sayımı girişleri
+            explanation_callout: Bir oylama stili, bir seçmenin kabinde hangi soruların sunulacağını belirtir. Oy pusulası tarzında, bu oylamanın seçim bileşenlerinden hangi soruların oy pusulasına ait olduğunu seçebilirsiniz. Oy pusulası stil kodu, nüfus sayımından bir seçmeni kabinde sunulacak oy pusulasıyla eşleştirmek için kullanılır. Her zaman tüm soruları sunmak istiyorsanız herhangi bir oylama stili oluşturmayın.
+            title: Oylama Stilleri
+          new:
+            create: Yaratmak
+            title: Oy pusulası stili oluştur
+          update:
+            invalid: Bu oy pusulası stili güncellenirken bir sorun oluştu
+            success: Oy pusulası stili başarıyla güncellendi
+        content_blocks:
+          highlighted_votings:
+            max_results: Gösterilecek maksimum öğe sayısı
+          landing_page:
+            attachments_and_folders:
+              name: Oylama ekleri ve klasörleri
+            description:
+              name: Oylama açıklaması
+            elections:
+              name: Oylama seçimleri
+            header:
+              name: Oylama başlığı
+            html_block_1:
+              name: Oylama html bloğu 1
+            html_block_2:
+              name: Oylama html bloğu 2
+            html_block_3:
+              name: Oylama html bloğu 3
+            metrics:
+              name: Oylama metrikleri
+            polling_stations:
+              name: Oy sandıkları
+            stats:
+              name: oylama istatistikleri
+            timeline:
+              name: Oylama zaman çizelgesi
+        index:
+          not_published: yayınlanmamış
+          published: Yayınlanan
+        landing_page:
+          content_blocks:
+            edit:
+              update: Güncelleme
+          edit:
+            active_content_blocks: Aktif içerik blokları
+            inactive_content_blocks: Etkin olmayan içerik blokları
+        menu:
+          votings: oylamalar
+          votings_submenu:
+            attachment_collections: Klasörler
+            attachment_files: Dosyalar
+            attachments: Ekler
+            ballot_styles: Oylama Stilleri
+            census: nüfus sayımı
+            components: Bileşenler
+            info: Bilgi
+            landing_page: Açılış sayfası
+            monitoring_committee: İzleme Komitesi
+            monitoring_committee_election_results: Sonuçları Doğrula
+            monitoring_committee_members: Üyeler
+            monitoring_committee_polling_station_closures: Sertifikaları Doğrula
+            monitoring_committee_verify_elections: Seçimleri Doğrula
+            polling_officers: Oylama Görevlileri
+            polling_stations: Oy kullanma istasyonları
+        models:
+          ballot_style:
+            fields:
+              code: kod
+            name: Oy pusulası stili
+          monitoring_committee_member:
+            fields:
+              email: E-posta
+              name: İsim
+            name: İzleme Komitesi Üyesi
+          polling_officer:
+            fields:
+              email: E-posta
+              name: İsim
+              polling_station: Seçim istasyonu (rol)
+            name: Oylama Görevlisi
+          polling_station:
+            fields:
+              address: Adres
+              polling_station_managers: Yöneticiler
+              polling_station_president: Başkan
+              title: Başlık
+            name: Oy verme yeri
+          voting:
+            fields:
+              created_at: oluşturuldu
+              promoted: Vurgulanan
+              published: Yayınlanan
+              title: Başlık
+        monitoring_committee_election_results:
+          actions:
+            title: Hareketler
+            view: Görüş
+          index:
+            title: Sonuçlarını görmek istediğiniz bir seçim seçin
+          results:
+            bulletin_board: Bülten Tahtası
+            election_totals: Seçim toplamları
+            polling_stations: oy kullanma istasyonları
+            result_types:
+              blank_answers: boş cevaplar
+              blank_ballots: Boş oy pusulaları
+              null_ballots: boş oy pusulaları
+              total_ballots: Toplam oy
+              valid_ballots: Geçerli oy pusulaları
+            selected: Seçildi
+            title: "<i>%{election_title}</i> seçim sonuçları"
+            totals: Toplamlar
+          show:
+            change_election: Seçimi değiştir
+            publish_results: Sonuçları yayınla
+            publishing: Sonuçlar yayınlanıyor...
+          update:
+            invalid: Sonuçlar yayınlanırken bir sorun oluştu
+            rejected: Sonuçların yayınlanması Bülten Tahtası tarafından reddedildi. Tekrar deneyin veya sistem yöneticisiyle iletişime geçin.
+            success: Sonuçlar başarıyla yayınlandı
+        monitoring_committee_members:
+          create:
+            invalid: Bu izleme komitesi üyesi oluşturulurken bir sorun oluştu
+            success: İzleme komitesi üyesi başarıyla oluşturuldu
+          destroy:
+            invalid: Bu izleme komitesi üyesi silinirken bir sorun oluştu
+            success: İzleme komitesi üyesi başarıyla silindi
+          form:
+            existing_user: mevcut katılımcı
+            non_user: Yeni katılımcı davet et
+            select_user: Ad, e-posta veya takma adla arama yapın
+            user_type: katılımcı türü
+          index:
+            title: izleme komitesi
+          new:
+            create: Yaratmak
+            title: İzleme komitesi üyesi oluştur
+        monitoring_committee_polling_station_closures:
+          actions:
+            title: Hareketler
+            validate: Doğrula
+            view: Görüş
+          closures:
+            change_election: Seçimi değiştir
+            signed: İmzalandı mı?
+            title: "<i>%{election_title}</i> seçimi için oy kullanma istasyonları"
+            validated: Doğrulandı mı?
+          edit:
+            change_polling_station: Seçim Merkezlerine Geri Dön
+            monitoring_committee_notes: Notlar
+            monitoring_committee_notes_placeholder: Herhangi bir olayı buradan bildirin
+            title: "<i>%{polling_station_title}</i> sandık merkezindeki <i>%{election_title}</i> seçim sonuçları"
+          elections:
+            title: Doğrulamak istediğiniz bir seçim seçin
+          show:
+            change_polling_station: Seçim Merkezlerine Geri Dön
+            monitoring_committee_notes: İzleme Komitesinden Açıklamalar
+          validate:
+            error: Kapatma doğrulanırken bir sorun oluştu
+            success: Kapatma doğru bir şekilde doğrulandı
+        monitoring_committee_verify_elections:
+          index:
+            download: İndirmek
+            how_to_checksum: 'İndirdiğiniz dosyanın indirme işlemi sırasında bozulmadığından veya kurcalanmadığından emin olmak için konsolunuzda aşağıdaki komutu çalıştırın ve çıktının yukarıda bildirilen sağlama toplamıyla eşleştiğini kontrol edin:'
+            how_to_download: Bir seçimi doğrulamak için doğrulanabilir dosyasını yukarıdaki tablodan indirin.
+            how_to_run_verifier: 'Dosyayı indirdikten ve düzgün olduğundan emin olduktan sonra, evrensel doğrulayıcıyı çalıştırmaya devam edebilirsiniz. <a href=''https://github.com/decidim/decidim-bulletin-board''>bu depoyu</a> kopyalayın ve kök klasörden aşağıdaki komutu çalıştırın:'
+            how_to_title: Bir seçimin geçerliliği nasıl doğrulanır?
+            not_available: Henüz mevcut değil
+            title: seçimler
+        polling_officers:
+          create:
+            invalid: Bu oylama görevlisi oluşturulurken bir sorun oluştu
+            success: Yoklama görevlisi başarıyla oluşturuldu
+          destroy:
+            invalid: Bu oylama görevlisi silinirken bir sorun oluştu
+            success: Yoklama görevlisi başarıyla silindi
+          form:
+            existing_user: mevcut katılımcı
+            non_user: Yeni katılımcı davet et
+            select_user: Ad, e-posta veya takma adla arama yapın
+            user_type: katılımcı türü
+          index:
+            role_manager: müdür
+            role_president: başkan
+            title: Oylama memurları
+          new:
+            create: Yaratmak
+            title: Oylama görevlisi oluştur
+          polling_officers_picker:
+            choose_polling_officers: Seçim görevlilerini seçin
+            close: Kapalı
+            more_polling_officers: "%{number} daha fazla sandık görevlisi var. Bunları bulmak için aramanızı hassaslaştırın."
+            no_polling_officers: Arama kriterlerinize uyan sandık görevlisi yok veya sandık görevlisi yok.
+        polling_stations:
+          create:
+            invalid: Bu oylama merkezi oluşturulurken bir sorun oluştu
+            success: Oylama istasyonu başarıyla oluşturuldu
+          destroy:
+            invalid: Bu oylama istasyonu silinirken bir sorun oluştu
+            success: Oylama merkezi başarıyla silindi
+          edit:
+            title: Oylama istasyonunu düzenle
+            update: Oylama istasyonunu güncelle
+          form:
+            address_help: 'Adres: Geocoder tarafından konumu bulmak için kullanılır'
+            location_help: 'Konum: seçmenlere yöneltilen ve sandık merkezinin tam yerini ima eden mesaj'
+            location_hints_help: 'Konum ipuçları: ek bilgi. Örnek: Binanın oy verme yerinin bulunduğu katı.'
+            polling_station_managers_help: 'Oy verme yeri yöneticileri: Oy kullanma yeri yöneticisi olarak görev yapacak görevliler. Görevlilerin, Oylama Görevlilerinde zaten oluşturulduğundan ve başka bir oy kullanma istasyonuna atanmadığından emin olun.'
+            polling_station_president_help: 'Sandık görevlisi: Sandık başkanı olarak görev yapacak görevli. Görevlinin, Oylama Görevlilerinde zaten oluşturulduğundan ve başka bir oy verme istasyonuna atanmamış olduğundan emin olun'
+            select_president: Oy verme merkezinin başkanı olarak bir sandık görevlisi seçin
+          index:
+            title: oy kullanma istasyonları
+          new:
+            create: Yaratmak
+            title: Oylama istasyonu oluştur
+          update:
+            invalid: Bu oylama istasyonu güncellenirken bir sorun oluştu
+            success: Yoklama merkezi başarıyla güncellendi
+        titles:
+          votings: oylamalar
+        votings:
+          actions:
+            confirm_destroy: Emin misin?
+            destroy: Tahrip etmek
+            new_voting: Yeni Oylama Alanı
+            publish: Yayınla
+            unpublish: yayından kaldır
+          create:
+            invalid: Bu oylama oluşturulurken bir sorun oluştu
+            success: Oylama başarıyla oluşturuldu
+          edit:
+            add_election_component: Bu oylama için yapılandırılmış seçiminiz yok. Lütfen Bileşenler bölümüne ekleyin
+            assign_missing_officers: Başkanı ve/veya Yöneticisi olmayan Sandıklar vardır. Lütfen bunları Oylama istasyonları bölümünden atayın
+            update: Güncelleme
+          form:
+            banner_image: Afiş resmi
+            census_contact_information: Nüfus sayımı iletişim bilgileri
+            census_contact_information_help: Bu iletişim bilgileri, nüfus sayımı ile ilgili sorunları bildirmek isteyen bir katılımcı içindir. Bir e-posta adresi, başka bir sitedeki iletişim formu, ziyaretçiler için bir anket vb. olabilir.
+            introductory_image: tanıtım resmi
+            promoted: terfi
+            select_a_voting_type: Lütfen bir oylama türü seçin
+            show_check_census_help: '"Oy kullanabilir miyim?" halka açık oylamalar menüsündeki bağlantı'
+            slug: sülük
+            slug_help: 'URL bilgileri, bu oylamaya işaret eden URL''leri oluşturmak için kullanılır. Yalnızca harfleri, sayıları ve kısa çizgileri kabul eder ve bir harfle başlamalıdır. Örnek: %{url}'
+            title: Başlık
+            voting_type:
+              hybrid: Hibrit
+              in_person: Şahsen
+              online: Çevrimiçi
+            voting_type_label: Oylama türü
+          new:
+            create: Yaratmak
+            title: Yeni Oylama
+          publish:
+            success: Oylama başarıyla yayınlandı
+          unpublish:
+            success: Oylama başarıyla yayından kaldırıldı
+          update:
+            invalid: Bu oylama güncellenirken bir sorun oluştu
+            success: Oylama başarıyla güncellendi
+      admin_log:
+        ballot_style:
+          create: "%{user_name}, %{space_name} alanında %{ballot_style_code} kodlu bir oy pusulası stili oluşturdu"
+          delete: "%{user_name}, %{space_name} alanındaki %{ballot_style_code} kodlu oylama stilini sildi"
+          update: "%{user_name} oy pusulası stilini %{space_name} alanındaki %{ballot_style_code} koduyla güncelledi"
+        census:
+          create: "%{user_name}, %{space_name} alanı için nüfus sayımını oluşturdu"
+          delete: "%{user_name}, %{space_name} alanı için nüfus sayımını sildi"
+          update: "%{user_name}, %{space_name} alanı için nüfus sayımını güncelledi"
+        monitoring_committee_member:
+          create: "%{user_name}, %{monitoring_committee_member_user} kullanıcısını %{space_name} alanında izleme komitesi üyesi olarak atadı"
+          delete: "%{user_name}, %{monitoring_committee_member_user} kullanıcısının %{space_name} alanındaki izleme komitesi üyeliği atamasını kaldırdı"
+        polling_officer:
+          create: "%{user_name}, %{polling_officer_user} kullanıcısını %{space_name} alanında yoklama görevlisi olarak atadı"
+          delete: "%{user_name}, %{polling_officer_user} kullanıcısının %{space_name} alanındaki yoklama görevlisi atamasını kaldırdı"
+        polling_station:
+          create: "%{user_name}, %{space_name} alanında %{resource_name} oylama istasyonunu oluşturdu"
+          delete: "%{user_name}, %{space_name} alanındaki %{resource_name} oylama istasyonunu sildi"
+          update: "%{user_name}, %{space_name} alanındaki %{resource_name} oylama istasyonunu güncelledi"
+        voting:
+          create: "%{user_name}, %{resource_name} oylamasını oluşturdu"
+          publish: "%{user_name}, %{resource_name} oylamasını yayınladı"
+          unpublish: "%{user_name}, %{resource_name} oylamasını yayından kaldırdı"
+      census:
+        admin:
+          census:
+            create:
+              invalid: Nüfus sayımı yüklenirken bir hata oluştu, lütfen daha sonra tekrar deneyin.
+              invalid_csv_header: CSV başlıkları eksik veya yanlış - lütfen talimatları dikkatlice okuyun
+            creating_data:
+              info_message: "<strong>Lütfen bekleyin</strong>, %{file} dosyasındaki %{raw_count} satırdan %{processed_count} işlendi (bu işlem birkaç dakika sürebilir)."
+            delete:
+              button: Tüm nüfus sayımı verilerini sil
+              confirm: Tüm nüfus sayımı verilerinin silinmesi geri alınamaz. Devam etmek istediğine emin misin?
+            destroy:
+              error: Nüfus sayımı silinirken bir hata oluştu, lütfen daha sonra tekrar deneyin.
+              success: Sayım verileri silindi
+            export_access_codes:
+              button: Oylama Erişim Kodlarını Dışa Aktar
+              callout: Artık erişim kodlarını dışa aktarmaya devam edebilirsiniz. Bu sadece bir kez yapılabilir. Dışa aktarmayı başlattığınızda, <strong>%{email}</strong> için talimatları içeren bir e-posta alacaksınız.
+              confirm: Erişim kodlarını yalnızca bir kez dışa aktarabilirsiniz. <strong>%{email}</strong> e-posta hesabına erişiminiz olduğundan emin olun.
+              file_not_exist: Dosya mevcut değil
+              launch_error: Erişim kodlarını dışa aktarmayı başlatma sorunu
+              launch_success: Erişim kodları dışa aktarımı başlatıldı. Kısa süre içinde %{email}'a bir e-posta alacaksınız
+            exporting_access_codes:
+              info_message: "<strong>Lütfen bekleyin</strong>, dışa aktarma hazırlanıyor, kısa bir süre sonra %{email}'a alacaksınız (bu birkaç dakika sürebilir)."
+            freeze:
+              callout: Nüfus sayımı dondurulmuştur ve değiştirilemez.
+              help_html: Nüfus sayımı verileri yüklendi, kodlar başarıyla oluşturuldu ve dışa aktarıldı.<br> <strong>Artık seçime başlamaya hazırsınız.</strong><br> Kendi imkanlarınızı kullanarak nüfus sayımınız boyunca dağıtmak için ayrı kodlarla dışa aktarılan CSV'yi kullanın veya herkesin kendi nüfus sayımı verilerini kullanarak bu kodu almasına izin vermek için "Oy verebilir miyim" sekmesini etkinleştirin.
+            generate_access_codes:
+              button: Oylama Erişim Kodları oluşturun
+              callout: Artık erişim kodlarını oluşturmaya devam edebilirsiniz. Erişim kodlarını oluşturduktan sonra nüfus sayımını artık değiştiremeyeceğinizi unutmayın.
+              confirm: Devam ederseniz, nüfus sayımını değiştiremeyeceksiniz.
+              info_message_all: "%{file} dosyasından (%{raw_count} / %{data_count}) <strong>tüm satırlar başarıyla içe aktarıldı</strong>."
+              info_message_warn: "%{data_count} kayıtları oluşturulduğundan ve yüklenen %{file} dosyasında %{raw_count} satır bulunduğundan lütfen hiçbir verinin eksik olup olmadığını kontrol edin."
+              launch_error: Erişim kodları oluşturmayı başlatma sorunu
+              launch_success: Kod üretimi başlatıldı.
+              start_over: Lütfen mevcut nüfus sayımını silin ve geçerli satırlara sahip uygun bir CSV dosyasıyla baştan başlayın.
+            generating_access_codes:
+              info_message: "<strong>Lütfen bekleyin</strong>, oylama erişim kodları oluşturuluyor (bu işlem birkaç dakika sürebilir)..."
+            new:
+              file_help:
+                explanation: 'Dosya için rehberlik:'
+                message_1: Yalnızca CSV (.csv) dosyalarına izin verilir.
+                message_2: Sütunlar arasındaki ayırıcı noktalı virgül (";") olmalıdır.
+              has_ballot_styles_message: Oylama Stillerini ayarlarsınız. Lütfen CSV'deki "%{ballot_style_code_header}" alanının istenen Oylama Stili koduna karşılık geldiğinden emin olun.
+              info_message: "<strong>Henüz bir nüfus sayımı yok.</strong> Bir CSV dosyasını içe aktararak oluşturmak için lütfen aşağıdaki formu kullanın."
+              missing_ballot_styles_message: 'Bu oylama için henüz bir Oylama Tarzı yok. Koşullu sorular istiyorsanız (yani: ikamet ettiğiniz semte/bölgeye bağlı olarak seçmene farklı sorular sunun), <a href=%{ballot_styles_admin_path}>Oylama Stillerini</a> <strong> ayarlamanız gerekir. sayımı içe aktarmadan önce</strong>. Tüm seçmenlere aynı soruları sormak istiyorsanız, nüfus sayımı içe aktarma prosedürüne devam edebilirsiniz.'
+              submit: CSV gönder
+              title: Sayımı oluştur
+            show:
+              heading: Oylama alanı sayımı
+            upload_info:
+              csv_example_with_ballot_style: 'Oy pusulası stilleri <strong>ile</strong> dosya örneği:'
+              csv_example_without_ballot_style: 'Oy pusulası stilleri <strong>olmayan</strong> bir dosya örneği:'
+              csv_header_after: Oylama stillerine/koşullu sorulara ihtiyacınız yoksa son alanı ("%{ballot_style_code_header}") dahil etmeyin
+              csv_header_before: 'Nüfus sayımı dosyası, aşağıdaki başlığa sahip bir CSV dosyası olmalıdır:'
+        document_types:
+          dni: DNI
+          nie: NIE
+          passport: Pasaport
+        export_mailer:
+          access_codes_export:
+            click_button: 'Erişim kodları verilerini indirmek için bir sonraki bağlantıya tıklayın.<br/>Dosya %{date} tarihine kadar mevcut olacak.<br/><a href="https://www.7-zip.org/">7''ye ihtiyacınız olacak -Zip</a> (Windows için), <a href="https://www.keka.io/en/">Keka</a> (MacOS için) veya <a href="https://peazip .github.io">PeaZip</a> (Linux için) ile açın. Şifre: %{password}'
+            download: İndirmek
+            subject: "%{voting_title} için oylama erişim kodlarının dışa aktarımı mevcuttur"
+        vote_flow:
+          already_voted_in_person: Bu katılımcı zaten şahsen oy kullandı ve oy kullanma hakkına sahip değil.
+          datum_not_found: Verilen veriler hiçbir seçmenle eşleşmiyor.
+      content_blocks:
+        highlighted_votings:
+          name: Vurgulanan oylamalar
+        landing_page:
+          description:
+            title: Bu oylama hakkında
+          metrics:
+            heading: Metrikler
+          polling_stations:
+            heading: oy kullanma istasyonları
+            no_polling_stations: Henüz sandık yok.
+          timeline:
+            heading: Zaman çizelgesi
+      monitoring_committee_members:
+        actions:
+          confirm_destroy: Emin misin?
+          destroy: Silmek
+          new: Yeni Üye
+          title: Hareketler
+      pages:
+        home:
+          highlighted_votings:
+            active_votings: Aktif oylamalar
+            see_all_votings: Tüm oylamaları gör
+            votings_button_title: Tüm oylamaları gösteren Oylamalar sayfasına bağlantı
+      polling_officer_zone:
+        closures:
+          back_to_polling_stations: Seçim merkezlerine geri dön
+          certify:
+            add_images: Görsel ekle
+            error: Sertifika eklenirken bir hata oluştu, lütfen tekrar deneyin.
+            form_legend: Seçim Kapanış Sertifikasının bir resmini yükleyin
+            heading: Oyların yeniden sayılması - Sertifika yükleyin
+            info_text: Lütfen Seçim Kapanış Sertifikasının bir resmini yükleyin.
+            submit: sertifikayı yükle
+            success: Sertifika başarıyla yüklendi.
+          create:
+            error: Kapatma oluşturulurken bir hata oluştu, lütfen daha sonra tekrar deneyin.
+            success: Kapatma başarıyla oluşturuldu.
+          edit:
+            heading: Oyların yeniden sayılması - Cevapların yeniden sayılması
+            info_text: Lütfen her soru için toplam cevap sayısını belirtiniz.
+            modal_ballots_results_count_error:
+              close_modal: Kapalı
+              info_text: Toplam oy pusulası sayısı, toplam zarf sayısıyla eşleşmiyor. Lütfen oyların toplamını gözden geçirin.
+              title: Oyların toplamı birleşmiyor
+            save_recount: Yeniden sayımı kaydet
+            total_ballots: Toplam oy
+            total_blank_ballots: Toplam boş oy
+            total_null_ballots: Toplam geçersiz oy
+            total_valid_ballots: Toplam geçerli oy
+          new:
+            election: 'Seçim:'
+            heading: oyların yeniden sayılması
+            info_text: 'Lütfen bu Sandıkta yeniden sayılan toplam oy pusulası (zarf) sayısını belirtiniz:'
+            modal_ballots_count_error:
+              btn_validate_total: Oy pusulalarının toplam yeniden sayımını doğrulama
+              close_modal: Kapalı
+              info_explanation_text: 'Lütfen toplam oy sayısını gözden geçirin. Toplam sayı yanlışsa, İzleme Komitesine bir açıklama sağlamalısınız:'
+              info_text: Tanıtılan toplam oy pusulası (zarf) sayısı, bu Oy Sandığı'nda oy kullanan kişilerin kaydıyla eşleşmiyor.
+              message_for_monitoring_committee: İzleme Komitesi Mesajı
+              review_recount: Yeniden sayımı gözden geçirin
+              text_area_placeholder: Lütfen mesajınızı yazın
+              title: Toplam kayıtlar toplanmaz
+              total_ballots: 'Toplam oy sayısı:'
+              total_people: 'Toplam kişi:'
+            polling_station: 'Oy verme yeri:'
+            submit: Toplam sayıyı doğrula
+            total_ballots_count: oy sayısı
+          show:
+            heading: oyların yeniden sayılması
+            info_text: Oy verme merkezi seçim kapanışı.
+          sign:
+            cancel: İptal etmek
+            check_box: Bunu inceledim ve fiziksel seçim kapatma sertifikasıyla aynı
+            close_modal: Kapalı
+            confirm: Tamam, devam et
+            error: Bir hata oluştu. Lütfen tekrar deneyin.
+            heading: Oyların yeniden sayılması - İmza kapatma
+            info_text: Devam ederseniz, artık bilgilerin hiçbirini değiştiremezsiniz, bu işlem geri alınamaz.
+            submit: kapanışı imzala
+            success: Kapatma başarıyla imzalandı.
+            title: İşlem geri alınamaz
+          update:
+            error: Kapatma sonuçları güncellenirken bir hata oluştu, lütfen daha sonra tekrar deneyin.
+            success: Kapatma sonuçları başarıyla güncellendi.
+        in_person_votes:
+          complete_voting:
+            available_answers: 'Mevcut cevaplar:'
+            census_verified: Bu katılımcı henüz şahsen oy kullanmadı.
+            census_verified_with_online_vote: Bu katılımcı zaten çevrimiçi oy kullandı. Şahsen oy kullanmaları halinde önceki oyları geçersiz sayılacak ve bu kesin oy olacaktır.
+            complete_voting: Tam oylama
+            identify_another: Başka bir katılımcı tanımlayın
+            questions_title: 'Aşağıdaki sorularda oy kullanma hakları vardır:'
+            questions_title_voted: 'Bu katılımcı zaten çevrimiçi olarak oy kullandı ve aşağıdaki sorularda oy kullanma hakkına sahip:'
+            voted: Katılımcı oy kullandı
+          create:
+            error: Oy kaydedilmedi. Lütfen tekrar deneyin.
+          in_person_form:
+            census_not_present: Bu katılımcı nüfus sayımında yer almıyor.
+            census_not_present_description: Nüfus sayımı şikayet ofisine gitmeli veya destekle iletişime geçmelidirler.
+            date_of_birth: Doğum tarihi
+            day: Gün
+            day_placeholder: DD
+            document_number: Belge Numarası
+            document_number_placeholder: kimlik Numarası
+            month: Ay
+            month_placeholder: AA
+            select: Belgenin türünü seçin
+            title: 'Belge türünü seçin ve katılımcının belge numarasını girin:'
+            validate_document: Belgeyi doğrula
+            year: Yıl
+            year_placeholder: YYYY
+          new:
+            back: Seçim merkezlerine geri dön
+            title: Bir katılımcıyı tanımlayın ve doğrulayın
+          show:
+            back: Seçim merkezlerine geri dön
+            title: Şahsen oyların kaydedilmesi bekleniyor
+          update:
+            error: Oylama kaydedilirken bir hata oluştu. Lütfen tekrar deneyin.
+            success:
+              accepted: Oylama başarıyla kaydedildi.
+              rejected: Oylama Bülten Kurulu tarafından kabul edilmedi. Lütfen sistem yöneticisi ile iletişime geçin.
+          verify_document:
+            census_present: Bu katılımcı nüfus sayımında listelenmiştir.
+            name: İsim
+            title: 'Aşağıdaki verilerin doğruluğunu kontrol edin:'
+            verify_document: Belgeyi doğrula
+        menu:
+          polling_officer_zone: Yoklama Görevlisi bölgesi
+        polling_officers:
+          index:
+            polling_officer_role_description: Bu platformda kutlanan bazı seçimlerde Sandık Görevlisi (Başkan veya Yönetici) olarak görevlendirildiniz.
+            polling_station:
+              address: Adres
+              count_votes: oyları say
+              election: Seçim
+              identify_person: Bir kişiyi tanımlayın
+              name: İsim
+              no_polling_stations: Henüz herhangi bir Oylama Merkezine atanmadınız.
+              role: Rolün
+              show_closure: Kapatmayı görüntüle
+              title: Oy kullanma istasyonları
+              voting: oylama
+      polling_officers:
+        actions:
+          confirm_destroy: Emin misin?
+          destroy: Silmek
+          new: Yeni
+          title: Hareketler
+        roles:
+          manager: Müdür
+          president: Başkan
+          unassigned: Atanmamış
+      polling_station_closure_recount:
+        nota_option: Boş/Yukarıdakilerin hiçbiri
+        polling_officer_notes: 'Oylama memuru notları:'
+        polling_officer_notes_blank: not yok
+        recount_summary: 'Yeniden sayım özeti:'
+        signed: İmzalı
+        total_ballots: 'Toplam oy sayısı:'
+        total_blank_ballots: 'Toplam boş oy pusulası:'
+        total_null_ballots: 'Toplam geçersiz oy sayısı:'
+        total_valid_ballots: 'Toplam geçerli oy sayısı:'
+      polling_stations:
+        actions:
+          confirm_destroy: Emin misin?
+          destroy: Silmek
+          edit: Düzenlemek
+          new: Yeni
+          title: Hareketler
+      votings:
+        access_code_modal:
+          email: "%{email}'a e-posta ile gönder"
+          info: Katılmak için bir Erişim Koduna ihtiyacınız var. Posta ile almadıysanız, size yeni bir tane gönderebiliriz.
+          no_email: Kullanılabilir e-posta yok
+          no_sms: telefon numarası yok
+          sms: "%{sms}'a SMS ile gönder"
+          title: Erişim Kodu Alın
+        check_census:
+          check_status: Durumu kontrol et
+          description: Burada, bu oylamaya katılma hakkınız olup olmadığını öğrenmek için nüfus sayımı verilerinizi kontrol etme seçeneğine sahipsiniz. Zaten bir erişim kodunuz olmalıdır, ancak onu kaybettiyseniz, verileriniz doğru olduğunda tekrar isteyebilirsiniz.
+          error:
+            info: 'Lütfen tekrar deneyin. Sistemdeki verilerin hatalı olduğunu düşünüyorsanız buradan bildirebilirsiniz: %{census_contact_information}'
+            title: Girdiğiniz veriler bu oylama için nüfus sayımında yer almıyor
+          form_title: 'Nüfus sayımı verilerinizi kontrol etmek için aşağıdaki formu doldurun:'
+          invalid: Nüfus sayımı kontrol edilirken bir sorun oluştu.
+          success:
+            access_link: e-posta yoluyla.
+            access_link_with_sms: SMS veya e-posta yoluyla.
+            info: Erişim Kodunuzu zaten posta yoluyla almış olmalısınız. Elinizde yoksa buradan talep edebilirsiniz.
+            title: Nüfus sayımı verileriniz doğru!
+          title: Oy kullanabilir miyim?
+        check_fields:
+          date_of_birth: Doğum tarihi
+          day: Gün
+          day_placeholder: DD
+          document_number: Belge Numarası
+          document_number_placeholder: kimlik Numarası
+          document_type: Belge Türü
+          month: Ay
+          month_placeholder: AA
+          postal_code: Posta Kodu
+          postal_code_placeholder: posta kodu numarası
+          select: Belgenin türünü seçin
+          year: Yıl
+          year_placeholder: YYYY
+        count:
+          title:
+            one: "%{count} oylama"
+            other: X_0 oy
+        elections_log:
+          bb_status: Seçim durumu
+          description: Seçim günlüğü size her oylamayla ilgili tüm bilgileri gösterecektir. Örneğin, anahtar törenin veya çetelenin durumu veya sonuçların zaten yayınlanıp yayınlanmadığı. Günlük bilgilerini istediğiniz seçime tıklayın.
+          election_log: Seçim Günlüğü
+          title: Seçim günlüğü
+        filters:
+          active: Aktif
+          all: Tüm
+          date: Tarih
+          finished: Bitti
+          search: Aramak
+          upcoming: Yaklaşan
+        filters_small_view:
+          close_modal: Modeli kapat
+          filter: filtre
+          filter_by: Tarafından filtre
+          unfold: açmak
+        index:
+          no_votings: Arama kriterlerinize uyan oylama yok.
+          only_finished: Şu anda planlanmış bir oylama yok, ancak burada listelenmiş bitmiş oylamaları bulabilirsiniz.
+          title: oylamalar
+        login:
+          access_code: Giriş kodu
+          access_code_placeholder: Giriş kodu
+          ask_for_a_new_one: Yenisini isteyin.
+          dont_have_access_code: Erişim kodunuz yok mu?
+          form_title: 'Oylamaya erişmek için aşağıdaki formu doldurun:'
+          start_voting: Oylamaya başla
+          step: Tanılama
+          title: Oy sayımı verilerim ile kendimi tanıtın
+        no_census_contact_information: Henüz iletişim bilgisi yok
+        orders:
+          label: 'Oyları şuna göre sırala:'
+          random: Rastgele
+          recent: En yeni
+        send_access_code:
+          invalid: Erişim Kodu gönderilirken bir sorun oluştu
+          success: Erişim Kodunuz başarıyla gönderildi
+        show:
+          dates: Tarih
+      votings_m:
+        badge_name:
+          finished: Bitti
+          ongoing: devam ediyor
+          upcoming: Yaklaşan
+        footer_button_text:
+          participate: Katılmak
+          view: Görüş
+          vote: Oy
+        unspecified: Belirtilmemiş
+        voting_type:
+          hybrid: Hibrit
+          in_person: Şahsen
+          online: Çevrimiçi
+        voting_types_label: Oylama türü
+  layouts:
+    decidim:
+      election_votes_header:
+        exit: çıkış
+      voting_navigation:
+        check_census: Oy kullanabilir miyim?
+        election_log: Seçim günlüğü
+        voting_menu_item: oylama
+      votings:
+        index:
+          promoted_votings: Vurgulanan oylamalar
+        promoted_voting:
+          more_info: Daha fazla bilgi
+          vote: Oy

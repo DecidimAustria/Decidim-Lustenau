@@ -1,0 +1,1095 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      area:
+        area_type: نوع منطقه
+        name: نام
+        organization: سازمان
+      area_type:
+        name: نام
+        organization: سازمان
+        plural: جمع
+      attachment:
+        attachment_collection_id: پوشه
+        description: شرح
+        file: فایل
+        title: نام پیوست یا تصویر
+      attachment_collection:
+        description: شرح
+        name: نام
+      category:
+        description: شرح
+        name: نام
+        parent_id: والدین
+      component:
+        name: نام
+        published_at: منتشر شده در
+        weight: موقعیت سفارش
+      id: شناسه
+      import:
+        user_group_id: ایجاد واردات به عنوان
+      newsletter:
+        body: بدن
+        subject: موضوع
+      organization:
+        admin_terms_of_use_body: بدنه برای شرایط استفاده از مدیر
+        alert_color: هشدار
+        available_authorizations: مجوزهای موجود
+        badges_enabled: نشان ها را فعال کنید
+        comments_max_length: حداکثر طول نظرات (0 را برای مقدار پیش فرض بگذارید)
+        cta_button_path: مسیر دکمه Call To Action
+        cta_button_text: متن دکمه Call To Action
+        customize_welcome_notification: اعلان خوش آمدگویی را سفارشی کنید
+        default_locale: محلی پیش فرض
+        description: شرح
+        enable_omnipresent_banner: نمایش بنر همه جا حاضر
+        enable_participatory_space_filters: فیلترهای فضای مشارکتی را فعال کنید
+        facebook_handler: کنترل کننده فیس بوک
+        favicon: آیکون
+        force_authentication: احراز هویت اجباری
+        force_users_to_authenticate_before_access_organization: کاربران را مجبور به احراز هویت قبل از دسترسی به سازمان کنید
+        from: آدرس ایمیل فرستنده
+        github_handler: کنترل کننده GitHub
+        header_snippets: تکه‌های سرصفحه
+        highlight_alternative_color: برجسته، جایگزین
+        highlight_color: برجسته
+        highlighted_content_banner_action_subtitle: زیرنویس دکمه اکشن
+        highlighted_content_banner_action_title: عنوان دکمه اکشن
+        highlighted_content_banner_action_url: URL دکمه اقدام
+        highlighted_content_banner_enabled: نمایش بنر محتوای هایلایت شده
+        highlighted_content_banner_image: تصویر
+        highlighted_content_banner_short_description: توضیح کوتاه
+        highlighted_content_banner_title: عنوان
+        host: میزبان
+        instagram_handler: گرداننده اینستاگرام
+        logo: لوگو
+        machine_translation_display_priority: اولویت نمایش ترجمه ماشینی
+        machine_translation_display_priority_original: ابتدا متن اصلی
+        machine_translation_display_priority_translation: ابتدا متن ترجمه شد
+        name: نام
+        official_img_footer: فوتر لوگوی رسمی
+        official_img_header: هدر لوگوی رسمی
+        official_url: URL رسمی سازمان
+        omnipresent_banner_short_description: توضیح کوتاه
+        omnipresent_banner_title: عنوان
+        omnipresent_banner_url: URL
+        organization_admin_email: ایمیل مدیریت سازمان
+        organization_admin_name: نام مدیر سازمان
+        organization_locales: مناطق سازمانی
+        primary_color: اولیه
+        reference_prefix: پیشوند مرجع
+        rich_text_editor_in_public_views: ویرایشگر متن غنی را برای شرکت کنندگان فعال کنید
+        secondary_color: ثانوی
+        secondary_hosts: میزبان های ثانویه
+        send_welcome_notification: ارسال اطلاعیه خوش آمد گویی
+        success_color: موفقیت
+        time_zone: منطقه زمانی
+        tos_version: نسخه شرایط خدمات
+        twitter_handler: کنترل کننده توییتر
+        user_groups_enabled: فعال کردن گروه ها
+        users_registration_mode: حالت ثبت نام کاربران
+        warning_color: هشدار
+        welcome_notification_body: بدنه اطلاع رسانی خوش آمدید
+        welcome_notification_subject: موضوع اعلان خوش آمد گویی
+        youtube_handler: کنترل کننده یوتیوب
+      scope:
+        code: کد
+        name: نام
+        organization: سازمان
+        parent_id: والدین
+        scope_type: نوع محدوده
+        scope_type_id: نوع محدوده
+      scope_type:
+        name: نام
+        organization: سازمان
+        plural: جمع
+      settings:
+        scope_id: محدوده
+      static_page:
+        allow_public_access: اجازه دسترسی بدون احراز هویت
+        changed_notably: تغییرات محسوسی رخ داده است.
+        content: محتوا
+        organization: سازمان
+        show_in_footer: در پاورقی نشان داده شود
+        slug: اسلاگ URL
+        title: عنوان
+        weight: موقعیت سفارش
+      static_page_topic:
+        description: شرح
+        show_in_footer: در پاورقی نشان داده شود
+        title: عنوان
+        weight: موقعیت سفارش
+      user_group_csv_verification:
+        file: فایل
+    errors:
+      models:
+        newsletter:
+          attributes:
+            base:
+              at_least_one_space: حداقل یک فضای مشارکتی را انتخاب کنید
+        organization:
+          attributes:
+            official_img_footer:
+              allowed_file_content_types: فایل تصویری نامعتبر است
+            official_img_header:
+              allowed_file_content_types: فایل تصویری نامعتبر است
+        participatory_space_private_user_csv_import:
+          attributes:
+            file:
+              malformed: فایل وارداتی نادرست است، لطفاً دستورالعمل ها را به دقت بخوانید و مطمئن شوید که فایل دارای کد UTF-8 است.
+        user_group_csv_verification:
+          attributes:
+            file:
+              malformed: فایل وارداتی نادرست است، لطفاً دستورالعمل ها را به دقت بخوانید و مطمئن شوید که فایل دارای کد UTF-8 است.
+      new_import:
+        attributes:
+          file:
+            invalid_file: فایل ارائه شده نامعتبر است، لطفاً بررسی کنید که فایل به درستی قالب بندی شده است
+            invalid_mime_type: نوع میم نامعتبر است
+  activerecord:
+    attributes:
+      decidim/static_page:
+        content: محتوا
+        slug: اسلاگ URL
+        title: عنوان
+      doorkeeper/application:
+        authorize_url: مجوز URL
+        client_id: شناسه مشتری
+        client_secret: راز مشتری
+        organization_name: نام سازمان
+        organization_url: URL سازمان
+        redirect_uri: تغییر مسیر URI
+        site: سایت اینترنتی
+  decidim:
+    admin:
+      actions:
+        add: اضافه کردن
+        attachment:
+          new: پیوست جدید
+        attachment_collection:
+          new: مجموعه پیوست جدید
+        browse: مرور کردن
+        category:
+          new: دسته بندی جدید
+        export: همه را صادر کنید
+        export-selection: انتخاب صادرات
+        import: وارد كردن
+        manage: مدیریت کنید
+        new: "%{name} جدید"
+        newsletter:
+          new: خبرنامه جدید
+        participatory_space_private_user:
+          new: کاربر خصوصی فضای مشارکتی جدید
+        per_page: هر صفحه
+        permissions: مجوزها
+        reject: رد کردن
+        share: اشتراک گذاری
+        user:
+          new: ادمین جدید
+        verify: تأیید کنید
+      admin_terms_of_use:
+        accept:
+          error: هنگام پذیرش شرایط استفاده سرپرست خطایی روی داد.
+          success: عالی! شما شرایط استفاده از سرپرست را پذیرفته اید.
+        actions:
+          accept: من با شرایط موافقم
+          are_you_sure: آیا مطمئن هستید که می خواهید شرایط استفاده سرپرست را رد کنید؟
+          refuse: شرایط مدیریت را رد کنید
+          title: با شرایط و ضوابط استفاده موافقت کنید
+        required_review:
+          alert: 'مورد نیاز: شرایط استفاده مدیر ما را مرور کنید'
+          callout: لطفاً چند لحظه وقت بگذارید و شرایط استفاده ادمین را مرور کنید. در غیر این صورت نمی توانید پلتفرم را مدیریت کنید.
+          cta: اکنون آنها را مرور کنید.
+        title: شرایط استفاده مدیر
+      area_types:
+        create:
+          error: مشکلی در ایجاد نوع منطقه جدید وجود داشت.
+          success: نوع منطقه با موفقیت ایجاد شد.
+        destroy:
+          success: نوع منطقه با موفقیت نابود شد
+        edit:
+          title: نوع منطقه را ویرایش کنید
+          update: به روز رسانی
+        new:
+          create: ایجاد نوع منطقه
+          title: نوع منطقه جدید
+        update:
+          error: مشکلی در به‌روزرسانی این نوع منطقه وجود داشت.
+          success: نوع منطقه با موفقیت به روز شد
+      areas:
+        create:
+          error: مشکلی در ایجاد یک منطقه جدید وجود داشت.
+          success: منطقه با موفقیت ایجاد شد.
+        destroy:
+          has_spaces: این منطقه دارای فضاهای وابسته است. لطفاً قبل از حذف مطمئن شوید که هیچ فضای مشارکتی به این قسمت ارجاع نمی دهد.
+          success: منطقه با موفقیت تخریب شد
+        edit:
+          title: ویرایش منطقه
+          update: به روز رسانی
+        new:
+          create: منطقه ایجاد کنید
+          title: منطقه جدید
+        no_areas: بدون مناطق
+        update:
+          error: مشکلی در به‌روزرسانی این منطقه وجود داشت.
+          success: منطقه با موفقیت به روز شد
+      attachment_collections:
+        create:
+          error: مشکلی در ایجاد یک پوشه جدید وجود داشت.
+          success: پوشه با موفقیت ایجاد شد.
+        destroy:
+          success: پوشه با موفقیت نابود شد.
+        edit:
+          title: پوشه را ویرایش کنید
+          update: به روز رسانی
+        index:
+          attachment_collection_used: این پوشه را نمی توان حذف کرد زیرا در حال استفاده است.
+          attachment_collections_title: پوشه های پیوست
+        new:
+          create: ايجاد كردن
+          title: پوشه جدید
+        update:
+          error: مشکلی در به روز رسانی این پوشه وجود داشت.
+          success: پوشه با موفقیت به روز شد.
+      attachments:
+        create:
+          error: مشکلی در ایجاد پیوست جدید وجود داشت.
+          success: پیوست با موفقیت ایجاد شد.
+        destroy:
+          success: پیوست با موفقیت نابود شد.
+        edit:
+          title: ویرایش پیوست
+          update: به روز رسانی
+        index:
+          attachments_title: پیوست ها
+        new:
+          create: پیوست ایجاد کنید
+          title: پیوست جدید
+        update:
+          error: مشکلی در به‌روزرسانی این پیوست وجود داشت.
+          success: پیوست با موفقیت به روز شد.
+      attachments_privacy_warning:
+        message: هنگام کار با لوازم جانبی در یک فضای خصوصی مراقب باشید. هر شرکت کننده می تواند این سند را با دیگران به اشتراک بگذارد.
+      autocomplete:
+        no_results: نتیجه ای پیدا نشد
+        search_prompt: حداقل سه کاراکتر برای جستجو تایپ کنید
+      block_user:
+        new:
+          action: مسدود کردن حساب و ارسال توجیه
+          description: مسدود کردن یک کاربر، حساب کاربری او را غیرقابل استفاده می کند. شما می توانید در توجیه خود هر گونه دستورالعملی را در مورد روش هایی که می خواهید برای رفع انسداد کاربر در نظر بگیرید، ارائه دهید.
+          justification: توجیه
+          title: کاربر %{name} را مسدود کنید
+      categories:
+        create:
+          error: مشکلی در ایجاد این دسته وجود داشت.
+          success: دسته با موفقیت ایجاد شد.
+        destroy:
+          error: مشکلی در حذف این دسته وجود داشت. لطفاً ابتدا هر زیررده را حذف کنید، مطمئن شوید که هیچ موجودیت دیگری به این دسته تعلق ندارد و دوباره امتحان کنید.
+          success: دسته با موفقیت حذف شد.
+        edit:
+          title: ویرایش دسته
+          update: به روز رسانی
+        index:
+          categories_title: دسته بندی ها
+          category_used: این دسته را نمی توان حذف کرد زیرا در حال استفاده است.
+        new:
+          create: ایجاد دسته
+          title: دسته بندی جدید
+        update:
+          error: مشکلی در به‌روزرسانی این دسته وجود داشت.
+          success: دسته با موفقیت به روز شد.
+      component_permissions:
+        update:
+          error: مشکلی در به‌روزرسانی مجوزهای این مؤلفه وجود داشت.
+          success: مجوزها با موفقیت به روز شدند.
+      components:
+        create:
+          error: مشکلی در ایجاد این مؤلفه وجود داشت.
+          success: مؤلفه با موفقیت ایجاد شد.
+        destroy:
+          error: مشکلی در تخریب این مؤلفه وجود داشت.
+          success: کامپوننت با موفقیت حذف شد.
+        edit:
+          title: کامپوننت را ویرایش کنید
+          update: به روز رسانی
+        form:
+          default_step_settings: تنظیمات مرحله پیش فرض
+          global_settings: تنظیمات جهانی
+          step_settings: تنظیمات مرحله
+        index:
+          add: کامپوننت اضافه کنید
+          headers:
+            actions: اقدامات
+            name: نام قطعه
+            scope: محدوده مولفه
+            type: نوع جزء
+        new:
+          add: کامپوننت اضافه کنید
+          title: 'افزودن جزء: %{name}'
+        publish:
+          success: مؤلفه با موفقیت منتشر شد.
+        title: اجزاء
+        unpublish:
+          success: مؤلفه با موفقیت لغو شد.
+        update:
+          error: مشکلی در به‌روزرسانی این مؤلفه وجود داشت.
+          success: مؤلفه با موفقیت به روز شد.
+      conflicts:
+        attempts: تلاش ها
+        'false': خیر
+        managed_user_name: کاربر مدیریت شده
+        solved: حل کرد
+        title: تداخل تأیید
+        transfer:
+          email: پست الکترونیک
+          error: مشکلی در انتقال شرکت‌کننده فعلی به شرکت‌کننده مدیریت‌شده وجود داشت.
+          name: نام
+          reason: دلیل
+          success: انتقال فعلی با موفقیت انجام شد.
+          title: انتقال
+        'true': آره
+        user_name: کاربر
+      dashboard:
+        show:
+          view_more_logs: مشاهده گزارش های بیشتر
+          welcome: به پنل مدیریت خوش آمدید.
+      domain_whitelist:
+        form:
+          domain_too_short: دامنه خیلی کوتاه است
+        update:
+          error: لیست سفید دامنه به روز نشد
+          success: لیست سفید دامنه با موفقیت به روز شد
+      exports:
+        export_as: "%{name} به عنوان %{export_format}"
+        formats:
+          CSV: CSV
+          Excel: برتری داشتن
+          FormPDF: PDF
+          JSON: JSON
+        notice: صادرات شما در حال حاضر در حال انجام است. وقتی کامل شد ایمیلی دریافت خواهید کرد.
+      filters:
+        category_id_eq:
+          label: دسته بندی
+        filter_label: فیلتر کنید
+        invitation_accepted_at_present:
+          label: دعوت پذیرفته شد
+          values:
+            'false': خیر
+            'true': آره
+        last_sign_in_at_present:
+          label: تا به حال وارد شده اید
+          values:
+            'false': خیر
+            'true': آره
+        moderated_users:
+          reports_reason_eq:
+            label: دلیل را گزارش کنید
+            values:
+              does_not_belong: تعلق ندارد
+              offensive: توهین آمیز
+              spam: هرزنامه ها
+        moderations:
+          reportable_type_string_eq:
+            label: تایپ کنید
+        officialized_at_null:
+          label: حالت
+          values:
+            'false': رسمی شد
+            'true': رسمی نشده است
+        participatory_space_private_users:
+          user_invitation_accepted_at_not_null:
+            label: دعوت پذیرفته شد
+            values:
+              'false': قابل قبول نیست
+              'true': پذیرفته شده
+          user_invitation_sent_at_not_null:
+            label: دعوتنامه ارسال شد
+            values:
+              'false': فرستاده نشد
+              'true': ارسال شد
+        private_space_eq:
+          label: خصوصی
+          values:
+            'false': عمومی
+            'true': خصوصی
+        published_at_null:
+          label: منتشر شده
+          values:
+            'false': منتشر شده
+            'true': منتشر نشده
+        scope_id_eq:
+          label: محدوده
+        search_label: جستجو کردن
+        search_placeholder:
+          name_or_nickname_or_email_cont: "%{collection} را با ایمیل، نام یا نام مستعار جستجو کنید."
+          report_count_eq: معادله تعداد گزارش
+          reported_id_string_or_reported_content_cont: "%{collection} را بر اساس شناسه یا محتوای قابل گزارش جستجو کنید."
+          title_cont: "%{collection} را بر اساس عنوان جستجو کنید."
+          user_name_or_user_email_cont: "%{collection} را با نام یا ایمیل جستجو کنید."
+          user_name_or_user_nickname_or_user_email_cont: "%{collection} را با ایمیل، نام یا نام مستعار جستجو کنید."
+        state_eq:
+          label: حالت
+          values:
+            all: همه
+            pending: انتظار
+            rejected: رد شد
+            verified: تایید شده است
+      forms:
+        file_help:
+          import:
+            explanation: 'راهنمای فایل:'
+            message_1: فایل‌های CSV، JSON و Excel (xlsx.) پشتیبانی می‌شوند
+            message_2: برای فایل‌های CSV، جداکننده بین ستون‌ها باید یک نقطه ویرگول (";") باشد.
+      help_sections:
+        error: مشکلی در به‌روزرسانی بخش‌های راهنما وجود داشت
+        form:
+          save: صرفه جویی
+        success: بخش های راهنما با موفقیت به روز شد
+      impersonatable_users:
+        index:
+          filter:
+            all: همه
+            managed: اداره می شود
+            not_managed: مدیریت نشده است
+          filter_by: محدود شده توسط
+          impersonate: جعل هویت
+          impersonate_new_managed_user: شرکت کننده جدید را مدیریت کنید
+          managed: اداره می شود
+          name: نام
+          needs_authorization_warning: شما نیاز به حداقل یک مجوز فعال برای این سازمان دارید.
+          not_managed: مدیریت نشده است
+          promote: ترویج
+          search: جستجو کردن
+          status: وضعیت
+          view_logs: دیدن گزارش وقایع
+      impersonations:
+        close_session:
+          error: مشکلی در بستن جلسه مدیریت شرکت‌کننده فعلی وجود داشت.
+          success: جلسه جعل هویت فعلی با موفقیت به پایان رسید.
+        create:
+          error: مشکلی در مدیریت شرکت‌کننده وجود داشت.
+          success: شرکت‌کننده مدیریت‌شده با موفقیت ایجاد شد.
+        form:
+          authorization_method: روش مجوز
+          name: نام
+          reason: دلیل
+        new:
+          impersonate: جعل هویت
+          impersonate_existing_managed_user: مدیریت شرکت‌کننده "%{name}"
+          impersonate_existing_user: مدیریت شرکت‌کننده "%{name}"
+          impersonate_new_managed_user: شرکت کننده جدید را مدیریت کنید
+      imports:
+        and: و
+        data_errors:
+          duplicate_headers:
+            detail: لطفاً بررسی کنید که فایل فقط یک بار حاوی ستون‌ها یا سرصفحه‌های لازم باشد.
+            message:
+              one: ستون %{columns} تکراری.
+              other: ستون های تکراری %{columns}.
+          invalid_indexes:
+            lines:
+              detail: لطفاً بررسی کنید که این خطوط به درستی قالب بندی شده اند و دارای رکوردهای معتبر هستند.
+              message:
+                one: خطایی در فایل وارد کردن در خط %{indexes} پیدا شد.
+                other: خطاهایی در فایل وارد کردن در خطوط %{indexes} یافت شد.
+            records:
+              detail: لطفاً بررسی کنید که این رکوردها به درستی فرمت شده و حاوی رکوردهای معتبر هستند.
+              message:
+                one: خطایی در فایل وارد کردن رکوردهایی با شماره سفارش %{indexes} پیدا شد.
+                other: خطاهایی در فایل وارد کردن رکوردهایی با شماره سفارش %{indexes} پیدا شد.
+          missing_headers:
+            detail: لطفاً بررسی کنید که فایل حاوی ستون های لازم باشد.
+            message:
+              one: ستون %{columns} وجود ندارد.
+              other: ستون های %{columns} وجود ندارد.
+        error: هنگام واردات مشکلی پیش آمد
+        example_error: نمونه ای برای نوع داده شده ایجاد نشد
+        new:
+          accepted_mime_types:
+            csv: CSV
+            json: JSON
+            xlsx: Excel (xlsx.)
+          actions:
+            back: بازگشت
+          download_example: دانلود نمونه
+          download_example_format: به عنوان مثال %{name}
+          file_legend: یک فایل وارداتی اضافه کنید که تجزیه خواهد شد.
+          import: وارد كردن
+        notice: "%{count} %{resource_name} با موفقیت وارد شد"
+      logs:
+        logs_list:
+          no_logs_yet: هنوز هیچ گزارشی وجود ندارد
+      managed_users:
+        promotion:
+          error: مشکلی در تبلیغ شرکت‌کننده مدیریت‌شده وجود داشت.
+          success: شرکت کننده مدیریت شده با موفقیت ارتقا یافته است.
+        promotions:
+          new:
+            explanation: شرکت کنندگان مدیریت شده را می توان به شرکت کنندگان استاندارد ارتقا داد. به این معنی است که آنها به برنامه دعوت می شوند و شما نمی توانید آنها را دوباره مدیریت کنید. شرکت کننده دعوت شده ایمیلی برای پذیرش دعوت شما دریافت خواهد کرد.
+            new_managed_user_promotion: ارتقاء شرکت‌کننده مدیریت‌شده جدید
+            promote: ترویج
+      menu:
+        admin_log: گزارش فعالیت ادمین
+        admins: ادمین ها
+        appearance: ظاهر
+        area_types: انواع منطقه
+        areas: مناطق
+        configuration: پیکربندی
+        dashboard: داشبورد
+        external_domain_whitelist: دامنه های خارجی مجاز
+        help_sections: بخش های راهنما
+        homepage: صفحه نخست
+        impersonations: جعل هویت
+        moderation: تعدیل های جهانی
+        newsletters: خبرنامه ها
+        participants: شركت كنندگان
+        reported_users: کاربران گزارش شده
+        scope_types: انواع دامنه
+        scopes: محدوده ها
+        settings: تنظیمات
+        static_pages: صفحات
+        user_groups: گروه ها
+        users: شركت كنندگان
+      metrics:
+        metrics:
+          see_more_metrics: معیارهای بیشتر را ببینید
+      models:
+        area:
+          fields:
+            area_type: نوع منطقه
+            name: نام
+        area_type:
+          fields:
+            name: نام
+            plural: جمع
+        attachment:
+          fields:
+            collection: پوشه
+            content_type: تایپ کنید
+            file_size: اندازه
+            title: عنوان
+          name: پیوست
+        attachment_collection:
+          name: پوشه
+        category:
+          name: دسته بندی
+        impersonation_log:
+          fields:
+            admin: مدیر
+            ended_at: پایان یافت در
+            expired_at: منقضی شده در
+            reason: دلیل
+            started_at: آغاز شده در
+            user: شرکت کننده
+        newsletter:
+          fields:
+            created_at: ایجاد شده در
+            progress: پیش رفتن
+            sent_at: ارسال شده در
+            sent_to: فرستاده شد به
+            subject: موضوع
+          name: خبرنامه
+        participatory_space_private_user:
+          name: شرکت کننده خصوصی فضای مشارکتی
+        scope:
+          fields:
+            name: نام
+            scope_type: نوع محدوده
+        scope_type:
+          fields:
+            name: نام
+            plural: جمع
+        share_token:
+          fields:
+            created_at: ایجاد شده در
+            expires_at: منقضی می شود در
+            last_used_at: آخرین بار استفاده شده
+            times_used: زمان های استفاده شده
+            token: رمز
+            user: خلق شده توسط
+        static_page:
+          fields:
+            created_at: ایجاد شده در
+            title: عنوان
+        user:
+          fields:
+            created_at: تاریخ ایجاد
+            email: پست الکترونیک
+            last_sign_in_at: آخرین تاریخ ورود
+            name: نام
+            role: نقش
+            roles:
+              admin: مدیر
+              user_manager: مدیر شرکت کننده
+          name: شرکت کننده
+        user_group:
+          fields:
+            actions: اقدامات
+            created_at: ایجاد شده در
+            document_number: شماره سند
+            name: نام
+            phone: تلفن
+            state: حالت
+            users_count: شرکت کنندگان به حساب می آیند
+      moderated_users:
+        index:
+          actions:
+            block: مسدود کردن کاربر
+            title: اقدامات
+            unblock: رفع انسداد کاربر
+            unreport: عدم گزارش
+          name: نام
+          nickname: نام مستعار
+          reason: دلیل
+          reports: گزارش ها به حساب می آیند
+          title: فهرست کاربران گزارش شده
+        report:
+          reasons:
+            does_not_belong: تعلق ندارد
+            offensive: توهین آمیز
+            spam: هرزنامه ها
+        tabs:
+          blocked: مسدود
+          unblocked: مسدود نشده است
+      moderations:
+        index:
+          title: اعتدال
+        report:
+          reasons:
+            does_not_belong: تعلق ندارد
+            offensive: توهین آمیز
+            spam: هرزنامه ها
+        reports:
+          index:
+            author: نویسنده(های)
+            callout_html: یک محتوا زمانی در پانل تعدیل ظاهر می‌شود که توسط یک کاربر (می‌تواند هر کسی با یک حساب ثبت‌شده باشد) با کلیک بر روی پرچم %{icon} در کنار مورد علامت‌گذاری شده باشد.
+            content_original_language: زبان اصلی محتوا
+            participatory_space: فضای مشارکتی
+            reported_content: محتوای گزارش شده
+            see_current: فعلی را ببینید
+            see_original: اصل را ببینید
+            title: گزارش های اعتدال
+          show:
+            report_details: جزئیات دلیل
+            report_language: زبان گزارش
+            report_reason: دلیل
+            title: جزئیات گزارش
+      newsletter_templates:
+        index:
+          preview_template: پیش نمایش
+          title: قالب های خبرنامه
+          use_template: از این قالب استفاده کنید
+        show:
+          preview: 'پیش نمایش الگو: %{template_name}'
+          use_template: از این قالب استفاده کنید
+      newsletters:
+        create:
+          error: مشکلی در ایجاد این خبرنامه وجود داشت.
+          success: خبرنامه با موفقیت ایجاد شد. لطفا قبل از ارسال آن را بررسی کنید.
+        deliver:
+          error: در تحویل این خبرنامه مشکلی وجود داشت.
+          success: خبرنامه با موفقیت تحویل شد.
+        destroy:
+          error_already_sent: 'نمی توان خبرنامه را از بین برد: قبلا ارسال شده است.'
+          success: خبرنامه با موفقیت نابود شد.
+        edit:
+          save_and_preview: ذخیره و پیش نمایش
+          title: ویرایش خبرنامه
+        index:
+          all: همه
+          all_users: تمام کاربران
+          and: و
+          confirm_delete: آیا مطمئن هستید که می خواهید این خبرنامه را حذف کنید؟
+          followers: پیروان
+          has_been_sent_to: 'ارسال شده است به:'
+          no_scopes: بدون محدوده
+          not_sent: فرستاده نشد
+          participants: شركت كنندگان
+          segmented_to: 'به %{subject} تقسیم شده است:'
+          subscribed_count: 'مشترک شده:'
+          title: خبرنامه ها
+        new:
+          save: صرفه جویی
+          title: خبرنامه جدید
+        select_recipients_to_deliver:
+          all_spaces: همه
+          all_users_help: خبرنامه را برای همه کاربران تایید شده ارسال می کند.
+          confirm_deliver: آیا مطمئن هستید که می خواهید این خبرنامه را تحویل دهید؟ این عمل قابل لغو نیست.
+          deliver: ارسال خبرنامه
+          followers_help: خبرنامه را برای همه کاربران تایید شده که از فضاهای مشارکتی انتخاب شده در لیست پیروی می کنند ارسال می کند.
+          none: هیچ یک
+          participants_help: خبرنامه را برای همه کاربران تایید شده که در هر یک از فضاهای مشارکتی انتخاب شده در لیست شرکت کرده اند ارسال می کند.
+          recipients_count: این خبرنامه برای کاربران <strong id='recipients_count'>%{count}</strong> ارسال خواهد شد.
+          scopes_help: خبرنامه را برای کاربرانی ارسال می کند که هر یک از محدوده انتخاب شده را در تنظیمات "علاقه های من" حساب خود فعال کرده اند.
+          select_scopes: برای کاربرانی که هر محدوده انتخابی را در تنظیمات علایق من در حساب خود فعال کرده اند، فیلتر کنید.
+          select_spaces: فضاها را برای بخش بندی خبرنامه انتخاب کنید
+          select_users: انتخاب کنید که کدام کاربران می خواهید خبرنامه را ارسال کنند
+          send_to_all_users: برای همه کاربران ارسال شود
+          send_to_followers: برای فالوورها ارسال کنید
+          send_to_participants: برای شرکت کنندگان ارسال کنید
+          title: گیرندگان را برای تحویل انتخاب کنید
+          warning: "<strong>توجه:</strong> این خبرنامه فقط برای کاربرانی ارسال می‌شود که <em>می‌خواهم خبرنامه‌ها را دریافت کنم</em> را در تنظیمات اعلان‌های خود فعال کرده‌اند."
+        send:
+          no_recipients: هیچ گیرنده ای برای این انتخاب وجود ندارد
+        show:
+          preview: پیش نمایش
+          select_recipients_to_deliver: گیرندگان را برای تحویل انتخاب کنید
+          subject: موضوع
+        update:
+          error: مشکلی در به‌روزرسانی این خبرنامه وجود داشت.
+          success: خبرنامه با موفقیت به روز شد. لطفا قبل از ارسال آن را بررسی کنید.
+      officializations:
+        block:
+          error: خطایی در مسدود کردن شرکت‌کننده روی داد
+          success: شرکت‌کننده با موفقیت مسدود شد
+        create:
+          success: شرکت کننده با موفقیت رسمی شد
+        destroy:
+          success: شرکت کننده با موفقیت غیر رسمی شد
+        index:
+          actions: اقدامات
+          badge: نشان
+          block: مسدود کردن کاربر
+          created_at: ایجاد شده در
+          name: نام
+          nickname: نام مستعار
+          not_officialized: رسمی نشده است
+          officialize: رسمی کردن
+          officialized: رسمی شد
+          reofficialize: دوباره رسمی کردن
+          reports: گزارش ها
+          show_email: نشانی ایمیل را نشان دهید
+          status: وضعیت
+          unblock: رفع انسداد کاربر
+          unofficialize: غیر رسمی کردن
+        new:
+          badge: نشان رسمی
+          officialize: رسمی کردن
+          title: رسمی کردن شرکت‌کننده "%{name}"
+        show_email_modal:
+          close_modal: بستن مودال
+          description: اگر نیاز به تماس مستقیم با یک شرکت‌کننده دارید، می‌توانید روی دکمه نمایش کلیک کنید تا آدرس ایمیل او را ببینید. این عمل ثبت خواهد شد.
+          email_address: آدرس ایمیل
+          full_name: نام و نام خانوادگی
+          hidden: پنهان شده است
+          show: نمایش دهید
+          title: نشانی ایمیل شرکت کننده را نشان دهید
+        unblock:
+          error: هنگام رفع انسداد شرکت‌کننده خطایی روی داد
+          success: انسداد شرکت‌کننده با موفقیت رفع شد
+      organization:
+        edit:
+          title: سازمان را ویرایش کنید
+          update: به روز رسانی
+        form:
+          facebook: فیس بوک
+          github: GitHub
+          instagram: اینستاگرام
+          rich_text_editor_in_public_views_help: در برخی از مناطق متنی، شرکت‌کنندگان می‌توانند برخی از برچسب‌های HTML را با استفاده از ویرایشگر متن غنی وارد کنند.
+          social_handlers: اجتماعی
+          twitter: توییتر
+          url: URL
+          youtube: یوتیوب
+        update:
+          error: مشکلی در به‌روزرسانی این سازمان وجود داشت.
+          success: سازمان با موفقیت به روز شد.
+      organization_appearance:
+        edit:
+          update: به روز رسانی
+        form:
+          colors:
+            colors_title: رنگ های سازمانی
+            colors_warning_html: هشدار! تغییر این رنگ ها می تواند تضادهای دسترسی را از بین ببرد. می توانید کنتراست انتخابی خود را با <a href="%{link}">WebAIM Contrast Checker</a> یا سایر ابزارهای مشابه بررسی کنید.
+            header_snippets_help: از این فیلد برای اضافه کردن چیزهایی به سر HTML استفاده کنید. رایج ترین استفاده، ادغام سرویس های شخص ثالث است که به جاوا اسکریپت یا CSS اضافی نیاز دارند. همچنین، می توانید از آن برای اضافه کردن متا تگ های اضافی به HTML استفاده کنید. توجه داشته باشید که این فقط در صفحات عمومی ارائه می شود نه در بخش مدیریت.
+          cta_button_path_help: 'می‌توانید جایی که دکمه Call To Action در صفحه اصلی به آن پیوند می‌خورد، بازنویسی کنید. در اینجا از مسیرهای جزئی استفاده کنید، نه از URL های کامل. حروف، اعداد، خط تیره و اسلش را می پذیرد و باید با یک حرف شروع شود. دکمه Call To Action در صفحه اصلی بین متن خوش آمدگویی و توضیحات نشان داده شده است. مثال: %{url}'
+          cta_button_text_help: می توانید متن دکمه Call To Action را در صفحه اصلی برای هر زبان موجود در سازمان خود بازنویسی کنید. اگر تنظیم نشود، از مقدار پیش فرض استفاده می شود. دکمه Call To Action در صفحه اصلی بین متن خوش آمدگویی و توضیحات نشان داده شده است.
+          homepage_appearance_title: ویرایش ظاهر صفحه اصلی
+          homepage_highlighted_content_banner_title: بنر محتوای برجسته
+          images:
+            layout_appearance_title: ظاهر طرح بندی را ویرایش کنید
+            preview: پیش نمایش
+          omnipresent_banner_appearance_title: بنر همه جا حاضر را ویرایش کنید
+      organization_external_domain_whitelist:
+        edit:
+          update: به روز رسانی
+        external_domain:
+          down: پایین
+          external_domain: دامنه خارجی
+          remove: برداشتن
+          up: بالا
+        form:
+          add: به لیست سفید اضافه کنید
+          title: لیست سفید دامنه خارجی
+      organization_homepage:
+        edit:
+          active_content_blocks: بلوک های محتوای فعال
+          inactive_content_blocks: بلوک های محتوای غیر فعال
+      organization_homepage_content_blocks:
+        edit:
+          update: به روز رسانی
+      participatory_space_private_users:
+        create:
+          error: مشکلی در افزودن یک شرکت‌کننده خصوصی برای این فضای مشارکتی وجود داشت.
+          success: دسترسی مشارکت‌کننده خصوصی فضای مشارکتی با موفقیت ایجاد شد.
+        destroy:
+          error: مشکلی در حذف یک شرکت‌کننده خصوصی برای این فضای مشارکتی وجود داشت.
+          success: دسترسی شرکت‌کننده خصوصی به فضای مشارکتی با موفقیت نابود شد.
+        index:
+          import_via_csv: وارد کردن از طریق CSV
+          title: شرکت کننده خصوصی فضای مشارکتی
+        new:
+          create: ايجاد كردن
+          title: شرکت‌کننده خصوصی فضای مشارکتی جدید.
+      participatory_space_private_users_csv_imports:
+        create:
+          invalid: مشکلی در خواندن فایل CSV وجود داشت.
+          success: فایل CSV با موفقیت آپلود شد، ما یک ایمیل دعوت نامه برای شرکت کنندگان ارسال می کنیم. این ممکن است مدتی طول بکشد.
+        new:
+          destroy:
+            button: همه شرکت کنندگان خصوصی را حذف کنید
+            confirm: آیا مطمئن هستید که می خواهید همه شرکت کنندگان خصوصی را حذف کنید؟ این عمل قابل واگرد نیست، شما نمی توانید آنها را بازیابی کنید.
+            empty: شما هیچ شرکت کننده خصوصی ندارید.
+            explanation: شما %{count} شرکت کننده خصوصی دارید.
+            title: شرکت کنندگان خصوصی را حذف کنید
+          explanation: فایل CSV خود را آپلود کنید. باید دو ستون با ایمیل در ستون اول فایل و نام در آخرین ستون فایل (ایمیل، نام) کاربرانی که می خواهید به فضای مشارکتی اضافه کنید، بدون سربرگ داشته باشد. از استفاده از کاراکترهای نامعتبر مانند `<>?%&^*#@()[]=+:;"{}\|` در نام کاربری خودداری کنید.
+          title: فایل CSV خود را آپلود کنید
+          upload: بارگذاری
+      reminders:
+        create:
+          error: مشکلی در ایجاد یادآوری وجود داشت.
+          success:
+            one: کاربر %{count} یادآوری خواهد شد.
+            other: کاربران %{count} یادآوری خواهند شد.
+        new:
+          submit: ارسال
+      resource_permissions:
+        edit:
+          submit: ارسال
+          title: مجوزهای ویرایش
+        update:
+          success: مجوزها با موفقیت به روز شدند.
+      resources:
+        index:
+          headers:
+            scope: محدوده
+      scope_types:
+        create:
+          error: در ایجاد یک نوع محدوده جدید مشکلی وجود داشت.
+          success: نوع محدوده با موفقیت ایجاد شد.
+        destroy:
+          success: نوع محدوده با موفقیت نابود شد
+        edit:
+          title: ویرایش نوع محدوده
+          update: به روز رسانی
+        new:
+          create: ایجاد نوع محدوده
+          title: دامنه جدید
+        update:
+          error: مشکلی در به‌روزرسانی این نوع محدوده وجود داشت.
+          success: نوع محدوده با موفقیت به روز شد
+      scopes:
+        create:
+          error: مشکلی در ایجاد یک محدوده جدید وجود داشت.
+          success: محدوده با موفقیت ایجاد شد.
+        destroy:
+          success: دامنه با موفقیت نابود شد
+        edit:
+          title: دامنه را ویرایش کنید
+          update: به روز رسانی
+        new:
+          create: دامنه ایجاد کنید
+          title: دامنه جدید
+        no_scopes: هیچ محدوده ای در این سطح وجود ندارد.
+        update:
+          error: مشکلی در به روز رسانی این محدوده وجود داشت.
+          success: دامنه با موفقیت به روز شد
+      share_tokens:
+        actions:
+          confirm_destroy: آیا مطمئن هستید که می خواهید این نشانه را حذف کنید؟
+          destroy: حذف
+          share: اشتراک گذاری
+        destroy:
+          error: مشکلی در از بین بردن توکن وجود داشت.
+          success: توکن با موفقیت نابود شد.
+        share_tokens:
+          empty: هیچ توکن فعالی وجود ندارد
+          help: این نشانه ها برای به اشتراک گذاشتن عمومی این منبع منتشر نشده با هر کاربری استفاده می شود. هنگامی که منبع منتشر می شود، آنها پنهان می شوند. برای بازدید از URL قابل اشتراک گذاری، روی نماد اشتراک گذاری توکن کلیک کنید.
+          title: توکن ها را به اشتراک بگذارید
+      shared:
+        gallery:
+          add_images: اضافه کردن تصاویر
+          delete_image: حذف تصویر
+          edit_images: ویرایش تصاویر
+          gallery_legend: افزودن گالری تصاویر (اختیاری)
+      static_page_topics:
+        create:
+          error: مشکلی در ایجاد موضوع جدید وجود داشت.
+          success: موضوع با موفقیت ایجاد شد.
+        destroy:
+          success: موضوع با موفقیت نابود شد
+        edit:
+          title: موضوع را ویرایش کنید
+          update: موضوع را به روز کنید
+        new:
+          create: موضوع ایجاد کنید
+          title: موضوع جدید
+        update:
+          error: مشکلی در به روز رسانی این موضوع وجود داشت.
+          success: موضوع با موفقیت به روز شد
+      static_pages:
+        actions:
+          view: مشاهده صفحه عمومی
+        create:
+          error: در ایجاد صفحه جدید مشکلی وجود داشت.
+          success: صفحه با موفقیت ایجاد شد.
+        destroy:
+          success: صفحه با موفقیت نابود شد
+        edit:
+          changed_notably_help: در صورت علامت زدن، به شرکت کنندگان اطلاع داده می شود که شرایط و ضوابط جدید را بپذیرند.
+          title: ویرایش صفحه
+          update: به روز رسانی
+        form:
+          none: هیچ یک
+          slug_help: 'در اینجا از مسیرهای جزئی استفاده کنید، نه از URL های کامل. حروف، اعداد، خط تیره و اسلش را می پذیرد و باید با یک حرف شروع شود. مثال: %{url}'
+        index:
+          last_notable_change: آخرین تغییر قابل توجه
+        new:
+          create: ایجاد صفحه
+          title: صفحه جدید
+        topic:
+          destroy: حذف موضوع
+          edit: موضوع را ویرایش کنید
+          empty: هیچ صفحه ای در این موضوع وجود ندارد
+          without_topic: صفحات بدون موضوع
+        update:
+          error: مشکلی در به روز رسانی این صفحه وجود داشت.
+          success: صفحه با موفقیت به روز شد
+      titles:
+        admin_log: ورود به سیستم مدیریت
+        area_types: انواع منطقه
+        areas: مناطق
+        authorization_workflows: روش های تایید
+        dashboard: داشبورد
+        impersonatable_users: شرکت کنندگان قابل مدیریت
+        impersonations: مدیریت شرکت کنندگان
+        metrics: معیارهای
+        panel: مدیر
+        participants: شركت كنندگان
+        scope_types: انواع دامنه
+        scopes: محدوده ها
+        static_pages: صفحات
+        statistics: فعالیت
+        user_groups: گروه ها
+        users: مدیران
+      user_group:
+        csv_verify:
+          invalid: مشکلی در خواندن فایل CSV وجود داشت.
+          success: فایل CSV با موفقیت آپلود شد، ما در حال تأیید گروه‌هایی هستیم که با معیارها مطابقت دارند. این ممکن است مدتی طول بکشد.
+        reject:
+          invalid: مشکلی در رد این گروه وجود داشت.
+          success: گروه با موفقیت رد شد
+        verify:
+          invalid: مشکلی در تأیید این گروه وجود داشت.
+          success: گروه با موفقیت تأیید شد
+      user_groups:
+        index:
+          state:
+            pending: انتظار
+            rejected: رد شد
+            verified: تایید شده است
+          verify_via_csv: از طریق CSV تأیید کنید
+      user_groups_csv_verifications:
+        new:
+          explanation: فایل CSV خود را آپلود کنید. باید ایمیل‌های رسمی گروه‌های سازمان شما را در ستون اول فایل بدون سربرگ داشته باشد. فقط گروه‌هایی که ایمیل خود را تأیید کرده‌اند و ایمیلی در فایل CSV ظاهر می‌شود، اعتبارسنجی می‌شوند.
+          title: فایل CSV خود را آپلود کنید
+          upload: بارگذاری
+      users:
+        create:
+          error: در دعوت از این سرپرست مشکلی وجود داشت.
+          success: شرکت کننده با موفقیت دعوت شد.
+        destroy:
+          error: هنگام حذف این ادمین مشکلی روی داد.
+          success: شرکت کننده دیگر مدیر نیست.
+        form:
+          email: پست الکترونیک
+          name: نام
+          role: نقش
+        new:
+          create: دعوت
+          title: دعوت از مدیر جدید
+      users_statistics:
+        users_count:
+          admins: ادمین ها
+          last_day: روز گذشته
+          last_month: ماه گذشته
+          last_week: هفته گذشته
+          no_users_count_statistics_yet: هنوز آماری از تعداد کاربران وجود ندارد
+          participants: شركت كنندگان
+      view_public_page: مشاهده صفحه عمومی
+    forms:
+      errors:
+        impersonate_user:
+          reason: هنگام مدیریت یک شرکت‌کننده بدون مدیریت، باید دلیلی ارائه کنید
+    metrics:
+      blocked_users:
+        object: کاربران مسدود شده
+        title: کاربران مسدود شده
+      reported_users:
+        object: کاربران گزارش شده
+        title: کاربران گزارش شده
+      user_reports:
+        object: گزارش های کاربر
+        title: گزارش های کاربر
+    moderations:
+      actions:
+        expand: بسط دادن
+        hidden: پنهان شده است
+        hide: پنهان شدن
+        not_hidden: پنهان نیست
+        title: اقدامات
+        unhide: پنهان کردن
+        unreport: عدم گزارش
+      admin:
+        reportable:
+          hide:
+            invalid: مشکلی در پنهان کردن منبع وجود داشت.
+            success: منبع با موفقیت پنهان شد.
+          unhide:
+            invalid: مشکلی در باز کردن مخفی کردن منبع وجود داشت.
+            success: منبع با موفقیت پنهان شد.
+          unreport:
+            invalid: مشکلی در لغو گزارش منبع وجود داشت.
+            success: منبع با موفقیت گزارش نشد.
+      models:
+        moderation:
+          fields:
+            created_at: تاریخ ایجاد
+            deleted_resource: منبع حذف شده
+            hidden_at: پنهان شده در
+            participatory_space: فضای مشارکتی
+            report_count: شمردن
+            reportable_id: شناسه
+            reportable_type: تایپ کنید
+            reported_content_url: URL محتوای گزارش شده
+            reports: گزارش ها
+            visit_url: به URL مراجعه کنید
+        report:
+          fields:
+            details: جزئیات دلیل
+            locale: زبان
+            reason: دلیل
+  errors:
+    messages:
+      invalid_json: JSON نامعتبر است
+  layouts:
+    decidim:
+      admin:
+        global_moderations:
+          title: تعدیل های جهانی
+        newsletters:
+          title: خبرنامه ها
+        settings:
+          title: تنظیمات
+        users:
+          title: شركت كنندگان

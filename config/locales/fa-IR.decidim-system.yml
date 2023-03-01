@@ -1,0 +1,189 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      oauth_application:
+        name: نام برنامه OAuth
+        organization_logo: آرم سازمان (مربع)
+        organization_name: سازمان
+        organization_url: URL سازمان
+        redirect_uri: تغییر مسیر URI
+      organization:
+        address: نام میزبان SMTP
+        from_email: آدرس ایمیل
+        from_label: برچسب
+        password: کلمه عبور
+        port: بندر
+        user_name: نام کاربری
+      organization_file_uploads:
+        allowed_content_types:
+          admin: انواع MIME مدیریت
+          default: انواع MIME پیش فرض
+        allowed_file_extensions:
+          admin: پسوند فایل مدیریت
+          default: پسوندهای پیش فرض فایل
+          image: پسوند فایل تصویر
+        maximum_file_size:
+          avatar: اندازه فایل آواتار
+          default: اندازه فایل پیش فرض
+    errors:
+      models:
+        oauth_application:
+          attributes:
+            redirect_uri:
+              must_be_ssl: URI تغییر مسیر باید یک URI SSL باشد
+  decidim:
+    system:
+      actions:
+        confirm_destroy: آیا مطمئن هستید که می خواهید این را حذف کنید؟
+        destroy: حذف
+        edit: ویرایش کنید
+        new: جدید
+        save: صرفه جویی
+        title: اقدامات
+      admins:
+        create:
+          error: مشکلی در ایجاد یک سرپرست جدید وجود داشت.
+          success: مدیر با موفقیت ایجاد شد
+        destroy:
+          success: ادمین با موفقیت حذف شد
+        edit:
+          title: ویرایش ادمین
+          update: به روز رسانی
+        index:
+          title: ادمین ها
+        new:
+          create: ايجاد كردن
+          title: ادمین جدید
+        update:
+          error: مشکلی در به روز رسانی این ادمین وجود داشت.
+          success: مدیر با موفقیت به روز شد
+      dashboard:
+        show:
+          current_organizations: سازمان های فعلی
+      default_pages:
+        placeholders:
+          content: لطفاً محتوای معنادار را به صفحه استاتیک %{page} در داشبورد مدیریت اضافه کنید.
+          title: عنوان پیش فرض برای %{page}
+      menu:
+        admins: ادمین ها
+        dashboard: داشبورد
+        oauth_applications: برنامه های کاربردی OAuth
+        organizations: سازمان های
+      models:
+        admin:
+          fields:
+            created_at: ایجاد شده در
+            email: پست الکترونیک
+          name: مدیر
+          validations:
+            email_uniqueness: مدیر دیگری با همان ایمیل از قبل وجود دارد
+        oauth_application:
+          fields:
+            created_at: ایجاد شده در
+            name: نام برنامه OAuth
+            organization_name: سازمان
+          name: برنامه OAuth
+        organization:
+          actions:
+            save_and_invite: ایجاد سازمان و دعوت از مدیر
+          fields:
+            created_at: ایجاد شده در
+            file_upload_settings: تنظیمات آپلود فایل
+            name: نام
+            omniauth_settings: تنظیمات Omniauth
+            smtp_settings: تنظیمات SMTP
+          name: سازمان
+      oauth_applications:
+        create:
+          error: مشکلی در ایجاد این برنامه وجود داشت.
+          success: برنامه با موفقیت ایجاد شد.
+        destroy:
+          error: مشکلی در از بین بردن این برنامه وجود داشت.
+          success: برنامه با موفقیت نابود شد.
+        edit:
+          save: صرفه جویی
+          title: ویرایش برنامه
+        form:
+          select_organization: یک سازمان را انتخاب کنید
+        index:
+          confirm_delete: آیا مطمئن هستید که می خواهید این برنامه را حذف کنید؟
+          title: برنامه های کاربردی OAuth
+        new:
+          save: صرفه جویی
+          title: برنامه جدید
+        update:
+          error: مشکلی در به روز رسانی این برنامه وجود داشت.
+          success: برنامه با موفقیت به روز شد.
+      organizations:
+        advanced_settings:
+          hide: تنظیمات پیشرفته را مخفی کنید
+          show: نمایش تنظیمات پیشرفته
+        create:
+          error: مشکلی در ایجاد یک سازمان جدید وجود داشت.
+          success: سازمان با موفقیت ایجاد شد.
+        edit:
+          secondary_hosts_hint: هر یک از آنها را در یک خط جدید وارد کنید
+        file_upload_settings:
+          content_types:
+            admin_hint: این نوع MIME برای آپلودهای بخش مدیریت مجاز است. کاربران سرپرست باید از خطرات بارگذاری برخی از قالب‌های سند آگاه باشند، بنابراین می‌توانید از آنها انتظار داشته باشید که در بارگذاری فایل‌ها محتاط‌تر باشند.
+            default_hint: این انواع MIME به طور پیش فرض برای همه کاربران مجاز است.
+            intro_html: برای انواع MIME، به عنوان مثال <code>image/*</code> ، حروف عام با کاراکتر ستاره اضافه می کنید.
+            title: انواع MIME مجاز
+          file_extensions:
+            admin_hint: این پسوند فایل برای آپلودهای بخش مدیریت مجاز است. کاربران سرپرست باید از خطرات بارگذاری برخی از قالب‌های سند آگاه باشند، بنابراین می‌توانید از آنها انتظار داشته باشید که در بارگذاری فایل‌ها محتاط‌تر باشند.
+            default_hint: این پسوند فایل به طور پیش فرض برای همه کاربران مجاز است.
+            image_hint: این پسوند فایل برای هر نوع آپلود تصویر مجاز است.
+            title: پسوندهای مجاز فایل
+          file_sizes:
+            avatar_hint: مگابایت (MB). این محدودیت اندازه فایل برای آپلود تصویر آواتار استفاده می شود.
+            default_hint: مگابایت (MB). این محدودیت اندازه فایل پیش‌فرض است که برای همه فایل‌های آپلود شده استفاده می‌شود، مگر اینکه طور دیگری مشخص شده باشد.
+            title: حداکثر اندازه فایل
+          intro: |
+            لطفاً هنگام تغییر این تنظیمات بیشتر محتاط باشید. هر چه کمتر اجازه بدهید، بهتر است.
+            اجازه دادن به پسوندهای خاص فایل یا انواع MIME می‌تواند کاربران سیستم را در معرض خطرات امنیتی قرار دهد و همچنین می‌تواند دسترسی به وب‌سایت را تحت تأثیر قرار دهد.
+        index:
+          title: سازمان های
+        new:
+          reference_prefix_hint: پیشوند مرجع برای شناسایی منحصر به فرد منابع در سراسر سازمان استفاده می شود
+          secondary_hosts_hint: هر یک از آنها را در یک خط جدید وارد کنید
+          title: سازمان جدید
+        omniauth_settings:
+          decidim:
+            client_id: شناسه مشتری
+            client_secret: راز مشتری
+            site_url: آدرس سایت
+          enabled: فعال شد
+          enabled_by_default: این ارائه دهنده به طور پیش فرض فعال است. می توان آن را ویرایش کرد اما غیرفعال نشد.
+          facebook:
+            app_id: شناسه برنامه
+            app_secret: راز برنامه
+          google_oauth2:
+            client_id: شناسه مشتری
+            client_secret: راز مشتری
+          icon: آیکون
+          icon_path: مسیر آیکون
+          twitter:
+            api_key: کلید ای پی ای
+            api_secret: راز API
+        smtp_settings:
+          fieldsets:
+            sender: فرستنده
+          instructions:
+            from_label: 'فرستنده ایمیل این خواهد بود: "Your-organization-name <your-organization@example.org>". برای استفاده از «آدرس ایمیل» به عنوان برچسب، آن را خالی بگذارید'
+          placeholder:
+            from_email: your-organization@example.org
+            from_label: نام سازمان شما
+        update:
+          error: مشکلی در به‌روزرسانی این سازمان وجود داشت.
+          success: سازمان با موفقیت به روز شد.
+        users_registration_mode:
+          disabled: دسترسی فقط با حساب های خارجی امکان پذیر است
+          enabled: به شرکت کنندگان اجازه ثبت نام و ورود به سیستم را بدهید
+          existing: به شرکت‌کنندگان اجازه ثبت نام ندهید، اما به شرکت‌کنندگان موجود اجازه دهید وارد شوند
+      shared:
+        notices:
+          no_organization_warning_html: برای شروع باید یک سازمان ایجاد کنید. مطمئن شوید که %{guide} را قبل از ادامه بخوانید.
+          our_getting_started_guide: راهنمای شروع ما
+      titles:
+        dashboard: داشبورد

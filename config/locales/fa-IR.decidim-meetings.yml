@@ -1,0 +1,671 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      agenda:
+        description: شرح
+        duration: مدت زمان
+        title: عنوان
+      close_meeting:
+        attendees_count: تعداد شرکت کنندگان
+        attending_organizations: لیست سازمان هایی که شرکت کردند
+        audio_url: URL صوتی
+        closing_report: دقایق
+        closing_visible: قابل مشاهده است
+        contributions_count: تعداد مشارکت
+        proposal_ids: پیشنهادات ارائه شده در جلسه
+        video_url: URL ویدیو
+      meeting:
+        address: نشانی
+        available_slots: اسلات های موجود برای این جلسه
+        customize_registration_email: سفارشی کردن ایمیل ثبت نام
+        decidim_category_id: دسته بندی
+        decidim_scope_id: محدوده
+        decidim_user_group_id: گروه کاربران
+        description: شرح
+        end_time: زمان پایان
+        id: شناسه
+        location: محل
+        location_hints: نکات مکان یابی
+        online_meeting_url: URL جلسه آنلاین
+        organizer_gid: ایجاد به عنوان
+        organizer_id: تنظیم کننده
+        private_meeting: جلسه خصوصی
+        registration_email_custom_content: محتوای سفارشی ایمیل ثبت نام
+        registration_form_enabled: فرم ثبت نام فعال شد
+        registration_terms: شرایط ثبت نام
+        registration_url: URL ثبت نام
+        registrations_enabled: ثبت نام فعال شد
+        show_embedded_iframe: نمایش iframe جاسازی شده برای این URL
+        start_time: زمان شروع
+        title: عنوان
+        transparent: شفاف
+        type_of_meeting: تایپ کنید
+    errors:
+      models:
+        meeting:
+          attributes:
+            iframe_embed_type:
+              not_embeddable: این URL را نمی توان در صفحه جلسه یا رویداد زنده جاسازی کرد
+        meeting_agenda:
+          attributes:
+            base:
+              too_many_minutes: مدت زمان موارد بیش از مدت زمان جلسه %{count} دقیقه است
+              too_many_minutes_child: مدت زمان مورد فرزندان از مورد دستور جلسه "%{parent_title}" مدت زمان والدین %{count} دقیقه بیشتر است
+        meeting_registration_invite:
+          attributes:
+            email:
+              already_invited: این حساب ایمیل قبلاً دعوت شده است
+    models:
+      decidim/meetings/close_meeting_event: جلسه بسته شد
+      decidim/meetings/create_meeting_event: ملاقات
+      decidim/meetings/meeting_registrations_enabled_event: ثبت نام فعال شد
+      decidim/meetings/meeting_registrations_over_percentage_event: ثبت نام بیش از حد مجاز
+      decidim/meetings/upcoming_meeting_event: جلسه آتی
+      decidim/meetings/update_meeting_event: جلسه به روز شد
+  activerecord:
+    models:
+      decidim/meetings/meeting:
+        one: ملاقات
+        other: جلسات
+      decidim/meetings/minutes:
+        one: دقایق
+        other: دقایق
+      decidim/meetings/registration:
+        one: ثبت
+        other: ثبت نام ها
+  decidim:
+    admin:
+      filters:
+        meetings:
+          category_id_eq:
+            label: دسته بندی
+          closed_at_present:
+            label: حالت
+            values:
+              'false': باز کن
+              'true': بسته شد
+          is_upcoming_true:
+            label: تاریخ
+            values:
+              'false': گذشته
+              'true': آینده
+          scope_id_eq:
+            label: محدوده
+          with_any_origin:
+            label: اصل و نسب
+            values:
+              official: رسمی
+              participants: شرکت کننده
+              user_group: گروه های کاربری
+          with_any_type:
+            label: نوع جلسه
+            values:
+              hybrid: ترکیبی
+              in_person: به صورت حضوری
+              online: برخط
+      meeting_copies:
+        create:
+          error: مشکلی در تکرار این جلسه وجود داشت.
+          success: جلسه با موفقیت تکرار شد.
+        new:
+          copy: "کپی \U0001F004"
+          select: داده هایی را که می خواهید کپی کنید انتخاب کنید
+          title: جلسه تکراری
+    components:
+      meetings:
+        actions:
+          comment: اظهار نظر
+          join: پیوستن
+        name: جلسات
+        settings:
+          global:
+            announcement: اعلامیه
+            comments_enabled: نظرات فعال شد
+            comments_max_length: حداکثر طول نظرات (برای مقدار پیش فرض 0 بگذارید)
+            creation_enabled_for_participants: شرکت کنندگان می توانند جلساتی را ایجاد کنند
+            default_registration_terms: شرایط ثبت نام پیش فرض
+            enable_pads_creation: فعال کردن ایجاد پد
+            maps_enabled: نقشه ها فعال شد
+            registration_code_enabled: کد ثبت نام فعال شد
+            resources_permissions_enabled: مجوزهای کنش‌ها را می‌توان برای هر جلسه تنظیم کرد
+            scope_id: محدوده
+            scopes_enabled: دامنه ها فعال شد
+            terms_and_conditions_url_for_meeting_creators: شرایط و ضوابط URL برای سازندگان جلسه
+          step:
+            announcement: اعلامیه
+            comments_blocked: نظرات مسدود شده است
+            creation_enabled_for_participants: ایجاد جلسه توسط شرکت کنندگان فعال شد
+            creation_enabled_for_user_groups: ایجاد جلسه توسط گروه های کاربری فعال شد
+    events:
+      meetings:
+        meeting_closed:
+          affected_user:
+            email_intro: 'جلسه شما "%{resource_title}" بسته شد. می توانید نتیجه گیری را از صفحه آن بخوانید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا جلسه "%{resource_title}" را سازماندهی کرده اید.
+            email_subject: جلسه "%{resource_title}" بسته شد
+            notification_title: جلسه <a href="%{resource_path}">%{resource_title}</a> بسته شد.
+          follower:
+            email_intro: 'جلسه "%{resource_title}" بسته شد. می توانید نتیجه گیری را از صفحه آن بخوانید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا جلسه "%{resource_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+            email_subject: جلسه "%{resource_title}" بسته شد
+            notification_title: جلسه <a href="%{resource_path}">%{resource_title}</a> بسته شد.
+        meeting_created:
+          button_text: ثبت نام در جلسه
+          email_intro: جلسه "%{resource_title}" به "%{participatory_space_title}" که شما دنبال می کنید اضافه شده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا "%{participatory_space_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+          email_subject: جلسه جدید به %{participatory_space_title} اضافه شد
+          notification_title: جلسه <a href="%{resource_path}">%{resource_title}</a> به %{participatory_space_title} اضافه شد
+        meeting_registration_confirmed:
+          notification_title: ثبت نام شما برای جلسه <a href="%{resource_url}">%{resource_title}</a> تایید شده است. کد ثبت نام شما %{registration_code} است.
+        meeting_registrations_over_percentage:
+          email_intro: اسلات های اختصاص داده شده برای جلسه "%{resource_title}" بیش از %{percentage}٪ است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا مدیر فضای مشارکتی جلسه هستید.
+          email_subject: اسلات های اختصاص داده شده برای جلسه "%{resource_title}" بیش از %{percentage}٪ است
+          notification_title: اسلات های اختصاص داده شده برای جلسه <a href="%{resource_path}">%{resource_title}</a> بیش از %{percentage}٪ است.
+        meeting_updated:
+          email_intro: 'جلسه "%{resource_title}" به روز شد. نسخه جدید را می توانید از صفحه آن بخوانید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا جلسه "%{resource_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+          email_subject: جلسه "%{resource_title}" به روز شد
+          notification_title: جلسه <a href="%{resource_path}">%{resource_title}</a> به‌روزرسانی شد.
+        registration_code_validated:
+          email_intro: کد ثبت نام شما "%{registration_code}" برای جلسه "%{resource_title}" تایید شده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا کد ثبت نام شما برای جلسه "%{resource_title}" تایید شده است.
+          email_subject: کد ثبت نام شما "%{registration_code}" برای جلسه "%{resource_title}" تایید شده است
+          notification_title: کد ثبت نام شما "%{registration_code}" برای جلسه <a href="%{resource_path}">%{resource_title}</a> تأیید شده است.
+        registrations_enabled:
+          email_intro: 'جلسه "%{resource_title}" ثبت نام را فعال کرده است. شما می توانید خود را در صفحه آن ثبت نام کنید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا جلسه "%{resource_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+          email_subject: جلسه "%{resource_title}" ثبت نام را فعال کرده است.
+          notification_title: جلسه <a href="%{resource_path}">%{resource_title}</a> ثبت نام را فعال کرده است.
+        upcoming_meeting:
+          email_intro: جلسه "%{resource_title}" کمتر از 48 ساعت دیگر آغاز می شود.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا جلسه "%{resource_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+          email_subject: جلسه "%{resource_title}" کمتر از 48 ساعت دیگر آغاز می شود.
+          notification_title: جلسه <a href="%{resource_path}">%{resource_title}</a> کمتر از ۴۸ ساعت دیگر شروع می‌شود.
+    forms:
+      meetings:
+        attendees_count_help_text: فراموش نکنید که تعداد کل شرکت کنندگان در جلسه خود را، چه به صورت حضوری، چه آنلاین و چه ترکیبی، درج کنید.
+    gamification:
+      badges:
+        attended_meetings:
+          conditions:
+          - برای جلساتی که می خواهید شرکت کنید ثبت نام کنید
+          description: این نشان زمانی اعطا می شود که در چندین جلسه حضوری شرکت کنید.
+          description_another: این شرکت کننده در جلسات %{score} شرکت کرده است.
+          description_own: شما در جلسات %{score} شرکت کرده اید.
+          name: در جلسات شرکت کرد
+          next_level_in: برای رسیدن به سطح بعدی در %{score} جلسات دیگر شرکت کنید!
+          unearned_another: این شرکت کننده هنوز در هیچ جلسه ای شرکت نکرده است.
+          unearned_own: شما هنوز در هیچ جلسه ای شرکت نکرده اید.
+    meetings:
+      actions:
+        agenda: دستور جلسه
+        attachment_collections: پوشه ها
+        attachments: پیوست ها
+        close: بستن
+        confirm_destroy: آیا مطمئنید که می خواهید این جلسه را حذف کنید؟
+        destroy: حذف
+        edit: ویرایش کنید
+        invalid_destroy:
+          proposals_count:
+            one: 'جلسه را نمی توان از بین برد زیرا دارای %{count} پیشنهاد مرتبط با آن است:'
+            other: 'جلسه را نمی توان از بین برد زیرا دارای %{count} پیشنهادات مرتبط با آن است:'
+        manage_poll: مدیریت نظرسنجی
+        new: جلسه جدید
+        preview: پیش نمایش
+        registrations: ثبت نام ها
+        title: اقدامات
+      admin:
+        agenda:
+          agenda_item:
+            add_agenda_item_child: افزودن آیتم فرعی دستور کار
+            agenda_item: مورد دستور کار
+            agenda_item_children: موارد فرعی دستور کار
+            down: پایین
+            remove: برداشتن
+            up: بالا
+          agenda_item_child:
+            agenda_item_child: موضوع فرعی دستور کار
+            down: پایین
+            remove: برداشتن
+            up: بالا
+          create:
+            invalid: در ایجاد این دستور کار مشکلی وجود داشت
+            success: دستور کار با موفقیت ایجاد شد
+          edit:
+            title: دستور کار را ویرایش کنید
+            update: به روز رسانی
+          form:
+            add_agenda_item: افزودن مورد دستور کار
+            agenda_items: موارد دستور کار
+            end_date: تاریخ پایان
+            start_date: تاریخ شروع
+          new:
+            create: ايجاد كردن
+            title: دستور کار جدید
+          update:
+            invalid: مشکلی در به‌روزرسانی این دستور کار وجود داشت
+            success: دستور کار با موفقیت به روز شد
+        exports:
+          answers: پاسخ ها
+          meeting_comments: نظرات
+          meetings: جلسات
+          registrations: ثبت نام ها
+        invite_join_meeting_mailer:
+          invite:
+            decline: رد کردن دعوت
+            invited_you_to_join_a_meeting: "%{invited_by} شما را برای پیوستن به جلسه ای در %{application} دعوت کرده است. از طریق لینک های زیر می توانید آن را رد یا قبول کنید."
+            join: پیوستن به جلسه "%{meeting_title}"
+        invites:
+          create:
+            error: مشکلی در دعوت از شرکت‌کننده برای پیوستن به جلسه وجود داشت.
+            success: شرکت کننده با موفقیت برای پیوستن به جلسه دعوت شد.
+          form:
+            attendee_type: نوع شرکت کننده
+            existing_user: شرکت کننده موجود
+            invite: دعوت
+            invite_explanation: از شرکت کننده برای پیوستن به جلسه و همچنین به سازمان دعوت می شود.
+            non_user: شرکت کننده غیر موجود
+            select_user: شرکت کننده را انتخاب کنید
+          index:
+            filter:
+              accepted: پذیرفته شده
+              all: همه
+              rejected: رد شد
+              sent: ارسال شد
+            filter_by: محدود شده توسط
+            invite_attendee: از شرکت کننده دعوت کنید
+            invites: دعوت می کند
+            registrations_disabled: شما نمی توانید یک شرکت کننده را دعوت کنید زیرا ثبت نام غیرفعال است.
+            search: جستجو کردن
+        meeting_closes:
+          edit:
+            close: بستن
+            title: جلسه بسته
+        meeting_copies:
+          form:
+            select_a_meeting_type: لطفاً نوع جلسه را انتخاب کنید
+        meetings:
+          close:
+            invalid: مشکلی در بستن این جلسه وجود داشت
+            success: جلسه با موفقیت بسته شد
+          create:
+            invalid: مشکلی در ایجاد این جلسه وجود داشت
+            success: جلسه با موفقیت ایجاد شد. توجه داشته باشید که این هنوز منتشر نشده است، باید به صورت دستی آن را منتشر کنید.
+          destroy:
+            invalid:
+              proposals_count:
+                one: جلسه را نمی توان از بین برد زیرا پیشنهاد %{count} به آن مرتبط است
+                other: جلسه را نمی توان از بین برد زیرا دارای %{count} پیشنهادات مرتبط با آن است
+            success: جلسه با موفقیت حذف شد
+          edit:
+            title: ویرایش جلسه
+            update: به روز رسانی
+          form:
+            address_help: 'آدرس: توسط Geocoder برای یافتن مکان استفاده می شود'
+            disclaimer: 'سلب مسئولیت: با استفاده از یک سیستم ثبت نام خارجی، آگاه هستید که سازمان دهندگان %{organization} مسئولیتی در قبال داده های ارائه شده توسط کاربران به سرویس خارجی ندارند.'
+            location_help: 'مکان: پیامی که به کاربران اشاره می کند که در آن محل ملاقات هستند'
+            location_hints_help: 'نکات مکان: اطلاعات اضافی. مثال: طبقه ساختمان اگر جلسه حضوری است، یا رمز جلسه اگر جلسه آنلاین با دسترسی محدود است.'
+            online_meeting_url_help: 'پیوند: به شرکت کنندگان اجازه دهید مستقیماً به جلسه شما متصل شوند'
+            registration_url_help: 'پیوند: به شرکت کنندگان اجازه دهید به سرویس خارجی که برای ثبت نام استفاده می کنید، بروند'
+            select_a_meeting_type: لطفاً نوع جلسه را انتخاب کنید
+            select_a_registration_type: لطفا نوع ثبت نام را انتخاب کنید
+            select_an_iframe_access_level: لطفاً سطح دسترسی iframe را انتخاب کنید
+            show_embedded_iframe_help: 'فقط چند سرویس اجازه جاسازی در جلسه یا رویداد زنده از دامنه‌های زیر را می‌دهند: %{domains}'
+          index:
+            title: جلسات
+          new:
+            create: ايجاد كردن
+            title: ایجاد جلسه
+          publish:
+            invalid: مشکلی در انتشار این جلسه وجود داشت
+            success: جلسه با موفقیت منتشر شد
+          service:
+            description: شرح
+            down: پایین
+            remove: برداشتن
+            service: سرویس
+            title: عنوان
+            up: بالا
+          services:
+            add_service: سرویس اضافه کنید
+            services: خدمات
+          unpublish:
+            invalid: مشکلی در لغو انتشار این جلسه وجود داشت
+            success: جلسه با موفقیت لغو شد
+          update:
+            invalid: مشکلی در به‌روزرسانی این جلسه وجود داشت
+            success: جلسه با موفقیت به روز شد
+        meetings_poll:
+          form:
+            title: ویرایش پرسشنامه نظرسنجی برای %{questionnaire_for}
+          update:
+            invalid: مشکلی در به‌روزرسانی این نظرسنجی جلسه وجود داشت
+            success: نظرسنجی جلسه با موفقیت به روز شد
+        models:
+          meeting:
+            name: ملاقات
+        registrations:
+          edit:
+            save: صرفه جویی
+            validate: تایید اعتبار
+            validate_registration_code: کد ثبت نام را تایید کنید
+          form:
+            available_slots_help: اگر اسلات نامحدودی در دسترس دارید، آن را روی 0 بگذارید.
+            invites: دعوت نامه ها
+            recommendation_message: به دلایل حفظ حریم خصوصی، توصیه می کنیم زمانی که دیگر به آن نیاز ندارید، این فرم کتیبه را حذف کنید. به طور پیش فرض این 3 ماه پس از پایان جلسه است.
+            registration_email_help: این متن در وسط ایمیل تایید ثبت نام ظاهر می شود. فقط بعد از کد ثبت نام
+            registration_form: فرم ثبت نام
+            registrations_count:
+              one: ثبت نام %{count} انجام شده است.
+              other: ثبت نام %{count} انجام شده است.
+            reserved_slots_help: اگر اسلات رزروی ندارید آن را روی 0 بگذارید
+            reserved_slots_less_than: باید کمتر یا مساوی %{count} باشد
+            title: ثبت نام ها
+          update:
+            invalid: مشکلی در ذخیره تنظیمات ثبت نام وجود داشت.
+            success: تنظیمات ثبت نام جلسه با موفقیت ذخیره شد.
+          validate_registration_code:
+            invalid: این کد ثبت نام معتبر نیست.
+            success: کد ثبت نام با موفقیت تایید شد.
+      admin_log:
+        invite:
+          create: "%{user_name} از %{attendee_name} دعوت کرد تا به جلسه %{resource_name} در فضای %{space_name} بپیوندد"
+          deleted: "%{user_name} %{attendee_name} دعوت نشده از پیوستن به جلسه %{resource_name} در فضای %{space_name}"
+          update: "%{user_name} از %{attendee_name} دعوت کرد تا به جلسه %{resource_name} در فضای %{space_name} بپیوندد"
+        meeting:
+          close: "%{user_name} جلسه %{resource_name} را در فضای %{space_name} بسته است"
+          create: "%{user_name} جلسه %{resource_name} را در فضای %{space_name} ایجاد کرد"
+          delete: "%{user_name} جلسه %{resource_name} را در فضای %{space_name} حذف کرد"
+          export_registrations: "%{user_name} ثبت نام های جلسه %{resource_name} را در فضای %{space_name} صادر کرد"
+          update: "%{user_name} جلسه %{resource_name} را در فضای %{space_name} به روز کرد"
+          value_types:
+            organizer_presenter:
+              not_found: 'سازمان دهنده در پایگاه داده یافت نشد (ID: %{id})'
+        questionnaire:
+          update: "%{user_name} پرسشنامه جلسه %{meeting_name} را به روز کرد"
+      application_helper:
+        filter_category_values:
+          all: همه
+        filter_meeting_space_values:
+          all: همه
+        filter_scope_values:
+          all: همه
+      calendar_modal:
+        calendar_url: URL تقویم
+        close_window: پنجره بسته
+        copy_calendar_url: "کپی \U0001F004"
+        copy_calendar_url_clarification: URL تقویم را در کلیپ بورد کپی کنید
+        copy_calendar_url_copied: کپی شده!
+        copy_calendar_url_description: می توانید تمام جلسات منتشر شده را در برنامه یا ارائه دهنده تقویم خود مشاهده کنید. این URL را با استفاده از گزینه "Add new calendar from an URL" کپی و در تقویم خود جایگذاری کنید.
+        copy_calendar_url_explanation: لطفاً توجه داشته باشید که مجموعه‌ای از جلسات را صادر می‌کنید، زیرا فیلترهای فعالی وجود دارد. اگر می‌خواهید همه آنها را صادر کنید، ابتدا همه فیلترها را بازنشانی کنید.
+        copy_calendar_url_message: URL با موفقیت در کلیپ بورد کپی شد.
+        export_calendar: صادرات تقویم
+      close_meeting_reminder_mailer:
+        close_meeting_reminder:
+          body: جلسه <a href="%{meeting_path}">"%{meeting_title}"</a> در انتظار بسته شدن است. لطفاً با استفاده از دکمه "بستن جلسه" گزارشی از جلسه اضافه کنید.
+          greetings: با سلام،<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
+          hello: سلام %{username}،
+          subject: اکنون می توانید جلسه خود را با گزارشی در پلتفرم %{organization_name} ببندید
+      conference_venues: محل برگزاری کنفرانس
+      content_blocks:
+        upcoming_meetings:
+          name: جلسات آتی
+          upcoming_meetings: جلسات آتی
+          view_all_meetings: مشاهده همه
+      directory:
+        meetings:
+          index:
+            meetings: جلسات
+            space_type: فضای مشارکتی
+      iframe_access_level:
+        all: همه بازدیدکنندگان
+        registered: شرکت کنندگان در این جلسه ثبت نام کردند
+        signed_in: فقط شرکت‌کنندگانی که وارد سیستم شده‌اند
+      iframe_embed_type:
+        embed_in_meeting_page: جاسازی در صفحه جلسه
+        none: هیچ یک
+        open_in_live_event_page: باز کردن در صفحه رویداد زنده (با نظرسنجی اختیاری)
+        open_in_new_tab: URL را در یک تب جدید باز کنید
+      last_activity:
+        meeting_updated_at_html: "<span>جلسه در %{link} به‌روزرسانی شد</span>"
+        new_meeting_at_html: "<span>جلسه جدید در %{link}</span>"
+      layouts:
+        live_event:
+          administrate: اداره کنید
+          close: بستن
+          questions: سوالات
+      mailer:
+        invite_join_meeting_mailer:
+          invite:
+            subject: دعوت به شرکت در جلسه
+        registration_mailer:
+          confirmation:
+            subject: ثبت نام جلسه شما تایید شده است
+      meeting:
+        not_allowed: شما اجازه دیدن این جلسه را ندارید
+      meeting_closes:
+        edit:
+          back: بازگشت
+          close: جلسه بسته
+          title: جلسه بسته
+      meetings:
+        calendar_modal:
+          add_to_calendar: به تقویم اضافه کنید
+          apple: به تقویم اپل اضافه کنید
+          close_window: پنجره بسته
+          full_details_html: برای جزئیات کامل به %{link} بروید
+          google: به تقویم گوگل اضافه کنید
+          outlook: به تقویم Outlook اضافه کنید
+        count:
+          meetings_count:
+            one: جلسه %{count}
+            other: "%{count} جلسات"
+        create:
+          invalid: مشکلی در ایجاد این جلسه وجود داشت.
+          success: شما جلسه را با موفقیت ایجاد کردید.
+        edit:
+          back: بازگشت
+          title: جلسه خود را ویرایش کنید
+          update: به روز رسانی
+        filters:
+          activity: فعالیت من
+          all: همه
+          category: دسته بندی
+          date: تاریخ
+          date_values:
+            all: همه
+            past: گذشته
+            upcoming: آینده
+          my_meetings: جلسات من
+          origin: اصل و نسب
+          origin_values:
+            all: همه
+            official: رسمی
+            participants: شركت كنندگان
+            user_groups: گروه ها
+          scope: محدوده
+          search: جستجو کردن
+          type: تایپ کنید
+          type_values:
+            all: همه
+            hybrid: ترکیبی
+            in_person: به صورت حضوری
+            online: برخط
+        filters_small_view:
+          close_modal: بستن مودال
+          filter: فیلتر کنید
+          filter_by: محدود شده توسط
+          unfold: باز کردن
+        form:
+          address_help: 'آدرس: توسط Geocoder برای یافتن مکان استفاده می شود'
+          available_slots_help: اگر اسلات نامحدودی در دسترس دارید، آن را روی 0 بگذارید
+          create_as: ایجاد جلسه به عنوان
+          disclaimer: 'سلب مسئولیت: با استفاده از یک سیستم ثبت نام خارجی، آگاه هستید که سازمان دهندگان %{organization} مسئولیتی در قبال داده های ارائه شده توسط کاربران به سرویس خارجی ندارند.'
+          location_help: 'مکان: پیامی که به کاربران اشاره می کند که در آن محل ملاقات هستند'
+          location_hints_help: 'نکات مکان: اطلاعات اضافی. مثال: طبقه ساختمان اگر جلسه حضوری است، یا رمز جلسه اگر جلسه آنلاین با دسترسی محدود است.'
+          online_meeting_url_help: 'پیوند: به شرکت کنندگان اجازه دهید مستقیماً به جلسه شما متصل شوند'
+          registration_url_help: 'پیوند: به شرکت کنندگان اجازه دهید به سرویس خارجی که برای ثبت نام استفاده می کنید، بروند'
+          select_a_category: لطفا یک دسته را انتخاب کنید
+          select_a_meeting_type: لطفاً نوع جلسه را انتخاب کنید
+          select_a_registration_type: لطفا نوع ثبت نام را انتخاب کنید
+          select_an_iframe_access_level: لطفاً سطح دسترسی iframe را انتخاب کنید
+          show_embedded_iframe_help: 'فقط چند سرویس اجازه جاسازی در جلسه یا رویداد زنده از دامنه‌های زیر را می‌دهند: %{domains}'
+        index:
+          click_here: دیدن همه جلسات
+          new_meeting: جلسه جدید
+          see_all: دیدن همه جلسات
+          see_all_withdrawn: مشاهده همه جلسات حذف شده
+          text_banner: شما در حال مشاهده لیست جلساتی هستید که توسط نویسندگان آنها حذف شده است. %{go_back_link}.
+        meeting_minutes:
+          related_information: اطلاعات مربوطه
+        meetings:
+          no_meetings_warning: هیچ جلسه ای با معیارهای جستجوی شما مطابقت ندارد یا جلسه ای برنامه ریزی نشده است.
+          upcoming_meetings_warning: در حال حاضر، هیچ جلسه برنامه ریزی شده ای وجود ندارد، اما در اینجا می توانید تمام جلسات گذشته لیست شده را پیدا کنید.
+        new:
+          back: بازگشت
+          create: ايجاد كردن
+          title: جلسه خود را ایجاد کنید
+        registration_confirm:
+          cancel: لغو کنید
+          confirm: تایید
+        show:
+          attendees: تعداد شرکت کنندگان
+          back: بازگشت به لیست
+          close_meeting: جلسه بسته
+          contributions: مشارکت ها به حساب می آیند
+          date: تاریخ
+          edit_close_meeting: ویرایش گزارش جلسه
+          edit_meeting: ویرایش جلسه
+          going: شما برای این جلسه ثبت نام کرده اید
+          join: به جلسه بپیوندید
+          leave: ثبت نام خود را لغو کنید
+          leave_confirmation: آیا مطمئن هستید که می خواهید ثبت نام خود را برای این جلسه لغو کنید؟
+          link_available_soon: لینک به زودی در دسترس است
+          link_closed: لینک عضویت در جلسه چند دقیقه قبل از شروع آن در دسترس خواهد بود
+          live_event: این جلسه هم اکنون در حال برگزاری است
+          meeting_minutes: صورتجلسه
+          micro_camera_permissions_warning: وقتی روی دکمه زیر کلیک می کنید، مجوز میکروفون و/یا دوربین از شما خواسته می شود و به کنفرانس ویدیویی ملحق می شوید.
+          no_slots_available: اسلات موجود نیست
+          organizations: حضور در سازمان ها
+          registration_code_help_text: کد ثبت نام شما
+          registration_state:
+            validated: تایید شده
+            validation_pending: اعتبار در انتظار است
+          remaining_slots:
+            one: اسلات %{count} باقی مانده است
+            other: "%{count} اسلات باقی مانده است"
+          view: چشم انداز
+          visit_finished: مشاهده جلسه گذشته
+          withdraw_btn_hint: در صورت تغییر نظر می توانید جلسه خود را پس بگیرید. جلسه حذف نشده است، در لیست جلسات حذف شده ظاهر می شود.
+          withdraw_confirmation_html: آیا مطمئنید که می خواهید این جلسه را پس بگیرید؟<br><br> <strong>این اقدام قابل لغو نیست!</strong>
+          withdraw_meeting: انصراف از جلسه
+        update:
+          invalid: مشکلی در به‌روزرسانی جلسه وجود داشت.
+          success: شما جلسه را با موفقیت به روز کردید.
+      meetings_map:
+        view_meeting: مشاهده جلسه
+      models:
+        invite:
+          fields:
+            email: پست الکترونیک
+            name: نام
+            sent_at: ارسال شده در
+            status: وضعیت
+          status:
+            accepted: پذیرفته شد (%{at})
+            rejected: رد شد (%{at})
+            sent: ارسال شد
+        meeting:
+          fields:
+            closed: بسته شد
+            end_time: تاریخ پایان
+            id: شناسه
+            map: نقشه
+            official_meeting: جلسه رسمی
+            start_time: تاریخ شروع
+            title: عنوان
+      polls:
+        questions:
+          closed_question:
+            question_results: نتایج سوال
+          index:
+            empty_questions: در طول این جلسه چند سوال ارسال می شود و شما می توانید به آنها پاسخ دهید. آنها در اینجا نمایش داده خواهند شد.
+          index_admin:
+            admin_dashboard: داشبورد مدیر
+            edit: در پنل مدیریت ویرایش کنید
+            question: سوال
+            received_answer: پاسخ دریافت کرد
+            received_answers: پاسخ ها را دریافت کرد
+            results: نتایج
+            send: ارسال
+            sent: ارسال شد
+          published_question:
+            max_choices_alert: انتخاب های زیادی انتخاب شده است
+            question: سوال
+            question_replied: سوال پاسخ داده شد
+            reply_question: پاسخ سوال
+      public_participants_list:
+        attending_participants: شرکت کنندگان شرکت کننده
+        hidden_participants_count:
+          one: و %{count} نفر دیگر
+          other: و %{count} نفر دیگر
+      read_more: "(ادامه مطلب)"
+      registration_mailer:
+        confirmation:
+          confirmed_html: ثبت نام شما برای جلسه <a href="%{url}">%{title}</a> تایید شده است.
+          details: جزئیات جلسه را در فایل ضمیمه مشاهده خواهید کرد.
+          registration_code: کد ثبت نام شما %{code} است.
+      registration_type:
+        on_different_platform: روی یک پلتفرم متفاوت
+        on_this_platform: روی این پلتفرم
+        registration_disabled: ثبت نام غیرفعال شد
+      registrations:
+        create:
+          invalid: برای پیوستن به این جلسه مشکلی پیش آمد.
+          success: شما با موفقیت به جلسه پیوستید. از آنجایی که برای این جلسه ثبت نام کرده اید، در صورت به روز رسانی در مورد آن به شما اطلاع داده می شود.
+        decline_invitation:
+          invalid: مشکلی در رد دعوت وجود داشت.
+          success: شما با موفقیت دعوت را رد کردید.
+        destroy:
+          invalid: مشکلی برای خروج از این جلسه وجود داشت.
+          success: شما با موفقیت جلسه را ترک کردید.
+      type_of_meeting:
+        hybrid: ترکیبی
+        in_person: به صورت حضوری
+        online: برخط
+      types:
+        private_meeting: جلسه خصوصی
+        transparent: شفاف
+        withdraw: برداشته شد
+      versions:
+        back_to_resource: به جلسه برگردید
+      withdraw:
+        error: هنگام پس گرفتن جلسه خطایی روی داد
+        success: جلسه با موفقیت لغو شد
+    metrics:
+      meetings:
+        description: تعداد جلسات ایجاد شده
+        object: جلسات
+        title: جلسات
+    participatory_spaces:
+      highlighted_meetings:
+        past_meetings: جلسات گذشته
+        see_all: مشاهده همه جلسات (%{count})
+        upcoming_meetings: جلسات آتی
+      upcoming_meeting_for_card:
+        upcoming_meeting: جلسه آتی
+    resource_links:
+      meetings_through_proposals:
+        meeting_result: 'نتایج مرتبط:'
+        result_meeting: 'جلسات مرتبط:'
+      proposals_from_meeting:
+        meeting_proposal: 'پیشنهادهای مرتبط:'
+        proposal_meeting: 'جلسات مرتبط:'
+    statistics:
+      meetings_count: جلسات
+  devise:
+    mailer:
+      join_meeting:
+        subject: دعوت به شرکت در جلسه

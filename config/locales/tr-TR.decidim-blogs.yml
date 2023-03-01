@@ -1,0 +1,92 @@
+---
+tr-TR:
+  activemodel:
+    models:
+      decidim/blogs/create_post_event: Yeni blog gönderisi
+  activerecord:
+    models:
+      decidim/blogs/post:
+        one: Postalamak
+        other: Gönderiler
+  decidim:
+    blogs:
+      actions:
+        author_id: 'Gönderiyi şu şekilde oluştur:'
+        confirm_destroy: Bu gönderiyi silmek istediğinizden emin misiniz?
+        destroy: Silmek
+        edit: Düzenlemek
+        new: Yeni posta
+        title: Hareketler
+      admin:
+        models:
+          components:
+            body: Vücut
+          post:
+            name: Postalamak
+        posts:
+          create:
+            invalid: Bu yayın oluşturulurken bir sorun oluştu
+            success: Gönderi başarıyla oluşturuldu
+          destroy:
+            success: Gönderi başarıyla silindi
+          edit:
+            save: Güncelleme
+            title: Gönderiyi düzenle
+          index:
+            title: Gönderiler
+          new:
+            create: Yaratmak
+            title: Gönderi oluştur
+          update:
+            invalid: Gönderi kaydedilirken bir sorun oluştu.
+            success: Gönderi başarıyla kaydedildi
+      admin_log:
+        post:
+          create: "%{user_name}, %{resource_name} blog gönderisini %{space_name}'de oluşturdu"
+          delete: "%{user_name}, %{resource_name} blog gönderisini %{space_name}'den sildi"
+          update: "%{user_name}, %{resource_name} blog gönderisini %{space_name}'de güncelledi"
+      last_activity:
+        new_post_at_html: "<span>%{link}'da yeni gönderi</span>"
+      models:
+        post:
+          fields:
+            author: Yazar
+            body: Vücut
+            created_at: oluşturuldu
+            official_blog_post: Resmi gönderi
+            title: başlık
+      posts:
+        show:
+          back: Listeye geri dön
+          comments: Yorumlar
+          view: Görüş
+        sidebar_blog:
+          comments: yorumlar
+          most_commented_posts: En çok yorum yapılan gönderiler
+      read_more: Devamını oku
+    components:
+      blogs:
+        actions:
+          create: Yaratmak
+          destroy: Silmek
+          update: Güncelleme
+        name: Blog
+        settings:
+          global:
+            announcement: Duyuru
+            comments_enabled: Yorumlar etkinleştirildi
+            comments_max_length: Açıklamaların maksimum uzunluğu (Varsayılan değer olarak 0 bırakın)
+          step:
+            announcement: Duyuru
+            comments_blocked: Yorumlar engellendi
+            endorsements_blocked: Onaylar engellendi
+            endorsements_enabled: Onaylar etkinleştirildi
+    events:
+      blogs:
+        post_created:
+          email_intro: Takip ettiğiniz "%{participatory_space_title}" kategorisinde "%{resource_title}" yazısı yayınlandı.
+          email_outro: '"%{participatory_space_title}"ı takip ettiğiniz için bu bildirimi aldınız. Bir önceki linkten takibi bırakabilirsiniz.'
+          email_subject: "%{participatory_space_title}'da yayınlanan yeni yayın"
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> gönderisi %{participatory_space_title}'de yayınlandı
+    statistics:
+      posts_count: Gönderiler

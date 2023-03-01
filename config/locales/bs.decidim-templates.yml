@@ -1,0 +1,74 @@
+---
+hr:
+  activemodel:
+    attributes:
+      questionnaire:
+        title: Naslov
+      template:
+        description: Opis
+        name: Ime
+  decidim:
+    admin:
+      menu:
+        templates: Predlošci
+      templates:
+        apply:
+          error: Došlo je do problema prilikom primjene ovog predloška.
+          success: Predložak je uspješno primijenjen
+        copy:
+          error: Došlo je do problema pri kopiranju ovog predloška.
+          success: Predložak je uspješno kopiran
+        create:
+          error: Došlo je do problema prilikom izrade ovog predloška.
+          success: Predložak je uspješno izrađen
+        destroy:
+          success: Predložak je uspješno izbrisan
+        empty: Još nema šablona.
+        update:
+          error: Došlo je do problema prilikom ažuriranja ovog predloška.
+          success: Predložak je uspješno ažuriran
+      titles:
+        template_types:
+          questionnaires: Predlošci upitnika
+        templates: Predlošci
+    models:
+      questionnaire_template:
+        fields:
+          questions: Broj pitanja
+          title: Naslov upitnika
+      template:
+        fields:
+          created_at: Stvoreno u
+        name: Predložak
+    templates:
+      admin:
+        questionnaire_templates:
+          choose:
+            create_from_template: Izradi iz predloška
+            description: Upravo ćete izraditi novi upitnik. Možete odabrati unaprijed definirani predložak i naknadno ga mijenjati.
+            label: Odaberite predložak
+            placeholder: Odaberite predložak
+            skip_template: Preskočiti
+          edit:
+            edit: Uredi
+            empty: Još nema pitanja
+            questionnaire: Upitnik
+          form:
+            save: Uštedjeti
+            template_title: Informacije o predlošku
+            title: Predložak upitnika %{questionnaire_for}
+          index:
+            confirm_delete: Jeste li sigurni da želite izbrisati ovaj predložak?
+            title: Predlošci upitnika
+          preview:
+            current_step: Korak %{step}
+            of_total_steps: od %{total_steps}
+            tos_agreement: Sudjelovanjem prihvaćate Uvjete pružanja usluge
+      admin_log:
+        template:
+          create: "%{user_name} izradio je predložak upitnika %{resource_name}"
+          delete: "%{user_name} je izbrisao predložak upitnika %{resource_name}"
+          duplicate: "%{user_name} duplicirao je predložak upitnika %{resource_name}"
+          update: "%{user_name} je ažurirao predložak upitnika %{resource_name}"
+      template_types:
+        questionnaires: Upitnici

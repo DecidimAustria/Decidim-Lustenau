@@ -1,0 +1,192 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      answer:
+        body: پاسخ
+        choices: انتخاب ها
+        selected_choices: انتخاب های منتخب
+      question:
+        max_choices: حداکثر تعداد انتخاب
+        question_type: تایپ کنید
+      questionnaire_question:
+        mandatory: اجباری
+        max_characters: محدودیت کاراکتر (اگر محدودیتی وجود ندارد به 0 رها کنید)
+    errors:
+      models:
+        answer:
+          attributes:
+            add_documents:
+              needs_to_be_reattached: نیاز به اتصال مجدد دارد
+            body:
+              too_long: خیلی طولانی است
+            choices:
+              missing: کامل نیستند
+              too_many: خیلی زیاد هستند
+        questionnaire:
+          request_invalid: در رسیدگی به درخواست خطایی روی داد. لطفا دوباره تلاش کنید
+  decidim:
+    forms:
+      admin:
+        models:
+          components:
+            description: شرح
+            tos: شرایط استفاده از خدمات
+        questionnaires:
+          actions:
+            back: بازگشت به سوالات
+            show: نمایش پاسخ ها
+          answer_option:
+            answer_option: گزینه پاسخ
+            free_text: متن آزاد
+            remove: برداشتن
+            statement: بیانیه
+          answers:
+            actions:
+              back: بازگشت به پاسخ ها
+              export: صادرات
+              show: نمایش پاسخ ها
+            empty: هنوز پاسخی وجود ندارد
+            export:
+              answer:
+                title: 'پاسخ #%{number}'
+            export_response:
+              title: survey_user_answers_%{token}
+            index:
+              title: "%{total} کل پاسخ"
+            show:
+              title: 'پاسخ #%{number}'
+          display_condition:
+            answer_option: گزینه پاسخ
+            condition_question: سوال
+            condition_type: وضعیت
+            condition_types:
+              answered: جواب داد
+              equal: برابر
+              match: شامل متن
+              not_answered: جواب نداد
+              not_equal: نا برابر
+            condition_value: متن گنجانده شده است
+            display_condition: وضعیت نمایش
+            mandatory: این شرط باید همیشه بدون توجه به وضعیت سایر شرایط برآورده شود
+            remove: برداشتن
+            save_warning: به یاد داشته باشید که قبل از پیکربندی شرایط نمایش، فرم را ذخیره کنید
+            select_answer_option: گزینه پاسخ را انتخاب کنید
+            select_condition_question: یک سوال انتخاب کن
+            select_condition_type: یک نوع شرط را انتخاب کنید
+          edit:
+            save: صرفه جویی
+            title: ویرایش پرسشنامه
+          form:
+            add_question: سوال اضافه کنید
+            add_separator: جداکننده را اضافه کنید
+            add_title_and_description: عنوان و توضیحات را اضافه کنید
+            already_answered_warning: این فرم قبلاً توسط برخی از کاربران پاسخ داده شده است، بنابراین نمی توانید سؤالات آن را تغییر دهید.
+            collapse: همه سوالات را جمع کنید
+            expand: همه سوالات را گسترش دهید
+            preview: پیش نمایش
+            title: ویرایش فرم برای %{questionnaire_for}
+            unpublished_warning: فرم منتشر نشده است. ممکن است سؤالات آن را اصلاح کنید، اما انجام این کار پاسخ های فعلی را حذف می کند.
+          matrix_row:
+            matrix_row: ردیف
+            remove: برداشتن
+            statement: بیانیه
+          question:
+            add_answer_option: گزینه پاسخ را اضافه کنید
+            add_display_condition: اضافه کردن شرایط نمایش
+            add_display_condition_info: فرم را برای پیکربندی شرایط نمایش ذخیره کنید
+            add_matrix_row: ردیف اضافه کنید
+            any: هر
+            collapse: سقوط - فروپاشی
+            description: شرح
+            down: پایین
+            expand: بسط دادن
+            question: سوال
+            remove: برداشتن
+            statement: بیانیه
+            up: بالا
+          separator:
+            down: پایین
+            remove: برداشتن
+            separator: جداکننده
+            up: بالا
+          title_and_description:
+            collapse: سقوط - فروپاشی
+            description: شرح
+            down: پایین
+            expand: بسط دادن
+            remove: برداشتن
+            title: عنوان
+            title_and_description: عنوان و توضیحات
+            up: بالا
+          update:
+            invalid: مشکلی در ذخیره فرم وجود داشت.
+            success: فرم با موفقیت ذخیره شد.
+      admin_log:
+        questionnaire:
+          update: "%{user_name} پرسشنامه %{resource_name} را به روز کرد"
+      errors:
+        answer:
+          body: بدن نمی تواند خالی باشد
+      images:
+        dimensions: "%{width} x %{height} پیکسل"
+        processors:
+          resize_and_pad: اندازه این تصویر تغییر می کند و به %{dimensions} اضافه می شود.
+          resize_to_fit: اندازه این تصویر متناسب با %{dimensions} تغییر خواهد کرد.
+      question_types:
+        files: فایل ها
+        long_answer: پاسخ طولانی
+        matrix_multiple: ماتریس (چند گزینه)
+        matrix_single: ماتریس (تک گزینه)
+        multiple_option: چند گزینه
+        short_answer: جواب کوتاه
+        single_option: تک گزینه
+        sorting: مرتب سازی
+        title_and_description: عنوان و توضیحات
+      questionnaire_answer_presenter:
+        download_attachment: پیوست را دانلود کنید
+      questionnaires:
+        answer:
+          invalid: در پاسخ به فرم مشکلی وجود داشت.
+          max_choices_alert: انتخاب های زیادی انتخاب شده است
+          success: فرم با موفقیت پاسخ داده شد.
+        question:
+          max_choices: 'حداکثر انتخاب: %{n}'
+        show:
+          answer_questionnaire:
+            anonymous_user_message: برای پاسخ دادن به فرم، <a href="%{sign_in_link}">با حساب خود وارد شوید</a> یا <a href="%{sign_up_link}">ثبت نام کنید</a>.
+            title: فرم را پاسخ دهید
+          current_step: مرحله %{step}
+          of_total_steps: از %{total_steps}
+          questionnaire_answered:
+            body: شما قبلا به این فرم پاسخ داده اید.
+            title: قبلاً پاسخ داده شده است
+          questionnaire_closed:
+            body: فرم بسته است و قابل پاسخگویی نیست.
+            title: فرم بسته شد
+          questionnaire_for_private_users:
+            body: فرم فقط برای کاربران خصوصی در دسترس است
+            title: فرم بسته شد
+          questionnaire_js_disabled:
+            body: برخی از ویژگی‌های این فرم غیرفعال خواهند شد. برای بهبود تجربه خود، لطفا جاوا اسکریپت را در مرورگر خود فعال کنید.
+            title: جاوا اسکریپت غیرفعال است
+          questionnaire_not_published:
+            body: این فرم هنوز منتشر نشده است.
+          tos_agreement: با شرکت، شرایط خدمات آن را می پذیرید
+      step_navigation:
+        show:
+          are_you_sure: این عمل قابل واگرد نیست و شما نمی توانید پاسخ های خود را ویرایش کنید. مطمئنی؟
+          back: بازگشت
+          continue: ادامه هید
+          submit: ارسال
+      user_answers_serializer:
+        body: پاسخ
+        completion: تکمیل
+        created_at: پاسخ داده شد
+        id: شناسه پاسخ
+        ip_hash: هش IP
+        question: سوال
+        registered: ثبت شده است
+        session_token: شناسه کاربر
+        unregistered: ثبت نشده
+        user_status: وضعیت کاربر

@@ -1,0 +1,982 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      collaborative_draft:
+        address: نشانی
+        body: بدن
+        category_id: دسته بندی
+        decidim_scope_id: محدوده
+        has_address: آدرس دارد
+        scope_id: محدوده
+        state: حالت
+        title: عنوان
+        user_group_id: ایجاد پیش نویس مشترک به عنوان
+      proposal:
+        address: نشانی
+        answer: پاسخ
+        answered_at: پاسخ داده شده در
+        automatic_hashtags: هشتگ ها به صورت خودکار اضافه می شوند
+        body: بدن
+        category_id: دسته بندی
+        decidim_scope_id: محدوده
+        has_address: آدرس دارد
+        scope_id: محدوده
+        state: حالت
+        suggested_hashtags: هشتگ های پیشنهادی
+        title: عنوان
+        user_group_id: ایجاد پیشنهاد به عنوان
+      proposal_answer:
+        answer: پاسخ
+        cost: هزینه
+        cost_report: گزارش هزینه
+        execution_period: دوره اجرا
+      proposals_copy:
+        copy_proposals: می‌دانم که با این کار همه پیشنهادها از مؤلفه انتخاب‌شده به مؤلفه فعلی وارد می‌شود و این عمل قابل برگشت نیست.
+        origin_component_id: جزء برای کپی کردن پیشنهادات
+      proposals_import:
+        import_proposals: پیشنهادات واردات
+        keep_answers: وضعیت و پاسخ ها را حفظ کنید
+        keep_authors: نویسندگان اصلی را نگه دارید
+      valuation_assignment:
+        admin_log:
+          valuator_role_id: نام ارزنده
+    errors:
+      models:
+        participatory_text:
+          attributes:
+            document:
+              allowed_file_content_types: 'نوع سند نامعتبر است. فقط فایل هایی با پسوندهای زیر مجاز هستند: %{types}'
+        proposal:
+          attributes:
+            add_documents:
+              needs_to_be_reattached: نیاز به اتصال مجدد دارد
+            add_photos:
+              needs_to_be_reattached: نیاز به اتصال مجدد دارد
+            body:
+              cant_be_equal_to_template: نمی تواند برابر با قالب باشد
+              identical: عنوان و عنوان نمی تواند یکسان باشد
+            title:
+              identical: و بدن نمی تواند یکسان باشد
+        proposals_merge:
+          attributes:
+            base:
+              not_official: رسمی نیستند
+              supported: حمایت یا تاییدیه دریافت کرده اند
+        proposals_split:
+          attributes:
+            base:
+              not_official: رسمی نیستند
+              supported: حمایت یا تاییدیه دریافت کرده اند
+    models:
+      decidim/proposals/accepted_proposal_event: پیشنهاد پذیرفته شد
+      decidim/proposals/admin/update_proposal_category_event: دسته پیشنهاد تغییر کرد
+      decidim/proposals/admin/update_proposal_scope_event: دامنه پیشنهاد تغییر کرد
+      decidim/proposals/creation_enabled_event: ایجاد پیشنهاد فعال شد
+      decidim/proposals/endorsing_enabled_event: تأیید پیشنهاد فعال شد
+      decidim/proposals/evaluating_proposal_event: پیشنهاد در حال ارزیابی است
+      decidim/proposals/proposal_mentioned_event: پیشنهاد ذکر شده است
+      decidim/proposals/publish_proposal_event: پیشنهاد منتشر شد
+      decidim/proposals/rejected_proposal_event: پیشنهاد رد شد
+      decidim/proposals/voting_enabled_event: رای گیری پیشنهاد فعال شد
+  activerecord:
+    models:
+      decidim/proposals/collaborative_draft:
+        one: پیش نویس مشارکتی
+        other: پیش نویس های مشترک
+      decidim/proposals/proposal:
+        one: پیشنهاد
+        other: پیشنهادات
+      decidim/proposals/proposal_note:
+        one: توجه داشته باشید
+        other: یادداشت
+      decidim/proposals/proposal_vote:
+        one: حمایت کردن
+        other: پشتیبانی می کند
+  decidim:
+    admin:
+      filters:
+        proposals:
+          category_id_eq:
+            label: دسته بندی
+          is_emendation_true:
+            label: تایپ کنید
+            values:
+              'false': پیشنهادات
+              'true': اصلاحات
+          scope_id_eq:
+            label: محدوده
+          state_eq:
+            label: حالت
+            values:
+              accepted: پذیرفته شده
+              evaluating: در حال ارزیابی
+              published: منتشر شده
+              rejected: رد شد
+              validating: اعتبار سنجی فنی
+              withdrawn: برداشته شد
+          state_null:
+            label: حالت
+            values:
+              'true': جواب نداد
+          valuator_role_ids_has:
+            label: به ارزیاب اختصاص داده شد
+        search_placeholder:
+          id_string_or_title_cont: "%{collection} را بر اساس شناسه یا عنوان جستجو کنید."
+    components:
+      proposals:
+        actions:
+          amend: اصلاح
+          comment: اظهار نظر
+          create: ايجاد كردن
+          endorse: تایید و امضا
+          vote: حمایت کردن
+          vote_comment: نظر رای دهید
+          withdraw: کنار کشیدن
+        name: پیشنهادات
+        settings:
+          global:
+            amendments_enabled: اصلاحات فعال شد
+            amendments_enabled_help: در صورت فعال بودن، ویژگی های Amendment را برای هر مرحله پیکربندی کنید.
+            amendments_wizard_help_text: متن راهنمای Admendments Wizard
+            announcement: اعلامیه
+            attachments_allowed: به پیوست‌ها اجازه دهید
+            can_accumulate_supports_beyond_threshold: می تواند پشتیبانی های فراتر از آستانه را جمع کند
+            collaborative_drafts_enabled: پیش‌نویس‌های مشترک فعال شد
+            comments_enabled: نظرات فعال شد
+            comments_max_length: حداکثر طول نظرات (برای مقدار پیش فرض 0 بگذارید)
+            default_sort_order: مرتب سازی پیشنهادی پیش فرض
+            default_sort_order_help: پیش‌فرض به این معنی است که اگر پشتیبانی‌ها فعال باشند، پیشنهادات به‌صورت تصادفی مرتب‌سازی شده‌اند و اگر پشتیبانی‌ها مسدود شوند، بر اساس بیشترین پشتیبانی مرتب‌سازی می‌شوند.
+            default_sort_order_options:
+              default: پیش فرض
+              most_commented: بیشترین نظرات
+              most_endorsed: بیشترین تایید شده
+              most_followed: بیشتر دنبال کردند
+              most_voted: بیشترین پشتیبانی
+              random: تصادفی
+              recent: اخیر
+              with_more_authors: با نویسندگان بیشتر
+            geocoding_enabled: کدگذاری جغرافیایی فعال شد
+            minimum_votes_per_user: حداقل پشتیبانی برای هر کاربر
+            new_proposal_body_template: الگوی بدنه پیشنهادی جدید
+            new_proposal_body_template_help: شما می توانید متن از پیش پر شده ای را که Proposals جدید خواهد داشت تعریف کنید
+            new_proposal_help_text: متن راهنما پیشنهاد جدید
+            official_proposals_enabled: پیشنهادات رسمی فعال شد
+            participatory_texts_enabled: متون مشارکتی فعال شد
+            participatory_texts_enabled_readonly: در صورت وجود پیشنهادهای موجود، نمی توان با این تنظیم تعامل کرد. اگر می‌خواهید این ویژگی را فعال کنید، لطفاً یک «جزء پیشنهادات» جدید ایجاد کنید یا اگر می‌خواهید آن را غیرفعال کنید، همه پیشنهادات وارد شده را در منوی «متن‌های مشارکتی» کنار بگذارید.
+            proposal_answering_enabled: پاسخ پیشنهاد فعال شد
+            proposal_edit_before_minutes: نویسندگان می توانند پیشنهادات را قبل از گذشت این چند دقیقه ویرایش کنند
+            proposal_edit_time: ویرایش پیشنهاد
+            proposal_edit_time_choices:
+              infinite: اجازه ویرایش پیشنهادات برای مدت زمان نامتناهی را بدهید
+              limited: امکان ویرایش پیشنهادها در یک بازه زمانی خاص
+            proposal_length: حداکثر طول بدن پیشنهادی
+            proposal_limit: محدودیت پیشنهاد برای هر شرکت کننده
+            proposal_wizard_step_1_help_text: متن راهنمای مرحله "ایجاد" جادوگر پیشنهاد
+            proposal_wizard_step_2_help_text: متن راهنمای مرحله "مقایسه" جادوگر پیشنهاد
+            proposal_wizard_step_3_help_text: متن راهنمای مرحله "کامل" جادوگر پیشنهاد
+            proposal_wizard_step_4_help_text: متن راهنمای مرحله "انتشار" جادوگر پیشنهاد
+            resources_permissions_enabled: مجوزهای کنش‌ها را می‌توان برای هر پیشنهاد تنظیم کرد
+            scope_id: محدوده
+            scopes_enabled: دامنه ها فعال شد
+            threshold_per_proposal: آستانه در هر پیشنهاد
+            vote_limit: محدودیت پشتیبانی برای هر شرکت کننده
+          step:
+            amendment_creation_enabled: ایجاد اصلاحیه فعال شد
+            amendment_creation_enabled_help: شرکت کننده می تواند پیشنهادات را اصلاح کند.
+            amendment_promotion_enabled: تبلیغات اصلاحی فعال شد
+            amendment_promotion_enabled_help: نویسندگان فرمان می توانند اصلاحیه رد شده را به پیشنهاد ارتقا دهند.
+            amendment_reaction_enabled: واکنش اصلاحی فعال شد
+            amendment_reaction_enabled_help: نویسندگان پیشنهاد می توانند اصلاحات شرکت کننده را بپذیرند یا رد کنند.
+            amendments_visibility: نمایان بودن اصلاحات
+            amendments_visibility_choices:
+              all: اصلاحات برای همه قابل مشاهده است
+              participants: اصلاحات فقط برای نویسندگان آنها قابل مشاهده است
+            amendments_visibility_help: اگر گزینه "اصلاحات فقط برای نویسندگان آنها قابل مشاهده است" انتخاب شده باشد، شرکت کننده باید برای مشاهده اصلاحات انجام شده وارد سیستم شود.
+            announcement: اعلامیه
+            answers_with_costs: فعال کردن هزینه ها در پاسخ های پیشنهادی
+            automatic_hashtags: هشتگ به همه پیشنهادات اضافه شد
+            comments_blocked: نظرات مسدود شده است
+            creation_enabled: شرکت کنندگان می توانند پیشنهادات خود را ایجاد کنند
+            creation_enabled_readonly: وقتی عملکرد متن‌های مشارکتی را فعال می‌کنید، این تنظیم غیرفعال می‌شود. برای آپلود پروپوزال ها به عنوان متن مشارکتی روی دکمه متن های مشارکتی کلیک کنید و دستورالعمل ها را دنبال کنید.
+            default_sort_order: مرتب سازی پیشنهادی پیش فرض
+            default_sort_order_help: پیش‌فرض به این معنی است که اگر پشتیبانی‌ها فعال باشند، پیشنهادها به‌صورت تصادفی مرتب‌سازی شده‌اند و اگر پشتیبانی‌ها مسدود شوند، بر اساس بیشترین پشتیبانی مرتب‌سازی می‌شوند.
+            default_sort_order_options:
+              default: پیش فرض
+              most_commented: بیشترین نظرات
+              most_endorsed: بیشترین تایید شده
+              most_followed: بیشتر دنبال کردند
+              most_voted: بیشترین پشتیبانی
+              random: تصادفی
+              recent: اخیر
+              with_more_authors: با نویسندگان بیشتر
+            endorsements_blocked: تأییدات مسدود شده است
+            endorsements_enabled: تأییدیه ها فعال شد
+            proposal_answering_enabled: پاسخ پیشنهاد فعال شد
+            publish_answers_immediately: بلافاصله پاسخ های پیشنهادی را منتشر کنید
+            publish_answers_immediately_help_html: توجه داشته باشید که اگر به هر پیشنهادی بدون فعال بودن پاسخ دهید، باید با انتخاب آنها و استفاده از اقدام برای انتشار، آنها را به صورت دستی منتشر کنید. برای اطلاعات بیشتر در مورد نحوه عملکرد، به <a href="https://docs.decidim.org/en/admin/components/proposals/answers#_publication" target="_blank">صفحه مستندات پاسخ‌های پیشنهادات</a> مراجعه کنید.
+            suggested_hashtags: هشتگ هایی برای پیشنهادات جدید به شرکت کنندگان پیشنهاد می شود
+            votes_blocked: پشتیبانی مسدود شده است
+            votes_enabled: پشتیبانی فعال است
+            votes_hidden: پشتیبانی پنهان است (اگر پشتیبانی فعال باشد، علامت زدن آن تعداد پشتیبانی ها را پنهان می کند)
+    events:
+      proposals:
+        admin:
+          proposal_note_created:
+            email_intro: شخصی در مورد پیشنهاد "%{resource_title}" یادداشتی گذاشته است. آن را در <a href="%{admin_proposal_info_url}">پنل مدیریت</a> بررسی کنید
+            email_outro: شما این اعلان را دریافت کرده اید زیرا می توانید پیشنهاد را ارزیابی کنید.
+            email_subject: شخصی در مورد پیشنهاد %{resource_title} یادداشتی گذاشت.
+            notification_title: شخصی در مورد پیشنهاد <a href="%{resource_path}">%{resource_title}</a> یادداشتی گذاشته است. آن را در <a href="%{admin_proposal_info_path}">پانل مدیریت</a> بررسی کنید
+        collaborative_draft_access_accepted:
+          email_intro: '%{requester_name} برای دسترسی به عنوان مشارکت کننده در پیش نویس مشارکتی <a href="%{resource_url}">%{resource_title}</a> پذیرفته شده است.'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا یکی از همکاران <a href="%{resource_url}">%{resource_title}</a> هستید.
+          email_subject: "%{requester_name} برای دسترسی به عنوان یکی از مشارکت کنندگان %{resource_title} پذیرفته شده است."
+          notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a> <strong>برای دسترسی به‌عنوان مشارکت‌کننده</strong> پیش‌نویس مشترک <a href="%{resource_path}">%{resource_title}</a> پذیرفته شد.
+        collaborative_draft_access_rejected:
+          email_intro: '%{requester_name} برای دسترسی به عنوان مشارکت کننده در پیش نویس مشترک <a href="%{resource_url}">%{resource_title}</a> رد شده است.'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا یکی از همکاران <a href="%{resource_url}">%{resource_title}</a> هستید.
+          email_subject: دسترسی به %{requester_name} به عنوان مشارکت کننده در پیش نویس مشترک %{resource_title} رد شده است.
+          notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a> <strong>دسترسی به عنوان مشارکت‌کننده</strong> از پیش‌نویس مشترک <a href="%{resource_path}">%{resource_title}</a> رد شده است.
+        collaborative_draft_access_requested:
+          email_intro: '%{requester_name} درخواست دسترسی به عنوان یک مشارکت کننده کرد. می‌توانید از صفحه پیش‌نویس مشترک <a href="%{resource_url}">%{resource_title}</a> <strong>درخواست را بپذیرید یا رد کنید</strong>.'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا یکی از همکاران <a href="%{resource_url}">%{resource_title}</a> هستید.
+          email_subject: "%{requester_name} درخواست دسترسی برای مشارکت در %{resource_title} کرد."
+          notification_title: <a href="%{requester_path}">%{requester_name} %{requester_nickname}</a> برای مشارکت در پیش‌نویس مشترک <a href="%{resource_path}">%{resource_title}</a> درخواست دسترسی کرد. لطفاً <strong>درخواست را بپذیرید یا رد کنید</strong>.
+        collaborative_draft_access_requester_accepted:
+          email_intro: شما برای دسترسی به عنوان مشارکت کننده در پیش نویس مشارکتی <a href="%{resource_url}">%{resource_title}</a> پذیرفته شده اید.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا درخواست کرده اید که یکی از همکاران <a href="%{resource_url}">%{resource_title}</a> شوید.
+          email_subject: شما به عنوان یکی از مشارکت کنندگان %{resource_title} پذیرفته شده اید.
+          notification_title: شما <strong>برای دسترسی به عنوان مشارکت کننده</strong> به پیش نویس مشترک <a href="%{resource_path}">%{resource_title}</a> پذیرفته شده اید.
+        collaborative_draft_access_requester_rejected:
+          email_intro: دسترسی شما به عنوان یک مشارکت کننده در پیش نویس مشترک <a href="%{resource_url}">%{resource_title}</a> رد شده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا درخواست کرده اید که یکی از همکاران <a href="%{resource_url}">%{resource_title}</a> شوید.
+          email_subject: شما به عنوان یکی از مشارکت کنندگان %{resource_title} رد شده اید.
+          notification_title: شما <strong>از دسترسی به عنوان مشارکت کننده</strong> به پیش نویس مشترک <a href="%{resource_path}">%{resource_title}</a> رد شده اید.
+        collaborative_draft_withdrawn:
+          email_intro: <a href="%{author_url}">%{author_name} %{author_nickname}</a> پیش‌نویس مشترک <a href="%{resource_url}">%{resource_title}</a> را پس گرفت.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا یکی از همکاران <a href="%{resource_url}">%{resource_title}</a> هستید.
+          email_subject: "%{author_name} %{author_nickname} پیش نویس مشترک %{resource_title} را پس گرفت."
+          notification_title: <a href="%{author_path}">%{author_name} %{author_nickname}</a> <strong>پس‌از</strong> پیش‌نویس مشترک <a href="%{resource_path}">%{resource_title}</a>.
+        creation_enabled:
+          email_intro: 'اکنون می توانید پیشنهادات جدیدی را در %{participatory_space_title} ایجاد کنید! شروع به شرکت در این صفحه کنید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: پیشنهادها اکنون در %{participatory_space_title} موجود است
+          notification_title: اکنون می‌توانید <a href="%{resource_path}">پیشنهادهای جدید</a> را در <a href="%{participatory_space_url}">%{participatory_space_title}</a> ارائه دهید
+        endorsing_enabled:
+          email_intro: 'شما می توانید پیشنهادات را در %{participatory_space_title} تایید کنید! شروع به شرکت در این صفحه کنید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: تأیید پیشنهادها برای %{participatory_space_title} آغاز شده است
+          notification_title: اکنون می‌توانید <a href="%{resource_path}">تأیید پیشنهادات</a> را در <a href="%{participatory_space_url}">%{participatory_space_title}</a> شروع کنید
+        proposal_accepted:
+          affected_user:
+            email_intro: 'پیشنهاد شما "%{resource_title}" پذیرفته شده است. پاسخ را می توانید در این صفحه بخوانید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا نویسنده "%{resource_title}" هستید.
+            email_subject: پیشنهاد شما پذیرفته شد
+            notification_title: پیشنهاد شما <a href="%{resource_path}">%{resource_title}</a> پذیرفته شده است.
+          follower:
+            email_intro: 'پیشنهاد "%{resource_title}" پذیرفته شده است. پاسخ را می توانید در این صفحه بخوانید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا "%{resource_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+            email_subject: پیشنهادی که دنبال می کنید پذیرفته شده است
+            notification_title: پیشنهاد <a href="%{resource_path}">%{resource_title}</a> پذیرفته شده است.
+        proposal_evaluating:
+          affected_user:
+            email_intro: 'پیشنهاد شما "%{resource_title}" در حال حاضر در حال ارزیابی است. در این صفحه می توانید پاسخ را بررسی کنید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا نویسنده "%{resource_title}" هستید.
+            email_subject: پیشنهاد شما در حال ارزیابی است
+            notification_title: پیشنهاد شما <a href="%{resource_path}">%{resource_title}</a> در حال ارزیابی است.
+          follower:
+            email_intro: 'پیشنهاد "%{resource_title}" در حال حاضر در حال ارزیابی است. در این صفحه می توانید پاسخ را بررسی کنید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا "%{resource_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+            email_subject: پیشنهادی که دنبال می کنید در حال ارزیابی است
+            notification_title: پیشنهاد <a href="%{resource_path}">%{resource_title}</a> در حال ارزیابی است.
+        proposal_mentioned:
+          email_intro: پیشنهاد شما "%{mentioned_proposal_title}" <a href="%{resource_url}">در این فضا</a> در نظرات ذکر شده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا نویسنده "%{resource_title}" هستید.
+          email_subject: پیشنهاد شما "%{mentioned_proposal_title}" ذکر شده است
+          notification_title: پیشنهاد شما "%{mentioned_proposal_title}" <a href="%{resource_path}">در این فضا</a> در نظرات ذکر شده است.
+        proposal_published:
+          email_intro: '%{author_name} %{author_nickname} که شما دنبال می کنید، پیشنهاد جدیدی به نام "%{resource_title}" منتشر کرده است. آن را بررسی کنید و مشارکت کنید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{author_nickname} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: پیشنهاد جدید "%{resource_title}" توسط %{author_nickname}
+          notification_title: پیشنهاد <a href="%{resource_path}">%{resource_title}</a> توسط <a href="%{author_path}">%{author_name} %{author_nickname}</a> منتشر شد.
+        proposal_published_for_space:
+          email_intro: پیشنهاد "%{resource_title}" به "%{participatory_space_title}" که شما دنبال می کنید اضافه شده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا "%{participatory_space_title}" را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: پیشنهاد جدید "%{resource_title}" به %{participatory_space_title} اضافه شد
+          notification_title: پیشنهاد <a href="%{resource_path}">%{resource_title}</a> توسط %{author} به %{participatory_space_title} اضافه شده است
+          notification_title_official: پیشنهاد رسمی <a href="%{resource_path}">%{resource_title}</a> به %{participatory_space_title} اضافه شد
+        proposal_rejected:
+          affected_user:
+            email_intro: 'پیشنهاد شما "%{resource_title}" رد شده است. پاسخ را می توانید در این صفحه بخوانید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا نویسنده "%{resource_title}" هستید.
+            email_subject: پیشنهاد شما رد شده است
+            notification_title: پیشنهاد شما <a href="%{resource_path}">%{resource_title}</a> رد شده است.
+          follower:
+            email_intro: 'پیشنهاد "%{resource_title}" رد شده است. پاسخ را می توانید در این صفحه بخوانید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا "%{resource_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+            email_subject: پیشنهادی که دنبال می‌کنید رد شده است
+            notification_title: پیشنهاد <a href="%{resource_path}">%{resource_title}</a> رد شده است.
+        proposal_update_category:
+          email_intro: 'یک سرپرست دسته پیشنهادی شما "%{resource_title}" را به روز کرده است، آن را در این صفحه بررسی کنید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا شما نویسنده پیشنهاد هستید.
+          email_subject: دسته پیشنهادی %{resource_title} به روز شده است
+          notification_title: دسته پیشنهادی <a href="%{resource_path}">%{resource_title}</a> توسط یک سرپرست به‌روزرسانی شده است.
+        proposal_update_scope:
+          email_intro: 'یک سرپرست دامنه پیشنهاد شما "%{resource_title}" را به روز کرده است، آن را در این صفحه بررسی کنید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا شما نویسنده پیشنهاد هستید.
+          email_subject: محدوده پیشنهاد %{resource_title} به روز شده است
+          notification_title: دامنه پیشنهاد <a href="%{resource_path}">%{resource_title}</a> توسط یک سرپرست به‌روزرسانی شده است.
+        voting_enabled:
+          email_intro: 'شما می توانید از پیشنهادات در %{participatory_space_title} پشتیبانی کنید! شروع به شرکت در این صفحه کنید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: پشتیبانی پیشنهاد برای %{participatory_space_title} آغاز شده است
+          notification_title: اکنون می‌توانید <a href="%{resource_path}">پشتیبانی از پیشنهادات</a> را در <a href="%{participatory_space_url}">%{participatory_space_title}</a> شروع کنید
+    gamification:
+      badges:
+        accepted_proposals:
+          conditions:
+          - با فعال بودن ارسال پیشنهادات، فضای مشارکت مورد علاقه خود را انتخاب کنید
+          - سعی کنید پیشنهاداتی ارائه دهید که قابل اجرا باشد. به این ترتیب احتمال پذیرش آنها بیشتر است.
+          description: این نشان زمانی اعطا می شود که شما فعالانه با پیشنهادات جدید شرکت کنید و این پیشنهادات پذیرفته شوند.
+          description_another: این شرکت کننده %{score} پیشنهادات پذیرفته شده داشت.
+          description_own: شما %{score} پیشنهاد پذیرفته شده اید.
+          name: پیشنهادات پذیرفته شده
+          next_level_in: دریافت %{score} پیشنهادات بیشتر پذیرفته شده برای رسیدن به سطح بعدی!
+          unearned_another: این شرکت کننده هنوز هیچ پیشنهاد پذیرفته شده ای نداشته است.
+          unearned_own: شما هنوز هیچ پیشنهادی پذیرفته نشده اید.
+        proposal_votes:
+          conditions:
+          - مرور کنید و مدتی را صرف خواندن پیشنهادات دیگران کنید
+          - از پیشنهادهایی که دوست دارید یا برایتان جالب است حمایت کنید
+          description: این نشان زمانی اعطا می شود که از پیشنهادات دیگران حمایت کنید.
+          description_another: این شرکت کننده از پیشنهادات %{score} پشتیبانی کرده است.
+          description_own: شما از پیشنهادات %{score} پشتیبانی کرده اید.
+          name: پشتیبانی از پروپوزال
+          next_level_in: از %{score} پیشنهادات بیشتر برای رسیدن به سطح بعدی پشتیبانی کنید!
+          unearned_another: این شرکت کننده هنوز از هیچ پیشنهادی پشتیبانی نکرده است.
+          unearned_own: شما هنوز از هیچ پیشنهادی حمایت نکرده اید.
+        proposals:
+          conditions:
+          - با فعال بودن ارسال پیشنهادات، فضای مشارکت مورد علاقه خود را انتخاب کنید
+          - یک پیشنهاد جدید ایجاد کنید
+          description: این نشان زمانی اعطا می شود که شما فعالانه با پیشنهادهای جدید شرکت کنید.
+          description_another: این شرکت کننده %{score} پیشنهاد ایجاد کرده است.
+          description_own: شما %{score} پیشنهاد ایجاد کرده اید.
+          name: پیشنهادات
+          next_level_in: "%{score} پیشنهاد بیشتر ایجاد کنید تا به سطح بعدی برسید!"
+          unearned_another: این شرکت کننده هنوز هیچ پیشنهادی ایجاد نکرده است.
+          unearned_own: شما هنوز هیچ پیشنهادی ایجاد نکرده اید.
+    metrics:
+      accepted_proposals:
+        description: تعداد پیشنهادات پذیرفته شده
+        object: پیشنهادات
+        title: پیشنهادات پذیرفته شده
+      endorsements:
+        description: تعداد تاییدیه های پیشنهادی
+        object: تاییدیه ها
+        title: تاییدیه ها
+      proposals:
+        description: تعداد پیشنهادات
+        object: پیشنهادات
+        title: پیشنهادات
+      votes:
+        description: تعداد حمایت از پیشنهادات
+        object: پشتیبانی می کند
+        title: پشتیبانی می کند
+    participatory_spaces:
+      highlighted_proposals:
+        see_all: مشاهده همه پیشنهادات (%{count})
+    proposals:
+      actions:
+        answer_proposal: جواب پیشنهاد
+        edit_proposal: ویرایش پیشنهاد
+        import: واردات پیشنهادات از یک جزء دیگر
+        new: پیشنهاد جدید
+        participatory_texts: متون مشارکتی
+        show: نمایش پیشنهاد
+        title: اقدامات
+      admin:
+        actions:
+          preview: پیش نمایش
+        exports:
+          proposal_comments: نظرات
+          proposals: پیشنهادات
+        imports:
+          help:
+            answers: |
+              سند وارد کردن باید شامل نام ستون‌های زیر در مورد فایل‌های CSV یا Excel، یا نام‌های کلید در مورد فایل‌های JSON باشد:
+              <ul>
+              <li><b>id:</b> شناسه پیشنهاد برای پاسخ</li>
+              <li><b>وضعیت:</b> یکی از "پذیرفته شده"، "ارزیابی" یا "رد شده"</li>
+              <li><b>answer/en:</b> پاسخ به زبان انگلیسی. این به پیکربندی زبان پلتفرم شما بستگی دارد.</li>
+              </ul>
+            proposals: |
+              فایل باید نام ستون‌های زیر را در مورد فایل‌های CSV یا Excel، یا نام کلید در مورد فایل‌های JSON داشته باشد:
+              <ul>
+              <li><b>title/en:</b> عنوان به زبان انگلیسی. این به پیکربندی زبان پلتفرم شما بستگی دارد.</li>
+              <li><b>body/en:</b> بدن در زبان انگلیسی. این به پیکربندی زبان پلتفرم شما بستگی دارد.</li>
+              <li><b>scope/id:</b> ID برای Scope</li>
+              <li><b>category/id:</b> ID برای دسته</li>
+              </ul>
+          label:
+            answers: پاسخ ها را از یک فایل وارد کنید
+            proposals: واردات پیشنهادات از یک فایل
+          resources:
+            answers:
+              one: پاسخ پیشنهادی
+              other: پاسخ های پیشنهادی
+            proposals:
+              one: پیشنهاد
+              other: پیشنهادات
+          title:
+            answers: پاسخ های پیشنهادی واردات
+            proposals: پیشنهادات واردات
+        models:
+          proposal:
+            name: پیشنهاد
+        participatory_texts:
+          bulk-actions:
+            are_you_sure: آیا مطمئن هستید که کل پیش نویس متن مشارکتی را کنار می گذارید؟
+            discard_all: همه را دور بریزید
+            import_doc: سند واردات
+          discard:
+            success: همه پیش‌نویس‌های متن مشارکتی کنار گذاشته شده‌اند.
+          import:
+            invalid: فرم نامعتبر است!
+            invalid_file: فایل حاوی مقداری خطا است، لطفا سعی کنید محتوای فایل را ویرایش کنید و دوباره آن را آپلود کنید.
+            success: تبریک می گوییم، بخش های زیر به پروپوزال تبدیل شده اند. اکنون می توانید قبل از انتشار آنها را بررسی و تنظیم کنید.
+          index:
+            info_1: بخش های زیر به پروپوزال تبدیل شده اند. اکنون می توانید قبل از انتشار آنها را بررسی و تنظیم کنید.
+            publish_document: انتشار سند
+            save_draft: ذخیره پیش نویس
+            title: پیش نمایش متن مشارکتی
+          new_import:
+            accepted_mime_types:
+              md: مارک داون
+              odt: ODT
+            bottom_hint: "(شما می توانید بخش های سند را پیش نمایش و مرتب کنید)"
+            document_legend: 'یک سند کمتر از 2 مگابایت اضافه کنید، هر بخش تا زمانی که عمق 3 سطح در پروپوزال ها تجزیه شود. فرمت های پشتیبانی شده عبارتند از: %{valid_mime_types}'
+            title: سند اضافه کنید
+            upload_document: بارگذاری سند
+          publish:
+            invalid: پیشنهادها منتشر نشد
+            success: همه پیشنهادات منتشر شده است
+          sections:
+            article: "<em>مقاله</em>"
+            section: "<em>بخش:</em> <strong>%{title}</strong>"
+            sub-section: "<em>بخش فرعی:</em> %{title}"
+          update:
+            success: متن مشارکتی با موفقیت به روز شد.
+        proposal_answers:
+          form:
+            accepted: پذیرفته شده
+            answer_proposal: پاسخ
+            evaluating: در حال ارزیابی
+            not_answered: جواب نداد
+            rejected: رد شد
+            title: پاسخ برای پروپوزال %{title}
+        proposal_notes:
+          create:
+            error: مشکلی در ایجاد این یادداشت پیشنهادی وجود داشت
+            success: یادداشت پیشنهادی با موفقیت ایجاد شد
+          form:
+            note: توجه داشته باشید
+            submit: ارسال
+          leave_your_note: یادداشت خود را بگذارید
+          title: یادداشت های خصوصی
+        proposals:
+          answer:
+            invalid: در پاسخ به این پیشنهاد مشکلی وجود داشت
+            success: پیشنهاد با موفقیت پاسخ داده شد
+          create:
+            invalid: در ایجاد این پیشنهاد مشکلی وجود داشت
+            success: پیشنهاد با موفقیت ایجاد شد
+          edit:
+            title: به روز رسانی پیشنهاد
+            update: به روز رسانی
+          form:
+            attachment_legend: "(اختیاری) یک پیوست اضافه کنید"
+            created_in_meeting: این پیشنهاد از یک جلسه می آید
+            delete_attachment: حذف پیوست
+            select_a_category: یک دسته را انتخاب کنید
+            select_a_meeting: یک جلسه را انتخاب کنید
+          index:
+            actions: اقدامات
+            assign_to_valuator: به ارزیاب اختصاص دهید
+            assign_to_valuator_button: اختصاص دهید
+            cancel: لغو کنید
+            change_category: دسته بندی را تغییر دهید
+            change_scope: دامنه را تغییر دهید
+            merge: ادغام به یک جدید
+            merge_button: ادغام
+            publish: انتشار
+            publish_answers: پاسخ ها را منتشر کنید
+            select_component: یک جزء را انتخاب کنید
+            selected: انتخاب شد
+            split: تقسیم پیشنهادات
+            split_button: شکاف
+            title: پیشنهادات
+            unassign_from_valuator: لغو واگذاری از ارزیاب
+            unassign_from_valuator_button: لغو تخصیص
+            update: به روز رسانی
+            update_scope_button: دامنه را به روز کنید
+          new:
+            create: ايجاد كردن
+            title: ایجاد پیشنهاد
+          publish_answers:
+            number_of_proposals: پاسخ برای پیشنهادات %{number} منتشر خواهد شد.
+            select_a_proposal: لطفاً پیشنهادی را انتخاب کنید
+          show:
+            amendments_count: اصلاحات حساب می شود
+            assigned_valuators: ارزیابان تعیین شده
+            authors: نویسندگان
+            body: بدن
+            comments_count: نظرات به حساب می آیند
+            comments_negative_count: در برابر
+            comments_neutral_count: خنثی
+            comments_positive_count: لطف
+            created_at: تاریخ ایجاد
+            documents: اسناد
+            endorsements_count: تاییدیه ها به حساب می آیند
+            endorsements_ranking: رتبه بندی بر اساس تاییدیه ها
+            endorsers: تایید کنندگان
+            link: ارتباط دادن
+            n_more_endorsers:
+              one: و 1 مورد دیگر
+              other: و %{count} بیشتر
+            photos: عکس ها
+            proposals: پیشنهادات
+            ranking: "%{ranking} از %{total}"
+            related_meetings: جلسات مرتبط
+            remove_assignment: حذف تکلیف
+            remove_assignment_confirmation: آیا مطمئنید که می‌خواهید ارزیابی‌کننده را از این پیشنهاد حذف کنید؟
+            valuators: ارزش گذاران
+            votes_count: تعداد پشتیبانی ها
+            votes_ranking: رتبه بندی بر اساس پشتیبانی
+          update_category:
+            invalid: 'این پیشنهادها قبلاً دارای دسته %{subject_name} بودند: %{proposals}.'
+            select_a_category: لطفاً یک دسته را انتخاب کنید
+            select_a_proposal: لطفاً پیشنهادی را انتخاب کنید
+            success: 'پیشنهادها با موفقیت به رده %{subject_name} به روز شدند: %{proposals}.'
+          update_scope:
+            invalid: 'این پیشنهادها قبلاً دارای دامنه %{subject_name} بودند: %{proposals}.'
+            select_a_proposal: لطفاً پیشنهادی را انتخاب کنید
+            select_a_scope: لطفاً یک محدوده انتخاب کنید
+            success: 'پیشنهادها با موفقیت به دامنه %{subject_name} به روز شدند: %{proposals}.'
+        proposals_imports:
+          create:
+            invalid: مشکلی در وارد کردن پیشنهادها وجود داشت
+            success: "%{number} پیشنهاد با موفقیت وارد شد"
+          new:
+            create: پیشنهادات واردات
+            no_components: هیچ مؤلفه پیشنهادی دیگری در این فضای مشارکتی برای وارد کردن پیشنهادها وجود ندارد.
+            select_component: لطفا یک جزء را انتخاب کنید
+            select_states: وضعیت پیشنهادات برای واردات را بررسی کنید
+            title: پیشنهادات واردات
+        proposals_merges:
+          create:
+            invalid: 'مشکلی در ادغام پیشنهادهای انتخابی وجود دارد زیرا برخی از آنها:'
+            success: پیشنهادها با موفقیت در یک پیشنهاد جدید ادغام شدند.
+        proposals_splits:
+          create:
+            invalid: 'مشکلی در تقسیم پیشنهادات انتخاب شده وجود دارد زیرا برخی از آنها:'
+            success: با موفقیت پیشنهادات را به موارد جدید تقسیم کرد.
+        valuation_assignments:
+          create:
+            invalid: خطایی در تخصیص پیشنهادها به یک ارزیاب روی داد
+            success: پیشنهادها با موفقیت به یک ارزیاب اختصاص داده شد
+          delete:
+            invalid: خطایی در لغو تخصیص پیشنهادهای یک ارزیاب روی داد
+            success: ارزیاب از پیشنهادات با موفقیت حذف شد
+      admin_log:
+        proposal:
+          answer: "%{user_name} به پیشنهاد %{resource_name} در فضای %{space_name} پاسخ داد"
+          create: "%{user_name} پروپوزال %{resource_name} را در فضای %{space_name} به عنوان یک پیشنهاد رسمی ایجاد کرد"
+          publish_answer: "%{user_name} پاسخ پیشنهاد %{resource_name} را در فضای %{space_name} منتشر کرد"
+          update: "%{user_name} پیشنهاد رسمی %{resource_name} را در فضای %{space_name} به روز کرد"
+        proposal_note:
+          create: "%{user_name} یک یادداشت خصوصی در مورد پیشنهاد %{resource_name} در فضای %{space_name} گذاشت"
+        valuation_assignment:
+          create: "%{user_name} پیشنهاد %{resource_name} را به یک ارزیاب اختصاص داد"
+          delete: "%{user_name} یک ارزیاب را از پیشنهاد %{proposal_title} لغو کرد"
+      answers:
+        accepted: پذیرفته شده
+        evaluating: ارزیابی کردن
+        not_answered: جواب نداد
+        rejected: رد شد
+        withdrawn: برداشته شد
+      application_helper:
+        filter_category_values:
+          all: همه
+        filter_origin_values:
+          all: همه
+          meetings: جلسات
+          official: رسمی
+          participants: شركت كنندگان
+          user_groups: گروه ها
+        filter_scope_values:
+          all: همه
+        filter_state_values:
+          accepted: پذیرفته شده
+          all: همه
+          evaluating: در حال ارزیابی
+          not_answered: جواب نداد
+          rejected: رد شد
+        filter_type_values:
+          all: همه
+          amendments: اصلاحات
+          proposals: پیشنهادات
+      collaborative_drafts:
+        collaborative_draft:
+          publish:
+            error: مشکلی در انتشار پیش نویس مشترک وجود داشت.
+            irreversible_action_modal:
+              body: پس از انتشار پیش نویس به عنوان پیشنهاد، پیش نویس دیگر قابل ویرایش نخواهد بود. این پیشنهاد نویسندگان یا مشارکت‌های جدید را نمی‌پذیرد.
+              cancel: لغو کنید
+              ok: به عنوان یک پیشنهاد منتشر کنید
+              title: عمل زیر غیر قابل برگشت است
+            success: پیش نویس مشترک با موفقیت به عنوان یک پیشنهاد منتشر شد.
+          view_collaborative_draft: مشاهده پیش نویس مشارکتی
+          withdraw:
+            error: مشکلی در بستن پیش نویس مشترک وجود داشت.
+            irreversible_action_modal:
+              body: پس از بستن پیش نویس، پیش نویس دیگر قابل ویرایش نخواهد بود. پیش‌نویس نویسندگان یا مشارکت‌های جدید را نمی‌پذیرد.
+              cancel: لغو کنید
+              ok: پیش نویس مشترک را پس بگیرید
+              title: عمل زیر غیر قابل برگشت است
+            success: پیش نویس مشترک با موفقیت برداشته شد.
+        count:
+          drafts_count:
+            one: پیش نویس مشترک %{count}
+            other: "%{count} پیش نویس مشترک"
+        create:
+          error: در ایجاد این پیش نویس مشترک مشکلی وجود داشت.
+          success: پیش نویس مشترک با موفقیت ایجاد شد.
+        edit:
+          attachment_legend: "(اختیاری) یک پیوست اضافه کنید"
+          back: بازگشت
+          select_a_category: لطفا یک دسته را انتخاب کنید
+          send: ارسال
+          title: ویرایش پیش نویس مشترک
+        filters:
+          all: همه
+          amendment: اصلاحات
+          category: دسته بندی
+          open: باز کن
+          published: منتشر شده
+          related_to: مربوط به
+          scope: محدوده
+          search: جستجو کردن
+          state: وضعیت
+          withdrawn: برداشته شد
+        filters_small_view:
+          close_modal: بستن مودال
+          filter: فیلتر کنید
+          filter_by: محدود شده توسط
+          unfold: باز کردن
+        new:
+          add_file: فایل اضافه کنید
+          edit_file: ویرایش فایل
+          send: ادامه هید
+        new_collaborative_draft_button:
+          new_collaborative_draft: پیش نویس مشترک جدید
+        orders:
+          label: 'سفارش پیش نویس توسط:'
+          most_contributed: بیشتر کمک کردند
+          random: تصادفی
+          recent: اخیر
+        requests:
+          accepted_request:
+            error: نمی توان به عنوان یک همکار پذیرفته شد، لطفاً بعداً دوباره امتحان کنید.
+            success: "@%{user} با موفقیت به عنوان یک همکار پذیرفته شد"
+          access_requested:
+            error: درخواست شما تکمیل نشد، لطفاً بعداً دوباره امتحان کنید.
+            success: درخواست شما برای همکاری با موفقیت ارسال شد
+          collaboration_requests:
+            accept_request: تایید کنید
+            reject_request: رد کردن
+            title: درخواست های همکاری
+          rejected_request:
+            error: به عنوان یک همکار رد نشد، لطفاً بعداً دوباره امتحان کنید.
+            success: "@%{user} با موفقیت به عنوان یک همکار رد شد"
+        show:
+          back: بازگشت
+          edit: ویرایش پیش نویس مشترک
+          final_proposal: پیشنهاد نهایی
+          final_proposal_help_text: این پیش نویس به پایان رسیده است. پیشنهاد نهایی را بررسی کنید
+          hidden_authors_count:
+            one: و %{count} نفر دیگر
+            other: و %{count} نفر دیگر
+          info-message: این یک <strong>پیش نویس مشترک</strong> برای یک پیشنهاد است. این بدان معنی است که شما می توانید به نویسندگان آنها کمک کنید تا با استفاده از بخش نظرات زیر، آن را شکل دهند یا با درخواست دسترسی برای ویرایش، آن را بهبود بخشند. هنگامی که نویسندگان به شما اجازه دسترسی دادند، می‌توانید تغییراتی در این پیش‌نویس ایجاد کنید.
+          publish: انتشار
+          publish_info: انتشار این نسخه از پیش نویس یا
+          published_proposal: پیشنهاد منتشر شده
+          request_access: درخواست دسترسی
+          requested_access: دسترسی درخواست شد
+          version_history: تاریخچه نسخه را برای این پیشنهاد ببینید
+          withdraw: پیش نویس را پس بگیرید
+        states:
+          open: باز کن
+          published: منتشر شده
+          withdrawn: برداشته شد
+        update:
+          error: مشکلی در ذخیره پیش نویس مشترک وجود داشت.
+          success: پیش نویس مشترک با موفقیت به روز شد.
+        wizard_aside:
+          back_from_collaborative_draft: بازگشت به پیش‌نویس‌های مشترک
+          info: شما در حال ایجاد یک <strong>پیش نویس مشترک</strong> هستید.
+        wizard_header:
+          title: پیش نویس مشترک خود را ایجاد کنید
+      content_blocks:
+        highlighted_proposals:
+          proposals: پیشنهادات
+      create:
+        error: مشکلی در ذخیره پیشنهاد وجود داشت.
+        success: پیشنهاد با موفقیت ایجاد شد. به عنوان پیش نویس ذخیره شد.
+      destroy_draft:
+        error: مشکلی در حذف پیش‌نویس مشترک وجود داشت.
+        success: پیش نویس پیشنهاد با موفقیت حذف شد.
+      last_activity:
+        new_proposal_at_html: "<span>پیشنهاد جدید در %{link}</span>"
+        proposal_updated_at_html: "<span>پیشنهاد در %{link} به روز شد</span>"
+      models:
+        collaborative_draft:
+          fields:
+            authors: نویسندگان
+            comments: نظرات
+            contributions: مشارکت ها
+        proposal:
+          fields:
+            category: دسته بندی
+            comments: نظرات
+            id: شناسه
+            notes: یادداشت
+            official_proposal: پیشنهاد رسمی
+            published_answer: پاسخ منتشر شده
+            published_at: منتشر شده در
+            scope: محدوده
+            state: وضعیت
+            title: عنوان
+            valuator: ارزش گذار
+            valuators: ارزش گذاران
+            votes: رای
+      new:
+        limit_reached: چون از حد مجاز فراتر رفته اید، نمی توانید پیشنهادهای جدیدی ایجاد کنید.
+      participatory_text_proposal:
+        alternative_title: در حال حاضر هیچ متن مشارکتی وجود ندارد
+        buttons:
+          amend: اصلاح
+          comment: اظهار نظر
+          comments: نظرات
+      proposal_votes:
+        create:
+          error: در حمایت از پیشنهاد مشکلی وجود داشت.
+      proposals:
+        compare:
+          continue: ادامه هید
+          no_similars_found: آفرین! هیچ پیشنهاد مشابهی یافت نشد
+          title: پیشنهادات مشابه
+        complete:
+          send: ارسال
+          title: پیشنهاد خود را تکمیل کنید
+        count:
+          proposals_count:
+            one: پیشنهاد %{count}
+            other: "%{count} پیشنهاد"
+        dynamic_map_instructions:
+          description: با کلیک بر روی دکمه "پیش نمایش" مختصات به روز می شود. با این حال، آدرس تغییر نمی کند.
+          instructions: می توانید نقطه را روی نقشه حرکت دهید.
+        edit:
+          add_documents: اسناد را اضافه کنید
+          add_image: تصویر اضافه کن
+          attachment_legend: "(اختیاری) یک پیوست اضافه کنید"
+          back: بازگشت
+          edit_documents: اسناد را ویرایش کنید
+          edit_image: ویرایش تصویر
+          gallery_legend: "(اختیاری) یک تصویر به کارت پیشنهاد اضافه کنید"
+          select_a_category: لطفا یک دسته را انتخاب کنید
+          send: ارسال
+          title: ویرایش پیشنهاد
+        edit_draft:
+          discard: این پیش‌نویس را کنار بگذارید
+          discard_confirmation: آیا مطمئنید که می‌خواهید این پیش‌نویس پیشنهاد را نادیده بگیرید؟
+          send: پیش نمایش
+          title: ویرایش پیش نویس پیشنهاد
+        filters:
+          activity: فعالیت من
+          all: همه
+          amendment_type: تایپ کنید
+          category: دسته بندی
+          my_proposals: پیشنهادات من
+          origin: اصل و نسب
+          related_to: مربوط به
+          scope: محدوده
+          search: جستجو کردن
+          state: وضعیت
+          type: تایپ کنید
+          voted: پشتیبانی
+        filters_small_view:
+          close_modal: بستن مودال
+          filter: فیلتر کنید
+          filter_by: محدود شده توسط
+          unfold: باز کردن
+        index:
+          click_here: مشاهده همه پیشنهادات
+          collaborative_drafts_list: دسترسی به پیش نویس های مشترک
+          new_proposal: پیشنهاد جدید
+          see_all: مشاهده همه پیشنهادات
+          see_all_withdrawn: مشاهده همه پیشنهادات لغو شده
+          text_banner: شما در حال مشاهده لیست پیشنهادهایی هستید که توسط نویسندگان آنها پس گرفته شده است. %{go_back_link}.
+          view_proposal: مشاهده پیشنهاد
+        linked_proposals:
+          proposal_votes:
+            one: حمایت کردن
+            other: پشتیبانی می کند
+        new:
+          send: ادامه هید
+          title: پیشنهاد خود را ایجاد کنید
+        orders:
+          label: 'سفارش پیشنهادات توسط:'
+          most_commented: بیشترین نظرات
+          most_endorsed: بیشترین تایید شده
+          most_followed: بیشتر دنبال کردند
+          most_voted: بیشترین پشتیبانی
+          random: تصادفی
+          recent: اخیر
+          with_more_authors: با نویسندگان بیشتر
+        participatory_texts:
+          index:
+            document_index: نمایه سند
+          view_index:
+            see_index: نمایه را ببینید
+        placeholder:
+          address: 37 هوم وود درایو براونزبورگ، IN 46112
+        preview:
+          announcement_body: پیشنهاد شما به عنوان پیش نویس ذخیره شده است. باید منتشر شود تا در سایت ظاهر شود.
+          announcement_title: پیشنهاد شما هنوز منتشر نشده است
+          modify: پیشنهاد را اصلاح کنید
+          proposal_edit_before_minutes:
+            one: شما می توانید این پیشنهاد را در اولین دقیقه پس از انتشار پیشنهاد ویرایش کنید. پس از گذشت این پنجره زمانی، نمی توانید پیشنهاد را ویرایش کنید.
+            other: شما می توانید این پیشنهاد را در اولین %{count} دقیقه پس از انتشار پیشنهاد ویرایش کنید. پس از گذشت این پنجره زمانی، نمی توانید پیشنهاد را ویرایش کنید.
+          publish: انتشار
+          title: پیشنهاد خود را منتشر کنید
+        proposal:
+          creation_date: 'ایجاد: %{date}'
+          view_proposal: مشاهده پیشنهاد
+        proposals:
+          empty: هنوز پیشنهادی وجود ندارد
+          empty_filters: هیچ پیشنهادی با این معیار وجود ندارد
+        show:
+          answer: پاسخ
+          back_to: بازگشت به
+          back_to_list: بازگشت به لیست
+          changes_at_title: اصلاحیه "%{title}"
+          comments: نظرات
+          edit_proposal: ویرایش پیشنهاد
+          endorsements_list: لیست تاییدیه ها
+          estimated_cost: هزینه تخمین زده شده
+          hidden_endorsers_count:
+            one: و %{count} نفر دیگر
+            other: و %{count} نفر دیگر
+          link_to_collaborative_draft_help_text: این پیشنهاد نتیجه یک پیش نویس مشترک است. تاریخچه را مرور کنید
+          link_to_collaborative_draft_text: پیش نویس مشترک را ببینید
+          link_to_promoted_emendation_help_text: این پیشنهاد یک اصلاحیه ترویج شده است
+          link_to_promoted_emendation_text: اصلاحیه رد شده را ببینید.
+          link_to_proposal_from_emendation_help_text: این یک اصلاحیه رد شده است
+          link_to_proposal_from_emendation_text: پیشنهاد را ببینید
+          proposal_accepted_reason: 'این پیشنهاد پذیرفته شده است زیرا:'
+          proposal_in_evaluation_reason: این پیشنهاد در حال ارزیابی است
+          proposal_rejected_reason: 'این پیشنهاد رد شده است زیرا:'
+          read_less: کمتر بخوان
+          read_more: ادامه مطلب
+          report: گزارش
+          withdraw_btn_hint: در صورت تغییر نظر می توانید پیشنهاد خود را پس بگیرید تا زمانی که هیچ حمایتی دریافت نکرده اید. پیشنهاد حذف نمی شود، در لیست پیشنهادات پس گرفته شده ظاهر می شود.
+          withdraw_confirmation_html: آیا مطمئن هستید که می خواهید این پیشنهاد را پس بگیرید؟<br><br> <strong>این اقدام قابل لغو نیست!</strong>
+          withdraw_proposal: پس گرفتن پیشنهاد
+        tags:
+          changed_from: "(توسط یک سرپرست از <u>%{previous_name}</u> تغییر کرد)"
+        update:
+          title: به روز رسانی پیشنهاد
+        vote_button:
+          already_voted: قبلاً پشتیبانی شده است
+          already_voted_hover: حمایت را کنار بگذارید
+          maximum_votes_reached: به سقف پشتیبانی رسیده است
+          no_votes_remaining: هیچ پشتیبانی باقی نمی ماند
+          vote: حمایت کردن
+          votes_blocked: غیر فعال را پشتیبانی می کند
+        votes_count:
+          count:
+            one: حمایت کردن
+            other: پشتیبانی می کند
+          most_popular_proposal: محبوب ترین پیشنهاد
+          need_more_votes: نیاز به پشتیبانی بیشتر
+        voting_rules:
+          can_accumulate_supports_beyond_threshold:
+            description: هر پیشنهاد می تواند بیش از %{limit} پشتیبانی جمع کند
+          minimum_votes_per_user:
+            description: شما باید حداقل پشتیبانی %{votes} را بین پیشنهادات مختلف توزیع کنید.
+            given_enough_votes: شما به اندازه کافی حمایت کرده اید.
+            supports_remaining: شما باید از %{remaining_votes} پیشنهادات بیشتر حمایت کنید تا حمایت های شما در نظر گرفته شود.
+          proposal_limit:
+            description: می توانید حداکثر %{limit} پیشنهاد ایجاد کنید.
+          threshold_per_proposal:
+            description: برای تأیید اعتبار، پیشنهادها باید به پشتیبانی %{limit} برسند
+          title: 'پشتیبانی ها تابع قوانین زیر هستند:'
+          vote_limit:
+            description: شما می توانید تا %{limit} پیشنهادات را پشتیبانی کنید.
+            left: باقی مانده است
+            votes: پشتیبانی می کند
+        wizard_aside:
+          back: بازگشت
+          back_from_step_1: بازگشت به پیشنهادات
+          back_from_step_2: بازگشت به پیشنهادات
+          back_from_step_3: بازگشت به مقایسه پیشنهادات
+          back_from_step_4: بازگشت به ویرایش پیش نویس
+          info: شما در حال ایجاد یک <strong>پیشنهاد</strong> هستید.
+        wizard_steps:
+          current_step: مرحله فعلی
+          see_steps: مراحل را ببینید
+          step_1: پیشنهاد خود را ایجاد کنید
+          step_2: مقایسه کنید
+          step_3: کامل
+          step_4: پیشنهاد خود را منتشر کنید
+          step_of: مرحله %{current_step_num} از %{total_steps}
+          title: مراحل ایجاد پروپوزال
+      proposals_picker:
+        choose_proposals: پیشنهادات را انتخاب کنید
+        close: بستن
+        more_proposals: "%{number} پیشنهاد دیگر وجود دارد. جستجوی خود را برای یافتن آنها اصلاح کنید."
+        no_proposals: هیچ پیشنهادی با معیارهای جستجوی شما مطابقت ندارد یا هیچ پیشنهادی وجود ندارد.
+      publish:
+        error: مشکلی در انتشار پیشنهاد وجود داشت.
+        success: پیشنهاد با موفقیت منتشر شد.
+      publish_answers:
+        success: پاسخ های پیشنهادی با موفقیت منتشر شد.
+      update:
+        error: مشکلی در ذخیره پیشنهاد وجود داشت.
+        success: پیشنهاد با موفقیت به روز شد.
+      update_draft:
+        error: مشکلی در ذخیره پیش نویس مشترک وجود داشت.
+        success: پیش نویس پیشنهاد با موفقیت به روز شد.
+      versions:
+        collaborative_drafts:
+          back_to_resource: به پیش نویس مشترک برگردید
+        index:
+          title: نسخه ها
+        proposals:
+          back_to_resource: به پروپوزال برگردید
+      withdraw:
+        errors:
+          has_supports: این پیشنهاد را نمی توان پس گرفت زیرا قبلاً دارای پشتیبانی است.
+    resource_links:
+      copied_from_component:
+        proposal_proposal: پیشنهادات مرتبط
+      included_projects:
+        project_result: 'نتایج ظاهر شده در این پروژه:'
+      included_proposals:
+        proposal_project: 'پیشنهاد موجود در این پروژه ها:'
+        proposal_result: 'پیشنهادی که در این نتایج ظاهر می شود:'
+    statistics:
+      proposals_accepted: پیشنهادات پذیرفته شده
+      proposals_count: پیشنهادات
+      supports_count: پشتیبانی می کند
