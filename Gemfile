@@ -46,6 +46,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "easy_translate", "~> 0.5.1"
   gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.1"
   gem "solargraph"
