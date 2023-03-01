@@ -1311,7 +1311,7 @@ ro:
       filter_results_for_category: 'Filtrează rezultatele pentru categoria: %{resource}'
       filter_results_for_scope: 'Filtrează rezultatele pentru domeniul: %{resource}'
     translation_bar:
-      help_text: "<strong>Avertisment:</strong> Conținutul poate fi tradus automat și nu este 100% exact."
+      help_text: "<strong>Înștiințare:</strong> Conținutul poate fi tradus automat și nu este 100% exact."
       show_original: Afișați textul original
       show_translated: Arată textul tradus automat
     user_activity:
