@@ -1735,7 +1735,7 @@ de:
         data_consent_settings: Cookie Einstellungen
         decidim_logo: Decidim-Logo
         download_open_data: Open Data Dateien herunterladen
-        made_with_open_source: Website mit  <a target="_blank" href="https://github.com/decidim/decidim"> freier Software vom  </a> <a target="_blank" href="https://partizipationsbuero.at">  mitgestalten Partizipationsbüro</a> erstellt.
+        made_with_open_source: Website mit <a target="_blank" href="https://github.com/decidim/decidim">freier Software</a> erstellt.
       header:
         close_menu: Menü schließen
         main_menu: Hauptmenü
