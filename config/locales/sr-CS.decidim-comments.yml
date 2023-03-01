@@ -1,5 +1,5 @@
 ---
-hr:
+sr-CS:
   activemodel:
     models:
       decidim/comments/comment_by_followed_user_event: Komentar

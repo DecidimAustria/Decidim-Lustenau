@@ -1,5 +1,5 @@
 ---
-ar:
+ar-SA:
   activemodel:
     attributes:
       account:
@@ -1360,7 +1360,7 @@ ar:
       right: الإضافات
     dropdown:
       option_split: جنبًا ﺇﻟﻰ ﺟﻨﺐ
-      option_unified: مُوَحَّدة
+      option_unified: مُوَحَّدة
   views:
     pagination:
       first: "&laquo; أولاً"

@@ -1,5 +1,5 @@
 ---
-ar:
+ar-SA:
   activemodel:
     attributes:
       collaborative_draft:
@@ -34,7 +34,7 @@ ar:
         keep_authors: الحفاظ على المؤلفين الأصلي
       valuation_assignment:
         admin_log:
-          valuator_role_id: اسم المُقيِّم
+          valuator_role_id: اسم المُقيِّم
     errors:
       models:
         proposal:
@@ -94,7 +94,7 @@ ar:
           category_id_eq:
             label: الفئة
           valuator_role_ids_has:
-            label: تم إسناده إلى مُقيِّم
+            label: تم إسناده إلى مُقيِّم
     components:
       proposals:
         actions:
@@ -350,7 +350,7 @@ ar:
             select_a_meeting: اختيار اجتماع
           index:
             actions: أفعال
-            assign_to_valuator: أسنِده إلى مُقيِّم
+            assign_to_valuator: أسنِده إلى مُقيِّم
             cancel: إلغاء
             change_category: تغيير الفئة
             merge: دمج في واحدة جديدة
@@ -361,7 +361,7 @@ ar:
             split: تقسيم المقترحات
             split_button: انشق، مزق
             title: اقتراحات
-            unassign_from_valuator: إلغاء الإسناد مِن المُقيِّم
+            unassign_from_valuator: إلغاء الإسناد مِن المُقيِّم
             unassign_from_valuator_button: إلغاء الإسناد
             update: تحديث
           new:
@@ -384,7 +384,7 @@ ar:
             proposals: اقتراحات
             ranking: "%{ranking} مِن %{total}"
             related_meetings: ملتقيات ذات صلة
-            valuators: المُقيِّمون
+            valuators: المُقيِّمون
             votes_count: يدعم العد
             votes_ranking: ترتيب حسب الدّعم المتلقّى
           update_category:
@@ -409,7 +409,7 @@ ar:
             success: تم تقسيم المقترحات بنجاح إلى مقترحات جديدة.
         valuation_assignments:
           create:
-            success: لقد تم إسناد المُقتَرحات إلى مُقيِّم بنجاح
+            success: لقد تم إسناد المُقتَرحات إلى مُقيِّم بنجاح
       admin_log:
         proposal:
           answer: "%{user_name} أجاب على الاقتراح %{resource_name} على %{space_name} الفضاء"
@@ -573,8 +573,8 @@ ar:
             scope: نطاق
             state: الحالة
             title: عنوان
-            valuator: مُقيِّم
-            valuators: المُقيِّمون
+            valuator: مُقيِّم
+            valuators: المُقيِّمون
             votes: الأصوات
       new:
         limit_reached: لا يمكنك إنشاء مقترحات جديدة لأنك تجاوزت الحد.

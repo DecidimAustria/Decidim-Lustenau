@@ -1,5 +1,5 @@
 ---
-hr:
+sr-CS:
   activemodel:
     models:
       decidim/surveys/closed_survey_event: Anketa je završena

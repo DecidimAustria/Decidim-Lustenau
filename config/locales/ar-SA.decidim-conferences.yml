@@ -1,5 +1,5 @@
 ---
-ar:
+ar-SA:
   activemodel:
     attributes:
       conference:
@@ -234,7 +234,7 @@ ar:
             admin: مدير
             collaborator: متعاون
             moderator: وسيط
-            valuator: مُقيِّم
+            valuator: مُقيِّم
         media_link:
           fields:
             date: تاريخ
