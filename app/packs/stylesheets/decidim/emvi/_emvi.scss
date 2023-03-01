@@ -147,10 +147,16 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 } 
 .menubar{
     display:flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    @include breakpoint(large){
+        flex-direction: row;
+        padding-bottom: 0;
+    }
     nav{
-        flex:2 0 auto;
+        flex:1 0 auto;
     }
     div{
         flex:0 0 auto;
@@ -255,7 +261,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 }
 .navbar{
     border-top: 1px solid var(--emvi-primary-rgb);
-    border-bottom:  1px solid var(--emvi-primary-rgb);
+    border-bottom: 1px solid var(--emvi-primary-rgb);
     @include breakpoint(xlarge){
         .column{
             padding:0;
@@ -319,6 +325,27 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
             }
         }
     }
+}
+
+.usermenu-off-canvas-holder{
+    padding: 0.2rem 0.625rem;
+    border-bottom: 1px solid var(--emvi-primary-rgb);
+    .usermenu-off-canvas{
+        border:0;
+        a{
+            color:var(--emvi-nav-highlight-grey-rgb);
+            padding:1rem;
+            &:hover, &:focus{
+                color:var(--emvi-primary-rgb);
+                text-decoration: none;
+                box-shadow:unset;
+                transition: 0.2s ease-in;
+            }
+        }
+    }
+}
+.is-dropdown-submenu{
+    border:0;
 }
 
 .main-footer, .mini-footer{
@@ -569,7 +596,7 @@ ul.card-data{
     display:flex;
     padding: 1rem 0.8rem;
     .card__image__container{
-        width: 34%;
+        flex: 0 0 34%;
         padding: 0 0.5rem;
         display:flex;
         align-items:center;
@@ -579,7 +606,7 @@ ul.card-data{
         max-height:unset;
     }
     .card__content{
-        width: 66%;
+        flex: 1 1 66%;
         .button__posts{
             margin:1rem 0 0 0;
             float:right;
@@ -622,11 +649,19 @@ ul.card-data{
     }
 }
 
+.alternative-landing.cover-full, .alternative-landing.cover-half, .alternative-landing.tiles, .alternative-landing.stack-horizontal, .alternative-landing.stack-vertical {
+    padding: 4rem 1rem;
+}
+
 .stack-vertical .stack .stack-item{
     padding:0;
     flex: 1 1 0px;
     .stack-image{
         flex: 0 0 auto;
+        padding:1rem;
+        @include breakpoint(smallmedium){
+            padding:0;
+        }
     }
     .stack-body{
         flex: 1 0 auto;
@@ -635,6 +670,9 @@ ul.card-data{
     .stack-link{
         flex: 0 0 auto;
         text-align:center;
+    }
+    @include breakpoint(smallmedium){
+        padding:0;
     }
 }
 
