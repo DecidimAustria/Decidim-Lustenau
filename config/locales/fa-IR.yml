@@ -1,0 +1,1910 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      account:
+        delete_reason: دلیل حذف اکانت شما
+      common:
+        created_at: ایجاد شده در
+      conversation:
+        body: بدن
+      group:
+        about: در باره
+        avatar: آواتار
+        document_number: شماره سند
+        email: پست الکترونیک
+        name: نام
+        nickname: نام مستعار
+        phone: تلفن
+      message:
+        body: بدن
+      report:
+        details: نظرات اضافی
+      user:
+        about: در باره
+        email: ایمیل شما
+        locale: محلی
+        name: اسم شما
+        nickname: نام مستعار
+        password: کلمه عبور
+        password_confirmation: رمز عبور خود را تایید کنید
+        personal_url: URL شخصی
+        remove_avatar: آواتار را حذف کنید
+        tos_agreement: شرایط و ضوابط قرارداد استفاده
+    models:
+      decidim/attachment_created_event: پیوست
+      decidim/component_published_event: جزء فعال
+      decidim/demoted_membership: دیگر مدیر گروه نیست
+      decidim/gamification/badge_earned_event: نشان به دست آورد
+      decidim/gamification/level_up_event: تو سطح بالا رفتی
+      decidim/invited_to_group_event: به گروه دعوت شد
+      decidim/join_request_accepted_event: درخواست عضویت پذیرفته شد
+      decidim/join_request_rejected_event: درخواست پیوستن رد شد
+      decidim/profile_updated_event: پروفایل به روز شد
+      decidim/promote_to_admin: به مدیر گروه ارتقا یافت
+      decidim/promoted_to_admin_event: به مدیر گروه ارتقا یافت
+      decidim/removed_from_group: از گروه حذف شد
+      decidim/resource_endorsed_event: منبع تایید شد
+      decidim/resource_hidden_event: منبع پنهان
+      decidim/user_group_created_event: گروه کاربری ایجاد شد
+      decidim/welcome_notification_event: پیام خوش آمد
+  activerecord:
+    attributes:
+      decidim/user:
+        current_password: رمز عبور فعلی
+        email: پست الکترونیک
+        name: نام مستعار
+        password: کلمه عبور
+        password_confirmation: تایید رمز عبور
+        remember_me: مرا به خاطر بسپار
+    models:
+      decidim/amendment:
+        one: اصلاحیه
+        other: اصلاحات
+      decidim/endorsement:
+        one: تایید
+        other: تاییدیه ها
+      decidim/user:
+        one: شرکت کننده
+        other: شركت كنندگان
+      decidim/user_group:
+        one: گروه
+        other: گروه ها
+  booleans:
+    'false': خیر
+    'true': آره
+  carrierwave:
+    errors:
+      file_resolution_too_large: وضوح فایل خیلی زیاد است
+      file_size_too_large: اندازه فایل خیلی بزرگ است
+      not_inside_organization: فایل به هیچ سازمانی پیوست نشده است
+  date:
+    formats:
+      decidim_short: "%d/%m/%Y"
+      decidim_short_with_month_name_short: "%d %b %Y"
+      decidim_with_day_and_month_name: "%A %d %b %Y"
+      decidim_with_month_name: "%d %B %Y"
+      decidim_with_month_name_short: "%d %b"
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: حدود 1 ساعت
+        other: حدود %{count} ساعت
+      about_x_months:
+        one: حدود 1 ماه
+        other: حدود %{count} ماه
+      half_a_minute: نیم دقیقه
+      less_than_x_minutes:
+        one: کمتر از یک دقیقه
+        other: کمتر از %{count} دقیقه
+      less_than_x_seconds:
+        one: همین الان
+        other: کمتر از %{count} ثانیه
+      x_days:
+        one: 1 روز پیش
+        other: "%{count} روز پیش"
+      x_hours:
+        one: 1 ساعت پیش
+        other: "%{count} ساعت پیش"
+      x_minutes:
+        one: 1 دقیقه. پیش
+        other: "%{count} دقیقه پیش"
+      x_seconds:
+        one: 1 ثانیه. پیش
+        other: "%{count} ثانیه پیش"
+        zero: همین الان
+  decidim:
+    accessibility:
+      external_link: لینک خارجی
+      front_page_link: برو به صفحه اول
+      logo: لوگوی رسمی %{organization}
+      skip_button: رفتن به محتوای اصلی
+    account:
+      blocked: این حساب به دلیل نقض شرایط و ضوابط مسدود شده است
+      delete:
+        alert: این عمل قابل لغو نیست. اگر حساب خود را حذف کنید، نمی توانید با اطلاعات کاربری خود وارد شوید. حذف حساب شما منجر به ناشناس شدن مشارکت های شما می شود. همچنان می‌توانید حساب جدیدی ایجاد کنید، اما این مشارکت‌ها با آن مرتبط نمی‌شوند.
+        confirm:
+          close: پنجره بسته
+          ok: بله، من می خواهم اکانت خود را حذف کنم
+          question: آیا مطمئن هستید که می خواهید اکانت خود را حذف کنید؟
+          title: اکانت من رو پاک کن
+        explanation: لطفاً دلیلی که می خواهید حساب خود را حذف کنید (اختیاری) را وارد کنید.
+      destroy:
+        error: مشکلی در حذف حساب شما وجود داشت.
+        success: حساب شما با موفقیت حذف شد.
+      download_your_data_export:
+        file_no_exists: فایل موجود نیست
+        notice: دانلود داده های شما در حال حاضر در حال انجام است. وقتی کامل شد ایمیلی دریافت خواهید کرد.
+      email_change:
+        body1: ما یک ایمیل به %{unconfirmed_email} ارسال کرده ایم تا آدرس ایمیل جدید شما را تأیید کند.
+        body2: آیا باید دوباره ایمیل تأیید را ارسال کنیم؟ %{resend_link} یا %{cancel_link}.
+        cancel: لغو
+        cancel_error: تغییر ایمیل لغو نشد.
+        cancel_successfully: تغییر ایمیل با موفقیت لغو شد.
+        resend_error: ایمیل تایید دوباره ارسال نشد.
+        resend_successfully: ایمیل تأیید مجدد با موفقیت به %{unconfirmed_email} ارسال شد
+        send_again: دوباره بفرست
+        title: تایید تغییر ایمیل
+      show:
+        available_locales_helper: زبانی را که می‌خواهید برای مرور و دریافت اعلان‌ها در پلتفرم استفاده کنید، انتخاب کنید
+        change_password: رمز عبور را تغییر دهید
+        update_account: به روز رسانی حساب کاربری
+      update:
+        error: مشکلی در به روز رسانی حساب شما وجود داشت.
+        success: حساب شما با موفقیت به روز شد.
+        success_with_email_confirmation: حساب شما با موفقیت به روز شد. یک ایمیل برای تایید آدرس ایمیل جدید خود دریافت خواهید کرد.
+    admin:
+      actions:
+        cancel: لغو کنید
+      password_change:
+        alert: برای ادامه کار باید رمز عبور خود را تغییر دهید
+        notification: کاربران سرپرست باید رمز عبور خود را هر %{days} روز تغییر دهند.
+    admin_log:
+      area:
+        create: "%{user_name} ناحیه %{resource_name} را ایجاد کرد"
+        delete: "%{user_name} ناحیه %{resource_name} را حذف کرد"
+        update: "%{user_name} منطقه %{resource_name} را به روز کرد"
+      area_type:
+        create: "%{user_name} نوع منطقه %{resource_name} را ایجاد کرد"
+        delete: "%{user_name} نوع منطقه %{resource_name} را حذف کرد"
+        update: "%{user_name} نوع منطقه %{resource_name} را به روز کرد"
+      attachment:
+        create: "%{user_name} پیوست %{resource_name} را ایجاد کرد"
+        delete: "%{user_name} پیوست %{resource_name} را حذف کرد"
+        update: "%{user_name} پیوست %{resource_name} را به روز کرد"
+      attachment_collection:
+        create: "%{user_name} مجموعه پیوست %{resource_name} را ایجاد کرد"
+        delete: "%{user_name} مجموعه پیوست %{resource_name} را حذف کرد"
+        update: "%{user_name} مجموعه پیوست %{resource_name} را به روز کرد"
+      category:
+        create: "%{user_name} دسته %{resource_name} را به فضای %{space_name} اضافه کرد"
+        delete: "%{user_name} دسته %{resource_name} را از فضای %{space_name} حذف کرد"
+        update: "%{user_name} دسته %{resource_name} را در فضای %{space_name} به روز کرد"
+      component:
+        create: "%{user_name} جزء %{resource_name} را به فضای %{space_name} اضافه کرد"
+        delete: "%{user_name} جزء %{resource_name} را از فضای %{space_name} حذف کرد"
+        export_component: "%{user_name} %{resource_name} %{component_name} را در %{space_name} به عنوان %{format_name} صادر کرد"
+        publish: "%{user_name} جزء %{resource_name} را در فضای %{space_name} منتشر کرد"
+        unpublish: "%{user_name} مؤلفه %{resource_name} را از فضای %{space_name} لغو منتشر کرد"
+        update_permissions_with_space: "%{user_name} مجوزهای %{resource_name} را در %{space_name} به روز کرد"
+      contextual_help_section:
+        update: "%{user_name} بخش راهنمای %{resource_name} را به روز کرد"
+      helpers:
+        answers: پاسخ می دهد
+        comments: نظرات
+        projects: پروژه ها
+        results: نتایج
+      impersonation_log:
+        manage: "%{user_name} %{resource_name} را مدیریت کرده است زیرا %{reason}"
+      moderation:
+        hide: "%{user_name} منبعی از نوع %{resource_type} را در فضای %{space_name} پنهان کرد"
+        unreport: "%{user_name} منبعی از نوع %{resource_type} را در فضای %{space_name} گزارش نکرد"
+      newsletter:
+        create: "%{user_name} خبرنامه %{resource_name} را ایجاد کرد"
+        delete: "%{user_name} خبرنامه %{resource_name} را حذف کرد"
+        deliver: "%{user_name} خبرنامه %{resource_name} را تحویل داد"
+        update: "%{user_name} خبرنامه %{resource_name} را به روز کرد"
+      oauth_application:
+        create: "%{user_name} برنامه %{resource_name} OAuth را ایجاد کرد"
+        delete: "%{user_name} برنامه %{resource_name} OAuth را حذف کرد"
+        update: "%{user_name} برنامه %{resource_name} OAuth را به روز کرد"
+      organization:
+        update: "%{user_name} تنظیمات سازمان را به روز کرد"
+        update_external_domain: "%{user_name} دامنه های خارجی سازمان را به روز کرد"
+      participatory_space_private_user:
+        create: "%{user_name} از %{resource_name} دعوت کرد تا یک شرکت کننده خصوصی باشد"
+        create_via_csv: "%{user_name} از %{resource_name} از طریق CSV دعوت کرد تا یک شرکت کننده خصوصی باشد"
+        delete: "%{user_name} شرکت کننده %{resource_name} را به عنوان یک شرکت کننده خصوصی حذف کرد"
+      scope:
+        create: "%{user_name} محدوده %{resource_name} را ایجاد کرد"
+        create_with_parent: "%{user_name} محدوده %{resource_name} را در محدوده %{parent_scope} ایجاد کرد"
+        delete: "%{user_name} محدوده %{resource_name} را حذف کرد"
+        delete_with_parent: "%{user_name} محدوده %{resource_name} را در محدوده %{parent_scope} حذف کرد"
+        update: "%{user_name} محدوده %{resource_name} را به روز کرد"
+        update_with_parent: "%{user_name} محدوده %{resource_name} را در محدوده %{parent_scope} به روز کرد"
+      scope_type:
+        create: "%{user_name} نوع محدوده %{resource_name} را ایجاد کرد"
+        delete: "%{user_name} نوع محدوده %{resource_name} را حذف کرد"
+        update: "%{user_name} نوع محدوده %{resource_name} را به روز کرد"
+      static_page:
+        create: "%{user_name} صفحه استاتیک %{resource_name} را ایجاد کرد"
+        delete: "%{user_name} صفحه استاتیک %{resource_name} را حذف کرد"
+        update: "%{user_name} صفحه استاتیک %{resource_name} را به روز کرد"
+      user:
+        block: "%{user_name} کاربر %{resource_name} را مسدود کرد"
+        invite: "%{user_name} از شرکت کننده %{resource_name} با نقش: %{role} دعوت کرد"
+        officialize: "%{user_name} شرکت کننده %{resource_name} را رسمی کرد"
+        promote: "%{user_name} %{resource_name} را تبلیغ کرده است"
+        remove_from_admin: "%{user_name} شرکت کننده %{resource_name} را با نقش: %{role} حذف کرد"
+        show_email: "%{user_name} ایمیل شرکت کننده %{resource_name} را بازیابی کرد"
+        transfer: "%{user_name} شرکت کننده %{resource_name} را منتقل کرد"
+        unblock: "%{user_name} کاربر %{resource_name} را رفع انسداد کرد"
+        unofficialize: "%{user_name} شرکت کننده %{resource_name} را غیر رسمی کرد"
+      user_group:
+        reject: "%{user_name} تأیید گروه %{resource_name} را رد کرد"
+        verify: "%{user_name} گروه %{resource_name} را تأیید کرد"
+        verify_via_csv: "%{user_name} گروه %{resource_name} را از طریق یک فایل CSV تأیید کرد"
+      user_moderation:
+        unreport: "%{user_name} یک %{resource_type} - %{unreported_user_name} را گزارش نکرد"
+    admin_terms_of_use:
+      default_body: "<h2>شرایط استفاده ADMIN</h2><p>ما اطمینان داریم که شما سخنرانی معمولی را از مدیر سیستم محلی دریافت کرده اید. معمولاً به این سه چیز خلاصه می شود:</p><ol><li>به حریم خصوصی دیگران احترام بگذارید.</li><li>قبل از کلیک کردن فکر کنید.</li><li>با قدرت زیاد مسئولیت بزرگی به همراه دارد. .</li></ol>"
+    alert:
+      dismiss: رد اطلاعیه
+    amendments:
+      accepted:
+        error: هنگام پذیرش اصلاحیه خطایی رخ داد.
+        success: اصلاحیه با موفقیت پذیرفته شد.
+      amendable:
+        amended_by: اصلاح شده توسط
+        button: "%{model_name} را اصلاح کنید"
+        error: در اصلاح این منبع خطایی رخ داده است.
+        help_text: این %{model_name} را با تغییر %{amendable_fields} آن بهبود دهید
+        promote_button: به %{model_name} ارتقا دهید
+        promote_confirm_text: آیا مطمئنید که می خواهید این اصلاحیه را تبلیغ کنید؟
+        promote_help_text: شما می توانید این اصلاحیه را تبلیغ کنید و آن را به عنوان %{model_name} مستقل منتشر کنید
+        section_heading: اصلاحات (%{count})
+      compare_draft:
+        continue: ادامه هید
+        no_similars_found: هیچ اصلاحیه مشابهی یافت نشد.
+        title: اصلاحات مشابه
+      created:
+        error: هنگام ایجاد پیش‌نویس اصلاحیه خطایی روی داد.
+        success: پیش نویس اصلاحیه با موفقیت ایجاد شد.
+      destroy_draft:
+        error: مشکلی در حذف پیش‌نویس اصلاحیه وجود داشت.
+        success: پیش نویس اصلاحیه با موفقیت حذف شد.
+      edit_draft:
+        discard: این پیش‌نویس را کنار بگذارید
+        discard_confirmation: آیا مطمئنید که می‌خواهید این پیش‌نویس اصلاحیه را نادیده بگیرید؟
+        send: پیش نمایش
+        title: ویرایش پیش نویس اصلاحیه
+      emendation:
+        actions:
+          button_accept: تایید کنید
+          button_reject: رد کردن
+          help_text: تغییرات را بررسی کنید و این اصلاحیه را بپذیرید یا رد کنید. یک اعلان برای نویسنده(های) آن ارسال خواهد شد.
+        announcement:
+          accepted: |-
+            این اصلاحیه برای %{amendable_type} %{proposal_link} شده است
+            در <strong>%{date}</strong> پذیرفته شد.
+          evaluating: |-
+            این اصلاحیه برای %{amendable_type} %{proposal_link}
+            در حال ارزیابی است.
+          promoted: به %{amendable_type} ارتقا یافت.
+          rejected: این اصلاحیه برای %{amendable_type} %{proposal_link} در <strong>%{date}</strong> رد شد.
+          withdrawn: |-
+            این اصلاحیه برای %{amendable_type} %{proposal_link}
+            توسط نویسنده پس گرفته شده است.
+      new:
+        amendment_author: نویسنده اصلاحیه
+        send: ايجاد كردن
+        title: ایجاد پیش نویس اصلاحیه
+      preview_draft:
+        modify: تغییر
+        publish: انتشار
+        title: انتشار پیش نویس اصلاحیه
+      promoted:
+        error: در انتشار اصلاحیه به عنوان پیشنهاد جدید مشکلی وجود داشت
+        success: این اصلاحیه با موفقیت به عنوان یک پیشنهاد جدید منتشر شده است
+      publish_draft:
+        error: مشکلی در انتشار اصلاحیه وجود داشت.
+        success: اصلاحیه با موفقیت منتشر شد.
+      rejected:
+        error: مشکلی در رد این اصلاحیه وجود داشت، لطفاً بعداً دوباره امتحان کنید
+        success: اصلاحیه با موفقیت رد شد
+      review:
+        back: بازگشت
+        heading: اصلاحیه را بررسی کنید
+        help_text: شما در حال بررسی اصلاحیه %{model_name} هستید
+        send: اصلاحیه را بپذیرید
+      update_draft:
+        error: مشکلی در به‌روزرسانی پیش‌نویس اصلاحیه وجود داشت.
+        success: پیش نویس اصلاحیه با موفقیت به روز شد.
+      withdraw:
+        error: هنگام پس گرفتن اصلاحیه خطایی رخ داد
+        success: اصلاحیه با موفقیت پس گرفته شد
+      wizard_step_form:
+        steps:
+          '1': اصلاحیه خود را ایجاد کنید
+          '2': اصلاحیه خود را مقایسه کنید
+          '3': اصلاحیه خود را تکمیل کنید
+          '4': اصلاحیه خود را منتشر کنید
+    anonymous_user: ناشناس
+    application:
+      collection:
+        documents:
+          one: سند
+          other: اسناد
+      document:
+        download: دریافت فایل
+      documents:
+        related_documents: مدارک مربوطه
+      geocoding:
+        geocoded_address: نشانی
+      photos:
+        related_photos: تصاویر مرتبط
+    author:
+      avatar: 'آواتار: %{name}'
+      avatar_multiuser: آواتار برای چندین کاربر
+      comments:
+        one: اظهار نظر
+        other: نظرات
+      endorsements:
+        one: تایید
+        other: تاییدیه ها
+      official_author: رسمی
+    authorization_handlers:
+      another_dummy_authorization_handler:
+        explanation: با معرفی یک شماره گذرنامه که با "A" شروع می شود تأیید شوید.
+        fields:
+          passport_number: شماره پاسپورت
+          postal_code: کد پستی
+        name: یک نمونه دیگر مجوز
+      dummy_authorization_handler:
+        explanation: با معرفی شماره سندی که با «X» ختم می‌شود تأیید شوید
+        fields:
+          allowed_postal_codes: کدهای پستی مجاز (با کاما از هم جدا شده اند)
+          allowed_scope_id: محدوده مجاز
+          document_number: شماره سند
+          postal_code: کد پستی
+          scope_id: محدوده
+        name: مجوز نمونه
+      dummy_authorization_workflow:
+        name: گردش کار مجوز ساختگی
+      errors:
+        duplicate_authorization: یک شرکت‌کننده قبلاً با همان داده‌ها مجاز است. یک مدیر برای تأیید اطلاعات شما با شما تماس خواهد گرفت.
+      expired_at: در %{timestamp} منقضی شده است
+      expires_at: در %{timestamp} منقضی می شود
+      foo_authorization:
+        fields:
+          bar: بار
+          foo: فوو
+        name: مجوز Foo
+      granted_at: در %{timestamp} اعطا شد
+      renew: تأیید تأیید را تمدید کنید
+      sms:
+        explanation: شماره تلفن همراه خود را ارسال کنید تا هویت شما را بررسی کنیم.
+        name: کد با پیامک
+      started_at: از %{timestamp} شروع شد
+    authorization_modals:
+      content:
+        expired:
+          authorize: مجوز مجدد با "%{authorization}"
+          explanation: مجوز شما منقضی شده است. برای انجام این عمل، باید با "%{authorization}" مجدداً مجوز دریافت کنید.
+          title: مجوز منقضی شده است
+        incomplete:
+          cancel: لغو کنید
+          explanation: 'حتی اگر شما در حال حاضر با "%{authorization}" مجوز دارید، به دلیل کمبود داده‌های زیر به شما نیاز داریم که دوباره مجوز دهید:'
+          invalid_field: "%{field}"
+          reauthorize: مجدداً مجوز دهید
+          title: لطفاً مجدداً مجوز دهید
+        missing:
+          authorize: مجوز با "%{authorization}"
+          explanation: برای انجام این عمل، باید با "%{authorization}" مجوز داشته باشید.
+          title: مجوز لازم است
+        ok:
+          title: شما در این صفحه مجاز شده اید. لطفاً صفحه را مجدداً بارگیری کنید تا اقدام خود را انجام دهید
+        pending:
+          explanation: برای انجام این عمل، باید با "%{authorization}" مجوز داشته باشید، اما مجوز شما هنوز در حال انجام است
+          resume: پیشرفت مجوز "%{authorization}" خود را بررسی کنید
+          title: مجوز هنوز در حال انجام است
+        unauthorized:
+          explanation: متأسفیم، نمی‌توانید این عمل را انجام دهید زیرا برخی از داده‌های مجوز شما مطابقت ندارند.
+          invalid_field: مقدار %{field} %{value} معتبر نیست.
+          ok: خوب
+          title: مجاز نیست
+        unconfirmed:
+          confirmation_instructions: 'اگر دستورالعمل‌های تأیید را دریافت نکرده‌اید، می‌توانید دوباره آنها را درخواست کنید:'
+          explanation_html: برای انجام این عمل باید مجوز داشته باشید، قبل از انجام آن باید ایمیل <strong>%{email}</strong> خود را تأیید کنید.
+          request_confirmation_instructions: دستورالعمل های تایید را درخواست کنید
+          title: ایمیل خود را تایید کنید
+      show:
+        close_modal: بستن مودال
+    block_user_mailer:
+      notify:
+        body_1: حساب شما مسدود شد
+        body_2: 'دلیل: %{justification}'
+        greetings: با سلام،<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
+        hello: سلام،
+        subject: حساب شما توسط %{organization_name} مسدود شده است
+    collapsible_list:
+      hidden_elements_count:
+        one: و %{count} بیشتر
+        other: و %{count} بیشتر
+      see_less: "(کمتر ببینید)"
+      see_more: "(بیشتر ببین)"
+    components:
+      component_order_selector:
+        no_content: ما نتوانستیم محتوایی با این معیار پیدا کنیم
+        order:
+          all_types: همه انواع
+          collaborative_draft: پیش نویس مشارکتی
+          comment: اظهار نظر
+          debate: مناظره
+          initiative: ابتکار عمل
+          meeting: ملاقات
+          order: رای بودجه
+          post: پست
+          proposal: پیشنهاد
+          question: سوال
+        title: 'نمایش:'
+      dummy:
+        actions:
+          bar: بار
+          foo: فوو
+        name: کامپوننت ساختگی
+        settings:
+          global:
+            amendments_enabled: اصلاحات فعال شد
+            comments_enabled: نظرات فعال شد
+            comments_max_length: حداکثر طول نظرات
+            dummy_global_attribute1: ویژگی ساختگی 1
+            dummy_global_attribute2: ویژگی ساختگی 2
+            dummy_global_translatable_text: متن قابل ترجمه ساختگی
+            enable_pads_creation: فعال کردن ایجاد پد
+            resources_permissions_enabled: مجوزهای منابع فعال شد
+            scope_id: محدوده
+            scopes_enabled: دامنه ها فعال شد
+          step:
+            amendment_creation_enabled: ایجاد اصلاحیه فعال شد
+            amendment_promotion_enabled: ارتقاء اصلاحیه فعال شد
+            amendment_reaction_enabled: واکنش اصلاحی فعال شد
+            amendments_visibility: نمایان بودن اصلاحیه
+            comments_blocked: نظرات مسدود شده است
+            dummy_step_attribute1: ویژگی مرحله ساختگی 1
+            dummy_step_attribute2: ویژگی مرحله ساختگی 2
+            dummy_step_translatable_text: متن قابل ترجمه مرحله ساختگی
+    contact: مخاطب
+    content_blocks:
+      cta:
+        name: تصویر، متن و دکمه Call To Action
+      cta_settings_form:
+        background_image: تصویر پس زمینه
+        button_text: متن Call To Action
+        button_url: URL Call To Action
+        description: شرح
+      footer_sub_hero:
+        name: بنر زیر قهرمان پاورقی
+      hero:
+        name: تصویر قهرمان
+      hero_settings_form:
+        background_image: تصویر پس زمینه
+        welcome_text: متن خوش آمدگویی
+      highlighted_content_banner:
+        name: بنر محتوای برجسته
+      highlighted_elements_settings_form:
+        orders:
+          label: 'مرتب سازی عناصر بر اساس:'
+          random: تصادفی
+          recent: اخیرا
+      how_to_participate:
+        name: نحوه شرکت کردن
+      html:
+        html_content: محتوای HTML
+        name: بلوک HTML
+      last_activity:
+        name: آخرین فعالیت
+        title: آخرین فعالیت
+        view_all: مشاهده همه
+      metrics:
+        name: معیارهای سازمان
+      stats:
+        name: آمار سازمان
+      sub_hero:
+        name: بنر قهرمان فرعی
+    core:
+      actions:
+        login_before_access: لطفا قبل از دسترسی با حساب کاربری خود وارد شوید
+        unauthorized: شما مجاز به انجام این عمل نیستید
+    datepicker:
+      help_text: 'فرمت مورد انتظار: %{datepicker_format}'
+    devise:
+      omniauth_registrations:
+        create:
+          email_already_exists: حساب دیگری از همان آدرس ایمیل استفاده می کند
+        new:
+          complete_profile: مشخصات کامل
+          nickname_help: نام مستعار شما در %{organization}. فقط می تواند شامل حروف، اعداد، '-' و '_' باشد.
+          sign_up: لطفا مشخصات خود را تکمیل کنید
+          subtitle: لطفا جهت تکمیل ثبت نام فرم زیر را پر کنید
+          username_help: نام عمومی که در پست های شما ظاهر می شود. با هدف تضمین ناشناس بودن، می تواند هر نامی باشد.
+      registrations:
+        new:
+          already_have_an_account?: از قبل حساب کاربری دارید؟
+          newsletter: هر از گاهی یک خبرنامه با اطلاعات مرتبط دریافت کنید
+          newsletter_title: با مجوز تماس بگیرید
+          nickname_help: نام مستعار شما در %{organization}. فقط می تواند شامل حروف، اعداد، '-' و '_' باشد.
+          sign_in: وارد شدن
+          sign_up: ثبت نام
+          sign_up_as:
+            legend: ثبت نام به عنوان
+          subtitle: برای شرکت در بحث ها و حمایت از پیشنهادات ثبت نام کنید.
+          terms: شرایط و ضوابط استفاده
+          tos_agreement: با ثبت نام با %{link} موافقت می کنید.
+          tos_title: شرایط استفاده از خدمات
+          username_help: نام عمومی که در پست های شما ظاهر می شود. با هدف تضمین ناشناس بودن، می تواند هر نامی باشد.
+      sessions:
+        new:
+          are_you_new?: جدید به پلت فرم؟
+          register: یک حساب کاربری ایجاد کنید
+          sign_in_disabled: شما می توانید با یک حساب خارجی دسترسی داشته باشید
+          sign_up_disabled: ثبت نام غیرفعال است، می توانید از یک حساب موجود برای دسترسی استفاده کنید
+        user:
+          timed_out: شما برای مدت طولانی غیرفعال بودید و به طور خودکار از سیستم خارج شده اید. اگر می‌خواهید به استفاده از این سرویس ادامه دهید، لطفاً دوباره وارد شوید.
+      shared:
+        newsletter_modal:
+          buttons:
+            check: بررسی کنید و ادامه دهید
+            close_modal: بستن مودال
+            uncheck: بدون علامت نگه دارید
+          notice: |-
+            <p>سلام، آیا مطمئن هستید که نمی‌خواهید خبرنامه دریافت کنید؟<br>
+            لطفاً دوباره چک باکس خبرنامه زیر را علامت بزنید.<br>
+            برای ما بسیار مهم است که بتوانید گاه به گاه ایمیل دریافت کنید
+            برای اطلاعیه های مهم، همیشه می توانید این را در خود تغییر دهید
+            صفحه تنظیمات اعلان‌ها.</p>
+            <p>اگر کادر را علامت ندهید، ممکن است اطلاعات مربوطه را از دست داده باشید
+            درباره فرصت های مشارکتی جدید در پلتفرم.<br>
+            اگر هنوز می خواهید از دریافت خبرنامه اجتناب کنید، ما کاملاً
+            تصمیم خود را درک کنید.</p>
+            <p>از خواندن این مطلب متشکریم!</p>
+          title: اطلاعیه های خبرنامه
+        omniauth_buttons:
+          or: یا
+    doorkeeper:
+      authorizations:
+        new:
+          authorize: مجوز برنامه
+          by_organization_link_html: <small class="heading-small">توسط %{link}</small>
+          cancel: لغو کنید
+          connect_your_account_html: با ورود به <strong>%{organization}</strong> حساب خود را متصل کنید
+          publish_content: مطالبی را برای شما منتشر کنید
+          see_email: ایمیل خود را ببینید
+          see_name: اسمتو ببین
+          see_username: نام مستعار خود را ببینید
+          this_application_will_be_able_to: 'این اپلیکیشن قادر خواهد بود:'
+          this_application_will_not_be_able_to: 'این برنامه قادر نخواهد بود:'
+          update_profile: پروفایل خود را به روز نمائید
+          wants_to_use_your_account_html: "<strong>%{application_name}</strong> می خواهد از حساب شما استفاده کند"
+    download_your_data:
+      export:
+        ready: آماده
+      show:
+        download_data: داده ها را دانلود کنید
+        download_data_description: فایلی حاوی تمام اطلاعات مرتبط با حساب شما به <strong>%{user_email}</strong> ارسال خواهد شد. این ایمیل حاوی یک فایل .zip و یک رمز عبور برای باز کردن آن است.<br/><br/>برای خارج کردن فایل از حالت فشرده، به <a href="https://www.7-zip.org/"> نیاز دارید 7-Zip</a> (برای Windows) یا <a href="https://www.keka.io/">Keka</a> (برای MacOS). اگر از لینوکس استفاده می کنید، بیشتر اوقات آن را به صورت پیش فرض نصب خواهید کرد. اگر نه، می‌توانید از <a href="https://gitlab.gnome.org/GNOME/file-roller">غلتک فایل</a> یا <a href="https://peazip.github.io" استفاده کنید >PeaZip</a>).
+        request_data: درخواست داده
+    editor_images:
+      create:
+        error: خطا در آپلود تصویر
+        success: تصویر با موفقیت آپلود شد
+      drag_and_drop_help: تصاویر را با کشیدن و رها کردن یا چسباندن آنها اضافه کنید.
+    endorsable:
+      endorsements: تاییدیه ها
+      endorsements_count: تاییدیه ها به حساب می آیند
+    endorsement_buttons_cell:
+      already_endorsed: تایید شد
+      endorse: تایید و امضا
+    endorsements:
+      identities:
+        done: انجام شده
+        select_identity: هویت را انتخاب کنید
+    errors:
+      internal_server_error:
+        title: مشکلی در سرور ما وجود داشت
+        try_later: لطفاً بعداً دوباره امتحان کنید.
+      not_found:
+        back_home: بازگشت به خانه
+        content_doesnt_exist: این آدرس نادرست است یا حذف شده است.
+        title: صفحه ای که به دنبال آن هستید یافت نمی شود
+    events:
+      amendments:
+        amendment_accepted:
+          affected_user:
+            email_intro: 'یک اصلاحیه برای %{amendable_title} پذیرفته شده است. می توانید آن را از این صفحه ببینید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا نویسنده %{amendable_title} هستید.
+            email_subject: اصلاحیه %{amendable_title} از %{emendation_author_nickname} پذیرفته شد
+            notification_title: <a href="%{emendation_path}">اصلاح</a> ایجاد شده توسط <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> برای <a href="%{amendable_path}">%{amendable_title}</a> پذیرفته شد.
+          follower:
+            email_intro: 'یک اصلاحیه برای %{amendable_title} پذیرفته شده است. می توانید آن را از این صفحه ببینید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا %{amendable_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+            email_subject: اصلاحیه %{amendable_title} از %{emendation_author_nickname} پذیرفته شد
+            notification_title: <a href="%{emendation_path}">اصلاح</a> ایجاد شده توسط <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> برای <a href="%{amendable_path}">%{amendable_title}</a> پذیرفته شد.
+        amendment_created:
+          affected_user:
+            email_intro: 'یک اصلاحیه جدید برای %{amendable_title} ایجاد شده است. می توانید آن را از این صفحه ببینید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا نویسنده %{amendable_title} هستید.
+            email_subject: اصلاحیه جدید برای %{amendable_title}
+            notification_title: یک اصلاحیه جدید برای <a href="%{amendable_path}">%{amendable_title}</a> ایجاد شده است.
+          follower:
+            email_intro: 'یک اصلاحیه جدید برای %{amendable_title} ایجاد شده است. می توانید آن را از این صفحه ببینید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا %{amendable_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+            email_subject: اصلاحیه جدید برای %{amendable_title}
+            notification_title: یک اصلاحیه جدید برای <a href="%{amendable_path}">%{amendable_title}</a> ایجاد شده است.
+        amendment_promoted:
+          affected_user:
+            email_intro: 'یک اصلاحیه رد شده برای %{amendable_title} به عنوان %{amendable_type} جدید منتشر شده است. می توانید آن را از این صفحه ببینید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا نویسنده %{amendable_title} هستید.
+            email_subject: اصلاحیه ای از %{emendation_author_nickname} به عنوان %{amendable_type} جدید منتشر شده است
+            notification_title: یک <a href="%{emendation_path}">اصلاح رد شده</a> برای <a href="%{amendable_path}">%{amendable_title}</a> به‌عنوان %{amendable_type} جدید توسط <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> منتشر شده است. .
+          follower:
+            email_intro: 'یک اصلاحیه رد شده برای %{amendable_title} به عنوان %{amendable_type} جدید منتشر شده است. می توانید آن را از این صفحه ببینید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا %{amendable_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+            email_subject: اصلاحیه ای از %{emendation_author_nickname} به عنوان %{amendable_type} جدید منتشر شده است
+            notification_title: یک <a href="%{emendation_path}">اصلاح رد شده</a> برای <a href="%{amendable_path}">%{amendable_title}</a> به‌عنوان %{amendable_type} جدید توسط <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> منتشر شده است. .
+        amendment_rejected:
+          affected_user:
+            email_intro: 'یک اصلاحیه برای %{amendable_title} رد شده است. می توانید آن را از این صفحه ببینید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا نویسنده %{amendable_title} هستید.
+            email_subject: اصلاحیه برای %{amendable_title} از %{emendation_author_nickname} رد شد
+            notification_title: <a href="%{emendation_path}">اصلاح</a> ایجاد شده توسط <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> برای <a href="%{amendable_path}">%{amendable_title}</a> رد شده است.
+          follower:
+            email_intro: 'یک اصلاحیه برای %{amendable_title} رد شده است. می توانید آن را از این صفحه ببینید:'
+            email_outro: شما این اعلان را دریافت کرده اید زیرا %{amendable_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+            email_subject: اصلاحیه برای %{amendable_title} از %{emendation_author_nickname} رد شد
+            notification_title: <a href="%{emendation_path}">اصلاح</a> ایجاد شده توسط <a href="%{emendation_author_path}">%{emendation_author_nickname}</a> برای <a href="%{amendable_path}">%{amendable_title}</a> رد شده است.
+      attachments:
+        attachment_created:
+          email_intro: 'یک سند جدید به %{resource_title} اضافه شده است. می توانید آن را از این صفحه ببینید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{resource_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: به روز رسانی به %{resource_title}
+          notification_title: یک <a href="%{resource_path}">سند جدید</a> به <a href="%{attached_to_url}">%{resource_title}</a> اضافه شد
+      components:
+        component_published:
+          email_intro: 'مؤلفه %{resource_title} اکنون برای %{participatory_space_title} فعال است. می توانید آن را از این صفحه ببینید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: به روز رسانی به %{participatory_space_title}
+          notification_title: مؤلفه %{resource_title} اکنون برای <a href="%{resource_path}">%{participatory_space_title}</a> فعال است
+      email_event:
+        email_greeting: سلام %{user_name}،
+        email_intro: 'یک به روز رسانی برای "%{resource_title}" وجود دارد. می توانید آن را از این صفحه ببینید:'
+        email_outro: شما این اعلان را دریافت کرده اید زیرا "%{resource_title}" را دنبال می کنید. می توانید آن را از لینک قبلی لغو فالو کنید.
+        email_subject: به روز رسانی به %{resource_title}
+      gamification:
+        badge_earned:
+          email_intro: تبریک می گویم! شما <a href="%{resource_url}">نشان %{badge_name}</a> (سطح %{current_level}) را کسب کرده اید.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا فعالیتی در وب سایت ما انجام داده اید.
+          email_subject: 'شما یک نشان جدید به دست آورده اید: %{badge_name}!'
+          notification_title: تبریک می گویم! شما <a href="%{resource_path}">نشان %{badge_name}</a> (سطح %{current_level}) را کسب کرده اید.
+        level_up:
+          email_intro: تبریک می گویم! شما به سطح %{current_level} در <a href="%{resource_url}">نشان %{badge_name}</a> رسیده‌اید!
+          email_outro: شما این اعلان را دریافت کرده اید زیرا فعالیتی در وب سایت ما انجام داده اید.
+          email_subject: شما به سطح %{current_level} در نشان %{badge_name} رسیده اید!
+          notification_title: تبریک می گویم! شما به سطح %{current_level} در <a href="%{resource_path}">نشان %{badge_name}</a> رسیده‌اید!
+      groups:
+        demoted_membership:
+          email_intro: یک سرپرست گروه <a href="%{resource_url}">%{user_group_name}</a> حقوق سرپرستی شما را از آن گروه حذف کرده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا عضو آن گروه هستید.
+          email_subject: شما دیگر ادمین گروه %{user_group_name} نیستید!
+          notification_title: شما دیگر سرپرست گروه <a href="%{resource_path}">%{user_group_name}</a> نیستید.
+        invited_to_group:
+          email_intro: یک سرپرست گروه <a href="%{resource_url}">%{user_group_name}</a> از شما دعوت کرده است که به آن بپیوندید.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا به یک گروه دعوت شده اید. لطفاً برگه گروه‌ها را در نمایه خود بررسی کنید تا آن را تأیید کنید.
+          email_subject: شما برای پیوستن به گروه %{user_group_name} دعوت شده اید!
+          notification_title: شما برای پیوستن به گروه <a href="%{resource_path}">%{user_group_name}</a> دعوت شده‌اید. برای تأیید، <a href="%{groups_profile_tab_path}">صفحه گروه‌ها</a> را در نمایه خود بررسی کنید!
+        join_request_accepted:
+          email_intro: تبریک می گویم! یک سرپرست گروه <a href="%{resource_url}">%{user_group_name}</a> درخواست شما را برای پیوستن به آن پذیرفته است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا درخواست عضویت شما به روز شده است.
+          email_subject: شما در گروه %{user_group_name} پذیرفته شده اید!
+          notification_title: شما در گروه <a href="%{resource_path}">%{user_group_name}</a> پذیرفته شده‌اید.
+        join_request_created:
+          email_intro: شخصی برای پیوستن به گروه %{user_group_name} درخواست کرده است. می‌توانید آن را از <a href="%{resource_url}">صفحه اعضای گروه</a> بپذیرید یا رد کنید.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا می توانید گروه %{user_group_name} را مدیریت کنید.
+          email_subject: شخصی درخواست پیوستن به گروه %{user_group_name} را داده است!
+          notification_title: شخصی برای پیوستن به گروه %{user_group_name} درخواست کرده است. می‌توانید آن را از <a href="%{resource_path}">صفحه اعضای گروه</a> بپذیرید یا رد کنید.
+        join_request_rejected:
+          email_intro: یک سرپرست گروه <a href="%{resource_url}">%{user_group_name}</a> درخواست شما را برای پیوستن به آن رد کرد.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا درخواست عضویت شما به روز شده است.
+          email_subject: درخواست شما برای پیوستن به گروه %{user_group_name} رد شده است!
+          notification_title: درخواست شما برای پیوستن به گروه <a href="%{resource_path}">%{user_group_name}</a> رد شد.
+        promoted_to_admin:
+          email_intro: یک سرپرست گروه <a href="%{resource_url}">%{user_group_name}</a> به شما حقوق سرپرستی آن گروه را داده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا عضو آن گروه هستید.
+          email_subject: شما اکنون یک ادمین گروه %{user_group_name} هستید!
+          notification_title: شما اکنون سرپرست گروه <a href="%{resource_path}">%{user_group_name}</a> هستید.
+        removed_from_group:
+          email_intro: یک سرپرست گروه <a href="%{resource_url}">%{user_group_name}</a> شما را از آن حذف کرده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا عضو آن گروه بوده اید.
+          email_subject: شما از گروه %{user_group_name} حذف شده اید!
+          notification_title: شما از گروه <a href="%{resource_path}">%{user_group_name}</a> حذف شده‌اید.
+        user_group_created:
+          email_intro: یک گروه کاربری جدید با نام %{user_group_name} ایجاد شده است. اکنون می‌توانید آن را در <a href="%{groups_admin_url}">پنل مدیریت</a> تأیید کنید.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا شما یک ادمین پلتفرم هستید.
+          email_subject: یک گروه کاربری جدید ایجاد شده است
+          notification_title: گروه کاربری %{user_group_name} ایجاد شده است. اکنون می‌توانید آن را در <a href="%{groups_admin_path}">پنل مدیریت</a> تأیید کنید.
+        user_group_updated:
+          email_intro: یک گروه کاربری با نام %{user_group_name} نمایه خود را به‌روزرسانی کرده و آن را تأیید نشده باقی گذاشته است. اکنون می‌توانید آن را در <a href="%{groups_admin_url}">پنل مدیریت</a> تأیید کنید.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا شما یک ادمین پلتفرم هستید.
+          email_subject: یک گروه کاربری نمایه خود را به روز کرده است
+          notification_title: گروه کاربری %{user_group_name} نمایه خود را به روز کرده و آن را تایید نشده باقی گذاشته است. اکنون می‌توانید آن را در <a href="%{groups_admin_path}">پنل مدیریت</a> تأیید کنید.
+      nickname_event:
+        notification_body: ما نحوه استفاده از نام مستعار را به گونه ای تصحیح کرده ایم که تکراری نباشد و به همین دلیل قانون حساس به حروف کوچک و بزرگ را حذف کرده ایم. <br/> نام مستعار شما پس از نام مستعار دیگری با همین نام ایجاد شده است، بنابراین ما به طور خودکار نام آن را تغییر داده ایم. می‌توانید آن را از <a href="%{link_to_account_settings}">تنظیمات حساب خود</a> تغییر دهید.
+      notification_event:
+        notification_title: رویدادی برای <a href="%{resource_path}">%{resource_title}</a> رخ داد.
+      reports:
+        resource_hidden:
+          email_intro: یک سرپرست %{resource_type} شما را حذف کرد زیرا به عنوان %{report_reasons} گزارش شده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا نویسنده محتوای حذف شده هستید.
+          email_subject: "%{resource_type} شما حذف شده است"
+          notification_title: |-
+            یک سرپرست %{resource_type} شما را حذف کرد زیرا به عنوان %{report_reasons} گزارش شده است.</br>
+            <i>%{resource_content}</i>
+      resource_endorsed:
+        email_intro: '%{endorser_name} %{endorser_nickname} که شما دنبال می‌کنید، به تازگی "%{resource_title}" را تأیید کرده است و ما فکر می‌کنیم ممکن است برای شما جالب باشد. آن را بررسی کنید و مشارکت کنید:'
+        email_outro: شما این اعلان را دریافت کرده اید زیرا %{endorser_nickname} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+        email_subject: "%{endorser_nickname} تأیید جدیدی انجام داده است"
+        notification_title: <a href="%{resource_path}">%{resource_title}</a> %{resource_type} توسط <a href="%{endorser_path}">%{endorser_name} %{endorser_nickname}</a> تأیید شده است.
+      users:
+        profile_updated:
+          email_intro: <a href="%{resource_url}">صفحه نمایه</a> %{name} (%{nickname})، که شما دنبال می‌کنید، به‌روزرسانی شده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{nickname} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: "%{nickname} نمایه خود را به روز کرد"
+          notification_title: <a href="%{resource_path}">صفحه نمایه</a> %{name} (%{nickname})، که شما دنبال می‌کنید، به‌روزرسانی شده است.
+        user_officialized:
+          email_intro: شرکت کننده %{name} (%{nickname}) رسمی شده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا مدیر سازمان هستید.
+          email_subject: "%{name} رسمی شد"
+          notification_title: شرکت کننده %{name} (%{nickname}) رسمی شده است.
+    export_mailer:
+      download_your_data_export:
+        click_button: 'برای دانلود داده‌های خود، روی پیوند بعدی کلیک کنید.<br/>فایل تا %{date} در دسترس خواهد بود.<br/>به <a href="https://www.7-zip.org/">7-Zip نیاز دارید </a> (برای Windows)، <a href="https://www.keka.io/en/">Keka</a> (برای MacOS) یا <a href="https://peazip.github .io">PeaZip</a> (برای لینوکس) برای باز کردن آن. رمز عبور: %{password}'
+        download: دانلود
+      export:
+        ready: لطفاً یک نسخه فشرده از صادرات خود را پیوست شده بیابید.
+      subject: صادرات "%{name}" شما آماده است
+    filters:
+      linked_classes:
+        all: همه
+        collaborative_draft: پیش نویس مشارکتی
+        dummy_resource: منابع ساختگی
+        meeting: جلسات
+        project: پروژه ها
+        proposal: پیشنهادات
+        result: نتایج
+    fingerprint:
+      check: اثر انگشت را بررسی کنید
+      explanation: قطعه متن زیر نمایشی کوتاه شده و هش شده از این محتوا است. این مفید است که مطمئن شوید محتوا دستکاری نشده است، زیرا یک تغییر منجر به یک مقدار کاملاً متفاوت می شود.
+      online_calculator_name: ماشین حساب MD5 آنلاین
+      replicate_help: این اثر انگشت با استفاده از الگوریتم هش SHA256 محاسبه می شود. برای اینکه خودتان آن را تکرار کنید، می توانید از %{online_calculator_link} استفاده کنید و داده های منبع را کپی-پیست کنید.
+      source: منبع
+      title: اثر انگشت
+      value: ارزش
+    followers:
+      followers_count:
+        one: دنبال کننده %{count}
+        other: "%{count} دنبال کننده"
+      no_followers: هنوز دنبال کننده ای وجود ندارد.
+    following:
+      no_followings: هنوز کسی یا چیزی را دنبال نمی کند.
+      non_public_followings: برخی از منابع دنبال شده عمومی نیستند.
+    follows:
+      create:
+        button: دنبال کردن
+        error: مشکلی در پیگیری این منبع وجود داشت.
+        participatory_space: دنبال کردن <span class="show-for-sr">%{resource_name}</span>
+      destroy:
+        button: دنبال کردن را متوقف کنید
+        error: مشکلی در لغو دنبال کردن این منبع وجود داشت.
+    forms:
+      current_image: تصویر فعلی
+      default_image: تصویر پیش فرض
+      errors:
+        decidim/user:
+          password: رمز عبور خیلی کوتاه است.
+          password_confirmation: تایید رمز عبور باید با رمز عبور مطابقت داشته باشد.
+        error: یک خطایی در این زمینه وجود دارد.
+      file_help:
+        file:
+          explanation: 'راهنمای فایل:'
+          message_1: باید تصویر یا سند باشد.
+          message_2: برای تصاویر، ترجیحاً از تصاویر افقی استفاده کنید، سرویس تصویر را برش می دهد.
+        icon:
+          explanation: 'راهنمایی برای نماد:'
+          message_1: باید یک تصویر مربع باشد.
+          message_2: اندازه پیشنهادی برای این تصویر 512x512 است.
+        image:
+          explanation: 'راهنمای تصویر:'
+          message_1: ترجیحاً یک تصویر منظره که هیچ متنی نداشته باشد.
+          message_2: سرویس تصویر را برش می دهد.
+      file_validation:
+        allowed_file_extensions: 'پسوندهای مجاز فایل: %{extensions}'
+        max_file_dimension: 'حداکثر ابعاد فایل: %{resolution} پیکسل'
+        max_file_size: 'حداکثر حجم فایل: %{megabytes} مگابایت'
+      files:
+        extension_allowlist: 'فرمت های پذیرفته شده: %{extensions}'
+      upload:
+        labels:
+          add_attachment: پیوست را اضافه کنید
+          add_file: فایل اضافه کنید
+          add_image: تصویر اضافه کن
+          cancel: لغو کنید
+          edit_image: ویرایش تصویر
+          error: خطا!
+          file_size_too_large: 'اندازه فایل خیلی بزرگ است! حداکثر حجم فایل: %{megabytes} مگابایت'
+          remove: برداشتن
+          replace: جایگزین کردن
+          save: صرفه جویی
+          title: عنوان
+          title_required: عنوان مورد نیاز است!
+          uploaded: آپلود شد
+          validating: در حال اعتبارسنجی...
+          validation_error: خطای اعتبار سنجی!
+      upload_help:
+        dropzone: فایل ها را اینجا رها کنید یا برای آپلود کلیک کنید
+        explanation: راهنمایی برای %{attribute}
+    gamification:
+      all_badges_link: همه نشان‌های موجود را ببینید.
+      badges:
+        followers:
+          conditions:
+          - فعال بودن و دنبال کردن افراد دیگر مطمئنا باعث می شود که دیگران شما را دنبال کنند.
+          description: این نشان زمانی اعطا می شود که به تعداد معینی دنبال کننده برسید. %{organization_name} یک شبکه اجتماعی و سیاسی است، وب خود را ببافید تا با افراد دیگر در پلتفرم ارتباط برقرار کنید.
+          description_another: این شرکت کننده %{score} دنبال کننده دارد.
+          description_own: "%{score} نفر شما را دنبال می کنند."
+          name: پیروان
+          next_level_in: "%{score} نفر دیگر را برای رسیدن به سطح بعدی دنبال کنید!"
+          unearned_another: این شرکت کننده هنوز هیچ دنبال کننده ای ندارد.
+          unearned_own: شما هنوز هیچ دنبال کننده ای ندارید.
+        index:
+          badge_title: نشان %{name}
+          how: چگونه می توانید آن را کسب کنید
+          page_description: نشان‌ها شناسایی اقدامات و پیشرفت شرکت‌کنندگان در پلتفرم هستند. با شروع به کشف، مشارکت و تعامل در پلتفرم، نشان های مختلفی کسب خواهید کرد. در اینجا لیستی از نشان ها و چند راه برای به دست آوردن آنها آمده است.
+          title: نشان ها
+      description: نشان‌ها شناسایی اقدامات و پیشرفت شرکت‌کنندگان در پلتفرم هستند. با شروع به کشف، مشارکت و تعامل در پلتفرم، نشان های مختلفی کسب خواهید کرد.
+      level: سطح %{level}
+      reached_top: شما برای این نشان به سطح بالایی رسیده اید.
+    group_admins:
+      actions:
+        are_you_sure: مطمئنی؟ با این کار، شرکت‌کننده از گروه حذف نمی‌شود.
+        demote_admin: حذف ادمین
+      demote:
+        error: مشکلی در حذف این شرکت‌کننده از فهرست مدیران وجود داشت
+        success: شرکت کننده با موفقیت از مدیریت حذف شد
+      index:
+        current_admins: 'ادمین های فعلی:'
+        manage_admins: مدیریت ادمین ها
+    group_invites:
+      accept:
+        error: مشکلی در پذیرش این دعوت وجود داشت
+        success: دعوت با موفقیت پذیرفته شد
+      accept_invitation: تایید کنید
+      accept_or_reject_group_invitations: 'گروه های زیر از شما دعوت کرده اند که به آنها بپیوندید. پذیرش یا رد درخواست های آنها:'
+      index:
+        invite: دعوت
+        invite_user: از یک شرکت کننده دعوت کنید
+      invite:
+        error: مشکلی در دعوت از این شرکت‌کننده وجود داشت
+        success: شرکت کننده با موفقیت دعوت شد
+      reject:
+        error: مشکلی در رد این دعوت وجود داشت
+        success: دعوت با موفقیت رد شد
+      reject_invitation: رد کردن
+    group_members:
+      accept:
+        error: در پذیرش این درخواست پیوستن مشکلی وجود داشت
+        success: درخواست عضویت با موفقیت پذیرفته شد
+      actions:
+        are_you_sure: مطمئنی؟
+        promote_to_admin: ساختن مدیر
+        remove_from_group: حذف شرکت کننده
+      index:
+        current_members_without_admins: 'اعضای فعلی (بدون ادمین):'
+        manage_members: اعضا را مدیریت کنید
+      promote:
+        error: مشکلی در تبلیغ این شرکت‌کننده وجود داشت
+        success: شرکت کننده با موفقیت ارتقا یافت
+      reject:
+        error: در رد این درخواست پیوستن مشکلی وجود داشت
+        success: درخواست پیوستن با موفقیت رد شد
+      remove:
+        error: مشکلی در حذف این شرکت‌کننده از گروه وجود داشت
+        success: شرکت کننده با موفقیت از گروه حذف شد
+    groups:
+      actions:
+        are_you_sure: مطمئنی؟
+      create:
+        error: مشکلی در ایجاد گروه وجود داشت
+        success: گروه با موفقیت ایجاد شد
+      edit:
+        edit_user_group: ویرایش گروه
+        update_user_group: به روز رسانی گروه
+      form:
+        document_number_help: از خط تیره و فاصله استفاده نکنید
+        email_help: ایمیل سازمان، انجمن، جمع، گروه و غیره شما.
+        fill_in_for_verification: 'اگر می خواهید گروه شما تأیید شود، این فیلدها را پر کنید:'
+        name_help: نام سازمان، انجمن، جمع، گروه و غیره شما.
+        nickname_help: نام مستعار سازمان، انجمن، جمع، گروه و غیره. از فاصله و لهجه استفاده نکنید.
+        phone_help: از خط تیره و فاصله استفاده نکنید
+      join:
+        error: برای پیوستن به گروه مشکلی پیش آمد
+        success: درخواست پیوستن با موفقیت ایجاد شد. قبل از پذیرش شما در گروه، یک مدیر درخواست شما را بررسی می کند.
+      leave:
+        error: مشکلی برای خروج از گروه وجود داشت
+        last_admin: شما نمی توانید خود را از این گروه حذف کنید زیرا آخرین سرپرست هستید. برای ترک گروه، عضو دیگری را به عنوان سرپرست انتخاب کنید.
+        success: گروه با موفقیت کنار گذاشته شد.
+      members:
+        accept_or_reject_join_requests: 'کاربران زیر برای پیوستن به این گروه درخواست داده اند. پذیرش یا رد درخواست های آنها:'
+        accept_request: تایید کنید
+        reject_request: رد کردن
+      new:
+        create_user_group: ایجاد گروه
+        new_user_group: گروه جدید
+        subtitle: یک گروه ایجاد کنید و از سایر کاربران دعوت کنید تا در سطح جمعی شرکت کنند.
+      no_user_groups: هنوز به هیچ گروهی تعلق ندارد
+      roles:
+        admin: مدیر
+        creator: مدیر
+        member: عضو
+      update:
+        error: مشکلی در به‌روزرسانی گروه وجود داشت
+        success: گروه با موفقیت به روز شد
+    help:
+      main_topic:
+        default_page:
+          content: "<p>در %{organization} می‌توانید از طریق فضاهایی که در منوی بالا مشاهده می‌کنید، شرکت کنید و در مورد موضوعات مختلف تصمیم بگیرید: فرآیندها، مجامع، ابتکارات، مشاوره‌ها.</p> <p>در هر کدام گزینه‌های مختلفی برای مشارکت خواهید یافت: ارائه پیشنهادات - به صورت فردی یا با افراد دیگر-، شرکت در بحث ها، اولویت بندی پروژه ها برای اجرا، شرکت در جلسات حضوری و سایر اقدامات.</p>\n"
+          title: در %{organization} چه کاری می توانم انجام دهم؟
+        description: درباره %{organization} بیشتر بخوانید
+        title: کمک عمومی
+    last_activities:
+      activities:
+        no_activities_warning: بدون فعالیت
+      all: همه انواع فعالیت
+      index:
+        last_activity: آخرین فعالیت
+        resource_type: تایپ کنید
+    links:
+      invalid_url: URL نامعتبر است
+      warning:
+        body_1: شما در شرف بازدید از یک پیوند خارجی هستید و ما می خواهیم در مورد محتوای سایت خارجی محتاط باشید.
+        body_2: لطفاً پیوندی را که می‌خواهید از آن بازدید کنید بررسی کنید و مطمئن شوید که قبل از ادامه آن را به عنوان یک سایت امن می‌شناسید.
+        cancel: لغو کنید
+        close_modal: بستن مودال
+        proceed: ادامه دهید
+        title: پیوند خارجی را باز کنید
+    log:
+      base_presenter:
+        create: "%{user_name} %{resource_name} را ایجاد کرد"
+        create_with_space: "%{user_name} %{resource_name} را در %{space_name} ایجاد کرد"
+        delete: "%{user_name} %{resource_name} را حذف کرد"
+        delete_with_space: "%{user_name} %{resource_name} را در %{space_name} حذف کرد"
+        unknown_action: "%{user_name} برخی اقدامات را در %{resource_name} انجام داد"
+        unknown_action_with_space: "%{user_name} روی %{resource_name} در %{space_name} اقدامی انجام داد"
+        update: "%{user_name} %{resource_name} به روز شد"
+        update_permissions_with_space: "%{user_name} مجوزهای %{resource_name} را در %{space_name} به روز کرد"
+        update_with_space: "%{user_name} %{resource_name} را در %{space_name} به روز کرد"
+      value_types:
+        area_presenter:
+          not_found: 'منطقه در پایگاه داده یافت نشد (ID: %{id})'
+        area_type_presenter:
+          not_found: 'نوع منطقه در پایگاه داده یافت نشد (ID: %{id})'
+        scope_presenter:
+          not_found: 'دامنه در پایگاه داده یافت نشد (ID: %{id})'
+        scope_type_presenter:
+          not_found: 'نوع محدوده در پایگاه داده یافت نشد (ID: %{id})'
+    managed_users:
+      expired_session: جلسه مدیریت فعلی یک شرکت کننده منقضی شده است.
+    map:
+      dynamic:
+        screen_reader_explanation: عنصر زیر نقشه ای است که موارد موجود در این صفحه را به عنوان نقاط نقشه نشان می دهد. این عنصر را می توان با یک صفحه خوان استفاده کرد اما ممکن است درک آن سخت باشد.
+        skip_button: رد شدن از نقشه
+      static:
+        latlng_text: 'عرض جغرافیایی: %{latitude}، طول جغرافیایی: %{longitude}'
+        map_service_brand: OpenStreetMap
+    members:
+      no_members: این گروه هنوز هیچ عضوی ندارد.
+    menu:
+      help: کمک
+      home: صفحه اصلی
+    messaging:
+      conversation_mailer:
+        comanagers_new_conversation:
+          admin_in_group: شما این را دریافت می کنید زیرا شما یک سرپرست در %{group} هستید.
+          greeting: سلام، %{recipient}!
+          intro: "%{manager} مکالمه جدیدی را به نام %{group} آغاز کرده است. برای تماشا اینجا را کلیک کنید:"
+          outro: از تصمیم گیری لذت ببرید!
+          subject: "%{manager} مکالمه جدیدی را به عنوان %{group} آغاز کرده است"
+        comanagers_new_message:
+          admin_in_group: شما این را دریافت می کنید زیرا شما یک سرپرست در %{group} هستید.
+          greeting: سلام، %{recipient}!
+          intro: "%{manager} پیام های جدیدی را در یک مکالمه به نام %{group} ارسال کرده است. برای دیدن آن ها اینجا را کلیک کنید:"
+          outro: از تصمیم گیری لذت ببرید!
+          subject: "%{manager} پیام های جدیدی را به عنوان %{group} ارسال کرده است"
+        new_conversation:
+          greeting: سلام، %{recipient}!
+          intro: "%{sender} مکالمه جدیدی با شما آغاز کرده است. برای تماشا اینجا را کلیک کنید:"
+          outro: از تصمیم گیری لذت ببرید!
+          subject: "%{sender} مکالمه ای را با شما آغاز کرده است"
+        new_group_conversation:
+          admin_in_group: شما این را دریافت می کنید زیرا شما یک سرپرست در %{group} هستید.
+          greeting: سلام، %{recipient}!
+          intro: "%{sender} مکالمه جدیدی با گروه %{group} آغاز کرده است. برای تماشا اینجا را کلیک کنید:"
+          outro: از تصمیم گیری لذت ببرید!
+          subject: "%{sender} مکالمه ای را با %{group} آغاز کرده است"
+        new_group_message:
+          admin_in_group: شما این را دریافت می کنید زیرا شما یک سرپرست در %{group} هستید.
+          greeting: سلام، %{recipient}!
+          intro: "%{sender} پیام های جدیدی را در گفتگو با گروه %{group} ارسال کرده است. برای تماشا اینجا را کلیک کنید:"
+          outro: از تصمیم گیری لذت ببرید!
+          subject: "%{group} پیام های جدیدی از %{sender} دارند"
+        new_message:
+          greeting: سلام، %{recipient}!
+          intro: "%{sender} پیام های جدیدی در مکالمه شما پست کرده است. برای دیدن آن ها اینجا را کلیک کنید:"
+          outro: از تصمیم گیری لذت ببرید!
+          subject: شما پیام های جدیدی از %{sender} دارید
+      conversations:
+        add_conversation_users:
+          add_max_users: 'افزودن کاربران به مکالمه: حداکثر 9 کاربر'
+          add_users_placeholder: جستجو کردن...
+          modal_title: گفتگوی جدید
+          no_results: هیچ نتیجه ای
+          participant_with_disabled_message_reception: این شرکت کننده دریافت پیام را غیرفعال کرده است
+        conversation:
+          show: نمایش مکالمه با %{sender}
+        create:
+          error: مکالمه شروع نشده است بعدا دوباره تلاش کنید
+        error_modal:
+          close: بستن مودال
+          correct_errors: لطفاً خطاها را تصحیح کنید و دوباره امتحان کنید.
+          intro: 'خطاهای زیر در پیام شما وجود داشت:'
+          ok: خوب
+        index:
+          ago: پیش
+          close: بستن مودال
+          from: از جانب
+          groups: گروه های من
+          last_message: آخرین پیام
+          new_conversation: گفتگوی جدید
+          next: بعد
+          no_conversations: شما هنوز مکالمه ای ندارید
+          title: گفتگو
+          to: به
+        reply:
+          placeholder: پاسخ خود را...
+          send: ارسال
+          title: پاسخ
+        show:
+          back: بازگشت به همه مکالمات
+          chat_with: گفتگو با
+          deleted_accounts: شما نمی توانید با حساب های حذف شده مکالمه داشته باشید.
+          not_allowed: این شرکت کننده پیام های مستقیم را نمی پذیرد.
+          title: مکالمه با %{usernames}
+        start:
+          send: ارسال
+          title: یک مکالمه را شروع کنید
+        update:
+          error: به دلیل خطا پیام ارسال نشد
+    metrics:
+      download:
+        csv: دانلود داده (CSV)
+      followers:
+        description: تعداد شرکت کنندگانی که این فضای مشارکت را دنبال می کنند
+        object: پیروان
+        title: پیروان
+      participants:
+        description: تعداد شرکت کنندگان فعال در سازمان
+        object: شركت كنندگان
+        title: شركت كنندگان
+      users:
+        description: تعداد شرکت کنندگان در سازمان
+        object: شركت كنندگان
+        title: شركت كنندگان
+    newsletter_mailer:
+      newsletter:
+        note: شما این ایمیل را دریافت کردید زیرا در خبرنامه های %{organization_name} مشترک شده اید. می‌توانید تنظیمات خود را در <a href="%{link}">صفحه اعلان‌ها</a> تغییر دهید.
+        see_on_website: نمی توانید این ایمیل را به درستی ببینید؟ آن را در <a href="%{link}" target="_blank">وب‌سایت</a> مشاهده کنید.
+        unsubscribe: برای انصراف از دریافت این نوع ایمیل، <a href="%{link}" target="_blank" class="unsubscribe">لغو اشتراک</a>.
+    newsletter_templates:
+      basic_only_text:
+        body_preview: 'متن ساختگی برای بدن: Lorem ipsum dolor sit amet، consectetur adipiscing elit. فلنتسک فرینگیلا نیسل تلوس. Donec sed mi dui. Sed efficitur libero a felis tempor sollicitudin. Nullam vestibulum fringilla felis، id efficitur lorem sagittis et. Vivamus aliquam maximus velit vel dapibus. Mauris pellentesque، enim eu varius lacinia، risus ante rutrum ipsum، non lobortis augue lorem quis urna. Aenean et malesuada arcu.'
+        name: پایه (فقط متن)
+      basic_only_text_settings_form:
+        body: بدن
+        interpolations_hint: 'نکته: می‌توانید از «%{name}» در هر جایی از بدنه یا موضوع استفاده کنید و نام گیرنده جایگزین آن می‌شود.'
+      image_text_cta:
+        body_preview: 'متن ساختگی برای بدن: Maecenas ac nisl vitae lectus pretium facilisis. Etiam facilisis sem nibh، sit amet rutrum mi aliquam nec. Sed id urna at nisl pretium mollis eu vel velit. Proin vitae suscipit urna، sed faucibus urna. Pellentesque id libero vulputate ipsum scelerisque suscipit. Nam aliquam sodales mi sit amet cursus. Donec mattis faucibus purus. Aenean tincidunt porta lorem ac commodo. دهلیزی در mollis mi. Morbi eros erat، Cursus ut Tortor sit amet، imperdiet dapibus arcu. Suspendisse id egestas enim. در eget magna sed enim efficitur elementum sit amet aliquam quam. Donec fermentum metus eget urna luctus pulvinar.'
+        cta_text_preview: متن Call To Action
+        introduction_preview: 'متن ساختگی برای معرفی: Lorem ipsum dolor sit amet, consectetur adipiscing elit. فلنتسک فرینگیلا نیسل تلوس. Donec sed mi dui. Sed efficitur libero a felis tempor sollicitudin. Nullam vestibulum fringilla felis، id efficitur lorem sagittis et. Vivamus aliquam maximus velit vel dapibus. Mauris pellentesque، enim eu varius lacinia، risus ante rutrum ipsum، non lobortis augue lorem quis urna. Aenean et malesuada arcu.'
+        name: تصویر، متن و دکمه Call To Action
+      image_text_cta_settings_form:
+        body: بدن
+        cta_text: متن دکمه Call To Action
+        cta_url: URL دکمه Call To Action
+        interpolations_hint: 'نکته: می‌توانید از «%{name}» در هر نقطه از مقدمه، متن، متن CTA یا موضوع استفاده کنید و نام گیرنده جایگزین آن می‌شود.'
+        introduction: معرفی
+        main_image: تصویر اصلی
+    newsletters:
+      unsubscribe:
+        check_subscription: اگر می‌خواهید تنظیمات برگزیده خود را تغییر دهید، می‌توانید این کار را در <a href="%{link}" target="_blank">صفحه پیکربندی</a> انجام دهید.
+        error: مشکلی در لغو اشتراک وجود داشت
+        success: شما با موفقیت لغو اشتراک کردید.
+        token_error: لینک منقضی شده است.
+        unsubscribe: لغو اشتراک
+    newsletters_opt_in:
+      unathorized: با عرض پوزش، این پیوند دیگر در دسترس نیست
+      update:
+        error: اشتباهی رخ داده است
+        success: تنظیمات خبرنامه با موفقیت به روز شد
+    newsletters_opt_in_mailer:
+      notify:
+        body_1: پردازش داده های شخصی و حفاظت از آن برای همه ما اهمیت فزاینده ای پیدا می کند. با قانون جدید حفاظت از داده های عمومی (GDPR) در 25 می 2018، افراد کنترل بهتری بر داده های شخصی خود دارند. به همین دلیل ما به "OK" شما برای ادامه ارسال اطلاعات مرتبط در مورد فعالیت های %{organization_name} نیاز داریم.
+        body_2: 'چگونه می توانید رضایت خود را به ما بدهید؟ فقط روی دکمه زیر کلیک کنید:'
+        body_3: با این رضایت می‌توانید به دریافت اطلاعات مربوط به خدمات پلتفرم ادامه دهید. اگر برعکس، ما تاییدیه مثبتی از طرف شما دریافت نکردیم، از ارسال پیام های خود به شما جلوگیری می کنیم. اگر تأیید کنید که می‌خواهید همچنان در جریان باشید، همیشه می‌توانید در هر زمانی این گزینه را لغو کنید.
+        button: بله، من می خواهم به دریافت اطلاعات مرتبط ادامه دهم
+        greetings: با سلام،<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
+        hello: سلام،
+        subject: آیا می خواهید به دریافت اطلاعات مرتبط در مورد %{organization_name} ادامه دهید؟
+    notification_mailer:
+      event_received:
+        no_translation_available: با عرض پوزش، ترجمه خودکار پس از ارسال ایمیل بازیابی نشد. ترجمه متن اصلی را می توانید در لینک زیر %{link} بررسی کنید.
+        original_text: 'متن اصلی:'
+        same_language: محتوا به زبان دلخواه شما (%{language}) پست شده است، به همین دلیل است که هیچ ترجمه خودکاری در این ایمیل نمایش داده نمی شود.
+        translated_text: 'متن ترجمه شده به صورت خودکار:'
+    notifications:
+      no_notifications: هنوز اطلاعیه ای وجود ندارد.
+      show:
+        missing_event: اوه، این اعلان متعلق به موردی است که دیگر در دسترس نیست. می توانید آن را دور بریزید.
+    notifications_digest_mailer:
+      header:
+        daily: خلاصه اطلاع رسانی روزانه
+        weekly: خلاصه اعلان هفتگی
+      hello: سلام %{name}،
+      intro:
+        daily: 'اینها اعلان‌های روز گذشته بر اساس فعالیتی است که دنبال می‌کنید:'
+        weekly: 'اینها اعلان‌های هفته گذشته براساس فعالیتی است که دنبال می‌کنید:'
+      outro: شما این اعلان ها را دریافت کرده اید زیرا این محتوا یا نویسندگان آن را دنبال می کنید. می توانید آنها را از صفحات مربوطه خود لغو فالو کنید.
+      see_more: مشاهده اطلاعیه های بیشتر
+      subject: این خلاصه نامه شماست
+    notifications_settings:
+      show:
+        administrators: مدیران
+        allow_public_contact: به هر کسی اجازه دهید برای من پیام مستقیم ارسال کند، حتی اگر من او را دنبال نمی کنم.
+        allow_push_notifications: اعلان‌های فشاری دریافت کنید تا بفهمید وقتی روی پلتفرم نیستید چه خبر است. شما می توانید آنها را در هر زمان خاموش کنید.
+        direct_messages: از هر کسی پیام مستقیم دریافت کنید
+        email_on_moderations: من می خواهم هر بار که چیزی یا شخصی برای نظارت گزارش می شود یک ایمیل دریافت کنم.
+        everything_followed: هر چیزی که دنبال می کنم
+        newsletter_notifications: من می خواهم خبرنامه دریافت کنم
+        newsletters: خبرنامه ها
+        notification_settings:
+          close_meeting_reminder: می‌خواهم یادآوری‌های ایمیلی درباره گزارش‌های منتشر نشده جلسات بسته دریافت کنم
+        notifications_sending_frequencies:
+          daily: روزانه
+          none: هیچ یک
+          real_time: به موقع
+          weekly: هفتگی
+        notifications_sending_frequency: هر چند وقت یکبار می خواهید ایمیل اعلان ها را دریافت کنید؟
+        own_activity: فعالیت خودم، مانند زمانی که کسی در پیشنهاد من نظر می دهد یا از من نام می برد
+        push_notifications: اعلان های فشاری
+        push_notifications_reminder: برای دریافت اعلان‌ها از پلتفرم، ابتدا باید آنها را در تنظیمات مرورگر خود مجاز کنید.
+        receive_notifications_about: من می خواهم در مورد آن اعلان دریافت کنم
+        update_notifications_settings: ذخیره تغییرات
+      update:
+        error: مشکلی در به‌روزرسانی تنظیمات اعلان‌های شما وجود داشت.
+        success: تنظیمات اعلان های شما با موفقیت به روز شد.
+    offline:
+      show:
+        message: به نظر می رسد در حال حاضر آفلاین هستید. لطفاً بعداً دوباره امتحان کنید.
+        retry: دوباره امتحان کنید
+    open_data:
+      not_available_yet: فایل‌های Open Data هنوز در دسترس نیستند، لطفاً چند دقیقه دیگر دوباره امتحان کنید.
+    own_user_groups:
+      index:
+        pending: انتظار
+        rejected: رد شد
+        verified: تایید شده است
+    pad_iframe:
+      disclaimer: محتویات این پد توسط کاربران ثبت نام شده نوشته شده و نظرات خود را بیان می کنند. %{organization} نمی تواند مسئول محتویات آن باشد.
+      explanation: از این صفحه برای یادداشت برداری مشترک در طول جلسه استفاده کنید تا بعد از آن راحت تر یادداشت برداری کنید.
+      pad: پد
+    pages:
+      home:
+        extended:
+          debates: مناظره ها
+          debates_explanation: بحث و گفتگو کنید، نظرات خود را به اشتراک بگذارید و موضوعات مرتبط را غنی سازی کنید.
+          how_to_participate: چگونه در یک فرآیند شرکت کنم؟
+          meetings: جلسات
+          meetings_explanation: ببینید کجا و چه زمانی می توانید در جلسات عمومی شرکت کنید.
+          more_info: اطلاعات بیشتر در مورد %{resource_name}
+          proposals: پیشنهادات
+          proposals_explanation: پیشنهادات را ارائه دهید، از موارد موجود حمایت کنید و تغییراتی را که می خواهید مشاهده کنید تبلیغ کنید.
+        footer_sub_hero:
+          footer_sub_hero_body: بیایید جامعه ای بازتر، شفاف تر و مشارکتی تر بسازیم.<br /> بپیوندید، شرکت کنید و تصمیم بگیرید.
+          footer_sub_hero_headline: به پلتفرم مشارکتی %{organization} خوش آمدید.
+          register: ثبت نام
+        hero:
+          participate: شرکت کردن
+          welcome: به %{organization} خوش آمدید!
+        metrics:
+          headline: معیارهای
+        statistics:
+          headline: وضعیت فعلی %{organization}
+        sub_hero:
+          register: ثبت نام
+      index:
+        read_more: ادامه مطلب
+        standalone_pages: صفحات
+        subheading: در صفحات راهنمای %{name} حرکت کنید
+        title: کمک
+        topics: موضوعات
+      participatory_space:
+        metrics:
+          headline: معیارهای
+          link: نمایش تمام معیارها
+      terms_and_conditions:
+        accept:
+          error: در پذیرش شرایط و ضوابط مشکلی وجود داشت.
+          success: عالی! شما شرایط و ضوابط را پذیرفته اید.
+        form:
+          agreement: من با این شرایط موافقم
+          legend: با شرایط و ضوابط استفاده موافقت کنید
+        refuse:
+          modal_body: اگر رد کنید، نمی‌توانید از این پلتفرم استفاده کنید، می‌توانید <a href="%{download_your_data_path}">داده‌های خود را بارگیری کنید</a> و/یا <a href="%{delete_path}">حساب خود را حذف کنید</a> .
+          modal_btn_continue: شرایط را بپذیرید و ادامه دهید
+          modal_btn_exit: بعدا مرورش میکنم
+          modal_button: شرایط را رد کنید
+          modal_close: بستن مودال
+          modal_title: آیا واقعاً شرایط و ضوابط به روز شده را رد می کنید؟
+        required_review:
+          alert: ما شرایط خدمات خود را به روز کرده ایم، لطفاً آنها را مرور کنید.
+          body: لطفاً چند لحظه وقت بگذارید و به‌روزرسانی‌های شرایط خدمات ما را مرور کنید. در غیر این صورت نمی توانید از پلتفرم استفاده کنید.
+          title: 'مورد نیاز: به‌روزرسانی‌های شرایط خدمات ما را مرور کنید'
+    participatory_space_private_users:
+      not_allowed: شما اجازه دیدن این محتوا را ندارید
+    passwords:
+      update:
+        error: مشکلی در به‌روزرسانی رمز عبور وجود داشت
+        success: رمز عبور با موفقیت به روز شد
+    profile:
+      deleted: شرکت کننده حذف شد
+      inaccessible_message: این نمایه به دلیل نقض شرایط و ضوابط غیر قابل دسترسی است!
+      view: چشم انداز
+    profiles:
+      default_officialization_text_for_user_groups: این گروه به طور عمومی تأیید شده است، نام آن برای مطابقت با نام واقعی آن تأیید شده است
+      default_officialization_text_for_users: این شرکت کننده به طور عمومی تأیید شده است، نام یا نقش او تأیید شده است تا با نام و نقش واقعی او مطابقت داشته باشد.
+      show:
+        activity: فعالیت
+        badges: نشان ها
+        conversations: گفتگو
+        followers: پیروان
+        following: دنبال می کند
+        groups: گروه ها
+        members: اعضا
+        officialized: شرکت کننده رسمی
+        send_private_message: ارسال پیام خصوصی
+        timeline: جدول زمانی
+        view_full_profile: مشاهده نمایه کامل
+      sidebar:
+        badges:
+          info: نشان ها با انجام فعالیت های خاص در پلت فرم به دست می آیند.
+          title: نشان ها
+      user:
+        confirmation_instructions_sent: دستورالعمل های تایید ایمیل ارسال شد
+        create_user_group: ایجاد گروه
+        edit_profile: ویرایش نمایه
+        edit_user_group: ویرایش نمایه گروه
+        fill_in_email_to_confirm_it: لطفا ایمیل گروه خود را برای تایید آن پر کنید
+        invite_user: دعوت از شرکت کننده
+        join_user_group: درخواست عضویت در گروه
+        leave_user_group: گروه را ترک کن
+        manage_user_group_admins: مدیریت ادمین ها
+        manage_user_group_users: اعضا را مدیریت کنید
+        resend_email_confirmation_instructions: دستورالعمل های تایید ایمیل را مجددا ارسال کنید
+    reported_mailer:
+      hide:
+        hello: سلام %{name}،
+        manage_moderations: تعدیل ها را مدیریت کنید
+        report_html: <p style=";text-align:right;direction:rtl"><a href="%{url}">محتوای</a> زیر به طور خودکار پنهان شده است.</p>
+        subject: یک منبع به طور خودکار پنهان شده است
+      report:
+        authors: نویسندگان
+        content: محتوای گزارش شده
+        content_original_language: زبان اصلی محتوا
+        date: گزارش شده است
+        details: جزئیات
+        hello: سلام %{name}،
+        id: شناسه
+        participatory_space: فضای مشارکتی
+        reason: دلیل
+        report_html: <p style=";text-align:right;direction:rtl"><a href="%{url}">مطالب</a> زیر گزارش شده است.</p>
+        see_report: گزارش را ببینید
+        subject: منبعی گزارش شده است
+    reports:
+      create:
+        error: هنگام ایجاد گزارش خطایی روی داد. لطفا دوباره امتحان کنید
+        success: گزارش با موفقیت ایجاد شد و توسط یک مدیر بررسی می شود.
+    resource_endorsements:
+      create:
+        error: مشکلی در حین اقدام تأیید وجود داشت.
+    scopes:
+      global: گستره جهانی
+      picker:
+        cancel: لغو کنید
+        change: محدوده انتخاب شده را تغییر دهید
+        choose: انتخاب کنید
+        currently_selected: دامنه در حال حاضر انتخاب شده است
+        title: "%{field} را انتخاب کنید"
+      prompt: یک محدوده انتخاب کنید
+      scopes: محدوده ها
+      scopes_picker_input:
+        select_scope: 'یک محدوده انتخاب کنید (در حال حاضر: %{current})'
+    search:
+      results: نتایج جستجو
+      results_found_for_term: '%{count} نتایج برای جستجو: "%{term}"'
+      term_input_placeholder: جستجو کردن
+    searches:
+      filters:
+        back: بازگشت به نتایج
+        jump_to: 'پرش به:'
+        state:
+          active: فعال
+          all: همه
+          future: آینده
+          past: گذشته
+      filters_small_view:
+        close_modal: بستن مودال
+        filter: فیلتر کنید
+        filter_by: محدود شده توسط
+        unfold: باز کردن
+      results:
+        results:
+          one: نتیجه %{count}
+          other: نتایج %{count}
+        view_all: مشاهده همه (%{count})
+    security:
+      selfxss_warning:
+        description: این ویژگی مرورگر برای توسعه دهندگان در نظر گرفته شده است و اگر از شما خواسته شد چیزی را در اینجا بچسبانید. چسباندن محتوا در این پنجره می تواند حریم خصوصی شما را به خطر بیندازد و به هکرها امکان دسترسی به حساب شما را بدهد.
+        title: متوقف کردن!
+    shared:
+      confirm_modal:
+        cancel: لغو کنید
+        close_modal: بستن مودال
+        ok: خوب
+        title: تایید
+      embed_modal:
+        close_window: پنجره بسته
+        embed: لطفا این کد را در صفحه خود قرار دهید
+        embed_link: جاسازی کنید
+      extended_navigation_bar:
+        more: بیشتر
+        unfold: باز کردن
+      filter_form_help:
+        help: در صورت تغییر شرایط جستجو، فرم زیر نتایج جستجو را به صورت پویا فیلتر می کند.
+        skip: پرش به نتایج
+      flag_modal:
+        already_reported: این محتوا قبلا گزارش شده است و توسط یک مدیر بررسی می شود.
+        close: بستن
+        description: آیا این محتوا نامناسب است؟
+        does_not_belong: حاوی فعالیت غیرقانونی، تهدید به خودکشی، اطلاعات شخصی یا چیز دیگری است که فکر می‌کنید به %{organization_name} تعلق ندارد.
+        offensive: حاوی نژادپرستی، تبعیض جنسی، توهین، حملات شخصی، تهدید به مرگ، درخواست خودکشی یا هر شکلی از سخنان نفرت انگیز است.
+        reason: دلیل
+        report: گزارش
+        spam: شامل طعمه کلیک، تبلیغات، کلاهبرداری یا ربات های اسکریپت است.
+        title: گزارش محتوای نامناسب
+      flag_user_modal:
+        already_reported: این محتوا قبلا گزارش شده است و توسط یک مدیر بررسی می شود.
+        close: بستن
+        description: چه چیزی در مورد کاربر نامناسب است؟
+        does_not_belong: حاوی فعالیت غیرقانونی، تهدید به خودکشی، اطلاعات شخصی یا چیز دیگری است که فکر می‌کنید به %{organization_name} تعلق ندارد.
+        offensive: حاوی نژادپرستی، تبعیض جنسی، توهین، حملات شخصی، تهدید به مرگ، درخواست خودکشی یا هر شکلی از سخنان نفرت انگیز است.
+        report: گزارش
+        spam: شامل طعمه کلیک، تبلیغات، کلاهبرداری یا ربات های اسکریپت است.
+        title: گزارش کاربر نامناسب
+      floating_help:
+        close: بستن راهنما
+        help: کمک
+      follow_button:
+        sign_in_before_follow: لطفاً قبل از انجام این عمل وارد سیستم شوید
+      login_modal:
+        close_modal: بستن مودال
+        please_sign_in: لطفا وارد شوید
+        sign_up: ثبت نام
+      mentions_modal:
+        remove_recipient: گیرنده %{name} را حذف کنید
+      participatory_space_filters:
+        filters:
+          areas: مناطق
+          select_an_area: یک منطقه را انتخاب کنید
+      public_participation:
+        public_participation: حضور من را به صورت عمومی نشان دهید
+      reference:
+        reference: 'مرجع: %{reference}'
+      represent_user_group:
+        represent_user_group: من نماینده یک گروه هستم
+        select_user_group: یک گروه را انتخاب کنید
+      results_per_page:
+        label: 'نتایج در هر صفحه:'
+        title: تعداد نتایج در هر صفحه را انتخاب کنید
+      share_modal:
+        close_window: پنجره بسته
+        copy_share_link: "کپی \U0001F004"
+        copy_share_link_clarification: پیوند اشتراک گذاری را در کلیپ بورد کپی کنید
+        copy_share_link_copied: کپی شده!
+        copy_share_link_message: پیوند با موفقیت در کلیپ بورد کپی شد.
+        share: اشتراک گذاری
+        share_link: لینک را به اشتراک بگذارید
+    statistics:
+      comments_count: نظرات
+      endorsements_count: تاییدیه ها
+      followers_count: پیروان
+      headline: آمار
+      no_stats: هنوز آماری وجود ندارد.
+      pages_count: صفحات
+      participants_count: شركت كنندگان
+      users_count: شركت كنندگان
+    tags:
+      filter_results_for_category: 'فیلتر کردن نتایج برای دسته: %{resource}'
+      filter_results_for_scope: 'نتایج را برای محدوده: %{resource} فیلتر کنید'
+    translation_bar:
+      help_text: "<strong>هشدار:</strong> ممکن است محتوا به صورت خودکار ترجمه شود و 100٪ دقیق نباشد."
+      show_original: نمایش متن اصلی
+      show_translated: نمایش متن ترجمه شده به صورت خودکار
+    user_activity:
+      index:
+        no_activities_warning: این شرکت کننده هنوز هیچ فعالیتی نداشته است.
+    user_contact_disabled: این شرکت کننده پیام های مستقیم را نمی پذیرد.
+    user_conversations:
+      create:
+        error: پیام ایجاد نشد. بعدا دوباره تلاش کنید
+        existing_error: پیام ایجاد نشد. مکالمه از قبل وجود دارد، لطفاً اکنون دوباره امتحان کنید.
+        success: مکالمه با موفقیت شروع شد!
+      index:
+        add_max_users: 'افزودن کاربران به مکالمه: حداکثر 9 کاربر'
+        add_users_placeholder: جستجو کردن...
+        close: بستن
+        conversations_info: مکالمات خصوصی است هیچ کس دیگری نمی تواند آنها را ببیند مکالمه را می توان با هر شرکت کننده یا گروهی که در پلتفرم ثبت شده است شروع کرد.
+        from: از جانب
+        last_message: آخرین پیام
+        modal_title: گفتگوی جدید
+        new_conversation: گفتگوی جدید
+        next: بعد
+        no_conversations_warning: هنوز هیچ مکالمه ای وجود ندارد.
+        no_results: هیچ نتیجه ای
+        participant_with_disabled_message_reception: این شرکت کننده دریافت پیام را غیرفعال کرده است
+        time_ago: "%{time} پیش"
+      new:
+        title: یک مکالمه را شروع کنید
+      reply:
+        placeholder: پاسخ خود را...
+        send: ارسال
+        title_reply: پاسخ
+      show:
+        back: نمایش همه مکالمات
+        deleted_accounts: شما نمی توانید با حساب های حذف شده مکالمه داشته باشید.
+        not_allowed: این کاربر هیچ پیام مستقیم دیگری را نمی پذیرد.
+        title: مکالمه با %{usernames}
+      update:
+        error: پیام ارسال نشد بعدا دوباره تلاش کنید
+    user_interests:
+      show:
+        my_interests: علایق من
+        no_scopes: این سازمان هنوز هیچ حوزه ای ندارد!
+        select_your_interests: موضوعات مورد علاقه خود را برای دریافت رویدادهای مرتبط با آنها در برگه جدول زمانی نمایه خود انتخاب کنید.
+        update_my_interests: علایقم را به روز کنم
+      update:
+        error: مشکلی در به‌روزرسانی علایق شما وجود داشت.
+        success: علایق شما با موفقیت به روز شد.
+    user_report_mailer:
+      notify:
+        body_1: کاربر %{user} توسط %{token} گزارش شده است
+        body_2: 'دلیل: %{reason}'
+        details: کاربر جزئیات ارائه کرد
+        greetings: با سلام،<br/>%{organization_name}<br/><a href="%{organization_url}">%{organization_url}</a>
+        hello: سلام %{admin}،
+        subject: یک کاربر جدید در %{organization_name} گزارش شده است
+    version:
+      show:
+        back_to_resource: برگرد
+        changes_at_title: تغییرات در "%{title}"
+        number_of_versions: نسخه ها
+        show_all_versions: نمایش همه نسخه ها
+        version_author: نویسنده نسخه
+        version_created_at: نسخه ایجاد شده در
+        version_number: شماره نسخه
+        version_number_out_of_total: "%{current_version} از %{total_count}"
+    version_author:
+      show:
+        deleted: شرکت کننده حذف شده
+    versions:
+      resource_version:
+        of_versions: "(از %{number})"
+        see_other_versions: نسخه های دیگر را ببینید
+        version: نسخه شماره %{number}
+    versions_list:
+      show:
+        back_to_resource: برگرد
+        changes_at_title: تغییرات در "%{title}"
+        number_of_versions: نسخه ها
+        title: نسخه ها
+    versions_list_item:
+      back: نمایش همه نسخه ها
+      show:
+        version_index: نسخه %{index}
+    welcome_notification:
+      default_body: <p>سلام {{name}}، از پیوستن به {{organization}} سپاسگزاریم و خوش آمدید!</p><ul><li>اگر می‌خواهید ایده‌ای سریع در مورد کارهایی که می‌توانید در اینجا انجام دهید به دست آورید، نگاهی به بخش <a href="{{help_url}}">راهنما</a>.</li><li>پس از خواندن آن، اولین نشان خود را دریافت خواهید کرد. در اینجا یک <a href="{{badges_url}}">فهرست از همه نشان‌ها</a> است که می‌توانید هنگام شرکت در {{سازمان}‏</li><li>آخرین اما نه کم‌اهمیت، به افراد دیگر بپیوندید ، تجربه درگیر شدن و مشارکت در {{سازمان}} را با آنها به اشتراک بگذارید. پیشنهادها، نظرات، بحث، فکر کردن در مورد چگونگی کمک به خیر عمومی، ارائه استدلال برای متقاعد کردن، گوش دادن و خواندن برای متقاعد شدن، بیان عقاید خود به صورت ملموس و مستقیم، با صبر و حوصله پاسخ دهید، از ایده های خود دفاع کنید و حفظ کنید. ذهنی باز برای همکاری و پیوستن به ایده های دیگران.</li></ul>
+      default_subject: برای پیوستن به {{سازمان}} متشکریم!
+    wizard_step_form:
+      wizard_aside:
+        back: بازگشت
+      wizard_header:
+        see_steps: مراحل را ببینید
+        step_of: مرحله %{current_step} از %{total_steps}
+  devise:
+    confirmations:
+      confirmed: آدرس ایمیل شما با موفقیت تایید شد.
+      new:
+        resend_confirmation_instructions: مجدداً دستورالعمل‌های تأیید را ارسال کنید
+      send_instructions: در عرض چند دقیقه ایمیلی حاوی دستورالعمل هایی برای تأیید آدرس ایمیل خود دریافت خواهید کرد.
+      send_paranoid_instructions: اگر آدرس ایمیل شما در پایگاه داده ما وجود داشته باشد، در عرض چند دقیقه یک ایمیل حاوی دستورالعمل هایی برای تایید آدرس ایمیل خود دریافت خواهید کرد.
+    failure:
+      already_authenticated: شما قبلاً وارد سیستم شده اید.
+      inactive: حساب کاربری شما هنوز فعال نشده است.
+      invalid: "%{authentication_keys} یا رمز عبور نامعتبر است."
+      invited: شما یک دعوت نامه در حال انتظار دارید، آن را بپذیرید تا ایجاد حساب خود را به پایان برسانید.
+      last_attempt: قبل از اینکه حسابتان قفل شود یک بار دیگر فرصت دارید.
+      locked: حساب شما قفل شده است.
+      not_found_in_database: "%{authentication_keys} یا رمز عبور نامعتبر است."
+      timeout: جلسه شما منقضی شد لطفاً برای ادامه دوباره وارد شوید.
+      unauthenticated: قبل از ادامه باید وارد شوید یا ثبت نام کنید.
+    invitations:
+      edit:
+        header: ساخت اکانت خود را تمام کنید
+        nickname_help: نام مستعار شما در %{organization}. فقط می تواند شامل حروف، اعداد، '-' و '_' باشد.
+        submit_button: صرفه جویی
+        subtitle: اگر دعوت را قبول کردید، لطفاً نام مستعار و رمز عبور خود را تعیین کنید.
+      invitation_removed: دعوت شما حذف شد
+      invitation_token_invalid: رمز دعوت ارائه شده معتبر نیست!
+      new:
+        header: ارسال دعوتنامه
+        submit_button: یک دعوت نامه بفرستید
+      no_invitations_remaining: هیچ دعوت نامه ای باقی نمانده است
+      send_instructions: یک ایمیل دعوت به %{email} ارسال شده است.
+      updated: رمز عبور شما با موفقیت تنظیم شد. شما اکنون وارد سیستم شده اید.
+      updated_not_active: رمز عبور شما با موفقیت تنظیم شد.
+    mailer:
+      confirmation_instructions:
+        action: اکانت من را تایید کنید
+        greeting: "%{recipient} خوش آمدید!"
+        instruction: 'از طریق لینک زیر می توانید حساب ایمیل خود را تایید کنید:'
+        subject: دستورالعمل های تایید
+      email_changed:
+        greeting: سلام %{recipient}!
+        message: ما در حال تماس با شما هستیم تا به شما اطلاع دهیم که ایمیل شما در حال تغییر به %{email} است.
+        subject: ایمیل تغییر کرد
+      invitation_instructions:
+        accept: قبول دعوت
+        accept_until: این دعوت در %{due_date} انجام خواهد شد.
+        decline: رد کردن دعوت
+        hello: سلام %{email}،
+        ignore: |-
+          اگر نمی‌خواهید دعوت را بپذیرید، لطفاً این ایمیل را نادیده بگیرید.<br />
+          تا زمانی که به پیوند بالا دسترسی نداشته باشید و نام مستعار و رمز عبور خود را تنظیم نکنید، حساب شما ایجاد نخواهد شد.
+        invited_you_as_admin: "%{invited_by} شما را به عنوان ادمین %{application} دعوت کرده است. از طریق لینک زیر می توانید آن را بپذیرید."
+        invited_you_as_private_user: "%{invited_by} شما را به عنوان یک شرکت کننده خصوصی %{application} دعوت کرده است. از طریق لینک زیر می توانید آن را بپذیرید."
+        someone_invited_you: شخصی شما را به %{application} دعوت کرده است. از طریق لینک زیر می توانید آن را بپذیرید.
+        someone_invited_you_as_admin: شخصی شما را به عنوان ادمین %{application} دعوت کرده است، می توانید از طریق لینک زیر آن را بپذیرید.
+        someone_invited_you_as_private_user: شخصی شما را به عنوان شرکت کننده خصوصی %{application} دعوت کرده است، می توانید از طریق لینک زیر آن را بپذیرید.
+        subject: دستورالعمل دعوت
+      invite_admin:
+        subject: شما برای مدیریت %{organization} دعوت شده اید
+      invite_collaborator:
+        subject: شما برای همکاری در %{organization} دعوت شده اید
+      invite_private_user:
+        subject: شما به یک فرآیند مشارکتی خصوصی در %{organization} دعوت شده‌اید
+      organization_admin_invitation_instructions:
+        subject: شما برای مدیریت %{organization} دعوت شده اید
+      password_change:
+        greeting: سلام %{recipient}!
+        message: ما در حال تماس با شما هستیم تا به شما اطلاع دهیم که رمز عبور شما تغییر کرده است.
+        subject: رمز عبور تغییر کرد
+      reset_password_instructions:
+        action: رمز عبورم را عوض کن
+        greeting: سلام %{recipient}!
+        instruction: شخصی برای تغییر رمز عبور شما درخواست لینک داده است و شما می توانید از طریق لینک زیر این کار را انجام دهید.
+        instruction_2: اگر این را درخواست نکردید، لطفاً این ایمیل را نادیده بگیرید.
+        instruction_3: گذرواژه شما تا زمانی که به پیوند بالا دسترسی نداشته باشید و پیوند جدیدی ایجاد کنید تغییر نخواهد کرد.
+        subject: دستورالعمل های رمز عبور را بازنشانی کنید
+      unlock_instructions:
+        action: باز کردن قفل حساب من
+        greeting: سلام %{recipient}!
+        instruction: 'برای باز کردن قفل حساب خود روی لینک زیر کلیک کنید:'
+        message: حساب شما به دلیل تلاش های بیش از حد ناموفق برای ورود به سیستم قفل شده است.
+        subject: دستورالعمل ها را باز کنید
+    omniauth_callbacks:
+      failure: نمی‌توان شما را از %{kind} احراز هویت کرد زیرا "%{reason}".
+      success: با موفقیت از حساب %{kind} احراز هویت شد.
+    passwords:
+      edit:
+        change_my_password: رمز عبورم را عوض کن
+        confirm_new_password: رمز عبور جدید را تایید کنید
+        new_password: رمز عبور جدید
+        password_help: حداقل %{minimun_characters} کاراکتر، نباید خیلی رایج باشد (مثلاً 123456) و باید با نام مستعار و ایمیل شما متفاوت باشد.
+        password_help_admin: حداقل %{minimun_characters} کاراکتر، نباید خیلی رایج باشد (مثلاً 123456)، باید با نام مستعار و ایمیل شما متفاوت باشد و باید با رمزهای عبور قدیمی شما متفاوت باشد.
+        title: تغییر رمز عبور
+      new:
+        forgot_your_password: رمز عبور خود را فراموش کرده اید؟
+        send_me_reset_password_instructions: دستورالعمل های بازنشانی رمز عبور را برای من ارسال کنید
+      no_token: بدون ارسال ایمیل بازنشانی رمز عبور، نمی‌توانید به این صفحه دسترسی پیدا کنید. اگر از یک ایمیل بازنشانی رمز عبور می‌آیید، لطفاً مطمئن شوید که از URL کامل ارائه شده استفاده کرده‌اید.
+      send_instructions: در عرض چند دقیقه یک ایمیل حاوی دستورالعمل هایی در مورد نحوه تنظیم مجدد رمز عبور دریافت خواهید کرد.
+      send_paranoid_instructions: اگر آدرس ایمیل شما در پایگاه داده ما وجود دارد، در عرض چند دقیقه یک لینک بازیابی رمز عبور را در آدرس ایمیل خود دریافت خواهید کرد.
+      updated: رمز عبور شما با موفقیت تغییر کرد. شما اکنون وارد سیستم شده اید.
+      updated_not_active: رمز عبور شما با موفقیت تغییر کرد.
+    registrations:
+      destroyed: حساب شما با موفقیت لغو شد. امیدواریم به زودی ببینیمت.
+      new:
+        sign_up: ثبت نام
+      signed_up: خوش آمدی! شما با موفقیت ثبت نام کردید.
+      signed_up_but_inactive: شما با موفقیت ثبت نام کردید. با این حال، ما نتوانستیم شما را به سیستم وارد کنیم زیرا حساب شما هنوز فعال نشده است.
+      signed_up_but_locked: شما با موفقیت ثبت نام کردید. با این حال، ما نتوانستیم شما را به سیستم وارد کنیم زیرا حساب شما قفل شده است.
+      signed_up_but_unconfirmed: پیامی با لینک تایید به آدرس ایمیل شما ارسال شده است. لطفا لینک را دنبال کنید تا حساب خود را فعال کنید.
+      update_needs_confirmation: شما حساب خود را با موفقیت به روز کردید، اما ما باید آدرس ایمیل جدید شما را تأیید کنیم. لطفاً ایمیل خود را بررسی کنید و پیوند تأیید را دنبال کنید تا آدرس ایمیل جدید خود را تأیید کنید.
+      updated: حساب شما با موفقیت به روز شد.
+    sessions:
+      already_signed_out: با موفقیت از سیستم خارج شد.
+      new:
+        sign_in: وارد شدن
+      signed_in: با موفقیت وارد سیستم شد.
+      signed_out: با موفقیت از سیستم خارج شد.
+    shared:
+      links:
+        back: بازگشت
+        didn_t_receive_confirmation_instructions: دستورالعمل های تأیید را دریافت نکردید؟
+        didn_t_receive_unlock_instructions: دستورالعمل باز کردن قفل را دریافت نکردید؟
+        forgot_your_password: رمز عبور خود را فراموش کرده اید؟
+        sign_in: وارد شدن
+        sign_in_with_provider: با %{provider} وارد شوید
+        sign_up: ثبت نام
+      minimum_password_length:
+        one: "(حداقل %{count} نویسه)"
+        other: "(حداقل %{count} کاراکتر)"
+    unlocks:
+      new:
+        resend_unlock_instructions: دستورالعمل های باز کردن قفل را دوباره ارسال کنید
+      send_instructions: در عرض چند دقیقه ایمیلی حاوی دستورالعمل باز کردن قفل حساب خود دریافت خواهید کرد.
+      send_paranoid_instructions: اگر حساب شما وجود داشته باشد، در عرض چند دقیقه یک ایمیل حاوی دستورالعمل باز کردن قفل آن دریافت خواهید کرد.
+      unlocked: حساب شما با موفقیت باز شد. لطفا برای ادامه وارد شوید.
+  doorkeeper:
+    scopes:
+      public: اطلاعات عمومی شما
+  errors:
+    messages:
+      allowed_file_content_types: 'فقط فایل هایی با پسوندهای زیر مجاز هستند: %{types}'
+      already_confirmed: قبلاً تأیید شده است، لطفاً وارد سیستم شوید
+      confirmation_period_expired: باید در %{period} تأیید شود، لطفاً یک مورد جدید درخواست کنید
+      content_type_allowlist_error: نوع فایل معتبر نیست
+      cycle_detected: والدین یک اسکوپ نمی توانند یکی از فرزندان آن باشند
+      expired: منقضی شده است، لطفا یک مورد جدید درخواست کنید
+      file_size_is_less_than_or_equal_to: اندازه فایل باید کمتر یا مساوی %{count} باشد
+      invalid_time_zone: یک منطقه زمانی معتبر نیست
+      long_words: حاوی کلماتی است که بیش از حد طولانی هستند (بیش از 35 نویسه)
+      must_start_with_caps: باید با حرف بزرگ شروع شود
+      nesting_too_deep: نمی تواند داخل یک زیر مجموعه باشد
+      not_found: پیدا نشد قبلا ثبت نام کردی؟
+      not_locked: قفل نشده بود
+      not_saved:
+        one: 'هنگام پردازش درخواست شما خطایی روی داد:'
+        other: 'هنگام پردازش درخواست شما چندین خطا وجود داشت:'
+      too_many_marks: از علائم نگارشی متوالی بیش از حد متوالی استفاده می کند (مثلاً ! و ?)
+      too_much_caps: از حروف بزرگ بیش از حد استفاده می کند (بیش از 25٪ از متن)
+      too_short: خیلی کوتاه است (زیر %{count} نویسه)
+  forms:
+    correct_errors: اشکالاتی در فرم وجود دارد، لطفاً برای ادامه آن را اصلاح کنید.
+    length_validator:
+      minimum:
+        one: حداقل %{count} کاراکتر
+        other: حداقل %{count} کاراکتر
+    required: فیلد الزامی
+    required_explanation: "* بخشهای موردنیاز با ستاره مشخص شده اند"
+  invisible_captcha:
+    sentence_for_humans: اگر انسان هستید این رشته را نادیده بگیرید
+    timestamp_error_message: ببخشید خیلی سریع بود! لطفا دوباره ارسال کنید.
+  layouts:
+    decidim:
+      data_consent:
+        details:
+          columns:
+            description: شرح
+            name: نام
+            service: سرویس
+            type: تایپ کنید
+          items:
+            _session_id:
+              description: به وب‌سایت‌ها اجازه می‌دهد تا کاربر درون یک وب‌سایت را هنگام جابجایی بین صفحات وب به خاطر بسپارند.
+              service: این وب سایت
+            decidim-consent:
+              description: اطلاعات مربوط به کوکی های مجاز توسط کاربر را در این وب سایت ذخیره می کند.
+              service: این وب سایت
+            pwaInstallPromptSeen:
+              description: در صورتی که اعلان نصب برنامه پیشرو وب (PWA) قبلاً توسط کاربر دیده شده باشد، وضعیت را ذخیره می کند.
+              service: این وب سایت
+          types:
+            cookie: کوکی
+            local_storage: ذخیره سازی محلی
+        dialog:
+          accept_all: پذیرش تمامی موارد
+          accept_only_essential: فقط ضروری را بپذیرید
+          description: ما از کوکی ها در وب سایت خود برای بهبود عملکرد و محتوای سایت استفاده می کنیم. کوکی‌ها ما را قادر می‌سازند تا تجربه کاربری و کانال‌های رسانه‌های اجتماعی فردی تری را ارائه دهیم.
+          settings: تنظیمات
+          title: اطلاعاتی در مورد کوکی های استفاده شده در وب سایت
+        modal:
+          accept_all: پذیرش تمامی موارد
+          accept_only_essential: فقط ضروری را بپذیرید
+          analytics:
+            description: این کوکی ها برای اندازه گیری و تجزیه و تحلیل مخاطبان وب سایت برای کمک به بهبود وب سایت استفاده می شوند.
+            title: تجزیه و تحلیل و آمار
+          description: ما از کوکی ها برای اطمینان از عملکردهای اساسی وب سایت و افزایش تجربه آنلاین شما استفاده می کنیم. می‌توانید در هر زمانی استفاده از کوکی‌ها را پیکربندی کرده و بپذیرید، و گزینه‌های رضایت خود را تغییر دهید.
+          essential:
+            description: این کوکی ها عملکرد کلیدی وب سایت را فعال می کنند و به حفظ امنیت کاربران آن کمک می کنند. آنها به طور خودکار در مرورگر ذخیره می شوند و نمی توان آنها را غیرفعال کرد.
+            title: ضروری است
+          marketing:
+            description: این کوکی‌ها اطلاعاتی را درباره نحوه استفاده شما از وب‌سایت جمع‌آوری می‌کنند و می‌توان از آنها برای ارائه بازاریابی شخصی‌تر در وب‌سایت‌های مختلفی که استفاده می‌کنید، استفاده کرد.
+            title: بازار یابی
+          preferences:
+            description: این کوکی‌ها به وب‌سایت اجازه می‌دهند تا انتخاب‌هایی را که در گذشته در این وب‌سایت انجام داده‌اید به خاطر بسپارد تا تجربه شخصی‌تر را برای کاربران وب‌سایت فراهم کند.
+            title: اولویت ها
+          save_settings: تنظیمات را ذخیره کن
+          title: تنظیمات کوکی
+          toggle: "%{consent_category} را تغییر دهید"
+        warning:
+          all_categories: همه کوکی ها
+          change_settings: تنظیمات کوکی را تغییر دهید
+          consent_required: برای دیدن این محتوا باید %{categories} را فعال کنید.
+      edit_link:
+        edit: ویرایش کنید
+      footer:
+        cc_by_license: مجوز Creative Commons
+        data_consent_settings: تنظیمات کوکی
+        decidim_logo: لوگوی Decidim
+        download_open_data: فایل های Open Data را دانلود کنید
+        made_with_open_source: وب سایت ساخته شده با <a target="_blank" href="https://github.com/decidim/decidim"> نرم افزار رایگان</a> توسط <a target="_blank" href="https://partizipationsbuero.at "> mitgestalten Partizipationsbüro</a>
+      header:
+        close_menu: بستن منو
+        main_menu: منوی اصلی
+        navigation: جهت یابی
+        sign_in: ورود
+        sign_up: ثبت نام
+        user_menu: منو کاربر
+      impersonation_warning:
+        close_session: بسته شدن جلسه
+        description_html: شما در حال مدیریت شرکت کننده <b>%{user_name}</b> هستید.
+        expire_time_html: جلسه شما <b><span class="minutes">%{minutes}</span> دقیقه</b> دیگر منقضی می شود.
+      language_chooser:
+        choose_language: زبان را انتخاب کنید
+      notifications_dashboard:
+        mark_all_as_read: همه را به عنوان خوانده شده علامت بزن
+        mark_as_read: به عنوان خوانده شده علامت بزن
+      offline_banner:
+        cache_version_page: اوووف شبکه شما آفلاین است. این یک نسخه ذخیره شده قبلی از صفحه ای است که از آن بازدید می کنید، شاید محتوا به روز نباشد.
+      social_media_links:
+        facebook: "%{organization} در فیس بوک"
+        github: "%{organization} در GitHub"
+        instagram: "%{organization} در اینستاگرام"
+        twitter: "%{organization} در توییتر"
+        youtube: "%{organization} در YouTube"
+      timeout_modal:
+        body: شما برای %{minutes} دقیقه غیر فعال بوده اید. اگر به غیرفعال بودن ادامه دهید، برای امنیت خود به طور خودکار از سیستم خارج خواهید شد.
+        continue_session: ادامه جلسه
+        sign_out: خروج از سیستم
+        title: آیا می خواهید جلسه خود را ادامه دهید؟
+      upload_modal:
+        close_modal: بستن مودال
+      user_menu:
+        account: 'حساب کاربری: %{name}'
+        admin_dashboard: داشبورد مدیریت
+        conversations: گفتگو
+        notifications: اطلاعیه
+        profile: حساب من
+        public_profile: نمایه عمومی من
+        sign_out: خروج از سیستم
+        title: لینک های پروفایل
+      user_profile:
+        account: حساب
+        authorizations: مجوزها
+        delete_my_account: اکانت من رو پاک کن
+        my_data: اطلاعات من
+        my_interests: علایق من
+        notifications_settings: تنظیمات اعلان ها
+        title: تنظیمات شرکت کننده
+        user_groups: گروه ها
+      widget:
+        see_more: بیشتر ببین
+  locale:
+    name: انگلیسی
+    name_with_error: انگلیسی (خطا!)
+  password_validator:
+    blacklisted: در لیست سیاه قرار گرفته است
+    domain_included_in_password: بسیار شبیه به این نام دامنه است
+    email_included_in_password: خیلی شبیه ایمیل شماست
+    fallback: معتبر نیست
+    name_included_in_password: خیلی شبیه اسم شماست
+    nickname_included_in_password: خیلی شبیه اسم مستعار شماست
+    not_enough_unique_characters: شخصیت های منحصر به فرد کافی ندارد
+    password_not_allowed: مجاز نیست
+    password_repeated: نمی توان از رمز عبور قدیمی استفاده مجدد کرد
+    password_too_common: بسیار رایج است
+    password_too_long: خیلی طولانی است
+    password_too_short: خیلی کوتاه است
+  social_share_button:
+    delicious: خوشمزه - لذیذ
+    douban: دوبان
+    email: پست الکترونیک
+    facebook: فیس بوک
+    google_bookmark: نشانک گوگل
+    google_plus: "+Google"
+    hacker_news: اخبار هکرها
+    linkedin: لینکدین
+    pinterest: پینترست
+    qq: Qzone
+    reddit: Reddit
+    share_to: به اشتراک گذاری در %{name}
+    telegram: تلگرام
+    tumblr: وبلاگ Tumblr
+    twitter: توییتر
+    vkontakte: Vkontakte
+    wechat: وی چت
+    wechat_footer: WeChat خود را باز کنید، روی دکمه «Discover» کلیک کنید و سپس روی منوی «Scan QR Code» کلیک کنید.
+    weibo: سینا ویبو
+    whatsapp_app: واتس اپ
+    whatsapp_web: واتس اپ
+    xing: زینگ
+  time:
+    formats:
+      day_of_month: "%b %d"
+      day_of_week: "٪آ"
+      day_of_week_long: "%a %e"
+      day_of_year: "%d.%m.%y"
+      ddmm: "%d.%m"
+      ddmmyyyy: "%d.%m.%Y"
+      decidim_day_of_year: "%d %B %Y"
+      decidim_short: "%d/%m/%Y %H:%M"
+      default: "%a، %d %b %Y %H:%M:%S %z"
+      devise:
+        mailer:
+          invitation_instructions:
+            accept_until_format: "%B %d، %Y %I:%M %p"
+      long: "%B %d، %Y %H:%M"
+      long_dashed: "%Y-%m-%d %H:%M:%S"
+      short: "%d/%m/%Y %H:%M"
+      time_of_day: "%H:%M"
+  versions:
+    directions:
+      left: حذف ها
+      right: اضافات
+    dropdown:
+      choose_diff_view_html: 'حالت مشاهده HTML:'
+      choose_diff_view_mode: 'مقایسه حالت مشاهده:'
+      choose_diff_view_mode_menu: حالت مقایسه را انتخاب کنید
+      option_escaped: فرار کرد
+      option_split: کنار هم
+      option_unescaped: فرار نکرده
+      option_unified: متحد
+  views:
+    pagination:
+      first: "&laquo; اولین"
+      first_title: لینک صفحه اول
+      last: آخرین &raquo;
+      last_title: لینک صفحه آخر
+      next: بعدی &rsaquo;
+      next_title: لینک صفحه بعد
+      pagination: صفحه بندی
+      previous: "&lsaquo; قبلی"
+      previous_title: لینک صفحه قبل
+      title: 'شماره صفحه:'
+      truncate: "&hellip;"

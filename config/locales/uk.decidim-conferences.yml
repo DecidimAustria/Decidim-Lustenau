@@ -1,0 +1,618 @@
+---
+uk:
+  activemodel:
+    attributes:
+      conference:
+        assemblies_ids: Пов'язані збірки
+        available_slots: Доступні слоти
+        banner_image: Зображення банера
+        consultations_ids: Супутні консультації
+        copy_categories: Копіювати категорії
+        copy_components: Копіювати компоненти
+        copy_features: Функції копіювання
+        decidim_scope_id: Область застосування
+        description: опис
+        end_date: Дата закінчення
+        hashtag: Хештег
+        hero_image: Домашнє зображення
+        location: Місцезнаходження
+        main_logo: Основний логотип
+        objectives: Цілі
+        participatory_processes_ids: Відповідні процеси участі
+        promoted: Виділено
+        published_at: Опубліковано на
+        registration_terms: Умови реєстрації
+        registrations_enabled: Реєстрації включені
+        scope_id: Область застосування
+        scopes_enabled: Області ввімкнено
+        short_description: Короткий опис
+        show_statistics: Показати статистику
+        sign_date: Дата підпису
+        signature: Підпис
+        signature_name: ім'я підпису
+        slogan: Гасло
+        slug: URL-адреса
+        start_date: Дата початку
+        title: Назва
+      conference_media_link:
+        date: Дата
+        link: Посилання
+        title: Назва
+        weight: вага
+      conference_partner:
+        link: Посилання
+        logo: логотип
+        name: Ім'я
+        partner_type: Тип партнера
+        weight: вага
+      conference_registration_invite:
+        email: Електронна пошта
+        name: Ім'я
+        registration_type_id: Тип реєстрації
+        user_id: Користувач
+      conference_registration_type:
+        description: опис
+        price: Ціна
+        title: Назва
+        weight: вага
+      conference_speaker:
+        affiliation: Приналежність
+        avatar: Аватар
+        conference_meeting_ids: Відповідні зустрічі
+        full_name: Повне ім'я
+        personal_url: Особиста URL-адреса
+        position: Позиція
+        short_bio: Коротка біографія
+        twitter_handle: Ручка Twitter
+        user_id: Користувач
+      conference_user_role:
+        email: Електронна пошта
+        name: Ім'я
+        role: Роль
+    errors:
+      models:
+        conference_registration_invite:
+          attributes:
+            email:
+              already_invited: Цю електронну адресу вже запрошено
+  activerecord:
+    models:
+      decidim/conference:
+        one: Конференція
+        other: Конференції
+      decidim/conference_speaker:
+        one: Спікер конференції
+        other: Доповідачі конференції
+      decidim/conference_user_role:
+        one: Роль користувача конференції
+        other: Ролі користувачів конференції
+  decidim:
+    admin:
+      actions:
+        confirm: Підтвердити
+        new_conference: Нова конференція
+        send_diplomas: Надішліть сертифікати про відвідування
+      conference_copies:
+        new:
+          copy: Копія
+          select: Виберіть, які дані ви хочете скопіювати
+          title: Дубльована конференція
+      conference_publications:
+        create:
+          error: Під час публікації цієї конференції виникла проблема.
+          success: Конференцію успішно опубліковано.
+        destroy:
+          error: Під час скасування публікації цієї конференції виникла проблема.
+          success: Публікацію конференції скасовано.
+      conference_registration:
+        confirm:
+          error: Під час підтвердження реєстрації на цю конференцію виникла проблема.
+          success: Реєстрацію на конференцію успішно підтверджено.
+      conference_speakers:
+        create:
+          error: Виникла проблема з додаванням спікера до цієї конференції.
+          success: Доповідач конференції створено.
+        destroy:
+          success: Доповідач конференції успішно видалено.
+        edit:
+          title: Оновити спікера конференції.
+          update: оновлення
+        index:
+          conference_speakers_title: Доповідачі конференції
+        new:
+          create: Створити
+          title: Новий спікер конференції.
+        update:
+          error: Виникла проблема з оновленням цього спікера конференції.
+          success: Доповідач конференції успішно оновлено.
+      conference_user_roles:
+        create:
+          error: Під час додавання адміністратора до цієї конференції виникла проблема.
+          success: Адміністратора конференції успішно додано.
+        destroy:
+          success: Адміністратора конференції успішно видалено.
+        edit:
+          title: Оновити адміністратора конференції.
+          update: оновлення
+        index:
+          conference_admins_title: адміністратори конференції
+        new:
+          create: Створити
+          title: Новий адміністратор конференції.
+        update:
+          error: Під час оновлення цього адміністратора конференції виникла проблема.
+          success: Адміністратора конференції успішно оновлено.
+      conferences:
+        create:
+          error: Під час створення цієї конференції виникла проблема.
+          success: Конференцію успішно створено.
+        edit:
+          update: оновлення
+        exports:
+          registrations: Реєстрації
+        form:
+          title: Загальна інформація
+        index:
+          not_published: Не опубліковано
+          published: Опубліковано
+        new:
+          create: Створити
+          title: Конференція
+        update:
+          error: Під час оновлення цієї конференції виникла проблема.
+          success: Конференцію успішно оновлено.
+      conferences_copies:
+        create:
+          error: Під час дублювання цієї конференції виникла проблема.
+          success: Конференцію успішно дубльовано.
+      media_links:
+        create:
+          error: Виникла проблема зі створенням нового медіапосилання.
+          success: Media Link успішно створено.
+        destroy:
+          success: Медіа-посилання успішно видалено.
+        edit:
+          title: Оновити медіапосилання.
+          update: оновлення
+        index:
+          media_links_title: Медіа-посилання
+        new:
+          create: Створити
+          title: Медіапосилання
+        update:
+          error: Під час оновлення цього медіапосилання виникла проблема.
+          success: Media Link успішно оновлено.
+      menu:
+        conferences: Конференції
+        conferences_submenu:
+          attachment_collections: Папки
+          attachment_files: Файли
+          attachments: Додатки
+          categories: Категорії
+          components: компоненти
+          conference_admins: Адміністратори конференції
+          conference_invites: Запрошує
+          conference_speakers: Доповідачі
+          diploma: Довідка про відвідування
+          info: Інформація
+          media_links: Медіа-посилання
+          moderations: Модерації
+          partners: Партнери
+          registration_types: Типи реєстрації
+          registrations: Реєстрації
+          user_registrations: Реєстрації користувачів
+      models:
+        conference:
+          fields:
+            created_at: Створено в
+            promoted: Виділено
+            published: Опубліковано
+            title: Назва
+        conference_speaker:
+          fields:
+            affiliation: Приналежність
+            full_name: Повне ім'я
+            position: Позиція
+          name: Спікер конференції
+        conference_user_role:
+          fields:
+            email: Електронна пошта
+            name: Ім'я
+            role: Роль
+          name: Адміністратор конференції
+          roles:
+            admin: Адміністратор
+            collaborator: Співробітник
+            moderator: Модератор
+            valuator: Оцінювач
+        media_link:
+          fields:
+            date: Дата
+            link: Посилання
+            title: Назва
+          name: Медіапосилання
+        partner:
+          fields:
+            link: Посилання
+            logo: логотип
+            name: Ім'я
+            partner_type: Тип
+          name: Партнер
+          types:
+            collaborator: Співробітник
+            main_promotor: Головний промоутер
+        registration_type:
+          fields:
+            conference_meetings: Засідання конференції
+            price: Ціна
+            registrations_count: Кількість реєстрацій
+            title: Назва
+            weight: Замовити позицію
+          name: Тип реєстрації
+      partners:
+        create:
+          error: Виникла проблема з додаванням партнера для цієї конференції.
+          success: Партнера конференції успішно додано.
+        destroy:
+          success: Партнера конференції успішно видалено.
+        edit:
+          title: Оновлення партнера.
+          update: оновлення
+        new:
+          create: Створити
+          title: Новий партнер
+        update:
+          error: Виникла проблема з оновленням партнера для цієї конференції.
+          success: Партнера конференції успішно оновлено.
+      registration_type_publications:
+        create:
+          error: Під час публікації цього типу реєстрації виникла проблема.
+          success: Тип реєстрації успішно опубліковано.
+        destroy:
+          error: Під час скасування публікації цього типу реєстрації виникла проблема.
+          success: Тип реєстрації успішно скасовано.
+      registration_types:
+        create:
+          error: Під час додавання типу реєстрації для цієї конференції виникла проблема.
+          success: Тип реєстрації на конференцію успішно додано.
+        destroy:
+          success: Тип реєстрації конференції видалено.
+        edit:
+          title: Оновити тип реєстрації.
+          update: оновлення
+        new:
+          create: Створити
+          title: Новий тип реєстрації
+        update:
+          error: Під час оновлення типу реєстрації для цієї конференції виникла проблема.
+          success: Тип реєстрації на конференцію успішно оновлено.
+      titles:
+        conferences: Конференції
+    admin_log:
+      conference:
+        create: "%{user_name} створив конференцію %{resource_name}"
+        publish: "%{user_name} опублікував конференцію %{resource_name}"
+        send_conference_diplomas: "%{user_name} надіслав сертифікати відвідувачів конференції %{resource_name}"
+        unpublish: "%{user_name} скасував публікацію конференції %{resource_name}"
+        update: "%{user_name} оновив конференцію %{resource_name}"
+        update_diploma: "%{user_name} оновив конфігурацію сертифікатів відвідуваності для конференції %{resource_name}"
+      conference_speaker:
+        create: "%{user_name} створив спікера %{resource_name} на конференції %{space_name}"
+        delete: "%{user_name} видалив спікера %{resource_name} з конференції %{space_name}"
+        update: "%{user_name} оновив спікера %{resource_name} на конференції %{space_name}"
+      conference_user_role:
+        create: "%{user_name} запросив %{resource_name} на конференцію %{space_name}"
+        delete: "%{user_name} видалив адміністратора %{resource_name} із конференції %{space_name}"
+        update: "%{user_name} змінив роль %{resource_name} у конференції %{space_name}"
+      conferences:
+        conference_registration:
+          confirm: "%{user_name} підтвердив реєстрацію на конференцію %{resource_name}"
+        partner:
+          create: "%{user_name} створив партнера %{resource_name} у конференції %{space_name}"
+          delete: "%{user_name} видалив партнера %{resource_name} із конференції %{space_name}"
+          update: "%{user_name} оновив партнера %{resource_name} у конференції %{space_name}"
+        registration_type:
+          create: "%{user_name} створив тип реєстрації %{resource_name} у конференції %{space_name}"
+          publish: "%{user_name} опублікував тип реєстрації %{resource_name} на конференції %{space_name}"
+          unpublish: "%{user_name} скасував публікацію типу реєстрації %{resource_name} у конференції %{space_name}"
+          update: "%{user_name} оновив тип реєстрації %{resource_name} у конференції %{space_name}"
+      media_link:
+        create: "%{user_name} створив медіа-посилання %{resource_name} у конференції %{space_name}"
+        delete: "%{user_name} видалив медіапосилання %{resource_name} із конференції %{space_name}"
+        update: "%{user_name} оновив медіа-посилання %{resource_name} у конференції %{space_name}"
+    conference_program:
+      index:
+        title: програма
+    conference_speakers:
+      index:
+        title: Доповідачі
+    conferences:
+      admin:
+        conference_copies:
+          form:
+            slug_help: 'URL-слаги використовуються для створення URL-адрес, які вказують на цю конференцію. Приймає лише літери, цифри та тире та має починатися з літери. Приклад: %{url}'
+        conference_invites:
+          create:
+            error: Під час запрошення учасника приєднатися до конференції виникла проблема.
+            success: Учасника успішно запрошено приєднатися до конференції.
+          form:
+            attendee_type: Тип учасника
+            existing_user: Існуючий учасник
+            invite_explanation: Учасник буде запрошений приєднатися до конференції, а також до організації.
+            non_user: Неіснуючий учасник
+            select_user: Виберіть учасника
+          index:
+            filter:
+              accepted: прийнято
+              all: все
+              rejected: Відхилено
+              sent: Надісланий
+            filter_by: Фільтрувати за
+            invite_attendee: Запросити учасника
+            invites: Запрошує
+            search: Пошук
+          new:
+            explanation: Учасник буде запрошений приєднатися до конференції. Якщо їхня електронна адреса не зареєстрована, їх також буде запрошено до організації.
+            invite: Запросити
+            new_invite: Запросити учасника
+        conference_registrations:
+          index:
+            registrations: Реєстрації
+        conference_speakers:
+          form:
+            existing_user: Існуючий учасник
+            non_user: Не учасник
+            select_user: Виберіть учасника
+            user_type: Тип учасника
+          index:
+            search: Пошук
+        conferences:
+          form:
+            available_slots_help: Залиште значення 0, якщо у вас є необмежена кількість слотів.
+            registrations_count:
+              one: Була 1 реєстрація.
+              other: Було %{count} реєстрацій.
+            slug_help: 'URL-слаги використовуються для створення URL-адрес, які вказують на цю конференцію. Приймає лише літери, цифри та тире та має починатися з літери. Приклад: %{url}'
+        diplomas:
+          edit:
+            save: зберегти
+            title: Довідка про відвідування
+        invite_join_conference_mailer:
+          invite:
+            decline: Відхилити запрошення "%{conference_title}"
+            invited_existing_user_to_join_a_conference: "%{invited_by} запросив вас приєднатися до конференції о %{application}. Ви можете відхилити або прийняти це за посиланнями нижче."
+            invited_user_to_join_a_conference: "%{invited_by} запросив вас приєднатися до конференції о %{application}. Ви можете прийняти його за посиланням нижче."
+            registration: Реєстрація для '%{conference_title}'
+        partners:
+          index:
+            title: Партнери
+        registration_types:
+          form:
+            select_conference_meetings: Виберіть зустрічі конференції
+          index:
+            title: Види реєстрації
+        send_conference_diploma_mailer:
+          diploma:
+            diploma_html: Сертифікат про участь у конференції <a href="%{url}">%{title}</a> ви знайдете у вкладених файлах.
+          diploma_user:
+            attendance_verified_by: Відвідування перевірено
+            certificate_of_attendance: Довідка про відвідування
+            certificate_of_attendance_description: Цим підтверджується, що <strong>%{user}</strong> відвідав і взяв участь у <strong>%{title}</strong>, який відбувся <strong>%{location}</strong> <strong>%{start} - %{end}</strong>
+        send_diploma:
+          error: Виникла проблема з надсиланням сертифікатів про участь у конференції.
+          success: Сертифікати про участь у конференції успішно надіслані
+      conference:
+        registration_confirm:
+          cancel: Скасувати
+          confirm: Підтвердити
+        show:
+          free: безкоштовно
+          going: Відвідування
+          no_slots_available: Немає доступних слотів
+          registration: Реєстрація
+      conference_program:
+        program_meeting:
+          content: Зміст
+          location: Місцезнаходження
+          speakers: Доповідачі
+          streaming: Потокове передавання
+        show:
+          day: День
+          program: програма
+      conference_registration_mailer:
+        confirmation:
+          confirmed_html: Вашу реєстрацію на конференцію <a href="%{url}">%{title}</a> підтверджено.
+          details_1: 'Ви зареєстровані на конференції з типом %{registration_type}. Його вартість становить %{price}, і ви можете відвідати такі події:'
+          details_2: Деталі конференції ви знайдете у вкладенні.
+        pending_validation:
+          confirmation_pending: Незабаром ви отримаєте підтвердження
+          details: 'Ви зареєструвалися на тип %{registration_type} із вартістю %{price} і можете відвідувати такі події:'
+          pending_html: Ваша реєстрація на конференцію <a href="%{url}">%{title}</a> очікує підтвердження.
+      conference_registrations:
+        create:
+          invalid: Виникла проблема з приєднанням до цієї конференції.
+          success: Ви успішно приєдналися до конференції.
+          unauthorized: Перед реєстрацією на конференцію необхідно авторизуватися.
+        decline_invitation:
+          invalid: Під час відхилення запрошення виникла проблема.
+          success: Ви успішно відхилили запрошення.
+          unauthorized: Перш ніж відхилити запрошення, потрібно ввійти в систему.
+        destroy:
+          invalid: Виникла проблема залишити цю конференцію.
+          success: Ви успішно залишили конференцію.
+      conference_speaker:
+        go_to_twitter: Перейдіть до Twitter
+        more_info: більше інформації
+        personal_website: Персональний сайт
+        show:
+          more_info: більше інформації
+          speaking_at: Виступаючи на
+      conference_speaker_cell:
+        personal_url:
+          personal_website: Персональний сайт
+        twitter_handle:
+          go_to_twitter: Перейдіть до Twitter
+      conference_speakers:
+        index:
+          speakers: Доповідачі
+      conferences:
+        partners:
+          collaborators: Партнери
+          main_promotors: Організатори
+        show:
+          login_as: Ви ввійшли як %{name} <%{email}>
+          make_conference_registration: 'Реєструйтеся на конференцію:'
+          register: зареєструватися
+      content_blocks:
+        highlighted_conferences:
+          name: Виділені конференції
+      index:
+        title: Конференції
+      mailer:
+        conference_registration_mailer:
+          confirmation:
+            subject: Вашу реєстрацію на конференцію підтверджено
+          pending_validation:
+            subject: Ваша реєстрація на конференцію очікує підтвердження
+        invite_join_conference_mailer:
+          invite:
+            subject: Запрошення взяти участь у конференції
+        send_conference_diploma_mailer:
+          diploma:
+            subject: Ваш сертифікат про участь у конференції надіслано
+      models:
+        conference_invite:
+          fields:
+            email: Електронна пошта
+            name: Ім'я
+            registration_type: Тип реєстрації
+            sent_at: Надіслано о
+            status: Статус
+          status:
+            accepted: Прийнято (%{at})
+            rejected: Відхилено (%{at})
+            sent: Надісланий
+        conference_registration:
+          fields:
+            email: Електронна пошта
+            name: Ім'я
+            registration_type: Тип реєстрації
+            state: Статус
+            states:
+              confirmed: Підтверджено
+              pending: В очікуванні
+      pages:
+        home:
+          highlighted_conferences:
+            active_conferences: Активні конференції
+            conferences_button_title: Посилання на сторінку конференцій, на якій відображаються всі конференції
+            see_all_conferences: Переглянути всі конференції
+      photo:
+        image:
+          attributes:
+            alt: Медіакартина
+        show:
+          close_modal: Закрити модальний
+          photo: Зображення
+      photos_list:
+        show:
+          related_photos: Зображення
+      registration_types:
+        index:
+          choose_an_option: 'Виберіть варіант реєстрації:'
+          login_as: Ви ввійшли як %{name} <%{email}>
+          no_registrations: Без реєстрацій
+          register: зареєструватися
+          title: Види реєстрації
+      shared:
+        conference_user_login:
+          already_account: У вас вже є акаунт в decidim?
+          new_user: Новий користувач?
+          sign_in: Увійдіть, щоб зареєструватися на конференцію
+          sign_up: Створіть обліковий запис у decidim для реєстрації на конференцію
+      show:
+        details: Подробиці
+        introduction: вступ
+        objectives: Цілі
+        related_assemblies: Пов'язані збірки
+        related_consultations: Супутні консультації
+        related_participatory_processes: Відповідні процеси участі
+    events:
+      conferences:
+        conference_registration_confirmed:
+          notification_title: Вашу реєстрацію на конференцію <a href="%{resource_url}">%{resource_title}</a> підтверджено.
+        conference_registration_validation_pending:
+          notification_title: Ваша реєстрація на конференцію <a href="%{resource_url}">%{resource_title}</a> очікує на підтвердження.
+        conference_registrations_over_percentage:
+          email_intro: Зайняті слоти конференції "%{resource_title}" перевищують %{percentage}%.
+          email_outro: Ви отримали це сповіщення, оскільки ви є адміністратором простору для участі в конференції.
+          email_subject: Зайняті слоти конференції "%{resource_title}" перевищують %{percentage}%
+          notification_title: <a href="%{resource_path}">%{resource_title}</a> слоти конференції зайняті понад %{percentage}%.
+        conference_updated:
+          email_intro: 'Оновлено конференцію "%{resource_title}". Ви можете прочитати нову версію на її сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за конференцією "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
+          email_subject: Оновлено конференцію "%{resource_title}".
+          notification_title: Конференцію <a href="%{resource_path}">%{resource_title}</a> оновлено.
+        registrations_enabled:
+          email_intro: 'Конференція "%{resource_title}" дозволила реєстрацію. Ви можете зареєструватися на його сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за конференцією "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
+          email_subject: Конференція "%{resource_title}" дозволила реєстрацію.
+          notification_title: Конференція <a href="%{resource_path}">%{resource_title}</a> дозволила реєстрацію.
+        role_assigned:
+          email_intro: Вам призначено %{role} для конференції "%{resource_title}".
+          email_outro: Ви отримали це сповіщення, оскільки ви %{role} конференції "%{resource_title}".
+          email_subject: Вас призначили %{role} для "%{resource_title}".
+          notification_title: Вам призначено %{role} для конференції <a href="%{resource_url}">%{resource_title}</a>.
+        upcoming_conference:
+          email_intro: 'Через 2 дні відбудеться конференція "%{resource_title}". Ви можете прочитати опис на його сторінці:'
+          email_outro: Ви отримали це сповіщення, оскільки стежите за конференцією "%{resource_title}". Ви можете скасувати підписку за попереднім посиланням.
+          email_subject: Конференція "%{resource_title}" наближається!
+          notification_title: Конференція <a href="%{resource_path}">%{resource_title}</a> відбудеться за 2 дні.
+    help:
+      participatory_spaces:
+        conferences:
+          contextual: "<p><strong>Конференція</strong> – це сукупність зустрічей, організованих за програмою, із запрошенням кількох людей як доповідачів та іншими інформаційними полями, типовими для великих конгресів або соціальних заходів (реєстрація, список організацій, які підтримують або виступити спонсором події тощо).</p> <p>Приклади: конференція може бути важливою подією для організації та її членів або відбуватися як частина процесу участі чи після консультації.</p>\n"
+          page: "<p><strong>Конференція</strong> – це сукупність зустрічей, організованих за програмою, із запрошенням кількох людей як доповідачів та іншими інформаційними полями, типовими для великих конгресів або соціальних заходів (реєстрація, список організацій, які підтримують або виступити спонсором події тощо).</p> <p>Приклади: конференція може бути важливою подією для організації та її членів або відбуватися як частина процесу участі чи після консультації.</p>\n"
+          title: Що таке конференції?
+    log:
+      value_types:
+        conference_presenter:
+          not_found: 'Конференція не знайдена в базі (ID: %{id})'
+    media:
+      index:
+        description: Посилання про цю конференцію
+        title: Медіа та посилання
+    menu:
+      conferences: Конференції
+    statistics:
+      conferences_count: Конференції
+  devise:
+    mailer:
+      join_conference:
+        subject: Запрошення взяти участь у конференції
+  layouts:
+    decidim:
+      conference_hero:
+        register: зареєструватися
+      conference_widgets:
+        show:
+          take_part: Брати участь
+      conferences:
+        conference:
+          more_info: Більше інформації
+          take_part: Брати участь
+        index:
+          promoted_conferences: Виділені конференції
+        order_by_conferences:
+          conferences:
+            one: Х__0 конференція
+            other: Х__0 конференцій
+        promoted_conference:
+          more_info: Більше інформації
+          take_part: Брати участь
+      conferences_nav:
+        conference_menu_item: Інформація
+        conference_partners_menu_item: Партнери
+        conference_speaker_menu_item: Доповідачі
+        media: ЗМІ
+        venues: Місця проведення

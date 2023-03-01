@@ -1,0 +1,92 @@
+---
+uk:
+  activemodel:
+    models:
+      decidim/blogs/create_post_event: Нова публікація в блозі
+  activerecord:
+    models:
+      decidim/blogs/post:
+        one: Опублікувати
+        other: Пости
+  decidim:
+    blogs:
+      actions:
+        author_id: Створити публікацію як
+        confirm_destroy: Ви впевнені, що хочете видалити цю публікацію?
+        destroy: Видалити
+        edit: Редагувати
+        new: Новий пост
+        title: Дії
+      admin:
+        models:
+          components:
+            body: Тіло
+          post:
+            name: Опублікувати
+        posts:
+          create:
+            invalid: Виникла проблема зі створенням цієї публікації
+            success: Публікацію успішно створено
+          destroy:
+            success: Публікацію успішно видалено
+          edit:
+            save: оновлення
+            title: Редагувати пост
+          index:
+            title: Пости
+          new:
+            create: Створити
+            title: Створити пост
+          update:
+            invalid: Під час збереження публікації виникла проблема.
+            success: Публікацію успішно збережено
+      admin_log:
+        post:
+          create: "%{user_name} створив допис у блозі %{resource_name} у %{space_name}"
+          delete: "%{user_name} видалив допис у блозі %{resource_name} від %{space_name}"
+          update: "%{user_name} оновив публікацію блогу %{resource_name} у %{space_name}"
+      last_activity:
+        new_post_at_html: "<span>Нова публікація в %{link}</span>"
+      models:
+        post:
+          fields:
+            author: Автор
+            body: Тіло
+            created_at: Створено в
+            official_blog_post: Офіційний пост
+            title: назва
+      posts:
+        show:
+          back: Повернутися до списку
+          comments: Коментарі
+          view: Переглянути
+        sidebar_blog:
+          comments: коментарі
+          most_commented_posts: Найбільш коментовані пости
+      read_more: Читати далі
+    components:
+      blogs:
+        actions:
+          create: Створити
+          destroy: Видалити
+          update: оновлення
+        name: Блог
+        settings:
+          global:
+            announcement: Оголошення
+            comments_enabled: Коментарі ввімкнено
+            comments_max_length: Максимальна довжина коментарів (залиште 0 для значення за умовчанням)
+          step:
+            announcement: Оголошення
+            comments_blocked: Коментарі заблоковано
+            endorsements_blocked: Підтримки заблоковано
+            endorsements_enabled: Підтвердження ввімкнено
+    events:
+      blogs:
+        post_created:
+          email_intro: Допис "%{resource_title}" опубліковано в "%{participatory_space_title}", за яким ви стежите.
+          email_outro: Ви отримали це сповіщення, тому що стежите за "%{participatory_space_title}". Ви можете скасувати підписку за попереднім посиланням.
+          email_subject: Нова публікація опублікована в %{participatory_space_title}
+          notification_title: Повідомлення <a href="%{resource_path}">%{resource_title}</a> опубліковано в %{participatory_space_title}
+    statistics:
+      posts_count: Пости

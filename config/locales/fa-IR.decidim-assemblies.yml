@@ -1,0 +1,466 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      assemblies_setting:
+        enable_organization_chart: فعال کردن نمودار سازمانی
+      assembly:
+        area_id: حوزه
+        assembly_type: نوع مونتاژ
+        assembly_type_other: نوع مونتاژ دیگر
+        banner_image: تصویر بنر
+        closing_date: تاریخ بسته شدن
+        closing_date_reason: دلیل تاریخ بسته شدن
+        composition: ترکیب بندی
+        copy_categories: دسته ها را کپی کنید
+        copy_components: کپی اجزا
+        copy_features: ویژگی های کپی
+        created_by: خلق شده توسط
+        created_by_other: ایجاد شده توسط دیگران
+        creation_date: تاریخ ایجاد
+        decidim_area_id: حوزه
+        decidim_assemblies_type_id: نوع مونتاژ
+        decidim_scope_id: محدوده
+        description: شرح
+        developer_group: گروه مروج
+        domain: دامنه
+        duration: مدت زمان
+        facebook: فیس بوک
+        github: GitHub
+        hashtag: هشتگ
+        hero_image: تصویر خانه
+        included_at: شامل در
+        instagram: اینستاگرام
+        internal_organisation: سازمان داخلی
+        is_transparent: شفاف است
+        local_area: منطقه سازمانی
+        meta_scope: فراداده دامنه
+        parent_id: مجمع والدین
+        participatory_processes_ids: فرآیندهای مشارکتی مرتبط
+        participatory_scope: چه تصمیمی گرفته می شود
+        participatory_structure: چگونه تصمیم گیری می شود
+        private_space: فضای خصوصی
+        promoted: برجسته شده است
+        published_at: منتشر شده در
+        purpose_of_action: هدف عمل
+        scope_id: محدوده
+        scopes_enabled: دامنه ها فعال شد
+        short_description: توضیح کوتاه
+        show_statistics: نمایش آمار
+        slug: یو آر اسلاگ
+        special_features: ویژگی های خاص
+        subtitle: عنوان فرعی
+        target: چه کسی شرکت می کند
+        title: عنوان
+        twitter: توییتر
+        weight: موقعیت سفارش
+        youtube: یوتیوب
+      assembly_member:
+        birthday: روز تولد
+        birthplace: محل تولد
+        ceased_date: تاریخ متوقف شده
+        designation_date: تاریخ تعیین
+        full_name: نام و نام خانوادگی
+        gender: جنسیت
+        non_user_avatar: آواتار
+        position: موقعیت
+        user_id: کاربر یا گروه
+      assembly_user_role:
+        email: پست الکترونیک
+        name: نام
+        role: نقش
+    errors:
+      models:
+        assembly:
+          attributes:
+            document:
+              allowed_file_content_types: 'نوع سند نامعتبر است. فقط فایل هایی با پسوندهای زیر مجاز هستند: %{types}'
+  activerecord:
+    models:
+      decidim/assembly:
+        one: مونتاژ
+        other: مجامع
+      decidim/assembly_member:
+        one: عضو مجمع
+        other: اعضای مجمع
+      decidim/assembly_user_role:
+        one: نقش کاربر اسمبلی
+        other: نقش های کاربر اسمبلی
+  decidim:
+    admin:
+      actions:
+        import_assembly: وارد كردن
+        new_assembly: مونتاژ جدید
+        new_assembly_type: نوع مونتاژ جدید
+      assemblies:
+        create:
+          error: مشکلی در ایجاد یک مجموعه جدید وجود داشت.
+          success: اسمبلی با موفقیت ایجاد شد.
+        edit:
+          update: به روز رسانی
+        index:
+          not_published: منتشر نشده
+          private: خصوصی
+          public: عمومی
+          published: منتشر شده
+        new:
+          create: ايجاد كردن
+          title: مونتاژ جدید
+        update:
+          error: مشکلی در به‌روزرسانی این مجموعه وجود داشت.
+          success: اسمبلی با موفقیت به روز شد.
+      assemblies_copies:
+        create:
+          error: مشکلی در کپی کردن این مجموعه وجود داشت.
+          success: مونتاژ با موفقیت کپی شد.
+      assemblies_settings:
+        update:
+          error: مشکلی در به‌روزرسانی تنظیمات وجود داشت.
+          success: تنظیمات با موفقیت به روز شد.
+      assemblies_types:
+        create:
+          error: مشکلی در ایجاد نوع مونتاژ جدید وجود داشت.
+          success: نوع اسمبلی با موفقیت ایجاد شد.
+        destroy:
+          success: نوع اسمبلی با موفقیت حذف شد.
+        new:
+          create: ايجاد كردن
+          title: نوع مونتاژ جدید
+        update:
+          error: مشکلی در به‌روزرسانی این نوع اسمبلی وجود داشت.
+          success: نوع مونتاژ با موفقیت به روز شد.
+      assembly_copies:
+        new:
+          copy: "کپی \U0001F004"
+          select: داده هایی را که می خواهید کپی کنید انتخاب کنید
+          title: مونتاژ تکراری
+      assembly_imports:
+        create:
+          error: مشکلی در وارد کردن این مجموعه وجود داشت.
+          success: مونتاژ با موفقیت وارد شد.
+        new:
+          import: وارد كردن
+          select: داده هایی را که می خواهید وارد کنید انتخاب کنید
+          title: مونتاژ وارداتی
+      assembly_members:
+        create:
+          error: مشکلی در افزودن یک عضو برای این مجمع وجود داشت.
+          success: عضو با موفقیت برای این مجمع ایجاد شد.
+        destroy:
+          success: عضو برای این مجموعه با موفقیت حذف شد.
+        edit:
+          title: عضو مجمع را به روز کنید.
+          update: به روز رسانی
+        index:
+          assembly_members_title: اعضای مجمع
+        new:
+          create: ايجاد كردن
+          title: عضو جدید مجمع
+        update:
+          error: مشکلی در به‌روزرسانی عضو برای این مجمع وجود داشت.
+          success: عضو با موفقیت برای این مجمع به روز شد.
+      assembly_publications:
+        create:
+          error: مشکلی در انتشار این مجمع وجود داشت.
+          success: مجمع با موفقیت منتشر شد.
+        destroy:
+          error: مشکلی در لغو انتشار این مجمع وجود داشت.
+          success: مجمع با موفقیت لغو شد.
+      assembly_user_roles:
+        create:
+          error: مشکلی در افزودن ادمین برای این مجموعه وجود داشت.
+          success: مدیر با موفقیت به این مجموعه اضافه شد.
+        destroy:
+          success: ادمین با موفقیت از این مجموعه حذف شد.
+        edit:
+          title: به روز رسانی ادمین اسمبلی
+          update: به روز رسانی
+        index:
+          assembly_admins_title: مدیران مجمع
+        new:
+          create: ايجاد كردن
+          title: ادمین اسمبلی جدید
+        update:
+          error: مشکلی در به‌روزرسانی یک سرپرست برای این مجموعه وجود داشت.
+          success: سرپرست برای این مجموعه با موفقیت به روز شد.
+      filters:
+        decidim_assemblies_type_id_eq:
+          label: نوع مونتاژ
+      menu:
+        assemblies: مجامع
+        assemblies_settings: تنظیمات
+        assemblies_submenu:
+          assembly_admins: مدیران مجمع
+          assembly_members: اعضا
+          attachment_collections: پوشه ها
+          attachment_files: فایل ها
+          attachments: پیوست ها
+          categories: دسته بندی ها
+          components: اجزاء
+          info: اطلاعات
+          moderations: اعتدال
+          private_users: کاربران خصوصی
+        assemblies_types: انواع مجموعه ها
+      models:
+        assemblies_types:
+          fields:
+            created_at: ایجاد شده در
+            title: عنوان
+        assembly:
+          fields:
+            created_at: ایجاد شده در
+            private: خصوصی
+            promoted: برجسته شده است
+            published: منتشر شده
+            title: عنوان
+          name: مونتاژ
+        assembly_member:
+          fields:
+            ceased_date: تاریخ متوقف شده
+            designation_date: تاریخ تعیین
+            full_name: نام
+            position: موقعیت
+          name: عضو
+          positions:
+            other: دیگر
+            president: رئيس جمهور
+            secretary: دبیر، منشی
+            vice_president: معاون رئيس جمهور
+        assembly_user_role:
+          fields:
+            email: پست الکترونیک
+            name: نام
+            role: نقش
+          name: ادمین مجمع
+          roles:
+            admin: مدیر
+            collaborator: همکار
+            moderator: مجری
+            valuator: ارزش گذار
+      titles:
+        assemblies: مجامع
+        assemblies_types: انواع مجموعه ها
+    admin_log:
+      assembly:
+        create: "%{user_name} اسمبلی %{resource_name} را ایجاد کرد"
+        duplicate: "%{user_name} اسمبلی %{resource_name} را کپی کرد"
+        export: "%{user_name} اسمبلی %{resource_name} را صادر کرد"
+        import: "%{user_name} اسمبلی %{resource_name} را وارد کرد"
+        publish: "%{user_name} مجمع %{resource_name} را منتشر کرد"
+        unpublish: "%{user_name} اسمبلی %{resource_name} را لغو کرد"
+        update: "%{user_name} اسمبلی %{resource_name} را به روز کرد"
+      assembly_member:
+        create: "%{user_name} عضو %{resource_name} را در اسمبلی %{space_name} ایجاد کرد"
+        delete: "%{user_name} عضو %{resource_name} را از اسمبلی %{space_name} حذف کرد"
+        update: "%{user_name} عضو %{resource_name} را در اسمبلی %{space_name} به روز کرد"
+      assembly_setting:
+        update: "%{user_name} تنظیمات اسمبلی ها را به روز کرد"
+      assembly_type:
+        create: "%{user_name} نوع اسمبلی %{resource_name} را ایجاد کرد"
+        delete: "%{user_name} نوع اسمبلی %{resource_name} را حذف کرد"
+        publish: "%{user_name} نوع اسمبلی %{resource_name} را منتشر کرد"
+        unpublish: "%{user_name} نوع اسمبلی %{resource_name} را لغو کرد"
+        update: "%{user_name} نوع اسمبلی %{resource_name} را به روز کرد"
+      assembly_user_role:
+        create: "%{user_name} %{resource_name} را به مجمع %{space_name} دعوت کرد"
+        delete: "%{user_name} شرکت کننده %{resource_name} را از اسمبلی %{space_name} حذف کرد"
+        update: "%{user_name} نقش %{resource_name} را در اسمبلی %{space_name} تغییر داد"
+    assemblies:
+      admin:
+        assemblies:
+          form:
+            announcement_help: متنی که در اینجا وارد می‌کنید درست زیر اطلاعات اسمبلی به کاربر نشان داده می‌شود.
+            duration: مدت زمان
+            duration_help: اگر مدت زمان این مونتاژ محدود است، تاریخ پایان را انتخاب کنید. در غیر این صورت به صورت نامعین ظاهر می شود.
+            filters: فیلترها
+            images: تصاویر
+            included_at_help: تاریخ اضافه شدن این مجموعه به پلتفرم را انتخاب کنید. لزوماً نباید با تاریخ ایجاد یکسان باشد.
+            metadata: فراداده
+            other: دیگر
+            select_a_created_by: ایجاد شده توسط را انتخاب کنید
+            select_an_area: یک منطقه را انتخاب کنید
+            select_an_assembly_type: یک نوع مونتاژ را انتخاب کنید
+            select_parent_assembly: مجموعه والد را انتخاب کنید
+            slug_help: 'Slugs URL برای تولید URL هایی که به این مجموعه اشاره می کنند استفاده می شود. فقط حروف، اعداد و خط تیره را می پذیرد و باید با یک حرف شروع شود. مثال: %{url}'
+            social_handlers: اجتماعی
+            title: اطلاعات کلی
+            visbility: دید
+        assemblies_settings:
+          edit:
+            update: به روز رسانی
+          form:
+            title: تنظیمات مجموعه ها
+        assemblies_types:
+          form:
+            title: عنوان
+        assembly_copies:
+          form:
+            slug_help: 'Slugs URL برای تولید URL هایی که به این مجموعه اشاره می کنند استفاده می شود. فقط حروف، اعداد و خط تیره را می پذیرد و باید با یک حرف شروع شود. مثال: %{url}'
+        assembly_imports:
+          form:
+            document_legend: یک سند اضافه کنید
+            slug_help: 'Slugs URL برای تولید URL هایی که به این مجموعه اشاره می کنند استفاده می شود. فقط حروف، اعداد و خط تیره را می پذیرد و باید با یک حرف شروع شود. مثال: %{url}'
+        assembly_members:
+          form:
+            existing_user: شرکت کننده موجود
+            explanation: 'راهنمای تصویر:'
+            image_guide: ترجیحاً یک تصویر پرتره که هیچ متنی نداشته باشد.
+            non_user: غیر شرکت کننده
+            non_user_avatar_help: شما باید رضایت افراد را قبل از انتشار آنها به عنوان عضو دریافت کنید.
+            select_a_position: یک موقعیت را انتخاب کنید
+            select_user: یک شرکت کننده را انتخاب کنید
+            user_type: نوع شرکت کننده
+          index:
+            filter:
+              all: همه
+              ceased: متوقف شد
+              not_ceased: متوقف نشده است
+            filter_by: محدود شده توسط
+            search: جستجو کردن
+        content_blocks:
+          highlighted_assemblies:
+            max_results: حداکثر مقدار عناصر برای نمایش
+        new_import:
+          accepted_types:
+            json: JSON
+      assemblies:
+        show:
+          title: در مورد این مجلس
+      assembly_members:
+        index:
+          members: اعضا
+      assembly_types:
+        commission: کمیسیون
+        consultative_advisory: مشورتی/مشاوره
+        executive: اجرایی
+        government: دولت
+        others: دیگران
+        participatory: مشارکتی
+        working_group: گروه کاری
+      content_blocks:
+        highlighted_assemblies:
+          name: مجامع برجسته
+      created_by:
+        city_council: شورای شهر
+        others: دیگران
+        public: عمومی
+      filter:
+        all: همه انواع
+        commission: کمیسیون
+        consultative_advisory: مشورتی/مشاوره
+        executive: اجرایی
+        government: دولت
+        help: 'نمایش:'
+        others: دیگران
+        participatory: مشارکتی
+        working_group: گروه کاری
+      index:
+        title: مجامع
+      last_activity:
+        new_assembly: مونتاژ جدید
+      pages:
+        home:
+          highlighted_assemblies:
+            active_assemblies: مجموعه های فعال
+            assemblies_button_title: پیوند به صفحه Assemblies که همه مجموعه ها را نشان می دهد
+            see_all_assemblies: همه مجالس را ببینید
+        user_profile:
+          member_of:
+            member_of: عضو
+      show:
+        area: حوزه
+        assembly_type: نوع مونتاژ
+        children: مجامع
+        closing_date: تاریخ بسته شدن
+        composition: ترکیب بندی
+        created_by: خلق شده توسط
+        creation_date: تاریخ ایجاد
+        developer_group: گروه مروج
+        duration: مدت زمان
+        included_at: شامل در
+        indefinite_duration: نامعین
+        internal_organisation: سازمان داخلی
+        is_transparent:
+          'false': مات
+          'true': شفاف
+        local_area: منطقه سازمانی
+        participatory_scope: چه تصمیمی گرفته می شود
+        participatory_structure: چگونه تصمیم گیری می شود
+        private_space: این یک مجلس خصوصی است
+        purpose_of_action: هدف عمل
+        read_less: کمتر بخوان
+        read_more: ادامه مطلب
+        related_participatory_processes: فرآیندهای مشارکتی مرتبط
+        scope: محدوده
+        social_networks: شبکه های اجتماعی
+        social_networks_title: بازدید از مونتاژ در
+        target: چه کسی شرکت می کند
+    assembly_members:
+      assembly_member:
+        designated_on: تعیین شده در
+      index:
+        title: اعضا
+    events:
+      assemblies:
+        create_assembly_member:
+          email_intro: یک سرپرست مجمع <a href="%{resource_url}">%{resource_name}</a> شما را به عنوان یکی از اعضای آن اضافه کرده است.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا به یک مجمع دعوت شده اید. برای مشارکت، <a href="%{resource_url}">صفحه اسمبلی</a> را بررسی کنید!
+          email_subject: شما برای عضویت در مجمع %{resource_name} دعوت شده اید!
+          notification_title: شما به عنوان عضو مجمع <a href="%{resource_path}">%{resource_name}</a> ثبت نام کرده اید. برای مشارکت، <a href="%{resource_path}">صفحه اسمبلی</a> را بررسی کنید!
+      assembly:
+        role_assigned:
+          email_intro: شما به عنوان %{role} برای اسمبلی "%{resource_title}" اختصاص یافته اید.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا شما %{role} از مجموعه "%{resource_title}" هستید.
+          email_subject: شما به عنوان %{role} برای "%{resource_title}" اختصاص یافته اید.
+          notification_title: شما به عنوان %{role} برای مونتاژ <a href="%{resource_url}">%{resource_title}</a> اختصاص داده شده‌اید.
+    help:
+      participatory_spaces:
+        assemblies:
+          contextual: "<p><strong>مجمع</strong> گروهی از اعضای یک سازمان است که به‌طور دوره‌ای گرد هم می‌آیند تا درباره یک حوزه یا حوزه خاص سازمان تصمیم‌گیری کنند.</p> <p>مجمع‌ها جلساتی برگزار می‌کنند، برخی خصوصی هستند. و برخی باز هستند. در صورت باز بودن، امکان شرکت در آنها وجود دارد (مثلاً: حضور در صورت ظرفیت، اضافه کردن نکات به دستور جلسه، یا اظهار نظر در مورد پیشنهادات و تصمیمات اتخاذ شده توسط این ارگان).</p> <p>نمونه‌ها. : مجمع عمومی (که هر سال یک بار تشکیل جلسه می دهد تا خطوط اصلی فعالیت سازمان و همچنین دستگاه های اجرایی آن را با رأی تعیین کند)، شورای مشورتی برابری (که هر دو ماه یک بار برای ارائه پیشنهاداتی در مورد چگونگی بهبود روابط جنسیتی در سازمان تشکیل جلسه می دهد. ، یک کمیسیون ارزیابی (که هر ماه برای نظارت بر یک فرآیند تشکیل جلسه می دهد) یا یک نهاد تضمینی (که حوادث، سوء استفاده ها یا پیشنهادهایی را برای بهبود رویه های تصمیم گیری جمع آوری می کند) همه نمونه هایی از مجامع هستند.</p>\n"
+          page: "<p><strong>مجمع</strong> گروهی از اعضای یک سازمان است که به‌طور دوره‌ای گرد هم می‌آیند تا درباره یک حوزه یا حوزه خاص سازمان تصمیم‌گیری کنند.</p> <p>مجمع‌ها جلساتی برگزار می‌کنند، برخی خصوصی هستند. و برخی باز هستند. در صورت باز بودن، امکان شرکت در آنها وجود دارد (مثلاً: حضور در صورت ظرفیت، اضافه کردن نکات به دستور جلسه، یا اظهار نظر در مورد پیشنهادات و تصمیمات اتخاذ شده توسط این ارگان).</p> <p>نمونه‌ها. : مجمع عمومی (که هر سال یک بار تشکیل جلسه می دهد تا خطوط اصلی فعالیت سازمان و همچنین دستگاه های اجرایی آن را با رأی تعیین کند)، شورای مشورتی برابری (که هر دو ماه یک بار برای ارائه پیشنهاداتی در مورد چگونگی بهبود روابط جنسیتی در سازمان تشکیل جلسه می دهد. ، یک کمیسیون ارزیابی (که هر ماه برای نظارت بر یک فرآیند تشکیل جلسه می دهد) یا یک نهاد تضمینی (که حوادث، سوء استفاده ها یا پیشنهادهایی را برای بهبود رویه های تصمیم گیری جمع آوری می کند) همه نمونه هایی از مجامع هستند.</p>\n"
+          title: مجامع چیست؟
+    log:
+      value_types:
+        assembly_presenter:
+          not_found: 'اسمبلی در پایگاه داده یافت نشد (ID: %{id})'
+        assembly_type_presenter:
+          not_found: 'نوع اسمبلی در پایگاه داده یافت نشد (ID: %{id})'
+    menu:
+      assemblies: مجامع
+    metrics:
+      assemblies:
+        description: تعداد مجموعه های ایجاد شده
+        object: مجامع
+        title: مجامع
+    participatory_processes:
+      show:
+        related_assemblies: مجامع مرتبط
+    statistics:
+      assemblies_count: مجامع
+  errors:
+    messages:
+      cannot_be_blank: نمیتواند خالی باشد
+  layouts:
+    decidim:
+      assemblies:
+        assembly:
+          more_info: اطلاعات بیشتر
+          take_part: شرکت داشتن
+        index:
+          children: 'مجامع:'
+          organizational_chart: چارت سازمانی
+          promoted_assemblies: مجامع برجسته
+          reset_chart: بازنشانی کنید
+        order_by_assemblies:
+          assemblies:
+            one: مجموعه های %{count}
+            other: مجموعه های %{count}
+        promoted_assembly:
+          more_info: اطلاعات بیشتر
+          take_part: شرکت داشتن
+      assembly_navigation:
+        assembly_member_menu_item: اعضا
+        assembly_menu_item: مجمع
+      assembly_widgets:
+        show:
+          take_part: شرکت داشتن

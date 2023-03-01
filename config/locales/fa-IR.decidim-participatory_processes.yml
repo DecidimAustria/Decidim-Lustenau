@@ -1,0 +1,531 @@
+---
+fa-IR:
+  activemodel:
+    attributes:
+      participatory_process:
+        announcement: اعلامیه
+        area_id: حوزه
+        banner_image: تصویر بنر
+        copy_categories: دسته ها را کپی کنید
+        copy_components: کپی اجزا
+        copy_steps: مراحل را کپی کنید
+        decidim_area_id: حوزه
+        description: شرح
+        developer_group: گروه مروج
+        domain: دامنه
+        end_date: تاریخ پایان
+        hashtag: هشتگ
+        hero_image: تصویر خانه
+        local_area: منطقه سازمانی
+        meta_scope: فراداده دامنه
+        participatory_process_group_id: گروه فرآیندها
+        participatory_scope: چه تصمیمی گرفته می شود
+        participatory_structure: چگونه تصمیم گیری می شود
+        promoted: ارتقاء یافت
+        published_at: منتشر شده در
+        related_process_ids: فرآیندهای مرتبط
+        scope_id: محدوده
+        scope_type_max_depth_id: عمق فیلتر اسکوپ
+        scopes_enabled: دامنه ها فعال شد
+        short_description: توضیح کوتاه
+        show_metrics: نمایش معیارها
+        show_statistics: نمایش آمار
+        slug: اسلاگ URL
+        start_date: تاریخ شروع
+        subtitle: عنوان فرعی
+        target: چه کسی شرکت می کند
+        title: عنوان
+        weight: موقعیت سفارش
+      participatory_process_group:
+        description: شرح
+        developer_group: گروه مروج
+        group_url: سایت اینترنتی
+        hashtag: هشتگ
+        hero_image: تصویر
+        local_area: منطقه سازمانی
+        meta_scope: فراداده دامنه
+        participatory_process_ids: فرآیندهای مرتبط
+        participatory_scope: چه تصمیمی گرفته می شود
+        participatory_structure: چگونه تصمیم گیری می شود
+        target: چه کسی شرکت می کند
+        title: عنوان
+      participatory_process_step:
+        cta_path: مسیر Call to Action
+        cta_text: متن فراخوان برای اقدام
+        description: شرح
+        end_date: تاریخ پایان
+        short_description: توضیح کوتاه
+        start_date: تاریخ شروع
+        title: عنوان
+      participatory_process_type:
+        title: عنوان
+      participatory_process_user_role:
+        email: پست الکترونیک
+        name: نام
+        role: نقش
+    errors:
+      models:
+        participatory_process:
+          attributes:
+            document:
+              allowed_file_content_types: 'نوع سند نامعتبر است. فقط فایل هایی با پسوندهای زیر مجاز هستند: %{types}'
+    models:
+      decidim/participatory_process_step_activated_event: فاز فعال شد
+      decidim/participatory_process_step_changed_event: فاز تغییر کرد
+  activerecord:
+    models:
+      decidim/participatory_process:
+        one: فرآیند مشارکتی
+        other: فرآیندهای مشارکتی
+      decidim/participatory_process_group:
+        one: گروه فرآیند مشارکتی
+        other: گروه های فرآیند مشارکتی
+      decidim/participatory_process_step:
+        one: فاز
+        other: فاز
+  decidim:
+    admin:
+      actions:
+        activate: فعال کنید
+        configure: پیکربندی کنید
+        confirm_destroy: تایید حذف
+        destroy: حذف
+        duplicate: تکراری
+        edit: ویرایش کنید
+        filter:
+          all_processes: نمایش تمام فرآیندها
+          process_groups: گروه های فرآیندی
+        import_process: وارد كردن
+        new_process: روند جدید
+        new_process_group: گروه فرآیند جدید
+        new_process_step: فاز جدید
+        new_process_type: نوع فرآیند جدید
+        new_process_user_role: مدیر فرآیند جدید
+        preview: پیش نمایش
+        publish: انتشار
+        resend_invitation: فرستادن مجدد دعوتنامه
+        unpublish: لغو انتشار
+      menu:
+        participatory_process_groups: گروه های فرآیندی
+        participatory_process_groups_submenu:
+          info: اطلاعات
+          landing_page: صفحه فرود
+        participatory_process_types: انواع فرآیند
+        participatory_processes: فرآیندها
+        participatory_processes_submenu:
+          attachment_collections: پوشه ها
+          attachment_files: فایل ها
+          attachments: پیوست ها
+          categories: دسته بندی ها
+          components: اجزاء
+          info: اطلاعات
+          moderations: اعتدال
+          private_users: شرکت کنندگان خصوصی
+          process_admins: مدیران فرآیند
+          steps: فاز
+      models:
+        participatory_process:
+          fields:
+            created_at: ایجاد شده در
+            private: خصوصی
+            promoted: برجسته شده است
+            published: منتشر شده
+            title: عنوان
+          name: فرآیند مشارکتی
+        participatory_process_group:
+          fields:
+            title: عنوان
+          name: گروه فرآیند
+        participatory_process_step:
+          fields:
+            end_date: تاریخ پایان
+            start_date: تاریخ شروع
+            title: عنوان
+          name: مرحله فرآیند مشارکتی
+        participatory_process_type:
+          fields:
+            created_at: ایجاد شده در
+            title: عنوان
+          name: نوع فرآیند
+        participatory_process_user_role:
+          fields:
+            email: پست الکترونیک
+            name: نام
+            role: نقش
+          name: مدیریت فرآیند مشارکتی
+          roles:
+            admin: مدیر
+            collaborator: همکار
+            moderator: مجری
+            valuator: ارزش گذار
+        user:
+          fields:
+            invitation_accepted_at: دعوت نامه پذیرفته شد
+            invitation_sent_at: دعوت نامه ارسال شد
+      participatory_process_copies:
+        new:
+          copy: "کپی \U0001F004"
+          select: داده هایی را که می خواهید کپی کنید انتخاب کنید
+          title: فرآیند مشارکتی تکراری
+      participatory_process_group_landing_page:
+        edit:
+          active_content_blocks: بلوک های محتوای فعال
+          inactive_content_blocks: بلوک های محتوای غیر فعال
+      participatory_process_group_landing_page_content_blocks:
+        edit:
+          update: به روز رسانی
+      participatory_process_groups:
+        destroy:
+          error: هنگام از بین بردن گروه فرآیند مشارکتی خطایی روی داد.
+          success: گروه فرآیند مشارکتی با موفقیت حذف شد.
+        edit:
+          title: ویرایش گروه فرآیند
+          update: به روز رسانی
+        new:
+          create: ايجاد كردن
+          title: گروه فرآیند جدید
+        update:
+          error: مشکلی در به‌روزرسانی این گروه فرآیند مشارکتی وجود داشت.
+          success: گروه فرآیند مشارکتی با موفقیت به روز شد.
+      participatory_process_imports:
+        create:
+          error: مشکلی در وارد کردن این فرآیند مشارکتی وجود داشت.
+          success: فرآیند مشارکتی با موفقیت وارد شد.
+        new:
+          import: وارد كردن
+          select: داده هایی را که می خواهید وارد کنید انتخاب کنید
+          title: فرآیند مشارکتی واردات
+      participatory_process_publications:
+        create:
+          error: مشکلی در انتشار این فرآیند مشارکتی وجود داشت.
+          success: فرآیند مشارکتی با موفقیت منتشر شد.
+        destroy:
+          error: مشکلی در لغو انتشار این فرآیند مشارکتی وجود داشت.
+          success: فرآیند مشارکتی با موفقیت لغو شد.
+      participatory_process_step_activations:
+        create:
+          error: مشکلی در فعال کردن این مرحله فرآیند مشارکتی وجود داشت.
+          success: مرحله فرآیند مشارکتی با موفقیت فعال شد.
+      participatory_process_steps:
+        create:
+          error: ایجاد یک مرحله فرآیند مشارکتی جدید مشکلی وجود داشت.
+          success: مرحله فرآیند مشارکتی با موفقیت ایجاد شد.
+        default_title: معرفی
+        destroy:
+          error:
+            active_step: نمی توان فاز فعال را حذف کرد.
+            last_step: نمی توان آخرین مرحله یک فرآیند را حذف کرد.
+          success: مرحله فرآیند مشارکتی با موفقیت حذف شد.
+        edit:
+          title: ویرایش مرحله فرآیند مشارکتی
+          update: به روز رسانی
+        index:
+          steps_title: فاز
+        new:
+          create: ايجاد كردن
+          title: مرحله جدید فرآیند مشارکتی
+        ordering:
+          error: در ترتیب مجدد این مراحل از فرآیند مشارکتی مشکلی وجود داشت.
+        update:
+          error: مشکلی در به‌روزرسانی این مرحله از فرآیند مشارکتی وجود داشت.
+          success: مرحله مشارکتی با موفقیت به روز شد.
+      participatory_process_types:
+        create:
+          error: مشکلی در ایجاد یک نوع فرآیند جدید وجود داشت.
+          success: نوع فرآیند با موفقیت ایجاد شد.
+        destroy:
+          success: نوع فرآیند با موفقیت حذف شد.
+        edit:
+          title: ویرایش نوع فرآیند
+          update: به روز رسانی
+        form:
+          title: عنوان
+        new:
+          create: ايجاد كردن
+          title: نوع فرآیند جدید
+        update:
+          error: مشکلی در به‌روزرسانی این نوع فرآیند وجود داشت.
+          success: نوع فرآیند با موفقیت به روز شد.
+      participatory_process_user_roles:
+        create:
+          error: مشکلی در افزودن یک شرکت‌کننده برای این فرآیند مشارکتی وجود داشت.
+          success: مدیر با موفقیت به این فرآیند مشارکتی اضافه شد.
+        destroy:
+          success: مدیر با موفقیت از این فرآیند مشارکتی حذف شد.
+        edit:
+          title: مدیر فرآیند مشارکتی را به روز کنید
+          update: به روز رسانی
+        index:
+          process_admins_title: مدیران فرآیند مشارکتی
+        new:
+          create: ايجاد كردن
+          title: مدیر فرآیند مشارکتی جدید
+        update:
+          error: مشکلی در به‌روزرسانی یک سرپرست برای این فرآیند مشارکتی وجود داشت.
+          success: مدیر با موفقیت برای این فرآیند مشارکتی به‌روزرسانی شد.
+      participatory_processes:
+        create:
+          error: مشکلی در ایجاد فرآیند مشارکتی جدید وجود داشت.
+          success: فرآیند مشارکتی با موفقیت ایجاد شد. اکنون مراحل آن را پیکربندی کنید.
+        edit:
+          update: به روز رسانی
+        index:
+          not_published: منتشر نشده
+          private: خصوصی
+          public: عمومی
+          published: منتشر شده
+        new:
+          create: ايجاد كردن
+          title: فرآیند مشارکتی جدید
+        update:
+          error: مشکلی در به‌روزرسانی این فرآیند مشارکتی وجود داشت.
+          success: روند مشارکتی با موفقیت به روز شد.
+      participatory_processes_copies:
+        create:
+          error: مشکلی در تکرار این فرآیند مشارکتی وجود داشت.
+          success: فرآیند مشارکتی با موفقیت تکرار شد.
+      participatory_processes_group:
+        create:
+          error: ایجاد یک گروه فرآیند مشارکتی جدید مشکلی پیش آمد.
+          success: گروه فرآیند مشارکتی با موفقیت ایجاد شد.
+      titles:
+        participatory_process_groups: گروه های فرآیند مشارکتی
+        participatory_process_types: انواع فرآیند مشارکتی
+        participatory_processes: فرآیندهای مشارکتی
+      users:
+        resend_invitation:
+          error: مشکلی در ارسال مجدد دعوت وجود داشت.
+          success: دعوت با موفقیت مجدد ارسال شد.
+    admin_log:
+      participatory_process:
+        create: "%{user_name} فرآیند مشارکتی %{resource_name} را ایجاد کرد"
+        duplicate: "%{user_name} فرآیند مشارکتی %{resource_name} را تکرار کرد"
+        export: "%{user_name} فرآیند مشارکتی %{resource_name} را صادر کرد"
+        import: "%{user_name} فرآیند مشارکتی %{resource_name} را وارد کرد"
+        publish: "%{user_name} فرآیند مشارکتی %{resource_name} را منتشر کرد"
+        unpublish: "%{user_name} فرآیند مشارکتی %{resource_name} را لغو انتشار کرد"
+        update: "%{user_name} فرآیند مشارکتی %{resource_name} را به روز کرد"
+      participatory_process_group:
+        create: "%{user_name} گروه فرآیند مشارکتی %{resource_name} را ایجاد کرد"
+        update: "%{user_name} گروه فرآیند مشارکتی %{resource_name} را به روز کرد"
+      participatory_process_step:
+        activate: "%{user_name} فاز %{resource_name} را در فرآیند مشارکتی %{space_name} فعال کرد"
+        create: "%{user_name} فاز %{resource_name} را در فرآیند مشارکتی %{space_name} ایجاد کرد"
+        delete: "%{user_name} مرحله %{resource_name} را در فرآیند مشارکتی %{space_name} حذف کرد"
+        update: "%{user_name} مرحله %{resource_name} را در فرآیند مشارکتی %{space_name} به روز کرد"
+      participatory_process_type:
+        create: "%{user_name} نوع فرآیند مشارکتی %{resource_name} را ایجاد کرد"
+        delete: "%{user_name} نوع فرآیند مشارکتی %{resource_name} را حذف کرد"
+        update: "%{user_name} نوع فرآیند مشارکتی %{resource_name} را به روز کرد"
+      participatory_process_user_role:
+        create: "%{user_name} شرکت کننده %{resource_name} را به فرآیند مشارکتی %{space_name} دعوت کرد"
+        delete: "%{user_name} شرکت کننده %{resource_name} را از فرآیند مشارکتی %{space_name} حذف کرد"
+        update: "%{user_name} نقش شرکت کننده %{resource_name} را در فرآیند مشارکتی %{space_name} تغییر داد"
+    events:
+      participatory_process:
+        role_assigned:
+          email_intro: شما به عنوان %{role} برای فرآیند مشارکتی "%{resource_title}" منصوب شده اید.
+          email_outro: شما این اعلان را دریافت کرده اید زیرا شما %{role} از فرآیند مشارکتی "%{resource_title}" هستید.
+          email_subject: شما به عنوان %{role} برای "%{resource_title}" اختصاص یافته اید.
+          notification_title: شما به عنوان %{role} برای فرآیند مشارکتی <a href="%{resource_url}">%{resource_title}</a> اختصاص یافته‌اید.
+        step_activated:
+          email_intro: 'فاز %{resource_title} اکنون برای %{participatory_space_title} فعال است. می توانید آن را از این صفحه ببینید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: به روز رسانی به %{participatory_space_title}
+          notification_title: فاز %{resource_title} اکنون برای <a href="%{resource_path}">%{participatory_space_title}</a> فعال است
+        step_changed:
+          email_intro: 'تاریخ های مرحله %{resource_title} در %{participatory_space_title} به روز شده است. می توانید آن را از این صفحه ببینید:'
+          email_outro: شما این اعلان را دریافت کرده اید زیرا %{participatory_space_title} را دنبال می کنید. می توانید از طریق پیوند قبلی دریافت اعلان ها را متوقف کنید.
+          email_subject: به روز رسانی به %{participatory_space_title}
+          notification_title: تاریخ‌های مرحله <a href="%{resource_path}">%{resource_title}</a> در <a href="%{participatory_space_url}">%{participatory_space_title}</a> به‌روزرسانی شده است.
+    help:
+      participatory_spaces:
+        participatory_processes:
+          contextual: "<p>یک <strong>فرایند مشارکتی</strong> دنباله‌ای از فعالیت‌های مشارکتی است (مثلاً ابتدا پر کردن نظرسنجی، سپس ارائه پیشنهادات، بحث در مورد آنها در جلسات حضوری یا مجازی، و در نهایت اولویت‌بندی آنها) با هدف از تعریف و تصمیم گیری در مورد یک موضوع خاص.</p> <p>نمونه هایی از فرآیندهای مشارکتی عبارتند از: فرآیند انتخاب اعضای کمیته (که در آن ابتدا نامزدها ارائه می شوند، سپس بحث و گفتگو می شود و در نهایت نامزدی انتخاب می شود)، بودجه های مشارکتی. (جایی که پیشنهادها ارائه می شود، ارزش اقتصادی و با پول موجود به رأی گذاشته می شود)، فرآیند برنامه ریزی استراتژیک، تهیه پیش نویس مشترک یک مقررات یا هنجار، طراحی یک فضای شهری یا تولید یک برنامه خط مشی عمومی.</p>\n"
+          page: "<p>یک <strong>فرایند مشارکتی</strong> دنباله‌ای از فعالیت‌های مشارکتی است (مثلاً ابتدا پر کردن نظرسنجی، سپس ارائه پیشنهادات، بحث در مورد آنها در جلسات حضوری یا مجازی، و در نهایت اولویت‌بندی آنها) با هدف از تعریف و تصمیم گیری در مورد یک موضوع خاص.</p> <p>نمونه هایی از فرآیندهای مشارکتی عبارتند از: فرآیند انتخاب اعضای کمیته (که در آن ابتدا نامزدها ارائه می شوند، سپس بحث و گفتگو می شود و در نهایت نامزدی انتخاب می شود)، بودجه های مشارکتی. (جایی که پیشنهادها ارائه می شود، ارزش اقتصادی و با پول موجود به رأی گذاشته می شود)، فرآیند برنامه ریزی استراتژیک، تهیه پیش نویس مشترک یک مقررات یا هنجار، طراحی یک فضای شهری یا تولید یک برنامه خط مشی عمومی.</p>\n"
+          title: فرآیند مشارکتی چیست؟
+    log:
+      value_types:
+        participatory_process_type_presenter:
+          not_found: 'نوع فرآیند در پایگاه داده یافت نشد (ID: %{id})'
+    menu:
+      processes: فرآیندها
+    metrics:
+      participatory_processes:
+        description: تعداد فرآیندهای مشارکتی در این سازمان
+        object: فرآیندهای مشارکتی
+        title: فرآیندهای مشارکتی
+    participatory_process:
+      show:
+        related_assemblies: مجامع مرتبط
+    participatory_process_groups:
+      content_blocks:
+        html_1:
+          name: اولین بلوک HTML
+        html_2:
+          name: بلوک دوم HTML
+        html_3:
+          name: بلوک HTML سوم
+        metadata:
+          developer_group: توسط
+          name: فراداده
+          participatory_scope: چه تصمیمی گرفته می شود
+          participatory_structure: چگونه تصمیم گیری می شود
+          target: چه کسی شرکت می کند
+        participatory_processes:
+          name: فرآیندهای مشارکتی
+        stats:
+          name: آمار
+        title:
+          meta_scope: محدوده
+          name: عنوان، توضیحات و هشتگ
+          participatory_processes:
+            one: 1 فرآیند
+            other: فرآیندهای %{count}
+      show:
+        title: گروه های فرآیند مشارکتی
+    participatory_process_steps:
+      index:
+        process_steps: مراحل فرآیند
+        title: مراحل فرآیند مشارکتی
+    participatory_processes:
+      admin:
+        content_blocks:
+          highlighted_processes:
+            max_results: حداکثر مقدار عناصر برای نمایش
+        new_import:
+          accepted_types:
+            json: JSON
+        participatory_process_copies:
+          form:
+            slug_help: 'Slugs URL برای تولید URL هایی که به این فرآیند اشاره می کنند استفاده می شود. فقط حروف، اعداد و خط تیره را می پذیرد و باید با یک حرف شروع شود. مثال: %{url}'
+        participatory_process_groups:
+          form:
+            metadata: فراداده
+            title: اطلاعات کلی
+            visibility: دید
+        participatory_process_imports:
+          form:
+            document_legend: یک سند اضافه کنید
+            slug_help: 'Slugs URL برای تولید URL هایی که به این فرآیند اشاره می کنند استفاده می شود. فقط حروف، اعداد و خط تیره را می پذیرد و باید با یک حرف شروع شود. مثال: %{url}'
+        participatory_process_steps:
+          form:
+            cta_path_help: 'در اینجا از مسیرهای جزئی استفاده کنید، نه از URL های کامل. حروف، اعداد، خط تیره و اسلش را می پذیرد و باید با یک حرف شروع شود. اگر تنظیم نشود، دکمه نمایش داده نمی شود. مثال: %{url}'
+            cta_text_help: اگر تنظیم نشود، دکمه نمایش داده نمی شود.
+        participatory_processes:
+          form:
+            announcement_help: متنی که در اینجا وارد می‌کنید درست زیر اطلاعات فرآیند به کاربر نشان داده می‌شود.
+            duration: مدت زمان
+            filters: فیلترها
+            images: تصاویر
+            metadata: فراداده
+            other: دیگر
+            related_processes: فرآیندهای مرتبط
+            scope_type_max_depth_help: محدود کردن عمق فیلتر محدوده؛ فیلتر از کلی به نوع محدوده انتخابی نشان داده می شود.
+            select_an_area: یک منطقه را انتخاب کنید
+            select_participatory_process_type: یک نوع فرآیند را انتخاب کنید
+            select_process_group: یک گروه فرآیندی را انتخاب کنید
+            slug_help: 'Slugs URL برای تولید URL هایی که به این فرآیند اشاره می کنند استفاده می شود. فقط حروف، اعداد و خط تیره را می پذیرد و باید با یک حرف شروع شود. مثال: %{url}'
+            title: اطلاعات کلی
+            visbility: دید
+      content_blocks:
+        highlighted_processes:
+          name: فرآیندهای برجسته
+      index:
+        title: فرآیندهای مشارکتی
+      last_activity:
+        new_participatory_process: فرآیند مشارکتی جدید
+      pages:
+        home:
+          highlighted_processes:
+            active_processes: فرآیندهای فعال
+            active_step: فاز فعال
+            more_information: اطلاعات بیشتر
+            participate: شرکت کردن
+            participate_in: در فرآیند %{resource_name} شرکت کنید
+            processes_button_title: پیوند به صفحه فرآیندها که تمام فرآیندها را نمایش می دهد
+            see_all_processes: مشاهده تمام فرآیندها
+      participatory_process_steps:
+        index:
+          back_to_process: بازگشت به صفحه فرآیند
+      participatory_processes:
+        filters:
+          all_types: همه انواع
+          counters:
+            active:
+              one: 1 فرآیند فعال
+              other: "%{count} فرآیندهای فعال"
+            all:
+              one: 1 فرآیند
+              other: فرآیندهای %{count}
+            past:
+              one: 1 فرآیند گذشته
+              other: "%{count} فرآیندهای گذشته"
+            upcoming:
+              one: 1 فرآیند آینده
+              other: "%{count} فرآیندهای آینده"
+          explanations:
+            no_active: هیچ فرآیند فعالی وجود ندارد
+            no_active_nor_upcoming: هیچ فرآیند فعال و یا آتی وجود ندارد
+            no_active_nor_upcoming_callout: هیچ فرآیند فعال یا آتی وجود ندارد. در اینجا لیستی از موارد گذشته است.
+          filter_by: نمایش دهید
+          names:
+            active: فعال
+            all: همه
+            past: گذشته
+            upcoming: آینده
+          see: دیدن
+        index:
+          loading: در حال بارگیری نتایج...
+        show:
+          title: در مورد این روند
+      show:
+        area: حوزه
+        belongs_to_group: این فرآیند متعلق به
+        dates: تاریخ
+        developer_group: گروه مروج
+        end_date: تاریخ پایان
+        local_area: منطقه سازمانی
+        participatory_scope: چه تصمیمی گرفته می شود
+        participatory_structure: چگونه تصمیم گیری می شود
+        private_space: این یک فرآیند خصوصی است
+        related_processes: فرآیندهای مرتبط
+        scope: محدوده
+        start_date: تاریخ شروع
+        target: چه کسی شرکت می کند
+        unspecified: مشخص نشده است
+    statistics:
+      processes_count: فرآیندها
+  layouts:
+    decidim:
+      participatory_process_groups:
+        participatory_process_group:
+          browse: مرور کردن
+          browse_resource: گروه فرآیند %{resource_name} را مرور کنید
+          processes_count: 'فرآیندها:'
+      participatory_process_widgets:
+        show:
+          active_step: فاز فعال
+          take_part: شرکت داشتن
+      participatory_processes:
+        index:
+          promoted_processes: فرآیندهای برجسته
+        participatory_process:
+          active_step: 'فاز فعلی:'
+          more_info: اطلاعات بیشتر
+          more_info_about: اطلاعات بیشتر در مورد فرآیند %{resource_name}
+          take_part: شرکت داشتن
+          take_part_in: در فرآیند %{resource_name} شرکت کنید
+        promoted_process:
+          active_step: 'فاز فعلی:'
+          more_info: اطلاعات بیشتر
+          more_info_about: اطلاعات بیشتر در مورد فرآیند %{resource_name}
+          take_part: شرکت داشتن
+          take_part_in: در فرآیند %{resource_name} شرکت کنید
+        promoted_process_group:
+          more_info: اطلاعات بیشتر
+      process_header_steps:
+        step: فاز %{current} از %{total}
+        view_steps: مراحل فرآیند
+      process_navigation:
+        process_menu_item: فرآیند
