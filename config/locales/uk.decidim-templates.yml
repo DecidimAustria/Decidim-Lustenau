@@ -1,0 +1,74 @@
+---
+uk:
+  activemodel:
+    attributes:
+      questionnaire:
+        title: Назва
+      template:
+        description: опис
+        name: Ім'я
+  decidim:
+    admin:
+      menu:
+        templates: Шаблони
+      templates:
+        apply:
+          error: Під час застосування цього шаблону виникла проблема.
+          success: Шаблон успішно застосовано
+        copy:
+          error: Під час копіювання цього шаблону виникла проблема.
+          success: Шаблон успішно скопійовано
+        create:
+          error: Виникла проблема зі створенням цього шаблону.
+          success: Шаблон успішно створено
+        destroy:
+          success: Шаблон успішно видалено
+        empty: Шаблонів ще немає.
+        update:
+          error: Під час оновлення цього шаблону виникла проблема.
+          success: Шаблон успішно оновлено
+      titles:
+        template_types:
+          questionnaires: Шаблони анкет
+        templates: Шаблони
+    models:
+      questionnaire_template:
+        fields:
+          questions: Кількість питань
+          title: Назва анкети
+      template:
+        fields:
+          created_at: Створено в
+        name: Шаблон
+    templates:
+      admin:
+        questionnaire_templates:
+          choose:
+            create_from_template: Створити з шаблону
+            description: Ви збираєтеся створити нову анкету. Ви можете вибрати попередньо визначений шаблон і змінити його пізніше.
+            label: Виберіть шаблон
+            placeholder: Виберіть шаблон
+            skip_template: Пропустити
+          edit:
+            edit: Редагувати
+            empty: Питань поки немає
+            questionnaire: Анкета
+          form:
+            save: зберегти
+            template_title: Інформація про шаблон
+            title: Шаблон анкети %{questionnaire_for}
+          index:
+            confirm_delete: Ви впевнені, що хочете видалити цей шаблон?
+            title: Шаблони анкет
+          preview:
+            current_step: Крок %{step}
+            of_total_steps: з %{total_steps}
+            tos_agreement: Беручи участь, ви приймаєте Умови обслуговування
+      admin_log:
+        template:
+          create: "%{user_name} створив шаблон анкети %{resource_name}"
+          delete: "%{user_name} видалив шаблон анкети %{resource_name}"
+          duplicate: "%{user_name} продубльовано шаблон анкети %{resource_name}"
+          update: "%{user_name} оновив шаблон анкети %{resource_name}"
+      template_types:
+        questionnaires: Анкети

@@ -1,0 +1,1095 @@
+---
+uk:
+  activemodel:
+    attributes:
+      area:
+        area_type: Тип області
+        name: Ім'я
+        organization: організація
+      area_type:
+        name: Ім'я
+        organization: організація
+        plural: множина
+      attachment:
+        attachment_collection_id: Папка
+        description: опис
+        file: Файл
+        title: Назва вкладення або зображення
+      attachment_collection:
+        description: опис
+        name: Ім'я
+      category:
+        description: опис
+        name: Ім'я
+        parent_id: Батько
+      component:
+        name: Ім'я
+        published_at: Опубліковано на
+        weight: Замовити позицію
+      id: ID
+      import:
+        user_group_id: Створити імпорт як
+      newsletter:
+        body: Тіло
+        subject: Тема
+      organization:
+        admin_terms_of_use_body: Тіло умов користування для адміністратора
+        alert_color: Попередження
+        available_authorizations: Доступні авторизації
+        badges_enabled: Увімкнути значки
+        comments_max_length: Максимальна довжина коментарів (залиште 0 для значення за умовчанням)
+        cta_button_path: Шлях кнопки заклику до дії
+        cta_button_text: Текст кнопки заклику до дії
+        customize_welcome_notification: Налаштувати вітальне сповіщення
+        default_locale: Мова за умовчанням
+        description: опис
+        enable_omnipresent_banner: Показати всюдисущий банер
+        enable_participatory_space_filters: Увімкніть фільтри спільного простору
+        facebook_handler: Обробник Facebook
+        favicon: значок
+        force_authentication: Примусова автентифікація
+        force_users_to_authenticate_before_access_organization: Змусити користувачів пройти автентифікацію перед доступом до організації
+        from: Електронна адреса відправника
+        github_handler: Обробник GitHub
+        header_snippets: Фрагменти заголовка
+        highlight_alternative_color: Виділіть, альтернатива
+        highlight_color: Виділіть
+        highlighted_content_banner_action_subtitle: Підзаголовок кнопки дії
+        highlighted_content_banner_action_title: Назва кнопки дії
+        highlighted_content_banner_action_url: URL-адреса кнопки дії
+        highlighted_content_banner_enabled: Показати банер із виділеним вмістом
+        highlighted_content_banner_image: Зображення
+        highlighted_content_banner_short_description: Короткий опис
+        highlighted_content_banner_title: Назва
+        host: Хост
+        instagram_handler: Обробник Instagram
+        logo: логотип
+        machine_translation_display_priority: Пріоритет відображення машинного перекладу
+        machine_translation_display_priority_original: Спочатку оригінальний текст
+        machine_translation_display_priority_translation: Спочатку перекладений текст
+        name: Ім'я
+        official_img_footer: Нижній колонтитул офіційного логотипу
+        official_img_header: Заголовок офіційного логотипу
+        official_url: Офіційна URL-адреса організації
+        omnipresent_banner_short_description: Короткий опис
+        omnipresent_banner_title: Назва
+        omnipresent_banner_url: URL
+        organization_admin_email: Електронна адреса адміністратора організації
+        organization_admin_name: Ім'я адміністратора організації
+        organization_locales: Місцеві налаштування організації
+        primary_color: Первинний
+        reference_prefix: Посилальний префікс
+        rich_text_editor_in_public_views: Увімкніть текстовий редактор для учасників
+        secondary_color: Вторинний
+        secondary_hosts: Вторинні господарі
+        send_welcome_notification: Надіслати вітальне сповіщення
+        success_color: Успіх
+        time_zone: Часовий пояс
+        tos_version: Версія умов обслуговування
+        twitter_handler: Обробник Twitter
+        user_groups_enabled: Увімкнути групи
+        users_registration_mode: Режим реєстрації користувачів
+        warning_color: УВАГА
+        welcome_notification_body: Вітальний орган повідомлення
+        welcome_notification_subject: Тема вітального сповіщення
+        youtube_handler: Обробник YouTube
+      scope:
+        code: Код
+        name: Ім'я
+        organization: організація
+        parent_id: Батько
+        scope_type: Тип області
+        scope_type_id: Тип області
+      scope_type:
+        name: Ім'я
+        organization: організація
+        plural: множина
+      settings:
+        scope_id: Область застосування
+      static_page:
+        allow_public_access: Дозволити доступ без автентифікації
+        changed_notably: Відбулися помітні зміни.
+        content: Зміст
+        organization: організація
+        show_in_footer: Показати в нижньому колонтитулі
+        slug: URL-адреса
+        title: Назва
+        weight: Замовити позицію
+      static_page_topic:
+        description: опис
+        show_in_footer: Показати в нижньому колонтитулі
+        title: Назва
+        weight: Замовити позицію
+      user_group_csv_verification:
+        file: Файл
+    errors:
+      models:
+        newsletter:
+          attributes:
+            base:
+              at_least_one_space: Виберіть принаймні одне місце для участі
+        organization:
+          attributes:
+            official_img_footer:
+              allowed_file_content_types: Недійсний файл зображення
+            official_img_header:
+              allowed_file_content_types: Недійсний файл зображення
+        participatory_space_private_user_csv_import:
+          attributes:
+            file:
+              malformed: Неправильний файл імпорту. Уважно прочитайте інструкції та переконайтеся, що файл має кодування UTF-8.
+        user_group_csv_verification:
+          attributes:
+            file:
+              malformed: Неправильний файл імпорту. Уважно прочитайте інструкції та переконайтеся, що файл має кодування UTF-8.
+      new_import:
+        attributes:
+          file:
+            invalid_file: Надано недійсний файл. Переконайтеся, що файл правильно відформатовано
+            invalid_mime_type: Недійсний тип MIME
+  activerecord:
+    attributes:
+      decidim/static_page:
+        content: Зміст
+        slug: URL-адреса
+        title: Назва
+      doorkeeper/application:
+        authorize_url: Авторизувати URL
+        client_id: ID клієнта
+        client_secret: Секрет клієнта
+        organization_name: Назва організації
+        organization_url: URL-адреса організації
+        redirect_uri: URI перенаправлення
+        site: Веб-сайт
+  decidim:
+    admin:
+      actions:
+        add: додати
+        attachment:
+          new: Нове вкладення
+        attachment_collection:
+          new: Нова колекція вкладень
+        browse: переглядати
+        category:
+          new: Нова категорія
+        export: Експортувати все
+        export-selection: Експорт виділення
+        import: Імпорт
+        manage: Керувати
+        new: Новий %{name}
+        newsletter:
+          new: Новий бюлетень
+        participatory_space_private_user:
+          new: Новий приватний простір для участі
+        per_page: На сторінку
+        permissions: Дозволи
+        reject: Відхиляти
+        share: Поділіться
+        user:
+          new: Новий адмін
+        verify: Підтвердити
+      admin_terms_of_use:
+        accept:
+          error: Під час прийняття умов використання для адміністратора сталася помилка.
+          success: Чудово! Ви прийняли умови використання для адміністратора.
+        actions:
+          accept: Я згоден з умовами
+          are_you_sure: Ви впевнені, що бажаєте відмовитися від умов використання адміністратора?
+          refuse: Відмовтеся від умов адміністратора
+          title: Погодьтеся з умовами використання
+        required_review:
+          alert: 'Обов’язково: ознайомтеся з нашими умовами використання для адміністратора'
+          callout: Будь ласка, знайдіть час, щоб переглянути Умови використання адміністратора. Інакше ви не зможете керувати платформою.
+          cta: Перегляньте їх зараз.
+        title: Умови використання для адміністратора
+      area_types:
+        create:
+          error: Виникла проблема зі створенням нового типу області.
+          success: Тип області успішно створено.
+        destroy:
+          success: Тип області успішно знищено
+        edit:
+          title: Редагувати тип області
+          update: оновлення
+        new:
+          create: Створення типу області
+          title: Новий тип області
+        update:
+          error: Під час оновлення цього типу області виникла проблема.
+          success: Тип області успішно оновлено
+      areas:
+        create:
+          error: Виникла проблема зі створенням нової області.
+          success: Область успішно створена.
+        destroy:
+          has_spaces: Ця зона має залежні приміщення. Перш ніж видаляти цю область, переконайтеся, що жодна простір участі не посилається на цю область.
+          success: Територія успішно знищена
+        edit:
+          title: Область редагування
+          update: оновлення
+        new:
+          create: Створити область
+          title: Нова площа
+        no_areas: Немає зон
+        update:
+          error: Виникла проблема з оновленням цієї області.
+          success: Область успішно оновлена
+      attachment_collections:
+        create:
+          error: Виникла проблема зі створенням нової папки.
+          success: Папку успішно створено.
+        destroy:
+          success: Папку успішно знищено.
+        edit:
+          title: Редагувати папку
+          update: оновлення
+        index:
+          attachment_collection_used: Цю папку неможливо видалити, оскільки вона використовується.
+          attachment_collections_title: Папки вкладень
+        new:
+          create: Створити
+          title: Нова папка
+        update:
+          error: Під час оновлення цієї папки виникла проблема.
+          success: Папку успішно оновлено.
+      attachments:
+        create:
+          error: Виникла проблема зі створенням нового вкладення.
+          success: Вкладення успішно створено.
+        destroy:
+          success: Вкладення успішно знищено.
+        edit:
+          title: Редагувати вкладення
+          update: оновлення
+        index:
+          attachments_title: Додатки
+        new:
+          create: Створити вкладення
+          title: Нове вкладення
+        update:
+          error: Під час оновлення цього вкладення виникла проблема.
+          success: Вкладення успішно оновлено.
+      attachments_privacy_warning:
+        message: Будьте обережні, працюючи з вкладеннями в приватному просторі. Будь-який учасник міг поділитися цим документом з іншими.
+      autocomplete:
+        no_results: Нічого не знайдено
+        search_prompt: Введіть принаймні три символи для пошуку
+      block_user:
+        new:
+          action: Заблокувати обліковий запис і надіслати обґрунтування
+          description: Блокування користувача зробить його обліковий запис непридатним для використання. У своєму обґрунтуванні ви можете надати будь-які вказівки щодо способів розблокування користувача.
+          justification: Обґрунтування
+          title: Заблокувати користувача %{name}
+      categories:
+        create:
+          error: Виникла проблема зі створенням цієї категорії.
+          success: Категорію успішно створено.
+        destroy:
+          error: Під час видалення цієї категорії виникла проблема. Будь ласка, спочатку видаліть будь-яку підкатегорію, переконайтеся, що жодна інша сутність не належить до цієї категорії, і повторіть спробу.
+          success: Категорію успішно видалено.
+        edit:
+          title: Редагувати категорію
+          update: оновлення
+        index:
+          categories_title: Категорії
+          category_used: Цю категорію неможливо видалити, оскільки вона використовується.
+        new:
+          create: Створити категорію
+          title: Нова категорія
+        update:
+          error: Під час оновлення цієї категорії виникла проблема.
+          success: Категорію успішно оновлено.
+      component_permissions:
+        update:
+          error: Виникла проблема з оновленням дозволів цього компонента.
+          success: Дозволи успішно оновлено.
+      components:
+        create:
+          error: Виникла проблема зі створенням цього компонента.
+          success: Компонент успішно створено.
+        destroy:
+          error: Під час знищення цього компонента виникла проблема.
+          success: Компонент успішно видалено.
+        edit:
+          title: Редагувати компонент
+          update: оновлення
+        form:
+          default_step_settings: Параметри кроку за замовчуванням
+          global_settings: Глобальні налаштування
+          step_settings: Налаштування кроку
+        index:
+          add: Додати компонент
+          headers:
+            actions: Дії
+            name: Назва компонента
+            scope: Область застосування компонента
+            type: Тип компонента
+        new:
+          add: Додати компонент
+          title: 'Додати компонент: %{name}'
+        publish:
+          success: Компонент успішно опубліковано.
+        title: компоненти
+        unpublish:
+          success: Публікацію компонента успішно скасовано.
+        update:
+          error: Під час оновлення цього компонента виникла проблема.
+          success: Компонент успішно оновлено.
+      conflicts:
+        attempts: Спроби
+        'false': Немає
+        managed_user_name: Керований користувач
+        solved: Вирішено
+        title: Конфлікти підтвердження
+        transfer:
+          email: Електронна пошта
+          error: Виникла проблема під час перенесення поточного учасника до керованого.
+          name: Ім'я
+          reason: Причина
+          success: Поточний переказ успішно завершено.
+          title: Трансфер
+        'true': Так
+        user_name: Користувач
+      dashboard:
+        show:
+          view_more_logs: Переглянути більше журналів
+          welcome: Ласкаво просимо до панелі адміністратора.
+      domain_whitelist:
+        form:
+          domain_too_short: Домен занадто короткий
+        update:
+          error: Не вдалося оновити білий список доменів
+          success: Білий список доменів успішно оновлено
+      exports:
+        export_as: "%{name} як %{export_format}"
+        formats:
+          CSV: CSV
+          Excel: Excel
+          FormPDF: PDF
+          JSON: JSON
+        notice: Виконується експорт. Ви отримаєте електронний лист, коли це буде завершено.
+      filters:
+        category_id_eq:
+          label: Категорія
+        filter_label: фільтр
+        invitation_accepted_at_present:
+          label: Запрошення прийнято
+          values:
+            'false': Немає
+            'true': Так
+        last_sign_in_at_present:
+          label: Коли-небудь входив у систему
+          values:
+            'false': Немає
+            'true': Так
+        moderated_users:
+          reports_reason_eq:
+            label: Повідомити про причину
+            values:
+              does_not_belong: Не належить
+              offensive: Образливий
+              spam: Спам
+        moderations:
+          reportable_type_string_eq:
+            label: Тип
+        officialized_at_null:
+          label: Держава
+          values:
+            'false': Офіціалізовано
+            'true': Не офіційно оформлений
+        participatory_space_private_users:
+          user_invitation_accepted_at_not_null:
+            label: Запрошення прийнято
+            values:
+              'false': Не прийнято
+              'true': прийнято
+          user_invitation_sent_at_not_null:
+            label: Запрошення надіслано
+            values:
+              'false': Не відправлено
+              'true': Надісланий
+        private_space_eq:
+          label: Приватний
+          values:
+            'false': Громадський
+            'true': Приватний
+        published_at_null:
+          label: Опубліковано
+          values:
+            'false': Опубліковано
+            'true': Неопублікований
+        scope_id_eq:
+          label: Область застосування
+        search_label: Пошук
+        search_placeholder:
+          name_or_nickname_or_email_cont: Шукайте %{collection} за адресою електронної пошти, іменем або псевдонімом.
+          report_count_eq: Звіт про кількість екв
+          reported_id_string_or_reported_content_cont: Шукайте %{collection} за ідентифікатором або вмістом, що підлягає звіту.
+          title_cont: Пошук %{collection} за назвою.
+          user_name_or_user_email_cont: Шукайте %{collection} за іменем або електронною поштою.
+          user_name_or_user_nickname_or_user_email_cont: Шукайте %{collection} за адресою електронної пошти, іменем або псевдонімом.
+        state_eq:
+          label: Держава
+          values:
+            all: все
+            pending: В очікуванні
+            rejected: Відхилено
+            verified: Перевірено
+      forms:
+        file_help:
+          import:
+            explanation: 'Інструкція для файлу:'
+            message_1: Підтримуються файли CSV, JSON і Excel (.xlsx).
+            message_2: Для файлів CSV роздільником між стовпцями має бути крапка з комою (";")
+      help_sections:
+        error: Виникла проблема з оновленням розділів довідки
+        form:
+          save: зберегти
+        success: Розділи довідки успішно оновлено
+      impersonatable_users:
+        index:
+          filter:
+            all: все
+            managed: Керований
+            not_managed: Не вдалося
+          filter_by: Фільтрувати за
+          impersonate: Видавати себе за іншу особу
+          impersonate_new_managed_user: Керувати новим учасником
+          managed: Керований
+          name: Ім'я
+          needs_authorization_warning: Для цієї організації потрібно ввімкнути принаймні одну авторизацію.
+          not_managed: Не вдалося
+          promote: Просувати
+          search: Пошук
+          status: Статус
+          view_logs: Переглянути журнали
+      impersonations:
+        close_session:
+          error: Під час закриття поточного сеансу керування учасниками виникла проблема.
+          success: Поточний сеанс імітації успішно завершено.
+        create:
+          error: Виникла проблема з керуванням учасником.
+          success: Керованого учасника успішно створено.
+        form:
+          authorization_method: Спосіб авторизації
+          name: Ім'я
+          reason: Причина
+        new:
+          impersonate: Видавати себе за іншу особу
+          impersonate_existing_managed_user: Керувати учасником "%{name}"
+          impersonate_existing_user: Керувати учасником "%{name}"
+          impersonate_new_managed_user: Керувати новим учасником
+      imports:
+        and: і
+        data_errors:
+          duplicate_headers:
+            detail: Будь ласка, переконайтеся, що файл містить необхідні стовпці або заголовки лише один раз.
+            message:
+              one: Дубльований стовпець %{columns}.
+              other: Дубльовані стовпці %{columns}.
+          invalid_indexes:
+            lines:
+              detail: Будь ласка, переконайтеся, що ці рядки правильно відформатовані та містять дійсні записи.
+              message:
+                one: Знайдено помилку у файлі імпорту в рядку %{indexes}.
+                other: Знайдено помилки у файлі імпорту в рядках %{indexes}.
+            records:
+              detail: Переконайтеся, що ці записи правильно відформатовані та містять дійсні записи.
+              message:
+                one: Знайдено помилку у файлі імпорту для записів із порядковими номерами %{indexes}.
+                other: Знайдено помилки у файлі імпорту для записів із порядковими номерами %{indexes}.
+          missing_headers:
+            detail: Переконайтеся, що файл містить необхідні стовпці.
+            message:
+              one: Відсутній стовпець %{columns}.
+              other: Відсутні стовпці %{columns}.
+        error: Виникла проблема під час імпорту
+        example_error: Не вдалося створити приклад для вказаного типу
+        new:
+          accepted_mime_types:
+            csv: CSV
+            json: JSON
+            xlsx: Excel (.xlsx)
+          actions:
+            back: Назад
+          download_example: Завантажити приклад
+          download_example_format: Приклад як %{name}
+          file_legend: Додайте файл імпорту, який буде проаналізовано.
+          import: Імпорт
+        notice: "%{count} %{resource_name} успішно імпортовано"
+      logs:
+        logs_list:
+          no_logs_yet: Журналів ще немає
+      managed_users:
+        promotion:
+          error: Виникла проблема під час просування керованого учасника.
+          success: Керованого учасника було успішно підвищено.
+        promotions:
+          new:
+            explanation: Керованих учасників можна підвищити до стандартних учасників. Це означає, що їх буде запрошено до програми, і ви не зможете ними знову керувати. Запрошений учасник отримає електронний лист із проханням прийняти ваше запрошення.
+            new_managed_user_promotion: Нова керована акція учасника
+            promote: Просувати
+      menu:
+        admin_log: Журнал активності адміністратора
+        admins: Адміністратори
+        appearance: Зовнішній вигляд
+        area_types: Типи площ
+        areas: Області
+        configuration: Конфігурація
+        dashboard: Панель приладів
+        external_domain_whitelist: Дозволені зовнішні домени
+        help_sections: Довідкові розділи
+        homepage: Домашня сторінка
+        impersonations: Уособлення
+        moderation: Глобальна модерація
+        newsletters: Інформаційні бюлетені
+        participants: Учасники
+        reported_users: Повідомлені користувачі
+        scope_types: Типи області дії
+        scopes: Області застосування
+        settings: Налаштування
+        static_pages: сторінки
+        user_groups: Групи
+        users: Учасники
+      metrics:
+        metrics:
+          see_more_metrics: Переглянути інші показники
+      models:
+        area:
+          fields:
+            area_type: Тип області
+            name: Ім'я
+        area_type:
+          fields:
+            name: Ім'я
+            plural: множина
+        attachment:
+          fields:
+            collection: Папка
+            content_type: Тип
+            file_size: Розмір
+            title: Назва
+          name: вкладення
+        attachment_collection:
+          name: Папка
+        category:
+          name: Категорія
+        impersonation_log:
+          fields:
+            admin: адмін
+            ended_at: Закінчилося о
+            expired_at: Термін дії минув о
+            reason: Причина
+            started_at: Розпочато о
+            user: Учасник
+        newsletter:
+          fields:
+            created_at: Створено в
+            progress: Прогрес
+            sent_at: Надіслано о
+            sent_to: Відправлено
+            subject: Тема
+          name: Інформаційний бюлетень
+        participatory_space_private_user:
+          name: Простір участі приватний учасник
+        scope:
+          fields:
+            name: Ім'я
+            scope_type: Тип області
+        scope_type:
+          fields:
+            name: Ім'я
+            plural: множина
+        share_token:
+          fields:
+            created_at: Створено в
+            expires_at: Термін дії закінчується о
+            last_used_at: Останнє використання
+            times_used: Часи використання
+            token: Токен
+            user: Створений
+        static_page:
+          fields:
+            created_at: Створено в
+            title: Назва
+        user:
+          fields:
+            created_at: Дата створення
+            email: Електронна пошта
+            last_sign_in_at: Дата останнього входу
+            name: Ім'я
+            role: Роль
+            roles:
+              admin: адмін
+              user_manager: Менеджер учасників
+          name: Учасник
+        user_group:
+          fields:
+            actions: Дії
+            created_at: Створено в
+            document_number: Номер документа
+            name: Ім'я
+            phone: Телефон
+            state: Держава
+            users_count: Підрахунок учасників
+      moderated_users:
+        index:
+          actions:
+            block: Заблокувати користувача
+            title: Дії
+            unblock: Розблокувати користувача
+            unreport: Зняти звіт
+          name: Ім'я
+          nickname: псевдонім
+          reason: Причина
+          reports: Звіти рахуються
+          title: Список повідомлених користувачів
+        report:
+          reasons:
+            does_not_belong: Не належить
+            offensive: Образливий
+            spam: Спам
+        tabs:
+          blocked: заблоковано
+          unblocked: Не заблоковано
+      moderations:
+        index:
+          title: Модерації
+        report:
+          reasons:
+            does_not_belong: Не належить
+            offensive: Образливий
+            spam: Спам
+        reports:
+          index:
+            author: Автор(и)
+            callout_html: Вміст з’являється на панелі модерації, коли про нього повідомляє користувач (може бути будь-хто з зареєстрованим обліковим записом), натиснувши позначку %{icon} поруч із елементом.
+            content_original_language: Оригінальна мова вмісту
+            participatory_space: Простір участі
+            reported_content: Повідомлений вміст
+            see_current: Поточний див
+            see_original: Дивіться оригінал
+            title: Звіти модерації
+          show:
+            report_details: Деталі причини
+            report_language: Мова звіту
+            report_reason: Причина
+            title: Деталі звіту
+      newsletter_templates:
+        index:
+          preview_template: Попередній перегляд
+          title: Шаблони розсилок
+          use_template: Використовуйте цей шаблон
+        show:
+          preview: 'Шаблон попереднього перегляду: %{template_name}'
+          use_template: Використовуйте цей шаблон
+      newsletters:
+        create:
+          error: Виникла проблема зі створенням цієї розсилки.
+          success: Інформаційний бюлетень успішно створено. Перегляньте його перед надсиланням.
+        deliver:
+          error: Виникла проблема з доставкою цього бюлетеня.
+          success: Інформаційний бюлетень успішно доставлено.
+        destroy:
+          error_already_sent: 'Неможливо знищити бюлетень: його вже надіслано.'
+          success: Інформаційний бюлетень успішно знищено.
+        edit:
+          save_and_preview: Зберегти та переглянути
+          title: Редагувати інформаційний бюлетень
+        index:
+          all: все
+          all_users: Всі користувачі
+          and: і
+          confirm_delete: Ви впевнені, що хочете видалити цю розсилку?
+          followers: послідовників
+          has_been_sent_to: 'Було надіслано до:'
+          no_scopes: Без прицілів
+          not_sent: Не відправлено
+          participants: учасників
+          segmented_to: 'Сегментовано на %{subject}:'
+          subscribed_count: 'Підписано:'
+          title: Інформаційні бюлетені
+        new:
+          save: зберегти
+          title: Новий бюлетень
+        select_recipients_to_deliver:
+          all_spaces: все
+          all_users_help: Розсилає інформаційний бюлетень усім підтвердженим користувачам.
+          confirm_deliver: Ви впевнені, що хочете розсилати цю розсилку? Цю дію не можна скасувати.
+          deliver: Доставляти інформаційний бюлетень
+          followers_help: Надсилає інформаційний бюлетень усім підтвердженим користувачам, які підписуються на будь-які вибрані місця для участі в списку.
+          none: Жодного
+          participants_help: Надсилає інформаційний бюлетень усім підтвердженим користувачам, які брали участь у будь-якому з вибраних місць для участі в списку.
+          recipients_count: Цей інформаційний бюлетень буде надіслано <strong id='recipients_count'>%{count}</strong> користувачам.
+          scopes_help: Надсилає інформаційний бюлетень користувачам, для яких у налаштуваннях «Мої інтереси» в обліковому записі активовано будь-яку з вибраних областей.
+          select_scopes: Фільтр для користувачів, які активували будь-яку вибрану область у налаштуваннях свого облікового запису «Мої інтереси».
+          select_spaces: Виберіть місця для сегментації інформаційного бюлетеня
+          select_users: Виберіть, яким користувачам ви хочете надсилати інформаційний бюлетень
+          send_to_all_users: Надіслати всім користувачам
+          send_to_followers: Надіслати підписникам
+          send_to_participants: Розіслати учасникам
+          title: Виберіть одержувачів для доставки
+          warning: "<strong>Увага:</strong> цей інформаційний бюлетень надсилатиметься лише тим користувачам, які активували параметр <em>Я хочу отримувати інформаційні бюлетені</em> у своїх налаштуваннях сповіщень."
+        send:
+          no_recipients: Немає одержувачів для цього вибору
+        show:
+          preview: Попередній перегляд
+          select_recipients_to_deliver: Виберіть одержувачів для доставки
+          subject: Тема
+        update:
+          error: Виникла проблема з оновленням цієї розсилки.
+          success: Інформаційний бюлетень успішно оновлено. Перегляньте його перед надсиланням.
+      officializations:
+        block:
+          error: Під час блокування учасника сталася помилка
+          success: Учасника успішно заблоковано
+        create:
+          success: Учасник успішно офіційно оформлений
+        destroy:
+          success: Учасник успішно неофіціалізований
+        index:
+          actions: Дії
+          badge: Бейдж
+          block: Заблокувати користувача
+          created_at: Створено Ат
+          name: Ім'я
+          nickname: псевдонім
+          not_officialized: Не офіційно оформлений
+          officialize: Офіціалізувати
+          officialized: Офіціалізовано
+          reofficialize: Переофіціалізувати
+          reports: Звіти
+          show_email: Показати електронну адресу
+          status: Статус
+          unblock: Розблокувати користувача
+          unofficialize: Неофіційно
+        new:
+          badge: Значок офіційної реєстрації
+          officialize: Офіціалізувати
+          title: Офіціалізувати учасника "%{name}"
+        show_email_modal:
+          close_modal: Закрити модальний
+          description: Якщо вам потрібно зв’язатися безпосередньо з учасником, ви можете натиснути кнопку «Показати», щоб побачити його електронну адресу. Ця дія буде зареєстрована.
+          email_address: Адреса електронної пошти
+          full_name: Повне ім'я
+          hidden: прихований
+          show: Показати
+          title: Показати електронну адресу учасника
+        unblock:
+          error: Під час розблокування учасника сталася помилка
+          success: Учасника успішно розблоковано
+      organization:
+        edit:
+          title: Редагувати організацію
+          update: оновлення
+        form:
+          facebook: Facebook
+          github: GitHub
+          instagram: Instagram
+          rich_text_editor_in_public_views_help: У деяких текстових областях учасники зможуть вставити деякі HTML-теги за допомогою текстового редактора.
+          social_handlers: Соціальний
+          twitter: Twitter
+          url: URL
+          youtube: YouTube
+        update:
+          error: Виникла проблема з оновленням цієї організації.
+          success: Організацію успішно оновлено.
+      organization_appearance:
+        edit:
+          update: оновлення
+        form:
+          colors:
+            colors_title: Кольори організації
+            colors_warning_html: УВАГА! Зміна цих кольорів може порушити контрасти доступності. Ви можете перевірити контрастність за вашим вибором за допомогою <a href="%{link}">WebAIM Contrast Checker</a> або інших подібних інструментів.
+            header_snippets_help: Використовуйте це поле, щоб додати щось до заголовка HTML. Найпоширенішим використанням є інтеграція сторонніх служб, які потребують додаткового JavaScript або CSS. Крім того, ви можете використовувати його, щоб додати додаткові мета-теги до HTML. Зауважте, що це буде відображено лише на загальнодоступних сторінках, а не в розділі адміністратора.
+          cta_button_path_help: 'Ви можете перезаписати місце, на яке посилається кнопка «Заклик до дії» на домашній сторінці. Використовуйте тут часткові шляхи, а не повні URL-адреси. Приймає літери, цифри, тире та скісну риску та має починатися з літери. Кнопка заклику до дії відображається на домашній сторінці між текстом привітання та описом. Приклад: %{url}'
+          cta_button_text_help: Ви можете перезаписати текст кнопки заклику до дії на домашній сторінці для кожної доступної мови у вашій організації. Якщо не встановлено, буде використано значення за умовчанням. Кнопка заклику до дії відображається на домашній сторінці між текстом привітання та описом.
+          homepage_appearance_title: Редагувати зовнішній вигляд домашньої сторінки
+          homepage_highlighted_content_banner_title: Банер із виділеним вмістом
+          images:
+            layout_appearance_title: Редагувати зовнішній вигляд макета
+            preview: Попередній перегляд
+          omnipresent_banner_appearance_title: Редагувати всюдисущий банер
+      organization_external_domain_whitelist:
+        edit:
+          update: оновлення
+        external_domain:
+          down: вниз
+          external_domain: Зовнішній домен
+          remove: видалити
+          up: вгору
+        form:
+          add: Додати в білий список
+          title: Білий список зовнішнього домену
+      organization_homepage:
+        edit:
+          active_content_blocks: Блоки активного контенту
+          inactive_content_blocks: Блокування неактивного контенту
+      organization_homepage_content_blocks:
+        edit:
+          update: оновлення
+      participatory_space_private_users:
+        create:
+          error: Виникла проблема з додаванням приватного учасника для цієї спільноти.
+          success: Доступ приватного учасника до простору участі успішно створено.
+        destroy:
+          error: Виникла проблема з видаленням приватного учасника для цієї спільноти.
+          success: Доступ приватного учасника до простору участі успішно знищено.
+        index:
+          import_via_csv: Імпорт через CSV
+          title: Простір участі приватний учасник
+        new:
+          create: Створити
+          title: Новий приватний учасник Простір участі.
+      participatory_space_private_users_csv_imports:
+        create:
+          invalid: Виникла проблема під час читання файлу CSV.
+          success: Файл CSV успішно завантажено, ми надсилаємо учасникам електронний лист із запрошенням. Це може зайняти деякий час.
+        new:
+          destroy:
+            button: Видалити всіх приватних учасників
+            confirm: Ви впевнені, що бажаєте видалити всіх приватних учасників? Цю дію не можна скасувати, ви не зможете відновити їх.
+            empty: У вас немає приватних учасників.
+            explanation: У вас %{count} приватних учасників.
+            title: Видалити приватних учасників
+          explanation: Завантажте файл CSV. Він має містити два стовпці з електронною адресою в першому стовпці файлу та іменами в останньому стовпці файлу (електронна адреса, ім’я) користувачів, яких ви хочете додати до простору для участі, без заголовків. Уникайте використання недійсних символів, таких як `<>?%&^*#@()[]=+:;"{}\|` в імені користувача.
+          title: Завантажте файл CSV
+          upload: Завантажити
+      reminders:
+        create:
+          error: Виникла проблема зі створенням нагадувань.
+          success:
+            one: Користувач %{count} отримає нагадування.
+            other: Користувачі %{count} отримають нагадування.
+        new:
+          submit: Надіслати
+      resource_permissions:
+        edit:
+          submit: Надіслати
+          title: Права на редагування
+        update:
+          success: Дозволи успішно оновлено.
+      resources:
+        index:
+          headers:
+            scope: Область застосування
+      scope_types:
+        create:
+          error: Виникла проблема зі створенням нового типу області.
+          success: Тип області успішно створено.
+        destroy:
+          success: Тип області успішно знищено
+        edit:
+          title: Редагувати тип області
+          update: оновлення
+        new:
+          create: Створення типу області дії
+          title: Новий приціл
+        update:
+          error: Під час оновлення цього типу області виникла проблема.
+          success: Тип області успішно оновлено
+      scopes:
+        create:
+          error: Виникла проблема зі створенням нового діапазону.
+          success: Область успішно створена.
+        destroy:
+          success: Приціл успішно знищено
+        edit:
+          title: Редагувати обсяг
+          update: оновлення
+        new:
+          create: Створити область
+          title: Новий приціл
+        no_scopes: На цьому рівні немає областей.
+        update:
+          error: Під час оновлення цієї області виникла проблема.
+          success: Сферу успішно оновлено
+      share_tokens:
+        actions:
+          confirm_destroy: Ви впевнені, що бажаєте видалити цей маркер?
+          destroy: Видалити
+          share: Поділіться
+        destroy:
+          error: Під час знищення маркера виникла проблема.
+          success: Маркер успішно знищено.
+        share_tokens:
+          empty: Немає активних токенів
+          help: Ці маркери використовуються для публічного надання доступу до цього неопублікованого ресурсу будь-якому користувачеві. Вони будуть приховані при публікації ресурсу. Клацніть піктограму спільного використання маркера, щоб перейти за URL-адресою, доступною для спільного використання.
+          title: Поділитися жетонами
+      shared:
+        gallery:
+          add_images: Додайте зображення
+          delete_image: Видалити зображення
+          edit_images: Редагувати зображення
+          gallery_legend: Додайте галерею зображень (необов’язково)
+      static_page_topics:
+        create:
+          error: Виникла проблема зі створенням нової теми.
+          success: Тему створено успішно.
+        destroy:
+          success: Тему успішно знищено
+        edit:
+          title: Редагувати тему
+          update: Оновити тему
+        new:
+          create: Створити тему
+          title: Нова тема
+        update:
+          error: Під час оновлення цієї теми виникла проблема.
+          success: Тему успішно оновлено
+      static_pages:
+        actions:
+          view: Переглянути публічну сторінку
+        create:
+          error: Виникла проблема зі створенням нової сторінки.
+          success: Сторінку успішно створено.
+        destroy:
+          success: Сторінку успішно знищено
+        edit:
+          changed_notably_help: Якщо позначено, учасники отримають сповіщення про прийняття нових умов.
+          title: Редагувати сторінку
+          update: оновлення
+        form:
+          none: Жодного
+          slug_help: 'Використовуйте тут часткові шляхи, а не повні URL-адреси. Приймає літери, цифри, тире та скісну риску та має починатися з літери. Приклад: %{url}'
+        index:
+          last_notable_change: Остання помітна зміна
+        new:
+          create: Створити сторінку
+          title: Нова сторінка
+        topic:
+          destroy: Видалити тему
+          edit: Редагувати тему
+          empty: Сторінок на цю тему немає
+          without_topic: Сторінки без теми
+        update:
+          error: Під час оновлення цієї сторінки виникла проблема.
+          success: Сторінку успішно оновлено
+      titles:
+        admin_log: Журнал адміністратора
+        area_types: Типи площ
+        areas: Області
+        authorization_workflows: Методи перевірки
+        dashboard: Панель приладів
+        impersonatable_users: Керовані учасники
+        impersonations: Управління учасниками
+        metrics: Метрики
+        panel: адмін
+        participants: Учасники
+        scope_types: Типи області дії
+        scopes: Області застосування
+        static_pages: сторінки
+        statistics: діяльність
+        user_groups: Групи
+        users: Адміністратори
+      user_group:
+        csv_verify:
+          invalid: Виникла проблема під час читання файлу CSV.
+          success: Файл CSV успішно завантажено, ми перевіряємо групи, які відповідають критеріям. Це може зайняти деякий час.
+        reject:
+          invalid: Під час відхилення цієї групи виникла проблема.
+          success: Групу успішно відхилено
+        verify:
+          invalid: Під час перевірки цієї групи виникла проблема.
+          success: Групу успішно перевірено
+      user_groups:
+        index:
+          state:
+            pending: В очікуванні
+            rejected: Відхилено
+            verified: Перевірено
+          verify_via_csv: Підтвердити через CSV
+      user_groups_csv_verifications:
+        new:
+          explanation: Завантажте файл CSV. Він повинен містити офіційні електронні адреси груп у вашій організації в першому стовпці файлу без заголовків. Буде перевірено лише групи, які підтвердили свою електронну адресу та мають адресу електронної пошти у файлі CSV.
+          title: Завантажте файл CSV
+          upload: Завантажити
+      users:
+        create:
+          error: Під час запрошення цього адміністратора виникла проблема.
+          success: Учасника успішно запрошено.
+        destroy:
+          error: Виникла проблема під час спроби видалити цього адміністратора.
+          success: Учасник більше не є адміністратором.
+        form:
+          email: Електронна пошта
+          name: Ім'я
+          role: Роль
+        new:
+          create: Запросити
+          title: Запросити нового адміністратора
+      users_statistics:
+        users_count:
+          admins: Адміністратори
+          last_day: Останній день
+          last_month: Минулого місяця
+          last_week: Минулого тижня
+          no_users_count_statistics_yet: Статистики кількості користувачів ще немає
+          participants: Учасники
+      view_public_page: Переглянути публічну сторінку
+    forms:
+      errors:
+        impersonate_user:
+          reason: Під час керування некерованим учасником потрібно вказати причину
+    metrics:
+      blocked_users:
+        object: заблокованих користувачів
+        title: Заблоковані користувачі
+      reported_users:
+        object: повідомлені користувачі
+        title: Повідомлені користувачі
+      user_reports:
+        object: звіти користувачів
+        title: Звіти користувачів
+    moderations:
+      actions:
+        expand: Розгорнути
+        hidden: Прихований
+        hide: Сховати
+        not_hidden: Не прихована
+        title: Дії
+        unhide: Показати
+        unreport: Зняти звіт
+      admin:
+        reportable:
+          hide:
+            invalid: Виникла проблема з приховуванням ресурсу.
+            success: Ресурс успішно приховано.
+          unhide:
+            invalid: Виникла проблема з відображенням ресурсу.
+            success: Ресурс успішно показано.
+          unreport:
+            invalid: Під час скасування звіту про ресурс виникла проблема.
+            success: Ресурс успішно скасовано.
+      models:
+        moderation:
+          fields:
+            created_at: Дата створення
+            deleted_resource: Видалений ресурс
+            hidden_at: Приховано в
+            participatory_space: Простір участі
+            report_count: Рахувати
+            reportable_id: ID
+            reportable_type: Тип
+            reported_content_url: URL-адреса повідомленого вмісту
+            reports: Звіти
+            visit_url: Відвідайте URL
+        report:
+          fields:
+            details: Деталі причини
+            locale: Мова
+            reason: Причина
+  errors:
+    messages:
+      invalid_json: Недійсний JSON
+  layouts:
+    decidim:
+      admin:
+        global_moderations:
+          title: Глобальна модерація
+        newsletters:
+          title: Інформаційні бюлетені
+        settings:
+          title: Налаштування
+        users:
+          title: Учасники
