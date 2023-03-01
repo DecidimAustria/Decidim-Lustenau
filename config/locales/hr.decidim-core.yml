@@ -1180,7 +1180,7 @@ hr:
       filter_results_for_category: 'Filtriraj rezultate za kategoriju: %{resource}'
       filter_results_for_scope: 'Filtriraj rezultate za temu: %{resource}'
     translation_bar:
-      help_text: "<strong>Upozorenje:</strong> automatski prijevod možda nije potpuno točan."
+      help_text: "<strong>Obavijest:</strong> automatski prijevod možda nije potpuno točan."
       show_original: Prikaži izvorni tekst
       show_translated: Prikaži automatski prevedeni tekst
     user_activity:

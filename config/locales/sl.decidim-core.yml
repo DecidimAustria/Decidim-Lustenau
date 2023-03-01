@@ -1219,7 +1219,7 @@ sl:
       filter_results_for_category: 'Filtriraj rezultate za kategorijo: %{resource}'
       filter_results_for_scope: 'Filtriraj rezultate za področje: %{resource}'
     translation_bar:
-      help_text: "<strong>Opozorilo:</strong> avtomatični prevodi niso nujno povsem točni."
+      help_text: "<strong>Opaziti:</strong> avtomatični prevodi niso nujno povsem točni."
       show_original: Prikaži izvirno besedilo
       show_translated: Prikaži samodejno prevedeno besedilo
     user_activity:
