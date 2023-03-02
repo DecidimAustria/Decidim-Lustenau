@@ -401,7 +401,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
     }
     &.footer_mitgestalten{
         padding:0 0 1rem 0;
-        color:rgb(51, 51, 51);
+        color:var(--emvi-nav-highlight-grey-rgb);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
         .mitgestalten_logo{
             max-height:50px;
         }
