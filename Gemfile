@@ -17,6 +17,7 @@ gem "decidim-consultations", git: "https://github.com/DecidimAustria/decidim", b
 # gem "decidim-templates", DECIDIM_VERSION
 
 # Get latest CLDR changes to fix bug with count :zero
+# remove when this commit gets released in a version https://github.com/ruby-i18n/i18n/commit/c78ca610b64712037e5726adeaf7b84fa96eded9
 gem "i18n", git: "https://github.com/ruby-i18n/i18n", branch: "master"
 
 gem "aws-sdk-translate", '~> 1'
