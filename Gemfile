@@ -16,6 +16,9 @@ gem "decidim-consultations", git: "https://github.com/DecidimAustria/decidim", b
 # gem "decidim-initiatives", DECIDIM_VERSION
 # gem "decidim-templates", DECIDIM_VERSION
 
+# Get latest CLDR changes to fix bug with count :zero
+gem "i18n", git: "https://github.com/ruby-i18n/i18n", branch: "master"
+
 gem "aws-sdk-translate", '~> 1'
 
 #gem "deepl-rb", require: "deepl"
