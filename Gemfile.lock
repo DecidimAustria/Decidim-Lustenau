@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/DecidimAustria/decidim
-  revision: c58b615d02092c83c47b1bb624de5a3d9fb16a11
+  revision: 674c718983dea77aa99d358ca6beaa0b222b68b6
   branch: emvi-0.27
   specs:
     decidim (0.27.0)
