@@ -1753,7 +1753,7 @@ sr-CS:
       widget:
         see_more: Više informacija
   locale:
-    name: hrvatski
+    name: srpski
   password_validator:
     domain_included_in_password: je previše slična nazivu ove domene
     email_included_in_password: je previše slična vašoj adresi e-pošte
