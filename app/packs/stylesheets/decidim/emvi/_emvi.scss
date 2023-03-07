@@ -43,30 +43,31 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 .topbar {
     position:relative;
     padding:1rem 0.5rem 1rem 0.5rem;
+    flex-wrap: wrap;
     > div{
         &.logo-wrapper{
-            flex: 0 0 auto;
-            @include breakpoint(medium){
+            align-self: flex-start;
+            flex: 1 1 50%;
+            @include breakpoint(xlarge){
+                flex: 0 0 auto;
+                align-self: center;
                 img {
                     max-height: 90px;
                 }
             }
-            @include breakpoint(smallmedium down){
-                align-self: flex-start;
-                flex: 1 1 50%;
-            }
         }
     }
-    @include breakpoint(medium){
-        padding:0 0 1rem 0;
+    .topbar__menu{
+        align-self: flex-start;
+        button{
+            color:var(--emvi-primary-rgb);
+        }
     }
-    @include breakpoint(smallmedium down){
-        flex-wrap: wrap;
+    @include breakpoint(xlarge){
+        padding:0 0 1rem 0;
+        flex-wrap: nowrap;
         .topbar__menu{
-            align-self: flex-start;
-            button{
-                color:var(--emvi-primary-rgb);
-            }
+            align-self: center;
         }
     }
 }
@@ -148,10 +149,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 .menubar{
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-bottom: 1rem;
+    @include breakpoint(medium){
+        align-items: center;
+    }
     @include breakpoint(large){
+        justify-content: space-between;
         flex-direction: row;
         padding-bottom: 0;
     }
@@ -217,10 +221,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
     max-width:40%;
     margin-left:auto;
     margin-right:auto;
+    justify-content: center;
     &:hover{
         text-decoration: none;
     }
-    @include breakpoint(smallmedium down){
+    @include breakpoint(large down){
         position: relative;
         top:unset;
         left:unset;
@@ -271,6 +276,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 @media print, screen and (min-width: 40em){
     .main-nav ul{
         display:unset;
+        white-space:normal;
     }
     .main-nav ul > li{
         text-align: left;
@@ -320,26 +326,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
                 &:hover, &:focus{
                     color:var(--emvi-primary-rgb);
                     text-decoration: none;
+                    box-shadow:unset;
                     transition: 0.2s ease-in;
                 }
-            }
-        }
-    }
-}
-
-.usermenu-off-canvas-holder{
-    padding: 0.2rem 0.625rem;
-    border-bottom: 1px solid var(--emvi-primary-rgb);
-    .usermenu-off-canvas{
-        border:0;
-        a{
-            color:var(--emvi-nav-highlight-grey-rgb);
-            padding:1rem;
-            &:hover, &:focus{
-                color:var(--emvi-primary-rgb);
-                text-decoration: none;
-                box-shadow:unset;
-                transition: 0.2s ease-in;
             }
         }
     }
@@ -347,7 +336,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 .is-dropdown-submenu{
     border:0;
 }
-
 .main-footer, .mini-footer{
     background-color: var(--emvi-background-hsl);
     color:var(--emvi-body-font-rgb);
@@ -394,7 +382,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
     }
 }
 
-.mini-footer .row {
+.mini-footer .row{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -410,6 +398,16 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
         padding-inline-start: 0.3rem;
         padding-right: 0.3rem;
         padding-inline-end: 0.3rem;
+    }
+    &.footer_mitgestalten{
+        padding:0 0 1rem 0;
+        color:var(--emvi-nav-highlight-grey-rgb);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        .mitgestalten_logo{
+            max-height:50px;
+        }
     }
     @include breakpoint(smallmedium){
         flex-direction: row;

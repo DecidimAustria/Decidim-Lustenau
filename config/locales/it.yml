@@ -1553,7 +1553,7 @@ it:
         cc_by_license: Licenza Creative Commons
         decidim_logo: Logo Decidim
         download_open_data: Scarica i file Open Data
-        made_with_open_source: Sito web creato con <a target="_blank" href="https://github.com/decidim/decidim">software libero</a> by <a target="_blank" href="https://partizipationsbuero.at"> mitgestalten Partizipationsbüro</a> 
+        made_with_open_source: Sito web creato con <a target="_blank" href="https://github.com/decidim/decidim">software libero</a>
       header:
         close_menu: Chiudere menu
         main_menu: Menù principale
