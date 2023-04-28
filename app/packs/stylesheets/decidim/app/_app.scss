@@ -87,7 +87,9 @@ a, a:hover, .card__link, .card__text a{
     background-color: rgba(var(--app-primary-rgb), 1);
     color:rgba(var(--app-background-rgb), 1);
 }
-
 .callout.secondary, .callout.primary{
     border-left:none;
+}
+.hero__container{
+    min-height: 73vh;
 }
