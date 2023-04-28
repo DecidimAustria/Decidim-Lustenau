@@ -15,35 +15,31 @@
   )
 %>
 <style>
-.process-header{
-    background-image: unset;
-}
-
-.process-header__inner{
-    min-height: 250px;
-}
-
 .process-header__main{
     max-width:75rem;
     margin: auto auto;
-    padding:auto;
-    -webkit-clip-path: unset;
-    clip-path: unset;
+    position: absolute;
+    height: 100%;
     <% if post.photo.present? %>
       background-image:url('<%= post.photo.url %>');
     <% end %>
 }
-
 .process-header__main::after{
   background-color: transparent;
 }
-
+.process-header__inner {
+    min-height: 250px;
+    display:flex;
+}
 @media print, screen and (min-width: 50em){
-    .process-header__inner{
+    .process-header__inner {
         height: 500px;
         padding-right: 0.9375rem;
         padding-left: 0.9375rem;
     }
+}
+.text-highlight {
+  color:rgba(var(--app-background-even-rgb), 1);
 }
 </style>
 <div class="row column view-header">

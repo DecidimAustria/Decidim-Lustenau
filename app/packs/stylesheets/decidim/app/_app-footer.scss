@@ -2,11 +2,11 @@
 FOOTER
 */
 .main-footer, .mini-footer{
-    background-color: rgb(var(--app-background-even-rgb), 1);
-    color: rgb(var(--app-body-font-rgb), 1);
+    background-color: rgba(var(--app-background-even-rgb), 1);
+    color: rgba(var(--app-body-font-rgb), 1);
 }
 .main-footer{
-    /*border-top: 1px solid rgb(var(--app-body-font-rgb), 1);*/
+    /*border-top: 1px solid rgba(var(--app-body-font-rgb), 1);*/
     .row{
         display: flex;
         align-items: center;
@@ -74,7 +74,7 @@ FOOTER
     }
     &.footer_mitgestalten{
         padding:0 0 1rem 0;
-        color:rgb(var(--app-nav-highlight-grey-rgb), 1);
+        color:rgba(var(--app-nav-highlight-grey-rgb), 1);
         font-size: 0.8rem;
         font-weight: 500;
         text-transform: uppercase;
@@ -93,10 +93,10 @@ FOOTER
     }
 }
 .main-footer a, .mini-footer a, .footer-social .icon{
-    color:rgb(var(--app-body-font-rgb), 1);
+    color:rgba(var(--app-body-font-rgb), 1);
     transition: color 0.2s ease-in;
     &:hover{
-        color:rgb(var(--app-primary-rgb), 1);
+        color:rgba(var(--app-primary-rgb), 1);
         text-decoration: none;
     }
 }
@@ -105,11 +105,11 @@ a.small_logo{
     .svg-logo{
         height:1.5rem;
         width:auto;
-        color:rgb(var(--app-body-font-rgb), 1);
+        color:rgba(var(--app-body-font-rgb), 1);
         transition: color 0.2s ease-in;
         margin:0 0.5rem;
         &:hover{
-            color:rgb(var(--app-primary-rgb), 1); 
+            color:rgba(var(--app-primary-rgb), 1); 
         }
     }
     
