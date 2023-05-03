@@ -31,9 +31,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
 .text-highlight.heading1{
     font-weight: 400;
 }
-a, a:hover, .card__link, .card__text a{
-    color:rgba(var(--app-body-font-rgb), 1);
+a, a:hover, .card__link, .card__text a, .link, .sign-up-link{
+    color: rgba(var(--app-primary-rgb) , 1);
     text-decoration: none;
+    &:hover{
+        color: rgba(var(--app-primary-rgb) , 1);
+        text-decoration: none;
+    }
 }
 .tooltip{
     a, a:hover, .card__link, .card__text a{
@@ -49,15 +53,6 @@ a, a:hover, .card__link, .card__text a{
 }
 .author__verified, .author__badge svg {
     color: rgba(var(--app-primary-rgb) , 1);
-}
-
-.link{
-    color: rgba(var(--app-primary-rgb) , 1);
-}
-.link:hover{
-    color: rgba(var(--app-primary-rgb) , 1);
-    transition: 0.2s ease-in;
-    text-decoration: none;
 }
 
 .m-r-5{
@@ -85,11 +80,22 @@ a, a:hover, .card__link, .card__text a{
 }
 .floating-helper__content-close:hover{
     background-color: rgba(var(--app-primary-rgb), 1);
-    color:rgba(var(--app-background-rgb), 1);
+    color:rgba(var(--app-background-rgb), 1) !important;
 }
 .callout.secondary, .callout.primary{
     border-left:none;
 }
 .hero__container{
     min-height: 73vh;
+}
+
+.dc-dialog{
+    box-shadow: 0 0 rgb(var(--app-body-font-rgb),1), 
+    0 0 rgb(var(--app-body-font-rgb),1), 
+    0 10px 15px -3px rgb(var(--app-body-font-rgb),.1), 
+    0 4px 6px -4px rgb(var(--app-body-font-rgb),.1);
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after{
+    border-color: rgba(var(--app-primary-rgb), 1) transparent transparent;
 }

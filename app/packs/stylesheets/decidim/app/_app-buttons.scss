@@ -62,8 +62,9 @@ button CTA banner homepage has class
     color: rgba(var(--app-body-font-rgb),1);
     border-color: rgba(var(--app-body-font-rgb),1);
     background-color: transparent;
+    border-radius: 0;
     &:hover{
-        color: rgba(var(--app-background-even-rgb),1);
+        color: rgba(var(--app-background-even-rgb),1) !important;
         border-color: rgba(var(--app-body-font-rgb),1);
         background-color: rgba(var(--app-body-font-rgb),1);
     }
@@ -76,9 +77,47 @@ button CTA banner homepage has class
             background-color: rgba(var(--app-body-font-rgb),1);
         }
     }
+    &.primary, &.secondary{
+        color: rgba(var(--app-body-font-rgb),1);
+        border-color: rgba(var(--app-body-font-rgb),1);
+        background-color: transparent;
+        &:hover{
+            color: rgba(var(--app-background-even-rgb),1);
+            border-color: rgba(var(--app-body-font-rgb),1);
+            background-color: rgba(var(--app-body-font-rgb),1);
+        }
+    }
+}
+
+.button.secondary.hollow, .button.secondary.hollow.hover, .secondary.hover.meeting-polls__button, .button.secondary.hollow:hover, .secondary.meeting-polls__button:hover, .button.secondary.hollow.focus, .secondary.focus.meeting-polls__button, .button.secondary.hollow:focus, .secondary.meeting-polls__button:focus, .button--shadow.secondary{
+    color: rgba(var(--app-body-font-rgb),1);
+    border-color: rgba(var(--app-body-font-rgb),1);
+    background-color: transparent;
+    &:hover{
+        color: rgba(var(--app-background-even-rgb),1);
+        border-color: rgba(var(--app-body-font-rgb),1);
+        background-color: rgba(var(--app-body-font-rgb),1);
+    }
+}
+
+.button.secondary, .secondary.meeting-polls__button {
+    background-color: transparent;
+}
+
+.button.light:not(.hollow):not(.meeting-polls__button).secondary, .light.meeting-polls__button:not(.hollow):not(.meeting-polls__button).secondary {
+    color: rgba(var(--app-body-font-rgb),1);
+    &:hover{
+        color: rgba(var(--app-background-even-rgb),1);
+    }
 }
 
 .hero__container{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .row{
+        width:100%;
+    }
     .button{
         color: rgba(var(--app-background-even-rgb), 1);
         background-color: transparent;
@@ -95,6 +134,40 @@ button CTA banner homepage has class
         }
     }
     .hero-cta{
-        margin-top:auto;
+        margin-top: auto;
+        padding: 0 0.5rem;
+        width: auto;
+        display: unset;
+        &:hover{
+            filter: brightness(100%);
+        }
     }
+}
+
+.button.clear, .clear.meeting-polls__button, .button.clear.disabled{
+    color: rgba(var(--primary-rgb),1);
+    &:hover{
+        color: rgba(var(--app-body-font-rgb),1);
+    }
+}
+
+.close-button:hover, .close-button:focus{
+    color: rgba(var(--primary-rgb),1);
+}
+
+.card--full__image{
+    .button{
+        color: rgba(var(--app-body-font-rgb),1);
+        background-color: rgba(var(--app-background-even-rgb),1);
+        border-color:transparent;
+        &:hover{
+            color: rgba(var(--app-background-even-rgb),1);
+            background-color: rgba(var(--app-body-font-rgb),1);
+            border-color:transparent;
+        }
+    }
+}
+
+.button--icon.hollow.secondary .icon-wrap, .button--icon.secondary.meeting-polls__button .icon-wrap {
+    border-right: 1px solid rgba(var(--app-body-font-rgb),1);
 }

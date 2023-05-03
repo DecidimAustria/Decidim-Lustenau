@@ -73,12 +73,15 @@
 
 a .card__title{
     color:rgb(var(--app-primary-rgb), 1);
+    &:hover{
+        text-decoration: none;
+        color:rgb(var(--app-primary-rgb), 1);
+        transition: 0.2s ease-in;
+        text-decoration: none;
+    }
 }
 
-a .card__title:hover {
-    text-decoration: none;
-    color:rgb(var(--app-primary-rgb), 1);
-    transition: 0.2s ease-in;
+.card--full .card__title:hover {
     text-decoration: none;
 }
 
