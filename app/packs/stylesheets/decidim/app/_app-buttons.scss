@@ -1,0 +1,173 @@
+/*
+default decidim classes - 
+button -> full background
+button:hover -> get darker
+hollow -> inverse background
+.button.hollow {
+    background-color: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+    text-decoration: none;
+}
+hollor:hover -> inverse
+.button.hollow:hover, .button.hollow.focus, .meeting-polls__button:hover, .focus.meeting-polls__button, .meeting-polls__button:focus {
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: #fff;
+}
+expanded -> button full width
+
+.button--sc {
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+primary -> color primary
+secondary -> color secondary
+large -> font size
+small -> font size and padding
+
+card__button -> buttons in card have this extra class
+
+follow button, inner span with icon
+.button--icon.hollow.secondary .icon-wrap, .button--icon.secondary.meeting-polls__button .icon-wrap {
+    border-right: 1px solid var(--secondary);
+}
+.button--icon.hollow .icon-wrap, .button--icon.meeting-polls__button .icon-wrap {
+    border-right: 1px solid var(--primary);
+}
+
+button only text
+.button.clear.secondary, .clear.secondary.meeting-polls__button{
+    color: #39747f;
+    color: var(--secondary);
+}
+.button.clear.secondary, .clear.secondary.meeting-polls__button, .button.clear.success, .clear.success.meeting-polls__button, .button.clear.alert, .clear.alert.meeting-polls__button, .button.clear.warning, .clear.warning.meeting-polls__button {
+    background-color: transparent;
+}
+.button.clear, .clear.meeting-polls__button, .button.clear:hover, .button.clear:focus, .button.clear.disabled, .button.clear.disabled:hover, .button.clear.disabled:focus, .button.clear[disabled], .button.clear[disabled]:hover, .button.clear[disabled]:focus {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+button CTA banner homepage has class
+.hero-cta 
+*/
+
+.button--sc{
+    font-weight: 500;
+}
+
+.button{
+    color: rgba(var(--app-body-font-rgb),1);
+    border-color: rgba(var(--app-body-font-rgb),1);
+    background-color: transparent;
+    border-radius: 0;
+    &:hover{
+        color: rgba(var(--app-background-even-rgb),1) !important;
+        border-color: rgba(var(--app-body-font-rgb),1);
+        background-color: rgba(var(--app-body-font-rgb),1);
+    }
+    &.hollow{
+        color: rgba(var(--app-body-font-rgb),1);
+        border-color: rgba(var(--app-body-font-rgb),1);
+        &:hover{
+            color: rgba(var(--app-background-even-rgb),1);
+            border-color: rgba(var(--app-body-font-rgb),1);
+            background-color: rgba(var(--app-body-font-rgb),1);
+        }
+    }
+    &.primary, &.secondary{
+        color: rgba(var(--app-body-font-rgb),1);
+        border-color: rgba(var(--app-body-font-rgb),1);
+        background-color: transparent;
+        &:hover{
+            color: rgba(var(--app-background-even-rgb),1);
+            border-color: rgba(var(--app-body-font-rgb),1);
+            background-color: rgba(var(--app-body-font-rgb),1);
+        }
+    }
+}
+
+.button.secondary.hollow, .button.secondary.hollow.hover, .secondary.hover.meeting-polls__button, .button.secondary.hollow:hover, .secondary.meeting-polls__button:hover, .button.secondary.hollow.focus, .secondary.focus.meeting-polls__button, .button.secondary.hollow:focus, .secondary.meeting-polls__button:focus, .button--shadow.secondary{
+    color: rgba(var(--app-body-font-rgb),1);
+    border-color: rgba(var(--app-body-font-rgb),1);
+    background-color: transparent;
+    &:hover{
+        color: rgba(var(--app-background-even-rgb),1);
+        border-color: rgba(var(--app-body-font-rgb),1);
+        background-color: rgba(var(--app-body-font-rgb),1);
+    }
+}
+
+.button.secondary, .secondary.meeting-polls__button {
+    background-color: transparent;
+}
+
+.button.light:not(.hollow):not(.meeting-polls__button).secondary, .light.meeting-polls__button:not(.hollow):not(.meeting-polls__button).secondary {
+    color: rgba(var(--app-body-font-rgb),1);
+    &:hover{
+        color: rgba(var(--app-background-even-rgb),1);
+    }
+}
+
+.hero__container{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .row{
+        width:100%;
+    }
+    .button{
+        color: rgba(var(--app-background-even-rgb), 1);
+        background-color: transparent;
+        border: transparent;
+    }
+    .button--sc{
+        font-size:1.15rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .hero-cta{
+        margin-top: auto;
+        padding: 0 0.5rem;
+        width: auto;
+        display: unset;
+        &:hover{
+            filter: brightness(100%);
+        }
+    }
+}
+
+.button.clear, .clear.meeting-polls__button, .button.clear.disabled{
+    color: rgba(var(--primary-rgb),1);
+    &:hover{
+        color: rgba(var(--app-body-font-rgb),1);
+    }
+}
+
+.close-button:hover, .close-button:focus{
+    color: rgba(var(--primary-rgb),1);
+}
+
+.card--full__image{
+    .button{
+        color: rgba(var(--app-body-font-rgb),1);
+        background-color: rgba(var(--app-background-even-rgb),1);
+        border-color:transparent;
+        &:hover{
+            color: rgba(var(--app-background-even-rgb),1);
+            background-color: rgba(var(--app-body-font-rgb),1);
+            border-color:transparent;
+        }
+    }
+}
+
+.button--icon.hollow.secondary .icon-wrap, .button--icon.secondary.meeting-polls__button .icon-wrap {
+    border-right: 1px solid rgba(var(--app-body-font-rgb),1);
+}
