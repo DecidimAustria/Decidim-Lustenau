@@ -6,8 +6,8 @@
 }
 
 .card{
-    background-color: rgb(var(--app-background-even-rgb), 1);
-    box-shadow: 0 0 rgb(var(--app-body-font-rgb),1), 0 0 rgb(var(--app-body-font-rgb),1), 0 10px 15px -3px rgb(var(--app-body-font-rgb),.1), 0 4px 6px -4px rgb(var(--app-body-font-rgb),.1);
+    background-color: rgba(var(--app-background-even-rgb), 1);
+    box-shadow: 0 0 5px 0 rgba(var(--app-body-font-rgb),.1);
     position: relative;
 }
 

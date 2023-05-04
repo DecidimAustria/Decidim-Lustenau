@@ -63,10 +63,15 @@ button CTA banner homepage has class
     border-color: rgba(var(--app-body-font-rgb),1);
     background-color: transparent;
     border-radius: 0;
+    fill: rgba(var(--app-body-font-rgb),1);
+    &:focus{
+        background-color: transparent;
+    }
     &:hover{
-        color: rgba(var(--app-background-even-rgb),1) !important;
+        color: rgba(var(--app-background-even-rgb),1);
         border-color: rgba(var(--app-body-font-rgb),1);
         background-color: rgba(var(--app-body-font-rgb),1);
+        fill: rgba(var(--app-background-even-rgb),1);
     }
     &.hollow{
         color: rgba(var(--app-body-font-rgb),1);
