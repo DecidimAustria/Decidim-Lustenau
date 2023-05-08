@@ -118,3 +118,14 @@ a, .card__link, .card__text a, .link, .sign-up-link{
         font-weight: 400;
     }
 }
+
+.filters__search .input-group{
+    .input-group-field{
+        border-right: 0;
+    }
+    .input-group-button{
+        button{
+            height: 2.4375rem;
+        }
+    }
+}

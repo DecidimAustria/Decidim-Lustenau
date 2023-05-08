@@ -64,8 +64,10 @@ button CTA banner homepage has class
     background-color: transparent;
     border-radius: 0;
     fill: rgba(var(--app-body-font-rgb),1);
-    &:focus{
+    &:focus, &:disabled, &:disabled:hover{
         background-color: transparent;
+        color: rgba(var(--app-body-font-rgb),1);
+        border-color: rgba(var(--app-body-font-rgb),1);
     }
     &:hover{
         color: rgba(var(--app-background-even-rgb),1);
@@ -93,7 +95,9 @@ button CTA banner homepage has class
         }
     }
 }
-
+.opinion-toggle--meh.is-active:not(:hover){
+    background-color: transparent;
+}
 .button.secondary.hollow, .button.secondary.hollow.hover, .secondary.hover.meeting-polls__button, .button.secondary.hollow:hover, .secondary.meeting-polls__button:hover, .button.secondary.hollow.focus, .secondary.focus.meeting-polls__button, .button.secondary.hollow:focus, .secondary.meeting-polls__button:focus, .button--shadow.secondary{
     color: rgba(var(--app-body-font-rgb),1);
     border-color: rgba(var(--app-body-font-rgb),1);
