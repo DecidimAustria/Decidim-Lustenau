@@ -93,37 +93,45 @@
         text-decoration: none;
     }
 }
-.topbar__dropmenu .is-dropdown-submenu {
-    background-color: rgba(var(--app-background-even-rgb), 1);
-    box-shadow: 0 4px 20px 0 rgba(0,0,0,.1);
-    border: none;
-}
-.topbar__dropmenu .is-dropdown-submenu li{
-    color: rgba(var(--app-nav-highlight-grey-rgb), 1);
-    transition-property: color, background-color;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
-    text-decoration: none;
-}
-.topbar__dropmenu .is-dropdown-submenu li:hover, .topbar__dropmenu .is-dropdown-submenu li:focus {
-    color:rgba(var(--app-background-even-rgb), 1);
-    text-decoration: none;
-    background-color: rgba(var(--app-primary-rgb), 1);
-    transition-property: color, background-color;
-    transition-duration: 200ms;
-    transition-timing-function: ease-in;
-}
-.topbar__dropmenu .is-dropdown-submenu li a, .topbar__dropmenu .is-dropdown-submenu li a:hover, .topbar__dropmenu .is-dropdown-submenu li a:focus{
-    padding: 0.5rem;
-    color: inherit;
-    text-decoration: none;
-}
-.topbar__dropmenu .is-dropdown-submenu li:hover a:focus{
-    outline-color: transparent;
-}
-.topbar__dropmenu .is-dropdown-submenu li:not(:last-child) {
-    border-bottom: 1px solid #e8e8e8;
-}
+.dropdown{
+    .is-dropdown-submenu{
+        background-color: rgba(var(--app-background-even-rgb), 1);
+        box-shadow: 0 4px 20px 0 rgba(0,0,0,.1);
+        border: none;
+        li{
+            padding: 0.5rem;
+            color: rgba(var(--app-nav-highlight-grey-rgb), 1);
+            transition-property: color, background-color;
+            transition-duration: 200ms;
+            transition-timing-function: ease-out;
+            text-decoration: none;
+            &:hover, &:focus{
+                color:rgba(var(--app-background-even-rgb), 1);
+                text-decoration: none;
+                background-color: rgba(var(--app-primary-rgb), 1);
+                transition-property: color, background-color;
+                transition-duration: 200ms;
+                transition-timing-function: ease-in;
+                a:focus{
+                    outline-color: rgba(var(--app-primary-rgb), 1);
+                }
+            }
+            &:not(:last-child){
+                border-bottom: 1px solid #e8e8e8;
+            }
+            a{
+                padding: 0.5rem;
+                color: inherit;
+                text-decoration: none;
+                &:hover, &:focus{
+                    padding: 0.5rem;
+                    color: inherit;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+ }
 
 .topbar__admin__link{
     a{

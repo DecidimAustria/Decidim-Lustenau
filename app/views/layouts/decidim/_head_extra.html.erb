@@ -12,6 +12,8 @@ The `header_snippets` organization field will render *after* this file.
 Just copy your own version of the file under:
 `app/views/layouts/decidim/_head_extra.html.erb`
 %>
+<link rel="alternate" href="<%= decidim_meta_url %>" hreflang="x-default" />
+
 <link rel="preload" as="font" type="font/woff2" href="<%= asset_pack_path('media/images/NeueHaasUnicaPro-Light.woff2') %>" crossorigin="anonymous">
 <link rel="preload" as="font" type="font/woff2" href="<%= asset_pack_path('media/images/NeueHaasUnicaPro-Thin.woff2') %>" crossorigin="anonymous">
 <link rel="preload" as="font" type="font/woff2" href="<%= asset_pack_path('media/images/NeueHaasUnicaPro-Regular.woff2') %>" crossorigin="anonymous">
