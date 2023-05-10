@@ -1,0 +1,131 @@
+/* 
+Created: 23.11.2022
+Modified: 24.11.2022
+Author: Piero Chiussi | info@webchroma.de
+*/
+body{
+    font-family: $body-font-family;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+    color:rgba(var(--app-body-font-rgb) , 1);
+    background: rgba(var(--app-background-rgb), 1);
+}
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.heading1{
+  font-family: $body-font-family;
+  font-weight: 400;
+  a{
+    font-weight: 400;
+  }
+}
+.section-heading{
+    font-weight: 500;
+}
+.off-canvas-wrapper{
+    background: rgba(var(--app-background-rgb), 1);
+}
+.text-highlight.heading1{
+    font-weight: 400;
+}
+a, .card__link, .card__text a, .link, .sign-up-link{
+    color: rgba(var(--app-primary-rgb) , 1);
+    text-decoration: none;
+    &:hover{
+        color: rgba(var(--app-primary-rgb) , 1);
+        text-decoration: none;
+    }
+}
+.tooltip{
+    a, a:hover, .card__link, .card__text a{
+        color: rgba(var(--app-primary-rgb) , 1);
+    }
+    a:hover{
+        transition: 0.2s ease-in;
+        text-decoration: none;
+    }
+    a.author__nickname{
+        color:rgba(var(--app-body-font-rgb), 1);
+    }
+}
+.author__verified, .author__badge svg {
+    color: rgba(var(--app-primary-rgb) , 1);
+}
+
+.m-r-5{
+    margin-right:0.4rem;
+}
+.callout{
+    &.primary, &.secondary{
+        background-color:transparent;
+    }
+}
+.floating-helper__content {
+	background-color: transparent;
+	border-top: none;
+	margin-bottom: 3rem;
+	padding: 2rem;
+	width: 100%;
+}
+.floating-helper__icon-big{
+    display:none;
+}
+.floating-helper__content-close{
+    background-color: rgba(var(--app-body-font-rgb), 1);
+    color:rgba(var(--app-background-rgb), 1);
+    transition: all ease 500ms;
+}
+.floating-helper__content-close:hover{
+    background-color: rgba(var(--app-primary-rgb), 1);
+    color:rgba(var(--app-background-rgb), 1) !important;
+}
+.callout.secondary, .callout.primary{
+    border-left:none;
+}
+.hero__container{
+    min-height: 73vh;
+}
+
+.dc-dialog{
+    box-shadow: 0 0 5px 0 rgba(var(--app-body-font-rgb),.1);
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after{
+    border-color: rgba(var(--app-primary-rgb), 1) transparent transparent;
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a {
+    background-color: transparent;
+}
+
+#profile-tabs.tabs .tabs-title.is-active a{
+    font-weight: 400;
+    border-bottom: 1px solid rgba(var(--app-primary-rgb), 1);
+}
+
+#profile-tabs.tabs .tabs-title a{
+    color: rgba(var(--app-body-font-rgb),1);
+    &:hover, &:focus{
+        color: rgba(var(--app-primary-rgb), 1);
+        border-bottom: 1px solid rgba(var(--app-primary-rgb), 1);
+    }
+    &:focus{
+        font-weight: 400;
+    }
+}
+
+.filters__search .input-group{
+    .input-group-field{
+        border-right: 0;
+    }
+    .input-group-button{
+        button{
+            height: 2.4375rem;
+        }
+    }
+}

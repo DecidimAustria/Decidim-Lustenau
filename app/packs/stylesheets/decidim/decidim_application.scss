@@ -6,5 +6,12 @@
 //
 // By default this is empty.
 
-@import "stylesheets/decidim/emvi/fontface";
-@import "stylesheets/decidim/emvi/emvi";
+@import "stylesheets/decidim/app/app-fontface";
+@import "stylesheets/decidim/app/app";
+@import "stylesheets/decidim/app/app-header";
+@import "stylesheets/decidim/app/app-footer";
+@import "stylesheets/decidim/app/app-cards";
+@import "stylesheets/decidim/app/app-buttons";
+@import "stylesheets/decidim/app/app-pages";
+@import "stylesheets/decidim/app/app-content-blocks";
+@import "stylesheets/decidim/app/alternative-landing";

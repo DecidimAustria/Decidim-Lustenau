@@ -22,28 +22,26 @@ extra_admin_link(
 )
 %>
 <style>
-.process-header{
-    background-image: unset;
-}
-
-.process-header__inner{
-    min-height: 250px;
-}
-
 .process-header__main{
     max-width:75rem;
     margin: auto auto;
-    -webkit-clip-path: unset;
-    clip-path: unset;
+    position: absolute;
+    height: 100%;
     <% if @proposal.photo.present? %>
       background-image:url('<%= @proposal.photo.url %>');
     <% end %>
 }
-
+.process-header__inner {
+    min-height: 250px;
+    display:flex;
+}
 @media print, screen and (min-width: 50em){
-    .process-header__inner{
+    .process-header__inner {
         height: 500px;
     }
+}
+.text-highlight {
+  color:rgba(var(--app-background-even-rgb), 1);
 }
 </style>
 <%= render partial: "voting_rules" %>
