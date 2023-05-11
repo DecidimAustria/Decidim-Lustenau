@@ -164,7 +164,7 @@ button CTA banner homepage has class
     color: rgba(var(--primary-rgb),1);
 }
 
-.card--full__image, .highlighted_content_banner{
+.card--full__image, .highligted-content-banner__container{
     .button{
         color: rgba(var(--app-body-font-rgb),1);
         background-color: rgba(var(--app-background-even-rgb),1);
@@ -183,4 +183,7 @@ button CTA banner homepage has class
 
 .leaflet-container .map-info a.button, .leaflet-container a{
     color: rgba(var(--app-body-font-rgb),1);
+    &:hover{
+        color: rgba(var(--app-background-even-rgb),1);
+    }
 }
