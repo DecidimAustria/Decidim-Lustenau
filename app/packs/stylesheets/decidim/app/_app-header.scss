@@ -247,9 +247,9 @@
             .search-btn-inner{
                 position:absolute;
                 z-index:10;
+                background-color: rgba(var(--app-background-even-rgb), 1);
                 &.is-close{
                     z-index:1;
-                    display:none;
                 }
                 svg{
                     cursor:pointer;

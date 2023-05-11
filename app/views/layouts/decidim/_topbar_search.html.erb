@@ -8,7 +8,7 @@
         <% end %>
         <div class="input-group-button">
           <!-- The button wrapper is important for Safari and Firefox -->
-          <div class="button-wrapper">
+          <div class="button-wrapper" style="display:none;">
             <%= submit_tag icon("magnifying-glass", aria_label: t("decidim.search.term_input_placeholder"), role: "img"), title: t("decidim.search.term_input_placeholder"), id: :submit, class: "button" %>
           </div>
         </div>
@@ -16,6 +16,13 @@
     <% end %>
   </div>
   <div class="search-btn">
+        <div class="search-btn-inner" data-action="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none">
+              <g stroke="inherit" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#a)">
+                <path d="m.5.499 23 23M23.5.499l-23 23"></path>
+              </g>
+            </svg>
+        </div>
         <div class="search-btn-inner" data-action="open">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
               <g stroke="inherit" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#a)">
@@ -23,41 +30,5 @@
               </g>
             </svg>
         </div>
-        <div class="search-btn-inner is-close" data-action="close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none">
-              <g stroke="inherit" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#a)">
-                <path d="m.5.499 23 23M23.5.499l-23 23"></path>
-              </g>
-            </svg>
-        </div>
     </div>
 </div>
-<script>
-$(window).on('load', function () {
-    $('.search-btn-inner').on('click', function(){
-        console.log($(this).attr('data-action'));
-        console.log();
-        switch ( $(this).attr('data-action') ){
-            case 'open':
-              $('.topbar__search input').focus();
-              $('.searchbar').addClass('is-aktiv');
-              $(this).hide('fast', function(){
-                $('.search-btn-inner.is-close').show('fast',function(){
-                  $(this).removeClass('is-close');
-                });
-                $(this).addClass('is-close');
-              });
-              break;
-            case 'close':
-              $('.searchbar').removeClass('is-aktiv');
-              $(this).hide('fast', function(){
-                $('.search-btn-inner.is-close').show('fast',function(){
-                  $(this).removeClass('is-close');
-                });
-                $(this).addClass('is-close');
-              });
-              break;
-        }
-    });
-});
-</script>

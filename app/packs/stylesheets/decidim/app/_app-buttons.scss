@@ -164,7 +164,7 @@ button CTA banner homepage has class
     color: rgba(var(--primary-rgb),1);
 }
 
-.card--full__image{
+.card--full__image, .highlighted_content_banner{
     .button{
         color: rgba(var(--app-body-font-rgb),1);
         background-color: rgba(var(--app-background-even-rgb),1);
@@ -179,4 +179,8 @@ button CTA banner homepage has class
 
 .button--icon.hollow.secondary .icon-wrap, .button--icon.secondary.meeting-polls__button .icon-wrap {
     border-right: 1px solid rgba(var(--app-body-font-rgb),1);
+}
+
+.leaflet-container .map-info a.button, .leaflet-container a{
+    color: rgba(var(--app-body-font-rgb),1);
 }
