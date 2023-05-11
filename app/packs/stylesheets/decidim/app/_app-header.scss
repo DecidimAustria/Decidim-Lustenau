@@ -153,6 +153,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding-bottom: 1rem;
+    position:relative;
     @include breakpoint(medium){
         align-items: center;
     }
@@ -161,55 +162,111 @@
         flex-direction: row;
         padding-bottom: 0;
     }
-    nav{
+    .main-nav{
         flex:1 0 auto;
     }
-    div{
-        flex:0 0 auto;
-    }
-}
-.topbar__search{
-    input{
-        background: rgba(var(--app-background-rgb), 1);
-        border-color: rgba(var(--app-primary-rgb), 1);
-        border-right:0px;
-        color:rgba(var(--app-body-font-rgb), 1);
-        &:focus{
-            border:1px solid rgba(var(--app-primary-rgb), 1);
-            border-right:0px;
-        }
-        &::placeholder {
-            color:rgba(var(--app-body-font-rgb), 1);
-            opacity: 0.7;
-          }
-    }
-    &:focus-within{
-        background: rgba(var(--app-background-rgb), 1);
-        input{
-            &::placeholder{
-                color:rgba(var(--app-body-font-rgb), 1);
+    .searchbar{
+        background-color: rgba(var(--app-background-even-rgb), 1);
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        display:flex;
+        justify-content:flex-end;
+        align-items:center;
+        flex-wrap:wrap;
+        &.is-aktiv{
+            left: 0;
+            .topbar__search{
+                display: block;
                 opacity: 1;
             }
         }
-    }
-    
-    &:not(:focus-within){
-        button{
-          background-color: rgba(var(--app-background-rgb), 1);
-          color: rgba(var(--app-secondary-rgb), 1);
-          border:1px solid rgba(var(--app-primary-rgb), 1);
-          border-left:0px;
-          @include breakpoint(medium){
-            background: rgba(var(--app-background-rgb), 1);
-          }
+        .topbar__search{
+            flex: 1;
+            padding-right: 2rem;
+            max-width: 75%;
+            display:none;
+            opacity:0;
+            form:first-child {
+                display: block;
+            }
+            input{
+                background: transparent;
+                border-color: rgba(var(--app-body-font-rgb), 0.5);
+                border-right:0px;
+                border-left:0px;
+                border-top:0px;
+                border-radius:0;
+                color:rgba(var(--app-body-font-rgb), 1);
+                height: 4rem;
+                &:focus{
+                    border-bottom:1px solid rgba(var(--app-body-font-rgb), 0.5);
+                }
+                &::placeholder {
+                    color:rgba(var(--app-body-font-rgb), 1);
+                    opacity: 0.7;
+                  }
+            }
+            button{
+                background: transparent;
+                border-color: rgba(var(--app-body-font-rgb), 0.5);
+                border-right:0px;
+                border-left:0px;
+                border-top:0px;
+                border-radius:0;
+                height: 4rem;
+            }
+            &:focus-within{
+                background: rgba(var(--app-background-even-rgb), 1);
+                input{
+                    &::placeholder{
+                        color:rgba(var(--app-body-font-rgb), 1);
+                        opacity: 1;
+                    }
+                }
+            }
+            &:not(:focus-within){
+                button{
+                    background-color: rgba(var(--app-background-even-rgb), 1);
+                    color: rgba(var(--app-body-font-rgb), 1);
+                    border: 1px solid rgba(var(--app-body-font-rgb), 0.5);
+                    border-right:0px;
+                    border-left:0px;
+                    border-top:0px;
+                    @include breakpoint(medium){
+                        background: rgba(var(--app-background-even-rgb), 1);
+                    }
+                }
+            }
+        }
+        .search-btn{
+            position:relative;
+            width:40px;
+            height:40px;
+            .search-btn-inner{
+                position:absolute;
+                z-index:10;
+                background-color: rgba(var(--app-background-even-rgb), 1);
+                &.is-close{
+                    z-index:1;
+                }
+                svg{
+                    cursor:pointer;
+                    stroke:rgba(var(--app-body-font-rgb),1);
+                    &:hover{
+                        stroke:rgba(var(--app-primary-rgb),1);
+                        @media screen and (prefers-reduced-motion: no-preference){
+                            transition: stroke 200ms ease;
+                        }
+                    }
+                    @media screen and (prefers-reduced-motion: no-preference){
+                        transition: stroke 200ms ease;
+                    }
+                }
+            }
         }
     }
-    @include breakpoint(medium){
-        max-width: 150px;
-    }  
-    @include breakpoint(large){
-        max-width: 220px;
-    }  
 }
 
 .sign-in-icon .icon{
