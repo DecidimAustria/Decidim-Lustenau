@@ -144,11 +144,40 @@ button CTA banner homepage has class
     }
     .hero-cta{
         margin-top: auto;
-        padding: 0 0.5rem;
+        padding: 0 0rem;
         width: auto;
         display: unset;
         &:hover{
             filter: brightness(100%);
+        }
+    }
+}
+
+.topbar__search{
+    &:not(:focus-within) button{
+        color: rgba(var(--app-body-font-rgb),1);
+    }
+    &:focus-within input{
+        border-left: 1px solid;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-color: rgba(var(--app-body-font-rgb),1);
+    }
+    input{
+        border-color: rgba(var(--app-body-font-rgb),1);
+        border-right:0;
+        &::placeholder{
+            color: rgba(var(--app-body-font-rgb),1);
+        }
+        @include breakpoint(medium){
+            border-color: transparent;
+        }
+    }
+    .input-group-button{
+        .button-wrapper{
+            @include breakpoint(medium){
+                display: none;
+            }
         }
     }
 }
