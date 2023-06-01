@@ -1,0 +1,17 @@
+.side-panel__tabs .tabs-title.is-active > [role=tab], .side-panel__tabs .tabs-title.is-active > a {
+    color: rgba(var(--app-body-font-rgb), 1);
+    background-color: rgb(var(--app-background-even-rgb), 1);
+}
+
+.side-panel__tabs .tabs-title > [role=tab], .side-panel__tabs .tabs-title > a {
+    color: rgba(var(--app-body-font-rgb), 1);
+    &:hover{
+        color: rgba(var(--app-body-font-rgb), 1);
+    }
+}
+.pages .main-container{
+    background-color: rgb(var(--app-background-even-rgb), 1);
+}
+.main-container--side-panel{
+    box-shadow: 0 0 5px 0 rgb(var(--app-body-font-rgb), 0.1);
+}
