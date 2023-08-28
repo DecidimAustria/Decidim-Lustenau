@@ -15,81 +15,20 @@
       </div>
     <% end %>
   </div>
-  <div class="search-btn" data-action="toggle">
-        <div class="search-btn-inner">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <g stroke="inherit" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#a)">
-                <path d="M14.167 27.5c7.364 0 13.334-5.97 13.334-13.333C27.5 6.803 21.53.833 14.167.833 6.804.833.834 6.803.834 14.167S6.804 27.5 14.167 27.5ZM23.594 23.593l15.573 15.574"></path>
-              </g>
-            </svg>
-        </div>
-        <div class="search-btn-inner is-close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none">
+  <div class="search-btn">
+        <div class="search-btn-inner" data-action="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" role="img" aria-label="Zu">
               <g stroke="inherit" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#a)">
                 <path d="m.5.499 23 23M23.5.499l-23 23"></path>
               </g>
             </svg>
         </div>
+        <div class="search-btn-inner" data-action="open">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" role="img" aria-label="Auf">
+              <g stroke="inherit" stroke-linecap="round" stroke-linejoin="round" clip-path="url(#a)">
+                <path d="M14.167 27.5c7.364 0 13.334-5.97 13.334-13.333C27.5 6.803 21.53.833 14.167.833 6.804.833.834 6.803.834 14.167S6.804 27.5 14.167 27.5ZM23.594 23.593l15.573 15.574"></path>
+              </g>
+            </svg>
+        </div>
     </div>
 </div>
-<style>
-    .menubar{
-      position:relative;
-    }
-      .searchbar{
-        position:absolute;
-        top:0;
-        right:0;
-        bottom:0;
-        width:40px;
-        display:flex;
-        justify-content:flex-end;
-        align-items:center;
-        flex-wrap:wrap;
-      }
-      .searchbar.active{
-        background-color:rgba(var(--app-background-even-rgb),1);
-        width:100%;
-      }
-      .topbar__search{
-        max-width: 75%;
-        flex:1 !important;
-        display:none;
-        opacity:0;
-      }
-      .searchbar.active .topbar__search{
-        display:block;
-        opacity:100;
-      }
-      .topbar__search form:first-child {
-        display: block;
-      }
-      .search-btn{
-        position:relative;
-        width:40px;
-        height:40px;
-      }
-      .search-btn-inner{
-        position:absolute;
-        z-index:10;
-      }
-      .is-close{
-        z-index:1;
-        display:none;
-      }
-      .searchbar.active{
-        display:block;
-      }
-      .search-btn-inner svg{
-        cursor:pointer;
-        stroke:rgba(var(--app-body-font-rgb),1);
-      }
-      .search-btn-inner svg:hover{
-        stroke:rgba(var(--app-primary-rgb),1);
-      }
-      @media screen and (prefers-reduced-motion: no-preference){
-        .search-btn-inner svg, .search-btn-inner svg:hover{
-          transition: stroke 200ms ease;
-        }
-      }
-    </style>
