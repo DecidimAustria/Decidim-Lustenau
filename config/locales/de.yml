@@ -1322,8 +1322,8 @@ de:
       results: Suchergebnisse
       results_found_for_term: '%{count} Ergebnisse für die Suche: "%{term}"'
       term_input_placeholder: Suche
-      button_close: Suchfeld anzeigen
-      button_open: Suchfeld schließen
+      button_close: Suchfeld schließen
+      button_open: Suchfeld anzeigen
     searches:
       filters:
         back: Zurück zu den Ergebnissen
