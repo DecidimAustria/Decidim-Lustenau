@@ -1,6 +1,6 @@
 <% if organization %>
   <%= link_to decidim.root_url(host: organization.host), "aria-label": t("front_page_link", scope: "decidim.accessibility") do %>
-    <svg width="253" height="75" viewBox="0 0 1905 671" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" role="img" aria-label="<%= Decidim.application_name %>">
+    <svg width="253" height="75" viewBox="0 0 1905 671" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" role="img" aria-label="<%= decidim_page_title %>">
 <g><path d="M376.479,184.696l0,-93.167c0,-23.162 0.258,-46.583 0.517,-70.004l-0.517,0c-7.979,23.421 -16.471,46.583 -24.967,70.004l-33.97,93.167l-27.279,-0l-33.976,-93.167c-8.491,-23.421 -16.983,-46.583 -24.962,-70.004l-0.512,0c0.254,23.421 0.512,46.842 0.512,70.004l0,93.167l-23.163,-0l0,-183.246l38.092,0l33.2,90.338c8.233,23.158 16.471,47.095 24.192,70.258l0.512,-0c7.721,-23.163 15.959,-47.1 24.192,-70.258l32.946,-90.338l38.346,0l-0,183.246l-23.163,-0Z" style="fill:#00040a;fill-rule:nonzero;"/>
 <path d="M445.475,184.696l0,-130.742l22.646,0l-0,130.742l-22.646,-0Zm0,-157.763l0,-25.483l22.646,0l-0,25.483l-22.646,0Z" style="fill:#00040a;fill-rule:nonzero;"/>
 <path d="M564.896,165.65l-0,18.529c-3.863,1.029 -9.783,1.546 -14.413,1.546c-24.966,-0 -35.52,-10.55 -35.52,-37.575l-0,-76.179l-22.646,-0l-0,-18.017l22.646,0l-0,-31.658l22.645,-0l0,31.658l26,0l0,18.017l-26,-0l0,73.862c0,14.93 4.896,21.105 18.021,21.105c3.346,-0 6.95,-0.517 9.267,-1.288Z" style="fill:#00040a;fill-rule:nonzero;"/>
@@ -30,5 +30,5 @@
 </svg>
   <% end %>
 <% else %>
-  <%= Decidim.application_name %>
+<%= decidim_page_title %>
 <% end %>
