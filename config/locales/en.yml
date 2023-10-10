@@ -1349,6 +1349,8 @@ en:
       results: Search results
       results_found_for_term: '%{count} Results for the search: "%{term}"'
       term_input_placeholder: Search
+      button_close: Close search tab
+      button_open: Open search tab
     searches:
       filters:
         back: Back to results

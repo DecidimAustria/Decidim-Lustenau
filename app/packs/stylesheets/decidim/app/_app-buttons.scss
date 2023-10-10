@@ -94,6 +94,10 @@ button CTA banner homepage has class
             background-color: rgba(var(--app-body-font-rgb),1);
         }
     }
+    &.title-action__action{
+        font-size: 1rem;
+        padding: 1rem 1.2rem;
+    }
 }
 .opinion-toggle--meh.is-active:not(:hover){
     background-color: transparent;
