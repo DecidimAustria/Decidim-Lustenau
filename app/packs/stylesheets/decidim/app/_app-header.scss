@@ -319,6 +319,7 @@
                 transition: background-color 0.25s ease-out, color 0.25s ease-out;
             }
             a:hover, a.choosen-language{
+                height: 100%;
                 text-decoration: none;
                 color:white;
                 background-color: rgba(var(--app-primary-rgb), 1);
