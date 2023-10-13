@@ -1191,13 +1191,13 @@ de:
       home:
         extended:
           debates: Diskussionen
-          debates_explanation: Teilen Sie Ihre Ansichten und bereichern Sie die aus Ihrer Sicht relevanten Themen.
+          debates_explanation: Teile Deine Ansichten und bereichere die aus Deiner Sicht relevanten Themen.
           how_to_participate: Wie nehme ich an einem Prozess teil?
-          meetings: Meetings
-          meetings_explanation: Finden Sie heraus, wo und wann Sie an öffentlichen Veranstaltungen teilnehmen können.
+          meetings: Veranstaltungen
+          meetings_explanation: Finde heraus, wo und wann Du an öffentlichen Veranstaltungen teilnehmen kannst.
           more_info: Mehr Informationen
           proposals: Vorschläge
-          proposals_explanation: Machen Sie Vorschläge, unterstützen Sie bestehende und fördern Sie die Änderungen, die Sie sehen möchten.
+          proposals_explanation: Mache Vorschläge, unterstütze und kommentiere bestehende. 
         footer_sub_hero:
           footer_sub_hero_body: Lasst uns eine offenere, transparentere und kollaborativere Gesellschaft aufbauen.<br /> Beitreten, teilnehmen und entscheiden.
           footer_sub_hero_headline: Willkommen auf der Beteiligungsplattform %{organization}.
