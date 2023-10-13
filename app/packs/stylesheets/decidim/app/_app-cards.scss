@@ -141,6 +141,11 @@ ul.card-data{
             a {
                 text-decoration: underline;
                 text-underline-offset: 0.3rem;
+                transition: text-decoration 100ms ease-in;
+                &:hover{
+                    text-decoration: none;
+                    transition: text-decoration 250ms ease-out;
+                }
             }
         }
         ul{
@@ -151,6 +156,11 @@ ul.card-data{
                 a{
                     text-decoration: underline;
                     text-underline-offset: 0.3rem;
+                    transition: text-decoration 100ms ease-in;
+                    &:hover {
+                        text-decoration: none;
+                        transition: text-decoration 250ms ease-out;
+                    }
                 }
             }
         }
