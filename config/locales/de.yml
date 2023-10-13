@@ -547,12 +547,12 @@ de:
             close_modal: Modal schließen
             uncheck: Ohne Kontakterlaubnis fortfahren
           notice: |-
-            <p>Hey, sind Sie sicher, dass Sie keinen Newsletter erhalten möchten?<br>
-            Bitte überlegen Sie sich noch einmal das Kontrollkästchen für den Newsletter doch anzukreuzen.<br>
-            Für uns ist es sehr wichtig, die Möglichkeit zu haben Ihnen gelegentlich E-Mails mit wichtigen Ankündigungen schicken zu können. Sie können dies jederzeit in den Benachrichtigungseinstellungen ändern.</p>
+            <p>Hallo, bist Du sicher, dass Du keine Informationen von uns erhalten möchtest?<br>
+            Bitte überlege noch einmal das Kontrollkästchen für den Newsletter doch anzukreuzen.<br>
+            Wenn wir Dir keinen Newsletter senden dürfen, können wir dich nicht über neue Veranstaltungen oder Antworten auf Deine Vorschläge informieren. Du kannst dies jederzeit in den Benachrichtigungseinstellungen ändern.</p>
             <p>Wenn Sie das Kontrollkästchen nicht ankreuzen, verpassen Sie möglicherweise relevante Informationen zu neuen Beteiligungsmöglichkeiten auf der Plattform.<br>
-            Wenn Sie nach wie vor keinen Newsletter erhalten möchten, verstehen wir natürlich Ihre Entscheidung.</p>
-            <p>Danke fürs Lesen!</p>
+            Wenn Du nach wie vor keine Informationen erhalten möchtest, verstehen wir das natürlich.</p>
+            <p>Danke für's Lesen!</p>
           title: Newsletter Benachrichtigungen
         omniauth_buttons:
           or: Oder
@@ -1191,13 +1191,13 @@ de:
       home:
         extended:
           debates: Diskussionen
-          debates_explanation: Teilen Sie Ihre Ansichten und bereichern Sie die aus Ihrer Sicht relevanten Themen.
+          debates_explanation: Teile Deine Ansichten und bereichere die aus Deiner Sicht relevanten Themen.
           how_to_participate: Wie nehme ich an einem Prozess teil?
-          meetings: Meetings
-          meetings_explanation: Finden Sie heraus, wo und wann Sie an öffentlichen Veranstaltungen teilnehmen können.
+          meetings: Veranstaltungen
+          meetings_explanation: Finde heraus, wo und wann Du an öffentlichen Veranstaltungen teilnehmen kannst.
           more_info: Mehr Informationen
           proposals: Vorschläge
-          proposals_explanation: Machen Sie Vorschläge, unterstützen Sie bestehende und fördern Sie die Änderungen, die Sie sehen möchten.
+          proposals_explanation: Mache Vorschläge, unterstütze und kommentiere bestehende. 
         footer_sub_hero:
           footer_sub_hero_body: Lasst uns eine offenere, transparentere und kollaborativere Gesellschaft aufbauen.<br /> Beitreten, teilnehmen und entscheiden.
           footer_sub_hero_headline: Willkommen auf der Beteiligungsplattform %{organization}.
