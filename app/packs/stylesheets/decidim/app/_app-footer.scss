@@ -109,7 +109,7 @@ FOOTER
     }
 }
 .main-footer a,
-.mini-footer a{
+.mini-footer a :not(.icona){
     text-decoration: underline;
 }
 a.small_logo{
