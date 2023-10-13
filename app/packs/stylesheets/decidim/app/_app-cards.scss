@@ -133,3 +133,24 @@ ul.card-data{
         }
     }
 }
+
+.pages{
+    .card__content{
+        .card__title{
+            margin-bottom: 1rem;
+            .card_link {
+                text-underline-offset: 0.3rem;
+            }
+        }
+        ul{
+            margin:0;
+            list-style: none;
+            li{
+                padding: bottom 0.4rem;
+                a{
+                    text-underline-offset: 0.3rem;
+                }
+            }
+        }
+    }
+}
