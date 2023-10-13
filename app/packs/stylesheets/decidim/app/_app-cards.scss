@@ -139,6 +139,7 @@ ul.card-data{
         .card__title{
             margin-bottom: 1rem;
             .card_link {
+                text-decoration: underline;
                 text-underline-offset: 0.3rem;
             }
         }
@@ -146,8 +147,9 @@ ul.card-data{
             margin:0;
             list-style: none;
             li{
-                padding: bottom 0.4rem;
+                padding-bottom: 0.4rem;
                 a{
+                    text-decoration: underline;
                     text-underline-offset: 0.3rem;
                 }
             }
