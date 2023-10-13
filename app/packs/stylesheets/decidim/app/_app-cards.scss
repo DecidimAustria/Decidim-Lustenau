@@ -138,29 +138,19 @@ ul.card-data{
     .card__content{
         .card__title{
             margin-bottom: 1rem;
-            a {
-                text-decoration: underline;
-                text-underline-offset: 0.3rem;
-                transition: text-decoration 100ms ease-in;
-                &:hover{
-                    text-decoration: none;
-                    transition: text-decoration 250ms ease-out;
-                }
-            }
         }
         ul{
             margin:0;
             list-style: none;
             li{
                 padding-bottom: 0.4rem;
-                a{
-                    text-decoration: underline;
-                    text-underline-offset: 0.3rem;
-                    transition: text-decoration 100ms ease-in;
-                    &:hover {
-                        text-decoration: none;
-                        transition: text-decoration 250ms ease-out;
-                    }
+                ::before {
+                    content: "\2022";
+                    color: rgba(var(--app-primary-rgb), 1);
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 1em;
+                    margin-left: -1em;
                 }
             }
         }
