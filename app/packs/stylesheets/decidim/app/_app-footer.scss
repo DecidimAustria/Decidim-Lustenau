@@ -108,6 +108,10 @@ FOOTER
         text-decoration: none;
     }
 }
+.main-footer a,
+.mini-footer a :not(.icona){
+    text-decoration: underline;
+}
 a.small_logo{
     height:1.5rem;
     .svg-logo{
