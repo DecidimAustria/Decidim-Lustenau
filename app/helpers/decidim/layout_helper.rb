@@ -151,6 +151,11 @@ module Decidim
       render partial: "layouts/decidim/organization_colors", locals: { css: css }
     end
 
+    def direction_attribute
+      rtl_locales = %w(ar-SA fa-IR)
+      rtl_locales.include?(I18n.locale.to_s) ? "rtl" : "ltr"
+    end
+
     private
 
     def tag_builder
