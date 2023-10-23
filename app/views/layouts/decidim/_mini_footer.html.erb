@@ -1,5 +1,8 @@
 <div class="mini-footer">
     <div class="row">
+        <a class="icona"  rel="license noopener" target="_blank" href="https://european-union.europa.eu/">
+            <%= image_pack_tag("media/images/EU.png", alt: "Funded by the European Union") %>
+        </a>
         <% if current_organization.official_img_footer.attached? %>
             <%= link_to current_organization.official_url, class: "icona" do %>
                 <%= image_tag current_organization.attached_uploader(:official_img_footer).path, alt: current_organization.name %>
