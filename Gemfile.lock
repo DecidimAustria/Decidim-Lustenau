@@ -3,27 +3,6 @@ GIT
   revision: 46e9a031b9bb0685c192dcba4003165cd3dcb791
   branch: emvi-0.27.4
   specs:
-    decidim (0.27.4)
-      decidim-accountability (= 0.27.4)
-      decidim-admin (= 0.27.4)
-      decidim-api (= 0.27.4)
-      decidim-assemblies (= 0.27.4)
-      decidim-blogs (= 0.27.4)
-      decidim-budgets (= 0.27.4)
-      decidim-comments (= 0.27.4)
-      decidim-core (= 0.27.4)
-      decidim-debates (= 0.27.4)
-      decidim-forms (= 0.27.4)
-      decidim-generators (= 0.27.4)
-      decidim-meetings (= 0.27.4)
-      decidim-pages (= 0.27.4)
-      decidim-participatory_processes (= 0.27.4)
-      decidim-proposals (= 0.27.4)
-      decidim-sortitions (= 0.27.4)
-      decidim-surveys (= 0.27.4)
-      decidim-system (= 0.27.4)
-      decidim-templates (= 0.27.4)
-      decidim-verifications (= 0.27.4)
     decidim-accountability (0.27.4)
       decidim-comments (= 0.27.4)
       decidim-core (= 0.27.4)
@@ -176,6 +155,33 @@ GIT
       decidim-core (= 0.27.4)
 
 GIT
+  remote: https://github.com/DecidimAustria/decidim
+  revision: 0fb383a80005b6e4c926fbed87099e36efcaedc7
+  branch: fix/machine-translation-for-component
+  specs:
+    decidim (0.27.4)
+      decidim-accountability (= 0.27.4)
+      decidim-admin (= 0.27.4)
+      decidim-api (= 0.27.4)
+      decidim-assemblies (= 0.27.4)
+      decidim-blogs (= 0.27.4)
+      decidim-budgets (= 0.27.4)
+      decidim-comments (= 0.27.4)
+      decidim-core (= 0.27.4)
+      decidim-debates (= 0.27.4)
+      decidim-forms (= 0.27.4)
+      decidim-generators (= 0.27.4)
+      decidim-meetings (= 0.27.4)
+      decidim-pages (= 0.27.4)
+      decidim-participatory_processes (= 0.27.4)
+      decidim-proposals (= 0.27.4)
+      decidim-sortitions (= 0.27.4)
+      decidim-surveys (= 0.27.4)
+      decidim-system (= 0.27.4)
+      decidim-templates (= 0.27.4)
+      decidim-verifications (= 0.27.4)
+
+GIT
   remote: https://github.com/DecidimAustria/decidim-module-alternative_landing
   revision: efd1db91197c9a731511031b2104d22a6cf87220
   branch: update-to-decidim-0.27
@@ -283,7 +289,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.839.0)
+    aws-partitions (1.840.0)
     aws-sdk-core (3.185.1)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
