@@ -222,6 +222,7 @@ button CTA banner homepage has class
 }
 
 .button--google{
+    font-family: $body-font-family;
     background-color: #ffffff;
     &:hover{
         background-color: rgba(var(--app-body-font-rgb),1);
