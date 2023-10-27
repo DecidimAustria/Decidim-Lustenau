@@ -279,6 +279,7 @@ html:dir(rtl) {
     .menubar{
         .searchbar{
             left:0;
+            right:auto;
             &.is-aktiv{
                 right:0;
             }
