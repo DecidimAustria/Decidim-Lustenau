@@ -1,0 +1,16 @@
+/*
+some adjustements for RTL direction
+*/
+html:dir(rtl) {
+    .footer-social li:first-child {
+        padding-left: 1rem;
+    }
+    .title-action__title{
+        margin-left:1rem;
+        margin-right:0;
+    }
+    label > [type="checkbox"]{
+        margin-right: 0;
+        margin-left: 0.5rem;
+    }
+}
