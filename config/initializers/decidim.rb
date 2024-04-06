@@ -346,6 +346,12 @@ Decidim.configure do |config|
   # set cookies.
   config.consent_cookie_name = Rails.application.secrets.decidim[:consent_cookie_name] if Rails.application.secrets.decidim[:consent_cookie_name].present?
 
+  config.content_security_policies_extra = {
+    "img-src": %w(https://cdn.participation.works),
+    "connect-src": %w(https://cdn.participation.works),
+    "frame-src": %w(www.youtube.com),
+  }
+
   # Defines data consent categories and the data stored in each category.
   # config.consent_categories = [
   #   {
