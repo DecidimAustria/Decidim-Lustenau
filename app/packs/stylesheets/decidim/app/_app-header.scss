@@ -273,8 +273,19 @@
             padding-right: 0;
         }
     }
-}
 
+}
+html:dir(rtl) {
+    .menubar{
+        .searchbar{
+            left:0;
+            right:auto;
+            &.is-aktiv{
+                right:0;
+            }
+        }
+    }
+}
 .sign-in-icon .icon{
     height:40px;
     width:40px;
