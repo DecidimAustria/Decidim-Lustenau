@@ -15,7 +15,7 @@ gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 # gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-amazon_translate"
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: 'release/0.27-stable'
 
 # Get latest CLDR changes to fix bug with count :zero
 # remove when this commit gets released in a version https://github.com/ruby-i18n/i18n/commit/c78ca610b64712037e5726adeaf7b84fa96eded9
@@ -32,10 +32,13 @@ gem "puma", ">= 5.0.0"
 
 gem "faker", "~> 2.14"
 
+gem 'hiredis'
+gem "redis", :require => ["redis", "redis/connection/hiredis"]
+
 gem "sentry-ruby"
 gem "sentry-rails"
 
-gem 'sidekiq', '<7'
+#gem 'sidekiq', '<7'
 gem 'virtus', '~> 1.0.5'
 gem "wicked_pdf", "~> 2.1"
 
@@ -63,3 +66,5 @@ end
 
 group :production do
 end
+
+gem "good_job", "~> 3.27"
