@@ -35,6 +35,8 @@ gem "faker", "~> 2.14"
 gem 'hiredis'
 gem "redis", :require => ["redis", "redis/connection/hiredis"]
 
+gem "stackprof"
+
 gem "sentry-ruby"
 gem "sentry-rails"
 
