@@ -142,17 +142,17 @@ workers:
     livenessProbe:
       path: "/status/connected"
       port: 7001
-      initialDelaySeconds: 60
+      initialDelaySeconds: 90
       timeoutSeconds: 10
-      periodSeconds: 30
+      periodSeconds: 40
       scheme: "HTTP"
       probeType: "httpGet"
     readinessProbe:
       path: "/status/started"
       port: 7001
-      initialDelaySeconds: 60
+      initialDelaySeconds: 90
       timeoutSeconds: 10
-      periodSeconds: 30
+      periodSeconds: 40
       scheme: "HTTP"
       probeType: "httpGet"
     resources:
