@@ -3,12 +3,14 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: 'emvi-0.27.6' }
+DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: 'emvi-0.27' }
 
 gem "decidim", DECIDIM_VERSION
-gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
-#gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27'
-gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27', :ref => 'df40b3691a64a2'
+# gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
+gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing", branch: 'release/0.27-stable'
+# use decidim_awesome version 0.10.3
+gem "decidim-decidim_awesome", '~> 0.10.3'
+# gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27', :ref => 'df40b3691a64a2'
 # gem "decidim-conferences", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-elections", DECIDIM_VERSION
@@ -27,6 +29,9 @@ gem "aws-sdk-translate", '~> 1'
 #gem "deepl-rb", require: "deepl"
 
 gem "bootsnap", "~> 1.3"
+
+# Fix logger error by defining the concurrent-ruby version
+gem 'concurrent-ruby', '1.3.4'
 
 gem "puma", ">= 5.0.0"
 
@@ -49,7 +54,7 @@ gem "rectify", "~> 0.13.0"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "brakeman"
+  gem "brakeman", "~> 6.0"
   gem "net-imap", "~> 0.2.3"
   gem "net-pop", "~> 0.1.1"
   gem "net-smtp", "~> 0.3.1"
