@@ -172,6 +172,17 @@ GIT
       decidim-core (= 0.27.9)
 
 GIT
+  remote: https://github.com/DecidimAustria/decidim-module-decidim_awesome
+  revision: df40b3691a64a2c6a21f051006537dae979533ff
+  ref: df40b3691a64a2
+  branch: update-to-decidim-0.27
+  specs:
+    decidim-decidim_awesome (0.9.1)
+      decidim-admin (>= 0.26.0, < 0.28)
+      decidim-core (>= 0.26.0, < 0.28)
+      sassc (~> 2.3)
+
+GIT
   remote: https://github.com/Platoniq/decidim-module-alternative_landing
   revision: 6de8c0dc3c4177ad0f85937835ecf0f49fb8365b
   branch: release/0.27-stable
@@ -381,20 +392,9 @@ GEM
     decidim-amazon_translate (0.2.0)
       aws-sdk-translate (~> 1.59)
       decidim-core (>= 0.27.0, < 0.29)
-    decidim-decidim_awesome (0.10.3)
-      decidim-admin (>= 0.26.0, < 0.28)
-      decidim-core (>= 0.26.0, < 0.28)
-      deface (>= 1.5)
-      sassc (~> 2.3)
     declarative-builder (0.2.0)
       trailblazer-option (~> 0.1.0)
     declarative-option (0.1.0)
-    deface (1.9.0)
-      actionview (>= 5.2)
-      nokogiri (>= 1.6)
-      polyglot
-      railties (>= 5.2)
-      rainbow (>= 2.1.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     devise (4.9.4)
@@ -663,7 +663,6 @@ GEM
     pg_search (2.3.7)
       activerecord (>= 6.1)
       activesupport (>= 6.1)
-    polyglot (0.3.5)
     premailer (1.27.0)
       addressable
       css_parser (>= 1.19.0)
@@ -950,7 +949,7 @@ DEPENDENCIES
   decidim-alternative_landing!
   decidim-amazon_translate
   decidim-consultations!
-  decidim-decidim_awesome (~> 0.10.3)
+  decidim-decidim_awesome!
   decidim-dev!
   decidim-term_customizer!
   easy_translate (~> 0.5.1)
