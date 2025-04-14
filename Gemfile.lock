@@ -201,14 +201,6 @@ GIT
       decidim-admin (~> 0.27.0)
       decidim-core (~> 0.27.0)
 
-GIT
-  remote: https://github.com/ruby-i18n/i18n
-  revision: 4dddd855039b0c5a0b5b3b2df69783374058a7c9
-  branch: master
-  specs:
-    i18n (1.14.7)
-      concurrent-ruby (~> 1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -511,6 +503,8 @@ GEM
       nokogiri (>= 1.4)
     html_tokenizer (0.0.8)
     htmlentities (4.3.4)
+    i18n (1.14.7)
+      concurrent-ruby (~> 1.0)
     i18n-tasks (0.9.37)
       activesupport (>= 4.0.2)
       ast (>= 2.1.0)
@@ -961,7 +955,7 @@ DEPENDENCIES
   faker (~> 2.14)
   good_job (~> 3.27)
   hiredis
-  i18n!
+  i18n
   letter_opener_web (~> 2.0)
   listen (~> 3.1)
   net-imap (~> 0.2.3)
