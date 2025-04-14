@@ -1230,10 +1230,9 @@
     webpack "^5.11.0"
     webpack-cli "^4.2.0"
 
-"@decidim/dev@^0.27.4":
-  version "0.27.4"
-  resolved "https://registry.npmjs.org/@decidim/dev/-/dev-0.27.4.tgz"
-  integrity sha512-85RoZQBsBs30emj9Ajo8lDOHKgcj9D7JtOYXoUFQmF5CfG6MSCDBSRVt9SV42ixcZV/ZkgBni4eod3JnkWy6RQ==
+"@decidim/dev@file:packages/dev":
+  version "0.27.9"
+  resolved "file:packages/dev"
   dependencies:
     axe-core "^4.1.4"
 
@@ -1245,15 +1244,13 @@
     "@decidim/voting_schemes-dummy" "0.23.0"
     "@decidim/voting_schemes-electionguard" "0.23.0"
 
-"@decidim/eslint-config@^0.27.4":
-  version "0.27.4"
-  resolved "https://registry.npmjs.org/@decidim/eslint-config/-/eslint-config-0.27.4.tgz"
-  integrity sha512-ZRXqtfROkeEy4HLdlNqK22gWk71H5RPwlULNSeCNFpahk1yq/r7uF4VU3AHwbusk9J2CGULqn2m8lXAo5NGNpQ==
+"@decidim/eslint-config@file:packages/eslint-config":
+  version "0.27.9"
+  resolved "file:packages/eslint-config"
 
-"@decidim/stylelint-config@^0.27.4":
-  version "0.27.4"
-  resolved "https://registry.npmjs.org/@decidim/stylelint-config/-/stylelint-config-0.27.4.tgz"
-  integrity sha512-K2mlm2JWHkFKiIsosFi00h2sQ9dolb/zJmw0WvwAiJXr5BShDxmypfdydePHviMS6+MnvfNLi6Hxz94WK/HUxQ==
+"@decidim/stylelint-config@file:packages/stylelint-config":
+  version "0.27.9"
+  resolved "file:packages/stylelint-config"
 
 "@decidim/voting_schemes-dummy@0.23.0":
   version "0.23.0"
