@@ -3,21 +3,21 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: 'emvi-0.27' }
+DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28-live' }
 
 gem "decidim", DECIDIM_VERSION
 # gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
-gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing", branch: 'release/0.27-stable'
+gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing", branch: 'release/0.28-stable'
 # use decidim_awesome version 0.10.3
-# gem "decidim-decidim_awesome", '~> 0.10.3'
-gem "decidim-decidim_awesome", git: "https://github.com/DecidimAustria/decidim-module-decidim_awesome", branch: 'update-to-decidim-0.27', :ref => 'df40b3691a64a2'
+# gem "decidim-decidim_awesome", '~> 0.11.3'
 # gem "decidim-conferences", DECIDIM_VERSION
-gem "decidim-consultations", DECIDIM_VERSION
+#gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-elections", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 # gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-amazon_translate"
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: 'release/0.27-stable'
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: 'main'
+#gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: 'release/0.28-stable'
 
 # Get latest CLDR changes to fix bug with count :zero
 # remove when this commit gets released in a version https://github.com/ruby-i18n/i18n/commit/c78ca610b64712037e5726adeaf7b84fa96eded9
@@ -31,11 +31,11 @@ gem "aws-sdk-translate", '~> 1'
 gem "bootsnap", "~> 1.3"
 
 # Fix logger error by defining the concurrent-ruby version
-gem 'concurrent-ruby', '1.3.4'
+#gem 'concurrent-ruby', '1.3.4'
 
 gem "puma", ">= 5.0.0"
 
-gem "faker", "~> 2.14"
+#gem "faker", "~> 3.2"
 
 gem 'hiredis'
 gem "redis", :require => ["redis", "redis/connection/hiredis"]

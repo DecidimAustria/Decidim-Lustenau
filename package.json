@@ -38,6 +38,7 @@
     "@babel/preset-react": "^7.26.3",
     "@decidim/dev": "file:packages/dev",
     "@decidim/eslint-config": "file:packages/eslint-config",
+    "@decidim/prettier-config": "file:packages/prettier-config",
     "@decidim/stylelint-config": "file:packages/stylelint-config",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
