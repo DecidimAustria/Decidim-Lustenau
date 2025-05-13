@@ -18,7 +18,7 @@ module.exports = {
   // This content is generated automatically by decidim:webpacker:install task, it
   // should not be updated manually.
   // The array must contain all the decidim modules active in the application
-  content: ['/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-core','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-comments','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-accountability','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-admin','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-api','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-assemblies','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-blogs','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-budgets','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-debates','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-forms','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-generators','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-meetings','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-pages','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-participatory_processes','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-proposals','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-sortitions','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-surveys','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-system','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-verifications','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-module-alternative_landing-392214538be7','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/gems/decidim-amazon_translate-0.3.2','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-73a5159d7480/decidim-dev','/home/alex/.local/share/mise/installs/ruby/3.1.7/lib/ruby/gems/3.1.0/bundler/gems/decidim-module-term_customizer-32b47529c192','.'].flatMap(directory => [
+  content: ['/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-core','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-comments','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-accountability','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-admin','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-api','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-assemblies','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-blogs','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-budgets','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-debates','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-forms','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-generators','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-meetings','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-pages','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-participatory_processes','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-proposals','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-sortitions','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-surveys','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-system','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-verifications','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-module-alternative_landing-19c7299ca5d4','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/gems/decidim-amazon_translate-0.3.2','/home/alex/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-dev','.'].flatMap(directory => [
     `${directory}/app/views/**/*.html.erb`,
     `${directory}/app/cells/**/*.{rb,erb}`,
     `${directory}/app/helpers/**/*.rb`,
@@ -36,9 +36,9 @@ module.exports = {
       primary: withOpacity("--primary-rgb"),
       secondary: withOpacity("--secondary-rgb"),
       tertiary: withOpacity("--tertiary-rgb"),
-      success: withOpacity("--success-rgb"),
-      alert: withOpacity("--alert-rgb"),
-      warning: withOpacity("--warning-rgb"),
+      success: "#28A745",
+      alert: "#ED1C24",
+      warning: "#FFB703",
       black: "#020203",
       gray: {
         DEFAULT: "#6B7280CC", // 80% opacity
@@ -74,6 +74,11 @@ module.exports = {
       "3xl": ["32px", "40px"],
       "4xl": ["36px", "45px"],
       "5xl": ["48px", "60px"]
+    },
+    extend: {
+      transitionProperty: {
+        'top': 'top',
+      }
     }
   },
   plugins: [require("@tailwindcss/typography")]

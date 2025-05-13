@@ -3,11 +3,12 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.28-live' }
+DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.29-live' }
 
 gem "decidim", DECIDIM_VERSION
 # gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
-gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing", branch: 'release/0.28-stable'
+gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing", branch: 'main'
+#gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing", branch: 'release/0.28-stable'
 # use decidim_awesome version 0.10.3
 # gem "decidim-decidim_awesome", '~> 0.11.3'
 # gem "decidim-conferences", DECIDIM_VERSION
@@ -16,7 +17,7 @@ gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-mod
 # gem "decidim-initiatives", DECIDIM_VERSION
 # gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-amazon_translate"
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: 'main'
+#gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: 'main'
 #gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: 'release/0.28-stable'
 
 # Get latest CLDR changes to fix bug with count :zero
@@ -66,8 +67,6 @@ group :development do
   gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.1"
   gem "solargraph"
-  gem "spring", "~> 2.0"
-  gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console", "~> 4.2"
 end
 
