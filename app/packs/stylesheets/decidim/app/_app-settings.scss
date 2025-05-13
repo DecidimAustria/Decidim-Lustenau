@@ -43,9 +43,10 @@ $card-meeting: var(--meetings);
 $card-spaces: var(--meetings);
 
 $datetime-bg: var(--primary);
-*/
 $body-font-family: 'Neue Haas Unica Pro', sans-serif, system-ui;
+*/
 :root{
+    --app-body-font-family: 'Neue Haas Unica Pro', sans-serif, system-ui;
     --app-body-font: #1E1E1E;
     --app-body-font-rgb: 17, 19, 19;
     --app-nav-highlight-grey: #1E1E1E;
