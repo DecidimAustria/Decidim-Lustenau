@@ -16,6 +16,12 @@ unset DATABASE_HOST
 unset DATABASE_PORT
 unset DATABASE_DB
 
+RAILS_ENV=development bin/rails db:environment:set
+bin/rails db:drop
+bin/rails db:create
+pg_restore -d decidim_application_development db/lustenau-staging-db.pgdump
+RAILS_ENV=development bin/rails db:environment:set
+
 echo "update remote organization hostname"
 echo "UPDATE decidim_organizations SET host='3000-$GITPOD_WORKSPACE_ID.$GITPOD_WORKSPACE_CLUSTER_HOST';" | bundle exec rails dbconsole -p
 echo 'Decidim::User.first.update(accepted_tos_version: DateTime.now, admin_terms_accepted_at: DateTime.now, password_updated_at: DateTime.now)' | bundle exec rails c
