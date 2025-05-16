@@ -8,7 +8,7 @@ image:
 tasks:
   - name: server
     before: rvm --default use "ruby-3.2.7"
-    init: bundle install && yarn install && redis-server --daemonize yes && bin/rails db:create && bin/rails db:migrate && bin/rails db:seed
+    init: bundle install && yarn install && redis-server --daemonize yes && bin/rails db:create #&& bin/rails db:migrate && bin/rails db:seed
     command: ./connect_local_db.sh
   #- name: webpacker
   #  before: rvm --default use "ruby-3.2.7"
