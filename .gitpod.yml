@@ -7,12 +7,9 @@ image:
 
 tasks:
   - name: server
-    before: rvm --default use "ruby-3.2.7"
+    before: source /home/gitpod/.rvm/scripts/rvm && rvm use ruby-3.2.7 --default
     init: bundle install && yarn install && redis-server --daemonize yes && bin/rails db:create #&& bin/rails db:migrate && bin/rails db:seed
     command: ./connect_local_db.sh
-  #- name: webpacker
-  #  before: rvm --default use "ruby-3.2.7"
-  #  command: bin/webpack-dev-server
 vscode:
   extensions:
     - dbaeumer.vscode-eslint
