@@ -20,3 +20,8 @@ vscode:
     - akamud.vscode-theme-onedark
     - rebornix.ruby
 
+ports:
+  - port: 3000
+    onOpen: open-preview
+    protocol: https
+    visibility: public
