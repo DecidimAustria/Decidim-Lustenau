@@ -24,6 +24,6 @@ RAILS_ENV=development bin/rails db:environment:set
 
 echo "update remote organization hostname"
 echo "UPDATE decidim_organizations SET host='3000-$GITPOD_WORKSPACE_ID.$GITPOD_WORKSPACE_CLUSTER_HOST';" | bundle exec rails dbconsole -p
-echo 'Decidim::User.first.update(accepted_tos_version: DateTime.now, admin_terms_accepted_at: DateTime.now, password_updated_at: DateTime.now)' | bundle exec rails c
+# echo 'Decidim::User.first.update(accepted_tos_version: DateTime.now, admin_terms_accepted_at: DateTime.now, password_updated_at: DateTime.now)' | bundle exec rails c
 
 bin/rails server
