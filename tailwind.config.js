@@ -5,7 +5,7 @@
 // https://docs.decidim.org/en/develop/customize/styles
 //
 
-const { inherit, current, transparent, white } = require("tailwindcss/colors")
+const { inherit, current, transparent, white, neutral } = require("tailwindcss/colors")
 
 const withOpacity =
   (variable) =>
@@ -18,7 +18,7 @@ module.exports = {
   // This content is generated automatically by decidim:webpacker:install task, it
   // should not be updated manually.
   // The array must contain all the decidim modules active in the application
-  content: ['/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-core','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-comments','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-accountability','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-admin','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-api','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-assemblies','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-blogs','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-budgets','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-debates','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-forms','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-generators','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-meetings','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-pages','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-participatory_processes','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-proposals','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-sortitions','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-surveys','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-system','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-verifications','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-module-alternative_landing-19c7299ca5d4','/workspace/.rvm/ruby-3.2.7/gems/decidim-amazon_translate-0.3.2','/workspace/.rvm/ruby-3.2.7/bundler/gems/decidim-484139e696ec/decidim-dev','.'].flatMap(directory => [
+  content: ['/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-core','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-comments','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-accountability','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-admin','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-api','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-assemblies','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-blogs','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-budgets','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-debates','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-forms','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-generators','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-meetings','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-pages','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-participatory_processes','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-proposals','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-sortitions','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-surveys','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-system','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-verifications','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-module-alternative_landing-19c7299ca5d4','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/gems/decidim-amazon_translate-0.3.2','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-dev','.'].flatMap(directory => [
     `${directory}/app/views/**/*.html.erb`,
     `${directory}/app/cells/**/*.{rb,erb}`,
     `${directory}/app/helpers/**/*.rb`,
@@ -33,6 +33,7 @@ module.exports = {
       current,
       transparent,
       white,
+      neutral,
       primary: withOpacity("--primary-rgb"),
       secondary: withOpacity("--secondary-rgb"),
       tertiary: withOpacity("--tertiary-rgb"),
@@ -45,13 +46,15 @@ module.exports = {
         2: "#3E4C5C",
         3: "#E1E5EF",
         4: "#242424",
-        5: "#F6F8FA"
+        5: "#F6F8FA",
+        6: "#D3D5D9"
       },
       background: {
         DEFAULT: "#F3F4F7",
         2: "#FAFBFC",
         3: "#EFEFEF",
-        4: "#E4EEFF99" // 60% opacity
+        4: "#E4EEFF99", // 60% opacity
+        5: "#E9E9E9"
       }
     },
     container: {
