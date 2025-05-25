@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2025_05_13_195432) do
+ActiveRecord::Schema[7.0].define(version: 2025_05_25_185750) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
   enable_extension "pg_trgm"
@@ -340,6 +340,26 @@ ActiveRecord::Schema[7.0].define(version: 2025_05_13_195432) do
     t.datetime "updated_at", null: false
     t.index ["decidim_author_id"], name: "decidim_awesome_editor_images_author"
     t.index ["decidim_organization_id"], name: "decidim_awesome_editor_images_constraint_organization"
+  end
+
+  create_table "decidim_awesome_proposal_extra_fields", force: :cascade do |t|
+    t.bigint "decidim_proposal_id", null: false
+    t.jsonb "vote_weight_totals"
+    t.integer "weight_total", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "private_body"
+    t.string "decidim_proposal_type", null: false
+    t.datetime "private_body_updated_at", precision: nil
+    t.index ["decidim_proposal_id", "decidim_proposal_type"], name: "index_decidim_awesome_proposal_extra_fields_on_decidim_proposal"
+  end
+
+  create_table "decidim_awesome_vote_weights", force: :cascade do |t|
+    t.bigint "proposal_vote_id", null: false
+    t.integer "weight", default: 1, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["proposal_vote_id"], name: "decidim_awesome_proposals_weights_vote"
   end
 
   create_table "decidim_blogs_posts", id: :serial, force: :cascade do |t|
@@ -1968,6 +1988,7 @@ ActiveRecord::Schema[7.0].define(version: 2025_05_13_195432) do
   add_foreign_key "decidim_consultations_responses", "decidim_consultations_questions", column: "decidim_consultations_questions_id"
   add_foreign_key "decidim_consultations_responses", "decidim_consultations_response_groups"
   add_foreign_key "decidim_consultations_votes", "decidim_consultations_responses"
+  add_foreign_key "decidim_consultations_votes", "decidim_consultations_responses"
   add_foreign_key "decidim_debates_debates", "decidim_scopes"
   add_foreign_key "decidim_editor_images", "decidim_organizations"
   add_foreign_key "decidim_editor_images", "decidim_users", column: "decidim_author_id"
@@ -1992,6 +2013,8 @@ ActiveRecord::Schema[7.0].define(version: 2025_05_13_195432) do
   add_foreign_key "decidim_term_customizer_constraints", "decidim_term_customizer_translation_sets", column: "translation_set_id"
   add_foreign_key "decidim_term_customizer_translations", "decidim_term_customizer_translation_sets", column: "translation_set_id"
   add_foreign_key "decidim_user_blocks", "decidim_users"
+  add_foreign_key "decidim_user_blocks", "decidim_users"
+  add_foreign_key "decidim_user_blocks", "decidim_users", column: "blocking_user_id"
   add_foreign_key "decidim_user_blocks", "decidim_users", column: "blocking_user_id"
   add_foreign_key "decidim_user_moderations", "decidim_users"
   add_foreign_key "decidim_user_reports", "decidim_user_moderations", column: "user_moderation_id"

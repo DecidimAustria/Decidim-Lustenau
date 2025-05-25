@@ -9,8 +9,8 @@ gem "decidim", DECIDIM_VERSION
 # gem "decidim-alternative_landing", git: "https://github.com/DecidimAustria/decidim-module-alternative_landing", branch: 'update-to-decidim-0.27'
 gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing", branch: 'main'
 #gem "decidim-alternative_landing", git: "https://github.com/Platoniq/decidim-module-alternative_landing", branch: 'release/0.28-stable'
-# use decidim_awesome version 0.10.3
-# gem "decidim-decidim_awesome", '~> 0.11.3'
+# use decidim_awesome version > 0.12.x
+gem "decidim-decidim_awesome"
 # gem "decidim-conferences", DECIDIM_VERSION
 #gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-elections", DECIDIM_VERSION
