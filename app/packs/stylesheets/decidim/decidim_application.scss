@@ -5,3 +5,248 @@
 // To override CSS variables or Foundation settings use _decidim-settings.scss
 //
 // By default this is empty.
+
+@font-face {
+    font-family: 'Neue Haas Unica Pro';
+    src: url('fonts/NeueHaasUnicaPro-Thin.eot');
+    src: url('fonts/NeueHaasUnicaPro-Thin.eot?#iefix') format('embedded-opentype'),
+        url('fonts/NeueHaasUnicaPro-Thin.woff2') format('woff2'),
+        url('fonts/NeueHaasUnicaPro-Thin.woff') format('woff'),
+        url('fonts/NeueHaasUnicaPro-Thin.ttf') format('truetype'),
+        url('fonts/NeueHaasUnicaPro-Thin.svg#NeueHaasUnicaPro-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Unica Pro';
+    src: url('fonts/NeueHaasUnicaPro-Light.eot');
+    src: url('fonts/NeueHaasUnicaPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/NeueHaasUnicaPro-Light.woff2') format('woff2'),
+        url('fonts/NeueHaasUnicaPro-Light.woff') format('woff'),
+        url('fonts/NeueHaasUnicaPro-Light.ttf') format('truetype'),
+        url('fonts/NeueHaasUnicaPro-Light.svg#NeueHaasUnicaPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Unica Pro';
+    src: url('fonts/NeueHaasUnicaPro-Regular.eot');
+    src: url('fonts/NeueHaasUnicaPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/NeueHaasUnicaPro-Regular.woff2') format('woff2'),
+        url('fonts/NeueHaasUnicaPro-Regular.woff') format('woff'),
+        url('fonts/NeueHaasUnicaPro-Regular.ttf') format('truetype'),
+        url('fonts/NeueHaasUnicaPro-Regular.svg#NeueHaasUnicaPro-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Unica Pro';
+    src: url('fonts/NeueHaasUnicaPro-Medium.eot');
+    src: url('fonts/NeueHaasUnicaPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/NeueHaasUnicaPro-Medium.woff2') format('woff2'),
+        url('fonts/NeueHaasUnicaPro-Medium.woff') format('woff'),
+        url('fonts/NeueHaasUnicaPro-Medium.ttf') format('truetype'),
+        url('fonts/NeueHaasUnicaPro-Medium.svg#NeueHaasUnicaPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Haas Unica Pro';
+    src: url('fonts/NeueHaasUnicaPro-Bold.eot');
+    src: url('fonts/NeueHaasUnicaPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/NeueHaasUnicaPro-Bold.woff2') format('woff2'),
+        url('fonts/NeueHaasUnicaPro-Bold.woff') format('woff'),
+        url('fonts/NeueHaasUnicaPro-Bold.ttf') format('truetype'),
+        url('fonts/NeueHaasUnicaPro-Bold.svg#NeueHaasUnicaPro-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+header {
+  .main-bar {
+    @media (min-width: 1024px) {
+      height: auto;
+    }
+  }
+
+  .main-bar__logo {
+    grid-column: 1;
+
+    @media (min-width: 1024px) {
+      grid-column: 1 / span 3;
+    }
+
+    .main-bar__logo-desktop img {
+      max-height: unset;
+    }
+  }
+
+  .main-bar__search {
+    grid-column-start: 3;
+
+    @media (min-width: 1024px) {
+      grid-column-start: 4;
+    }
+  }
+
+  .main-bar__languagemenu {
+    grid-column: 2 / span 2;
+    justify-self: center;
+
+    @media (min-width: 768px) {
+      grid-column: 6 / span 2;
+      justify-self: start;
+    }
+
+    @media (min-width: 1024px) {
+      grid-column: 7 / span 2;
+      justify-self: start;
+    }
+
+    font-size: 0.8rem !important;
+
+    .main-footer__language-container {
+      @apply relative;
+
+      .main-footer__language-trigger {
+        @apply flex cursor-pointer items-center gap-1 rounded border px-2 py-1.5 font-semibold text-[0.8rem] leading-5;
+        border-color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
+        color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
+
+        svg {
+          fill: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
+
+          &:last-of-type {
+            @apply ml-auto block;
+          }
+        }
+        &[aria-expanded='true']{
+            @apply rounded-b-none;
+        }
+        &[aria-expanded='true'] > svg:first-of-type {
+          @apply block;
+        }
+
+        span {
+          color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
+          font-size: 0.8rem !important;
+        }
+      }
+
+      .main-footer__language {
+        @apply absolute left-0 top-full w-full rounded-sm rounded-t-none border-x border-b border-primary;
+        li{
+            @apply text-primary hover:text-white;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  header .main-bar__links-desktop,
+  header .main-bar > *:last-child {
+    grid-column-end: 13;
+    grid-column-start: span 4;
+  }
+}
+
+.home__menu{
+    @apply container bg-transparent text-headerMenu font-thin text-black hover:text-secondary capitalize;
+    .home__menu__container{
+        @apply justify-start;
+        .home__menu-element{
+        @apply border-none;
+            .home__menu-element--link{
+                @apply text-headerMenu font-thin text-black hover:text-secondary capitalize;
+            }
+        }
+    }
+    
+}
+
+
+footer {
+//   background-color: rgb(var(--primary-rgb) / var(--tw-bg-opacity, 1));
+
+  .main-footer {
+    // background-color: rgb(var(--primary-rgb) / var(--tw-bg-opacity, 1));
+
+    .main-footer__down {
+      @apply border-[#ECF4F3];
+    }
+
+    .main-footer__language-container {
+      @apply hidden;
+    }
+  }
+
+  .mini-footer {
+    @apply pt-0;
+
+    .row {
+      @apply flex items-center justify-center flex-wrap leading-6 py-8 flex-col;
+
+      a.small_logo {
+        @apply my-2;
+      }
+
+      .external-link-container {
+        @apply px-1.5;
+      }
+
+      &.footer_mitgestalten {
+        @apply pb-4 text-sm font-semibold uppercase;
+
+        .mitgestalten_logo {
+          @apply max-w-[200px];
+        }
+      }
+
+      @media (min-width: 1024px) {
+        @apply flex-row;
+
+        a.small_logo {
+          @apply m-0;
+        }
+      }
+
+      &:first-child {
+        @apply py-8 px-4 gap-10;
+
+        img,
+        svg {
+          @apply max-h-[80px] w-auto;
+        }
+      }
+    }
+
+    a,
+    .footer-social .icon {
+      &:hover {
+        @apply transition ease-in duration-200 no-underline;
+      }
+    }
+  }
+
+  a.small_logo {
+    @apply h-6;
+
+    .svg-logo {
+      @apply h-6 w-auto mx-2 text-black;
+
+      &:hover {
+        @apply transition ease-in duration-200;
+      }
+    }
+  }
+}

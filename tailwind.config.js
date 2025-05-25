@@ -18,7 +18,7 @@ module.exports = {
   // This content is generated automatically by decidim:webpacker:install task, it
   // should not be updated manually.
   // The array must contain all the decidim modules active in the application
-  content: ['/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-core','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-comments','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-accountability','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-admin','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-api','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-assemblies','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-blogs','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-budgets','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-debates','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-forms','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-generators','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-meetings','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-pages','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-participatory_processes','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-proposals','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-sortitions','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-surveys','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-system','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-verifications','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-module-alternative_landing-19c7299ca5d4','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/gems/decidim-amazon_translate-0.3.2','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-dev','.'].flatMap(directory => [
+  content: ['/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-core','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-comments','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-accountability','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-admin','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-api','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-assemblies','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-blogs','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-budgets','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-debates','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-forms','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-generators','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-meetings','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-pages','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-participatory_processes','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-proposals','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-sortitions','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-surveys','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-system','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-verifications','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-module-alternative_landing-19c7299ca5d4','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/gems/decidim-amazon_translate-0.3.2','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/gems/decidim-decidim_awesome-0.12.0','/home/piero/.local/share/mise/installs/ruby/3.2.8/lib/ruby/gems/3.2.0/bundler/gems/decidim-484139e696ec/decidim-dev','.'].flatMap(directory => [
     `${directory}/app/views/**/*.html.erb`,
     `${directory}/app/cells/**/*.{rb,erb}`,
     `${directory}/app/helpers/**/*.rb`,
@@ -40,7 +40,7 @@ module.exports = {
       success: "#28A745",
       alert: "#ED1C24",
       warning: "#FFB703",
-      black: "#020203",
+      black: "#1E1E1E",
       gray: {
         DEFAULT: "#6B7280CC", // 80% opacity
         2: "#3E4C5C",
@@ -65,18 +65,19 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ["Source Sans Pro", "ui-sans-serif", "system-ui", "sans-serif"]
+      sans: ["Neue Haas Unica Pro", "ui-sans-serif", "system-ui", "sans-serif"]
     },
     fontSize: {
-      xs: ["13px", "16px"],
-      sm: ["14px", "18px"],
-      md: ["16px", "20px"],
-      lg: ["18px", "23px"],
-      xl: ["20px", "25px"],
-      "2xl": ["24px", "30px"],
-      "3xl": ["32px", "40px"],
-      "4xl": ["36px", "45px"],
-      "5xl": ["48px", "60px"]
+      xs:   ["0.8125rem", "1rem"],
+      sm:   ["0.875rem", "1.125rem"],
+      md:   ["1rem", "1.25rem"],
+      lg:   ["1.125rem", "1.4375rem"],
+      xl:   ["1.25rem", "1.5625rem"],
+      "2xl": ["1.5rem", "1.875rem"],
+      "3xl": ["2rem", "2.5rem"],
+      "4xl": ["2.25rem", "2.8125rem"],
+      "5xl": ["3rem", "3.75rem"],
+      "headerMenu": ["2.75rem", "1.1"]
     },
     extend: {
       transitionProperty: {
