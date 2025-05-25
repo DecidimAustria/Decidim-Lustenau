@@ -71,6 +71,10 @@
     font-display: swap;
 }
 
+html, body{
+    @apply bg-white;
+}
+
 header {
   .main-bar {
     @media (min-width: 1024px) {
@@ -94,7 +98,8 @@ header {
     grid-column-start: 3;
 
     @media (min-width: 1024px) {
-      grid-column-start: 4;
+      grid-column: 4 / span 3;
+      justify-self: center;
     }
   }
 
@@ -143,7 +148,7 @@ header {
       }
 
       .main-footer__language {
-        @apply absolute left-0 top-full w-full rounded-sm rounded-t-none border-x border-b border-primary;
+        @apply absolute left-0 top-full w-full rounded-sm rounded-t-none border-x border-b border-primary bg-white;
         li{
             @apply text-primary hover:text-white;
         }
@@ -165,9 +170,15 @@ header {
     .home__menu__container{
         @apply justify-start;
         .home__menu-element{
-        @apply border-none;
+            @apply border-none;
             .home__menu-element--link{
                 @apply text-headerMenu font-thin text-black hover:text-secondary capitalize;
+            }
+            &:first-of-type{
+                .home__menu-element--link{
+                    @apply ps-0;
+                }
+                
             }
         }
     }
