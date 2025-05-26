@@ -21,19 +21,6 @@
 
 @font-face {
     font-family: 'Neue Haas Unica Pro';
-    src: url('fonts/NeueHaasUnicaPro-Light.eot');
-    src: url('fonts/NeueHaasUnicaPro-Light.eot?#iefix') format('embedded-opentype'),
-        url('fonts/NeueHaasUnicaPro-Light.woff2') format('woff2'),
-        url('fonts/NeueHaasUnicaPro-Light.woff') format('woff'),
-        url('fonts/NeueHaasUnicaPro-Light.ttf') format('truetype'),
-        url('fonts/NeueHaasUnicaPro-Light.svg#NeueHaasUnicaPro-Light') format('svg');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Neue Haas Unica Pro';
     src: url('fonts/NeueHaasUnicaPro-Regular.eot');
     src: url('fonts/NeueHaasUnicaPro-Regular.eot?#iefix') format('embedded-opentype'),
         url('fonts/NeueHaasUnicaPro-Regular.woff2') format('woff2'),
@@ -166,13 +153,15 @@ header {
 }
 
 .home__menu{
-    @apply container bg-transparent text-headerMenu font-thin text-black hover:text-secondary capitalize;
+    @apply container bg-transparent;
     .home__menu__container{
         @apply justify-start;
         .home__menu-element{
             @apply border-none;
             .home__menu-element--link{
-                @apply text-headerMenu font-thin text-black hover:text-secondary capitalize;
+                @apply font-thin text-black text-headerMenu hover:text-secondary capitalize;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
             }
             &:first-of-type{
                 .home__menu-element--link{
