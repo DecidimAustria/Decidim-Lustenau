@@ -185,15 +185,21 @@ header {
     
 }
 
+h1.title-decorator{
+  @apply break-all 2xl:break-normal;
+}
 
+// footer color test #006BA0 #B3E5FB #E5F5FC
 footer {
-//   background-color: rgb(var(--primary-rgb) / var(--tw-bg-opacity, 1));
-
+  @apply border-t border-[#006BA0];
+  a, div, span, p, h2, h3, h4, h5, h6, svg fill{
+    @apply text-black;
+  }
   .main-footer {
-    // background-color: rgb(var(--primary-rgb) / var(--tw-bg-opacity, 1));
+    @apply bg-white;
 
     .main-footer__down {
-      @apply border-[#ECF4F3];
+      @apply border-[#006BA0];
     }
 
     .main-footer__language-container {
@@ -202,7 +208,7 @@ footer {
   }
 
   .mini-footer {
-    @apply pt-0;
+    @apply pt-0 bg-white;
 
     .row {
       @apply flex items-center justify-center flex-wrap leading-6 py-8 flex-col;
