@@ -65,7 +65,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ["Neue Haas Unica Pro", "ui-sans-serif", "system-ui", "sans-serif"]
+      sans: ["Neue Haas Unica Pro", "ui-sans-serif", "system-ui", "sans-serif"],
     },
     fontSize: {
       xs:   ["0.8125rem", "1rem"],
@@ -82,7 +82,7 @@ module.exports = {
     extend: {
       transitionProperty: {
         'top': 'top',
-      }
+      },
     }
   },
   plugins: [require("@tailwindcss/typography")]
