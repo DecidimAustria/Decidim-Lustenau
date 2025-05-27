@@ -60,6 +60,8 @@
 
 html, body{
     @apply bg-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 header {
@@ -160,8 +162,6 @@ header {
             @apply border-none;
             .home__menu-element--link{
                 @apply font-thin text-black text-headerMenu hover:text-secondary capitalize;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
             }
             &:first-of-type{
                 .home__menu-element--link{
