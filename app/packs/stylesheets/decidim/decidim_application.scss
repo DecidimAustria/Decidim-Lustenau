@@ -92,7 +92,7 @@ header {
 
   .main-bar__languagemenu {
     grid-column: 2 / span 2;
-    justify-self: center;
+    justify-self: start;
 
     @media (min-width: 768px) {
       grid-column: 5 / span 3;
@@ -112,8 +112,12 @@ header {
       .main-footer__language-trigger {
         @apply flex cursor-pointer items-center gap-1 rounded border px-2 py-1.5 font-semibold text-[0.8rem] leading-5;
         border-color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
-        color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
-
+        color: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1)); 
+        @media (max-width: 425px) {
+          span:first-of-type{
+            display:none;
+          }
+        }
         svg {
           fill: rgb(var(--secondary-rgb) / var(--tw-text-opacity, 1));
 
@@ -135,7 +139,10 @@ header {
       }
 
       #dropdown-menu-language-chooser{
-				@apply min-w[100px];
+				min-width: 100px;
+        @media (min-width: 425px) {
+          min-width: unset;
+        }
 
 				.main-footer__language {
 					@apply absolute left-0 top-full w-full rounded-sm rounded-t-none border-x border-b border-primary bg-white;
@@ -178,6 +185,9 @@ header {
 
 h1.title-decorator{
   @apply break-all 2xl:break-normal;
+}
+span[data-external-link]{
+  display: none;
 }
 
 // footer color test #006BA0 #B3E5FB #E5F5FC
