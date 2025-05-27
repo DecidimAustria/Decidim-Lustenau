@@ -59,9 +59,7 @@
 }
 
 html, body{
-    @apply bg-white;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    @apply bg-white antialiased;
 }
 
 header {
@@ -136,12 +134,16 @@ header {
         }
       }
 
-      .main-footer__language {
-        @apply absolute left-0 top-full w-full rounded-sm rounded-t-none border-x border-b border-primary bg-white;
-        li{
-            @apply text-primary hover:text-white;
-        }
-      }
+      #dropdown-menu-language-chooser{
+				@apply min-w[100px];
+
+				.main-footer__language {
+					@apply absolute left-0 top-full w-full rounded-sm rounded-t-none border-x border-b border-primary bg-white;
+					li{
+						@apply text-primary hover:text-white;
+					}
+				}
+			}
     }
   }
 }
