@@ -1308,6 +1308,7 @@ ar-SA:
         see_more: شاهد المزيد
   locale:
     name: العربية
+    name_with_error: العربية (خطأ!)
   password_validator:
     domain_included_in_password: مشابه جدًا لاسم النطاق هذا
     email_included_in_password: مشابه جدا لبريدك الالكتروني
