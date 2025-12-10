@@ -833,7 +833,8 @@ sr-CS:
       wrapper:
         unfold: Raširi
   locale:
-    name_with_error: engleski (greška!)
+    name: srpski
+    name_with_error: srpski (greška!)
   password_validator:
     blacklisted: nalazi se na crnoj listi
     nickname_included_in_password: previše je sličan tvom nadimku

@@ -833,7 +833,8 @@ bs:
       wrapper:
         unfold: Raširi
   locale:
-    name_with_error: engleski (greška!)
+    name: Bosanski
+    name_with_error: Bosanski (greška!)
   password_validator:
     blacklisted: nalazi se na crnoj listi
     nickname_included_in_password: previše je sličan tvom nadimku

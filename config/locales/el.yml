@@ -642,7 +642,8 @@ el:
       wrapper:
         unfold: Ανάπτυξη
   locale:
-    name_with_error: Αγγλικά (λάθος!)
+    name: Ελληνικά
+    name_with_error: Ελληνικά (λάθος!)
   password_validator:
     blacklisted: βρίσκεται στη μαύρη λίστα
     nickname_included_in_password: μοιάζει πολύ με το ψευδώνυμό σας
