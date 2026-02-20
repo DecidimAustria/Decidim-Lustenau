@@ -349,8 +349,8 @@ Decidim.configure do |config|
 
   config.content_security_policies_extra = {
     "img-src": %w(https://cdn.participation.works),
-    "connect-src": %w(https://cdn.participation.works),
-    "frame-src": %w(www.youtube.com),
+    "connect-src": %w(https://cdn.participation.works https://ma.participation.works),
+    "frame-src": %w(https://www.youtube.com),
     "script-src": %w(https://ma.participation.works)
   }
 
