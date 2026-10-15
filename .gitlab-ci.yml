@@ -5,4 +5,4 @@ include:
       node-version: "22.14.0"
       build-engine: buildkit
       build-feature-branches: true
-      deploy: false
+      deploy: true
