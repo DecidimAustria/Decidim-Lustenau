@@ -1,0 +1,8 @@
+include:
+  - component: gitlab.webface.at/components/rails-deploy/pipeline@buildkit
+    inputs:
+      ruby-version: "3.3.12"
+      node-version: "22.14.0"
+      build-engine: buildkit
+      build-feature-branches: true
+      deploy: false

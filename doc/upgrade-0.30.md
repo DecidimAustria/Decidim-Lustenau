@@ -73,6 +73,18 @@ Recheck immediately before deployment. The taxonomy plan should be empty, but ge
 
 ## Staging rollout
 
+### BuildKit trial after the failed CNB build
+
+The upgrade push started pipeline 6742, but [build job 26882](https://gitlab.webface.at/mitgestalten/decidim-lustenau/-/jobs/26882) failed before Ruby installation: the configured Heroku-20 builder received HTTP 403 downloading Ruby 3.3.12. This did not deploy the upgrade.
+
+Branch `ci/lustenau-buildkit` tests `gitlab.webface.at/components/rails-deploy/pipeline@buildkit` with Ruby 3.3.12, Node 22.14.0, feature-branch builds enabled and `deploy: false`. Decidim 0.30.9 requires Ruby `~> 3.3.0`; the component example's Ruby 3.4.7 is unsuitable here. The component ref resolved to `b617c78fc4d5c9ce4710db3c43ffd9f093a43e4c` during preparation and follows subsequent branch updates.
+
+GitLab CI lint passed without warnings. Local inspection of the generated child pipeline confirmed a required rootless BuildKit build and no deployment template/jobs. Production-mode boot with dummy build credentials, an unreachable database and `STORAGE_PROVIDER=local` passed. The storage setting now honors that variable, retaining MinIO as the default, so compilation does not require customer storage credentials. The component uses its bundled Dockerfile; no application runtime secrets are forwarded to the image build.
+
+This trial does not enable Kubernetes rollout. Before a later BuildKit deployment, update and review Terraform-managed migration commands and Helm worker commands: the new runtime has no `/cnb/lifecycle/launcher`. Validate the resulting image, workers, assets, storage and recovery before enabling deployment. Main retains the previous Auto DevOps pipeline until this trial is deliberately integrated.
+
+### Backup and rollout checklist
+
 CNPG backup `pre-0309-upgrade-20261015180706` completed successfully at `2026-10-15T18:07:08Z`, backup ID `20261015T180707`, in context `kubernetes-admin@cluster1`, namespace `decidim-lustenau-staging`, cluster `postgres`, using `barmanObjectStore`. No backup error was reported. This is a database backup; this step did not create an upload backup or test a restore. The live one-time tasks below have not been run.
 
 1. Framework publication and the fresh staging database backup are complete. Commit the reviewed application branch, including the existing map edit. Confirm upload/recovery coverage separately before any file-removing tasks.
