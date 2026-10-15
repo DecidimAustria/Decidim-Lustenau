@@ -2,12 +2,11 @@
 
 source "https://rubygems.org"
 
-ruby RUBY_VERSION
-DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.29-live' }
+ruby "3.3.12"
+DECIDIM_VERSION = { git: "https://github.com/DecidimAustria/decidim", branch: '0.30-live' }
 
 gem "decidim", DECIDIM_VERSION
-# use decidim_awesome version > 0.12.x
-gem "decidim-decidim_awesome"
+gem "decidim-decidim_awesome", "~> 0.13.0"
 # gem "decidim-conferences", DECIDIM_VERSION
 #gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-elections", DECIDIM_VERSION
@@ -53,9 +52,9 @@ group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
   gem "brakeman", "~> 6.0"
-  gem "net-imap", "~> 0.2.3"
+  gem "net-imap", "~> 0.4.25"
   gem "net-pop", "~> 0.1.1"
-  gem "net-smtp", "~> 0.3.1"
+  gem "net-smtp", "~> 0.5.0"
   gem "decidim-dev", DECIDIM_VERSION
 end
 
