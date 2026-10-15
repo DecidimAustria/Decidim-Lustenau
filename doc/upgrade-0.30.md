@@ -81,6 +81,8 @@ Branch `ci/lustenau-buildkit` tests `gitlab.webface.at/components/rails-deploy/p
 
 GitLab CI lint passed without warnings. Local inspection of the generated child pipeline confirmed a required rootless BuildKit build and no deployment template/jobs. Production-mode boot with dummy build credentials, an unreachable database and `STORAGE_PROVIDER=local` passed. The storage setting now honors that variable, retaining MinIO as the default, so compilation does not require customer storage credentials. The component uses its bundled Dockerfile; no application runtime secrets are forwarded to the image build.
 
+The first trial, parent pipeline 6743 / child 6744 / build job 26896, installed Ruby, the complete production bundle and npm packages successfully. Asset compilation then failed because Shakapacker 7.2.3 defaulted to `yarn`, which the npm-based image does not install. The application boot now defaults `SHAKAPACKER_USE_PACKAGE_JSON_GEM=true` and `PACKAGE_JSON_FALLBACK_MANAGER=npm`, preserving explicit environment overrides. This makes the build independent of the old buildpack-forwarding settings. A forced local production webpack compilation with Yarn excluded from `PATH` passed in 34.6 seconds with two size warnings.
+
 This trial does not enable Kubernetes rollout. Before a later BuildKit deployment, update and review Terraform-managed migration commands and Helm worker commands: the new runtime has no `/cnb/lifecycle/launcher`. Validate the resulting image, workers, assets, storage and recovery before enabling deployment. Main retains the previous Auto DevOps pipeline until this trial is deliberately integrated.
 
 ### Backup and rollout checklist
