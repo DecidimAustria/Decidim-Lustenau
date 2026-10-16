@@ -3,238 +3,174 @@ el:
   activemodel:
     attributes:
       debate:
-        category_id: Κατηγορία
-        closed_at: Κλειστό στις
-        conclusions: συμπεράσματα
-        decidim_category_id: Κατηγορία
-        description: Περιγραφή
-        end_time: Τελειώνει στις
-        information_updates: Ενημερώσεις πληροφοριών
-        instructions: Οδηγίες συμμετοχής
-        scope_id: Πεδίο εφαρμογής
-        start_time: Αρχίζει στις
-        title: Τίτλος
-        user_group_id: Δημιουργία συζήτησης ως
+        closed_at: "Κλειστό στις"
+        conclusions: "συμπεράσματα"
+        end_time: "Τελειώνει στις"
+        scope_id: "Πεδίο εφαρμογής"
+        start_time: "Αρχίζει στις"
     models:
-      decidim/debates/close_debate_event: Η συζήτηση έκλεισε
-      decidim/debates/create_debate_event: Δημόσια συζήτηση
-      decidim/debates/creation_disabled_event: Οι συζητήσεις απενεργοποιήθηκαν
-      decidim/debates/creation_enabled_event: Η δημιουργία συζητήσεων ενεργοποιήθηκε
+      decidim/debates/close_debate_event: "Η συζήτηση έκλεισε"
+      decidim/debates/create_debate_event: "Δημόσια συζήτηση"
+      decidim/debates/creation_enabled_event: "Η δημιουργία συζητήσεων ενεργοποιήθηκε"
   activerecord:
     models:
       decidim/debates/debate:
-        one: Δημόσια συζήτηση
-        other: Συζητήσεις
+        one: "Δημόσια συζήτηση"
   decidim:
     components:
       debates:
         actions:
-          comment: Σχόλιο
-          create: Δημιουργώ
-          endorse: Εγκρίνω
-        name: Συζητήσεις
+          comment: "Σχόλιο"
+          create: "Δημιουργώ"
+          endorse: "Εγκρίνω"
         settings:
           global:
-            announcement: Ανακοίνωση
-            comments_enabled: Τα σχόλια ενεργοποιήθηκαν
-            comments_max_length: Μέγιστο μήκος σχολίων (Αφήστε 0 για την προεπιλεγμένη τιμή)
-            scope_id: Πεδίο εφαρμογής
-            scopes_enabled: Τα πεδία είναι ενεργοποιημένα
+            comments_max_length: "Μέγιστο μήκος σχολίων (Αφήστε 0 για την προεπιλεγμένη τιμή)"
+            scope_id: "Πεδίο εφαρμογής"
+            scopes_enabled: "Τα πεδία είναι ενεργοποιημένα"
           step:
-            announcement: Ανακοίνωση
-            comments_blocked: Τα σχόλια αποκλείστηκαν
-            creation_enabled: Οι συμμετέχοντες μπορούν να δημιουργήσουν συζητήσεις
-            endorsements_blocked: Οι εγκρίσεις αποκλείστηκαν
-            endorsements_enabled: Οι εγκρίσεις ενεργοποιήθηκαν
+            creation_enabled: "Οι συμμετέχοντες μπορούν να δημιουργήσουν συζητήσεις"
+            endorsements_blocked: "Οι εγκρίσεις αποκλείστηκαν"
+            endorsements_enabled: "Οι εγκρίσεις ενεργοποιήθηκαν"
     debates:
       actions:
-        close: Κλείσε
-        confirm_destroy: Είσαι σίγουρος?
-        destroy: Διαγράφω
-        edit: Επεξεργασία
-        new: Νέο %{name}
-        title: Ενέργειες
+        close: "Κλείσε"
+        confirm_destroy: "Είσαι σίγουρος?"
+        destroy: "Διαγράφω"
+        new: "Νέο %{name}"
       admin:
         debate_closes:
           edit:
-            close: Κλείσε
-            title: Κλείσιμο συζήτησης
+            close: "Κλείσε"
+            title: "Κλείσιμο συζήτησης"
         debates:
           create:
-            invalid: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία της συζήτησης.
-            success: Η συζήτηση δημιουργήθηκε με επιτυχία.
-          destroy:
-            success: Η συζήτηση διαγράφηκε με επιτυχία.
-          edit:
-            title: Επεξεργασία συζήτησης
-            update: Ενημέρωση συζήτησης
+            invalid: "Παρουσιάστηκε πρόβλημα κατά τη δημιουργία της συζήτησης."
           form:
-            debate_type: Τύπος συζήτησης
-            finite: Πεπερασμένο (Με χρόνους έναρξης και λήξης)
-            open: Ανοιχτό (Δεν υπάρχουν ώρες έναρξης ή λήξης)
-          index:
-            title: Συζητήσεις
-          new:
-            create: Δημιουργία συζήτησης
-            title: Νέα συζήτηση
+            debate_type: "Τύπος συζήτησης"
+            finite: "Πεπερασμένο (Με χρόνους έναρξης και λήξης)"
+            open: "Ανοιχτό (Δεν υπάρχουν ώρες έναρξης ή λήξης)"
           update:
-            invalid: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της συζήτησης.
-            success: Η συζήτηση ενημερώθηκε με επιτυχία.
+            invalid: "Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της συζήτησης."
         exports:
-          comments: Σχόλια
+          comments: "Σχόλια"
         models:
           debate:
-            name: Δημόσια συζήτηση
+            name: "Δημόσια συζήτηση"
       admin_log:
         debate:
-          close: Ο %{user_name} έκλεισε τη συζήτηση %{resource_name} για το χώρο %{space_name}
-          create: Ο %{user_name} δημιούργησε τη συζήτηση %{resource_name} για τον χώρο %{space_name}
-          update: Ο %{user_name} ενημέρωσε τη συζήτηση %{resource_name} για το χώρο %{space_name}
+          close: "Ο %{user_name} έκλεισε τη συζήτηση %{resource_name} για το χώρο %{space_name}"
+          create: "Ο %{user_name} δημιούργησε τη συζήτηση %{resource_name} για τον χώρο %{space_name}"
+          update: "Ο %{user_name} ενημέρωσε τη συζήτηση %{resource_name} για το χώρο %{space_name}"
       debate_m:
-        commented_time_ago: Σχολιάστηκε πριν από %{time}
+        commented_time_ago: "Σχολιάστηκε πριν από %{time}"
       debates:
         close:
-          invalid: Παρουσιάστηκε πρόβλημα κατά το κλείσιμο της συζήτησης.
-          success: Η συζήτηση έκλεισε με επιτυχία.
+          invalid: "Παρουσιάστηκε πρόβλημα κατά το κλείσιμο της συζήτησης."
+          success: "Η συζήτηση έκλεισε με επιτυχία."
         close_debate_modal:
-          close: Κλείσε
-          description: Ποια είναι η περίληψη ή το συμπέρασμα αυτής της συζήτησης;
-          send: Κλείσιμο συζήτησης
-        closed: Κλειστό
-        count:
-          debates_count:
-            one: "%{count} συζήτηση"
-            other: "%{count} συζητήσεις"
+          close: "Κλείσε"
+          description: "Ποια είναι η περίληψη ή το συμπέρασμα αυτής της συζήτησης;"
+          send: "Κλείσιμο συζήτησης"
+        closed: "Κλειστό"
         create:
-          invalid: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία της συζήτησης.
-          success: Η συζήτηση δημιουργήθηκε με επιτυχία.
+          invalid: "Παρουσιάστηκε πρόβλημα κατά τη δημιουργία της συζήτησης."
         debate:
-          participate: Συμμετέχω
+          participate: "Συμμετέχω"
         edit:
-          back: Πίσω
-          save: Αποθήκευσε τις αλλαγές
-          title: Επεξεργασία συζήτησης
+          back: "Πίσω"
+          save: "Αποθήκευσε τις αλλαγές"
+          title: "Επεξεργασία συζήτησης"
         filters:
-          activity: Η δραστηριότητά μου
-          all: Ολα
-          category: Κατηγορία
-          category_prompt: Επιλέξτε μία κατηγορία
-          commented: Σχολιάστηκε
-          my_debates: Οι συζητήσεις μου
-          official: Επίσημος
-          origin: Προέλευση
-          participants: Συμμετέχοντες
-          scope: Πεδίο εφαρμογής
-          search: Αναζήτηση
-          state: Κατάσταση
+          activity: "Η δραστηριότητά μου"
+          all: "Ολα"
+          category_prompt: "Επιλέξτε μία κατηγορία"
+          commented: "Σχολιάστηκε"
+          my_debates: "Οι συζητήσεις μου"
+          official: "Επίσημος"
+          participants: "Συμμετέχοντες"
+          scope: "Πεδίο εφαρμογής"
+          state: "Κατάσταση"
           state_values:
-            closed: Κλειστό
-            open: Ανοιξε
-          user_groups: Ομάδες
+            closed: "Κλειστό"
+            open: "Ανοιξε"
+          user_groups: "Ομάδες"
         filters_small_view:
-          close_modal: Κλείστε το modal
-          filter: Φίλτρο
-          filter_by: Φιλτράρισμα κατά
-          unfold: Ξεδιπλώνονται
+          close_modal: "Κλείστε το modal"
+          unfold: "Ξεδιπλώνονται"
         form:
-          select_a_category: Επιλέξτε μια κατηγορία
-        index:
-          new_debate: Νέα συζήτηση
+          select_a_category: "Επιλέξτε μια κατηγορία"
         new:
-          back: Πίσω
-          create: Δημιουργώ
-          title: Νέα συζήτηση
+          create: "Δημιουργώ"
         orders:
-          commented: Τα περισσότερα σχόλια
-          label: Παραγγελία συζητήσεων από
-          random: Τυχαία σειρά
-          recent: Πρόσφατα
-          updated: Ενημερώθηκε πρόσφατα
+          commented: "Τα περισσότερα σχόλια"
+          label: "Παραγγελία συζητήσεων από"
+          random: "Τυχαία σειρά"
+          recent: "Πρόσφατα"
+          updated: "Ενημερώθηκε πρόσφατα"
         show:
-          back: Πίσω στη λίστα
-          close_debate: Κλείσιμο συζήτησης
-          date: Ημερομηνία
-          debate_closed: Κλειστό
-          debate_conclusions_are: 'Η συζήτηση έκλεισε στις %{date} με τα εξής συμπεράσματα:'
-          edit_conclusions: Επεξεργασία συμπερασμάτων
-          edit_debate: Επεξεργασία συζήτησης
-          groups_count: Ομάδες
-          last_comment_by: Τελευταίο σχόλιο από
-          no_comments_yet: κανένα σχόλιο ακόμα
-          open: Ανοιχτή συζήτηση
-          participants_count: Συμμετέχοντες
+          back: "Πίσω στη λίστα"
+          close_debate: "Κλείσιμο συζήτησης"
+          debate_closed: "Κλειστό"
+          debate_conclusions_are: "Η συζήτηση έκλεισε στις %{date} με τα εξής συμπεράσματα:"
+          edit_conclusions: "Επεξεργασία συμπερασμάτων"
+          edit_debate: "Επεξεργασία συζήτησης"
+          groups_count: "Ομάδες"
+          last_comment_by: "Τελευταίο σχόλιο από"
+          no_comments_yet: "κανένα σχόλιο ακόμα"
+          open: "Ανοιχτή συζήτηση"
+          participants_count: "Συμμετέχοντες"
         update:
-          invalid: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση της συζήτησης.
-          success: Η συζήτηση ενημερώθηκε με επιτυχία.
+          invalid: "Παρουσιάστηκε πρόβλημα κατά την ενημέρωση της συζήτησης."
+          success: "Η συζήτηση ενημερώθηκε με επιτυχία."
         versions:
           debates:
-            back_to_resource: Επιστρέψτε στη συζήτηση
+            back_to_resource: "Επιστρέψτε στη συζήτηση"
           index:
-            title: εκδόσεις
+            title: "εκδόσεις"
         versions_list:
-          back_to_resource: Επιστρέψτε στη συζήτηση
+          back_to_resource: "Επιστρέψτε στη συζήτηση"
       last_activity:
         debate_updated_at_html: "<span>Η συζήτηση ενημερώθηκε στις %{link}</span>"
-        new_debate_at_html: "<span>Νέα συζήτηση στο %{link}</span>"
-      models:
-        debate:
-          fields:
-            end_time: Ημερομηνία λήξης
-            official_debate: Επίσημη συζήτηση
-            start_time: Ημερομηνία έναρξης
-            title: Τίτλος
     events:
       debates:
         create_debate_event:
           space_followers:
-            email_intro: |-
-              Γεια,
-              Δημιουργήθηκε μια νέα συζήτηση "%{resource_title}" σχετικά με τον συμμετοχικό χώρο %{space_title}, ελέγξτε τον και συνεισφέρετε:
-            email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε τον συμμετοχικό χώρο %{space_title}. Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο.
-            email_subject: Νέα συζήτηση "%{resource_title}" στο %{space_title}
-            notification_title: Η συζήτηση <a href="%{resource_path}">%{resource_title}</a> δημιουργήθηκε στις <a href="%{space_path}">%{space_title}</a>.
+            email_intro: "Γεια,\nΔημιουργήθηκε μια νέα συζήτηση \"%{resource_title}\" σχετικά με τον συμμετοχικό χώρο %{space_title}, ελέγξτε τον και συνεισφέρετε:"
+            email_outro: "Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε τον συμμετοχικό χώρο %{space_title}. Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο."
+            email_subject: "Νέα συζήτηση \"%{resource_title}\" στο %{space_title}"
+            notification_title: "Η συζήτηση <a href=\"%{resource_path}\">%{resource_title}</a> δημιουργήθηκε στις <a href=\"%{space_path}\">%{space_title}</a>."
           user_followers:
-            email_intro: |-
-              Γεια,
-              Ο %{author_name} %{author_nickname}, τον οποίο ακολουθείτε, δημιούργησε μια νέα συζήτηση "%{resource_title}". Δείτε το και συνεισφέρετε:
-            email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το %{author_nickname}. Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο.
-            email_subject: Νέα συζήτηση "%{resource_title}" από %{author_nickname}
-            notification_title: Ο <a href="%{author_path}">%{author_name} %{author_nickname}</a> δημιούργησε τη συζήτηση <a href="%{resource_path}">%{resource_title}</a>.
+            email_intro: "Γεια,\nΟ %{author_name} %{author_nickname}, τον οποίο ακολουθείτε, δημιούργησε μια νέα συζήτηση \"%{resource_title}\". Δείτε το και συνεισφέρετε:"
+            email_outro: "Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το %{author_nickname}. Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο."
+            email_subject: "Νέα συζήτηση \"%{resource_title}\" από %{author_nickname}"
+            notification_title: "Ο <a href=\"%{author_path}\">%{author_name} %{author_nickname}</a> δημιούργησε τη συζήτηση <a href=\"%{resource_path}\">%{resource_title}</a>."
         creation_disabled:
-          email_intro: 'Η δημιουργία συζήτησης δεν είναι πλέον ενεργή στο %{participatory_space_title}. Μπορείτε ακόμα να συμμετέχετε σε ανοιχτές συζητήσεις από αυτήν τη σελίδα:'
-          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το %{participatory_space_title}. Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο.
-          email_subject: Η δημιουργία συζήτησης απενεργοποιήθηκε στο %{participatory_space_title}
-          notification_title: Η δημιουργία συζήτησης είναι πλέον απενεργοποιημένη στο <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          email_intro: "Η δημιουργία συζήτησης δεν είναι πλέον ενεργή στο %{participatory_space_title}. Μπορείτε ακόμα να συμμετέχετε σε ανοιχτές συζητήσεις από αυτήν τη σελίδα:"
+          email_outro: "Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το %{participatory_space_title}. Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο."
+          email_subject: "Η δημιουργία συζήτησης απενεργοποιήθηκε στο %{participatory_space_title}"
+          notification_title: "Η δημιουργία συζήτησης είναι πλέον απενεργοποιημένη στο <a href=\"%{participatory_space_url}\">%{participatory_space_title}</a>"
         creation_enabled:
-          email_intro: 'Τώρα μπορείτε να ξεκινήσετε νέες συζητήσεις στο %{participatory_space_title}! Ξεκινήστε να συμμετέχετε σε αυτή τη σελίδα:'
-          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το %{participatory_space_title}. Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο.
-          email_subject: Οι συζητήσεις είναι τώρα διαθέσιμες στο %{participatory_space_title}
-          notification_title: Τώρα μπορείτε να ξεκινήσετε <a href="%{resource_path}">νέες συζητήσεις</a> στο <a href="%{participatory_space_url}">%{participatory_space_title}</a>
+          email_intro: "Τώρα μπορείτε να ξεκινήσετε νέες συζητήσεις στο %{participatory_space_title}! Ξεκινήστε να συμμετέχετε σε αυτή τη σελίδα:"
+          email_outro: "Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το %{participatory_space_title}. Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο."
+          email_subject: "Οι συζητήσεις είναι τώρα διαθέσιμες στο %{participatory_space_title}"
+          notification_title: "Τώρα μπορείτε να ξεκινήσετε <a href=\"%{resource_path}\">νέες συζητήσεις</a> στο <a href=\"%{participatory_space_url}\">%{participatory_space_title}</a>"
         debate_closed:
           affected_user:
-            email_intro: 'Η συζήτηση "%{resource_title}" έκλεισε. Μπορείτε να διαβάσετε τα συμπεράσματα από τη σελίδα του:'
-            email_outro: Λάβατε αυτήν την ειδοποίηση επειδή παρακολουθείτε τη συζήτηση "%{resource_title}". Μπορείτε να το καταργήσετε από τον προηγούμενο σύνδεσμο.
-            email_subject: Η συζήτηση "%{resource_title}" έκλεισε
-            notification_title: Η συζήτηση <a href="%{resource_path}">%{resource_title}</a> έκλεισε.
+            email_intro: "Η συζήτηση \"%{resource_title}\" έκλεισε. Μπορείτε να διαβάσετε τα συμπεράσματα από τη σελίδα του:"
+            email_outro: "Λάβατε αυτήν την ειδοποίηση επειδή παρακολουθείτε τη συζήτηση \"%{resource_title}\". Μπορείτε να το καταργήσετε από τον προηγούμενο σύνδεσμο."
+            email_subject: "Η συζήτηση \"%{resource_title}\" έκλεισε"
+            notification_title: "Η συζήτηση <a href=\"%{resource_path}\">%{resource_title}</a> έκλεισε."
           follower:
-            email_intro: 'Η συζήτηση "%{resource_title}" έκλεισε. Μπορείτε να διαβάσετε τα συμπεράσματα από τη σελίδα του:'
-            email_outro: Λάβατε αυτήν την ειδοποίηση επειδή παρακολουθείτε τη συζήτηση "%{resource_title}". Μπορείτε να το καταργήσετε από τον προηγούμενο σύνδεσμο.
-            email_subject: Η συζήτηση "%{resource_title}" έκλεισε
-            notification_title: Η συζήτηση <a href="%{resource_path}">%{resource_title}</a> έκλεισε.
+            email_intro: "Η συζήτηση \"%{resource_title}\" έκλεισε. Μπορείτε να διαβάσετε τα συμπεράσματα από τη σελίδα του:"
+            email_outro: "Λάβατε αυτήν την ειδοποίηση επειδή παρακολουθείτε τη συζήτηση \"%{resource_title}\". Μπορείτε να το καταργήσετε από τον προηγούμενο σύνδεσμο."
+            email_subject: "Η συζήτηση \"%{resource_title}\" έκλεισε"
+            notification_title: "Η συζήτηση <a href=\"%{resource_path}\">%{resource_title}</a> έκλεισε."
     gamification:
       badges:
         commented_debates:
-          conditions:
-          - Επιλέξτε μια ανοιχτή συζήτηση για να λάβετε μέρος
-          description: Αυτό το σήμα χορηγείται όταν συμμετέχετε ενεργά στις διάφορες συζητήσεις αφήνοντας τα σχόλιά σας.
-          description_another: Αυτός ο συμμετέχων έχει λάβει μέρος σε συζητήσεις %{score}.
-          description_own: Έχετε συμμετάσχει σε συζητήσεις %{score}.
-          name: Συζητήσεις
-          next_level_in: Συμμετέχετε σε %{score} ακόμη συζητήσεις για να φτάσετε στο επόμενο επίπεδο!
-          unearned_another: Αυτός ο συμμετέχων δεν έχει λάβει ακόμη μέρος σε καμία συζήτηση.
-          unearned_own: Δεν έχετε συμμετάσχει ακόμα σε καμία συζήτηση.
-    metrics:
-      debates:
-        description: Αριθμός συζητήσεων που δημιουργήθηκαν
-        object: συζητήσεις
-        title: Συζητήσεις
+          description: "Αυτό το σήμα χορηγείται όταν συμμετέχετε ενεργά στις διάφορες συζητήσεις αφήνοντας τα σχόλιά σας."
+          description_another: "Αυτός ο συμμετέχων έχει λάβει μέρος σε συζητήσεις %{score}."
+          description_own: "Έχετε συμμετάσχει σε συζητήσεις %{score}."
+          next_level_in: "Συμμετέχετε σε %{score} ακόμη συζητήσεις για να φτάσετε στο επόμενο επίπεδο!"
+          unearned_another: "Αυτός ο συμμετέχων δεν έχει λάβει ακόμη μέρος σε καμία συζήτηση."
