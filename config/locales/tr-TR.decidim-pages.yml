@@ -1,36 +1,23 @@
 ---
 tr-TR:
-  activerecord:
-    models:
-      decidim/pages/page:
-        one: Sayfa
-        other: Sayfalar
   decidim:
     admin_log:
       page:
         update: "%{user_name}, %{resource_name} sayfasını %{space_name}'de güncelledi"
     components:
       pages:
-        name: Sayfa
         settings:
           global:
-            announcement: Duyuru
+            announcement: "Duyuru"
           step:
-            announcement: Duyuru
+            announcement: "Duyuru"
     pages:
       admin:
-        models:
-          components:
-            body: Vücut
         pages:
           edit:
-            save: Güncelleme
-            title: Sayfayı düzenle
-          update:
-            invalid: Sayfa kaydedilirken bir sorun oluştu.
-            success: Sayfa başarıyla kaydedildi.
+            save: "Güncelleme"
       home:
         hero:
-          participate_title: Platformun süreçlerine katılın
+          participate_title: "Platformun süreçlerine katılın"
         sub_hero:
-          register_title: Hesap oluşturmak için kaydolun
+          register_title: "Hesap oluşturmak için kaydolun"

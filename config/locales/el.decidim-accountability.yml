@@ -3,276 +3,145 @@ el:
   activemodel:
     attributes:
       result:
-        decidim_accountability_status_id: Κατάσταση
-        decidim_category_id: Κατηγορία
-        decidim_scope_id: Πεδίο εφαρμογής
-        description: Περιγραφή
-        end_date: Ημερομηνία λήξης
-        progress: Πρόοδος
-        project_ids: Συμπεριλαμβανόμενα έργα
-        proposals: Συμπεριλαμβανόμενες προτάσεις
-        start_date: Ημερομηνία έναρξης
-        title: Τίτλος
-        updated_at: Ενημερώθηκε στις
+        project_ids: "Συμπεριλαμβανόμενα έργα"
+        proposals: "Συμπεριλαμβανόμενες προτάσεις"
       status:
-        description: Περιγραφή
-        key: Κλειδί
-        name: Ονομα
-        progress: Πρόοδος
+        name: "Ονομα"
       timeline_entry:
-        description: Περιγραφή
-        entry_date: Ημερομηνία
-        title: Τίτλος
+        title: "Τίτλος"
     models:
-      decidim/accountability/proposal_linked_event: Η πρόταση περιλαμβάνεται σε αποτέλεσμα
-      decidim/accountability/result_progress_updated_event: Η πρόοδος του αποτελέσματος ενημερώθηκε
-  activerecord:
-    models:
-      decidim/accountability/result:
-        one: Αποτέλεσμα
-        other: Αποτελέσματα
+      decidim/accountability/proposal_linked_event: "Η πρόταση περιλαμβάνεται σε αποτέλεσμα"
+      decidim/accountability/result_progress_updated_event: "Η πρόοδος του αποτελέσματος ενημερώθηκε"
   decidim:
     accountability:
       actions:
-        attachment_collections: Φάκελοι
-        attachments: Συνημμένα
-        confirm_destroy: Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το %{name};
-        destroy: Διαγράφω
-        edit: Επεξεργασία
-        import_csv: Εισαγωγή CSV
-        new: Νέο %{name}
-        preview: Προεπισκόπηση
-        timeline_entries: Εξέλιξη του έργου
-        title: Ενέργειες
+        confirm_destroy: "Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το %{name};"
+        destroy: "Διαγράφω"
+        import_csv: "Εισαγωγή CSV"
+        new: "Νέο %{name}"
+        timeline_entries: "Εξέλιξη του έργου"
       admin:
-        exports:
-          result_comments: Σχόλια
-          results: Αποτελέσματα
         import_results:
           new:
-            download_export: Κατεβάστε την Εξαγωγή σε μορφή CSV
-            import: Εισαγωγή
-            info: |
-              <p>Συνιστούμε να ακολουθήσετε αυτά τα βήματα:</p>
-              <ol>
-              <li><a href='%{link_new_status}' target='_blank'>Δημιουργήστε τις καταστάσεις για τα αποτελέσματα</a> που θέλετε να προσθέσετε</li>
-              <li><a href='%{link_new_result}' target='_blank'>Δημιουργήστε τουλάχιστον ένα αποτέλεσμα με μη αυτόματο τρόπο</a> μέσω αυτού του πίνακα διαχειριστή πριν χρησιμοποιήσετε την Εισαγωγή, για καλύτερη κατανόηση της μορφής και του τι πρέπει να συμπληρώσετε έξω.</li>
-              <li>%{link_export_csv}</li>
-              <li>Κάντε τις αλλαγές τοπικά. Μπορείτε να αλλάξετε μόνο τις ακόλουθες στήλες του CSV:
-                <ul>
-                <li><b>κατηγορία/αναγνωριστικό:</b> Αναγνωριστικό για την κατηγορία</li>
-                <li><b>scope/id:</b> ID για το Scope</li>
-                <li><b>γονικός/αναγνωριστικός:</b> Αναγνωριστικό του γονέα (για σχετικά αποτελέσματα). Προαιρετικό</li>
-                <li><b>title/en:</b> Τίτλος στην αγγλική γλώσσα. Αυτό θα εξαρτηθεί από τη διαμόρφωση της γλώσσας της πλατφόρμας σας.</li>
-                <li><b>περιγραφή/en:</b> Περιγραφή στην αγγλική γλώσσα. Αυτό θα εξαρτηθεί από τη διαμόρφωση της γλώσσας της πλατφόρμας σας.</li>
-                <li><b>ημερομηνία_έναρξης:</b> ημερομηνία έναρξης εκτέλεσης του αποτελέσματος (μορφή ΕΕΕΕ-ΜΜ-ΗΗ)</li>
-                <li><b>ημερομηνία_λήξης:</b> ημερομηνία κατά την οποία το αποτέλεσμα τερματίζει την εκτέλεση (μορφή ΕΕΕΕ-ΜΜ-ΗΗ)</li>
-                <li><b>status/id:</b> ID της κατάστασης για αυτό το αποτέλεσμα</li>
-                <li><b>πρόοδος:</b> Ποσοστό (από 0 έως 100) της εκτέλεσης</li>
-                <li><b>proposals_ids:</b> εσωτερικό αναγνωριστικό των σχετικών προτάσεων (χωρίζεται με κόμμα). Μετατρέπεται αυτόματα σε <span class='attribute-name'>proposal_url</span></li>
-                </ul>
-              </li>
-              </ol>
-            title: Εισαγωγή αποτελεσμάτων από CSV
+            download_export: "Κατεβάστε την Εξαγωγή σε μορφή CSV"
+            info: "<p>Συνιστούμε να ακολουθήσετε αυτά τα βήματα:</p>\n<ol>\n<li><a href='%{link_new_status}' target='_blank'>Δημιουργήστε τις καταστάσεις για τα αποτελέσματα</a> που θέλετε να προσθέσετε</li>\n<li><a href='%{link_new_result}' target='_blank'>Δημιουργήστε τουλάχιστον ένα αποτέλεσμα με μη αυτόματο τρόπο</a> μέσω αυτού του πίνακα διαχειριστή πριν χρησιμοποιήσετε την Εισαγωγή, για καλύτερη κατανόηση της μορφής και του τι πρέπει να συμπληρώσετε έξω.</li>\n<li>%{link_export_csv}</li>\n<li>Κάντε τις αλλαγές τοπικά. Μπορείτε να αλλάξετε μόνο τις ακόλουθες στήλες του CSV:\n  <ul>\n  <li><b>κατηγορία/αναγνωριστικό:</b> Αναγνωριστικό για την κατηγορία</li>\n  <li><b>scope/id:</b> ID για το Scope</li>\n  <li><b>γονικός/αναγνωριστικός:</b> Αναγνωριστικό του γονέα (για σχετικά αποτελέσματα). Προαιρετικό</li>\n  <li><b>title/en:</b> Τίτλος στην αγγλική γλώσσα. Αυτό θα εξαρτηθεί από τη διαμόρφωση της γλώσσας της πλατφόρμας σας.</li>\n  <li><b>περιγραφή/en:</b> Περιγραφή στην αγγλική γλώσσα. Αυτό θα εξαρτηθεί από τη διαμόρφωση της γλώσσας της πλατφόρμας σας.</li>\n  <li><b>ημερομηνία_έναρξης:</b> ημερομηνία έναρξης εκτέλεσης του αποτελέσματος (μορφή ΕΕΕΕ-ΜΜ-ΗΗ)</li>\n  <li><b>ημερομηνία_λήξης:</b> ημερομηνία κατά την οποία το αποτέλεσμα τερματίζει την εκτέλεση (μορφή ΕΕΕΕ-ΜΜ-ΗΗ)</li>\n  <li><b>status/id:</b> ID της κατάστασης για αυτό το αποτέλεσμα</li>\n  <li><b>πρόοδος:</b> Ποσοστό (από 0 έως 100) της εκτέλεσης</li>\n  <li><b>proposals_ids:</b> εσωτερικό αναγνωριστικό των σχετικών προτάσεων (χωρίζεται με κόμμα). Μετατρέπεται αυτόματα σε <span class='attribute-name'>proposal_url</span></li>\n  </ul>\n</li>\n</ol>\n"
+            title: "Εισαγωγή αποτελεσμάτων από CSV"
         imports:
           create:
-            success: Το αρχείο έχει αρχίσει να εισάγεται. Θα λάβετε ένα email μέσα στα επόμενα λεπτά με το αποτέλεσμα της εισαγωγής
+            success: "Το αρχείο έχει αρχίσει να εισάγεται. Θα λάβετε ένα email μέσα στα επόμενα λεπτά με το αποτέλεσμα της εισαγωγής"
         models:
-          result:
-            name: Αποτέλεσμα
-          status:
-            name: Κατάσταση
           timeline_entry:
-            name: Καταχώριση χρονολογίου
+            name: "Καταχώριση χρονολογίου"
         results:
           create:
-            invalid: Παρουσιάστηκε πρόβλημα κατά τη δημιουργία αυτού του αποτελέσματος
-            success: Το αποτέλεσμα δημιουργήθηκε με επιτυχία
+            invalid: "Παρουσιάστηκε πρόβλημα κατά τη δημιουργία αυτού του αποτελέσματος"
           destroy:
-            success: Το αποτέλεσμα διαγράφηκε επιτυχώς
-          edit:
-            title: Επεξεργασία αποτελέσματος
-            update: Ενημέρωση αποτελέσματος
-          index:
-            title: Αποτελέσματα
-          new:
-            create: Δημιουργία αποτελέσματος
-            title: Νέο αποτέλεσμα
+            success: "Το αποτέλεσμα διαγράφηκε επιτυχώς"
           update:
-            invalid: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτού του αποτελέσματος
-            success: Το αποτέλεσμα ενημερώθηκε με επιτυχία
-        shared:
-          subnav:
-            statuses: Καταστάσεις
+            invalid: "Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτού του αποτελέσματος"
         statuses:
           create:
-            invalid: Παρουσιάστηκε πρόβλημα με τη δημιουργία αυτής της κατάστασης
-            success: Η κατάσταση δημιουργήθηκε με επιτυχία
+            invalid: "Παρουσιάστηκε πρόβλημα με τη δημιουργία αυτής της κατάστασης"
           destroy:
-            success: Η κατάσταση διαγράφηκε επιτυχώς
-          edit:
-            title: Επεξεργασία κατάστασης
-            update: Ενημέρωση κατάστασης
-          index:
-            title: Καταστάσεις
-          new:
-            create: Δημιουργία κατάστασης
-            title: Νέα κατάσταση
+            success: "Η κατάσταση διαγράφηκε επιτυχώς"
           update:
-            invalid: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της κατάστασης
-            success: Η κατάσταση ενημερώθηκε με επιτυχία
+            invalid: "Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της κατάστασης"
         timeline_entries:
           create:
-            invalid: Παρουσιάστηκε πρόβλημα με τη δημιουργία αυτής της καταχώρισης
-            success: Η καταχώριση δημιουργήθηκε με επιτυχία
+            invalid: "Παρουσιάστηκε πρόβλημα με τη δημιουργία αυτής της καταχώρισης"
+            success: "Η καταχώριση δημιουργήθηκε με επιτυχία"
           destroy:
-            success: Η καταχώριση διαγράφηκε με επιτυχία
+            success: "Η καταχώριση διαγράφηκε με επιτυχία"
           edit:
-            title: Επεξεργασία καταχώρισης
-            update: Ενημέρωση καταχώρισης
+            title: "Επεξεργασία καταχώρισης"
+            update: "Ενημέρωση καταχώρισης"
           index:
-            title: Εγγραφές στο χρονοδιάγραμμα του έργου
+            title: "Εγγραφές στο χρονοδιάγραμμα του έργου"
           new:
-            create: Δημιουργία καταχώρισης
-            title: Νέα καταχώρηση
+            create: "Δημιουργία καταχώρισης"
           update:
-            invalid: Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της καταχώρισης
-            success: Η καταχώριση ενημερώθηκε με επιτυχία
+            invalid: "Παρουσιάστηκε πρόβλημα κατά την ενημέρωση αυτής της καταχώρισης"
+            success: "Η καταχώριση ενημερώθηκε με επιτυχία"
       admin_log:
         result:
-          create: Το %{user_name} δημιούργησε το αποτέλεσμα %{resource_name} στο %{space_name}
-          delete: Ο %{user_name} διέγραψε το αποτέλεσμα %{resource_name} στο %{space_name}
-          update: Το %{user_name} ενημερώθηκε το αποτέλεσμα %{resource_name} στο %{space_name}
+          create: "Το %{user_name} δημιούργησε το αποτέλεσμα %{resource_name} στο %{space_name}"
+          delete: "Ο %{user_name} διέγραψε το αποτέλεσμα %{resource_name} στο %{space_name}"
+          update: "Το %{user_name} ενημερώθηκε το αποτέλεσμα %{resource_name} στο %{space_name}"
         status:
-          create: Ο %{user_name} δημιούργησε την κατάσταση %{resource_name}
-          delete: Ο %{user_name} διέγραψε την κατάσταση %{resource_name}
-          update: Ο %{user_name} ενημέρωσε την κατάσταση %{resource_name}
+          create: "Ο %{user_name} δημιούργησε την κατάσταση %{resource_name}"
+          delete: "Ο %{user_name} διέγραψε την κατάσταση %{resource_name}"
+          update: "Ο %{user_name} ενημέρωσε την κατάσταση %{resource_name}"
         timeline_entry:
-          create: Ο %{user_name} δημιούργησε την καταχώριση χρονολογίου %{resource_name}
-          delete: Ο %{user_name} διέγραψε την καταχώριση του χρονολογίου %{resource_name}
-          update: Ο %{user_name} ενημέρωσε την καταχώριση χρονολογίου %{resource_name}
+          create: "Ο %{user_name} δημιούργησε την καταχώριση χρονολογίου %{resource_name}"
+          delete: "Ο %{user_name} διέγραψε την καταχώριση του χρονολογίου %{resource_name}"
+          update: "Ο %{user_name} ενημέρωσε την καταχώριση χρονολογίου %{resource_name}"
         value_types:
           parent_presenter:
-            not_found: 'Ο γονέας δεν βρέθηκε στη βάση δεδομένων (ID: %{id})'
+            not_found: "Ο γονέας δεν βρέθηκε στη βάση δεδομένων (ID: %{id})"
       content_blocks:
         highlighted_results:
-          dates: Ημερομηνίες
-          results: Αποτελέσματα
-          unspecified: Δεν διευκρινίζεται
+          unspecified: "Δεν διευκρινίζεται"
       import_mailer:
         import:
-          errors: Σφάλματα
-          errors_present: Παρουσιάστηκε πρόβλημα κατά την εισαγωγή αποτελεσμάτων
-          row_number: Σειρά
-          subject: Επιτυχής εισαγωγή αποτελεσμάτων
-          success: Επιτυχής εισαγωγή αποτελεσμάτων. Μπορείτε να δείτε τα αποτελέσματα στη διεπαφή διαχείρισης.
-      last_activity:
-        new_result_at_html: "<span>Νέο αποτέλεσμα στο %{link}</span>"
+          errors_present: "Παρουσιάστηκε πρόβλημα κατά την εισαγωγή αποτελεσμάτων"
+          row_number: "Σειρά"
+          success: "Επιτυχής εισαγωγή αποτελεσμάτων. Μπορείτε να δείτε τα αποτελέσματα στη διεπαφή διαχείρισης."
       models:
         result:
           fields:
-            category: Κατηγορία
-            created_at: Δημιουργήθηκε
-            end_date: Ημερομηνία λήξης
-            id: ταυτότητα
-            progress: Πρόοδος
-            scope: Πεδίο εφαρμογής
-            start_date: Ημερομηνία έναρξης
-            status: Κατάσταση
-            title: Τίτλος
+            id: "ταυτότητα"
         status:
           fields:
-            description: Περιγραφή
-            key: Κλειδί
-            name: Ονομα
-            progress: Πρόοδος
+            name: "Ονομα"
         timeline_entry:
           fields:
-            entry_date: Ημερομηνία
-            title: Τίτλος
+            title: "Τίτλος"
       result_m:
-        executed: Εκτελέστηκε
-        view: Θέα
+        executed: "Εκτελέστηκε"
+        view: "Θέα"
       results:
-        count:
-          results_count:
-            one: 1 αποτέλεσμα
-            other: "%{count} αποτελέσματα"
         filters:
-          all: Ολα
-          scopes: Πεδίο εφαρμογής
-        home:
-          categories_label: Κατηγορίες
-          subcategories_label: Υποκατηγορίες
+          all: "Ολα"
+          scopes: "Πεδίο εφαρμογής"
         home_header:
-          global_status: Παγκόσμια κατάσταση εκτέλεσης
+          global_status: "Παγκόσμια κατάσταση εκτέλεσης"
         nav_breadcrumb:
-          global: Παγκόσμια εκτέλεση
+          global: "Παγκόσμια εκτέλεση"
         search:
-          search: Αναζήτηση για ενέργειες
+          search: "Αναζήτηση για ενέργειες"
         show:
           stats:
-            attendees: παρευρισκόμενοι
-            back_to_resource: Επιστρέψτε στο αποτέλεσμα
-            comments: Σχόλια
-            contributions: Συνεισφορές
-            last_edited_by: Τελευταία επεξεργασία από
-            last_updated_at: Τελευταία ενημέρωση στις
-            meetings: Συναντήσεις
-            proposals: Προτάσεις
-            votes: Υποστηρίζει
+            attendees: "παρευρισκόμενοι"
+            back_to_resource: "Επιστρέψτε στο αποτέλεσμα"
+            meetings: "Συναντήσεις"
+            votes: "Υποστηρίζει"
         timeline:
-          title: Εξέλιξη του έργου
-    admin:
-      filters:
-        results:
-          category_id_eq:
-            label: Κατηγορία
-          scope_id_eq:
-            label: Πεδίο εφαρμογής
-          status_id_eq:
-            label: Κατάσταση
+          title: "Εξέλιξη του έργου"
     components:
       accountability:
-        actions:
-          comment: Σχόλιο
-        name: Ευθύνη
+        name: "Ευθύνη"
         settings:
           global:
-            categories_label: Όνομα για "Κατηγορίες"
-            comments_enabled: Τα σχόλια ενεργοποιήθηκαν
-            comments_max_length: Μέγιστο μήκος σχολίων (Αφήστε 0 για την προεπιλεγμένη τιμή)
-            display_progress_enabled: Εμφάνιση προόδου
-            heading_leaf_level_results: Όνομα για "Έργα"
-            heading_parent_level_results: Όνομα για "Αποτελέσματα"
-            intro: Εισαγωγή
-            scope_id: Πεδίο εφαρμογής
-            scopes_enabled: Τα πεδία είναι ενεργοποιημένα
-            subcategories_label: Όνομα για "Υποκατηγορίες"
-          step:
-            comments_blocked: Τα σχόλια αποκλείστηκαν
+            categories_label: "Όνομα για \"Κατηγορίες\""
+            comments_max_length: "Μέγιστο μήκος σχολίων (Αφήστε 0 για την προεπιλεγμένη τιμή)"
+            heading_leaf_level_results: "Όνομα για \"Έργα\""
+            heading_parent_level_results: "Όνομα για \"Αποτελέσματα\""
+            scopes_enabled: "Τα πεδία είναι ενεργοποιημένα"
+            subcategories_label: "Όνομα για \"Υποκατηγορίες\""
     events:
       accountability:
         proposal_linked:
-          email_intro: 'Η πρόταση "%{proposal_title}" έχει συμπεριληφθεί σε ένα αποτέλεσμα. Μπορείτε να το δείτε από αυτή τη σελίδα:'
-          email_outro: Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το "%{proposal_title}". Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο.
-          email_subject: Μια ενημέρωση για το %{proposal_title}
-          notification_title: Η πρόταση <a href="%{proposal_path}">%{proposal_title}</a> έχει συμπεριληφθεί στο αποτέλεσμα <a href="%{resource_path}">%{resource_title}</a>.
+          email_intro: "Η πρόταση \"%{proposal_title}\" έχει συμπεριληφθεί σε ένα αποτέλεσμα. Μπορείτε να το δείτε από αυτή τη σελίδα:"
+          email_outro: "Έχετε λάβει αυτήν την ειδοποίηση επειδή ακολουθείτε το \"%{proposal_title}\". Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο."
+          email_subject: "Μια ενημέρωση για το %{proposal_title}"
         result_progress_updated:
-          email_intro: 'Το αποτέλεσμα "%{resource_title}", το οποίο περιλαμβάνει την πρόταση "%{proposal_title}", είναι πλέον %{progress}% ολοκληρωμένο. Μπορείτε να το δείτε από αυτή τη σελίδα:'
-          email_outro: Λάβατε αυτήν την ειδοποίηση επειδή ακολουθείτε το "%{proposal_title}" και αυτή η πρόταση περιλαμβάνεται στο αποτέλεσμα "%{resource_title}". Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο.
-          email_subject: Μια ενημέρωση για την πρόοδο %{resource_title}
-          notification_title: Το αποτέλεσμα <a href="%{resource_path}">%{resource_title}</a>, το οποίο περιλαμβάνει την πρόταση <a href="%{proposal_path}">%{proposal_title}</a>, είναι πλέον %{progress}% ολοκληρωμένο.
+          email_intro: "Το αποτέλεσμα \"%{resource_title}\", το οποίο περιλαμβάνει την πρόταση \"%{proposal_title}\", είναι πλέον %{progress}% ολοκληρωμένο. Μπορείτε να το δείτε από αυτή τη σελίδα:"
+          email_outro: "Λάβατε αυτήν την ειδοποίηση επειδή ακολουθείτε το \"%{proposal_title}\" και αυτή η πρόταση περιλαμβάνεται στο αποτέλεσμα \"%{resource_title}\". Μπορείτε να σταματήσετε να λαμβάνετε ειδοποιήσεις ακολουθώντας τον προηγούμενο σύνδεσμο."
+          email_subject: "Μια ενημέρωση για την πρόοδο %{resource_title}"
+          notification_title: "Το αποτέλεσμα <a href=\"%{resource_path}\">%{resource_title}</a>, το οποίο περιλαμβάνει την πρόταση <a href=\"%{proposal_path}\">%{proposal_title}</a>, είναι πλέον %{progress}% ολοκληρωμένο."
     metrics:
       results:
-        description: Αριθμός αποτελεσμάτων που δημιουργήθηκαν
-        object: Αποτελέσματα
-        title: Αποτελέσματα
+        object: "Αποτελέσματα"
     participatory_spaces:
       highlighted_results:
-        see_all: Δείτε όλα τα αποτελέσματα
-    resource_links:
-      included_projects:
-        result_project: Έργα που περιλαμβάνονται σε αυτό το αποτέλεσμα
-      included_proposals:
-        result_proposal: Προτάσεις που περιλαμβάνονται σε αυτό το αποτέλεσμα
+        see_all: "Δείτε όλα τα αποτελέσματα"

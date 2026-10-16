@@ -3,193 +3,137 @@ el:
   activemodel:
     attributes:
       answer:
-        body: Απάντηση
-        choices: Επιλογές
-        selected_choices: Επιλεγμένες επιλογές
-      question:
-        max_choices: Μέγιστος αριθμός επιλογών
-        question_type: Τύπος
+        choices: "Επιλογές"
+        selected_choices: "Επιλεγμένες επιλογές"
       questionnaire_question:
-        mandatory: Υποχρεωτική
-        max_characters: Όριο χαρακτήρων (αφήστε στο 0 εάν δεν υπάρχει όριο)
+        mandatory: "Υποχρεωτική"
+        max_characters: "Όριο χαρακτήρων (αφήστε στο 0 εάν δεν υπάρχει όριο)"
     errors:
       models:
         answer:
           attributes:
             add_documents:
-              needs_to_be_reattached: Χρειάζεται επανασύνδεση
+              needs_to_be_reattached: "Χρειάζεται επανασύνδεση"
             body:
-              too_long: είναι πολύ μακρύ
+              too_long: "είναι πολύ μακρύ"
             choices:
-              missing: δεν έχουν ολοκληρωθεί
-              too_many: είναι πάρα πολλές
+              too_many: "είναι πάρα πολλές"
         questionnaire:
-          request_invalid: Παρουσιάστηκε σφάλμα κατά την επεξεργασία του αιτήματος. Δοκιμάστε ξανά
+          request_invalid: "Παρουσιάστηκε σφάλμα κατά την επεξεργασία του αιτήματος. Δοκιμάστε ξανά"
   decidim:
     forms:
       admin:
         models:
           components:
-            description: Περιγραφή
-            tos: Όροι παροχής υπηρεσιών
+            tos: "Όροι παροχής υπηρεσιών"
         questionnaires:
           actions:
-            back: Επιστροφή στις ερωτήσεις
-            show: Εμφάνιση απαντήσεων
-          answer_option:
-            answer_option: Επιλογή απάντησης
-            free_text: Ελεύθερο κείμενο
-            remove: Κατάργηση
-            statement: Δήλωση
+            back: "Επιστροφή στις ερωτήσεις"
+            show: "Εμφάνιση απαντήσεων"
           answers:
             actions:
-              back: Επιστροφή στις απαντήσεις
-              export: Εξαγωγή
-              show: Εμφάνιση απαντήσεων
-            empty: Δεν υπάρχουν απαντήσεις ακόμη
+              back: "Επιστροφή στις απαντήσεις"
+              export: "Εξαγωγή"
+              show: "Εμφάνιση απαντήσεων"
+            empty: "Δεν υπάρχουν απαντήσεις ακόμη"
             export:
               answer:
-                title: 'Απόκριση #%{number}'
+                title: "Απόκριση #%{number}"
             export_response:
-              title: survey_user_answers_%{token}
+              title: "survey_user_answers_%{token}"
             index:
               title: "%{total} συνολικές απαντήσεις"
             show:
-              title: 'Απάντηση #%{number}'
+              title: "Απάντηση #%{number}"
           display_condition:
-            answer_option: Επιλογή απάντησης
-            condition_question: Ερώτηση
-            condition_type: Κατάσταση
+            answer_option: "Επιλογή απάντησης"
+            condition_question: "Ερώτηση"
+            condition_type: "Κατάσταση"
             condition_types:
-              answered: Απαντήθηκε
-              equal: Ισούται
-              match: Περιλαμβάνει κείμενο
-              not_answered: Δεν απαντήθηκε
-              not_equal: Δεν ισούται
-            condition_value: Περιλαμβανόμενο κείμενο
-            display_condition: Συνθήκη εμφάνισης
-            mandatory: Αυτή η συνθήκη πρέπει να ικανοποιείται πάντα ανεξάρτητα από την κατάσταση άλλων συνθηκών
-            remove: Κατάργηση
-            save_warning: Θυμηθείτε να αποθηκεύσετε τη φόρμα πριν διαμορφώσετε τις συνθήκες εμφάνισης
-            select_answer_option: Επιλέξτε δυνατότητα απάντησης
-            select_condition_question: Επιλέξτε ερώτηση
-            select_condition_type: Επιλογή τύπου συνθήκης
-          edit:
-            save: Αποθήκευση
-            title: Επεξεργασία ερωτηματολογίου
+              answered: "Απαντήθηκε"
+              equal: "Ισούται"
+              match: "Περιλαμβάνει κείμενο"
+              not_answered: "Δεν απαντήθηκε"
+              not_equal: "Δεν ισούται"
+            condition_value: "Περιλαμβανόμενο κείμενο"
+            display_condition: "Συνθήκη εμφάνισης"
+            mandatory: "Αυτή η συνθήκη πρέπει να ικανοποιείται πάντα ανεξάρτητα από την κατάσταση άλλων συνθηκών"
+            remove: "Κατάργηση"
+            save_warning: "Θυμηθείτε να αποθηκεύσετε τη φόρμα πριν διαμορφώσετε τις συνθήκες εμφάνισης"
+            select_answer_option: "Επιλέξτε δυνατότητα απάντησης"
+            select_condition_question: "Επιλέξτε ερώτηση"
+            select_condition_type: "Επιλογή τύπου συνθήκης"
           form:
-            add_question: Προσθήκη ερώτησης
-            add_separator: Προσθήκη διαχωριστικού
-            add_title_and_description: Προσθέστε τίτλο και περιγραφή
-            already_answered_warning: Η φόρμα έχει ήδη απαντηθεί από ορισμένους χρήστες, επομένως δεν μπορείτε να τροποποιήσετε τις ερωτήσεις της.
-            collapse: Σύμπτυξη όλων των ερωτήσεων
-            expand: Ανάπτυξη όλων των ερωτήσεων
-            preview: Προεπισκόπηση
-            title: Επεξεργασία φόρμας
-            unpublished_warning: Η φόρμα δεν έχει δημοσιευτεί. Μπορείτε να τροποποιήσετε τις ερωτήσεις της, αλλά εάν το κάνετε αυτό, θα διαγραφούν οι τρέχουσες απαντήσεις.
-          matrix_row:
-            matrix_row: Γραμμή
-            remove: Κατάργηση
-            statement: Δήλωση
+            add_title_and_description: "Προσθέστε τίτλο και περιγραφή"
+            preview: "Προεπισκόπηση"
+            title: "Επεξεργασία φόρμας"
+            unpublished_warning: "Η φόρμα δεν έχει δημοσιευτεί. Μπορείτε να τροποποιήσετε τις ερωτήσεις της, αλλά εάν το κάνετε αυτό, θα διαγραφούν οι τρέχουσες απαντήσεις."
           question:
-            add_answer_option: Προσθήκη επιλογής απάντησης
-            add_display_condition: Προσθήκη συνθήκης εμφάνισης
-            add_display_condition_info: Αποθηκεύστε τη φόρμα για να διαμορφώσετε συνθήκες εμφάνισης
-            add_matrix_row: Προσθήκη γραμμής
-            any: Οποιοδήποτε
-            collapse: Σύμπτυξη
-            description: Περιγραφή
-            down: Κάτω
-            expand: Επέκταση
-            question: Ερώτηση
-            remove: Κατάργηση
-            statement: Δήλωση
-            up: Επάνω
-          separator:
-            down: Κάτω
-            remove: Κατάργηση
-            separator: Διαχωριστικό
-            up: Επάνω
+            add_display_condition: "Προσθήκη συνθήκης εμφάνισης"
+            add_display_condition_info: "Αποθηκεύστε τη φόρμα για να διαμορφώσετε συνθήκες εμφάνισης"
+            any: "Οποιοδήποτε"
+            expand: "Επέκταση"
           title_and_description:
-            collapse: Κατάρρευση
-            description: Περιγραφή
-            down: Κάτω
-            expand: Επεκτείνουν
-            remove: Αφαιρώ
-            title: Τίτλος
-            title_and_description: Τίτλος και περιγραφή
-            up: Πάνω
+            collapse: "Κατάρρευση"
+            description: "Περιγραφή"
+            down: "Κάτω"
+            expand: "Επεκτείνουν"
+            remove: "Αφαιρώ"
+            title: "Τίτλος"
+            title_and_description: "Τίτλος και περιγραφή"
+            up: "Πάνω"
           update:
-            invalid: Παρουσιάστηκε πρόβλημα κατά την αποθήκευση της φόρμας.
-            success: Οι φόρμες αποθηκεύτηκαν με επιτυχία.
+            invalid: "Παρουσιάστηκε πρόβλημα κατά την αποθήκευση της φόρμας."
+            success: "Οι φόρμες αποθηκεύτηκαν με επιτυχία."
       admin_log:
         questionnaire:
-          update: Ο %{user_name} ενημέρωσε το ερωτηματολόγιο %{resource_name}
-      errors:
-        answer:
-          body: Το σώμα δεν μπορεί να είναι κενό
+          update: "Ο %{user_name} ενημέρωσε το ερωτηματολόγιο %{resource_name}"
       files:
-        extension_whitelist: 'Αποδεκτές μορφές:'
+        extension_whitelist: "Αποδεκτές μορφές:"
       images:
         dimensions: "%{width} x %{height} px"
-        dimensions_info: 'Σε αυτήν την εικόνα θα γίνουν τα εξής:'
+        dimensions_info: "Σε αυτήν την εικόνα θα γίνουν τα εξής:"
         processors:
-          resize_and_pad: Αλλαγή μεγέθους και προσθήκη περιθωρίων εικόνας
-          resize_to_fit: Αλλαγή μεγέθους για προσαρμογή
+          resize_and_pad: "Αλλαγή μεγέθους και προσθήκη περιθωρίων εικόνας"
+          resize_to_fit: "Αλλαγή μεγέθους για προσαρμογή"
       question_types:
-        files: Αρχεία
-        long_answer: Πλήρης απάντηση
-        matrix_multiple: Μήτρα (Πολλαπλή επιλογή)
-        matrix_single: Μήτρα (Μία επιλογή)
-        multiple_option: Πολλαπλή επιλογή
-        short_answer: Σύντομη απάντηση
-        single_option: Μία επιλογή
-        sorting: Ταξινόμηση
-        title_and_description: Τίτλος και περιγραφή
+        files: "Αρχεία"
+        long_answer: "Πλήρης απάντηση"
+        matrix_multiple: "Μήτρα (Πολλαπλή επιλογή)"
+        matrix_single: "Μήτρα (Μία επιλογή)"
+        title_and_description: "Τίτλος και περιγραφή"
       questionnaire_answer_presenter:
-        download_attachment: Λήψη συνημμένου
+        download_attachment: "Λήψη συνημμένου"
       questionnaires:
         answer:
-          invalid: Παρουσιάστηκε πρόβλημα κατά την απάντηση της φόρμας.
-          max_choices_alert: Επιλέχθηκαν πάρα πολλά στοιχεία
-          success: Η φόρμα απαντήθηκε με επιτυχία.
+          invalid: "Παρουσιάστηκε πρόβλημα κατά την απάντηση της φόρμας."
+          max_choices_alert: "Επιλέχθηκαν πάρα πολλά στοιχεία"
         question:
-          max_choices: 'Ανώτατος αριθμός επιλογών: %{n}'
+          max_choices: "Ανώτατος αριθμός επιλογών: %{n}"
         show:
           answer_questionnaire:
-            anonymous_user_message: <a href="%{sign_in_link}">Συνδεθείτε με τον λογαριασμό σας</a> ή <a href="%{sign_up_link}">εγγραφείτε</a>, για να απαντήσετε τη φόρμα.
-            title: Απαντήστε τη φόρμα
-          current_step: Βήμα %{step}
-          of_total_steps: από %{total_steps}
+            anonymous_user_message: "<a href=\"%{sign_in_link}\">Συνδεθείτε με τον λογαριασμό σας</a> ή <a href=\"%{sign_up_link}\">εγγραφείτε</a>, για να απαντήσετε τη φόρμα."
+            title: "Απαντήστε τη φόρμα"
           questionnaire_answered:
-            body: Έχετε ήδη απαντήσει αυτήν τη φόρμα.
-            title: Έχει ήδη απαντηθεί
+            body: "Έχετε ήδη απαντήσει αυτήν τη φόρμα."
           questionnaire_closed:
-            body: Η φόρμα είναι κλειστή και δεν μπορεί να απαντηθεί.
-            title: Η φόρμα είναι κλειστή
+            title: "Η φόρμα είναι κλειστή"
           questionnaire_for_private_users:
-            body: Η φόρμα είναι διαθέσιμη μόνο για ιδιωτικούς χρήστες
-            title: Η φόρμα είναι κλειστή
+            title: "Η φόρμα είναι κλειστή"
           questionnaire_js_disabled:
-            body: Ορισμένες από τις δυνατότητες αυτής της φόρμας θα απενεργοποιηθούν. Για να βελτιώσετε την εμπειρία σας, ενεργοποιήστε την JavaScript στο πρόγραμμα περιήγησης.
-            title: Η JavaScript είναι απενεργοποιημένη
+            body: "Ορισμένες από τις δυνατότητες αυτής της φόρμας θα απενεργοποιηθούν. Για να βελτιώσετε την εμπειρία σας, ενεργοποιήστε την JavaScript στο πρόγραμμα περιήγησης."
+            title: "Η JavaScript είναι απενεργοποιημένη"
           questionnaire_not_published:
-            body: Αυτή η φόρμα δεν έχει δημοσιευτεί ακόμη.
-          tos_agreement: Με τη συμμετοχή σας αποδέχεστε τους όρους χρήσης της
+            body: "Αυτή η φόρμα δεν έχει δημοσιευτεί ακόμη."
+          tos_agreement: "Με τη συμμετοχή σας αποδέχεστε τους όρους χρήσης της"
       step_navigation:
         show:
-          are_you_sure: Δεν είναι δυνατή η αναίρεση αυτής της ενέργειας και δεν θα μπορείτε να επεξεργαστείτε τις απαντήσεις σας. Είστε βέβαιοι;
-          back: Πίσω
-          continue: Συνέχεια
-          submit: Υποβολή
+          are_you_sure: "Δεν είναι δυνατή η αναίρεση αυτής της ενέργειας και δεν θα μπορείτε να επεξεργαστείτε τις απαντήσεις σας. Είστε βέβαιοι;"
       user_answers_serializer:
-        body: Απάντηση
-        completion: Ολοκλήρωση
-        created_at: Απαντήθηκε στις
-        id: Αναγνωριστικό απάντησης
-        ip_hash: Κατακερματισμός IP
-        question: Ερώτηση
-        registered: Εγγεγραμμένος
-        session_token: Αναγνωριστικό χρήστη
-        unregistered: Μη εγγεγραμμένος
-        user_status: Κατάσταση χρήστη
+        body: "Απάντηση"
+        completion: "Ολοκλήρωση"
+        ip_hash: "Κατακερματισμός IP"
+        question: "Ερώτηση"
+        registered: "Εγγεγραμμένος"
+        session_token: "Αναγνωριστικό χρήστη"
+        unregistered: "Μη εγγεγραμμένος"
