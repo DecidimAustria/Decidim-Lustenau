@@ -73,6 +73,34 @@ Recheck immediately before deployment. The taxonomy plan should be empty, but ge
 
 ## Staging rollout
 
+### BuildKit trial after the failed CNB build
+
+The upgrade push started pipeline 6742, but [build job 26882](https://gitlab.webface.at/mitgestalten/decidim-lustenau/-/jobs/26882) failed before Ruby installation: the configured Heroku-20 builder received HTTP 403 downloading Ruby 3.3.12. This did not deploy the upgrade.
+
+Branch `ci/lustenau-buildkit` initially tested `gitlab.webface.at/components/rails-deploy/pipeline@buildkit` with Ruby 3.3.12, Node 22.14.0, feature-branch builds enabled and `deploy: false`. Decidim 0.30.9 requires Ruby `~> 3.3.0`; the component example's Ruby 3.4.7 is unsuitable here. The component ref resolved to `b617c78fc4d5c9ce4710db3c43ffd9f093a43e4c` during preparation and follows subsequent branch updates.
+
+GitLab CI lint passed without warnings. Local inspection of the generated child pipeline confirmed a required rootless BuildKit build and no deployment template/jobs. Production-mode boot with dummy build credentials, an unreachable database and `STORAGE_PROVIDER=local` passed. The storage setting now honors that variable, retaining MinIO as the default, so compilation does not require customer storage credentials. The component uses its bundled Dockerfile; no application runtime secrets are forwarded to the image build.
+
+The first trial, parent pipeline 6743 / child 6744 / build job 26896, installed Ruby, the complete production bundle and npm packages successfully. Asset compilation then failed because Shakapacker 7.2.3 defaulted to `yarn`, which the npm-based image does not install. The application boot now defaults `SHAKAPACKER_USE_PACKAGE_JSON_GEM=true` and `PACKAGE_JSON_FALLBACK_MANAGER=npm`, preserving explicit environment overrides. This makes the build independent of the old buildpack-forwarding settings. A forced local production webpack compilation with Yarn excluded from `PATH` passed in 34.6 seconds with two size warnings.
+
+The corrected build, pipeline 6753 / child 6754 / job 26931, succeeded on application commit `d01c68e0`. It compiled production assets, generated API documentation and published the image and registry cache. The tested Dockerfile matches component revision `151c717854ebbaabdec0ffd4a035e978ec628f21`, which fixes copying local npm packages before installation. The uncached job took 39 minutes 10 seconds, including about eight minutes for cache export. The image digest is `sha256:1ddedc0f7ff4bfb843eedb6196f16293bfca217608f098b538137bd704cbe911`. The 71 component tests passed; full MR scan acceptance is separate.
+
+### BuildKit deployment commands
+
+The user authorized preparing and publishing the deployment changes on 2026-10-15. The application changes are part of `ci/lustenau-buildkit` and MR !88. The Terraform prerequisite is a separate commit, `5128185c0287ef06934ed26689a31895e0e8d246`, on `projects_tf/ci/lustenau-buildkit`:
+
+- `projects_tf/decidim-lustenau.tf` overrides `DB_MIGRATE` with `RAILS_ENV=production bundle exec rails db:migrate`. The shared module default still serves CNB installations. A full refreshed OpenTofu plan showed exactly one in-place update, `module.decidim_lustenau.gitlab_project_variable.DB_MIGRATE`, and no other resource changes. No apply was performed.
+- Both `.gitlab/auto-deploy-values-staging.yaml` and `.gitlab/auto-deploy-values.yaml` start the worker with `bundle exec good_job start`. The old `/cnb/lifecycle/launcher` does not exist in the BuildKit image.
+- `.gitlab-ci.yml` now selects `deploy: true`. GitLab CI lint accepted both the component include and generated deployment child without warnings: staging is automatic and all four production rollout jobs are manual. MR pipelines still omit deployment jobs even with this input enabled.
+
+The immutable image was also tested locally with disposable PostgreSQL 16 and Redis 6 Sentinel services on an internal Docker network, without customer data, cluster credentials or external service access. Production schema loading and the exact migration command passed. `bundle exec good_job start` served HTTP 200 on both `/status/started` and `/status/connected`. The default web entrypoint served the system login page and a compiled asset with HTTP 200 as UID 1000; the generated API documentation file was present. The test used `DECIDIM_FORCE_SSL=false`, matching the existing Helm values, and local storage. All test containers, volumes and the network were removed. This checks the runtime commands against a fresh current schema; it does not repeat the existing-data upgrade rehearsal, test Garage uploads, or establish Kubernetes rollout acceptance.
+
+Apply the reviewed infrastructure change before merging/pushing the application changes to `main`. The worker command changes take effect with their corresponding Helm rollout. Main still has its previous Auto DevOps setup until the application branch is integrated. Use the tested BuildKit image for migrations and workers; an older CNB image can still require its launcher.
+
+After rollout, validate web requests, assets/API docs, database and storage access, worker probes and job processing, then complete the release tasks. The existing web liveness/readiness probes are disabled; a successful Helm rollout alone does not establish HTTP health. The database/data conversion rehearsals above used isolated synthetic records, not a production copy.
+
+### Backup and rollout checklist
+
 CNPG backup `pre-0309-upgrade-20261015180706` completed successfully at `2026-10-15T18:07:08Z`, backup ID `20261015T180707`, in context `kubernetes-admin@cluster1`, namespace `decidim-lustenau-staging`, cluster `postgres`, using `barmanObjectStore`. No backup error was reported. This is a database backup; this step did not create an upload backup or test a restore. The live one-time tasks below have not been run.
 
 1. Framework publication and the fresh staging database backup are complete. Commit the reviewed application branch, including the existing map edit. Confirm upload/recovery coverage separately before any file-removing tasks.
@@ -80,12 +108,12 @@ CNPG backup `pre-0309-upgrade-20261015180706` completed successfully at `2026-10
 3. Run the relevant one-time tasks below in staging. Use explicit context/namespace and the new image. Preserve the taxonomy plan and result files outside the pod; all taxonomy commands must use the same reviewed files.
 4. Accept the homepage, both process-group pages, group HTML editor, login/account flows, proposals/comments and filtering, Awesome editors/map/iframe, translations through GoodJob, uploads/downloads, email logos, HERE map images, `/api/docs`, and the translation-enabled error-page case. Check logs and missing assets.
 
-For remote task execution, use `/cnb/lifecycle/launcher bundle exec rails TASK` in container `auto-deploy-app`. For example, staging plan generation is:
+After deploying the BuildKit image, use `bundle exec rails TASK` in container `auto-deploy-app`. Existing CNB pods still need their launcher. For example, staging plan generation on the new image is:
 
 ```sh
 kubectl --context kubernetes-admin@cluster1 --namespace decidim-lustenau-staging \
   exec deployment/staging -c auto-deploy-app -- \
-  /cnb/lifecycle/launcher bundle exec rails decidim:taxonomies:make_plan
+  bundle exec rails decidim:taxonomies:make_plan
 ```
 
 ### One-time tasks per environment
